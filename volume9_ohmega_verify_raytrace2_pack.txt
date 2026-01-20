@@ -1,0 +1,554 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as ohmega
+
+
+% Begin sending characters. Terminate with __END_RAYTRACE_2D__...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+Transferred 2048...
+Transferred 2560...
+Transferred 3072...
+Transferred 3584...
+Transferred 4096...
+Transferred 4608...
+Transferred 5120...
+Transferred 5632...
+Transferred 6144...
+Transferred 6656...
+Transferred 7168...
+Transferred 7680...
+Transferred 8192...
+Transferred 8704...
+Transferred 9216...
+Transferred 9728...
+Transferred 10240...
+Transferred 10752...
+Transferred 11264...
+Transferred 11776...
+Transferred 12288...
+Transferred 12800...
+Transferred 13312...
+writing 13482 characters
+% % Program area: 14058 (smaller is better)
+[2D] Parsing...
+[2D] Locating modules...
+[2D] Verifying wires in module 'X'...
+[2D] Verifying wires in module 'L'...
+[2D] Verifying wires in module 'B'...
+[2D] Verifying wires in module 'R'...
+[2D] Verifying wires in module 'E'...
+[2D] Verifying wires in module 'Q'...
+[2D] Verifying wires in module 'M'...
+[2D] Verifying wires in module 'l'...
+[2D] Verifying wires in module 'H'...
+[2D] Verifying wires in module 'main'...
+[2D] Verifying wires in module 'r'...
+[2D] Verifying wires in module 'Z'...
+[2D] Verifying wires in module 'T'...
+[2D] Verifying wires in module 'A'...
+[2D] Verifying wires in module 'D'...
+[2D] Connecting wires...
+[2D] Done Parsing!
+
+L0: Med, - Surface 1(dir: towards) -  R: Med,  T: Med,  E: None,- R0: None,
+L1: All, - Surface 2(dir: away   ) -  R: None, T: Med,  E: Med, - R1: None,
+L2: All, - Surface 3(dir: away   ) -  R: None, T: Med,  E: None,- R2: Med, 
+L3: All, - Surface 4(dir: away   ) -  R: None, T: None, E: None,- R3: Med, 
+L4: All, - Surface 5(dir: towards) -  R: None, T: Med,  E: Med, - R4: None,
+L5: All, - Surface 6(dir: towards) -  R: Med,  T: All,  E: Med, - R5: None,
+L6: Med, - Surface 7(dir: away   ) -  R: All,  T: Med,  E: None,- R6: None,
+L7: Med, - Surface 8(dir: towards) -  R: None, T: Med,  E: None,- R7: Med, 
+L8: All, - Surface 9(dir: towards) -  R: None, T: All,  E: Med, - R8: Med, 
+L9: All, - Surface 10(dir: away   ) -  R: Med,  T: Med,  E: None,- R9: Med, 
+L10: All, - Surface 11(dir: towards) -  R: Med,  T: Med,  E: None,- R10: All, 
+L11: Med, - Surface 12(dir: towards) -  R: None, T: Med,  E: None,- R11: All, 
+L12: All, - Surface 13(dir: towards) -  R: None, T: All,  E: None,- R12: All, 
+L13: All, - Surface 14(dir: away   ) -  R: None, T: Med,  E: None,- R13: All, 
+L14: All, - Surface 15(dir: towards) -  R: Med,  T: Med,  E: Med, - R14: Med, 
+L15: None,- Surface 16(dir: towards) -  R: None, T: Med,  E: None,- R15: Med, 
+L16: None, - R16: Med, 
+
+Testing (28 left)... OK!
+
+L0: Med, - Surface 1(dir: towards) -  R: None, T: Med,  E: None,- R0: None,
+L1: Med, - Surface 2(dir: away   ) -  R: Med,  T: Med,  E: None,- R1: None,
+L2: Med, - Surface 3(dir: towards) -  R: None, T: Med,  E: None,- R2: Med, 
+L3: Med, - Surface 4(dir: towards) -  R: None, T: Med,  E: None,- R3: Med, 
+L4: Med, - Surface 5(dir: towards) -  R: None, T: Med,  E: None,- R4: Med, 
+L5: All, - Surface 6(dir: away   ) -  R: None, T: Med,  E: All, - R5: Med, 
+L6: All, - Surface 7(dir: towards) -  R: Med,  T: Med,  E: None,- R6: All, 
+L7: Med, - Surface 8(dir: away   ) -  R: Med,  T: Med,  E: All, - R7: All, 
+L8: Med, - Surface 9(dir: towards) -  R: None, T: Med,  E: None,- R8: All, 
+L9: All, - Surface 10(dir: away   ) -  R: None, T: Med,  E: Med, - R9: All, 
+L10: All, - Surface 11(dir: away   ) -  R: Med,  T: Med,  E: None,- R10: All, 
+L11: All, - Surface 12(dir: towards) -  R: Med,  T: Med,  E: All, - R11: All, 
+L12: None,- Surface 13(dir: towards) -  R: None, T: Med,  E: None,- R12: All, 
+L13: None,- Surface 14(dir: away   ) -  R: Med,  T: All,  E: Med, - R13: All, 
+L14: None,- Surface 15(dir: away   ) -  R: All,  T: Med,  E: None,- R14: All, 
+L15: None, - R15: Med, 
+
+Testing (27 left)... OK!
+
+L0: Med, - Surface 1(dir: away   ) -  R: Med,  T: Med,  E: None,- R0: None,
+L1: Med, - Surface 2(dir: towards) -  R: None, T: Med,  E: None,- R1: Med, 
+L2: All, - Surface 3(dir: towards) -  R: All,  T: Med,  E: None,- R2: Med, 
+L3: All, - Surface 4(dir: away   ) -  R: None, T: Med,  E: Med, - R3: Med, 
+L4: All, - Surface 5(dir: towards) -  R: Med,  T: Med,  E: None,- R4: All, 
+L5: All, - Surface 6(dir: towards) -  R: Med,  T: Med,  E: None,- R5: All, 
+L6: All, - Surface 7(dir: away   ) -  R: Med,  T: Med,  E: None,- R6: All, 
+L7: All, - Surface 8(dir: towards) -  R: Med,  T: Med,  E: None,- R7: All, 
+L8: All, - Surface 9(dir: towards) -  R: None, T: All,  E: Med, - R8: All, 
+L9: Med, - Surface 10(dir: towards) -  R: None, T: Med,  E: None,- R9: All, 
+L10: All, - Surface 11(dir: towards) -  R: Med,  T: Med,  E: None,- R10: All, 
+L11: All, - Surface 12(dir: towards) -  R: Med,  T: All,  E: None,- R11: All, 
+L12: All, - Surface 13(dir: away   ) -  R: Med,  T: Med,  E: Med, - R12: All, 
+L13: All, - Surface 14(dir: towards) -  R: Med,  T: Med,  E: All, - R13: All, 
+L14: Med, - Surface 15(dir: towards) -  R: Med,  T: Med,  E: None,- R14: All, 
+L15: None,- Surface 16(dir: towards) -  R: None, T: Med,  E: None,- R15: All, 
+L16: None, - R16: All, 
+
+Testing (26 left)... OK!
+
+L0: All, - Surface 1(dir: away   ) -  R: None, T: Med,  E: All, - R0: None,
+L1: All, - Surface 2(dir: away   ) -  R: Med,  T: Med,  E: None,- R1: All, 
+L2: All, - Surface 3(dir: towards) -  R: None, T: Med,  E: All, - R2: All, 
+L3: All, - Surface 4(dir: away   ) -  R: Med,  T: Med,  E: Med, - R3: All, 
+L4: All, - Surface 5(dir: towards) -  R: Med,  T: Med,  E: None,- R4: All, 
+L5: Med, - Surface 6(dir: away   ) -  R: All,  T: Med,  E: All, - R5: All, 
+L6: Med, - Surface 7(dir: towards) -  R: None, T: Med,  E: None,- R6: All, 
+L7: All, - Surface 8(dir: towards) -  R: Med,  T: Med,  E: Med, - R7: All, 
+L8: All, - Surface 9(dir: towards) -  R: None, T: Med,  E: All, - R8: All, 
+L9: All, - Surface 10(dir: towards) -  R: Med,  T: Med,  E: None,- R9: All, 
+L10: All, - Surface 11(dir: towards) -  R: None, T: Med,  E: Med, - R10: All, 
+L11: Med, - Surface 12(dir: towards) -  R: None, T: Med,  E: None,- R11: All, 
+L12: All, - Surface 13(dir: away   ) -  R: None, T: Med,  E: None,- R12: All, 
+L13: All, - Surface 14(dir: towards) -  R: None, T: Med,  E: Med, - R13: Med, 
+L14: Med, - Surface 15(dir: away   ) -  R: Med,  T: Med,  E: Med, - R14: Med, 
+L15: Med, - Surface 16(dir: away   ) -  R: Med,  T: Med,  E: None,- R15: All, 
+L16: Med, - Surface 17(dir: away   ) -  R: None, T: Med,  E: None,- R16: All, 
+L17: Med, - Surface 18(dir: away   ) -  R: None, T: Med,  E: None,- R17: Med, 
+L18: Med, - Surface 19(dir: towards) -  R: All,  T: Med,  E: None,- R18: Med, 
+L19: None, - R19: Med, 
+
+Testing (25 left)... OK!
+
+L0: Med, - Surface 1(dir: towards) -  R: Med,  T: Med,  E: None,- R0: None,
+L1: Med, - Surface 2(dir: towards) -  R: None, T: Med,  E: Med, - R1: None,
+L2: None,- Surface 3(dir: away   ) -  R: Med,  T: All,  E: None,- R2: None,
+L3: None,- Surface 4(dir: away   ) -  R: Med,  T: Med,  E: None,- R3: None,
+L4: None,- Surface 5(dir: towards) -  R: Med,  T: Med,  E: None,- R4: None,
+L5: None,- Surface 6(dir: away   ) -  R: All,  T: Med,  E: All, - R5: None,
+L6: None,- Surface 7(dir: away   ) -  R: Med,  T: Med,  E: None,- R6: All, 
+L7: None,- Surface 8(dir: away   ) -  R: None, T: Med,  E: None,- R7: Med, 
+L8: None,- Surface 9(dir: towards) -  R: None, T: Med,  E: None,- R8: Med, 
+L9: None,- Surface 10(dir: away   ) -  R: Med,  T: Med,  E: None,- R9: Med, 
+L10: None,- Surface 11(dir: away   ) -  R: None, T: Med,  E: None,- R10: Med, 
+L11: None,- Surface 12(dir: away   ) -  R: Med,  T: Med,  E: None,- R11: Med, 
+L12: None,- Surface 13(dir: away   ) -  R: All,  T: Med,  E: Med, - R12: Med, 
+L13: None,- Surface 14(dir: away   ) -  R: None, T: Med,  E: None,- R13: All, 
+L14: None,- Surface 15(dir: away   ) -  R: None, T: None, E: None,- R14: Med, 
+L15: None,- Surface 16(dir: away   ) -  R: None, T: Med,  E: None,- R15: None,
+L16: None, - R16: None,
+
+Testing (24 left)... OK!
+
+L0: All, - Surface 1(dir: away   ) -  R: None, T: All,  E: None,- R0: None,
+L1: All, - Surface 2(dir: towards) -  R: None, T: All,  E: None,- R1: None,
+L2: All, - Surface 3(dir: away   ) -  R: None, T: All,  E: None,- R2: None,
+L3: All, - Surface 4(dir: towards) -  R: None, T: All,  E: None,- R3: None,
+L4: All, - Surface 5(dir: away   ) -  R: None, T: All,  E: None,- R4: None,
+L5: All, - Surface 6(dir: towards) -  R: None, T: All,  E: None,- R5: None,
+L6: All, - Surface 7(dir: away   ) -  R: None, T: All,  E: None,- R6: None,
+L7: All, - Surface 8(dir: towards) -  R: None, T: All,  E: None,- R7: None,
+L8: All, - Surface 9(dir: away   ) -  R: None, T: All,  E: None,- R8: None,
+L9: All, - Surface 10(dir: towards) -  R: None, T: All,  E: None,- R9: None,
+L10: All, - Surface 11(dir: away   ) -  R: None, T: All,  E: None,- R10: None,
+L11: All, - Surface 12(dir: towards) -  R: None, T: All,  E: None,- R11: None,
+L12: All, - Surface 13(dir: away   ) -  R: None, T: All,  E: None,- R12: None,
+L13: All, - Surface 14(dir: towards) -  R: None, T: All,  E: None,- R13: None,
+L14: All, - Surface 15(dir: away   ) -  R: None, T: All,  E: None,- R14: None,
+L15: All, - Surface 16(dir: towards) -  R: None, T: All,  E: None,- R15: None,
+L16: All, - Surface 17(dir: towards) -  R: None, T: All,  E: All, - R16: None,
+L17: None, - R17: None,
+
+Testing (23 left)... OK!
+
+L0: Med, - Surface 1(dir: away   ) -  R: None, T: All,  E: None,- R0: None,
+L1: Med, - Surface 2(dir: towards) -  R: None, T: All,  E: None,- R1: None,
+L2: Med, - Surface 3(dir: away   ) -  R: None, T: All,  E: None,- R2: None,
+L3: Med, - Surface 4(dir: towards) -  R: None, T: All,  E: None,- R3: None,
+L4: Med, - Surface 5(dir: away   ) -  R: None, T: All,  E: None,- R4: None,
+L5: Med, - Surface 6(dir: towards) -  R: None, T: All,  E: None,- R5: None,
+L6: Med, - Surface 7(dir: away   ) -  R: None, T: All,  E: None,- R6: None,
+L7: Med, - Surface 8(dir: towards) -  R: None, T: All,  E: None,- R7: None,
+L8: Med, - Surface 9(dir: away   ) -  R: None, T: All,  E: None,- R8: None,
+L9: Med, - Surface 10(dir: towards) -  R: None, T: All,  E: None,- R9: None,
+L10: Med, - Surface 11(dir: away   ) -  R: None, T: All,  E: None,- R10: None,
+L11: Med, - Surface 12(dir: towards) -  R: None, T: All,  E: None,- R11: None,
+L12: Med, - Surface 13(dir: away   ) -  R: None, T: All,  E: None,- R12: None,
+L13: Med, - Surface 14(dir: towards) -  R: None, T: All,  E: None,- R13: None,
+L14: Med, - Surface 15(dir: away   ) -  R: None, T: All,  E: None,- R14: None,
+L15: Med, - Surface 16(dir: towards) -  R: None, T: All,  E: None,- R15: None,
+L16: Med, - Surface 17(dir: towards) -  R: None, T: All,  E: Med, - R16: None,
+L17: None, - R17: None,
+
+Testing (22 left)... OK!
+
+L0: None,- Surface 1(dir: away   ) -  R: None, T: All,  E: None,- R0: None,
+L1: None,- Surface 2(dir: towards) -  R: None, T: All,  E: None,- R1: None,
+L2: None,- Surface 3(dir: away   ) -  R: None, T: All,  E: None,- R2: None,
+L3: None,- Surface 4(dir: towards) -  R: None, T: All,  E: None,- R3: None,
+L4: None,- Surface 5(dir: away   ) -  R: None, T: All,  E: None,- R4: None,
+L5: None,- Surface 6(dir: towards) -  R: None, T: All,  E: None,- R5: None,
+L6: None,- Surface 7(dir: away   ) -  R: None, T: All,  E: None,- R6: None,
+L7: None,- Surface 8(dir: towards) -  R: None, T: All,  E: None,- R7: None,
+L8: None,- Surface 9(dir: away   ) -  R: None, T: All,  E: None,- R8: None,
+L9: None,- Surface 10(dir: towards) -  R: None, T: All,  E: None,- R9: None,
+L10: None,- Surface 11(dir: away   ) -  R: None, T: All,  E: None,- R10: None,
+L11: None,- Surface 12(dir: towards) -  R: None, T: All,  E: None,- R11: None,
+L12: None,- Surface 13(dir: away   ) -  R: None, T: All,  E: None,- R12: None,
+L13: None,- Surface 14(dir: towards) -  R: None, T: All,  E: None,- R13: None,
+L14: None,- Surface 15(dir: away   ) -  R: None, T: All,  E: None,- R14: None,
+L15: None,- Surface 16(dir: towards) -  R: None, T: All,  E: None,- R15: None,
+L16: None,- Surface 17(dir: towards) -  R: None, T: All,  E: None,- R16: None,
+L17: None, - R17: None,
+
+Testing (21 left)... OK!
+
+L0: None,- Surface 1(dir: towards) -  R: All,  T: None, E: None,- R0: None,
+L1: None,- Surface 2(dir: away   ) -  R: All,  T: None, E: None,- R1: None,
+L2: None,- Surface 3(dir: towards) -  R: All,  T: None, E: None,- R2: None,
+L3: None,- Surface 4(dir: away   ) -  R: All,  T: None, E: None,- R3: None,
+L4: None,- Surface 5(dir: towards) -  R: All,  T: None, E: None,- R4: None,
+L5: None,- Surface 6(dir: away   ) -  R: All,  T: None, E: None,- R5: None,
+L6: None,- Surface 7(dir: towards) -  R: All,  T: None, E: None,- R6: None,
+L7: None,- Surface 8(dir: away   ) -  R: All,  T: None, E: None,- R7: None,
+L8: None,- Surface 9(dir: towards) -  R: All,  T: None, E: None,- R8: None,
+L9: None,- Surface 10(dir: away   ) -  R: All,  T: None, E: None,- R9: None,
+L10: None,- Surface 11(dir: towards) -  R: All,  T: None, E: None,- R10: None,
+L11: None,- Surface 12(dir: away   ) -  R: All,  T: None, E: None,- R11: None,
+L12: None,- Surface 13(dir: towards) -  R: All,  T: None, E: None,- R12: None,
+L13: None,- Surface 14(dir: away   ) -  R: All,  T: None, E: None,- R13: None,
+L14: None,- Surface 15(dir: towards) -  R: All,  T: None, E: None,- R14: None,
+L15: None,- Surface 16(dir: away   ) -  R: All,  T: None, E: None,- R15: None,
+L16: None,- Surface 17(dir: towards) -  R: All,  T: None, E: None,- R16: None,
+L17: None,- Surface 18(dir: away   ) -  R: All,  T: None, E: None,- R17: None,
+L18: None,- Surface 19(dir: towards) -  R: All,  T: None, E: None,- R18: None,
+L19: None,- Surface 20(dir: away   ) -  R: All,  T: None, E: None,- R19: None,
+L20: None,- Surface 21(dir: towards) -  R: All,  T: None, E: None,- R20: None,
+L21: None,- Surface 22(dir: away   ) -  R: All,  T: None, E: None,- R21: None,
+L22: None,- Surface 23(dir: towards) -  R: All,  T: None, E: None,- R22: None,
+L23: None,- Surface 24(dir: away   ) -  R: All,  T: None, E: None,- R23: None,
+L24: None,- Surface 25(dir: towards) -  R: All,  T: None, E: None,- R24: None,
+L25: None,- Surface 26(dir: away   ) -  R: All,  T: None, E: None,- R25: None,
+L26: None, - R26: None,
+
+Testing (20 left)... OK!
+
+L0: None,- Surface 1(dir: away   ) -  R: Med,  T: Med,  E: None,- R0: None,
+L1: None,- Surface 2(dir: towards) -  R: Med,  T: Med,  E: None,- R1: None,
+L2: None,- Surface 3(dir: away   ) -  R: Med,  T: Med,  E: None,- R2: None,
+L3: None,- Surface 4(dir: towards) -  R: Med,  T: Med,  E: None,- R3: None,
+L4: None,- Surface 5(dir: away   ) -  R: Med,  T: Med,  E: None,- R4: None,
+L5: None,- Surface 6(dir: towards) -  R: Med,  T: Med,  E: None,- R5: None,
+L6: None,- Surface 7(dir: away   ) -  R: Med,  T: Med,  E: None,- R6: None,
+L7: None,- Surface 8(dir: towards) -  R: Med,  T: Med,  E: None,- R7: None,
+L8: None,- Surface 9(dir: away   ) -  R: Med,  T: Med,  E: None,- R8: None,
+L9: None,- Surface 10(dir: towards) -  R: Med,  T: Med,  E: None,- R9: None,
+L10: None,- Surface 11(dir: away   ) -  R: Med,  T: Med,  E: None,- R10: None,
+L11: None,- Surface 12(dir: towards) -  R: Med,  T: Med,  E: None,- R11: None,
+L12: None,- Surface 13(dir: away   ) -  R: Med,  T: Med,  E: None,- R12: None,
+L13: None,- Surface 14(dir: towards) -  R: Med,  T: Med,  E: None,- R13: None,
+L14: None,- Surface 15(dir: away   ) -  R: Med,  T: Med,  E: None,- R14: None,
+L15: None,- Surface 16(dir: towards) -  R: Med,  T: Med,  E: None,- R15: None,
+L16: None,- Surface 17(dir: away   ) -  R: Med,  T: Med,  E: None,- R16: None,
+L17: None,- Surface 18(dir: towards) -  R: Med,  T: Med,  E: None,- R17: None,
+L18: None,- Surface 19(dir: away   ) -  R: Med,  T: Med,  E: None,- R18: None,
+L19: None,- Surface 20(dir: towards) -  R: Med,  T: Med,  E: None,- R19: None,
+L20: None,- Surface 21(dir: away   ) -  R: Med,  T: Med,  E: None,- R20: None,
+L21: None,- Surface 22(dir: towards) -  R: Med,  T: Med,  E: None,- R21: None,
+L22: None,- Surface 23(dir: away   ) -  R: Med,  T: Med,  E: None,- R22: None,
+L23: None,- Surface 24(dir: towards) -  R: Med,  T: Med,  E: None,- R23: None,
+L24: None,- Surface 25(dir: away   ) -  R: Med,  T: Med,  E: None,- R24: None,
+L25: None,- Surface 26(dir: towards) -  R: Med,  T: Med,  E: None,- R25: None,
+L26: None,- Surface 27(dir: away   ) -  R: Med,  T: Med,  E: None,- R26: None,
+L27: None, - R27: None,
+
+Testing (19 left)... OK!
+
+L0: None,- Surface 1(dir: towards) -  R: All,  T: All,  E: None,- R0: None,
+L1: None,- Surface 2(dir: away   ) -  R: All,  T: All,  E: None,- R1: None,
+L2: None,- Surface 3(dir: towards) -  R: All,  T: All,  E: None,- R2: None,
+L3: None,- Surface 4(dir: away   ) -  R: All,  T: All,  E: None,- R3: None,
+L4: None,- Surface 5(dir: towards) -  R: All,  T: All,  E: None,- R4: None,
+L5: None,- Surface 6(dir: away   ) -  R: All,  T: All,  E: None,- R5: None,
+L6: None,- Surface 7(dir: towards) -  R: All,  T: All,  E: None,- R6: None,
+L7: None,- Surface 8(dir: away   ) -  R: All,  T: All,  E: None,- R7: None,
+L8: None,- Surface 9(dir: towards) -  R: All,  T: All,  E: None,- R8: None,
+L9: None,- Surface 10(dir: away   ) -  R: All,  T: All,  E: None,- R9: None,
+L10: None,- Surface 11(dir: towards) -  R: All,  T: All,  E: None,- R10: None,
+L11: None,- Surface 12(dir: away   ) -  R: All,  T: All,  E: None,- R11: None,
+L12: None,- Surface 13(dir: towards) -  R: All,  T: All,  E: None,- R12: None,
+L13: None,- Surface 14(dir: away   ) -  R: All,  T: All,  E: None,- R13: None,
+L14: None,- Surface 15(dir: towards) -  R: All,  T: All,  E: None,- R14: None,
+L15: None,- Surface 16(dir: away   ) -  R: All,  T: All,  E: None,- R15: None,
+L16: None,- Surface 17(dir: towards) -  R: All,  T: All,  E: None,- R16: None,
+L17: None,- Surface 18(dir: away   ) -  R: All,  T: All,  E: None,- R17: None,
+L18: None,- Surface 19(dir: towards) -  R: All,  T: All,  E: None,- R18: None,
+L19: None,- Surface 20(dir: away   ) -  R: All,  T: All,  E: None,- R19: None,
+L20: None,- Surface 21(dir: towards) -  R: All,  T: All,  E: None,- R20: None,
+L21: None,- Surface 22(dir: away   ) -  R: All,  T: All,  E: None,- R21: None,
+L22: None,- Surface 23(dir: towards) -  R: All,  T: All,  E: None,- R22: None,
+L23: None,- Surface 24(dir: away   ) -  R: All,  T: All,  E: None,- R23: None,
+L24: None,- Surface 25(dir: towards) -  R: All,  T: All,  E: None,- R24: None,
+L25: None,- Surface 26(dir: away   ) -  R: All,  T: All,  E: None,- R25: None,
+L26: None,- Surface 27(dir: towards) -  R: All,  T: All,  E: None,- R26: None,
+L27: None,- Surface 28(dir: away   ) -  R: All,  T: All,  E: None,- R27: None,
+L28: None, - R28: None,
+
+Testing (18 left)... OK!
+
+L0: Med, - Surface 1(dir: towards) -  R: None, T: Med,  E: None,- R0: None,
+L1: Med, - Surface 2(dir: away   ) -  R: Med,  T: Med,  E: None,- R1: None,
+L2: Med, - Surface 3(dir: away   ) -  R: Med,  T: Med,  E: None,- R2: Med, 
+L3: Med, - Surface 4(dir: towards) -  R: None, T: Med,  E: None,- R3: All, 
+L4: Med, - Surface 5(dir: away   ) -  R: Med,  T: All,  E: None,- R4: All, 
+L5: Med, - Surface 6(dir: away   ) -  R: Med,  T: Med,  E: None,- R5: All, 
+L6: Med, - Surface 7(dir: towards) -  R: None, T: Med,  E: None,- R6: All, 
+L7: Med, - Surface 8(dir: towards) -  R: None, T: Med,  E: None,- R7: All, 
+L8: All, - Surface 9(dir: towards) -  R: Med,  T: Med,  E: None,- R8: All, 
+L9: All, - Surface 10(dir: towards) -  R: None, T: All,  E: All, - R9: All, 
+L10: All, - Surface 11(dir: towards) -  R: Med,  T: Med,  E: None,- R10: All, 
+L11: Med, - Surface 12(dir: away   ) -  R: Med,  T: Med,  E: None,- R11: All, 
+L12: Med, - Surface 13(dir: away   ) -  R: All,  T: All,  E: None,- R12: All, 
+L13: Med, - Surface 14(dir: towards) -  R: None, T: Med,  E: None,- R13: All, 
+L14: Med, - Surface 15(dir: towards) -  R: None, T: Med,  E: None,- R14: All, 
+L15: Med, - Surface 16(dir: towards) -  R: None, T: Med,  E: Med, - R15: All, 
+L16: None,- Surface 17(dir: away   ) -  R: All,  T: Med,  E: None,- R16: All, 
+L17: None,- Surface 18(dir: away   ) -  R: Med,  T: Med,  E: None,- R17: Med, 
+L18: None, - R18: Med, 
+
+Testing (17 left)... OK!
+
+L0: All, - Surface 1(dir: away   ) -  R: Med,  T: Med,  E: None,- R0: None,
+L1: All, - Surface 2(dir: towards) -  R: Med,  T: Med,  E: Med, - R1: Med, 
+L2: All, - Surface 3(dir: away   ) -  R: Med,  T: None, E: None,- R2: Med, 
+L3: All, - Surface 4(dir: towards) -  R: All,  T: Med,  E: Med, - R3: Med, 
+L4: All, - Surface 5(dir: away   ) -  R: None, T: Med,  E: None,- R4: Med, 
+L5: All, - Surface 6(dir: away   ) -  R: None, T: Med,  E: Med, - R5: Med, 
+L6: All, - Surface 7(dir: away   ) -  R: Med,  T: Med,  E: None,- R6: All, 
+L7: All, - Surface 8(dir: towards) -  R: Med,  T: Med,  E: Med, - R7: All, 
+L8: Med, - Surface 9(dir: away   ) -  R: None, T: Med,  E: None,- R8: All, 
+L9: Med, - Surface 10(dir: away   ) -  R: Med,  T: All,  E: Med, - R9: Med, 
+L10: Med, - Surface 11(dir: away   ) -  R: Med,  T: All,  E: None,- R10: All, 
+L11: Med, - Surface 12(dir: away   ) -  R: Med,  T: Med,  E: All, - R11: All, 
+L12: Med, - Surface 13(dir: away   ) -  R: Med,  T: Med,  E: None,- R12: All, 
+L13: Med, - Surface 14(dir: towards) -  R: None, T: Med,  E: None,- R13: All, 
+L14: Med, - Surface 15(dir: away   ) -  R: Med,  T: Med,  E: None,- R14: All, 
+L15: Med, - Surface 16(dir: towards) -  R: None, T: Med,  E: None,- R15: All, 
+L16: All, - Surface 17(dir: towards) -  R: Med,  T: Med,  E: Med, - R16: All, 
+L17: None,- Surface 18(dir: towards) -  R: None, T: Med,  E: None,- R17: All, 
+L18: None,- Surface 19(dir: away   ) -  R: Med,  T: Med,  E: None,- R18: All, 
+L19: None, - R19: Med, 
+
+Testing (16 left)... OK!
+
+L0: Med, - Surface 1(dir: towards) -  R: All,  T: Med,  E: None,- R0: None,
+L1: All, - Surface 2(dir: towards) -  R: Med,  T: Med,  E: All, - R1: None,
+L2: None,- Surface 3(dir: away   ) -  R: Med,  T: Med,  E: None,- R2: None,
+L3: None,- Surface 4(dir: towards) -  R: None, T: Med,  E: None,- R3: None,
+L4: None,- Surface 5(dir: away   ) -  R: None, T: All,  E: None,- R4: None,
+L5: None,- Surface 6(dir: away   ) -  R: None, T: Med,  E: None,- R5: None,
+L6: None, - R6: None,
+
+Testing (15 left)... OK!
+
+L0: Med, - Surface 1(dir: away   ) -  R: All,  T: Med,  E: Med, - R0: None,
+L1: Med, - Surface 2(dir: away   ) -  R: None, T: All,  E: None,- R1: All, 
+L2: Med, - Surface 3(dir: towards) -  R: None, T: Med,  E: None,- R2: All, 
+L3: Med, - Surface 4(dir: away   ) -  R: Med,  T: All,  E: None,- R3: All, 
+L4: Med, - Surface 5(dir: away   ) -  R: None, T: Med,  E: Med, - R4: All, 
+L5: Med, - Surface 6(dir: towards) -  R: Med,  T: Med,  E: None,- R5: All, 
+L6: None, - R6: All, 
+
+Testing (14 left)... OK!
+
+L0: None,- Surface 1(dir: away   ) -  R: None, T: Med,  E: None,- R0: None,
+L1: None,- Surface 2(dir: towards) -  R: None, T: Med,  E: None,- R1: None,
+L2: None,- Surface 3(dir: away   ) -  R: Med,  T: Med,  E: Med, - R2: None,
+L3: None,- Surface 4(dir: towards) -  R: None, T: Med,  E: None,- R3: Med, 
+L4: None,- Surface 5(dir: away   ) -  R: Med,  T: Med,  E: Med, - R4: Med, 
+L5: None,- Surface 6(dir: away   ) -  R: Med,  T: Med,  E: Med, - R5: All, 
+L6: None,- Surface 7(dir: away   ) -  R: Med,  T: Med,  E: None,- R6: All, 
+L7: None,- Surface 8(dir: away   ) -  R: Med,  T: All,  E: All, - R7: Med, 
+L8: None, - R8: All, 
+
+Testing (13 left)... OK!
+
+L0: All, - Surface 1(dir: away   ) -  R: Med,  T: Med,  E: None,- R0: None,
+L1: All, - Surface 2(dir: towards) -  R: Med,  T: Med,  E: Med, - R1: Med, 
+L2: Med, - Surface 3(dir: towards) -  R: None, T: Med,  E: None,- R2: Med, 
+L3: Med, - Surface 4(dir: towards) -  R: Med,  T: Med,  E: None,- R3: Med, 
+L4: None,- Surface 5(dir: towards) -  R: None, T: Med,  E: None,- R4: Med, 
+L5: None,- Surface 6(dir: away   ) -  R: None, T: Med,  E: None,- R5: Med, 
+L6: None, - R6: Med, 
+
+Testing (12 left)... OK!
+
+L0: Med, - Surface 1(dir: towards) -  R: None, T: Med,  E: None,- R0: None,
+L1: Med, - Surface 2(dir: towards) -  R: None, T: Med,  E: None,- R1: None,
+L2: Med, - Surface 3(dir: towards) -  R: None, T: Med,  E: None,- R2: None,
+L3: All, - Surface 4(dir: towards) -  R: None, T: Med,  E: Med, - R3: None,
+L4: Med, - Surface 5(dir: away   ) -  R: None, T: Med,  E: None,- R4: None,
+L5: Med, - Surface 6(dir: towards) -  R: None, T: Med,  E: None,- R5: None,
+L6: Med, - Surface 7(dir: towards) -  R: None, T: Med,  E: Med, - R6: None,
+L7: None,- Surface 8(dir: towards) -  R: None, T: Med,  E: None,- R7: None,
+L8: None, - R8: None,
+
+Testing (11 left)... OK!
+
+L0: All, - Surface 1(dir: away   ) -  R: Med,  T: Med,  E: None,- R0: None,
+L1: All, - Surface 2(dir: away   ) -  R: None, T: Med,  E: None,- R1: Med, 
+L2: All, - Surface 3(dir: away   ) -  R: None, T: Med,  E: None,- R2: Med, 
+L3: All, - Surface 4(dir: towards) -  R: All,  T: Med,  E: None,- R3: Med, 
+L4: Med, - Surface 5(dir: towards) -  R: None, T: Med,  E: None,- R4: Med, 
+L5: All, - Surface 6(dir: towards) -  R: Med,  T: Med,  E: Med, - R5: Med, 
+L6: Med, - Surface 7(dir: away   ) -  R: None, T: Med,  E: None,- R6: Med, 
+L7: Med, - Surface 8(dir: towards) -  R: Med,  T: All,  E: None,- R7: Med, 
+L8: None,- Surface 9(dir: away   ) -  R: Med,  T: All,  E: Med, - R8: Med, 
+L9: None, - R9: All, 
+
+Testing (10 left)... OK!
+
+L0: Med, - Surface 1(dir: towards) -  R: None, T: Med,  E: None,- R0: None,
+L1: Med, - Surface 2(dir: towards) -  R: Med,  T: Med,  E: None,- R1: None,
+L2: Med, - Surface 3(dir: towards) -  R: None, T: All,  E: None,- R2: None,
+L3: Med, - Surface 4(dir: towards) -  R: All,  T: Med,  E: None,- R3: None,
+L4: Med, - Surface 5(dir: towards) -  R: None, T: Med,  E: None,- R4: None,
+L5: All, - Surface 6(dir: away   ) -  R: None, T: Med,  E: Med, - R5: None,
+L6: All, - Surface 7(dir: towards) -  R: None, T: Med,  E: All, - R6: Med, 
+L7: None, - R7: Med, 
+
+Testing (9 left)... OK!
+
+L0: Med, - Surface 1(dir: towards) -  R: All,  T: Med,  E: None,- R0: None,
+L1: Med, - Surface 2(dir: towards) -  R: None, T: Med,  E: None,- R1: None,
+L2: All, - Surface 3(dir: away   ) -  R: Med,  T: Med,  E: None,- R2: None,
+L3: All, - Surface 4(dir: towards) -  R: Med,  T: Med,  E: All, - R3: Med, 
+L4: None,- Surface 5(dir: away   ) -  R: Med,  T: Med,  E: None,- R4: Med, 
+L5: None, - R5: Med, 
+
+Testing (8 left)... OK!
+
+L0: All, - Surface 1(dir: away   ) -  R: Med,  T: Med,  E: None,- R0: None,
+L1: All, - Surface 2(dir: away   ) -  R: Med,  T: Med,  E: None,- R1: Med, 
+L2: All, - Surface 3(dir: towards) -  R: Med,  T: Med,  E: All, - R2: All, 
+L3: All, - Surface 4(dir: away   ) -  R: Med,  T: Med,  E: None,- R3: All, 
+L4: All, - Surface 5(dir: away   ) -  R: All,  T: Med,  E: None,- R4: All, 
+L5: All, - Surface 6(dir: towards) -  R: Med,  T: Med,  E: None,- R5: All, 
+L6: All, - Surface 7(dir: towards) -  R: All,  T: All,  E: None,- R6: All, 
+L7: All, - Surface 8(dir: towards) -  R: Med,  T: Med,  E: All, - R7: All, 
+L8: All, - Surface 9(dir: towards) -  R: All,  T: Med,  E: None,- R8: All, 
+L9: None, - R9: All, 
+
+Testing (7 left)... OK!
+
+L0: All, - Surface 1(dir: away   ) -  R: All,  T: Med,  E: None,- R0: None,
+L1: All, - Surface 2(dir: away   ) -  R: All,  T: Med,  E: None,- R1: All, 
+L2: All, - Surface 3(dir: towards) -  R: Med,  T: Med,  E: Med, - R2: All, 
+L3: All, - Surface 4(dir: towards) -  R: Med,  T: All,  E: None,- R3: All, 
+L4: All, - Surface 5(dir: away   ) -  R: Med,  T: Med,  E: None,- R4: All, 
+L5: All, - Surface 6(dir: towards) -  R: None, T: Med,  E: All, - R5: All, 
+L6: None,- Surface 7(dir: away   ) -  R: None, T: Med,  E: None,- R6: All, 
+L7: None, - R7: Med, 
+
+Testing (6 left)... OK!
+
+L0: Med, - Surface 1(dir: towards) -  R: None, T: None, E: Med, - R0: None,
+L1: None, - R1: None,
+
+Testing (5 left)... OK!
+
+L0: None, - R0: None,
+
+Testing (4 left)... OK!
+
+L0: Med, - Surface 1(dir: away   ) -  R: None, T: None, E: Med, - R0: None,
+L1: Med, - Surface 2(dir: towards) -  R: All,  T: None, E: None,- R1: Med, 
+L2: None, - R2: Med, 
+
+Testing (3 left)... OK!
+
+L0: None,- Surface 1(dir: away   ) -  R: All,  T: None, E: None,- R0: None,
+L1: None,- Surface 2(dir: towards) -  R: All,  T: All,  E: None,- R1: None,
+L2: None, - R2: None,
+
+Testing (2 left)... OK!
+
+L0: All, - Surface 1(dir: away   ) -  R: All,  T: None, E: None,- R0: None,
+L1: All, - Surface 2(dir: towards) -  R: All,  T: All,  E: None,- R1: All, 
+L2: Med, - Surface 3(dir: towards) -  R: None, T: None, E: Med, - R2: All, 
+L3: None, - R3: All, 
+
+Testing (1 left)... OK!
+Verification successful.
+CIRCS.RAY=1260@999999|0873f74dd21e38f19dff6a68cbaa546
+% UMIX shutdown: console EOF

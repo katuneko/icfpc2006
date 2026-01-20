@@ -1,0 +1,383 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: The bullet-point is the kind of terse phrase you'd find in a
+talk. 
+Also, it is in pristine condition. 
+
+>: The slides.ppt is part of a talk. It contains only one slide,
+which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color. 
+Also, it is broken: it is a slides.ppt missing a bullet-point. 
+
+>: <success>
+  <command>
+    <switch>
+      XML
+    </switch>
+  </command>
+</success>
+<success>
+  <command>
+    <look>
+      <room>
+        <name>
+          Salon E
+        </name>
+        <description>
+          You are in Salon E of the Oregon Ballroom. A door leads east. 
+        </description>
+        <items>
+          <item>
+            <name>
+              bullet-point
+            </name>
+            <description>
+              the kind of terse phrase you'd find in a talk
+            </description>
+            <adjectives>
+            </adjectives>
+            <condition>
+              <pristine>
+              </pristine>
+            </condition>
+            <piled_on>
+              <item>
+                <name>
+                  slides.ppt
+                </name>
+                <description>
+                  part of a talk. It contains only one slide, which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color
+                </description>
+                <adjectives>
+                </adjectives>
+                <condition>
+                  <broken>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                    <missing>
+                      <kind>
+                        <name>
+                          bullet-point
+                        </name>
+                        <condition>
+                          <pristine>
+                          </pristine>
+                        </condition>
+                      </kind>
+                    </missing>
+                  </broken>
+                </condition>
+                <piled_on>
+                </piled_on>
+              </item>
+            </piled_on>
+          </item>
+        </items>
+      </room>
+    </look>
+  </command>
+</success>
+<success>
+  <command>
+    <examine>
+      <item>
+        <name>
+          bullet-point
+        </name>
+        <description>
+          the kind of terse phrase you'd find in a talk
+        </description>
+        <adjectives>
+        </adjectives>
+        <condition>
+          <pristine>
+          </pristine>
+        </condition>
+        <piled_on>
+        </piled_on>
+      </item>
+    </examine>
+  </command>
+</success>
+<success>
+  <command>
+    <examine>
+      <item>
+        <name>
+          slides.ppt
+        </name>
+        <description>
+          part of a talk. It contains only one slide, which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color
+        </description>
+        <adjectives>
+        </adjectives>
+        <condition>
+          <broken>
+            <condition>
+              <pristine>
+              </pristine>
+            </condition>
+            <missing>
+              <kind>
+                <name>
+                  bullet-point
+                </name>
+                <condition>
+                  <pristine>
+                  </pristine>
+                </condition>
+              </kind>
+            </missing>
+          </broken>
+        </condition>
+        <piled_on>
+        </piled_on>
+      </item>
+    </examine>
+  </command>
+</success>
+(success (command (switch "sexp")))
+(success (command (look (room (name "Salon E")(description "You are in Salon E of the Oregon Ballroom. A door leads east. ")(items ((item (name "bullet-point")(description "the kind of terse phrase you'd find in a talk")(adjectives )(condition (pristine ))(piled_on ((item (name "slides.ppt")(description "part of a talk. It contains only one slide, which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color")(adjectives )(condition (broken (condition (pristine ))(missing ((kind (name "bullet-point")(condition (pristine ))) ))))(piled_on )) ))) ))))))
+(success (command (examine (item (name "bullet-point")(description "the kind of terse phrase you'd find in a talk")(adjectives )(condition (pristine ))(piled_on )))))
+(success (command (examine (item (name "slides.ppt")(description "part of a talk. It contains only one slide, which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color")(adjectives )(condition (broken (condition (pristine ))(missing ((kind (name "bullet-point")(condition (pristine ))) ))))(piled_on )))))
+(success (command (switch "ML")))
+(success (command (look (room (name "Salon E") (description "You are in Salon E of the Oregon Ballroom. A door leads east. ") (items ((item (name "bullet-point") (description "the kind of terse phrase you'd find in a talk") (adjectives nil) (condition (pristine nil)) (piled_on ((item (name "slides.ppt") (description "part of a talk. It contains only one slide, which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color") (adjectives nil) (condition (broken (condition (pristine nil)) (missing ((kind (name "bullet-point") (condition (pristine nil))))::nil))) (piled_on nil)))::nil)))::nil)))))
+(success (command (examine (item (name "bullet-point") (description "the kind of terse phrase you'd find in a talk") (adjectives nil) (condition (pristine nil)) (piled_on nil)))))
+(success (command (examine (item (name "slides.ppt") (description "part of a talk. It contains only one slide, which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color") (adjectives nil) (condition (broken (condition (pristine nil)) (missing ((kind (name "bullet-point") (condition (pristine nil))))::nil))) (piled_on nil)))))
+Things look slightly different, but you can't put a diode on
+exactly how. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: The bullet-point is the kind of terse phrase you'd find in a
+talk. 
+Also, it is in pristine condition. 
+
+>: The slides.ppt is part of a talk. It contains only one slide,
+which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color. 
+Also, it is broken: it is a slides.ppt missing a bullet-point. 
+
+>: [0m[37m[40m[2J
+
+
+Things look slightly different, but you can't put a diode on
+exactly how. 
+
+[s[0;0H[1m[37m[44m[K[ score : [33m0[37m ]  Salon E                                    [0m[37m[40m[u[1m[34m>: [0m[37m[40m[1mSalon E[0m
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+[s[0;0H[1m[37m[44m[K[ score : [33m0[37m ]  Salon E                                    [0m[37m[40m[u[1m[34m>: [0m[37m[40mThe bullet-point is the kind of terse phrase you'd find in a
+talk. 
+Also, it is in pristine condition. 
+
+[s[0;0H[1m[37m[44m[K[ score : [33m0[37m ]  Salon E                                    [0m[37m[40m[u[1m[34m>: [0m[37m[40mThe slides.ppt is part of a talk. It contains only one slide,
+which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color. 
+Also, it is broken: it is a slides.ppt missing a bullet-point. 
+
+[s[0;0H[1m[37m[44m[K[ score : [33m0[37m ]  Salon E                                    [0m[37m[40m[u[1m[34m>: [0m[37m[40mThings look slightly different, but you can't put a diode on
+exactly how. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: The bullet-point is the kind of terse phrase you'd find in a
+talk. 
+Also, it is in pristine condition. 
+
+>: The slides.ppt is part of a talk. It contains only one slide,
+which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color. 
+Also, it is broken: it is a slides.ppt missing a bullet-point. 
+
+>: % UMIX shutdown: console EOF

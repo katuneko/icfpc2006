@@ -1,0 +1,4 @@
+bbarker
+plinko
+ls
+ls /home

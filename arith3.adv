@@ -1,0 +1,23 @@
+{ comments are enclosed by curly-braces;
+  no nested comments are allowed  }
+
+{ evaluation entry point }
+Compute x => Eval x;
+
+{ evaluate numerals }
+Eval Z => Z;
+Eval (S x) => S (Eval x);
+
+{ evaluate expressions }
+Eval (Add x y) => AddF (Eval x) (Freeze y);
+Eval (Mult x y) => MulF (Eval x) (Freeze y);
+
+{ addition with frozen right operand }
+AddF Z (Freeze y) => Eval y;
+AddF (S x) (Freeze y) => S (AddF x (Freeze y));
+
+{ multiplication via repeated addition }
+MulF Z (Freeze y) => Z;
+MulF (S x) (Freeze y) => AddF (Eval y) (Freeze (MulF x (Freeze y)));
+
+. { end of rules }

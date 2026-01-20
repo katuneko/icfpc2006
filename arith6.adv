@@ -1,0 +1,34 @@
+{ comments are enclosed by curly-braces;
+  no nested comments are allowed  }
+
+{ evaluation entry point }
+Compute x => Eval x Done;
+
+{ evaluate expressions first }
+Eval (Add x y) k => Eval x (KAdd y k);
+Eval (Mult x y) k => Eval x (KMult y k);
+
+{ values }
+Eval v k => k v;
+
+{ evaluate addition }
+(KAdd y k) v => Eval y (KAdd2 v k);
+(KAdd2 v k) w => AddN v w k;
+
+{ numeric addition }
+AddN Z w k => k w;
+AddN (S x) w k => AddN x (S w) k;
+
+{ evaluate multiplication }
+(KMult y k) v => Eval y (KMult2 v k);
+(KMult2 v k) w => MulAcc v w Z k;
+
+{ numeric multiplication via accumulator }
+MulAcc Z w acc k => k acc;
+MulAcc (S x) w acc k => AddN w acc (KMulAcc x w k);
+(KMulAcc x w k) acc => MulAcc x w acc k;
+
+{ finish }
+Done v => v;
+
+. { end of rules }

@@ -1,0 +1,198 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% unknown command north
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command incinerate
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command incinerate
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command combine
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command combine
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command incinerate
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command combine
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command combine
+new to UMIX? try
+  help
+for help.
+% unknown command combine
+new to UMIX? try
+  help
+for help.
+% unknown command combine
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command combine
+new to UMIX? try
+  help
+for help.
+% unknown command combine
+new to UMIX? try
+  help
+for help.
+% unknown command take
+new to UMIX? try
+  help
+for help.
+% unknown command combine
+new to UMIX? try
+  help
+for help.
+% unknown command combine
+new to UMIX? try
+  help
+for help.
+% unknown command south
+new to UMIX? try
+  help
+for help.
+% unknown command use
+new to UMIX? try
+  help
+for help.
+% unknown command east
+new to UMIX? try
+  help
+for help.
+% unknown command south
+new to UMIX? try
+  help
+for help.
+% unknown command switch
+new to UMIX? try
+  help
+for help.
+% unknown command look
+new to UMIX? try
+  help
+for help.
+% UMIX shutdown: console EOF

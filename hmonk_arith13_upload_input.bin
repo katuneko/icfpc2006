@@ -1,0 +1,20 @@
+hmonk
+COMEFROM
+run /bin/umodem arith13.adv EOF
+{ comments are enclosed by curly-braces;
+  no nested comments are allowed  }
+
+{ evaluation entry point }
+Compute x => x;
+
+{ numeric addition }
+Add Z y => y;
+Add (S x) y => S (Add x y);
+
+{ numeric multiplication }
+Mult Z y => Z;
+Mult (S x) y => Add y (Mult x y);
+
+. { end of rules }
+EOF
+advise arith arith13.adv arith.tests

@@ -1,0 +1,36 @@
+{ O'Cult XML SNF normalizer }
+
+SNF x => Eval x Done;
+
+Eval A k => Apply k A;
+Eval B k => Apply k B;
+
+Eval (Seq x y) k => Eval x (KSeq y k);
+Apply (KSeq y k) v => Eval y (KSeq2 v k);
+Apply (KSeq2 v k) w => Apply k (MergeSeq v w);
+
+Eval (Tag q d) k => Eval d (KTag q k);
+Apply (KTag q k) v => Apply k (InsertTag q v);
+
+{ merge sequences }
+MergeSeq (Seq a b) c => Seq a (MergeSeq b c);
+MergeSeq (Tag q a) (Tag q b) => Tag q (MergeSeq a b);
+MergeSeq a b => Seq a b;
+
+{ insert tag in order and remove duplicates }
+InsertTag q (Tag q d) => Tag q d;
+
+InsertTag Bold (Tag Emph d) => Tag Bold (Tag Emph d);
+InsertTag Bold (Tag Maj d) => Tag Bold (Tag Maj d);
+
+InsertTag Emph (Tag Bold d) => Tag Bold (InsertTag Emph d);
+InsertTag Emph (Tag Maj d) => Tag Emph (Tag Maj d);
+
+InsertTag Maj (Tag Bold d) => Tag Bold (InsertTag Maj d);
+InsertTag Maj (Tag Emph d) => Tag Emph (InsertTag Maj d);
+
+InsertTag q d => Tag q d;
+
+Apply Done v => v;
+
+. { end }

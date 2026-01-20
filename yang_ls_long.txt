@@ -1,0 +1,5 @@
+yang
+U+262F
+ls -l
+ls -l umodem
+ls -l qbasic

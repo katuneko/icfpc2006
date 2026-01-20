@@ -1,0 +1,571 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: Junk Room
+
+You are in a room with a pile of junk. A hallway leads south. 
+There is a bolt here. 
+Underneath the bolt, there is a spring. 
+Underneath the spring, there is a button. 
+Underneath the button, there is a (broken) processor. 
+Underneath the processor, there is a red pill. 
+Underneath the pill, there is a (broken) radio. 
+Underneath the radio, there is a cache. 
+Underneath the cache, there is a blue transistor. 
+Underneath the transistor, there is an antenna. 
+Underneath the antenna, there is a screw. 
+Underneath the screw, there is a (broken) motherboard. 
+Underneath the motherboard, there is a (broken) A-1920-IXB. 
+Underneath the A-1920-IXB, there is a red transistor. 
+Underneath the transistor, there is a (broken) keypad. 
+Underneath the keypad, there is some trash. 
+
+>: You are now carrying the bolt. 
+
+>: You are now carrying the spring. 
+
+>: ADVTR.INC=5@999999|f95731ab88952dfa4cb326fb99c085f
+The spring has been destroyed. 
+
+>: You are now carrying the button. 
+
+>: You are now carrying the processor. 
+
+>: You are now carrying the pill. 
+
+>: The pill has been destroyed. 
+
+>: You are now carrying the radio. 
+
+>: You are now carrying the cache. 
+
+>: ADVTR.CMB=5@999999|764e8a851411c66106e130374d8abbb
+You have successfully combined the processor and the cache!
+
+>: You are now carrying the transistor. 
+
+>: You have successfully combined the radio and the transistor!
+
+>: You are now carrying the antenna. 
+
+>: The antenna has been destroyed. 
+
+>: You are now carrying the screw. 
+
+>: You are now carrying the motherboard. 
+
+>: You have successfully combined the motherboard and the screw!
+
+>: You are now carrying the A-1920-IXB. 
+
+>: You have successfully combined the A-1920-IXB and the bolt!
+
+>: You have successfully combined the A-1920-IXB and the processor!
+
+>: You have successfully combined the A-1920-IXB and the radio!
+
+>: You are now carrying the transistor. 
+
+>: You have successfully combined the A-1920-IXB and the
+transistor!
+
+>: You have successfully combined the motherboard and the
+A-1920-IXB!
+
+>: You are now carrying the keypad. 
+
+>: You have successfully combined the keypad and the motherboard!
+
+>: You have successfully combined the keypad and the button!
+
+>: Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: ADVTR.KEY=20@999999|36995486a5be3bd747d778916846d2d
+You unlock and open the door. Passing through, you find yourself
+on the streets of Chicago. Seeing no reason you should ever go
+back, you allow the door to close behind you. 
+
+>: The keypad has been destroyed. 
+
+>: You are now carrying the /etc/passwd. 
+
+>: The /etc/passwd has been destroyed. 
+
+>: You are now carrying the note. 
+
+>: The note has been destroyed. 
+
+>: You are now carrying the downloader. 
+
+>: 54th Street and Dorchester Avenue
+
+You are standing at the corner of 54th Street and Dorchester
+Avenue. From here, you can go north, east, south, or west. 
+There is an orange-red X-9247-GWE here. 
+Underneath the X-9247-GWE, there is a (broken) magenta
+V-0010-XBD. 
+Underneath the V-0010-XBD, there is a pumpkin F-1403-QDS. 
+Underneath the F-1403-QDS, there is a (broken) heavy P-5065-WQO.
+
+Underneath the P-5065-WQO, there is a taupe B-4832-LAL. 
+Underneath the B-4832-LAL, there is a (broken) gray40
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) eggplant
+T-9887-OFC. 
+Underneath the T-9887-OFC, there is a (broken) indigo
+Z-1623-CEK. 
+Underneath the Z-1623-CEK, there is a yellow-green H-9887-MKY. 
+Underneath the H-9887-MKY, there is a (broken) shiny F-6678-DOX.
+
+Underneath the F-6678-DOX, there is a pale-green R-1403-SXU. 
+Underneath the R-1403-SXU, there is a (broken) USB cable. 
+Underneath the USB cable, there is a sienna N-4832-NUN. 
+Underneath the N-4832-NUN, there is a slate-gray J-9247-IRG. 
+Underneath the J-9247-IRG, there is a dim-gray B-5065-YLQ. 
+
+>: 54th Place and Dorchester Avenue
+
+You are standing at the corner of 54th Place and Dorchester
+Avenue. From here, you can go north or east. 
+There is a (broken) terra-cotta T-9887-OAU here. 
+Underneath the T-9887-OAU, there is a carrot L-1623-ETG. 
+Underneath the L-1623-ETG, there is a (broken) heliotrope
+B-1403-YDU. 
+Underneath the B-1403-YDU, there is a (broken) imported
+H-9247-MCE. 
+Underneath the H-9247-MCE, there is a pear R-0010-FBF. 
+Underneath the R-0010-FBF, there is a (broken) pale-turquoise
+Z-4832-PKJ. 
+Underneath the Z-4832-PKJ, there is a (broken) sandy-brown
+T-0010-BLZ. 
+Underneath the T-0010-BLZ, there is a (broken) miniature
+R-6678-FET. 
+Underneath the R-6678-FET, there is a (broken) linen-colored
+H-9247-MCE. 
+Underneath the H-9247-MCE, there is a (broken) snow L-4832-RFL. 
+Underneath the L-4832-RFL, there is a (broken) lilac H-0010-ZQX.
+
+Underneath the H-0010-ZQX, there is a (broken) gray30
+X-1623-GOI. 
+Underneath the X-1623-GOI, there is a (broken) silver
+L-4832-RFL. 
+Underneath the L-4832-RFL, there is a (broken) bisque
+V-1623-KEM. 
+Underneath the V-1623-KEM, there is a (broken) gray40
+N-4013-DJW. 
+Underneath the N-4013-DJW, there is a (broken) pale-red-violet
+T-9247-OWG. 
+Underneath the T-9247-OWG, there is a (broken) peach F-0010-DGD.
+
+Underneath the F-0010-DGD, there is a pine-green H-6458-ZNJ. 
+Underneath the H-6458-ZNJ, there is a persian-blue X-4832-TAN. 
+Underneath the X-4832-TAN, there is a (broken) pink P-4292-JWN. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: 54th Place and Blackstone Avenue
+
+You are standing at the corner of 54th Place and Blackstone
+Avenue. From here, you can go north, east, or west. 
+There is a (broken) blaze-orange V-1623-KTK here. 
+Underneath the V-1623-KTK, there is a (broken) dodger-blue
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a taupe X-6458-TSZ. 
+Underneath the X-6458-TSZ, there is a (broken) pale-carmine
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a (broken) carrot
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a pale-violet-red
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a mint-green R-9887-SFW. 
+Underneath the R-9887-SFW, there is a taupe V-9247-KWY. 
+Underneath the V-9247-KWY, there is a (broken) dim-gray
+Z-4832-PAH. 
+Underneath the Z-4832-PAH, there is a (broken) old-lace
+P-1403-WXQ. 
+Underneath the P-1403-WXQ, there is a (broken) peach-yellow
+R-6678-FTR. 
+Underneath the R-6678-FTR, there is a (broken) selective-yellow
+T-0010-BBX. 
+Underneath the T-0010-BBX, there is a (broken) vegan D-6678-HOT.
+
+Underneath the D-6678-HOT, there is a (broken) hot-pink
+H-9247-MRC. 
+Underneath the H-9247-MRC, there is a (broken) mysterious
+L-6678-ROF. 
+Underneath the L-6678-ROF, there is a peach R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) old-gold
+V-6458-XIF. 
+Underneath the V-6458-XIF, there is a (broken) ivory N-4292-NCP.
+
+Underneath the N-4292-NCP, there is a rust R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) slate-gray
+P-6678-JJV. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the V-1623-KTK. 
+
+>: The V-1623-KTK has been destroyed. 
+
+>: You are now carrying the V-1623-KTK. 
+
+>: The V-1623-KTK has been destroyed. 
+
+>: You are now carrying the X-6458-TSZ. 
+
+>: The X-6458-TSZ has been destroyed. 
+
+>: You are now carrying the V-1623-KTK. 
+
+>: The V-1623-KTK has been destroyed. 
+
+>: You are now carrying the T-9887-OPS. 
+
+>: The T-9887-OPS has been destroyed. 
+
+>: You are now carrying the T-9887-OPS. 
+
+>: The T-9887-OPS has been destroyed. 
+
+>: You are now carrying the R-9887-SFW. 
+
+>: The R-9887-SFW has been destroyed. 
+
+>: You are now carrying the V-9247-KWY. 
+
+>: The V-9247-KWY has been destroyed. 
+
+>: You are now carrying the Z-4832-PAH. 
+
+>: The Z-4832-PAH has been destroyed. 
+
+>: You are now carrying the P-1403-WXQ. 
+
+>: The P-1403-WXQ has been destroyed. 
+
+>: You are now carrying the R-6678-FTR. 
+
+>: The R-6678-FTR has been destroyed. 
+
+>: You are now carrying the T-0010-BBX. 
+
+>: The T-0010-BBX has been destroyed. 
+
+>: You are now carrying the D-6678-HOT. 
+
+>: The D-6678-HOT has been destroyed. 
+
+>: You are now carrying the H-9247-MRC. 
+
+>: The H-9247-MRC has been destroyed. 
+
+>: You are now carrying the L-6678-ROF. 
+
+>: The L-6678-ROF has been destroyed. 
+
+>: You are now carrying the R-9887-SFW. 
+
+>: The R-9887-SFW has been destroyed. 
+
+>: You are now carrying the V-6458-XIF. 
+
+>: The V-6458-XIF has been destroyed. 
+
+>: You are now carrying the N-4292-NCP. 
+
+>: The N-4292-NCP has been destroyed. 
+
+>: You are now carrying the R-9887-SFW. 
+
+>: The R-9887-SFW has been destroyed. 
+
+>: You are now carrying the P-6678-JJV. 
+
+>: The P-6678-JJV has been destroyed. 
+
+>: You are now carrying the H-6458-ZDH. 
+
+>: The H-6458-ZDH has been destroyed. 
+
+>: You are now carrying the L-5065-EGO. 
+
+>: The L-5065-EGO has been destroyed. 
+
+>: You are now carrying the L-5065-EGO. 
+
+>: The L-5065-EGO has been destroyed. 
+
+>: You are now carrying the T-6678-BOP. 
+
+>: The T-6678-BOP has been destroyed. 
+
+>: You are now carrying the L-6678-ROF. 
+
+>: The L-6678-ROF has been destroyed. 
+
+>: You are now carrying the P-9247-WRM. 
+
+>: The P-9247-WRM has been destroyed. 
+
+>: You are now carrying the D-6458-HIP. 
+
+>: The D-6458-HIP has been destroyed. 
+
+>: You are now carrying the L-6678-ROF. 
+
+>: The L-6678-ROF has been destroyed. 
+
+>: You are now carrying the F-1623-QEQ. 
+
+>: The F-1623-QEQ has been destroyed. 
+
+>: You are now carrying the J-4292-VHX. 
+
+>: The J-4292-VHX has been destroyed. 
+
+>: You are now carrying the N-9887-AKG. 
+
+>: The N-9887-AKG has been destroyed. 
+
+>: You are now carrying the Z-6678-PTD. 
+
+>: The Z-6678-PTD has been destroyed. 
+
+>: You are now carrying the B-0010-LBJ. 
+
+>: The B-0010-LBJ has been destroyed. 
+
+>: You are now carrying the N-9887-AKG. 
+
+>: The N-9887-AKG has been destroyed. 
+
+>: You are now carrying the H-5065-MLW. 
+
+>: The H-5065-MLW has been destroyed. 
+
+>: You are now carrying the D-6458-HIP. 
+
+>: The D-6458-HIP has been destroyed. 
+
+>: You are now carrying the N-6678-NYZ. 
+
+>: The N-6678-NYZ has been destroyed. 
+
+>: You are now carrying the R-9247-SCI. 
+
+>: The R-9247-SCI has been destroyed. 
+
+>: You are now carrying the J-5065-IVS. 
+
+>: The J-5065-IVS has been destroyed. 
+
+>: You are now carrying the V-4832-XFP. 
+
+>: The V-4832-XFP has been destroyed. 
+
+>: You are now carrying the P-9887-WUC. 
+
+>: The P-9887-WUC has been destroyed. 
+
+>: You are now carrying the Z-1403-CIW. 
+
+>: The Z-1403-CIW has been destroyed. 
+
+>: You are now carrying the F-6458-DSL. 
+
+>: The F-6458-DSL has been destroyed. 
+
+>: You are now carrying the T-6458-BXJ. 
+
+>: The T-6458-BXJ has been destroyed. 
+
+>: You are now carrying the F-6458-DSL. 
+
+>: The F-6458-DSL has been destroyed. 
+
+>: You are now carrying the P-0010-JGH. 
+
+>: The P-0010-JGH has been destroyed. 
+
+>: You are now carrying the N-1403-ANU. 
+
+>: The N-1403-ANU has been destroyed. 
+
+>: You are now carrying the Z-1403-CIW. 
+
+>: The Z-1403-CIW has been destroyed. 
+
+>: You are now carrying the D-6458-HIP. 
+
+>: The D-6458-HIP has been destroyed. 
+
+>: You are now carrying the N-9887-AKG. 
+
+>: The N-9887-AKG has been destroyed. 
+
+>: You are now carrying the P-5065-WLI. 
+
+>: The P-5065-WLI has been destroyed. 
+
+>: You are now carrying the D-4292-HCL. 
+
+>: You are now carrying the B-5065-YGK. 
+
+>: You are now carrying the jumper shunt. 
+
+>: You are now carrying the B-4832-LUF. 
+
+>: The B-4832-LUF has been destroyed. 
+
+>: You are now carrying the R-4292-FHJ. 
+
+>: The R-4292-FHJ has been destroyed. 
+
+>: You are now carrying the T-6678-BOP. 
+
+>: You are now carrying the P-4832-JAD. 
+
+>: The P-4832-JAD has been destroyed. 
+
+>: You are now carrying the L-6458-RIZ. 
+
+>: You have successfully combined the jumper shunt and the
+D-4292-HCL!
+
+>: You have successfully combined the jumper shunt and the
+T-6678-BOP!
+
+>: You have successfully combined the jumper shunt and the
+B-5065-YGK!
+
+>: You are now carrying the X-0010-TGR. 
+
+>: The X-0010-TGR has been destroyed. 
+
+>: You are now carrying the P-4832-JAD. 
+
+>: The P-4832-JAD has been destroyed. 
+
+>: You are now carrying the T-1403-ODK. 
+
+>: You are now carrying the D-4292-HCL. 
+
+>: The D-4292-HCL has been destroyed. 
+
+>: You are now carrying the Z-6458-PNX. 
+
+>: You are now carrying the T-4292-BRF. 
+
+>: The T-4292-BRF has been destroyed. 
+
+>: You are now carrying the D-4832-HFZ. 
+
+>: The D-4832-HFZ has been destroyed. 
+
+>: You are now carrying the D-4292-HCL. 
+
+>: The D-4292-HCL has been destroyed. 
+
+>: You are now carrying the D-4292-HCL. 
+
+>: The D-4292-HCL has been destroyed. 
+
+>: You are now carrying the P-4832-JAD. 
+
+>: The P-4832-JAD has been destroyed. 
+
+>: You are now carrying the D-4832-HFZ. 
+
+>: You have successfully combined the Z-6458-PNX and the
+D-4832-HFZ!
+
+>: You have successfully combined the L-6458-RIZ and the
+T-1403-ODK!
+
+>: You have successfully combined the L-6458-RIZ and the
+Z-6458-PNX!
+
+>: ADVTR.JMP=20@999999|2b8dec700819b5ff41074b93dfd8fea
+You have successfully combined the jumper shunt and the
+L-6458-RIZ!
+
+>: You have successfully combined the downloader and the jumper
+shunt!
+
+>: % UMIX shutdown: console EOF

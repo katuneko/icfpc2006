@@ -1,0 +1,83 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as bbarker
+
+
+
+You have new mail. Type 'mail' to view.
+% Please enter your machine one row at a time, using the |>< characters.
+Terminate with an empty line.
+
+Finished reading in machine.  Processing...
+* x -> (y,z)
+* Means that if you drop a marble into pipe x, it comes out pipe y,
+* and you hear z plinks
+0 -> (8,10)
+1 -> (1,5)
+2 -> (2,5)
+3 -> (0,5)
+4 -> (5,4)
+5 -> (4,6)
+6 -> (7,4)
+7 -> (3,3)
+8 -> (9,6)
+9 -> (6,4)
+
+You have new mail. Type 'mail' to view.
+% UMIX shutdown: console EOF

@@ -1,0 +1,9 @@
+howie
+xyzzy
+adventure
+west
+take bullet-point
+take slides.ppt
+combine slides.ppt with bullet-point
+examine slides.ppt
+use slides.ppt

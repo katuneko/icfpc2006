@@ -1,0 +1,23 @@
+{ tests for XML SNF }
+
+{ base }
+SNF A -> A;
+SNF B -> B;
+
+{ seq reassociation }
+SNF (Seq (Seq A B) A) -> (Seq A (Seq B A));
+
+{ tag dedup }
+SNF (Tag Bold (Tag Bold A)) -> (Tag Bold A);
+
+{ merge same tags across Seq }
+SNF (Seq (Tag Bold A) (Tag Bold B)) -> (Tag Bold (Seq A B));
+
+{ tag ordering }
+SNF (Tag Emph (Tag Bold A)) -> (Tag Bold (Tag Emph A));
+SNF (Tag Maj (Tag Bold (Seq A B))) -> (Tag Bold (Tag Maj (Seq A B)));
+
+{ dedup + merge }
+SNF (Seq (Tag Emph A) (Tag Emph (Tag Emph B))) -> (Tag Emph (Seq A B));
+
+. { end of tests }

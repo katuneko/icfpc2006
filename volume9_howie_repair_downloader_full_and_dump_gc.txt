@@ -1,0 +1,1798 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: Junk Room
+
+You are in a room with a pile of junk. A hallway leads south. 
+There is a bolt here. 
+Underneath the bolt, there is a spring. 
+Underneath the spring, there is a button. 
+Underneath the button, there is a (broken) processor. 
+Underneath the processor, there is a red pill. 
+Underneath the pill, there is a (broken) radio. 
+Underneath the radio, there is a cache. 
+Underneath the cache, there is a blue transistor. 
+Underneath the transistor, there is an antenna. 
+Underneath the antenna, there is a screw. 
+Underneath the screw, there is a (broken) motherboard. 
+Underneath the motherboard, there is a (broken) A-1920-IXB. 
+Underneath the A-1920-IXB, there is a red transistor. 
+Underneath the transistor, there is a (broken) keypad. 
+Underneath the keypad, there is some trash. 
+
+>: You are now carrying the bolt. 
+
+>: You are now carrying the spring. 
+
+>: ADVTR.INC=5@999999|f95731ab88952dfa4cb326fb99c085f
+The spring has been destroyed. 
+
+>: You are now carrying the button. 
+
+>: You are now carrying the processor. 
+
+>: You are now carrying the pill. 
+
+>: The pill has been destroyed. 
+
+>: You are now carrying the radio. 
+
+>: You are now carrying the cache. 
+
+>: ADVTR.CMB=5@999999|764e8a851411c66106e130374d8abbb
+You have successfully combined the processor and the cache!
+
+>: You are now carrying the transistor. 
+
+>: You have successfully combined the radio and the transistor!
+
+>: You are now carrying the antenna. 
+
+>: The antenna has been destroyed. 
+
+>: You are now carrying the screw. 
+
+>: You are now carrying the motherboard. 
+
+>: You have successfully combined the motherboard and the screw!
+
+>: You are now carrying the A-1920-IXB. 
+
+>: You have successfully combined the A-1920-IXB and the bolt!
+
+>: You have successfully combined the A-1920-IXB and the processor!
+
+>: You have successfully combined the A-1920-IXB and the radio!
+
+>: You are now carrying the transistor. 
+
+>: You have successfully combined the A-1920-IXB and the
+transistor!
+
+>: You have successfully combined the motherboard and the
+A-1920-IXB!
+
+>: You are now carrying the keypad. 
+
+>: You have successfully combined the keypad and the motherboard!
+
+>: You have successfully combined the keypad and the button!
+
+>: Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: ADVTR.KEY=20@999999|36995486a5be3bd747d778916846d2d
+You unlock and open the door. Passing through, you find yourself
+on the streets of Chicago. Seeing no reason you should ever go
+back, you allow the door to close behind you. 
+
+>: The keypad has been destroyed. 
+
+>: You are now carrying the /etc/passwd. 
+
+>: The /etc/passwd has been destroyed. 
+
+>: You are now carrying the note. 
+
+>: The note has been destroyed. 
+
+>: You are now carrying the downloader. 
+
+>: 54th Street and Dorchester Avenue
+
+You are standing at the corner of 54th Street and Dorchester
+Avenue. From here, you can go north, east, south, or west. 
+There is an orange-red X-9247-GWE here. 
+Underneath the X-9247-GWE, there is a (broken) magenta
+V-0010-XBD. 
+Underneath the V-0010-XBD, there is a pumpkin F-1403-QDS. 
+Underneath the F-1403-QDS, there is a (broken) heavy P-5065-WQO.
+
+Underneath the P-5065-WQO, there is a taupe B-4832-LAL. 
+Underneath the B-4832-LAL, there is a (broken) gray40
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) eggplant
+T-9887-OFC. 
+Underneath the T-9887-OFC, there is a (broken) indigo
+Z-1623-CEK. 
+Underneath the Z-1623-CEK, there is a yellow-green H-9887-MKY. 
+Underneath the H-9887-MKY, there is a (broken) shiny F-6678-DOX.
+
+Underneath the F-6678-DOX, there is a pale-green R-1403-SXU. 
+Underneath the R-1403-SXU, there is a (broken) USB cable. 
+Underneath the USB cable, there is a sienna N-4832-NUN. 
+Underneath the N-4832-NUN, there is a slate-gray J-9247-IRG. 
+Underneath the J-9247-IRG, there is a dim-gray B-5065-YLQ. 
+
+>: You are now carrying the X-9247-GWE. 
+
+>: You are now carrying the V-0010-XBD. 
+
+>: You have successfully combined the V-0010-XBD and the
+X-9247-GWE!
+
+>: You are now carrying the F-1403-QDS. 
+
+>: The F-1403-QDS has been destroyed. 
+
+>: You are now carrying the P-5065-WQO. 
+
+>: The P-5065-WQO has been destroyed. 
+
+>: You are now carrying the B-4832-LAL. 
+
+>: The B-4832-LAL has been destroyed. 
+
+>: You are now carrying the L-6458-RNH. 
+
+>: The L-6458-RNH has been destroyed. 
+
+>: You are now carrying the T-9887-OFC. 
+
+>: You are now carrying the Z-1623-CEK. 
+
+>: The Z-1623-CEK has been destroyed. 
+
+>: You are now carrying the H-9887-MKY. 
+
+>: You have successfully combined the T-9887-OFC and the
+H-9887-MKY!
+
+>: You are now carrying the F-6678-DOX. 
+
+>: You have successfully combined the F-6678-DOX and the
+V-0010-XBD!
+
+>: You are now carrying the R-1403-SXU. 
+
+>: The R-1403-SXU has been destroyed. 
+
+>: You are now carrying the USB cable. 
+
+>: You are now carrying the N-4832-NUN. 
+
+>: You have successfully combined the USB cable and the N-4832-NUN!
+
+>: You are now carrying the J-9247-IRG. 
+
+>: You have successfully combined the F-6678-DOX and the
+J-9247-IRG!
+
+>: You have successfully combined the USB cable and the F-6678-DOX!
+
+>: ADVTR.USB=20@999999|5d764ff644ba600741a6ea9273b86f3
+You have successfully combined the USB cable and the T-9887-OFC!
+
+>: You have successfully combined the downloader and the USB cable!
+
+>: 54th Place and Dorchester Avenue
+
+You are standing at the corner of 54th Place and Dorchester
+Avenue. From here, you can go north or east. 
+There is a (broken) terra-cotta T-9887-OAU here. 
+Underneath the T-9887-OAU, there is a carrot L-1623-ETG. 
+Underneath the L-1623-ETG, there is a (broken) heliotrope
+B-1403-YDU. 
+Underneath the B-1403-YDU, there is a (broken) imported
+H-9247-MCE. 
+Underneath the H-9247-MCE, there is a pear R-0010-FBF. 
+Underneath the R-0010-FBF, there is a (broken) pale-turquoise
+Z-4832-PKJ. 
+Underneath the Z-4832-PKJ, there is a (broken) sandy-brown
+T-0010-BLZ. 
+Underneath the T-0010-BLZ, there is a (broken) miniature
+R-6678-FET. 
+Underneath the R-6678-FET, there is a (broken) linen-colored
+H-9247-MCE. 
+Underneath the H-9247-MCE, there is a (broken) snow L-4832-RFL. 
+Underneath the L-4832-RFL, there is a (broken) lilac H-0010-ZQX.
+
+Underneath the H-0010-ZQX, there is a (broken) gray30
+X-1623-GOI. 
+Underneath the X-1623-GOI, there is a (broken) silver
+L-4832-RFL. 
+Underneath the L-4832-RFL, there is a (broken) bisque
+V-1623-KEM. 
+Underneath the V-1623-KEM, there is a (broken) gray40
+N-4013-DJW. 
+Underneath the N-4013-DJW, there is a (broken) pale-red-violet
+T-9247-OWG. 
+Underneath the T-9247-OWG, there is a (broken) peach F-0010-DGD.
+
+Underneath the F-0010-DGD, there is a pine-green H-6458-ZNJ. 
+Underneath the H-6458-ZNJ, there is a persian-blue X-4832-TAN. 
+Underneath the X-4832-TAN, there is a (broken) pink P-4292-JWN. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the T-9887-OAU. 
+
+>: The T-9887-OAU has been destroyed. 
+
+>: You are now carrying the L-1623-ETG. 
+
+>: The L-1623-ETG has been destroyed. 
+
+>: You are now carrying the B-1403-YDU. 
+
+>: The B-1403-YDU has been destroyed. 
+
+>: You are now carrying the H-9247-MCE. 
+
+>: You are now carrying the R-0010-FBF. 
+
+>: The R-0010-FBF has been destroyed. 
+
+>: You are now carrying the Z-4832-PKJ. 
+
+>: The Z-4832-PKJ has been destroyed. 
+
+>: You are now carrying the T-0010-BLZ. 
+
+>: The T-0010-BLZ has been destroyed. 
+
+>: You are now carrying the R-6678-FET. 
+
+>: The R-6678-FET has been destroyed. 
+
+>: You are now carrying the H-9247-MCE. 
+
+>: The H-9247-MCE has been destroyed. 
+
+>: You are now carrying the L-4832-RFL. 
+
+>: The L-4832-RFL has been destroyed. 
+
+>: You are now carrying the H-0010-ZQX. 
+
+>: You are now carrying the X-1623-GOI. 
+
+>: The X-1623-GOI has been destroyed. 
+
+>: You are now carrying the L-4832-RFL. 
+
+>: You are now carrying the V-1623-KEM. 
+
+>: You are now carrying the N-4013-DJW. 
+
+>: You have successfully combined the N-4013-DJW and the
+H-0010-ZQX!
+
+>: You have successfully combined the V-1623-KEM and the
+H-9247-MCE!
+
+>: You have successfully combined the V-1623-KEM and the
+L-4832-RFL!
+
+>: You are now carrying the T-9247-OWG. 
+
+>: The T-9247-OWG has been destroyed. 
+
+>: You are now carrying the F-0010-DGD. 
+
+>: The F-0010-DGD has been destroyed. 
+
+>: You are now carrying the H-6458-ZNJ. 
+
+>: You are now carrying the X-4832-TAN. 
+
+>: The X-4832-TAN has been destroyed. 
+
+>: You are now carrying the P-4292-JWN. 
+
+>: The P-4292-JWN has been destroyed. 
+
+>: You are now carrying the F-0010-DGD. 
+
+>: The F-0010-DGD has been destroyed. 
+
+>: You are now carrying the Z-4292-PHT. 
+
+>: The Z-4292-PHT has been destroyed. 
+
+>: You are now carrying the B-1403-YDU. 
+
+>: The B-1403-YDU has been destroyed. 
+
+>: You are now carrying the J-1623-IJK. 
+
+>: The J-1623-IJK has been destroyed. 
+
+>: You are now carrying the X-4832-TAN. 
+
+>: The X-4832-TAN has been destroyed. 
+
+>: You are now carrying the P-6678-JTX. 
+
+>: The P-6678-JTX has been destroyed. 
+
+>: You are now carrying the Z-4292-PHT. 
+
+>: The Z-4292-PHT has been destroyed. 
+
+>: You are now carrying the N-4013-DJW. 
+
+>: The N-4013-DJW has been destroyed. 
+
+>: You are now carrying the Z-4292-PHT. 
+
+>: The Z-4292-PHT has been destroyed. 
+
+>: You are now carrying the H-6458-ZNJ. 
+
+>: The H-6458-ZNJ has been destroyed. 
+
+>: You are now carrying the power cord. 
+
+>: You are now carrying the Z-4292-PHT. 
+
+>: You have successfully combined the power cord and the
+N-4013-DJW!
+
+>: You have successfully combined the power cord and the
+V-1623-KEM!
+
+>: You have successfully combined the power cord and the
+H-6458-ZNJ!
+
+>: ADVTR.PWR=20@999999|4a451c6ead4af213163926a946290a5
+You have successfully combined the power cord and the
+Z-4292-PHT!
+
+>: You have successfully combined the downloader and the power
+cord!
+
+>: 54th Place and Blackstone Avenue
+
+You are standing at the corner of 54th Place and Blackstone
+Avenue. From here, you can go north, east, or west. 
+There is a (broken) blaze-orange V-1623-KTK here. 
+Underneath the V-1623-KTK, there is a (broken) dodger-blue
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a taupe X-6458-TSZ. 
+Underneath the X-6458-TSZ, there is a (broken) pale-carmine
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a (broken) carrot
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a pale-violet-red
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a mint-green R-9887-SFW. 
+Underneath the R-9887-SFW, there is a taupe V-9247-KWY. 
+Underneath the V-9247-KWY, there is a (broken) dim-gray
+Z-4832-PAH. 
+Underneath the Z-4832-PAH, there is a (broken) old-lace
+P-1403-WXQ. 
+Underneath the P-1403-WXQ, there is a (broken) peach-yellow
+R-6678-FTR. 
+Underneath the R-6678-FTR, there is a (broken) selective-yellow
+T-0010-BBX. 
+Underneath the T-0010-BBX, there is a (broken) vegan D-6678-HOT.
+
+Underneath the D-6678-HOT, there is a (broken) hot-pink
+H-9247-MRC. 
+Underneath the H-9247-MRC, there is a (broken) mysterious
+L-6678-ROF. 
+Underneath the L-6678-ROF, there is a peach R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) old-gold
+V-6458-XIF. 
+Underneath the V-6458-XIF, there is a (broken) ivory N-4292-NCP.
+
+Underneath the N-4292-NCP, there is a rust R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) slate-gray
+P-6678-JJV. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the V-1623-KTK. 
+
+>: The V-1623-KTK has been destroyed. 
+
+>: You are now carrying the V-1623-KTK. 
+
+>: The V-1623-KTK has been destroyed. 
+
+>: You are now carrying the X-6458-TSZ. 
+
+>: The X-6458-TSZ has been destroyed. 
+
+>: You are now carrying the V-1623-KTK. 
+
+>: The V-1623-KTK has been destroyed. 
+
+>: You are now carrying the T-9887-OPS. 
+
+>: The T-9887-OPS has been destroyed. 
+
+>: You are now carrying the T-9887-OPS. 
+
+>: The T-9887-OPS has been destroyed. 
+
+>: You are now carrying the R-9887-SFW. 
+
+>: The R-9887-SFW has been destroyed. 
+
+>: You are now carrying the V-9247-KWY. 
+
+>: The V-9247-KWY has been destroyed. 
+
+>: You are now carrying the Z-4832-PAH. 
+
+>: The Z-4832-PAH has been destroyed. 
+
+>: You are now carrying the P-1403-WXQ. 
+
+>: The P-1403-WXQ has been destroyed. 
+
+>: You are now carrying the R-6678-FTR. 
+
+>: The R-6678-FTR has been destroyed. 
+
+>: You are now carrying the T-0010-BBX. 
+
+>: The T-0010-BBX has been destroyed. 
+
+>: You are now carrying the D-6678-HOT. 
+
+>: The D-6678-HOT has been destroyed. 
+
+>: You are now carrying the H-9247-MRC. 
+
+>: The H-9247-MRC has been destroyed. 
+
+>: You are now carrying the L-6678-ROF. 
+
+>: The L-6678-ROF has been destroyed. 
+
+>: You are now carrying the R-9887-SFW. 
+
+>: The R-9887-SFW has been destroyed. 
+
+>: You are now carrying the V-6458-XIF. 
+
+>: The V-6458-XIF has been destroyed. 
+
+>: You are now carrying the N-4292-NCP. 
+
+>: The N-4292-NCP has been destroyed. 
+
+>: You are now carrying the R-9887-SFW. 
+
+>: The R-9887-SFW has been destroyed. 
+
+>: You are now carrying the P-6678-JJV. 
+
+>: The P-6678-JJV has been destroyed. 
+
+>: You are now carrying the H-6458-ZDH. 
+
+>: The H-6458-ZDH has been destroyed. 
+
+>: You are now carrying the L-5065-EGO. 
+
+>: The L-5065-EGO has been destroyed. 
+
+>: You are now carrying the L-5065-EGO. 
+
+>: The L-5065-EGO has been destroyed. 
+
+>: You are now carrying the T-6678-BOP. 
+
+>: The T-6678-BOP has been destroyed. 
+
+>: You are now carrying the L-6678-ROF. 
+
+>: The L-6678-ROF has been destroyed. 
+
+>: You are now carrying the P-9247-WRM. 
+
+>: The P-9247-WRM has been destroyed. 
+
+>: You are now carrying the D-6458-HIP. 
+
+>: The D-6458-HIP has been destroyed. 
+
+>: You are now carrying the L-6678-ROF. 
+
+>: The L-6678-ROF has been destroyed. 
+
+>: You are now carrying the F-1623-QEQ. 
+
+>: The F-1623-QEQ has been destroyed. 
+
+>: You are now carrying the J-4292-VHX. 
+
+>: The J-4292-VHX has been destroyed. 
+
+>: You are now carrying the N-9887-AKG. 
+
+>: The N-9887-AKG has been destroyed. 
+
+>: You are now carrying the Z-6678-PTD. 
+
+>: The Z-6678-PTD has been destroyed. 
+
+>: You are now carrying the B-0010-LBJ. 
+
+>: The B-0010-LBJ has been destroyed. 
+
+>: You are now carrying the N-9887-AKG. 
+
+>: The N-9887-AKG has been destroyed. 
+
+>: You are now carrying the H-5065-MLW. 
+
+>: The H-5065-MLW has been destroyed. 
+
+>: You are now carrying the D-6458-HIP. 
+
+>: The D-6458-HIP has been destroyed. 
+
+>: You are now carrying the N-6678-NYZ. 
+
+>: The N-6678-NYZ has been destroyed. 
+
+>: You are now carrying the R-9247-SCI. 
+
+>: The R-9247-SCI has been destroyed. 
+
+>: You are now carrying the J-5065-IVS. 
+
+>: The J-5065-IVS has been destroyed. 
+
+>: You are now carrying the V-4832-XFP. 
+
+>: The V-4832-XFP has been destroyed. 
+
+>: You are now carrying the P-9887-WUC. 
+
+>: The P-9887-WUC has been destroyed. 
+
+>: You are now carrying the Z-1403-CIW. 
+
+>: The Z-1403-CIW has been destroyed. 
+
+>: You are now carrying the F-6458-DSL. 
+
+>: The F-6458-DSL has been destroyed. 
+
+>: You are now carrying the T-6458-BXJ. 
+
+>: The T-6458-BXJ has been destroyed. 
+
+>: You are now carrying the F-6458-DSL. 
+
+>: The F-6458-DSL has been destroyed. 
+
+>: You are now carrying the P-0010-JGH. 
+
+>: The P-0010-JGH has been destroyed. 
+
+>: You are now carrying the N-1403-ANU. 
+
+>: The N-1403-ANU has been destroyed. 
+
+>: You are now carrying the Z-1403-CIW. 
+
+>: The Z-1403-CIW has been destroyed. 
+
+>: You are now carrying the D-6458-HIP. 
+
+>: The D-6458-HIP has been destroyed. 
+
+>: You are now carrying the N-9887-AKG. 
+
+>: The N-9887-AKG has been destroyed. 
+
+>: You are now carrying the P-5065-WLI. 
+
+>: The P-5065-WLI has been destroyed. 
+
+>: You are now carrying the D-4292-HCL. 
+
+>: You are now carrying the B-5065-YGK. 
+
+>: You are now carrying the jumper shunt. 
+
+>: You are now carrying the B-4832-LUF. 
+
+>: The B-4832-LUF has been destroyed. 
+
+>: You are now carrying the R-4292-FHJ. 
+
+>: The R-4292-FHJ has been destroyed. 
+
+>: You are now carrying the T-6678-BOP. 
+
+>: You are now carrying the P-4832-JAD. 
+
+>: The P-4832-JAD has been destroyed. 
+
+>: You are now carrying the L-6458-RIZ. 
+
+>: You have successfully combined the jumper shunt and the
+D-4292-HCL!
+
+>: You have successfully combined the jumper shunt and the
+T-6678-BOP!
+
+>: You have successfully combined the jumper shunt and the
+B-5065-YGK!
+
+>: You are now carrying the X-0010-TGR. 
+
+>: The X-0010-TGR has been destroyed. 
+
+>: You are now carrying the P-4832-JAD. 
+
+>: The P-4832-JAD has been destroyed. 
+
+>: You are now carrying the T-1403-ODK. 
+
+>: You are now carrying the D-4292-HCL. 
+
+>: The D-4292-HCL has been destroyed. 
+
+>: You are now carrying the Z-6458-PNX. 
+
+>: You are now carrying the T-4292-BRF. 
+
+>: The T-4292-BRF has been destroyed. 
+
+>: You are now carrying the D-4832-HFZ. 
+
+>: The D-4832-HFZ has been destroyed. 
+
+>: You are now carrying the D-4292-HCL. 
+
+>: The D-4292-HCL has been destroyed. 
+
+>: You are now carrying the D-4292-HCL. 
+
+>: The D-4292-HCL has been destroyed. 
+
+>: You are now carrying the P-4832-JAD. 
+
+>: The P-4832-JAD has been destroyed. 
+
+>: You are now carrying the D-4832-HFZ. 
+
+>: You have successfully combined the Z-6458-PNX and the
+D-4832-HFZ!
+
+>: You have successfully combined the L-6458-RIZ and the
+T-1403-ODK!
+
+>: You have successfully combined the L-6458-RIZ and the
+Z-6458-PNX!
+
+>: ADVTR.JMP=20@999999|2b8dec700819b5ff41074b93dfd8fea
+You have successfully combined the jumper shunt and the
+L-6458-RIZ!
+
+>: You have successfully combined the downloader and the jumper
+shunt!
+
+>: 54th Street and Blackstone Avenue
+
+You are standing at the corner of 54th Street and Blackstone
+Avenue. From here, you can go north, east, south, or west. 
+There is a textbook here. 
+
+>: 53th Street and Blackstone Avenue
+
+You are standing at the corner of 53th Street and Blackstone
+Avenue. From here, you can go north, east, south, or west. 
+There is a (broken) battery here. 
+Underneath the battery, there is a buff F-6678-DYP. 
+Underneath the F-6678-DYP, there is a (broken) olive-green
+R-4292-FWH. 
+Underneath the R-4292-FWH, there is a (broken) green D-4832-HUX.
+
+Underneath the D-4832-HUX, there is a (broken) prussian-blue
+P-1623-WEU. 
+Underneath the P-1623-WEU, there is a (broken) black X-9887-GKK.
+
+Underneath the X-9887-GKK, there is a reciprocating H-9887-MUQ. 
+Underneath the H-9887-MUQ, there is a bright-violet T-4292-BHD. 
+Underneath the T-4292-BHD, there is a (broken) flax D-4292-HRJ. 
+Underneath the D-4292-HRJ, there is a (broken) yellow
+Z-1623-COC. 
+Underneath the Z-1623-COC, there is a (broken) goldenrod
+X-0010-TVP. 
+Underneath the X-0010-TVP, there is a forest-green F-6678-DYP. 
+Underneath the F-6678-DYP, there is a sky-blue N-1623-ATY. 
+Underneath the N-1623-ATY, there is a (broken) rotating
+H-6678-ZJL. 
+Underneath the H-6678-ZJL, there is a (broken) sienna
+T-6678-BEN. 
+Underneath the T-6678-BEN, there is a heliotrope D-5065-UGE. 
+Underneath the D-5065-UGE, there is a (broken) sea-green
+N-1623-ATY. 
+Underneath the N-1623-ATY, there is a (broken) ochre D-4292-HRJ.
+
+Underneath the D-4292-HRJ, there is a (broken) cream Z-1623-COC.
+
+Underneath the Z-1623-COC, there is a (broken) powder-blue
+T-6678-BEN. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: 53th Street and Dorchester Avenue
+
+You are standing at the corner of 53th Street and Dorchester
+Avenue. From here, you can go north, east, or south. 
+There is a fern-green N-1623-AOE here. 
+Underneath the N-1623-AOE, there is a (broken) burgundy
+R-4292-FRL. 
+Underneath the R-4292-FRL, there is a (broken) pale-magenta
+F-6458-DDN. 
+Underneath the F-6458-DDN, there is a (broken) peach-yellow
+H-1623-MYO. 
+Underneath the H-1623-MYO, there is a (broken) rotating
+H-4292-ZHF. 
+Underneath the H-4292-ZHF, there is a (broken) low-carb
+R-6458-FXP. 
+Underneath the R-6458-FXP, there is a (broken) mysterious
+T-6458-BIL. 
+Underneath the T-6458-BIL, there is a (broken) brass R-9247-SMK.
+
+Underneath the R-9247-SMK, there is a (broken) puce Z-1403-CSY. 
+Underneath the Z-1403-CSY, there is a (broken) pink N-6678-NJD. 
+Underneath the N-6678-NJD, there is a (broken) jade X-4292-TWX. 
+Underneath the X-4292-TWX, there is a (broken) flax Z-6678-PEF. 
+Underneath the Z-6678-PEF, there is a (broken) pale-blue
+H-4832-ZKT. 
+Underneath the H-4832-ZKT, there is a (broken) gray60
+P-0010-JQJ. 
+Underneath the P-0010-JQJ, there is a (broken) olive-green
+J-1403-IDG. 
+Underneath the J-1403-IDG, there is a swamp-green D-9247-UHM. 
+Underneath the D-9247-UHM, there is a (broken) khaki N-6458-NDX.
+
+Underneath the N-6458-NDX, there is a (broken) red-violet
+V-9887-KUS. 
+Underneath the V-9887-KUS, there is a (broken) tea-green
+N-0010-NGN. 
+Underneath the N-0010-NGN, there is a (broken) cinnamon
+X-1403-GIE. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the N-1623-AOE. 
+
+>: You are now carrying the R-4292-FRL. 
+
+>: You are now carrying the F-6458-DDN. 
+
+>: The F-6458-DDN has been destroyed. 
+
+>: You are now carrying the H-1623-MYO. 
+
+>: The H-1623-MYO has been destroyed. 
+
+>: You are now carrying the H-4292-ZHF. 
+
+>: The H-4292-ZHF has been destroyed. 
+
+>: You are now carrying the R-6458-FXP. 
+
+>: The R-6458-FXP has been destroyed. 
+
+>: You are now carrying the T-6458-BIL. 
+
+>: The T-6458-BIL has been destroyed. 
+
+>: You are now carrying the R-9247-SMK. 
+
+>: You are now carrying the Z-1403-CSY. 
+
+>: The Z-1403-CSY has been destroyed. 
+
+>: You are now carrying the N-6678-NJD. 
+
+>: You have successfully combined the N-6678-NJD and the
+R-9247-SMK!
+
+>: You are now carrying the X-4292-TWX. 
+
+>: You are now carrying the Z-6678-PEF. 
+
+>: You have successfully combined the X-4292-TWX and the
+N-6678-NJD!
+
+>: You have successfully combined the Z-6678-PEF and the
+X-4292-TWX!
+
+>: You are now carrying the H-4832-ZKT. 
+
+>: You are now carrying the P-0010-JQJ. 
+
+>: The P-0010-JQJ has been destroyed. 
+
+>: You are now carrying the J-1403-IDG. 
+
+>: You have successfully combined the J-1403-IDG and the
+H-4832-ZKT!
+
+>: You are now carrying the D-9247-UHM. 
+
+>: The D-9247-UHM has been destroyed. 
+
+>: You are now carrying the N-6458-NDX. 
+
+>: You have successfully combined the N-6458-NDX and the
+Z-6678-PEF!
+
+>: You have successfully combined the N-6458-NDX and the
+J-1403-IDG!
+
+>: You are now carrying the V-9887-KUS. 
+
+>: The V-9887-KUS has been destroyed. 
+
+>: You are now carrying the N-0010-NGN. 
+
+>: You have successfully combined the N-0010-NGN and the
+N-6458-NDX!
+
+>: You are now carrying the X-1403-GIE. 
+
+>: The X-1403-GIE has been destroyed. 
+
+>: You are now carrying the T-4832-BFV. 
+
+>: The T-4832-BFV has been destroyed. 
+
+>: You are now carrying the D-6458-HSR. 
+
+>: You are now carrying the F-4832-DAX. 
+
+>: You have successfully combined the F-4832-DAX and the
+D-6458-HSR!
+
+>: You have successfully combined the F-4832-DAX and the
+N-0010-NGN!
+
+>: You are now carrying the V-4292-XMD. 
+
+>: You have successfully combined the F-4832-DAX and the
+V-4292-XMD!
+
+>: You are now carrying the H-4292-ZHF. 
+
+>: The H-4292-ZHF has been destroyed. 
+
+>: You are now carrying the X-6678-TTJ. 
+
+>: You have successfully combined the X-6678-TTJ and the
+F-4832-DAX!
+
+>: You are now carrying the T-4292-BCH. 
+
+>: You have successfully combined the T-4292-BCH and the
+X-6678-TTJ!
+
+>: You are now carrying the P-6458-JNT. 
+
+>: The P-6458-JNT has been destroyed. 
+
+>: You are now carrying the Z-0010-PBP. 
+
+>: The Z-0010-PBP has been destroyed. 
+
+>: You are now carrying the F-5065-QLE. 
+
+>: The F-5065-QLE has been destroyed. 
+
+>: You are now carrying the V-9887-KUS. 
+
+>: The V-9887-KUS has been destroyed. 
+
+>: You are now carrying the B-6458-LIV. 
+
+>: The B-6458-LIV has been destroyed. 
+
+>: You are now carrying the D-5065-UBI. 
+
+>: You have successfully combined the D-5065-UBI and the
+T-4292-BCH!
+
+>: You are now carrying the L-9247-EHW. 
+
+>: You have successfully combined the L-9247-EHW and the
+D-5065-UBI!
+
+>: You are now carrying the P-1623-WYY. 
+
+>: You have successfully combined the L-9247-EHW and the
+P-1623-WYY!
+
+>: You are now carrying the D-4832-HPD. 
+
+>: The D-4832-HPD has been destroyed. 
+
+>: You are now carrying the B-1623-YTC. 
+
+>: You are now carrying the Z-6458-PXZ. 
+
+>: The Z-6458-PXZ has been destroyed. 
+
+>: You are now carrying the Z-6458-PXZ. 
+
+>: You have successfully combined the B-1623-YTC and the
+Z-6458-PXZ!
+
+>: You are now carrying the display. 
+
+>: You have successfully combined the display and the L-9247-EHW!
+
+>: You have successfully combined the display and the B-1623-YTC!
+
+>: You have successfully combined the display and the R-4292-FRL!
+
+>: ADVTR.DSP=20@999999|ed4668ec7b21b973fb56caaade302b6
+You have successfully combined the display and the N-1623-AOE!
+
+>: You have successfully combined the downloader and the display!
+
+>: 52nd Street and Dorchester Avenue
+
+You are standing at the corner of 52nd Street and Dorchester
+Avenue. From here, you can go east or south. 
+There is a (broken) cerise V-5065-KLY here. 
+Underneath the V-5065-KLY, there is a foreign J-5065-IQW. 
+Underneath the J-5065-IQW, there is a floating X-5065-GVU. 
+Underneath the X-5065-GVU, there is a chartreuse B-6678-LYD. 
+Underneath the B-6678-LYD, there is a lavender N-1403-AIY. 
+Underneath the N-1403-AIY, there is a bondi-blue R-0010-FLH. 
+Underneath the R-0010-FLH, there is an old V-1623-KOO. 
+Underneath the V-1623-KOO, there is a (broken) deep-sky-blue
+Z-1403-CDC. 
+Underneath the Z-1403-CDC, there is a hot-pink B-9887-YKI. 
+Underneath the B-9887-YKI, there is a (broken) ultramarine
+P-9887-WPG. 
+Underneath the P-9887-WPG, there is a (broken) fern-green
+F-9247-QCK. 
+Underneath the F-9247-QCK, there is a (broken) lime-green
+B-9247-YHS. 
+Underneath the B-9247-YHS, there is a (broken) reverse-chirality
+J-1403-INI. 
+Underneath the J-1403-INI, there is a school-bus-yellow
+L-4292-RMX. 
+Underneath the L-4292-RMX, there is a (broken) yellow-green
+R-6458-FIR. 
+Underneath the R-6458-FIR, there is a (broken) puce R-9247-SWM. 
+Underneath the R-9247-SWM, there is a carrot V-4832-XAT. 
+Underneath the V-4832-XAT, there is a (broken) discounted
+H-4832-ZUV. 
+Underneath the H-4832-ZUV, there is a hot-pink N-6678-NTF. 
+Underneath the N-6678-NTF, there is a (broken) exceptional
+L-6678-RJJ. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the V-5065-KLY. 
+
+>: The V-5065-KLY has been destroyed. 
+
+>: You are now carrying the J-5065-IQW. 
+
+>: The J-5065-IQW has been destroyed. 
+
+>: You are now carrying the X-5065-GVU. 
+
+>: The X-5065-GVU has been destroyed. 
+
+>: You are now carrying the B-6678-LYD. 
+
+>: The B-6678-LYD has been destroyed. 
+
+>: You are now carrying the N-1403-AIY. 
+
+>: The N-1403-AIY has been destroyed. 
+
+>: You are now carrying the R-0010-FLH. 
+
+>: The R-0010-FLH has been destroyed. 
+
+>: You are now carrying the V-1623-KOO. 
+
+>: The V-1623-KOO has been destroyed. 
+
+>: You are now carrying the Z-1403-CDC. 
+
+>: The Z-1403-CDC has been destroyed. 
+
+>: You are now carrying the B-9887-YKI. 
+
+>: The B-9887-YKI has been destroyed. 
+
+>: You are now carrying the P-9887-WPG. 
+
+>: The P-9887-WPG has been destroyed. 
+
+>: You are now carrying the F-9247-QCK. 
+
+>: The F-9247-QCK has been destroyed. 
+
+>: You are now carrying the B-9247-YHS. 
+
+>: The B-9247-YHS has been destroyed. 
+
+>: You are now carrying the J-1403-INI. 
+
+>: The J-1403-INI has been destroyed. 
+
+>: You are now carrying the L-4292-RMX. 
+
+>: The L-4292-RMX has been destroyed. 
+
+>: You are now carrying the R-6458-FIR. 
+
+>: The R-6458-FIR has been destroyed. 
+
+>: You are now carrying the R-9247-SWM. 
+
+>: The R-9247-SWM has been destroyed. 
+
+>: You are now carrying the V-4832-XAT. 
+
+>: The V-4832-XAT has been destroyed. 
+
+>: You are now carrying the H-4832-ZUV. 
+
+>: The H-4832-ZUV has been destroyed. 
+
+>: You are now carrying the N-6678-NTF. 
+
+>: The N-6678-NTF has been destroyed. 
+
+>: You are now carrying the L-6678-RJJ. 
+
+>: The L-6678-RJJ has been destroyed. 
+
+>: You are now carrying the F-6458-DNP. 
+
+>: The F-6458-DNP has been destroyed. 
+
+>: You are now carrying the X-4292-THZ. 
+
+>: The X-4292-THZ has been destroyed. 
+
+>: You are now carrying the L-9887-EUO. 
+
+>: The L-9887-EUO has been destroyed. 
+
+>: You are now carrying the T-1623-OES. 
+
+>: The T-1623-OES has been destroyed. 
+
+>: You are now carrying the X-1403-GSG. 
+
+>: The X-1403-GSG has been destroyed. 
+
+>: You are now carrying the D-9247-URO. 
+
+>: The D-9247-URO has been destroyed. 
+
+>: You are now carrying the N-0010-NQP. 
+
+>: The N-0010-NQP has been destroyed. 
+
+>: You are now carrying the B-0010-LVN. 
+
+>: The B-0010-LVN has been destroyed. 
+
+>: You are now carrying the D-1623-UOY. 
+
+>: The D-1623-UOY has been destroyed. 
+
+>: You are now carrying the V-4292-XWF. 
+
+>: The V-4292-XWF has been destroyed. 
+
+>: You are now carrying the H-5065-MGC. 
+
+>: The H-5065-MGC has been destroyed. 
+
+>: You are now carrying the V-1403-KIK. 
+
+>: The V-1403-KIK has been destroyed. 
+
+>: You are now carrying the R-1623-STW. 
+
+>: The R-1623-STW has been destroyed. 
+
+>: You are now carrying the R-5065-SQI. 
+
+>: The R-5065-SQI has been destroyed. 
+
+>: You are now carrying the X-6678-TEL. 
+
+>: The X-6678-TEL has been destroyed. 
+
+>: You are now carrying the P-1623-WJC. 
+
+>: The P-1623-WJC has been destroyed. 
+
+>: You are now carrying the P-6458-JXV. 
+
+>: The P-6458-JXV has been destroyed. 
+
+>: You are now carrying the B-6458-LSX. 
+
+>: The B-6458-LSX has been destroyed. 
+
+>: You are now carrying the H-1403-MDM. 
+
+>: The H-1403-MDM has been destroyed. 
+
+>: You are now carrying the H-6678-ZOR. 
+
+>: The H-6678-ZOR has been destroyed. 
+
+>: You are now carrying the P-4832-JUH. 
+
+>: The P-4832-JUH has been destroyed. 
+
+>: You are now carrying the R-4832-FFD. 
+
+>: The R-4832-FFD has been destroyed. 
+
+>: You are now carrying the N-9247-ACU. 
+
+>: The N-9247-ACU has been destroyed. 
+
+>: You are now carrying the N-6458-NNZ. 
+
+>: The N-6458-NNZ has been destroyed. 
+
+>: You are now carrying the Z-6458-PID. 
+
+>: The Z-6458-PID has been destroyed. 
+
+>: You are now carrying the X-9887-GPQ. 
+
+>: The X-9887-GPQ has been destroyed. 
+
+>: You are now carrying the T-4292-BMJ. 
+
+>: The T-4292-BMJ has been destroyed. 
+
+>: You are now carrying the D-4832-HAF. 
+
+>: The D-4832-HAF has been destroyed. 
+
+>: You are now carrying the D-5065-ULK. 
+
+>: The D-5065-ULK has been destroyed. 
+
+>: You are now carrying the V-9887-KFU. 
+
+>: The V-9887-KFU has been destroyed. 
+
+>: You are now carrying the F-4292-DHL. 
+
+>: The F-4292-DHL has been destroyed. 
+
+>: ADVTR.PGB=5@999999|f879a9fd5cf6a981fe4e35a821d79e1
+You are now carrying the progress bar. 
+
+>: You have successfully combined the downloader and the progress
+bar!
+
+>: Current sub-cerebral program:
+
+(*
+ * gc.rml - robot mind source for garbage collector (model 3)
+ * 
+ * Maps robot consciousness into world engine (i.e. implements lower brain
+ * functions). Carries out motor functions by appropriate calls to system
+ * libraries and routes feedback back to robot perceptual system.
+ *
+ * Updated to match Municipal Censory Engine interface v2 in March 192000.
+ *)
+
+(*
+  XXX I can never find that yellow book with the RML grammar when I need it,
+      so I'm going to put a copy of it right here.
+
+  <maybe_ids> ::= <empty>
+              |   <ids>
+  <ids> ::= <id>
+        |   <ids> , <id>
+
+  <op> ::= + | - | ^ | < | > | = | >= | <=     -- operators
+      (NB: = is equality for ints and strings.)
+
+  <exp> ::= <id>                     	       -- variables
+        |   <exp> <op> <exp>
+        |   <string_literal>
+        |   <int_literal>
+        |   <id> ( <maybe_exps> )              -- function call
+        |   <id> { <maybe_exps> }              -- constructor
+        |   ( <exp> )
+  <maybe_exps> ::= <empty>
+               |   <exps>
+  <exps> ::= <exp>
+         |   <exps> , <exp>
+
+  <type> ::= <id>
+  <types> ::= <type> 
+          |   <types> , <type>
+  <maybe_types> ::= <empty>
+                |   <types>
+
+  <con> ::= <id> { <maybe_types> }
+  <cons> ::= <con>
+          |  <con> | <con>
+
+  <formals> ::= <id> : <type> 
+            |   <formals> , <id> : <type>
+  <maybe_formals> ::= <empty>
+                  |   <formals>
+
+  <branch> ::= <id> { <maybe_ids> } => <stmt>  -- id is a datatype constructor
+  <branches> ::= <branch>
+             |   <branches> | <branch>
+
+  <stmt> ::= [ <stmts> ]                       -- grouping
+         | extern type <id>
+         | extern <id> : ( <maybe_types> ) -> ( <maybe_types> )
+         | type <id> = <cons>
+
+         | fun <id> ( <maybe_formals> ) : <type> = <stmt>
+         | fun <id> ( <maybe_formals> ) = <stmt>   -- returns no value
+         | let id = <exp>                          -- let bind
+         | case <exp> of <branches>                -- must include all branches
+         | return <exp>                            -- return a result
+         | return                                  -- return no result
+         | do <exp>
+         | <empty>
+
+  <stmts> ::= <stmt> | <stmt> . <stmt>
+  <mind> ::= <stmts>
+
+*)
+
+(* Robot-specific serial number -- must be customized during manufacturing: *)
+let SERIALNO = "A87312".
+
+(* Common types: *)
+extern type int.
+type bool =
+    True { } 
+  | False { }.
+extern type string.
+extern string_length : string -> int.
+extern string_charat : (string, int) -> int.
+extern string_fromchar : int -> string.
+fun string_concat (x : string, y : string) : string = return x ^ y.
+type stringlist =
+    NoStrings { }
+  | SomeStrings { string, stringlist }.
+extern type room.
+extern type item.
+type direction = North { } | South { } | East { } | West { }.
+
+(* Inputs -- what commands the robot consciousness can issue. *)
+type command = 
+    Go { direction }
+  | Take { item }
+  | Incinerate { item }
+  | Combine { item, item }
+  | Break { item }
+  | Drop { item }
+  | Use { item }
+  | Whistle { }
+  | Hum { }
+  | Speak { string }
+  | LookAround { }
+  | ShowInventory { }
+  | Examine { item }.
+
+(* Outputs -- data are things the robot perceives. *)
+type datum =
+    Atom { string }
+  | Seq { datum, datum } (* value, rest of data *)
+  | Assoc { string, datum, datum }  (* key, value, rest of data *)
+  | NoData { }.
+
+(* Effects on the world are also a sort of output. *)
+extern move_self_to_room : room -> ().
+extern move_item_to_room : (item, room) -> ().
+
+(* Utilty functions for perceptual feedback. *)
+(* Information about rooms: *)
+extern room_name : room -> string.
+extern room_description : room -> string.
+type mayberoom = NoRoom { } | SomeRoom { room }.
+extern here : () -> room.
+extern room_from_name : string -> mayberoom.
+extern neighbor : (room, direction) -> mayberoom.
+type itemlist =
+    SomeItems { item, itemlist } 
+  | NoItems { }.
+fun itemlist_length (items : itemlist) : int =
+  case items of
+    NoItems { } => return 0
+  | SomeItems { item, rest } => return (1 + itemlist_length (rest)).
+extern room_items : room -> itemlist.
+
+(* Information about items: *)
+extern item_name : item -> string.
+(* Note that the descriptions of classified items will be
+ * automatically redacted downstream by the Censory Engine. This
+ * also applies to any values computed from classified descriptions. *)
+extern item_description : item -> string.
+extern item_adjectives : item -> stringlist.
+extern item_portable : item -> bool.
+extern item_equals : (item, item) -> bool.
+
+(* Each kind describes a class or group of equivalent items. *)
+extern type kind.
+type kindlist =
+    NoKinds { }
+  | SomeKinds { kind, kindlist }.
+fun append_kindlists (kinds1 : kindlist, kinds2 : kindlist) 
+    : kindlist =
+  case kinds1 of
+    NoKinds { } => 
+      return kinds2
+  | SomeKinds { kind, kinds1 } => 
+      return SomeKinds { kind, 
+                         append_kindlists (kinds1, kinds2) }.
+(* Every item is either broken or not. If it's broken, then it's missing some
+  parts. Those parts are described as a list of kinds with which it must
+  be combined to be useful again. *)
+type condition =
+    Pristine { }
+    (* 'condition' is what's left after 'missing'
+      is fixed;         'missing' *)
+  | Broken { condition, kindlist }.
+extern kind_name : kind -> string.
+extern kind_condition : kind -> condition.
+extern item_condition : item -> condition.
+extern item_matches_kind : (item, kind) -> bool.
+(* Replace the current condition with the given one: *)
+extern fix_item : (item, condition) -> ().
+
+(* Navigation primitives: *)
+fun direction_tostring (d : direction) : string =
+  case d of
+    North { } => return "north"
+  | East { } => return "east"
+  | South { } => return "south"
+  | West { } => return "west".
+
+(* Special room names... see their uses below. *)
+let INVENTORY = "Inventory" ^ SERIALNO.
+let TRASH = "Trash Heap".
+
+(* Formatting functions *)
+fun success_command (command : string, details : datum) : datum =
+  return Assoc { "success", 
+                 Assoc { "command",
+                         Assoc { command,
+                                 details,
+                         NoData { } },
+                 NoData { } } ,
+         NoData { } }.
+fun failed_command (command : string, details : datum, reason : string) : datum =
+  return Assoc { "failed", 
+                 Assoc { "command",
+                         Assoc { command,
+                                 details,
+                         NoData { } },
+                 Assoc { "reason", 
+                         Atom { reason }, 
+                 NoData { } } },
+         NoData { } }.
+
+fun stringlist_to_datum (tag : string, list : stringlist) : datum =
+  case list of
+    NoStrings { } => return NoData { }
+  | SomeStrings { s, list } => 
+      return Seq { Assoc { tag, Atom { s }, NoData { } },
+                   stringlist_to_datum (tag, list) }.
+
+fun describe_condition (c : condition) : datum = [
+  fun describe_kindlist (list : kindlist) : datum = [
+    fun describe_kind (k : kind) : datum = [
+      return Assoc { "kind",
+                     Assoc { "name", 
+                             Atom { kind_name (k) },
+                     Assoc { "condition",
+                             describe_condition (kind_condition (k)),
+                     NoData { } } },
+             NoData { } }
+    ].
+    case list of
+      NoKinds { } => 
+        return NoData { }
+    | SomeKinds { kind, list } =>
+        return Seq { describe_kind (kind),
+                     describe_kindlist (list) }
+  ].
+  case c of
+    Pristine { } =>
+      return Assoc { "pristine", NoData { }, NoData { } }
+  | Broken { c, missing } =>
+      return Assoc { "broken", 
+                     Assoc { "condition",
+                             describe_condition (c),
+                     Assoc { "missing",
+                             describe_kindlist (missing),
+                     NoData { } } },
+             NoData { } }
+].
+fun describe_items_in_pile (items : itemlist) : datum =
+  case items of 
+    NoItems { } =>
+      return NoData { }
+  | SomeItems { item, items } =>
+      return Seq { Assoc { "item",
+                           Assoc { "name", Atom { item_name (item) },
+                           Assoc { "description", Atom { item_description (item) },
+                           Assoc { "adjectives", stringlist_to_datum ("adjective",
+                                                                      item_adjectives (item)),
+                           Assoc { "condition", describe_condition (item_condition (item)),
+                           Assoc { "piled_on", describe_items_in_pile (items),
+                           NoData { } } } } } },
+                   NoData { } },
+              NoData { } }.
+fun describe_items_in_room (items : itemlist) : datum =
+  case items of
+    NoItems { } =>
+      return NoData { }
+  | SomeItems { item', items' } =>
+      return describe_items_in_pile (items).
+fun describe_item (item : item) : datum = [
+  return Assoc { "item",
+                 Assoc { "name", Atom { item_name (item) },
+                 Assoc { "description", Atom { item_description (item) },
+                 Assoc { "adjectives", stringlist_to_datum ("adjective",
+                                                            item_adjectives (item)),
+                 Assoc { "condition", describe_condition (item_condition (item)),
+                 Assoc { "piled_on", NoData { },
+                 NoData { } } } } } },
+          NoData { } }
+].
+fun describe_items_in_inventory (items : itemlist) : datum =
+  case items of
+    NoItems { } => 
+      return NoData { }
+  | SomeItems { item, items } => [
+      return Seq { describe_item (item),
+             describe_items_in_inventory (items) }.
+    ].
+fun describe_room (room : room) : datum =
+  return Assoc { "room", Assoc { "name", 
+                                 Atom { room_name (room) }, 
+                         Assoc { "description", 
+                                 Atom { room_description (room) }, 
+                         Assoc { "items",
+                                 describe_items_in_room (room_items (room)),
+                         NoData { } } } }, 
+         NoData { } }.
+
+fun hide_item (item : item) : datum =
+  (* XXX a big hack -- let's hope we are never audited! *)
+  case room_from_name (TRASH) of 
+    NoRoom { } =>
+      return failed_command ("incinerate", 
+                             describe_item (item),
+                             "internal error (report for maintenance!)")
+  | SomeRoom { trash } => [
+      do move_item_to_room (item, trash).
+      return success_command ("incinerate", describe_item (item))
+  ].
+fun hide_items (items : itemlist) = [
+  case items of 
+    NoItems { } => return
+  | SomeItems { item, items } => [
+      do hide_item (item).
+      do hide_items (items)
+    ]
+  ].
+
+fun combine_items (big : item, small : item, flipped : bool) : datum =
+  case item_condition (big) of
+    Broken { condition, missing } => [
+      fun find (acc : kindlist, kinds : kindlist) : datum =
+         case kinds of
+           NoKinds { } => [
+             case flipped of
+               True { } => 
+                 return failed_command ("combine", Seq { describe_item (big),
+                                                   Seq { describe_item (small),
+                                                   NoData { } } },
+                                        "they don't fit together")
+             | False { } => 
+                 return combine_items (small, big, True { }).
+           ]
+         | SomeKinds { kind, kinds } => [
+            case item_matches_kind (small, kind) of
+              True { } => [
+                do hide_item (small).
+                let missing = append_kindlists (acc, kinds).
+                (* We maintain an invariant that the "missing" list is
+                   always non-empty. *)
+                case missing of
+                  NoKinds { } => 
+                    do fix_item (big, condition)
+                | SomeKinds { kind', kinds' } => 
+                    do fix_item (big, Broken { condition, missing }).
+                return success_command ("combine", Seq { describe_item (big),
+                                                   Seq { describe_item (small),
+                                                   NoData { } } }).
+              ]
+            | False { } => [
+                return find (SomeKinds { kind, acc }, kinds).
+              ]
+         ].
+      return find (NoKinds { }, missing)
+    ]
+  | Pristine { } => [
+      case flipped of
+        True { } => return failed_command ("combine", Seq { describe_item (big),
+                                                      Seq { describe_item (small),
+                                                      NoData { } } },
+                                           "they don't fit together")
+      | False { } => return combine_items (small, big, True { })
+    ].
+
+(*
+  Main handler: all robots must define a function "process" of type
+
+     command -> datum
+
+  The resulting data will be sent downstream to the Censory Engine and
+  finally to the robot perception systems. In addition to the
+  resulting perceptions, non-passive robots may also affect the world
+  using the library calls above. This function will be called at
+  each time step where the robot consciousness has issued a valid command. 
+*)
+fun process (c : command) : datum =
+  case c of
+    Go { d } => [
+      let r1 = here ().
+      case neighbor (r1, d) of
+        NoRoom { } => [
+          let s = direction_tostring (d).
+          return failed_command ("go", 
+                                 Atom { s },
+                                 "there is no way " ^ s ^ " from here").
+        ]
+      | SomeRoom { r2 } => [
+          do move_self_to_room (r2).
+          return success_command ("go", describe_room (r2)).
+        ]
+    ]
+  | Take { item } => [
+      (* XXX hack to make inventory work *)
+      case room_from_name (INVENTORY) of 
+        NoRoom { } =>
+          return failed_command ("take", 
+                                 describe_item (item),
+                                 "internal error (report for maintenance!)")
+      | SomeRoom { inventory } => [
+        case item_portable (item) of
+          True { } => [
+            let items = room_items (inventory).
+            (* Treat list of items as an ordered list to force GC robots to
+               pick things up in order. *)
+            case room_items (here ()) of
+              NoItems { } =>
+               return failed_command ("take", describe_item (item),
+                                      "internal error (report for maintenance!)")
+            | SomeItems { item', items' } => [
+                case item_equals (item, item') of
+                  True { } => [
+                    case itemlist_length (items) >= 6 of
+                      True { } =>
+                        return failed_command ("take", 
+                                               describe_item (item),
+                                               "you can't carry any more items")
+                    | False { } => [
+                        do move_item_to_room (item, inventory).
+                        return success_command ("take", describe_item (item))
+                      ]
+                    ]
+                | False { } => (* Not the top item *)
+                    return failed_command ("take", describe_item (item),
+                      "there is another item on top of it (take the other item first)")
+            ]
+          ]
+        | False { } =>
+          return failed_command ("take",
+                                 describe_item (item),
+                                 "it's impossible to do so").
+      ]
+    ]
+  | Incinerate { item } => [
+      return hide_item (item)
+    ]
+  | Combine { item1, item2 } => [
+      return combine_items (item1, item2, False { })
+    ]
+  | Break { item } => [
+      (*
+       XXX Do garbage robots ever need to break anything?
+       *)
+      return failed_command ("break", describe_item (item),
+                             "you can't bring yourself to do it")
+  ]
+  | Drop { item } => [
+      (*
+       XXX Do garbage robots ever need to drop anything?
+      do move_item_to_room (item, here ()).
+      return success_command ("drop", describe_item (item))
+       *)
+      return failed_command ("drop", describe_item (item),
+                             "you can't bring yourself to part with it")
+    ]
+  | Use { item } => [
+      case item_condition (item) of
+          Pristine { } => [
+            case item_name (item) = "keypad" of
+              True { } => [
+                case room_name (here ()) = "Room With a Door" of
+                  True { } => [
+                    (* XXX Testing only!  Remove this code in production robots! *)
+                    case room_from_name ("54th Street and Ridgewood Court") of
+                      NoRoom { } => return failed_command ("use", 
+                                                           describe_item (item),
+                                            "internal error (report for maintenance!)")
+                    | SomeRoom { r } => [
+                        do move_self_to_room (r).
+                        return success_command ("use", Seq { describe_item (item),
+                            Atom { "You unlock and open the door. Passing through, "
+                                   ^ "you find yourself on the streets of Chicago. "
+                                   ^ "Seeing no reason you should ever go back, you "
+                                   ^ "allow the door to close behind you. " } }).
+                      ]
+                  ]
+                | False { } => [
+                    return failed_command ("use", describe_item (item),
+                                           "you see no way to use it in this room")
+                  ]
+              ]
+            | False { } => [
+                return failed_command ("use", describe_item (item),
+                                       "nothing interesting happens")
+              ]
+          ]
+        | Broken { c, m } => 
+            return failed_command ("use", describe_item (item),
+                                   "the " ^ (item_name (item)) ^ " is broken")
+    ]
+  | Whistle { } =>
+      return success_command ("whistle", NoData { })
+  | Hum { } =>
+      return success_command ("hum", NoData { })
+  | Speak { s } =>
+      (* 
+        XXX Note that due to a "feature" (according to the developers upstairs)
+        of the command parser, all spoken words appear in lower case.  There
+        haven't been any problem reports from field (yet) as most other functions
+        are case insensitive.
+       *)
+      return success_command ("speak", Atom { s })
+  | LookAround { } =>
+      return success_command ("look", describe_room (here ()))
+  | ShowInventory { } => [
+      case room_from_name (INVENTORY) of 
+        NoRoom { } =>
+          return failed_command ("show",
+                                 NoData { },
+                                 "internal error (report for maintenance!)")
+      | SomeRoom { inventory } => [
+          let items = room_items (inventory).
+          return success_command ("show", describe_items_in_inventory (items)).
+      ]
+  ]
+  | Examine { item } => [
+      return success_command ("examine", describe_item (item)).
+  ].
+ADVTR.DNL=5@999999|46a3a8559bbebd199d867ad34060518
+
+
+>: % UMIX shutdown: console EOF

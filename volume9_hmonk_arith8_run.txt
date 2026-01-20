@@ -1,0 +1,780 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as hmonk
+
+
+% Begin sending characters. Terminate with EOF...
+Transferred 512...
+writing 585 characters
+% % Running 'arith' suite.
+Welcome to O'Cult v1.0.  
+
+Parsing advice...
+Validating advice...
+Successfully parsed 11 rules; size: 158.
+
+Running 4 input tests...
+************************
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (S (S Z)) (S (S Z)))
+Applying advice...
+Final Term:      (S (S (S (S Z))))
+Total Steps:     10
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (S (S Z)) (S (S Z)))
+Applying advice...
+Final Term:      (S (S (S (S Z))))
+Total Steps:     16
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (S Z) (Mult (S (S Z)) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S Z)))))))
+Total Steps:     24
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S (S Z)) (S Z)) (Add (S (S (S Z))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S Z))))))))
+Total Steps:     26
+
+Correct!
+
+----------------------------------------------------------------------
+
+
+Running internal tests...
+*************************
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (S (S Z)) (S (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S Z)))))
+Total Steps:     10
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S (S Z)) (S (S (S Z)))) (Add (S (S Z)) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S Z))))))))))
+Total Steps:     27
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S Z) (S (S Z))) (Mult (S (S Z)) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S Z))))))))
+Total Steps:     42
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S Z)) (S (S (S Z)))) (Mult (S (S Z)) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))
+Total Steps:     70
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add Z Z) (Add Z (S (S Z))))
+Applying advice...
+Final Term:      Z
+Total Steps:     18
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S (S Z)) (S (S (S Z)))) (Add (S (S (S Z))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S Z))))))))))
+Total Steps:     28
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S (S Z)) (S (S (S Z)))) (Mult (S (S (S Z))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))
+Total Steps:     46
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S Z)) (S (S (S Z)))) (Add (S (S (S Z))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))))))))))))
+Total Steps:     58
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S (S Z)) (S (S (S Z)))) (Mult (S (S (S Z))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))
+Total Steps:     88
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S (S (S (S Z))))) Z) (Add (S (S (S (S Z)))) (S (S (S (S (S Z)))))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))))))))))))))))))))))))))))))))
+Total Steps:     82
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S Z) (S (S (S (S (S Z)))))) (Add (S (S (S Z))) (S Z)))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S Z))))))))))
+Total Steps:     28
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S (S (S (S (S Z))))) Z) (Add (S (S (S Z))) (S (S Z))))
+Applying advice...
+Final Term:      Z
+Total Steps:     31
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S (S Z)) Z) (Mult (S (S (S (S (S Z))))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))
+Total Steps:     42
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S (S (S (S Z))))) (S (S (S Z)))) (Mult (S (S (S (S Z)))) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+Total Steps:     155
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S (S (S (S (S Z))))) (S (S (S (S Z))))) (Add (S (S (S Z))) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))
+Total Steps:     35
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S (S Z)) (S (S (S (S Z))))) (Add (S Z) Z))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S Z)))))))))
+Total Steps:     39
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S (S (S Z)))) (S Z)) (Mult (S Z) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S Z))))))))))
+Total Steps:     46
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S (S (S (S (S Z))))) (S Z)) (Add Z Z))
+Applying advice...
+Final Term:      (S (S (S (S (S Z)))))
+Total Steps:     38
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S Z) (S (S Z))) (Add (S (S (S Z))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))
+Total Steps:     43
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult Z (S (S (S (S (S Z)))))) (Add (S Z) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S Z))))
+Total Steps:     19
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add Z (S (S (S Z)))) (Mult (S Z) Z))
+Applying advice...
+Final Term:      Z
+Total Steps:     26
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S (S Z)) (S (S (S (S (S Z)))))) (Mult (S (S (S (S Z)))) (S (S (S (S (S Z)))))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+Total Steps:     280
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S (S (S Z))) (S Z)) (Mult Z Z))
+Applying advice...
+Final Term:      Z
+Total Steps:     33
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S Z)) (S Z)) (Mult (S (S (S Z))) (S (S (S (S Z))))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))
+Total Steps:     80
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S (S (S (S (S Z))))) (S (S (S Z)))) (Add (S Z) (S Z)))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))))
+Total Steps:     59
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S (S (S (S Z)))) Z) (Mult Z Z))
+Applying advice...
+Final Term:      Z
+Total Steps:     26
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S (S (S (S (S Z))))) (S (S (S Z)))) (Mult Z (S (S (S (S (S Z)))))))
+Applying advice...
+Final Term:      Z
+Total Steps:     73
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S (S Z)) (S (S Z))) (Add (S (S Z)) (S (S (S (S (S Z)))))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))
+Total Steps:     26
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S (S (S (S Z)))) (S (S Z))) (Mult (S (S (S (S (S Z))))) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+Total Steps:     195
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S (S (S (S Z)))) (S (S (S Z)))) (Add (S Z) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))
+Total Steps:     30
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S Z) (S (S (S Z)))) (Add (S (S Z)) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))
+Total Steps:     45
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S (S Z)) (S (S (S (S (S Z)))))) (Add (S (S (S (S Z)))) Z))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))
+Total Steps:     31
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S (S (S (S (S Z))))) (S (S (S (S Z))))) (Add (S (S Z)) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))
+Total Steps:     70
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S Z)) (S (S Z))) (Mult (S (S (S (S Z)))) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))))))))))))))
+Total Steps:     96
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S (S (S Z))) Z) (Add (S (S (S (S Z)))) (S (S Z))))
+Applying advice...
+Final Term:      Z
+Total Steps:     28
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add Z (S (S (S (S (S Z)))))) (Add (S (S (S Z))) Z))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))
+Total Steps:     46
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S (S Z))) Z) (Add (S (S (S (S (S Z))))) (S (S (S (S Z))))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))))))))))))))
+Total Steps:     59
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult Z Z) (Mult Z (S (S Z))))
+Applying advice...
+Final Term:      Z
+Total Steps:     18
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S (S (S (S (S Z))))) (S (S (S (S Z))))) (Mult (S (S Z)) (S Z)))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))))))
+Total Steps:     134
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S (S (S Z))) (S (S (S Z)))) (Mult (S (S (S Z))) (S Z)))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))))))))))))))
+Total Steps:     87
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Mult (S (S (S Z))) (S (S (S (S (S Z)))))) (Add (S (S (S (S Z)))) Z))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+Total Steps:     133
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S Z) (S Z)) (Mult (S Z) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S Z))))
+Total Steps:     27
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S (S Z))) (S (S (S (S (S Z)))))) (Mult (S (S (S Z))) (S Z)))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))
+Total Steps:     70
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add Z (S Z)) (Mult (S (S (S (S Z)))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S Z))))))))
+Total Steps:     44
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add Z (S Z)) (Add (S (S (S (S Z)))) (S Z)))
+Applying advice...
+Final Term:      (S (S (S (S (S Z)))))
+Total Steps:     29
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add Z (S (S (S Z)))) (Mult (S (S Z)) (S (S (S (S (S Z)))))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))
+Total Steps:     35
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S Z) (S (S Z))) (Add (S (S Z)) (S Z)))
+Applying advice...
+Final Term:      (S (S (S (S (S Z)))))
+Total Steps:     26
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S (S (S (S Z))))) (S (S (S (S Z))))) (Add (S (S (S (S Z)))) Z))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))
+Total Steps:     81
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S (S (S (S Z)))) (S (S (S (S (S Z)))))) (Add (S (S (S Z))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))))))))))))
+Total Steps:     69
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S (S (S (S (S Z))))) Z) (Mult (S Z) (S Z)))
+Applying advice...
+Final Term:      (S Z)
+Total Steps:     31
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S Z) (S (S (S (S (S Z)))))) (Add (S (S (S (S Z)))) (S (S (S (S Z))))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))
+Total Steps:     34
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S (S (S (S (S Z))))) (S (S (S Z)))) (Mult (S (S (S Z))) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))))
+Total Steps:     46
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S (S Z)) (S (S (S (S Z))))) (Mult (S (S (S (S Z)))) Z))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S Z))))))))
+Total Steps:     46
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S (S (S (S Z))))) (S (S (S (S (S Z)))))) (Mult (S (S (S (S Z)))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+Total Steps:     139
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S (S Z))) (S (S (S (S (S Z)))))) (Mult (S (S (S Z))) (S (S (S Z)))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+Total Steps:     124
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Mult (S (S Z)) (S (S Z))) (Mult (S Z) (S (S (S (S Z))))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S Z))))))))
+Total Steps:     36
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S (S Z))) (S (S (S (S Z))))) (Add (S Z) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z)))))))))))))))))))))
+Total Steps:     57
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Mult (Add (S (S (S Z))) Z) (Mult (S (S (S Z))) (S (S Z))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S Z))))))))))))))))))
+Total Steps:     57
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    Compute (Add (Add (S (S Z)) Z) (Add (S (S (S (S Z)))) (S (S (S (S Z))))))
+Applying advice...
+Final Term:      (S (S (S (S (S (S (S (S (S (S Z))))))))))
+Total Steps:     26
+
+Correct!
+
+----------------------------------------------------------------------
+
+Your advice passed the tests!
+Our colleagues might be interested in how you did it:
+
+    ADVIS.ARH=163@999999|18dbba7f98154aa0f483504339f9b65
+
+However, they would be even more interested if your advice were pithier.
+
+
+
+You have new mail. Type 'mail' to view.
+% UMIX shutdown: console EOF

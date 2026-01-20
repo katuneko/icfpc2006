@@ -1,0 +1,37 @@
+hmonk
+COMEFROM
+run /bin/umodem xml9.adv EOF
+{ O'Cult XML SNF normalizer (CPS, direct continuation application) }
+
+SNF x => Eval x Done;
+
+Eval (Seq x y) k => Eval x (KSeq y k);
+Eval (Tag q d) k => Eval d (Ins q k);
+Eval v k => k v;
+
+(KSeq y k) v => Eval y (Merge v k);
+
+{ merge sequences }
+Merge (Seq a b) k c => Merge b (Seq a k) c;
+(Seq a k) rest => k (Seq a rest);
+
+Merge (Tag q a) k (Tag q b) => Merge a (Wrap q k) b;
+
+Merge a k b => k (Seq a b);
+
+{ insert tag in order and remove duplicates }
+Ins q k (Tag q d) => k (Tag q d);
+
+Ins Emph k (Tag Bold d) => Ins Emph (Wrap Bold k) d;
+
+Ins Maj k (Tag q d) => Ins Maj (Wrap q k) d;
+
+Ins q k d => k (Tag q d);
+
+(Wrap q k) v => k (Tag q v);
+
+Done v => v;
+
+. { end }
+EOF
+advise xml xml9.adv

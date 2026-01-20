@@ -1,0 +1,28 @@
+hmonk
+COMEFROM
+run /bin/umodem arith11.adv EOF
+{ comments are enclosed by curly-braces;
+  no nested comments are allowed  }
+
+{ evaluation entry point }
+Compute x => Eval x Done;
+
+{ evaluate expressions first }
+Eval (op x y) k => Eval x (K op y k);
+
+{ values }
+Eval v k => k v;
+
+{ evaluate binary ops }
+(K op y k) v => Eval y (op v k);
+Add Z k w => k w;
+Add (S x) k w => Add x k (S w);
+Mult Z k w => k Z;
+Mult (S x) k w => Mult x (Add w k) w;
+
+{ finish }
+Done v => v;
+
+. { end of rules }
+EOF
+advise arith arith11.adv arith.tests

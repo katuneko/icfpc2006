@@ -1,0 +1,2 @@
+guest
+dump /home/guest/a.out

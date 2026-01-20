@@ -1,0 +1,29 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+take cadet-blue H-1623-MEU
+take magenta H-1623-MEU
+take beige P-9887-WKK
+take ivory P-9887-WKK
+take bisque P-9887-WKK
+take plum H-1623-MEU
+take pastel-pink H-1623-MEU
+take peach-orange H-1623-MEU
+take wheat-colored H-1623-MEU
+take lavender H-1623-MEU
+take black P-9887-WKK
+take viridian H-1623-MEU
+take lime-green H-1623-MEU
+take chocolate-colored H-1623-MEU
+take midnight-blue P-9887-WKK
+take linen-colored H-1623-MEU
+take race car
+take malachite H-1623-MEU
+take burnt-umber H-1623-MEU
+take burnt-orange H-1623-MEU
+combine race car with burnt-orange H-1623-MEU
+combine race car with plum H-1623-MEU
+combine race car with pastel-pink H-1623-MEU
+examine race car
+show

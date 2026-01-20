@@ -1,0 +1,182 @@
+howie
+xyzzy
+adventure
+north
+take bolt
+take spring
+incinerate spring
+take button
+take processor
+take pill
+incinerate pill
+take radio
+take cache
+combine processor with cache
+take blue transistor
+combine radio with blue transistor
+take antenna
+incinerate antenna
+take screw
+take motherboard
+combine motherboard with screw
+take A-1920-IXB
+combine A-1920-IXB with bolt
+combine A-1920-IXB with processor
+combine A-1920-IXB with radio
+take red transistor
+combine A-1920-IXB with red transistor
+combine motherboard with A-1920-IXB
+take keypad
+combine keypad with motherboard
+combine keypad with button
+south
+use keypad
+incinerate keypad
+take /etc/passwd
+incinerate /etc/passwd
+take note
+incinerate note
+take downloader
+east
+south
+east
+take blaze-orange V-1623-KTK
+incinerate blaze-orange V-1623-KTK
+take dodger-blue V-1623-KTK
+incinerate dodger-blue V-1623-KTK
+take taupe X-6458-TSZ
+incinerate taupe X-6458-TSZ
+take pale-carmine V-1623-KTK
+incinerate pale-carmine V-1623-KTK
+take carrot T-9887-OPS
+incinerate carrot T-9887-OPS
+take pale-violet-red T-9887-OPS
+incinerate pale-violet-red T-9887-OPS
+take mint-green R-9887-SFW
+incinerate mint-green R-9887-SFW
+take taupe V-9247-KWY
+incinerate taupe V-9247-KWY
+take dim-gray Z-4832-PAH
+incinerate dim-gray Z-4832-PAH
+take old-lace P-1403-WXQ
+incinerate old-lace P-1403-WXQ
+take peach-yellow R-6678-FTR
+incinerate peach-yellow R-6678-FTR
+take selective-yellow T-0010-BBX
+incinerate selective-yellow T-0010-BBX
+take vegan D-6678-HOT
+incinerate vegan D-6678-HOT
+take hot-pink H-9247-MRC
+incinerate hot-pink H-9247-MRC
+take mysterious L-6678-ROF
+incinerate mysterious L-6678-ROF
+take peach R-9887-SFW
+incinerate peach R-9887-SFW
+take old-gold V-6458-XIF
+incinerate old-gold V-6458-XIF
+take ivory N-4292-NCP
+incinerate ivory N-4292-NCP
+take rust R-9887-SFW
+incinerate rust R-9887-SFW
+take slate-gray P-6678-JJV
+incinerate slate-gray P-6678-JJV
+take camouflage-green H-6458-ZDH
+incinerate camouflage-green H-6458-ZDH
+take gray20 L-5065-EGO
+incinerate gray20 L-5065-EGO
+take pale-green L-5065-EGO
+incinerate pale-green L-5065-EGO
+take amethyst T-6678-BOP
+incinerate amethyst T-6678-BOP
+take pink L-6678-ROF
+incinerate pink L-6678-ROF
+take moccasin P-9247-WRM
+incinerate moccasin P-9247-WRM
+take cornflower-blue D-6458-HIP
+incinerate cornflower-blue D-6458-HIP
+take organic L-6678-ROF
+incinerate organic L-6678-ROF
+take fuchsia F-1623-QEQ
+incinerate fuchsia F-1623-QEQ
+take lavender J-4292-VHX
+incinerate lavender J-4292-VHX
+take lemon-cream N-9887-AKG
+incinerate lemon-cream N-9887-AKG
+take reverse-chirality Z-6678-PTD
+incinerate reverse-chirality Z-6678-PTD
+take lime B-0010-LBJ
+incinerate lime B-0010-LBJ
+take sapphire N-9887-AKG
+incinerate sapphire N-9887-AKG
+take blanched-almond-colored H-5065-MLW
+incinerate blanched-almond-colored H-5065-MLW
+take gray20 D-6458-HIP
+incinerate gray20 D-6458-HIP
+take water-logged N-6678-NYZ
+incinerate water-logged N-6678-NYZ
+take persian-blue R-9247-SCI
+incinerate persian-blue R-9247-SCI
+take celadon J-5065-IVS
+incinerate celadon J-5065-IVS
+take magenta V-4832-XFP
+incinerate magenta V-4832-XFP
+take momemtum-preserving P-9887-WUC
+incinerate momemtum-preserving P-9887-WUC
+take bright-green Z-1403-CIW
+incinerate bright-green Z-1403-CIW
+take school-bus-yellow F-6458-DSL
+incinerate school-bus-yellow F-6458-DSL
+take rosy-brown T-6458-BXJ
+incinerate rosy-brown T-6458-BXJ
+take pale-magenta F-6458-DSL
+incinerate pale-magenta F-6458-DSL
+take tan P-0010-JGH
+incinerate tan P-0010-JGH
+take pale-pink N-1403-ANU
+incinerate pale-pink N-1403-ANU
+take goldenrod Z-1403-CIW
+incinerate goldenrod Z-1403-CIW
+take pear D-6458-HIP
+incinerate pear D-6458-HIP
+take dodger-blue N-9887-AKG
+incinerate dodger-blue N-9887-AKG
+take celadon P-5065-WLI
+incinerate celadon P-5065-WLI
+take discounted D-4292-HCL
+take indigo B-5065-YGK
+take jumper shunt
+take peach-yellow B-4832-LUF
+incinerate peach-yellow B-4832-LUF
+take low-carb R-4292-FHJ
+incinerate low-carb R-4292-FHJ
+take mauve T-6678-BOP
+take dodger-blue P-4832-JAD
+incinerate dodger-blue P-4832-JAD
+take gray90 L-6458-RIZ
+combine jumper shunt with discounted D-4292-HCL
+combine jumper shunt with mauve T-6678-BOP
+combine jumper shunt with indigo B-5065-YGK
+take gargantuan X-0010-TGR
+incinerate gargantuan X-0010-TGR
+take gamboge P-4832-JAD
+incinerate gamboge P-4832-JAD
+take blue T-1403-ODK
+take water-logged D-4292-HCL
+incinerate water-logged D-4292-HCL
+take blue Z-6458-PNX
+take pale-violet-red T-4292-BRF
+incinerate pale-violet-red T-4292-BRF
+take spring-green D-4832-HFZ
+incinerate spring-green D-4832-HFZ
+take sapphire D-4292-HCL
+incinerate sapphire D-4292-HCL
+take jade D-4292-HCL
+incinerate jade D-4292-HCL
+take cyan P-4832-JAD
+incinerate cyan P-4832-JAD
+take flax D-4832-HFZ
+combine blue Z-6458-PNX with flax D-4832-HFZ
+combine gray90 L-6458-RIZ with blue T-1403-ODK
+combine gray90 L-6458-RIZ with blue Z-6458-PNX
+combine jumper shunt with gray90 L-6458-RIZ
+combine downloader with jumper shunt

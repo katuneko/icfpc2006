@@ -1,0 +1,65 @@
+howie
+xyzzy
+adventure sequent-sequel
+east
+east
+take cribbage board
+incinerate cribbage board
+take ace-of-hearts
+incinerate ace-of-hearts
+take king-of-hearts
+incinerate king-of-hearts
+take queen-of-hearts
+incinerate queen-of-hearts
+take jack-of-hearts
+incinerate jack-of-hearts
+take ten-of-hearts
+incinerate ten-of-hearts
+take nine-of-hearts
+incinerate nine-of-hearts
+take eight-of-hearts
+incinerate eight-of-hearts
+take seven-of-hearts
+incinerate seven-of-hearts
+take six-of-hearts
+incinerate six-of-hearts
+take five-of-hearts
+incinerate five-of-hearts
+take four-of-hearts
+incinerate four-of-hearts
+take three-of-hearts
+incinerate three-of-hearts
+take two-of-hearts
+incinerate two-of-hearts
+take ace-of-diamonds
+examine ace-of-diamonds
+take king-of-diamonds
+incinerate king-of-diamonds
+take queen-of-diamonds
+incinerate queen-of-diamonds
+take jack-of-diamonds
+incinerate jack-of-diamonds
+take ten-of-diamonds
+incinerate ten-of-diamonds
+take nine-of-diamonds
+incinerate nine-of-diamonds
+take eight-of-diamonds
+incinerate eight-of-diamonds
+take seven-of-diamonds
+incinerate seven-of-diamonds
+take six-of-diamonds
+incinerate six-of-diamonds
+take five-of-diamonds
+incinerate five-of-diamonds
+take four-of-diamonds
+incinerate four-of-diamonds
+take three-of-diamonds
+incinerate three-of-diamonds
+take two-of-diamonds
+incinerate two-of-diamonds
+take ace-of-spades
+examine ace-of-spades
+show
+combine ace-of-diamonds with ace-of-spades
+use ace-of-diamonds
+use ace-of-spades

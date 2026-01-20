@@ -1,0 +1,5 @@
+knr
+X3.159-1989
+ucc io.c std.c hello.c
+ls -l
+dump a.um

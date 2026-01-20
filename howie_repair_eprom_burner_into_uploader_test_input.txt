@@ -1,0 +1,156 @@
+howie
+xyzzy
+adventure
+north
+take bolt
+take spring
+incinerate spring
+take button
+take processor
+take pill
+incinerate pill
+take radio
+take cache
+combine processor with cache
+take blue transistor
+combine radio with blue transistor
+take antenna
+incinerate antenna
+take screw
+take motherboard
+combine motherboard with screw
+take A-1920-IXB
+combine A-1920-IXB with bolt
+combine A-1920-IXB with processor
+combine A-1920-IXB with radio
+take red transistor
+combine A-1920-IXB with red transistor
+combine motherboard with A-1920-IXB
+take keypad
+combine keypad with motherboard
+combine keypad with button
+south
+use keypad
+incinerate keypad
+take /etc/passwd
+incinerate /etc/passwd
+take note
+incinerate note
+take downloader
+take uploader
+incinerate downloader
+east
+east
+east
+north
+take old X-1623-GTO
+incinerate old X-1623-GTO
+take corn V-0010-XBD
+incinerate corn V-0010-XBD
+take blue-violet P-4832-JFJ
+incinerate blue-violet P-4832-JFJ
+take gamboge X-0010-TLX
+incinerate gamboge X-0010-TLX
+take denim D-4292-HHR
+incinerate denim D-4292-HHR
+take low-carb D-5065-UVM
+incinerate low-carb D-5065-UVM
+take pear V-9247-KMI
+incinerate pear V-9247-KMI
+take ultramarine J-9247-IRG
+incinerate ultramarine J-9247-IRG
+take pink D-4292-HHR
+incinerate pink D-4292-HHR
+take discounted L-6458-RNH
+incinerate discounted L-6458-RNH
+take flax D-4292-HHR
+incinerate flax D-4292-HHR
+take cinnamon J-9247-IRG
+incinerate cinnamon J-9247-IRG
+take lemon F-9887-QAE
+incinerate lemon F-9887-QAE
+take low-carb X-1623-GTO
+incinerate low-carb X-1623-GTO
+take amethyst J-9247-IRG
+incinerate amethyst J-9247-IRG
+take reverse-chirality J-9247-IRG
+incinerate reverse-chirality J-9247-IRG
+take lemon T-9887-OFC
+incinerate lemon T-9887-OFC
+take honeydew B-4292-LWV
+incinerate honeydew B-4292-LWV
+take white F-9887-QAE
+incinerate white F-9887-QAE
+take black B-4292-LWV
+incinerate black B-4292-LWV
+take spring-green V-9247-KMI
+incinerate spring-green V-9247-KMI
+take pale-goldenrod V-0010-XBD
+incinerate pale-goldenrod V-0010-XBD
+take sangria X-1623-GTO
+incinerate sangria X-1623-GTO
+take lawn-green N-1623-AJI
+incinerate lawn-green N-1623-AJI
+take imitation R-1403-SXU
+incinerate imitation R-1403-SXU
+take sapphire X-1623-GTO
+incinerate sapphire X-1623-GTO
+take sea-green Z-4832-PPP
+incinerate sea-green Z-4832-PPP
+take gray10 F-9887-QAE
+incinerate gray10 F-9887-QAE
+take sandy-brown Z-1623-CEK
+incinerate sandy-brown Z-1623-CEK
+take gray90 R-4292-FMP
+incinerate gray90 R-4292-FMP
+take sturdy V-9887-KPW
+incinerate sturdy V-9887-KPW
+take camouflage-green J-6458-VDL
+incinerate camouflage-green J-6458-VDL
+take sturdy J-6458-VDL
+incinerate sturdy J-6458-VDL
+take wisteria X-9247-GWE
+incinerate wisteria X-9247-GWE
+take persian-blue F-9887-QAE
+incinerate persian-blue F-9887-QAE
+take sturdy Z-1623-CEK
+incinerate sturdy Z-1623-CEK
+take pastel-pink X-1623-GTO
+incinerate pastel-pink X-1623-GTO
+take sapphire R-1403-SXU
+incinerate sapphire R-1403-SXU
+take heliotrope J-6458-VDL
+incinerate heliotrope J-6458-VDL
+take mustard Z-4832-PPP
+incinerate mustard Z-4832-PPP
+take wisteria X-6458-TIJ
+incinerate wisteria X-6458-TIJ
+take coral Z-4832-PPP
+incinerate coral Z-4832-PPP
+take gray80 X-1623-GTO
+incinerate gray80 X-1623-GTO
+take ivory X-1623-GTO
+incinerate ivory X-1623-GTO
+take raw-umber T-0010-BQH
+take foreign V-9247-KMI
+incinerate foreign V-9247-KMI
+take imaginary T-0010-BQH
+take snow X-1623-GTO
+incinerate snow X-1623-GTO
+take prussian-blue T-0010-BQH
+incinerate prussian-blue T-0010-BQH
+take gray-tea-green T-0010-BQH
+incinerate gray-tea-green T-0010-BQH
+take miniature V-9247-KMI
+incinerate miniature V-9247-KMI
+take steel-blue V-9247-KMI
+incinerate steel-blue V-9247-KMI
+take indigo T-0010-BQH
+incinerate indigo T-0010-BQH
+take EPROM burner
+take brass X-1623-GTO
+combine brass X-1623-GTO with imaginary T-0010-BQH
+combine EPROM burner with brass X-1623-GTO
+combine EPROM burner with raw-umber T-0010-BQH
+examine EPROM burner
+combine uploader with EPROM burner

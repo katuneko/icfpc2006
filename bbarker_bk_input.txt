@@ -1,0 +1,5 @@
+bbarker
+plinko
+ls /home/bbarker
+ls bk_specs
+ls /home/bbarker/bk_specs

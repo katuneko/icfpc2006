@@ -1,0 +1,70 @@
+guest
+run /bin/umodem hack_fixed_00_99.bas EOF
+V REM  +------------------------------------------------+
+X REM  | HACK_00_99.BAS (targeted dict+number runner) |
+XV REM  +------------------------------------------------+
+XX REM
+XXV IF ARGS() > I THEN GOTO XLV
+XXX PRINT "usage: ./hack_fixed_00_99.exe username"
+XXXV PRINT CHR(X)
+XL END
+XLV REM
+L REM  get username from command line
+LV DIM username AS STRING
+LX username = ARG(II)
+LXV REM  targeted base words (checked as word00..word99)
+LXX DIM pwdcount AS INTEGER
+LXXV pwdcount = XXVI
+LXXX DIM words(pwdcount) AS STRING
+LXXXV words(I) = "ftd"
+XC words(II) = "ftdflorist"
+XCV words(III) = "ftdflowers"
+C words(IV) = "teleflora"
+CV words(V) = "telegraph"
+CX words(VI) = "florist"
+CXV words(VII) = "flowers"
+CXX words(VIII) = "delivery"
+CXXV words(IX) = "floral"
+CXXX words(X) = "bouquet"
+CXXXV words(XI) = "knr"
+CXL words(XII) = "kernighan"
+CXLV words(XIII) = "ritchie"
+CL words(XIV) = "kandr"
+CLV words(XV) = "kr"
+CLX words(XVI) = "bwk"
+CLXV words(XVII) = "dmr"
+CLXX words(XVIII) = "ken"
+CLXXV words(XIX) = "dennis"
+CLXXX words(XX) = "thompson"
+CLXXXV words(XXI) = "bell"
+CXC words(XXII) = "unix"
+CXCV words(XXIII) = "c"
+CC words(XXIV) = "cprogramminglanguage"
+CCV words(XXV) = "thecprogramminglanguage"
+CCX words(XXVI) = "plan9"
+CCXV PRINT "attempting dictionary+number list of " + pwdcount + " base words " + CHR(X)
+CCXX DIM i AS INTEGER
+CCXXV DIM j AS INTEGER
+CCXXX DIM candidate AS STRING
+CCXXXV i = I
+CCXL IF (i > pwdcount) THEN GOTO CCCXV ELSE SKIP
+CCXLV candidate = words(i) + "00"
+CCL IF CHECKPASS(username, candidate) THEN GOTO CCC
+CCLV j = I
+CCLX IF (j > XCIX) THEN GOTO CCXC ELSE SKIP
+CCLXV IF j < X THEN candidate = words(i) + "0" + j ELSE SKIP
+CCLXX IF j > IX THEN candidate = words(i) + j ELSE SKIP
+CCLXXV IF CHECKPASS(username, candidate) THEN GOTO CCC
+CCLXXX j = j + I
+CCLXXXV GOTO CCLX
+CCXC i = i + I
+CCXCV GOTO CCXL
+CCC PRINT "found match!! for user " + username + CHR(X)
+CCCV PRINT "password: " + candidate + CHR(X)
+CCCX END
+CCCXV PRINT "no dictionary+number matches for user " + username + CHR(X)
+CCCXX END
+EOF
+/bin/qbasic hack_fixed_00_99.bas
+hack_fixed_00_99.exe ftd
+hack_fixed_00_99.exe knr

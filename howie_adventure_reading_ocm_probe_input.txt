@@ -1,0 +1,29 @@
+howie
+xyzzy
+adventure
+speak home
+switch Reading
+look
+take T-9247-OCM
+switch XML
+look
+switch English
+look
+speak museum
+take T-9247-OCM
+south
+take T-9247-OCM
+switch Reading
+look
+switch XML
+look
+switch English
+look
+speak trash
+switch Reading
+look
+take T-9247-OCM
+switch XML
+look
+switch English
+look

@@ -1,0 +1,6 @@
+gardener
+mathemantica
+ls -a
+cat .history
+mail
+q

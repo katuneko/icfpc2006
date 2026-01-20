@@ -1,0 +1,185 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+History of Technology Exhibit, Entrance
+
+You are at the entrance of an exhibit titled, "The History of
+Technology." A sign reads, "Due to recent difficulties, only
+robots with intact warranties will be admitted." From here, you
+can go north or east. 
+
+
+>: History of Technology Exhibit, Part 1
+
+You are in an exhibit on the history of technology. A placard
+reads, "Race Car." From here, you can go north or south. 
+There is a (broken) cadet-blue H-1623-MEU here. 
+Underneath the H-1623-MEU, there is a (broken) magenta
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a beige P-9887-WKK. 
+Underneath the P-9887-WKK, there is a (broken) ivory P-9887-WKK.
+
+Underneath the P-9887-WKK, there is a bisque P-9887-WKK. 
+Underneath the P-9887-WKK, there is a (broken) plum H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) pastel-pink
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) peach-orange
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) wheat-colored
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) lavender
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a black P-9887-WKK. 
+Underneath the P-9887-WKK, there is a (broken) viridian
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) lime-green
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) chocolate-colored
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) midnight-blue
+P-9887-WKK. 
+Underneath the P-9887-WKK, there is a linen-colored H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) race car. 
+Underneath the race car, there is a (broken) malachite
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a burnt-umber H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) burnt-orange
+H-1623-MEU. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: History of Technology Exhibit, Part 2
+
+You are in an exhibit on the history of technology. A placard
+reads, "Pousse Game." From here, you can go north or south. 
+There is a (broken) midnight-blue B-1623-YOG here. 
+Underneath the B-1623-YOG, there is a (broken) blaze-orange
+H-6678-ZYT. 
+Underneath the H-6678-ZYT, there is a midnight-blue P-4832-JFJ. 
+Underneath the P-4832-JFJ, there is a (broken) beige Z-6458-PSF.
+
+Underneath the Z-6458-PSF, there is a (broken) midnight-blue
+V-9887-KPW. 
+Underneath the V-9887-KPW, there is a (broken) ivory L-9247-ECC.
+
+Underneath the L-9247-ECC, there is a blue-violet H-6678-ZYT. 
+Underneath the H-6678-ZYT, there is a (broken) azure H-6678-ZYT.
+
+Underneath the H-6678-ZYT, there is a (broken) ivory N-1623-AJI.
+
+Underneath the N-1623-AJI, there is a (broken) bright-green
+J-0010-VGZ. 
+Underneath the J-0010-VGZ, there is a mauve F-4292-DRN. 
+Underneath the F-4292-DRN, there is a brass J-0010-VGZ. 
+Underneath the J-0010-VGZ, there is a (broken) beige N-1623-AJI.
+
+Underneath the N-1623-AJI, there is a (broken) black L-9247-ECC.
+
+Underneath the L-9247-ECC, there is a (broken) bisque
+H-6678-ZYT. 
+Underneath the H-6678-ZYT, there is a (broken) ivory H-6678-ZYT.
+
+Underneath the H-6678-ZYT, there is a (broken) beige H-6678-ZYT.
+
+Underneath the H-6678-ZYT, there is a (broken) midnight-blue
+H-6678-ZYT. 
+Underneath the H-6678-ZYT, there is a bright-turquoise
+J-0010-VGZ. 
+Underneath the J-0010-VGZ, there is a (broken) midnight-blue
+L-9247-ECC. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: The N-1623-AJI is an exemplary instance of part number
+N-1623-AJI. Interestingly, this one is ivory. 
+Also, it is broken: it is a N-1623-AJI missing a J-0010-VGZ and
+a J-0010-VGZ and ((a H-6678-ZYT missing a P-4832-JFJ) missing a
+P-4832-JFJ) and (a J-0010-VGZ missing a R-4292-FMP and a
+V-9887-KPW and a Z-6458-PSF). 
+
+>: The N-1623-AJI is an exemplary instance of part number
+N-1623-AJI. Interestingly, this one is beige. 
+Also, it is broken: it is a N-1623-AJI missing a J-0010-VGZ and
+a P-4832-JFJ and a V-9887-KPW. 
+
+>: The J-0010-VGZ is an exemplary instance of part number
+J-0010-VGZ. Interestingly, this one is bright-green. 
+Also, it is broken: it is (((a J-0010-VGZ missing a T-1403-OIQ
+and a N-1623-AJI and a N-1623-AJI) missing a X-0010-TLX) missing
+(a L-9247-ECC missing a Z-6458-PSF and a V-9887-KPW and a
+R-4292-FMP)) missing a F-4292-DRN. 
+
+>: The J-0010-VGZ is an exemplary instance of part number
+J-0010-VGZ. Interestingly, this one is brass. 
+Also, it is in pristine condition. 
+
+>: The J-0010-VGZ is an exemplary instance of part number
+J-0010-VGZ. Interestingly, this one is bright-turquoise. 
+Also, it is in pristine condition. 
+
+>: You are carrying nothing. 
+
+>: % UMIX shutdown: console EOF

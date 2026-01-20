@@ -1,0 +1,2 @@
+guest
+run a.out foo

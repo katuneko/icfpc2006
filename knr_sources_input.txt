@@ -1,0 +1,4 @@
+knr
+X3.159-1989
+cat std.c
+cat io.c

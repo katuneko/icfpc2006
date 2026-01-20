@@ -1,0 +1,17 @@
+gardener
+mathemantica
+/bin/umodem puzzle1_dummy.ant ZZZEOFZZZ
+Puzzle 1: Simple
+NNNNNNN
+NNNNNNN
+8 8
+ - - - - - - - -
+ -0>0< - - - - -
+ - - - - - # - -
+ - - - - - - - -
+ - - - - - - $ -
+ - - - -0v - - -
+ - - - -0^ - - -
+ - - - - - - - -
+ZZZEOFZZZ
+./antomaton puzzle1_dummy.ant

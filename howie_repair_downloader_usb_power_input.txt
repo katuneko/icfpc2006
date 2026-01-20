@@ -1,0 +1,133 @@
+howie
+xyzzy
+adventure
+north
+take bolt
+take spring
+incinerate spring
+take button
+take processor
+take pill
+incinerate pill
+take radio
+take cache
+combine processor with cache
+take blue transistor
+combine radio with blue transistor
+take antenna
+incinerate antenna
+take screw
+take motherboard
+combine motherboard with screw
+take A-1920-IXB
+combine A-1920-IXB with bolt
+combine A-1920-IXB with processor
+combine A-1920-IXB with radio
+take red transistor
+combine A-1920-IXB with red transistor
+combine motherboard with A-1920-IXB
+take keypad
+combine keypad with motherboard
+combine keypad with button
+south
+use keypad
+incinerate keypad
+take /etc/passwd
+incinerate /etc/passwd
+take note
+incinerate note
+take downloader
+east
+take X-9247-GWE
+take V-0010-XBD
+combine V-0010-XBD with X-9247-GWE
+take F-1403-QDS
+incinerate F-1403-QDS
+take P-5065-WQO
+incinerate P-5065-WQO
+take B-4832-LAL
+incinerate B-4832-LAL
+take L-6458-RNH
+incinerate L-6458-RNH
+take T-9887-OFC
+take Z-1623-CEK
+incinerate Z-1623-CEK
+take H-9887-MKY
+combine T-9887-OFC with H-9887-MKY
+take F-6678-DOX
+combine F-6678-DOX with V-0010-XBD
+take R-1403-SXU
+incinerate R-1403-SXU
+take USB cable
+take N-4832-NUN
+combine USB cable with N-4832-NUN
+take J-9247-IRG
+combine F-6678-DOX with J-9247-IRG
+combine USB cable with F-6678-DOX
+combine USB cable with T-9887-OFC
+combine downloader with USB cable
+south
+take terra-cotta T-9887-OAU
+incinerate terra-cotta T-9887-OAU
+take carrot L-1623-ETG
+incinerate carrot L-1623-ETG
+take heliotrope B-1403-YDU
+incinerate heliotrope B-1403-YDU
+take imported H-9247-MCE
+take pear R-0010-FBF
+incinerate pear R-0010-FBF
+take pale-turquoise Z-4832-PKJ
+incinerate pale-turquoise Z-4832-PKJ
+take sandy-brown T-0010-BLZ
+incinerate sandy-brown T-0010-BLZ
+take miniature R-6678-FET
+incinerate miniature R-6678-FET
+take linen-colored H-9247-MCE
+incinerate linen-colored H-9247-MCE
+take snow L-4832-RFL
+incinerate snow L-4832-RFL
+take lilac H-0010-ZQX
+take gray30 X-1623-GOI
+incinerate gray30 X-1623-GOI
+take silver L-4832-RFL
+take bisque V-1623-KEM
+take gray40 N-4013-DJW
+combine gray40 N-4013-DJW with lilac H-0010-ZQX
+combine bisque V-1623-KEM with imported H-9247-MCE
+combine V-1623-KEM with silver L-4832-RFL
+take pale-red-violet T-9247-OWG
+incinerate pale-red-violet T-9247-OWG
+take peach F-0010-DGD
+incinerate peach F-0010-DGD
+take pine-green H-6458-ZNJ
+take persian-blue X-4832-TAN
+incinerate persian-blue X-4832-TAN
+take pink P-4292-JWN
+incinerate pink P-4292-JWN
+take coral F-0010-DGD
+incinerate coral F-0010-DGD
+take salmon-colored Z-4292-PHT
+incinerate salmon-colored Z-4292-PHT
+take teal B-1403-YDU
+incinerate teal B-1403-YDU
+take old-gold J-1623-IJK
+incinerate old-gold J-1623-IJK
+take ghost-white X-4832-TAN
+incinerate ghost-white X-4832-TAN
+take imitation P-6678-JTX
+incinerate imitation P-6678-JTX
+take peach-orange Z-4292-PHT
+incinerate peach-orange Z-4292-PHT
+take yellow N-4013-DJW
+incinerate yellow N-4013-DJW
+take red-violet Z-4292-PHT
+incinerate red-violet Z-4292-PHT
+take purple H-6458-ZNJ
+incinerate purple H-6458-ZNJ
+take power cord
+take purple Z-4292-PHT
+combine power cord with gray40 N-4013-DJW
+combine power cord with V-1623-KEM
+combine power cord with pine-green H-6458-ZNJ
+combine power cord with purple Z-4292-PHT
+combine downloader with power cord

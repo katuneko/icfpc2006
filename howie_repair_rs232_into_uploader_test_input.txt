@@ -1,0 +1,60 @@
+howie
+xyzzy
+adventure
+north
+take bolt
+take spring
+incinerate spring
+take button
+take processor
+take pill
+incinerate pill
+take radio
+take cache
+combine processor with cache
+take blue transistor
+combine radio with blue transistor
+take antenna
+incinerate antenna
+take screw
+take motherboard
+combine motherboard with screw
+take A-1920-IXB
+combine A-1920-IXB with bolt
+combine A-1920-IXB with processor
+combine A-1920-IXB with radio
+take red transistor
+combine A-1920-IXB with red transistor
+combine motherboard with A-1920-IXB
+take keypad
+combine keypad with motherboard
+combine keypad with button
+south
+use keypad
+incinerate keypad
+take /etc/passwd
+incinerate /etc/passwd
+take note
+incinerate note
+take downloader
+take uploader
+incinerate downloader
+east
+east
+east
+take gray60 Z-4292-PRV
+incinerate gray60 Z-4292-PRV
+take pale-carmine D-9887-UUE
+incinerate pale-carmine D-9887-UUE
+take pale-cornflower-blue D-9887-UUE
+incinerate pale-cornflower-blue D-9887-UUE
+take imported D-9887-UUE
+incinerate imported D-9887-UUE
+take gray90 Z-4292-PRV
+incinerate gray90 Z-4292-PRV
+take sepia Z-4292-PRV
+incinerate sepia Z-4292-PRV
+take gray30 D-9887-UUE
+incinerate gray30 D-9887-UUE
+take RS232 adapter
+combine uploader with RS232 adapter

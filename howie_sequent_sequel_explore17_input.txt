@@ -1,0 +1,22 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+north
+north
+north
+north
+north
+look
+examine codex
+take codex
+examine cornflower-blue B-4832-LFH
+examine violet B-4832-LFH
+examine burgundy B-4832-LFH
+examine lawn-green B-4832-LFH
+examine seashell B-4832-LFH
+examine scarlet F-1403-QIO
+examine swamp-green X-9247-GCY
+examine honeydew X-9247-GCY
+examine pear X-9247-GCY
+show

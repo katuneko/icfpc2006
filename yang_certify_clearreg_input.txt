@@ -1,0 +1,6 @@
+yang
+U+262F
+run /bin/umodem clearreg.bal EOF
+7b7f317e7c7d7b6500
+EOF
+certify clearreg clearreg.bal

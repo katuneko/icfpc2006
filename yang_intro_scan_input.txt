@@ -1,0 +1,12 @@
+yang
+U+262F
+help
+telnet
+run
+dump
+cat
+ls
+pwd
+ls /bin
+ls /home
+ls /home/yang

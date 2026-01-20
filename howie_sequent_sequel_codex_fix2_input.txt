@@ -1,0 +1,70 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+north
+north
+north
+north
+north
+take violet B-4832-LFH
+incinerate violet B-4832-LFH
+take moss-green J-0010-VLV
+incinerate moss-green J-0010-VLV
+take swamp-green X-9247-GCY
+incinerate swamp-green X-9247-GCY
+take scarlet F-1403-QIO
+incinerate scarlet F-1403-QIO
+take honeydew X-9247-GCY
+take lavender J-0010-VLV
+incinerate lavender J-0010-VLV
+take cornflower-blue X-9247-GCY
+incinerate cornflower-blue X-9247-GCY
+take burgundy B-4832-LFH
+incinerate burgundy B-4832-LFH
+take azure X-9247-GCY
+incinerate azure X-9247-GCY
+take purple J-0010-VLV
+incinerate purple J-0010-VLV
+take safety-orange J-0010-VLV
+incinerate safety-orange J-0010-VLV
+take camouflage-green J-0010-VLV
+incinerate camouflage-green J-0010-VLV
+take cornflower-blue B-4832-LFH
+take peach-puff X-9247-GCY
+incinerate peach-puff X-9247-GCY
+take gamboge X-9247-GCY
+incinerate gamboge X-9247-GCY
+take lawn-green B-4832-LFH
+incinerate lawn-green B-4832-LFH
+take hypoallergenic X-9247-GCY
+incinerate hypoallergenic X-9247-GCY
+take seashell B-4832-LFH
+incinerate seashell B-4832-LFH
+take ochre J-0010-VLV
+incinerate ochre J-0010-VLV
+take pear X-9247-GCY
+take cadet-blue F-1403-QIO
+incinerate cadet-blue F-1403-QIO
+take pale-sandy-brown B-4832-LFH
+incinerate pale-sandy-brown B-4832-LFH
+take slate-blue F-1403-QIO
+incinerate slate-blue F-1403-QIO
+take midnight-blue X-9247-GCY
+incinerate midnight-blue X-9247-GCY
+take burnt-sienna B-4832-LFH
+incinerate burnt-sienna B-4832-LFH
+take domestic X-9247-GCY
+take rotating X-9247-GCY
+incinerate rotating X-9247-GCY
+take brass B-4832-LFH
+incinerate brass B-4832-LFH
+take gargantuan B-4832-LFH
+incinerate gargantuan B-4832-LFH
+take codex
+combine codex with cornflower-blue B-4832-LFH
+combine codex with honeydew X-9247-GCY
+combine codex with pear X-9247-GCY
+combine codex with domestic X-9247-GCY
+examine codex
+show

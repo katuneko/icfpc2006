@@ -1,0 +1,131 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% No unread messages.
+
+---------------------------------------------------------------------
+INBOX:
+
+Message  Read?  Sender                                Subject
+-------  -----  ------                                -------
+      0    Yes  Donald Nut <dnut@clv.net>             Yours loan is approved 7l0l
+
+---------------------------------------------------------------------
+
+Which message would you like to read?
+Type a number from '0' to '0'.
+Or type 'q' to quit.
+
+Date: Fri, 1 Jan 19100 00:00:00 -0400
+From: Donald Nut <dnut@clv.net>
+X-Organization: First Projection On-Line: So Easy to Use, No Wonder It's #1!
+To: howie@cbv.net
+Subject: Yours loan is approved 7l0l
+
+Dear Homeowner
+
+You have been approved for a 
+
+INTRO.MUA=5@999999|b9666432feff66e528a17fb69ae8e9a
+
+house loan.  This offer is being presented to you right now!. 
+Your credit history is in no way a factor.  To take advantage 
+of this Limited Time Opportunity, please take a minute and 
+confirm your curiosity or intention to accept this loan.
+
+Best Regards
+Don Nut
+Loan Manager
+
+Press Enter to continue...
+
+---------------------------------------------------------------------
+INBOX:
+
+Message  Read?  Sender                                Subject
+-------  -----  ------                                -------
+      0    Yes  Donald Nut <dnut@clv.net>             Yours loan is approved 7l0l
+
+---------------------------------------------------------------------
+
+Which message would you like to read?
+Type a number from '0' to '0'.
+Or type 'q' to quit.
+Goodbye!
+% adventure*
+README
+% README for Adventure
+
+Adventure is a program I wrote for my amusement, but I thought others
+might enjoy it as well.
+
+The adventure takes place in the year 19200 in a city called
+"Chicago."  I admit it's a bit far-fetched at times -- computers small
+enough to be mounted on mobile vehicles, a city so large its residents
+have resorted to numbering their streets -- but hopefully my
+fantastical story won't obscure the puzzle at the heart of it; I think
+it has a nice logic to it.
+
+Have fun!  My high score is 810.
+
+-- Howard Curry
+
+% 

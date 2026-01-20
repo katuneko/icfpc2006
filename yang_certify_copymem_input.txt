@@ -1,0 +1,6 @@
+yang
+U+262F
+run /bin/umodem copymem.bal EOF
+6f617161797f626761797f6267622d637e727e013c64657c686d786179167000
+EOF
+certify copymem copymem.bal

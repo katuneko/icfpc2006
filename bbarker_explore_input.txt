@@ -1,0 +1,6 @@
+bbarker
+plinko
+ls -a
+cat .history
+mail
+q

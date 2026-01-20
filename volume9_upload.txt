@@ -1,0 +1,765 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: logged in as guest
+INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d
+
+
+You have new mail. Type 'mail' to view.
+% 
+You have new mail. Type 'mail' to view.
+% umodem : file code/hack.bas already exists.
+
+You have new mail. Type 'mail' to view.
+% unknown command V
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command X
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command XV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command XX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command XXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command XXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command XXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command XL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command XLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command L
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command LV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command LX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command LXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command LXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command LXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command LXXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command LXXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command XC
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command XCV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command C
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CXXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CXXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CXL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CXLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CLX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CLXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CLXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CLXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CLXXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CLXXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CXC
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CXCV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CC
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCXXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCXXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCXL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCXLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCLX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCLXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCLXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCLXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCLXXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCLXXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCXC
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCXCV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCC
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCXXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCXXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCXL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCXLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCLX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCLXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCLXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCLXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCLXXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCLXXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCXC
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CCCXCV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CD
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDXXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDXXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDXL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDXLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDLX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDLXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDLXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDLXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDLXXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDLXXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDXC
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDXCV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command CDXCIX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command D
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DXXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DXXXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DXL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DXLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DLI
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DLV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DLX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DLXV
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command DLXX
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command EOF_SENTINEL
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% 

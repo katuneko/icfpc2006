@@ -1,0 +1,66 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as gardener
+
+
+% Begin sending characters. Terminate with ZZZEOFZZZ...
+writing 173 characters
+% % [2J[HChecking solution to puzzle 'Puzzle 1: Simple'...
+Ant reached goal!
+ANTWO.001=5@999999|bf8b487da2e4283d8325b06947ffcd1

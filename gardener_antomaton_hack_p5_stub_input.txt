@@ -1,0 +1,20 @@
+gardener
+mathemantica
+/bin/umodem puzzle5_solution.ant ZZZEOFZZZ
+Puzzle 5: Basketball
+ENNNWWN
+WNNNNEN
+9 11
+ o o o o o o o o o
+ o - - - - - - - o
+ o - - # $ # - - o
+ o - - - # - - - o
+ o - - - - - - - o
+ o - - - - - - - o
+ o - - - - - - - o
+ o - - - - - - - o
+ o0^1> - - - - - o
+ o1> - - - - - - o
+ o o o o o o o o o
+ZZZEOFZZZ
+./antomaton puzzle5_solution.ant

@@ -1,0 +1,68 @@
+howie
+xyzzy
+adventure
+north
+take bolt
+take spring
+incinerate spring
+take button
+take processor
+take pill
+incinerate pill
+take radio
+take cache
+combine processor with cache
+take blue transistor
+combine radio with blue transistor
+take antenna
+incinerate antenna
+take screw
+take motherboard
+combine motherboard with screw
+take A-1920-IXB
+combine A-1920-IXB with bolt
+combine A-1920-IXB with processor
+combine A-1920-IXB with radio
+take red transistor
+combine A-1920-IXB with red transistor
+combine motherboard with A-1920-IXB
+take keypad
+combine keypad with motherboard
+combine keypad with button
+south
+use keypad
+incinerate keypad
+take /etc/passwd
+incinerate /etc/passwd
+take note
+incinerate note
+take downloader
+east
+take X-9247-GWE
+take V-0010-XBD
+combine V-0010-XBD with X-9247-GWE
+take F-1403-QDS
+incinerate F-1403-QDS
+take P-5065-WQO
+incinerate P-5065-WQO
+take B-4832-LAL
+incinerate B-4832-LAL
+take L-6458-RNH
+incinerate L-6458-RNH
+take T-9887-OFC
+take Z-1623-CEK
+incinerate Z-1623-CEK
+take H-9887-MKY
+combine T-9887-OFC with H-9887-MKY
+take F-6678-DOX
+combine F-6678-DOX with V-0010-XBD
+take R-1403-SXU
+incinerate R-1403-SXU
+take USB cable
+take N-4832-NUN
+combine USB cable with N-4832-NUN
+take J-9247-IRG
+combine F-6678-DOX with J-9247-IRG
+combine USB cable with F-6678-DOX
+combine USB cable with T-9887-OFC
+combine downloader with USB cable

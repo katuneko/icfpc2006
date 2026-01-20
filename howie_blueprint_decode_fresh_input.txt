@@ -1,0 +1,807 @@
+howie
+xyzzy
+speak museum
+south
+take blueprint
+switch XML
+speak bpreset
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look
+speak bpnext
+look
+south
+look

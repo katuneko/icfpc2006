@@ -1,0 +1,3 @@
+packed hits:
+word hits:
+packed pattern hits:

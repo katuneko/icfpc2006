@@ -1,0 +1,46 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+north
+north
+north
+take amber X-4832-TFT
+take aquamarine robber
+take amethyst L-4832-RKR
+incinerate amethyst L-4832-RKR
+take azure L-4832-RKR
+incinerate azure L-4832-RKR
+take beige L-4832-RKR
+incinerate beige L-4832-RKR
+take bisque L-4832-RKR
+incinerate bisque L-4832-RKR
+take black H-9247-MHK
+incinerate black H-9247-MHK
+take blanched-almond-colored D-6678-HED
+incinerate blanched-almond-colored D-6678-HED
+take blaze-orange L-4832-RKR
+incinerate blaze-orange L-4832-RKR
+take blue D-6678-HED
+incinerate blue D-6678-HED
+take blue-violet T-6458-BNR
+incinerate blue-violet T-6458-BNR
+take bondi-blue X-5065-GQY
+incinerate bondi-blue X-5065-GQY
+take brass B-6678-LTH
+incinerate brass B-6678-LTH
+take bright-green F-9247-QWO
+incinerate bright-green F-9247-QWO
+take bright-turquoise L-4832-RKR
+incinerate bright-turquoise L-4832-RKR
+take bright-violet J-4832-VAV
+incinerate bright-violet J-4832-VAV
+take bronze N-1403-ADE
+incinerate bronze N-1403-ADE
+take brown R-0010-FGL
+incinerate brown R-0010-FGL
+take buff B-1403-YIC
+combine aquamarine robber with amber X-4832-TFT
+combine aquamarine robber with buff B-1403-YIC
+examine aquamarine robber
+show

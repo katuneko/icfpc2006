@@ -1,0 +1,11 @@
+howie
+xyzzy
+adventure
+speak home
+take T-9247-OCM
+speak museum
+take T-9247-OCM
+south
+take T-9247-OCM
+speak trash
+take T-9247-OCM

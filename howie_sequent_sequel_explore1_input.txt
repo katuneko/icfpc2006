@@ -1,0 +1,13 @@
+howie
+xyzzy
+adventure sequent-sequel
+look
+north
+look
+east
+look
+south
+look
+west
+look
+show

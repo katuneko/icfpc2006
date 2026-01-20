@@ -1,0 +1,3226 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: You are now carrying the pamphlet. 
+
+>: You are now carrying the manifesto. 
+
+>: Junk Room
+
+You are in a room with a pile of junk. A hallway leads south. 
+There is a bolt here. 
+Underneath the bolt, there is a spring. 
+Underneath the spring, there is a button. 
+Underneath the button, there is a (broken) processor. 
+Underneath the processor, there is a red pill. 
+Underneath the pill, there is a (broken) radio. 
+Underneath the radio, there is a cache. 
+Underneath the cache, there is a blue transistor. 
+Underneath the transistor, there is an antenna. 
+Underneath the antenna, there is a screw. 
+Underneath the screw, there is a (broken) motherboard. 
+Underneath the motherboard, there is a (broken) A-1920-IXB. 
+Underneath the A-1920-IXB, there is a red transistor. 
+Underneath the transistor, there is a (broken) keypad. 
+Underneath the keypad, there is some trash. 
+
+>: You are now carrying the bolt. 
+
+>: You are now carrying the spring. 
+
+>: ADVTR.INC=5@999999|f95731ab88952dfa4cb326fb99c085f
+The spring has been destroyed. 
+
+>: You are now carrying the button. 
+
+>: You are now carrying the processor. 
+
+>: You are now carrying the pill. 
+
+>: The pill has been destroyed. 
+
+>: You are now carrying the radio. 
+
+>: You can't take the cache because you can't carry any more items.
+
+
+>: You aren't carrying a cache. You can only combine items in your
+possession. 
+
+>: You can't take the transistor because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a blue transistor. You can only combine
+items in your possession. 
+
+>: You can't take the antenna because there is another item on top
+of it (take the other item first). 
+
+>: You aren't carrying an antenna. You can only incinerate items in
+your possession. 
+
+>: You can't take the screw because there is another item on top of
+it (take the other item first). 
+
+>: You can't take the motherboard because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a motherboard. You can only combine items in
+your possession. 
+
+>: You can't take the A-1920-IXB because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a A-1920-IXB. You can only combine items in
+your possession. 
+
+>: You aren't carrying a A-1920-IXB. You can only combine items in
+your possession. 
+
+>: You aren't carrying a A-1920-IXB. You can only combine items in
+your possession. 
+
+>: You can't take the transistor because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a A-1920-IXB. You can only combine items in
+your possession. 
+
+>: You aren't carrying a motherboard. You can only combine items in
+your possession. 
+
+>: You can't take the keypad because there is another item on top
+of it (take the other item first). 
+
+>: You aren't carrying a keypad. You can only combine items in your
+possession. 
+
+>: You aren't carrying a keypad. You can only combine items in your
+possession. 
+
+>: Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+
+
+>: You aren't carrying a keypad. You can only use items in your
+possession. 
+
+>: You aren't carrying a keypad. You can only incinerate items in
+your possession. 
+
+>: There is no /etc/passwd here. 
+
+>: You aren't carrying a /etc/passwd. You can only incinerate items
+in your possession. 
+
+>: There is no note here. 
+
+>: You aren't carrying a note. You can only incinerate items in
+your possession. 
+
+>: There is no downloader here. 
+
+>: There is no uploader here. 
+
+>: You aren't carrying a downloader. You can only incinerate items
+in your possession. 
+
+>: You can't go east because there is no way east from here. 
+
+>: You can't go east because there is no way east from here. 
+
+>: Junk Room
+
+You are in a room with a pile of junk. A hallway leads south. 
+There is a cache here. 
+Underneath the cache, there is a blue transistor. 
+Underneath the transistor, there is an antenna. 
+Underneath the antenna, there is a screw. 
+Underneath the screw, there is a (broken) motherboard. 
+Underneath the motherboard, there is a (broken) A-1920-IXB. 
+Underneath the A-1920-IXB, there is a red transistor. 
+Underneath the transistor, there is a (broken) keypad. 
+Underneath the keypad, there is some trash. 
+
+>: There is no battery here. 
+
+>: There is no buff F-6678-DYP here. 
+
+>: You aren't carrying a buff F-6678-DYP. You can only incinerate
+items in your possession. 
+
+>: There is no olive-green R-4292-FWH here. 
+
+>: You aren't carrying an olive-green R-4292-FWH. You can only
+incinerate items in your possession. 
+
+>: There is no green D-4832-HUX here. 
+
+>: You aren't carrying a green D-4832-HUX. You can only incinerate
+items in your possession. 
+
+>: There is no prussian-blue P-1623-WEU here. 
+
+>: There is no black X-9887-GKK here. 
+
+>: You aren't carrying a black X-9887-GKK. You can only incinerate
+items in your possession. 
+
+>: There is no reciprocating H-9887-MUQ here. 
+
+>: You aren't carrying a battery. You can only combine items in
+your possession. 
+
+>: There is no bright-violet T-4292-BHD here. 
+
+>: You aren't carrying a prussian-blue P-1623-WEU. You can only
+combine items in your possession. 
+
+>: There is no flax D-4292-HRJ here. 
+
+>: You aren't carrying a flax D-4292-HRJ. You can only incinerate
+items in your possession. 
+
+>: There is no yellow Z-1623-COC here. 
+
+>: You aren't carrying a yellow Z-1623-COC. You can only combine
+items in your possession. 
+
+>: There is no goldenrod X-0010-TVP here. 
+
+>: You aren't carrying a goldenrod X-0010-TVP. You can only
+incinerate items in your possession. 
+
+>: There is no forest-green F-6678-DYP here. 
+
+>: You aren't carrying a forest-green F-6678-DYP. You can only
+incinerate items in your possession. 
+
+>: There is no sky-blue N-1623-ATY here. 
+
+>: You aren't carrying a sky-blue N-1623-ATY. You can only
+incinerate items in your possession. 
+
+>: There is no rotating H-6678-ZJL here. 
+
+>: You aren't carrying a rotating H-6678-ZJL. You can only
+incinerate items in your possession. 
+
+>: There is no sienna T-6678-BEN here. 
+
+>: You aren't carrying a sienna T-6678-BEN. You can only incinerate
+items in your possession. 
+
+>: There is no heliotrope D-5065-UGE here. 
+
+>: You aren't carrying a heliotrope D-5065-UGE. You can only
+incinerate items in your possession. 
+
+>: There is no sea-green N-1623-ATY here. 
+
+>: You aren't carrying a sea-green N-1623-ATY. You can only
+incinerate items in your possession. 
+
+>: There is no ochre D-4292-HRJ here. 
+
+>: You aren't carrying an ochre D-4292-HRJ. You can only incinerate
+items in your possession. 
+
+>: There is no cream Z-1623-COC here. 
+
+>: You aren't carrying a cream Z-1623-COC. You can only incinerate
+items in your possession. 
+
+>: There is no powder-blue T-6678-BEN here. 
+
+>: You aren't carrying a powder-blue T-6678-BEN. You can only
+incinerate items in your possession. 
+
+>: There is no gold N-4832-NFF here. 
+
+>: There is no burnt-umber V-0010-XLT here. 
+
+>: There is no bronze J-9247-ICW here. 
+
+>: You aren't carrying a bronze J-9247-ICW. You can only incinerate
+items in your possession. 
+
+>: There is no selective-yellow N-4832-NFF here. 
+
+>: You aren't carrying a selective-yellow N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: There is no peach-puff F-6678-DYP here. 
+
+>: You aren't carrying a peach-puff F-6678-DYP. You can only
+incinerate items in your possession. 
+
+>: There is no bright-violet N-4832-NFF here. 
+
+>: You aren't carrying a bright-violet N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: There is no moccasin N-4832-NFF here. 
+
+>: You aren't carrying a moccasin N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: There is no royal-blue J-9247-ICW here. 
+
+>: You aren't carrying a yellow Z-1623-COC. You can only combine
+items in your possession. 
+
+>: You aren't carrying a yellow Z-1623-COC. You can only combine
+items in your possession. 
+
+>: You aren't carrying a battery. You can only combine items in
+your possession. 
+
+>: There is no pale-mauve R-4292-FWH here. 
+
+>: You aren't carrying a pale-mauve R-4292-FWH. You can only
+incinerate items in your possession. 
+
+>: There is no lavender-blush N-6458-NIT here. 
+
+>: You aren't carrying a lavender-blush N-6458-NIT. You can only
+incinerate items in your possession. 
+
+>: There is no mint-green J-9887-IFM here. 
+
+>: You aren't carrying a mint-green J-9887-IFM. You can only
+incinerate items in your possession. 
+
+>: There is no olive-drab N-1623-ATY here. 
+
+>: You aren't carrying an olive-drab N-1623-ATY. You can only
+incinerate items in your possession. 
+
+>: There is no violet F-4292-DCF here. 
+
+>: You aren't carrying a violet F-4292-DCF. You can only incinerate
+items in your possession. 
+
+>: There is no gray30 X-9247-GHU here. 
+
+>: You aren't carrying a gray30 X-9247-GHU. You can only incinerate
+items in your possession. 
+
+>: There is no pale-blue V-9887-KAO here. 
+
+>: You aren't carrying a pale-blue V-9887-KAO. You can only
+incinerate items in your possession. 
+
+>: There is no steel-blue N-4832-NFF here. 
+
+>: You aren't carrying a steel-blue N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: There is no pale-magenta N-1623-ATY here. 
+
+>: You aren't carrying a pale-magenta N-1623-ATY. You can only
+incinerate items in your possession. 
+
+>: There is no pale-cornflower-blue X-9247-GHU here. 
+
+>: You aren't carrying a pale-cornflower-blue X-9247-GHU. You can
+only incinerate items in your possession. 
+
+>: There is no low-carb N-4832-NFF here. 
+
+>: You aren't carrying a low-carb N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: There is no peach-orange P-5065-WBG here. 
+
+>: You aren't carrying a peach-orange P-5065-WBG. You can only
+incinerate items in your possession. 
+
+>: There is no green L-6458-RXX here. 
+
+>: You aren't carrying a green L-6458-RXX. You can only incinerate
+items in your possession. 
+
+>: There is no eggplant Z-1623-COC here. 
+
+>: You aren't carrying a battery. You can only combine items in
+your possession. 
+
+>: There is no camouflage-green J-9247-ICW here. 
+
+>: You aren't carrying a battery. You can only combine items in
+your possession. 
+
+>: There is no violet-eggplant N-4832-NFF here. 
+
+>: You aren't carrying a violet-eggplant N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: There is no pear N-4832-NFF here. 
+
+>: You aren't carrying a pear N-4832-NFF. You can only incinerate
+items in your possession. 
+
+>: There is no navy-blue J-9247-ICW here. 
+
+>: You aren't carrying a navy-blue J-9247-ICW. You can only
+incinerate items in your possession. 
+
+>: There is no burgundy F-6678-DYP here. 
+
+>: You aren't carrying a battery. You can only combine items in
+your possession. 
+
+>: You aren't carrying a battery. You can only combine items in
+your possession. 
+
+>: You aren't carrying an uploader. You can only combine items in
+your possession. 
+
+>: Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+
+
+>: You can't go east because there is no way east from here. 
+
+>: You can't go south because there is no way south from here. 
+
+>: There is no tea-green T-9887-OKW here. 
+
+>: There is no chartreuse N-5065-ALO here. 
+
+>: There is no dim-gray X-6458-TNF here. 
+
+>: There is no scarlet J-9247-IWC here. 
+
+>: You aren't carrying a scarlet J-9247-IWC. You can only combine
+items in your possession. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: There is no mustard D-4292-HMN here. 
+
+>: You aren't carrying a mustard D-4292-HMN. You can only combine
+items in your possession. 
+
+>: There is no turquoise N-4832-NAJ here. 
+
+>: There is no turquoise F-6678-DTT here. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: There is no celadon T-9887-OKW here. 
+
+>: You aren't carrying a celadon T-9887-OKW. You can only
+incinerate items in your possession. 
+
+>: There is no burnt-orange T-9887-OKW here. 
+
+>: There is no cadet-blue T-9887-OKW here. 
+
+>: There is no pastel-green F-6678-DTT here. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: There is no prussian-blue X-6458-TNF here. 
+
+>: You aren't carrying a prussian-blue X-6458-TNF. You can only
+incinerate items in your possession. 
+
+>: There is no magenta X-6458-TNF here. 
+
+>: You aren't carrying a magenta X-6458-TNF. You can only
+incinerate items in your possession. 
+
+>: There is no safety-orange F-6678-DTT here. 
+
+>: You aren't carrying a safety-orange F-6678-DTT. You can only
+incinerate items in your possession. 
+
+>: There is no imported B-5065-YQM here. 
+
+>: You aren't carrying an imported B-5065-YQM. You can only
+incinerate items in your possession. 
+
+>: There is no puce X-6458-TNF here. 
+
+>: You aren't carrying a puce X-6458-TNF. You can only incinerate
+items in your possession. 
+
+>: There is no water-logged F-6678-DTT here. 
+
+>: You aren't carrying a water-logged F-6678-DTT. You can only
+incinerate items in your possession. 
+
+>: There is no thistle-colored X-6458-TNF here. 
+
+>: You aren't carrying a thistle-colored X-6458-TNF. You can only
+incinerate items in your possession. 
+
+>: There is no gamboge T-9887-OKW here. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: There is no sky-blue T-9887-OKW here. 
+
+>: You aren't carrying a sky-blue T-9887-OKW. You can only
+incinerate items in your possession. 
+
+>: There is no navy-blue MOSFET here. 
+
+>: You aren't carrying a navy-blue MOSFET. You can only incinerate
+items in your possession. 
+
+>: There is no olive-green N-5065-ALO here. 
+
+>: There is no pastel-pink Z-4832-PUL here. 
+
+>: There is no seashell D-1403-UXS here. 
+
+>: You aren't carrying a seashell D-1403-UXS. You can only
+incinerate items in your possession. 
+
+>: There is no peach-yellow D-1403-UXS here. 
+
+>: You aren't carrying a peach-yellow D-1403-UXS. You can only
+incinerate items in your possession. 
+
+>: There is no crimson V-0010-XGX here. 
+
+>: There is no cyan J-9247-IWC here. 
+
+>: You aren't carrying a cyan J-9247-IWC. You can only incinerate
+items in your possession. 
+
+>: There is no puce H-0010-ZBZ here. 
+
+>: You aren't carrying a puce H-0010-ZBZ. You can only incinerate
+items in your possession. 
+
+>: There is no chocolate-colored D-1403-UXS here. 
+
+>: You aren't carrying a pastel-pink Z-4832-PUL. You can only
+combine items in your possession. 
+
+>: You aren't carrying a pastel-pink Z-4832-PUL. You can only
+combine items in your possession. 
+
+>: You aren't carrying a pastel-pink Z-4832-PUL. You can only
+combine items in your possession. 
+
+>: There is no pale-brown V-9247-KRE here. 
+
+>: You aren't carrying a pale-brown V-9247-KRE. You can only
+incinerate items in your possession. 
+
+>: There is no heliotrope D-1403-UXS here. 
+
+>: You aren't carrying a heliotrope D-1403-UXS. You can only
+incinerate items in your possession. 
+
+>: There is no crimson MOSFET here. 
+
+>: You aren't carrying a crimson MOSFET. You can only combine items
+in your possession. 
+
+>: You aren't carrying a crimson MOSFET. You can only combine items
+in your possession. 
+
+>: You aren't carrying an uploader. You can only combine items in
+your possession. 
+
+>: Junk Room
+
+You are in a room with a pile of junk. A hallway leads south. 
+There is a cache here. 
+Underneath the cache, there is a blue transistor. 
+Underneath the transistor, there is an antenna. 
+Underneath the antenna, there is a screw. 
+Underneath the screw, there is a (broken) motherboard. 
+Underneath the motherboard, there is a (broken) A-1920-IXB. 
+Underneath the A-1920-IXB, there is a red transistor. 
+Underneath the transistor, there is a (broken) keypad. 
+Underneath the keypad, there is some trash. 
+
+>: There is no gray60 Z-4292-PRV here. 
+
+>: There is no pale-carmine D-9887-UUE here. 
+
+>: You aren't carrying a pale-carmine D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: There is no pale-cornflower-blue D-9887-UUE here. 
+
+>: You aren't carrying a pale-cornflower-blue D-9887-UUE. You can
+only incinerate items in your possession. 
+
+>: There is no imported D-9887-UUE here. 
+
+>: You aren't carrying an imported D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: There is no gray90 Z-4292-PRV here. 
+
+>: There is no sepia Z-4292-PRV here. 
+
+>: You aren't carrying a gray90 Z-4292-PRV. You can only combine
+items in your possession. 
+
+>: There is no gray30 D-9887-UUE here. 
+
+>: You aren't carrying a gray30 D-9887-UUE. You can only incinerate
+items in your possession. 
+
+>: There is no robin-egg-blue Z-4292-PRV here. 
+
+>: You aren't carrying a gray60 Z-4292-PRV. You can only combine
+items in your possession. 
+
+>: There is no slate-blue D-9887-UUE here. 
+
+>: You aren't carrying a slate-blue D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: There is no rosy-brown D-9887-UUE here. 
+
+>: You aren't carrying a rosy-brown D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: There is no gray50 Z-4292-PRV here. 
+
+>: There is no misty-rose Z-4292-PRV here. 
+
+>: You aren't carrying a misty-rose Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: There is no cinnamon Z-9887-CUG here. 
+
+>: You aren't carrying a cinnamon Z-9887-CUG. You can only
+incinerate items in your possession. 
+
+>: There is no saffron N-9247-AWO here. 
+
+>: You aren't carrying a saffron N-9247-AWO. You can only
+incinerate items in your possession. 
+
+>: There is no indigo V-4292-XRX here. 
+
+>: You aren't carrying an indigo V-4292-XRX. You can only
+incinerate items in your possession. 
+
+>: There is no pale-sandy-brown R-4832-FAV here. 
+
+>: You aren't carrying a pale-sandy-brown R-4832-FAV. You can only
+incinerate items in your possession. 
+
+>: There is no momemtum-preserving Z-0010-PGL here. 
+
+>: You aren't carrying a momemtum-preserving Z-0010-PGL. You can
+only incinerate items in your possession. 
+
+>: There is no swamp-green V-4292-XRX here. 
+
+>: You aren't carrying a swamp-green V-4292-XRX. You can only
+incinerate items in your possession. 
+
+>: There is no pale-pink R-1623-SOQ here. 
+
+>: You aren't carrying a pale-pink R-1623-SOQ. You can only
+incinerate items in your possession. 
+
+>: There is no cream R-1623-SOQ here. 
+
+>: You aren't carrying a cream R-1623-SOQ. You can only incinerate
+items in your possession. 
+
+>: There is no royal-blue B-9247-YCM here. 
+
+>: You aren't carrying a royal-blue B-9247-YCM. You can only
+incinerate items in your possession. 
+
+>: There is no burgundy J-1403-IIC here. 
+
+>: You aren't carrying a burgundy J-1403-IIC. You can only
+incinerate items in your possession. 
+
+>: There is no blue Z-0010-PGL here. 
+
+>: You aren't carrying a blue Z-0010-PGL. You can only incinerate
+items in your possession. 
+
+>: There is no pink Z-0010-PGL here. 
+
+>: You aren't carrying a pink Z-0010-PGL. You can only incinerate
+items in your possession. 
+
+>: There is no moss-green F-4832-DFT here. 
+
+>: You aren't carrying a moss-green F-4832-DFT. You can only
+incinerate items in your possession. 
+
+>: There is no pine-green B-9247-YCM here. 
+
+>: You aren't carrying a pine-green B-9247-YCM. You can only
+incinerate items in your possession. 
+
+>: There is no floating R-4832-FAV here. 
+
+>: You aren't carrying a floating R-4832-FAV. You can only
+incinerate items in your possession. 
+
+>: There is no russet R-4832-FAV here. 
+
+>: You aren't carrying a russet R-4832-FAV. You can only incinerate
+items in your possession. 
+
+>: There is no lavender-blush D-9887-UUE here. 
+
+>: You aren't carrying a lavender-blush D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: There is no old-gold N-9247-AWO here. 
+
+>: You aren't carrying an old-gold N-9247-AWO. You can only
+incinerate items in your possession. 
+
+>: There is no pear N-9247-AWO here. 
+
+>: You aren't carrying a pear N-9247-AWO. You can only incinerate
+items in your possession. 
+
+>: There is no pastel-pink D-9887-UUE here. 
+
+>: You aren't carrying a pastel-pink D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: There is no heliotrope D-9887-UUE here. 
+
+>: You aren't carrying a heliotrope D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: There is no persian-blue Z-4292-PRV here. 
+
+>: You aren't carrying a persian-blue Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: There is no emerald Z-4292-PRV here. 
+
+>: You aren't carrying an emerald Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: There is no violet-red Z-4292-PRV here. 
+
+>: There is no blaze-orange Z-4292-PRV here. 
+
+>: You aren't carrying a blaze-orange Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: There is no RS232 adapter here. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: There is no jade D-9887-UUE here. 
+
+>: You aren't carrying a jade D-9887-UUE. You can only incinerate
+items in your possession. 
+
+>: There is no steel-blue D-9887-UUE here. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: There is no RS232 adapter here. 
+
+>: You aren't carrying an uploader. You can only combine items in
+your possession. 
+
+>: You can't go north because there is no way north from here. 
+
+>: There is no old X-1623-GTO here. 
+
+>: You aren't carrying an old X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: There is no corn V-0010-XBD here. 
+
+>: You aren't carrying a corn V-0010-XBD. You can only incinerate
+items in your possession. 
+
+>: There is no blue-violet P-4832-JFJ here. 
+
+>: You aren't carrying a blue-violet P-4832-JFJ. You can only
+incinerate items in your possession. 
+
+>: There is no gamboge X-0010-TLX here. 
+
+>: You aren't carrying a gamboge X-0010-TLX. You can only
+incinerate items in your possession. 
+
+>: There is no denim D-4292-HHR here. 
+
+>: You aren't carrying a denim D-4292-HHR. You can only incinerate
+items in your possession. 
+
+>: There is no low-carb D-5065-UVM here. 
+
+>: You aren't carrying a low-carb D-5065-UVM. You can only
+incinerate items in your possession. 
+
+>: There is no pear V-9247-KMI here. 
+
+>: You aren't carrying a pear V-9247-KMI. You can only incinerate
+items in your possession. 
+
+>: There is no ultramarine J-9247-IRG here. 
+
+>: You aren't carrying an ultramarine J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: There is no pink D-4292-HHR here. 
+
+>: You aren't carrying a pink D-4292-HHR. You can only incinerate
+items in your possession. 
+
+>: There is no discounted L-6458-RNH here. 
+
+>: You aren't carrying a discounted L-6458-RNH. You can only
+incinerate items in your possession. 
+
+>: There is no flax D-4292-HHR here. 
+
+>: You aren't carrying a flax D-4292-HHR. You can only incinerate
+items in your possession. 
+
+>: There is no cinnamon J-9247-IRG here. 
+
+>: You aren't carrying a cinnamon J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: There is no lemon F-9887-QAE here. 
+
+>: You aren't carrying a lemon F-9887-QAE. You can only incinerate
+items in your possession. 
+
+>: There is no low-carb X-1623-GTO here. 
+
+>: You aren't carrying a low-carb X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: There is no amethyst J-9247-IRG here. 
+
+>: You aren't carrying an amethyst J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: There is no reverse-chirality J-9247-IRG here. 
+
+>: You aren't carrying a reverse-chirality J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: There is no lemon T-9887-OFC here. 
+
+>: You aren't carrying a lemon T-9887-OFC. You can only incinerate
+items in your possession. 
+
+>: There is no honeydew B-4292-LWV here. 
+
+>: You aren't carrying a honeydew B-4292-LWV. You can only
+incinerate items in your possession. 
+
+>: There is no white F-9887-QAE here. 
+
+>: You aren't carrying a white F-9887-QAE. You can only incinerate
+items in your possession. 
+
+>: There is no black B-4292-LWV here. 
+
+>: You aren't carrying a black B-4292-LWV. You can only incinerate
+items in your possession. 
+
+>: There is no spring-green V-9247-KMI here. 
+
+>: You aren't carrying a spring-green V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: There is no pale-goldenrod V-0010-XBD here. 
+
+>: You aren't carrying a pale-goldenrod V-0010-XBD. You can only
+incinerate items in your possession. 
+
+>: There is no sangria X-1623-GTO here. 
+
+>: You aren't carrying a sangria X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: There is no lawn-green N-1623-AJI here. 
+
+>: You aren't carrying a lawn-green N-1623-AJI. You can only
+incinerate items in your possession. 
+
+>: There is no imitation R-1403-SXU here. 
+
+>: You aren't carrying an imitation R-1403-SXU. You can only
+incinerate items in your possession. 
+
+>: There is no sapphire X-1623-GTO here. 
+
+>: You aren't carrying a sapphire X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: There is no sea-green Z-4832-PPP here. 
+
+>: You aren't carrying a sea-green Z-4832-PPP. You can only
+incinerate items in your possession. 
+
+>: There is no gray10 F-9887-QAE here. 
+
+>: You aren't carrying a gray10 F-9887-QAE. You can only incinerate
+items in your possession. 
+
+>: There is no sandy-brown Z-1623-CEK here. 
+
+>: You aren't carrying a sandy-brown Z-1623-CEK. You can only
+incinerate items in your possession. 
+
+>: There is no gray90 R-4292-FMP here. 
+
+>: You aren't carrying a gray90 R-4292-FMP. You can only incinerate
+items in your possession. 
+
+>: There is no sturdy V-9887-KPW here. 
+
+>: You aren't carrying a sturdy V-9887-KPW. You can only incinerate
+items in your possession. 
+
+>: There is no camouflage-green J-6458-VDL here. 
+
+>: You aren't carrying a camouflage-green J-6458-VDL. You can only
+incinerate items in your possession. 
+
+>: There is no sturdy J-6458-VDL here. 
+
+>: You aren't carrying a sturdy J-6458-VDL. You can only incinerate
+items in your possession. 
+
+>: There is no wisteria X-9247-GWE here. 
+
+>: You aren't carrying a wisteria X-9247-GWE. You can only
+incinerate items in your possession. 
+
+>: There is no persian-blue F-9887-QAE here. 
+
+>: You aren't carrying a persian-blue F-9887-QAE. You can only
+incinerate items in your possession. 
+
+>: There is no sturdy Z-1623-CEK here. 
+
+>: You aren't carrying a sturdy Z-1623-CEK. You can only incinerate
+items in your possession. 
+
+>: There is no pastel-pink X-1623-GTO here. 
+
+>: You aren't carrying a pastel-pink X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: There is no sapphire R-1403-SXU here. 
+
+>: You aren't carrying a sapphire R-1403-SXU. You can only
+incinerate items in your possession. 
+
+>: There is no heliotrope J-6458-VDL here. 
+
+>: You aren't carrying a heliotrope J-6458-VDL. You can only
+incinerate items in your possession. 
+
+>: There is no mustard Z-4832-PPP here. 
+
+>: You aren't carrying a mustard Z-4832-PPP. You can only
+incinerate items in your possession. 
+
+>: There is no wisteria X-6458-TIJ here. 
+
+>: You aren't carrying a wisteria X-6458-TIJ. You can only
+incinerate items in your possession. 
+
+>: There is no coral Z-4832-PPP here. 
+
+>: You aren't carrying a coral Z-4832-PPP. You can only incinerate
+items in your possession. 
+
+>: There is no gray80 X-1623-GTO here. 
+
+>: You aren't carrying a gray80 X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: There is no ivory X-1623-GTO here. 
+
+>: You aren't carrying an ivory X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: There is no raw-umber T-0010-BQH here. 
+
+>: There is no foreign V-9247-KMI here. 
+
+>: You aren't carrying a foreign V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: There is no imaginary T-0010-BQH here. 
+
+>: There is no snow X-1623-GTO here. 
+
+>: You aren't carrying a snow X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: There is no prussian-blue T-0010-BQH here. 
+
+>: You aren't carrying a prussian-blue T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: There is no gray-tea-green T-0010-BQH here. 
+
+>: You aren't carrying a gray-tea-green T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: There is no miniature V-9247-KMI here. 
+
+>: You aren't carrying a miniature V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: There is no steel-blue V-9247-KMI here. 
+
+>: You aren't carrying a steel-blue V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: There is no indigo T-0010-BQH here. 
+
+>: You aren't carrying an indigo T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: There is no EPROM burner here. 
+
+>: There is no brass X-1623-GTO here. 
+
+>: You aren't carrying a brass X-1623-GTO. You can only combine
+items in your possession. 
+
+>: You aren't carrying a EPROM burner. You can only combine items
+in your possession. 
+
+>: You aren't carrying a EPROM burner. You can only combine items
+in your possession. 
+
+>: There is no EPROM burner here. 
+
+>: You aren't carrying an uploader. You can only combine items in
+your possession. 
+
+>: You can't go north because there is no way north from here. 
+
+>: There is no moccasin N-4292-NWT here. 
+
+>: There is no gray-tea-green L-4832-RPN here. 
+
+>: There is no pale-chestnut T-9247-OHI here. 
+
+>: You aren't carrying a pale-chestnut T-9247-OHI. You can only
+incinerate items in your possession. 
+
+>: There is no pale-cornflower-blue V-6458-XDJ here. 
+
+>: You aren't carrying a pale-cornflower-blue V-6458-XDJ. You can
+only incinerate items in your possession. 
+
+>: There is no misty-rose T-9247-OHI here. 
+
+>: You aren't carrying a misty-rose T-9247-OHI. You can only
+incinerate items in your possession. 
+
+>: There is no sangria N-4292-NWT here. 
+
+>: There is no jade P-1403-WSU here. 
+
+>: You aren't carrying a jade P-1403-WSU. You can only combine
+items in your possession. 
+
+>: There is no yellow-green P-6678-JEZ here. 
+
+>: You aren't carrying a yellow-green P-6678-JEZ. You can only
+combine items in your possession. 
+
+>: There is no crimson P-6678-JEZ here. 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only combine
+items in your possession. 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only combine
+items in your possession. 
+
+>: There is no scarlet Z-5065-CGQ here. 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only combine
+items in your possession. 
+
+>: There is no organic T-9247-OHI here. 
+
+>: You aren't carrying an organic T-9247-OHI. You can only
+incinerate items in your possession. 
+
+>: There is no bright-turquoise J-1623-ITM here. 
+
+>: There is no mint-green X-4832-TKP here. 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only combine
+items in your possession. 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only combine
+items in your possession. 
+
+>: There is no denim T-9247-OHI here. 
+
+>: You aren't carrying a denim T-9247-OHI. You can only incinerate
+items in your possession. 
+
+>: There is no gray30 X-4832-TKP here. 
+
+>: You aren't carrying a gray30 X-4832-TKP. You can only incinerate
+items in your possession. 
+
+>: There is no gray60 T-9247-OHI here. 
+
+>: You aren't carrying a gray60 T-9247-OHI. You can only incinerate
+items in your possession. 
+
+>: There is no azure H-6458-ZXL here. 
+
+>: You aren't carrying an azure H-6458-ZXL. You can only combine
+items in your possession. 
+
+>: You aren't carrying an azure H-6458-ZXL. You can only combine
+items in your possession. 
+
+>: There is no carmine D-6678-HJX here. 
+
+>: There is no cornflower-blue D-6678-HJX here. 
+
+>: You aren't carrying a cornflower-blue D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: There is no tan D-6678-HJX here. 
+
+>: You aren't carrying a tan D-6678-HJX. You can only combine items
+in your possession. 
+
+>: There is no pale-mauve L-4832-RPN here. 
+
+>: There is no robin-egg-blue D-6678-HJX here. 
+
+>: You aren't carrying a robin-egg-blue D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: There is no sandy-brown P-1403-WSU here. 
+
+>: You aren't carrying a sandy-brown P-1403-WSU. You can only
+incinerate items in your possession. 
+
+>: There is no cadet-blue H-9247-MMG here. 
+
+>: There is no pale-brown P-1403-WSU here. 
+
+>: You aren't carrying a pale-brown P-1403-WSU. You can only
+incinerate items in your possession. 
+
+>: There is no gray40 L-4832-RPN here. 
+
+>: You aren't carrying a gray40 L-4832-RPN. You can only combine
+items in your possession. 
+
+>: There is no cream H-9247-MMG here. 
+
+>: You aren't carrying a gray40 L-4832-RPN. You can only combine
+items in your possession. 
+
+>: There is no status LED here. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: There is no black D-6678-HJX here. 
+
+>: You aren't carrying a gray40 L-4832-RPN. You can only combine
+items in your possession. 
+
+>: You aren't carrying a tan D-6678-HJX. You can only combine items
+in your possession. 
+
+>: There is no periwinkle D-6678-HJX here. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: There is no violet D-6678-HJX here. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: There is no old-lace D-6678-HJX here. 
+
+>: You aren't carrying an old-lace D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: There is no navy-blue D-6678-HJX here. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: There is no burnt-sienna D-6678-HJX here. 
+
+>: You aren't carrying a burnt-sienna D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: There is no peppered D-6678-HJX here. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: There is no moss-green D-6678-HJX here. 
+
+>: You aren't carrying a moss-green D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: There is no gross D-6678-HJX here. 
+
+>: You aren't carrying a gross D-6678-HJX. You can only incinerate
+items in your possession. 
+
+>: There is no prussian-blue D-6678-HJX here. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: There is no status LED here. 
+
+>: You aren't carrying an uploader. You can only combine items in
+your possession. 
+
+>: There is no uploader here. 
+
+>: You aren't carrying an uploader. You can only use items in your
+possession. 
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: You speak the words "museum" aloud, but there is no one around
+to hear them. 
+
+>: Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+
+
+>: You can't go east because there is no way east from here. 
+
+>: There is no cribbage board here. 
+
+>: There is no ace-of-hearts here. 
+
+>: There is no king-of-hearts here. 
+
+>: There is no queen-of-hearts here. 
+
+>: There is no jack-of-hearts here. 
+
+>: There is no ten-of-hearts here. 
+
+>: There is no nine-of-hearts here. 
+
+>: There is no eight-of-hearts here. 
+
+>: There is no seven-of-hearts here. 
+
+>: There is no six-of-hearts here. 
+
+>: There is no five-of-hearts here. 
+
+>: There is no four-of-hearts here. 
+
+>: There is no three-of-hearts here. 
+
+>: There is no two-of-hearts here. 
+
+>: There is no ace-of-diamonds here. 
+
+>: There is no king-of-diamonds here. 
+
+>: There is no queen-of-diamonds here. 
+
+>: There is no jack-of-diamonds here. 
+
+>: There is no ten-of-diamonds here. 
+
+>: There is no nine-of-diamonds here. 
+
+>: There is no eight-of-diamonds here. 
+
+>: There is no seven-of-diamonds here. 
+
+>: There is no six-of-diamonds here. 
+
+>: There is no five-of-diamonds here. 
+
+>: There is no four-of-diamonds here. 
+
+>: There is no three-of-diamonds here. 
+
+>: There is no two-of-diamonds here. 
+
+>: There is no ace-of-spades here. 
+
+>: There is no king-of-spades here. 
+
+>: There is no queen-of-spades here. 
+
+>: There is no jack-of-spades here. 
+
+>: There is no ten-of-spades here. 
+
+>: There is no nine-of-spades here. 
+
+>: There is no eight-of-spades here. 
+
+>: There is no seven-of-spades here. 
+
+>: There is no six-of-spades here. 
+
+>: There is no five-of-spades here. 
+
+>: There is no four-of-spades here. 
+
+>: There is no three-of-spades here. 
+
+>: There is no two-of-spades here. 
+
+>: There is no ace-of-clubs here. 
+
+>: There is no king-of-clubs here. 
+
+>: There is no queen-of-clubs here. 
+
+>: There is no jack-of-clubs here. 
+
+>: There is no ten-of-clubs here. 
+
+>: There is no nine-of-clubs here. 
+
+>: There is no eight-of-clubs here. 
+
+>: There is no seven-of-clubs here. 
+
+>: There is no six-of-clubs here. 
+
+>: There is no five-of-clubs here. 
+
+>: There is no four-of-clubs here. 
+
+>: There is no three-of-clubs here. 
+
+>: There is no two-of-clubs here. 
+
+>: There is no proof here. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: You speak the words "m4" aloud, but there is no one around to
+hear them. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: There is no crowbar here. 
+
+>: There is no note here. 
+
+>: There is no console here. 
+
+>: There is no console here. 
+
+>: There is no Censory Engine here. 
+
+>: The manifesto is [______REDACTED______]. 
+Also, it is in pristine condition. 
+
+>: There is no proof here. 
+
+>: You aren't carrying a console. You can only use items in your
+possession. 
+
+>: You aren't carrying a crowbar. You can only use items in your
+possession. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: There is no console here. 
+
+>: You aren't carrying a console. You can only use items in your
+possession. 
+
+>: The manifesto is [______REDACTED______]. 
+Also, it is in pristine condition. 
+
+>: There is no proof here. 
+
+>: You can't go north because there is no way north from here. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: There is no blueprint here. 
+
+>: You can't go west because there is no way west from here. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: You can't go west because there is no way west from here. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: % UMIX shutdown: console EOF

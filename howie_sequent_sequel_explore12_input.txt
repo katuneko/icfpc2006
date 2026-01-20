@@ -1,0 +1,13 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+north
+north
+north
+examine robber
+switch XML
+look
+switch English
+examine robber
+show

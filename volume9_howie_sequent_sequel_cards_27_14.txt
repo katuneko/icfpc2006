@@ -1,0 +1,232 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+History of Technology Exhibit, Entrance
+
+You are at the entrance of an exhibit titled, "The History of
+Technology." A sign reads, "Due to recent difficulties, only
+robots with intact warranties will be admitted." From here, you
+can go north or east. 
+
+
+>: Rotunda
+
+You are in the rotunda of the Museum of Science and Industry.
+From here, you can go north, east, or west. 
+
+
+>: Games and Amusements Exhibit
+
+You standing before an exhibit on games and amusements. From
+here, you can go west. 
+There is a cribbage board here. 
+Underneath the cribbage board, there is an ace-of-hearts. 
+Underneath the ace-of-hearts, there is a king-of-hearts. 
+Underneath the king-of-hearts, there is a queen-of-hearts. 
+Underneath the queen-of-hearts, there is a jack-of-hearts. 
+Underneath the jack-of-hearts, there is a ten-of-hearts. 
+Underneath the ten-of-hearts, there is a nine-of-hearts. 
+Underneath the nine-of-hearts, there is an eight-of-hearts. 
+Underneath the eight-of-hearts, there is a seven-of-hearts. 
+Underneath the seven-of-hearts, there is a six-of-hearts. 
+Underneath the six-of-hearts, there is a five-of-hearts. 
+Underneath the five-of-hearts, there is a four-of-hearts. 
+Underneath the four-of-hearts, there is a three-of-hearts. 
+Underneath the three-of-hearts, there is a two-of-hearts. 
+Underneath the two-of-hearts, there is an ace-of-diamonds. 
+Underneath the ace-of-diamonds, there is a king-of-diamonds. 
+Underneath the king-of-diamonds, there is a queen-of-diamonds. 
+Underneath the queen-of-diamonds, there is a jack-of-diamonds. 
+Underneath the jack-of-diamonds, there is a ten-of-diamonds. 
+Underneath the ten-of-diamonds, there is a nine-of-diamonds. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the cribbage board. 
+
+>: The cribbage board has been destroyed. 
+
+>: You are now carrying the ace-of-hearts. 
+
+>: The ace-of-hearts has been destroyed. 
+
+>: You are now carrying the king-of-hearts. 
+
+>: The king-of-hearts has been destroyed. 
+
+>: You are now carrying the queen-of-hearts. 
+
+>: The queen-of-hearts has been destroyed. 
+
+>: You are now carrying the jack-of-hearts. 
+
+>: The jack-of-hearts has been destroyed. 
+
+>: You are now carrying the ten-of-hearts. 
+
+>: The ten-of-hearts has been destroyed. 
+
+>: You are now carrying the nine-of-hearts. 
+
+>: The nine-of-hearts has been destroyed. 
+
+>: You are now carrying the eight-of-hearts. 
+
+>: The eight-of-hearts has been destroyed. 
+
+>: You are now carrying the seven-of-hearts. 
+
+>: The seven-of-hearts has been destroyed. 
+
+>: You are now carrying the six-of-hearts. 
+
+>: The six-of-hearts has been destroyed. 
+
+>: You are now carrying the five-of-hearts. 
+
+>: The five-of-hearts has been destroyed. 
+
+>: You are now carrying the four-of-hearts. 
+
+>: The four-of-hearts has been destroyed. 
+
+>: You are now carrying the three-of-hearts. 
+
+>: The three-of-hearts has been destroyed. 
+
+>: You are now carrying the two-of-hearts. 
+
+>: The two-of-hearts has been destroyed. 
+
+>: You are now carrying the ace-of-diamonds. 
+
+>: The ace-of-diamonds is an ordinary playing card. 
+Also, it is in pristine condition. 
+
+>: You are now carrying the king-of-diamonds. 
+
+>: The king-of-diamonds has been destroyed. 
+
+>: You are now carrying the queen-of-diamonds. 
+
+>: The queen-of-diamonds has been destroyed. 
+
+>: You are now carrying the jack-of-diamonds. 
+
+>: The jack-of-diamonds has been destroyed. 
+
+>: You are now carrying the ten-of-diamonds. 
+
+>: The ten-of-diamonds has been destroyed. 
+
+>: You are now carrying the nine-of-diamonds. 
+
+>: The nine-of-diamonds has been destroyed. 
+
+>: You are now carrying the eight-of-diamonds. 
+
+>: The eight-of-diamonds has been destroyed. 
+
+>: You are now carrying the seven-of-diamonds. 
+
+>: The seven-of-diamonds has been destroyed. 
+
+>: You are now carrying the six-of-diamonds. 
+
+>: The six-of-diamonds has been destroyed. 
+
+>: You are now carrying the five-of-diamonds. 
+
+>: The five-of-diamonds has been destroyed. 
+
+>: You are now carrying the four-of-diamonds. 
+
+>: The four-of-diamonds has been destroyed. 
+
+>: You are now carrying the three-of-diamonds. 
+
+>: The three-of-diamonds has been destroyed. 
+
+>: You are now carrying the two-of-diamonds. 
+
+>: The two-of-diamonds has been destroyed. 
+
+>: You are now carrying the ace-of-spades. 
+
+>: The ace-of-spades is an ordinary playing card. 
+Also, it is in pristine condition. 
+
+>: You are carrying:
+an ace-of-spades and
+an ace-of-diamonds.
+
+>: You can't combine the ace-of-spades and the ace-of-diamonds
+because they don't fit together. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: % UMIX shutdown: console EOF

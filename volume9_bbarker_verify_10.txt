@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as bbarker
+
+
+
+You have new mail. Type 'mail' to view.
+% Please enter your machine now using the |>< characters.
+Terminate with an empty line.
+
+[BK] Your machine has the same width as black-knot model 010.
+[BK] Checking against that model's spec...
+[BK] Verification failure: If you drop a marble into column 0 in the
+ black-knot toy, it comes out of column 8 and you hear 10 plinks,
+ but, with your machine, it comes out of column 0 and you hear 0 plinks.
+
+You have new mail. Type 'mail' to view.
+% UMIX shutdown: console EOF

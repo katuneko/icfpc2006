@@ -1,0 +1,4 @@
+guest
+hack_fixed.exe ftd
+hack_fixed.exe knr
+hack_fixed.exe bbarker

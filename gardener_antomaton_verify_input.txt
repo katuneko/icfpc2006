@@ -1,0 +1,6 @@
+gardener
+mathemantica
+./antomaton puzzle1_solution.ant
+./antomaton puzzle2_solution.ant
+./antomaton puzzle5_solution.ant
+./antomaton puzzle15_solution.ant

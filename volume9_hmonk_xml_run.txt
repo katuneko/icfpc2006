@@ -1,0 +1,931 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as hmonk
+
+
+% Begin sending characters. Terminate with EOF...
+Transferred 512...
+Transferred 1024...
+writing 1099 characters
+% % Running 'xml' suite.
+Welcome to O'Cult v1.0.  
+
+Parsing advice...
+Validating advice...
+Successfully parsed 23 rules; size: 414.
+
+
+Running internal tests...
+*************************
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Tag Bold (Seq A B)))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq A) B))
+Total Steps:     14
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Tag Bold (Seq A B)))
+Applying advice...
+Final Term:      ((Tag Bold) ((Tag Maj) ((Seq A) B)))
+Total Steps:     16
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq A B) A)
+Applying advice...
+Final Term:      ((Seq A) ((Seq B) A))
+Total Steps:     15
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Bold A) (Tag Bold B))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq A) B))
+Total Steps:     16
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Tag Bold A) (Tag Bold B)) A)
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Seq A) B))) A)
+Total Steps:     21
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Emph (Tag Emph A)) (Tag Maj (Tag Maj B)))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) A)) ((Tag Maj) B))
+Total Steps:     20
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Bold (Seq (Seq (Seq A A) B) (Seq A B))) (Seq (Seq (Seq (Tag Emph (Tag Emph A)) A) B) (Seq A (Tag Maj (Tag Maj B)))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Seq A) ((Seq A) ((Seq B) ((Seq A) B)))))) ((Seq ((Tag Emph) A)) ((Seq A) ((Seq B) ((Seq A) ((Tag Maj) B))))))
+Total Steps:     75
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Bold (Tag Emph (Tag Maj (Tag Maj (Seq B B))))) (Tag Bold (Seq (Seq (Tag Maj (Seq B A)) (Tag Maj (Tag Emph B))) (Tag Emph (Seq (Tag Maj A) (Tag Bold B))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Emph) ((Tag Maj) ((Seq B) B)))) ((Seq ((Tag Maj) ((Seq B) A))) ((Tag Emph) ((Seq ((Tag Maj) B)) ((Seq ((Tag Maj) A)) ((Tag Bold) B)))))))
+Total Steps:     74
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Emph (Seq (Seq (Tag Maj (Tag Maj B)) (Seq (Tag Emph B) (Tag Bold B))) (Seq (Tag Bold (Seq B B)) (Seq (Tag Maj A) (Seq B A))))) (Tag Emph (Tag Bold (Seq (Seq (Seq A B) (Seq B B)) (Seq (Tag Maj A) (Seq B B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) ((Seq ((Tag Maj) B)) ((Seq ((Tag Emph) B)) ((Seq ((Tag Bold) B)) ((Seq ((Tag Bold) ((Seq B) B))) ((Seq ((Tag Maj) A)) ((Seq B) A)))))))) ((Tag Bold) ((Tag Emph) ((Seq A) ((Seq B) ((Seq B) ((Seq B) ((Seq ((Tag Maj) A)) ((Seq B) B)))))))))
+Total Steps:     117
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Tag Emph (Tag Bold (Seq (Seq A A) (Seq A A)))) (Seq (Tag Bold (Tag Emph (Seq B A))) (Tag Bold (Seq (Tag Emph B) (Seq B A))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Emph) ((Seq A) ((Seq A) ((Seq A) A))))) ((Seq ((Tag Emph) ((Seq B) A))) ((Seq ((Tag Emph) B)) ((Seq B) A)))))
+Total Steps:     72
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Tag Emph (Tag Emph (Seq (Seq (Tag Emph B) (Seq A B)) (Seq (Seq B B) (Seq A B))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Tag Maj) ((Seq ((Tag Emph) B)) ((Seq A) ((Seq B) ((Seq B) ((Seq B) ((Seq A) B))))))))
+Total Steps:     53
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Tag Emph (Tag Bold (Seq (Tag Maj B) (Seq B A)))) (Tag Emph (Seq (Tag Maj (Seq A A)) (Tag Maj (Tag Bold B))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Seq ((Tag Bold) ((Tag Emph) ((Seq ((Tag Maj) B)) ((Seq B) A))))) ((Tag Emph) ((Seq ((Tag Maj) ((Seq A) A))) ((Tag Bold) ((Tag Maj) B))))))
+Total Steps:     56
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Tag Bold (Seq (Tag Bold A) (Tag Bold B))) (Seq (Seq (Seq A B) (Tag Bold B)) (Seq (Seq B A) (Seq B B)))) (Seq (Seq (Tag Maj (Tag Emph B)) (Seq (Seq B A) (Seq A A))) (Tag Bold (Tag Maj (Seq B B))))) (Tag Emph (Tag Bold (Seq (Tag Bold (Seq B A)) (Tag Emph (Seq A A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Seq A) B))) ((Seq A) ((Seq B) ((Seq ((Tag Bold) B)) ((Seq B) ((Seq A) ((Seq B) ((Seq B) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Seq B) ((Seq A) ((Seq A) ((Seq A) ((Tag Bold) ((Seq ((Tag Maj) ((Seq B) B))) ((Tag Emph) ((Seq ((Tag Bold) ((Seq B) A))) ((Tag Emph) ((Seq A) A)))))))))))))))))))
+Total Steps:     200
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Seq (Seq (Tag Emph B) (Seq B B)) (Seq (Tag Emph A) (Tag Bold A))) (Tag Maj (Seq (Tag Bold A) (Tag Emph A)))) (Tag Maj (Tag Emph (Seq (Tag Bold B) (Seq B A))))) (Seq (Seq (Seq (Tag Bold (Seq A B)) (Tag Bold (Seq A A))) (Tag Maj (Tag Emph (Tag Bold A)))) (Tag Bold (Seq (Seq (Seq A B) (Tag Maj B)) (Tag Emph (Tag Bold A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) B)) ((Seq B) ((Seq B) ((Seq ((Tag Emph) A)) ((Seq ((Tag Bold) A)) ((Seq ((Tag Maj) ((Seq ((Tag Bold) A)) ((Tag Emph) A)))) ((Seq ((Tag Emph) ((Tag Maj) ((Seq ((Tag Bold) B)) ((Seq B) A))))) ((Tag Bold) ((Seq A) ((Seq B) ((Seq A) ((Seq A) ((Seq ((Tag Emph) ((Tag Maj) A))) ((Seq A) ((Seq B) ((Seq ((Tag Maj) B)) ((Tag Bold) ((Tag Emph) A))))))))))))))))))
+Total Steps:     219
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Seq (Seq (Tag Emph (Tag Emph B)) (Seq (Seq A A) (Seq A B))) (Tag Emph (Seq (Tag Maj B) (Tag Bold A)))) (Tag Bold (Seq (Tag Bold (Seq A A)) (Seq (Seq A A) (Tag Maj A))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Emph) B)) ((Seq A) ((Seq A) ((Seq A) ((Seq B) ((Seq ((Tag Emph) ((Seq ((Tag Maj) B)) ((Tag Bold) A)))) ((Tag Bold) ((Seq ((Tag Bold) ((Seq A) A))) ((Seq A) ((Seq A) ((Tag Maj) A))))))))))))
+Total Steps:     107
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Tag Emph (Seq (Seq (Seq B B) (Tag Bold B)) (Tag Bold (Seq A B)))) (Seq (Tag Maj (Seq (Tag Maj A) (Seq A A))) (Tag Bold (Tag Maj (Tag Maj B))))) (Seq (Tag Emph (Seq (Tag Bold (Tag Maj B)) (Tag Emph (Seq A B)))) (Seq (Seq (Seq (Tag Maj A) (Seq A B)) (Tag Emph (Tag Maj B))) (Seq (Seq (Seq B B) (Seq A B)) (Tag Maj (Tag Maj B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) ((Seq B) ((Seq B) ((Tag Bold) ((Seq B) ((Seq A) B))))))) ((Seq ((Tag Maj) ((Seq ((Tag Maj) A)) ((Seq A) A)))) ((Seq ((Tag Bold) ((Tag Maj) B))) ((Seq ((Tag Emph) ((Seq ((Tag Bold) ((Tag Maj) B))) ((Tag Emph) ((Seq A) B))))) ((Seq ((Tag Maj) A)) ((Seq A) ((Seq B) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Seq B) ((Seq B) ((Seq A) ((Seq B) ((Tag Maj) B)))))))))))))
+Total Steps:     184
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Tag Bold (Seq (Tag Emph A) (Seq A A))) (Tag Maj (Seq (Tag Emph A) (Seq A A)))) (Tag Emph (Seq (Seq (Tag Bold A) (Tag Maj A)) (Tag Emph (Tag Bold A))))) (Tag Bold (Seq (Tag Maj (Tag Maj (Seq B A))) (Seq (Tag Emph (Tag Emph A)) (Seq (Seq B A) (Tag Bold B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Seq ((Tag Emph) A)) ((Seq A) A)))) ((Seq ((Tag Maj) ((Seq ((Tag Emph) A)) ((Seq A) A)))) ((Seq ((Tag Emph) ((Seq ((Tag Bold) A)) ((Seq ((Tag Maj) A)) ((Tag Bold) ((Tag Emph) A)))))) ((Tag Bold) ((Seq ((Tag Maj) ((Seq B) A))) ((Seq ((Tag Emph) A)) ((Seq B) ((Seq A) ((Tag Bold) B)))))))))
+Total Steps:     130
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Seq (Seq (Seq (Tag Bold B) (Tag Maj B)) (Seq (Tag Bold A) (Seq B B))) (Seq (Tag Bold (Tag Bold A)) (Seq (Tag Maj A) (Tag Bold B)))) (Tag Bold (Seq (Seq (Seq B A) (Tag Bold A)) (Tag Bold (Tag Emph A))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Bold) B)) ((Seq ((Tag Maj) B)) ((Seq ((Tag Bold) A)) ((Seq B) ((Seq B) ((Seq ((Tag Bold) A)) ((Seq ((Tag Maj) A)) ((Tag Bold) ((Seq B) ((Seq B) ((Seq A) ((Tag Bold) ((Seq A) ((Tag Emph) A)))))))))))))))
+Total Steps:     128
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Tag Bold (Tag Bold (Tag Maj (Tag Maj (Tag Emph A))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Tag Emph) ((Tag Maj) A)))
+Total Steps:     27
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Tag Bold (Seq (Seq A A) (Seq A A))) (Seq (Tag Emph (Tag Maj B)) (Tag Maj (Tag Maj A)))) (Tag Maj (Seq (Tag Maj (Seq A B)) (Tag Bold (Tag Emph A))))) (Tag Maj (Tag Maj (Seq (Tag Bold (Tag Bold B)) (Seq (Tag Emph B) (Seq B B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Seq A) ((Seq A) ((Seq A) A))))) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Tag Maj) ((Seq A) ((Seq ((Tag Maj) ((Seq A) B))) ((Seq ((Tag Bold) ((Tag Emph) A))) ((Seq ((Tag Bold) B)) ((Seq ((Tag Emph) B)) ((Seq B) B)))))))))
+Total Steps:     123
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Tag Bold (Seq (Tag Emph (Tag Maj B)) (Seq (Tag Bold B) (Tag Emph A)))) (Tag Emph (Tag Bold (Seq (Seq A A) (Tag Maj B))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Seq ((Tag Bold) B)) ((Tag Emph) ((Seq A) ((Seq A) ((Seq A) ((Tag Maj) B))))))))
+Total Steps:     67
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Bold (Tag Bold (Tag Emph (Seq (Seq B B) (Seq A B))))) (Seq (Seq (Tag Maj (Tag Bold (Seq A A))) (Seq (Seq (Seq B A) (Seq A A)) (Tag Bold (Tag Bold B)))) (Tag Emph (Seq (Seq (Tag Emph B) (Tag Maj A)) (Seq (Tag Emph A) (Tag Maj A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Tag Emph) ((Seq B) ((Seq B) ((Seq A) B)))))) ((Seq ((Tag Bold) ((Tag Maj) ((Seq A) A)))) ((Seq B) ((Seq A) ((Seq A) ((Seq A) ((Seq ((Tag Bold) B)) ((Tag Emph) ((Seq ((Tag Emph) B)) ((Seq ((Tag Maj) A)) ((Seq ((Tag Emph) A)) ((Tag Maj) A))))))))))))
+Total Steps:     133
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Tag Emph (Seq (Tag Bold (Tag Bold B)) (Tag Maj (Tag Bold A)))) (Tag Maj (Seq (Tag Maj (Seq B A)) (Seq (Tag Bold A) (Seq B A))))) (Seq (Tag Emph (Seq (Seq (Seq B A) (Tag Bold A)) (Tag Bold (Tag Bold A)))) (Seq (Seq (Tag Maj (Seq A A)) (Tag Bold (Seq A A))) (Seq (Seq (Seq A B) (Tag Bold B)) (Seq (Seq A A) (Tag Emph A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Tag Emph) ((Seq B) ((Tag Maj) A))))) ((Seq ((Tag Maj) ((Seq ((Tag Maj) ((Seq B) A))) ((Seq ((Tag Bold) A)) ((Seq B) A))))) ((Seq ((Tag Emph) ((Seq B) ((Seq A) ((Tag Bold) ((Seq A) A)))))) ((Seq ((Tag Maj) ((Seq A) A))) ((Seq ((Tag Bold) ((Seq A) A))) ((Seq A) ((Seq B) ((Seq ((Tag Bold) B)) ((Seq A) ((Seq A) ((Tag Emph) A)))))))))))
+Total Steps:     177
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Bold (Tag Maj (Tag Bold (Seq (Seq A A) (Seq A B))))) (Seq (Seq (Seq (Seq (Seq B B) (Tag Maj A)) (Seq (Seq A B) (Tag Emph A))) (Tag Maj (Tag Emph (Tag Emph B)))) (Seq (Tag Bold (Tag Emph (Tag Maj B))) (Tag Bold (Seq (Seq A B) (Tag Bold A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Tag Maj) ((Seq A) ((Seq A) ((Seq A) B)))))) ((Seq B) ((Seq B) ((Seq ((Tag Maj) A)) ((Seq A) ((Seq B) ((Seq ((Tag Emph) ((Seq A) ((Tag Maj) B)))) ((Tag Bold) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Seq A) ((Seq B) ((Tag Bold) A))))))))))))
+Total Steps:     152
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Tag Maj (Tag Bold (Tag Emph (Tag Emph B)))) (Seq (Seq (Tag Maj (Tag Emph A)) (Seq (Tag Maj B) (Tag Emph B))) (Seq (Seq (Tag Maj B) (Seq B A)) (Tag Maj (Tag Maj B))))) (Seq (Seq (Seq (Seq (Tag Maj A) (Seq B B)) (Seq (Tag Maj B) (Tag Emph A))) (Seq (Seq (Tag Bold B) (Seq A B)) (Seq (Tag Emph B) (Seq A A)))) (Tag Bold (Seq (Tag Maj (Tag Emph A)) (Tag Maj (Tag Bold B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Tag Emph) ((Tag Maj) B)))) ((Seq ((Tag Emph) ((Tag Maj) A))) ((Seq ((Tag Maj) B)) ((Seq ((Tag Emph) B)) ((Seq ((Tag Maj) B)) ((Seq B) ((Seq A) ((Seq ((Tag Maj) B)) ((Seq ((Tag Maj) A)) ((Seq B) ((Seq B) ((Seq ((Tag Maj) B)) ((Seq ((Tag Emph) A)) ((Seq ((Tag Bold) B)) ((Seq A) ((Seq B) ((Seq ((Tag Emph) B)) ((Seq A) ((Seq A) ((Tag Bold) ((Seq ((Tag Emph) ((Tag Maj) A))) ((Tag Bold) ((Tag Maj) B)))))))))))))))))))))))
+Total Steps:     234
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Tag Bold (Tag Maj (Seq A A))) (Tag Maj (Tag Emph (Seq A A)))) (Tag Maj (Seq (Seq (Seq A A) (Seq B A)) (Seq (Seq A B) (Tag Bold B))))) (Tag Bold (Seq (Seq (Tag Emph (Seq A A)) (Tag Maj (Tag Emph A))) (Tag Bold (Tag Bold (Tag Emph B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Tag Maj) ((Seq A) A)))) ((Seq ((Tag Emph) ((Tag Maj) ((Seq A) A)))) ((Seq ((Tag Maj) ((Seq A) ((Seq A) ((Seq B) ((Seq A) ((Seq A) ((Seq B) ((Tag Bold) B))))))))) ((Tag Bold) ((Seq ((Tag Emph) ((Seq A) ((Seq A) ((Tag Maj) A))))) ((Tag Bold) ((Tag Emph) B)))))))
+Total Steps:     136
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Emph (Seq (Tag Emph (Seq (Seq B B) (Tag Emph B))) (Seq (Tag Bold (Tag Bold B)) (Tag Bold (Seq B B))))) (Tag Maj (Tag Bold (Tag Emph (Seq (Tag Emph B) (Tag Bold A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) ((Seq ((Tag Emph) ((Seq B) ((Seq B) ((Tag Emph) B))))) ((Tag Bold) ((Seq B) ((Seq B) B)))))) ((Tag Bold) ((Tag Emph) ((Tag Maj) ((Seq ((Tag Emph) B)) ((Tag Bold) A))))))
+Total Steps:     79
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Tag Maj (Tag Bold (Seq (Tag Emph A) (Tag Emph A)))) (Tag Bold (Seq (Tag Bold (Seq A B)) (Seq (Tag Maj B) (Seq B B))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Tag Emph) ((Seq ((Tag Emph) ((Tag Maj) ((Seq A) A)))) ((Seq ((Tag Bold) ((Seq A) B))) ((Seq ((Tag Maj) B)) ((Seq B) B))))))
+Total Steps:     67
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Seq (Tag Bold (Tag Emph (Tag Maj (Seq A B)))) (Seq (Seq (Tag Bold (Seq A A)) (Seq (Tag Maj A) (Seq A B))) (Seq (Tag Maj (Tag Bold A)) (Tag Bold (Seq A B))))))
+Applying advice...
+Final Term:      ((Tag Maj) ((Seq ((Tag Bold) ((Tag Emph) ((Tag Maj) ((Seq A) B))))) ((Seq ((Tag Bold) ((Seq A) A))) ((Seq ((Tag Maj) A)) ((Seq A) ((Seq B) ((Tag Bold) ((Seq ((Tag Maj) A)) ((Seq A) B)))))))))
+Total Steps:     85
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Seq (Tag Bold (Tag Bold A)) (Tag Emph (Seq B A))) (Seq (Tag Emph (Tag Emph B)) (Seq (Tag Maj A) (Tag Bold A)))) (Seq (Tag Bold (Seq (Tag Maj B) (Seq B B))) (Tag Bold (Tag Bold (Tag Maj A))))) (Tag Emph (Tag Emph (Seq (Tag Maj (Seq B B)) (Seq (Seq A B) (Seq B A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) A)) ((Seq ((Tag Emph) ((Seq B) A))) ((Seq ((Tag Emph) B)) ((Seq ((Tag Maj) A)) ((Seq ((Tag Bold) ((Seq A) ((Seq ((Tag Maj) B)) ((Seq B) ((Seq B) ((Tag Maj) A))))))) ((Tag Emph) ((Seq ((Tag Maj) ((Seq B) B))) ((Seq A) ((Seq B) ((Seq B) A))))))))))
+Total Steps:     151
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Tag Emph (Tag Bold (Tag Bold A))) (Seq (Seq (Seq B A) (Tag Maj B)) (Tag Bold (Seq A A)))) (Tag Maj (Seq (Seq (Tag Maj B) (Tag Maj A)) (Tag Bold (Tag Bold B))))) (Tag Maj (Seq (Tag Maj (Seq (Tag Bold B) (Tag Emph B))) (Seq (Seq (Tag Maj B) (Tag Bold B)) (Seq (Tag Bold B) (Tag Bold B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Tag Emph) A))) ((Seq B) ((Seq A) ((Seq ((Tag Maj) B)) ((Seq ((Tag Bold) ((Seq A) A))) ((Tag Maj) ((Seq ((Tag Maj) ((Seq B) A))) ((Seq ((Tag Bold) B)) ((Seq ((Tag Maj) ((Seq ((Tag Bold) B)) ((Tag Emph) B)))) ((Seq ((Tag Maj) B)) ((Tag Bold) ((Seq B) ((Seq B) B)))))))))))))
+Total Steps:     165
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Emph (Seq (Tag Emph (Seq (Seq B A) (Seq A B))) (Seq (Tag Emph (Seq A A)) (Tag Emph (Tag Bold A))))) (Tag Bold (Tag Maj (Tag Bold (Seq (Tag Maj B) (Seq A B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) ((Seq ((Tag Emph) ((Seq B) ((Seq A) ((Seq A) B))))) ((Seq ((Tag Emph) ((Seq A) A))) ((Tag Bold) ((Tag Emph) A)))))) ((Tag Bold) ((Tag Maj) ((Seq ((Tag Maj) B)) ((Seq A) B)))))
+Total Steps:     81
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Bold (Seq (Seq (Seq (Seq B A) (Tag Bold A)) (Tag Maj (Tag Bold A))) (Tag Maj (Tag Emph (Tag Emph A))))) (Seq (Tag Emph (Tag Maj (Tag Emph (Tag Maj A)))) (Tag Emph (Tag Maj (Tag Bold (Tag Emph B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Seq B) ((Seq A) ((Seq ((Tag Bold) ((Seq A) ((Tag Maj) A)))) ((Tag Emph) ((Tag Maj) A))))))) ((Seq ((Tag Emph) ((Tag Maj) A))) ((Tag Bold) ((Tag Emph) ((Tag Maj) B)))))
+Total Steps:     102
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Tag Bold (Tag Emph (Tag Emph (Tag Emph (Seq A A))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Tag Emph) ((Seq A) A)))
+Total Steps:     23
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Emph (Tag Maj (Tag Emph (Seq (Tag Bold B) (Tag Maj B))))) (Tag Maj (Seq (Tag Bold (Tag Emph (Tag Bold A))) (Seq (Seq (Seq B B) (Seq A B)) (Seq (Seq B B) (Seq A A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) ((Tag Maj) ((Seq ((Tag Bold) B)) ((Tag Maj) B))))) ((Tag Maj) ((Seq ((Tag Bold) ((Tag Emph) A))) ((Seq B) ((Seq B) ((Seq A) ((Seq B) ((Seq B) ((Seq B) ((Seq A) A))))))))))
+Total Steps:     94
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Seq (Tag Emph (Tag Emph (Seq B A))) (Seq (Tag Bold (Tag Bold A)) (Seq (Seq B B) (Tag Bold A)))) (Tag Bold (Tag Maj (Seq (Tag Emph B) (Tag Bold B))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Seq ((Tag Emph) ((Seq B) A))) ((Seq ((Tag Bold) A)) ((Seq B) ((Seq B) ((Tag Bold) ((Seq A) ((Tag Maj) ((Seq ((Tag Emph) B)) ((Tag Bold) B))))))))))
+Total Steps:     80
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Tag Emph (Tag Bold (Tag Emph (Seq A B)))) (Tag Emph (Tag Maj (Tag Emph (Seq B B))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Bold) ((Tag Emph) ((Seq A) B)))) ((Tag Emph) ((Tag Maj) ((Seq B) B)))))
+Total Steps:     43
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Tag Emph (Seq (Tag Bold (Tag Bold A)) (Tag Bold (Tag Bold A)))) (Seq (Tag Emph (Seq (Seq B A) (Tag Maj A))) (Tag Bold (Tag Maj (Tag Bold A))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Seq ((Tag Bold) ((Tag Emph) ((Seq A) A)))) ((Seq ((Tag Emph) ((Seq B) ((Seq A) ((Tag Maj) A))))) ((Tag Bold) ((Tag Maj) A)))))
+Total Steps:     69
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Seq (Seq (Tag Maj (Seq B A)) (Seq (Tag Emph B) (Seq A A))) (Tag Bold (Seq (Tag Emph A) (Tag Bold B)))) (Tag Emph (Tag Maj (Tag Maj (Tag Bold B))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Seq ((Tag Maj) ((Seq B) A))) ((Seq ((Tag Emph) B)) ((Seq A) ((Seq A) ((Tag Bold) ((Seq ((Tag Emph) A)) ((Seq ((Tag Bold) B)) ((Tag Emph) ((Tag Maj) B))))))))))
+Total Steps:     92
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Bold (Seq (Tag Emph (Tag Maj (Seq A A))) (Seq (Seq (Tag Bold A) (Tag Emph B)) (Seq (Tag Emph B) (Tag Emph A))))) (Tag Emph (Seq (Seq (Tag Maj (Tag Maj B)) (Seq (Tag Maj B) (Seq B A))) (Tag Bold (Tag Emph (Tag Emph B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Seq ((Tag Emph) ((Tag Maj) ((Seq A) A)))) ((Seq ((Tag Bold) A)) ((Tag Emph) ((Seq B) ((Seq B) A))))))) ((Tag Emph) ((Seq ((Tag Maj) B)) ((Seq ((Tag Maj) B)) ((Seq B) ((Seq A) ((Tag Bold) ((Tag Emph) B))))))))
+Total Steps:     107
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Seq (Seq (Tag Emph (Tag Bold (Tag Emph A))) (Seq (Seq (Seq B A) (Seq A A)) (Seq (Tag Bold A) (Seq A A)))) (Tag Maj (Seq (Tag Maj (Tag Bold B)) (Seq (Tag Emph B) (Seq A B))))))
+Applying advice...
+Final Term:      ((Tag Maj) ((Seq ((Tag Bold) ((Tag Emph) A))) ((Seq B) ((Seq A) ((Seq A) ((Seq A) ((Seq ((Tag Bold) A)) ((Seq A) ((Seq A) ((Tag Maj) ((Seq ((Tag Bold) ((Tag Maj) B))) ((Seq ((Tag Emph) B)) ((Seq A) B)))))))))))))
+Total Steps:     111
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Seq (Tag Emph (Seq B A)) (Tag Emph (Tag Emph B))) (Tag Emph (Tag Maj (Seq B A)))) (Seq (Tag Emph (Tag Emph (Seq B A))) (Seq (Tag Maj (Seq A B)) (Seq (Seq B A) (Seq A A))))) (Tag Bold (Tag Bold (Tag Bold (Seq (Tag Maj B) (Seq B A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) ((Seq B) ((Seq A) ((Seq B) ((Tag Maj) ((Seq B) A))))))) ((Seq ((Tag Emph) ((Seq B) A))) ((Seq ((Tag Maj) ((Seq A) B))) ((Seq B) ((Seq A) ((Seq A) ((Seq A) ((Tag Bold) ((Seq ((Tag Maj) B)) ((Seq B) A))))))))))
+Total Steps:     138
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Tag Maj (Seq (Seq (Tag Emph B) (Tag Emph B)) (Tag Emph (Tag Emph B)))) (Seq (Seq (Seq (Seq A A) (Tag Maj B)) (Tag Emph (Tag Emph B))) (Seq (Seq (Tag Maj A) (Seq A A)) (Tag Emph (Tag Maj B))))) (Seq (Seq (Seq (Tag Bold (Seq B A)) (Seq (Tag Bold A) (Seq A B))) (Seq (Seq (Seq B A) (Tag Maj B)) (Tag Bold (Tag Maj B)))) (Seq (Seq (Seq (Seq A B) (Tag Bold A)) (Seq (Tag Maj A) (Tag Maj A))) (Seq (Seq (Seq B A) (Seq B A)) (Tag Emph (Tag Bold A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) ((Tag Maj) ((Seq B) ((Seq B) B))))) ((Seq A) ((Seq A) ((Seq ((Tag Maj) B)) ((Seq ((Tag Emph) B)) ((Seq ((Tag Maj) A)) ((Seq A) ((Seq A) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Seq ((Tag Bold) ((Seq B) A))) ((Seq ((Tag Bold) A)) ((Seq A) ((Seq B) ((Seq B) ((Seq A) ((Seq ((Tag Maj) B)) ((Seq ((Tag Bold) ((Tag Maj) B))) ((Seq A) ((Seq B) ((Seq ((Tag Bold) A)) ((Seq ((Tag Maj) ((Seq A) A))) ((Seq B) ((Seq A) ((Seq B) ((Seq A) ((Tag Bold) ((Tag Emph) A)))))))))))))))))))))))))))
+Total Steps:     301
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Tag Emph (Tag Maj (Tag Maj (Tag Bold B)))) (Tag Bold (Seq (Seq (Tag Maj A) (Seq B B)) (Tag Emph (Seq A B))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Tag Emph) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Seq ((Tag Maj) A)) ((Seq B) ((Seq B) ((Tag Emph) ((Seq A) B))))))))
+Total Steps:     66
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Tag Emph (Seq (Tag Maj (Tag Bold A)) (Tag Maj (Tag Emph B)))) (Tag Maj (Seq (Tag Bold (Seq A A)) (Seq (Seq A A) (Tag Emph B))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Seq ((Tag Emph) ((Seq ((Tag Bold) ((Tag Maj) A))) ((Tag Emph) ((Tag Maj) B))))) ((Tag Maj) ((Seq ((Tag Bold) ((Seq A) A))) ((Seq A) ((Seq A) ((Tag Emph) B)))))))
+Total Steps:     66
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Tag Emph (Seq (Tag Bold (Seq B B)) (Tag Maj (Seq A A)))) (Tag Maj (Tag Emph (Seq (Tag Bold A) (Tag Maj B))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Tag Emph) ((Seq ((Tag Bold) ((Seq B) B))) ((Tag Maj) ((Seq A) ((Seq A) ((Seq ((Tag Bold) A)) ((Tag Maj) B))))))))
+Total Steps:     62
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Tag Bold (Seq (Seq (Seq (Tag Emph A) (Tag Bold B)) (Tag Maj (Tag Bold B))) (Seq (Seq (Tag Emph A) (Seq B B)) (Seq (Seq B A) (Seq A B))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Tag Maj) ((Seq ((Tag Emph) A)) ((Seq ((Tag Bold) ((Seq B) ((Tag Maj) B)))) ((Seq ((Tag Emph) A)) ((Seq B) ((Seq B) ((Seq B) ((Seq A) ((Seq A) B))))))))))
+Total Steps:     85
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Tag Bold (Tag Maj (Tag Emph (Seq B B)))) (Tag Emph (Tag Maj (Seq (Tag Maj A) (Tag Bold A))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Bold) ((Tag Emph) ((Tag Maj) ((Seq B) B))))) ((Tag Emph) ((Tag Maj) ((Seq ((Tag Maj) A)) ((Tag Bold) A))))))
+Total Steps:     44
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Seq (Tag Emph (Tag Maj (Tag Bold (Seq B B)))) (Seq (Tag Bold (Tag Bold (Tag Emph A))) (Seq (Tag Bold (Seq B A)) (Seq (Seq A B) (Seq B A))))))
+Applying advice...
+Final Term:      ((Tag Maj) ((Seq ((Tag Bold) ((Tag Emph) ((Tag Maj) ((Seq B) B))))) ((Seq ((Tag Bold) ((Tag Emph) A))) ((Seq ((Tag Bold) ((Seq B) A))) ((Seq A) ((Seq B) ((Seq B) A)))))))
+Total Steps:     73
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Tag Bold (Tag Maj (Tag Maj B))) (Tag Emph (Tag Maj (Tag Bold A)))) (Seq (Seq (Tag Maj (Tag Bold B)) (Tag Bold (Seq B A))) (Seq (Tag Bold (Tag Emph A)) (Seq (Tag Bold B) (Tag Maj B))))) (Seq (Seq (Seq (Seq (Tag Maj A) (Tag Maj B)) (Tag Emph (Seq A A))) (Tag Bold (Seq (Tag Maj A) (Tag Bold B)))) (Tag Maj (Seq (Seq (Tag Maj A) (Seq B B)) (Tag Bold (Seq A A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Seq ((Tag Maj) B)) ((Tag Emph) ((Tag Maj) A))))) ((Seq ((Tag Bold) ((Seq ((Tag Maj) B)) ((Seq B) A)))) ((Seq ((Tag Bold) ((Tag Emph) A))) ((Seq ((Tag Bold) B)) ((Seq ((Tag Maj) B)) ((Seq ((Tag Maj) ((Seq A) B))) ((Seq ((Tag Emph) ((Seq A) A))) ((Seq ((Tag Bold) ((Seq ((Tag Maj) A)) ((Tag Bold) B)))) ((Tag Maj) ((Seq ((Tag Maj) A)) ((Seq B) ((Seq B) ((Tag Bold) ((Seq A) A))))))))))))))
+Total Steps:     189
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Seq (Seq (Tag Maj (Tag Maj B)) (Seq (Tag Maj A) (Tag Emph B))) (Seq (Seq (Tag Bold B) (Tag Emph A)) (Tag Emph (Tag Bold B)))) (Seq (Tag Emph (Seq (Seq B B) (Tag Emph A))) (Tag Emph (Tag Bold (Tag Bold B))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Maj) B)) ((Seq ((Tag Maj) A)) ((Seq ((Tag Emph) B)) ((Seq ((Tag Bold) B)) ((Seq ((Tag Emph) A)) ((Seq ((Tag Bold) ((Tag Emph) B))) ((Seq ((Tag Emph) ((Seq B) ((Seq B) ((Tag Emph) A))))) ((Tag Bold) ((Tag Emph) B))))))))))
+Total Steps:     112
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Seq (Tag Emph (Seq (Seq A B) (Seq A B))) (Tag Bold (Tag Maj (Seq B A)))) (Tag Maj (Seq (Tag Maj (Seq B B)) (Seq (Tag Emph A) (Tag Maj B))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Emph) ((Seq A) ((Seq B) ((Seq A) B))))) ((Seq ((Tag Bold) ((Tag Maj) ((Seq B) A)))) ((Tag Maj) ((Seq ((Tag Maj) ((Seq B) B))) ((Seq ((Tag Emph) A)) ((Tag Maj) B)))))))
+Total Steps:     76
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Tag Bold (Tag Emph (Tag Bold A))) (Seq (Seq (Seq B B) (Tag Maj A)) (Tag Emph (Tag Bold A)))) (Tag Bold (Tag Emph (Tag Emph (Tag Maj B))))) (Seq (Seq (Tag Bold (Tag Maj (Tag Emph A))) (Seq (Seq (Tag Bold B) (Tag Bold B)) (Seq (Tag Bold A) (Tag Bold B)))) (Seq (Seq (Seq (Seq A B) (Seq A B)) (Tag Emph (Tag Emph B))) (Tag Maj (Seq (Tag Maj B) (Tag Maj B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Tag Emph) A))) ((Seq B) ((Seq B) ((Seq ((Tag Maj) A)) ((Seq ((Tag Bold) ((Tag Emph) ((Seq A) ((Tag Maj) B))))) ((Seq ((Tag Bold) ((Seq ((Tag Emph) ((Tag Maj) A))) ((Seq B) ((Seq B) ((Seq A) B)))))) ((Seq A) ((Seq B) ((Seq A) ((Seq B) ((Seq ((Tag Emph) B)) ((Tag Maj) ((Seq B) B)))))))))))))
+Total Steps:     214
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Seq (Seq (Seq (Seq (Tag Emph B) (Tag Maj B)) (Seq (Tag Maj A) (Tag Bold A))) (Seq (Seq (Tag Maj A) (Tag Maj B)) (Seq (Seq A B) (Tag Maj B)))) (Seq (Tag Emph (Seq (Tag Emph A) (Tag Maj A))) (Seq (Seq (Seq A A) (Tag Maj A)) (Tag Emph (Seq A B))))))
+Applying advice...
+Final Term:      ((Tag Maj) ((Seq ((Tag Emph) B)) ((Seq ((Tag Maj) B)) ((Seq ((Tag Maj) A)) ((Seq ((Tag Bold) A)) ((Seq ((Tag Maj) ((Seq A) B))) ((Seq A) ((Seq B) ((Seq ((Tag Maj) B)) ((Seq ((Tag Emph) ((Seq ((Tag Emph) A)) ((Tag Maj) A)))) ((Seq A) ((Seq A) ((Seq ((Tag Maj) A)) ((Tag Emph) ((Seq A) B)))))))))))))))
+Total Steps:     149
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Tag Maj (Seq (Tag Emph (Seq A B)) (Seq (Seq A B) (Tag Bold B)))) (Tag Bold (Tag Maj (Seq (Seq A B) (Tag Maj B))))) (Tag Bold (Tag Bold (Seq (Seq (Tag Bold A) (Seq B A)) (Tag Maj (Seq B B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Maj) ((Seq ((Tag Emph) ((Seq A) B))) ((Seq A) ((Seq B) ((Tag Bold) B)))))) ((Tag Bold) ((Seq ((Tag Maj) ((Seq A) ((Seq B) ((Tag Maj) B))))) ((Seq ((Tag Bold) A)) ((Seq B) ((Seq A) ((Tag Maj) ((Seq B) B))))))))
+Total Steps:     105
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Tag Bold (Tag Bold (Tag Maj (Tag Emph B)))) (Seq (Seq (Tag Maj (Seq B A)) (Seq (Seq B A) (Seq B B))) (Tag Bold (Tag Bold (Tag Maj A))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Bold) ((Tag Emph) ((Tag Maj) B)))) ((Seq ((Tag Maj) ((Seq B) A))) ((Seq B) ((Seq A) ((Seq B) ((Seq B) ((Tag Bold) ((Tag Maj) A)))))))))
+Total Steps:     77
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Seq (Tag Emph (Seq (Tag Bold (Tag Emph A)) (Seq (Tag Maj B) (Tag Maj A)))) (Seq (Tag Emph (Seq (Tag Maj A) (Tag Emph A))) (Seq (Tag Maj (Seq A A)) (Seq (Seq A B) (Tag Emph B))))))
+Applying advice...
+Final Term:      ((Tag Maj) ((Seq ((Tag Emph) ((Seq ((Tag Bold) ((Tag Emph) A))) ((Tag Maj) ((Seq B) A))))) ((Seq ((Tag Emph) ((Seq ((Tag Maj) A)) ((Tag Emph) A)))) ((Seq ((Tag Maj) ((Seq A) A))) ((Seq A) ((Seq B) ((Tag Emph) B)))))))
+Total Steps:     85
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Tag Maj (Tag Maj (Seq (Tag Emph B) (Seq B A)))) (Tag Maj (Tag Emph (Seq (Tag Bold A) (Seq B B))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Seq ((Tag Maj) ((Seq ((Tag Emph) B)) ((Seq B) A)))) ((Tag Emph) ((Tag Maj) ((Seq ((Tag Bold) A)) ((Seq B) B))))))
+Total Steps:     51
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Tag Emph (Seq (Seq B A) (Seq A A))) (Tag Maj (Seq (Seq A B) (Seq B A)))) (Tag Emph (Seq (Seq (Tag Bold B) (Tag Maj B)) (Tag Emph (Tag Maj A))))) (Seq (Seq (Tag Bold (Tag Maj (Tag Maj A))) (Tag Maj (Seq (Seq B A) (Seq B A)))) (Seq (Tag Emph (Tag Maj (Seq B B))) (Seq (Tag Bold (Tag Emph A)) (Tag Maj (Seq B B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) ((Seq B) ((Seq A) ((Seq A) A))))) ((Seq ((Tag Maj) ((Seq A) ((Seq B) ((Seq B) A))))) ((Seq ((Tag Emph) ((Seq ((Tag Bold) B)) ((Seq ((Tag Maj) B)) ((Tag Emph) ((Tag Maj) A)))))) ((Seq ((Tag Bold) ((Tag Maj) A))) ((Seq ((Tag Maj) ((Seq B) ((Seq A) ((Seq B) A))))) ((Seq ((Tag Emph) ((Tag Maj) ((Seq B) B)))) ((Seq ((Tag Bold) ((Tag Emph) A))) ((Tag Maj) ((Seq B) B)))))))))
+Total Steps:     167
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Maj (Seq (Seq (Tag Bold (Tag Bold A)) (Seq (Seq A A) (Seq A A))) (Seq (Tag Emph (Seq A B)) (Tag Emph (Seq A A))))) (Tag Emph (Tag Bold (Tag Bold (Tag Emph (Tag Bold B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Maj) ((Seq ((Tag Bold) A)) ((Seq A) ((Seq A) ((Seq A) ((Seq A) ((Tag Emph) ((Seq A) ((Seq B) ((Seq A) A))))))))))) ((Tag Bold) ((Tag Emph) B)))
+Total Steps:     96
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Tag Bold (Seq (Seq A B) (Seq B A))) (Seq (Tag Emph (Seq A A)) (Tag Emph (Tag Bold A)))) (Seq (Tag Emph (Tag Maj (Tag Maj B))) (Tag Maj (Tag Emph (Seq B B))))) (Seq (Seq (Tag Emph (Seq (Seq A A) (Tag Bold A))) (Tag Bold (Seq (Tag Emph A) (Tag Bold A)))) (Seq (Seq (Tag Bold (Seq A A)) (Tag Maj (Tag Bold B))) (Seq (Tag Emph (Seq A B)) (Tag Bold (Tag Maj B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Seq A) ((Seq B) ((Seq B) A))))) ((Seq ((Tag Emph) ((Seq A) A))) ((Seq ((Tag Bold) ((Tag Emph) A))) ((Seq ((Tag Emph) ((Tag Maj) ((Seq B) ((Seq B) B))))) ((Seq ((Tag Emph) ((Seq A) ((Seq A) ((Tag Bold) A))))) ((Seq ((Tag Bold) ((Seq ((Tag Emph) A)) ((Tag Bold) A)))) ((Seq ((Tag Bold) ((Seq A) ((Seq A) ((Tag Maj) B))))) ((Seq ((Tag Emph) ((Seq A) B))) ((Tag Bold) ((Tag Maj) B))))))))))
+Total Steps:     193
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Seq (Seq (Tag Emph (Tag Maj (Seq B B))) (Seq (Seq (Seq A B) (Seq B B)) (Tag Bold (Seq A A)))) (Tag Bold (Tag Maj (Seq (Tag Maj B) (Seq A A))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Emph) ((Tag Maj) ((Seq B) B)))) ((Seq A) ((Seq B) ((Seq B) ((Seq B) ((Tag Bold) ((Seq A) ((Seq A) ((Tag Maj) ((Seq ((Tag Maj) B)) ((Seq A) A))))))))))))
+Total Steps:     96
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Seq (Seq (Seq (Seq B A) (Seq A B)) (Seq (Tag Maj A) (Seq A B))) (Seq (Seq (Seq B B) (Tag Emph A)) (Seq (Tag Emph A) (Seq A A)))) (Tag Emph (Tag Maj (Tag Bold (Seq B A))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Seq B) ((Seq A) ((Seq A) ((Seq B) ((Seq ((Tag Maj) A)) ((Seq A) ((Seq B) ((Seq B) ((Seq B) ((Seq ((Tag Emph) A)) ((Seq ((Tag Emph) A)) ((Seq A) ((Seq A) ((Tag Bold) ((Tag Emph) ((Tag Maj) ((Seq B) A))))))))))))))))))
+Total Steps:     148
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Tag Emph (Tag Emph (Tag Maj (Seq (Tag Bold A) (Tag Emph A))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Tag Maj) ((Seq ((Tag Bold) A)) ((Tag Emph) A))))
+Total Steps:     28
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Bold (Seq (Tag Bold (Tag Emph (Seq A B))) (Seq (Tag Emph (Seq B B)) (Tag Emph (Tag Emph B))))) (Seq (Tag Bold (Seq (Seq (Seq A A) (Tag Maj A)) (Seq (Seq B B) (Tag Emph B)))) (Tag Emph (Seq (Tag Maj (Seq B A)) (Tag Bold (Seq A A))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Bold) ((Seq ((Tag Bold) ((Tag Emph) ((Seq A) B)))) ((Tag Emph) ((Seq B) ((Seq B) B)))))) ((Seq ((Tag Bold) ((Seq A) ((Seq A) ((Seq ((Tag Maj) A)) ((Seq B) ((Seq B) ((Tag Emph) B)))))))) ((Tag Emph) ((Seq ((Tag Maj) ((Seq B) A))) ((Tag Bold) ((Seq A) A))))))
+Total Steps:     121
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Tag Bold (Seq (Tag Emph (Tag Emph A)) (Seq (Seq A A) (Tag Emph A)))) (Tag Maj (Tag Maj (Seq (Tag Maj A) (Seq A B))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Seq ((Tag Bold) ((Seq ((Tag Emph) A)) ((Seq A) ((Seq A) ((Tag Emph) A)))))) ((Tag Maj) ((Seq ((Tag Maj) A)) ((Seq A) B)))))
+Total Steps:     59
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Seq (Seq (Seq B A) (Seq A B)) (Seq (Tag Maj A) (Seq A A))) (Tag Maj (Tag Emph (Tag Emph B)))) (Seq (Seq (Seq (Seq A A) (Tag Maj A)) (Seq (Tag Maj A) (Seq B A))) (Seq (Seq (Seq B B) (Seq A B)) (Seq (Tag Bold A) (Seq B A))))) (Tag Bold (Seq (Tag Maj (Tag Emph (Tag Emph B))) (Seq (Tag Bold (Tag Maj B)) (Seq (Tag Emph A) (Tag Maj B))))))
+Applying advice...
+Final Term:      ((Seq B) ((Seq A) ((Seq A) ((Seq B) ((Seq ((Tag Maj) A)) ((Seq A) ((Seq A) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Seq A) ((Seq A) ((Seq ((Tag Maj) A)) ((Seq ((Tag Maj) A)) ((Seq B) ((Seq A) ((Seq B) ((Seq B) ((Seq A) ((Seq B) ((Seq ((Tag Bold) A)) ((Seq B) ((Seq A) ((Tag Bold) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Seq ((Tag Bold) ((Tag Maj) B))) ((Seq ((Tag Emph) A)) ((Tag Maj) B))))))))))))))))))))))))))
+Total Steps:     270
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Bold (Seq (Seq (Tag Maj (Tag Emph B)) (Seq (Seq A A) (Tag Bold A))) (Tag Emph (Tag Emph (Seq B A))))) (Tag Emph (Seq (Tag Emph (Tag Maj (Tag Bold A))) (Tag Emph (Tag Emph (Tag Bold A))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Seq A) ((Seq A) ((Seq ((Tag Bold) A)) ((Tag Emph) ((Seq B) ((Seq A) ((Seq ((Tag Maj) A)) A)))))))))
+Total Steps:     115
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Emph (Seq (Tag Bold (Seq (Seq (Tag Emph A) (Seq A B)) (Tag Emph (Tag Maj B)))) (Seq (Seq (Tag Emph (Tag Emph A)) (Seq (Seq B B) (Tag Maj B))) (Tag Bold (Tag Maj (Seq A B))))))
+Applying advice...
+Final Term:      ((Tag Emph) ((Seq ((Tag Bold) ((Seq ((Tag Emph) A)) ((Seq A) ((Seq B) ((Tag Emph) ((Tag Maj) B))))))) ((Seq ((Tag Emph) A)) ((Seq B) ((Seq B) ((Seq ((Tag Maj) B)) ((Tag Bold) ((Tag Maj) ((Seq A) B)))))))))
+Total Steps:     90
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Maj (Seq (Tag Maj (Tag Bold (Tag Maj B))) (Tag Emph (Seq (Tag Bold B) (Tag Emph A))))) (Seq (Tag Bold (Seq (Tag Bold (Tag Emph B)) (Seq (Tag Bold A) (Seq B B)))) (Seq (Seq (Tag Bold (Seq A A)) (Seq (Tag Emph A) (Seq A A))) (Seq (Tag Bold (Tag Emph B)) (Tag Emph (Seq B B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Maj) ((Seq ((Tag Bold) ((Tag Maj) B))) ((Tag Emph) ((Seq ((Tag Bold) B)) ((Tag Emph) A)))))) ((Seq ((Tag Bold) ((Seq ((Tag Bold) ((Tag Emph) B))) ((Seq ((Tag Bold) A)) ((Seq B) B))))) ((Seq ((Tag Bold) ((Seq A) A))) ((Seq ((Tag Emph) A)) ((Seq A) ((Seq A) ((Seq ((Tag Bold) ((Tag Emph) B))) ((Tag Emph) ((Seq B) B)))))))))
+Total Steps:     129
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Emph (Seq (Seq (Seq (Tag Maj A) (Seq A B)) (Tag Maj (Tag Bold A))) (Seq (Tag Emph (Seq A A)) (Seq (Seq A B) (Tag Emph B))))) (Tag Maj (Seq (Seq (Tag Bold (Tag Bold B)) (Seq (Tag Maj A) (Tag Maj A))) (Seq (Tag Bold (Seq B A)) (Seq (Tag Bold B) (Tag Maj B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) ((Seq ((Tag Maj) A)) ((Seq A) ((Seq B) ((Seq ((Tag Bold) ((Tag Maj) A))) ((Seq ((Tag Emph) ((Seq A) A))) ((Seq A) ((Seq B) ((Tag Emph) B)))))))))) ((Tag Maj) ((Seq ((Tag Bold) B)) ((Seq ((Tag Maj) ((Seq A) A))) ((Seq ((Tag Bold) ((Seq B) A))) ((Seq ((Tag Bold) B)) ((Tag Maj) B)))))))
+Total Steps:     138
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Tag Maj (Seq (Seq (Tag Bold (Seq A B)) (Tag Emph (Seq A B))) (Seq (Tag Bold (Tag Emph B)) (Seq (Tag Bold B) (Seq B B))))))
+Applying advice...
+Final Term:      ((Tag Maj) ((Seq ((Tag Bold) ((Seq A) B))) ((Seq ((Tag Emph) ((Seq A) B))) ((Seq ((Tag Bold) ((Tag Emph) B))) ((Seq ((Tag Bold) B)) ((Seq B) B))))))
+Total Steps:     61
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Tag Maj (Seq (Tag Emph (Tag Emph (Seq A B))) (Tag Emph (Tag Bold (Tag Emph A))))) (Tag Emph (Tag Maj (Tag Emph (Seq (Seq B B) (Tag Emph B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Maj) ((Seq ((Tag Emph) ((Seq A) B))) ((Tag Bold) ((Tag Emph) A))))) ((Tag Emph) ((Tag Maj) ((Seq B) ((Seq B) ((Tag Emph) B))))))
+Total Steps:     64
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Seq (Seq (Tag Maj (Tag Bold (Tag Emph B))) (Tag Bold (Seq (Tag Maj A) (Tag Maj B)))) (Tag Emph (Seq (Tag Emph (Tag Maj B)) (Seq (Tag Bold A) (Tag Emph A))))))
+Applying advice...
+Final Term:      ((Tag Maj) ((Seq ((Tag Bold) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Tag Maj) ((Seq A) B))))) ((Tag Emph) ((Seq ((Tag Emph) ((Tag Maj) B))) ((Seq ((Tag Bold) A)) ((Tag Emph) A))))))
+Total Steps:     72
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Bold (Tag Maj (Tag Emph (Tag Bold (Seq (Tag Maj B) (Tag Emph A))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Tag Emph) ((Tag Maj) ((Seq ((Tag Maj) B)) ((Tag Emph) A)))))
+Total Steps:     32
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Seq (Seq (Seq (Tag Maj (Tag Emph (Seq A B))) (Tag Maj (Seq (Tag Emph A) (Tag Maj B)))) (Tag Bold (Seq (Tag Maj (Seq B A)) (Seq (Seq A B) (Tag Maj B))))) (Tag Bold (Tag Emph (Tag Bold (Seq (Tag Emph B) (Tag Maj B))))))
+Applying advice...
+Final Term:      ((Seq ((Tag Emph) ((Tag Maj) ((Seq A) B)))) ((Seq ((Tag Maj) ((Seq ((Tag Emph) A)) ((Tag Maj) B)))) ((Tag Bold) ((Seq ((Tag Maj) ((Seq B) A))) ((Seq A) ((Seq B) ((Seq ((Tag Maj) B)) ((Tag Emph) ((Seq ((Tag Emph) B)) ((Tag Maj) B))))))))))
+Total Steps:     112
+
+Correct!
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+Initial Term:    SNF (Tag Maj (Seq (Tag Bold (Tag Maj (Seq (Seq A B) (Tag Bold A)))) (Tag Bold (Seq (Seq (Seq B B) (Tag Emph A)) (Tag Emph (Seq A B))))))
+Applying advice...
+Final Term:      ((Tag Bold) ((Tag Maj) ((Seq ((Tag Maj) ((Seq A) ((Seq B) ((Tag Bold) A))))) ((Seq B) ((Seq B) ((Tag Emph) ((Seq A) ((Seq A) B))))))))
+Total Steps:     73
+
+Correct!
+
+----------------------------------------------------------------------
+
+Your advice passed the tests!
+Our colleagues might be interested in how you did it:
+
+    ADVIS.XML=139@999999|fe25caa79cf08545cf5c67b350194bf
+
+However, they would be even more interested if your advice were pithier.
+
+
+% UMIX shutdown: console EOF

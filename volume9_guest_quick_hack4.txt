@@ -1,0 +1,336 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: logged in as guest
+INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d
+
+
+You have new mail. Type 'mail' to view.
+% Begin sending characters. Terminate with EOF...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+Transferred 2048...
+Transferred 2560...
+Transferred 3072...
+Transferred 3584...
+Transferred 4096...
+Transferred 4608...
+Transferred 5120...
+Transferred 5632...
+Transferred 6144...
+Transferred 6656...
+Transferred 7168...
+Transferred 7680...
+Transferred 8192...
+writing 8316 characters
+INTRO.UMD=10@999999|7005f80d6cd9b7b837802f1e58b11b8
+
+You have new mail. Type 'mail' to view.
+% 
+You have new mail. Type 'mail' to view.
+% V SKIP
+X SKIP
+XV SKIP
+XX SKIP
+XXV IF (ARGS() > I) THEN GOTO LXXXV ELSE SKIP
+XXX PRINT "usage: ./quick_hack.exe username"
+XXXV PRINT CHR(X)
+XL END
+LXXXV SKIP
+XC DIM username AS STRING
+XCV SET username = ARG(II)
+C DIM pwdcount AS INTEGER
+CV SET pwdcount = CCXI
+CX DIM words(pwdcount) AS STRING
+CXV SET words(I) = "ftd"
+CXVI SET words(II) = "flower"
+CXVII SET words(III) = "flowers"
+CXVIII SET words(IV) = "florist"
+CXIX SET words(V) = "florists"
+CXX SET words(VI) = "bouquet"
+CXXI SET words(VII) = "roses"
+CXXII SET words(VIII) = "delivery"
+CXXIII SET words(IX) = "telegraph"
+CXXIV SET words(X) = "teleflora"
+CXXV SET words(XI) = "flora"
+CXXVI SET words(XII) = "knr"
+CXXVII SET words(XIII) = "kernighan"
+CXXVIII SET words(XIV) = "ritchie"
+CXXIX SET words(XV) = "kandr"
+CXXX SET words(XVI) = "kr"
+CXXXI SET words(XVII) = "c"
+CXXXII SET words(XVIII) = "cprogramming"
+CXXXIII SET words(XIX) = "thecprogramminglanguage"
+CXXXIV SET words(XX) = "unix"
+CXXXV SET words(XXI) = "bell"
+CXXXVI SET words(XXII) = "plan9"
+CXXXVII SET words(XXIII) = "bbarker"
+CXXXVIII SET words(XXIV) = "barker"
+CXXXIX SET words(XXV) = "bob"
+CXL SET words(XXVI) = "bobby"
+CXLI SET words(XXVII) = "price"
+CXLII SET words(XXVIII) = "priceisright"
+CXLIII SET words(XXIX) = "thepriceisright"
+CXLIV SET words(XXX) = "comeondown"
+CXLV SET words(XXXI) = "spay"
+CXLVI SET words(XXXII) = "spayneuter"
+CXLVII SET words(XXXIII) = "spayandneuter"
+CXLVIII SET words(XXXIV) = "plinko"
+CXLIX SET words(XXXV) = "bigwheel"
+CL SET words(XXXVI) = "showcase"
+CLI SET words(XXXVII) = "showdown"
+CLII SET words(XXXVIII) = "carey"
+CLIII SET words(XXXIX) = "drew"
+CLIV SET words(XL) = "comeon"
+CLV SET words(XLI) = "neuter"
+CLVI SET words(XLII) = "down"
+CLVII SET words(XLIII) = "transworld"
+CLVIII SET words(XLIV) = "transworlddelivery"
+CLIX SET words(XLV) = "floristsdelivery"
+CLX SET words(XLVI) = "floriststransworld"
+CLXI SET words(XLVII) = "floriststransworlddelivery"
+CLXII SET words(XLVIII) = "floral"
+CLXIII SET words(XLIX) = "ftdflorist"
+CLXIV SET words(L) = "ftdflorists"
+CLXV SET words(LI) = "ftdflowers"
+CLXVI SET words(LII) = "ftdfloral"
+CLXVII SET words(LIII) = "bouquets"
+CLXVIII SET words(LIV) = "rose"
+CLXIX SET words(LV) = "orchid"
+CLXX SET words(LVI) = "orchids"
+CLXXI SET words(LVII) = "tulip"
+CLXXII SET words(LVIII) = "tulips"
+CLXXIII SET words(LIX) = "daisy"
+CLXXIV SET words(LX) = "daisies"
+CLXXV SET words(LXI) = "lily"
+CLXXVI SET words(LXII) = "lilies"
+CLXXVII SET words(LXIII) = "carnation"
+CLXXVIII SET words(LXIV) = "carnations"
+CLXXIX SET words(LXV) = "valentine"
+CLXXX SET words(LXVI) = "valentines"
+CLXXXI SET words(LXVII) = "mothersday"
+CLXXXII SET words(LXVIII) = "birthday"
+CLXXXIII SET words(LXIX) = "anniversary"
+CLXXXIV SET words(LXX) = "kernighanritchie"
+CLXXXV SET words(LXXI) = "brian"
+CLXXXVI SET words(LXXII) = "dennis"
+CLXXXVII SET words(LXXIII) = "bwk"
+CLXXXVIII SET words(LXXIV) = "dmr"
+CLXXXIX SET words(LXXV) = "cprog"
+CXC SET words(LXXVI) = "cprogram"
+CXCI SET words(LXXVII) = "cprogramminglanguage"
+CXCII SET words(LXXVIII) = "thecprogramming"
+CXCIII SET words(LXXIX) = "unixprogramming"
+CXCIV SET words(LXXX) = "ansi"
+CXCV SET words(LXXXI) = "c89"
+CXCVI SET words(LXXXII) = "c90"
+CXCVII SET words(LXXXIII) = "c99"
+CXCVIII SET words(LXXXIV) = "c11"
+CXCIX SET words(LXXXV) = "kandrtwo"
+CC SET words(LXXXVI) = "kandrs"
+CCI SET words(LXXXVII) = "kandr2"
+CCII SET words(LXXXVIII) = "kandr3"
+CCIII SET words(LXXXIX) = "flowersbytelegraph"
+CCIV SET words(XC) = "flowerstoday"
+CCV SET words(XCI) = "flowersby"
+CCVI SET words(XCII) = "flowersdelivery"
+CCVII SET words(XCIII) = "flowerdelivery"
+CCVIII SET words(XCIV) = "floristdelivery"
+CCIX SET words(XCV) = "ftdinc"
+CCX SET words(XCVI) = "ftdincorporated"
+CCXI SET words(XCVII) = "ftdfloristsdelivery"
+CCXII SET words(XCVIII) = "ftdflowersdelivery"
+CCXIII SET words(XCIX) = "ftdfloraldelivery"
+CCXIV SET words(C) = "transworldflorists"
+CCXV SET words(CI) = "transworldfloristsdelivery"
+CCXVI SET words(CII) = "floristtransworlddelivery"
+CCXVII SET words(CIII) = "floristtransworld"
+CCXVIII SET words(CIV) = "floristsbytelegraph"
+CCXIX SET words(CV) = "kernighanandritchie"
+CCXX SET words(CVI) = "ritchieandkernighan"
+CCXXI SET words(CVII) = "briankernighan"
+CCXXII SET words(CVIII) = "dennisritchie"
+CCXXIII SET words(CIX) = "ken"
+CCXXIV SET words(CX) = "thompson"
+CCXXV SET words(CXI) = "kenanddennis"
+CCXXVI SET words(CXII) = "kenandritchie"
+CCXXVII SET words(CXIII) = "kenandbrian"
+CCXXVIII SET words(CXIV) = "kr2"
+CCXXIX SET words(CXV) = "kr2e"
+CCXXX SET words(CXVI) = "knr2e"
+CCXXXI SET words(CXVII) = "kandr2e"
+CCXXXII SET words(CXVIII) = "cprogramminglanguage2e"
+CCXXXIII SET words(CXIX) = "thecprogramminglanguage2e"
+CCXXXIV SET words(CXX) = "belllabs"
+CCXXXV SET words(CXXI) = "FTD"
+CCXXXVI SET words(CXXII) = "ftdcom"
+CCXXXVII SET words(CXXIII) = "ftdtelegraph"
+CCXXXVIII SET words(CXXIV) = "ftdteleflora"
+CCXXXIX SET words(CXXV) = "ftdteleflorist"
+CCXL SET words(CXXVI) = "teleflorist"
+CCXLI SET words(CXXVII) = "floraldelivery"
+CCXLII SET words(CXXVIII) = "flowerdeliveryservice"
+CCXLIII SET words(CXXIX) = "flowersdeliveryservice"
+CCXLIV SET words(CXXX) = "floristdeliveryservice"
+CCXLV SET words(CXXXI) = "flowersbywire"
+CCXLVI SET words(CXXXII) = "flowerbywire"
+CCXLVII SET words(CXXXIII) = "floristsbywire"
+CCXLVIII SET words(CXXXIV) = "flowersbyphone"
+CCXLIX SET words(CXXXV) = "floristsbyphone"
+CCL SET words(CXXXVI) = "telegraphdelivery"
+CCLI SET words(CXXXVII) = "telegraphflowers"
+CCLII SET words(CXXXVIII) = "telegraphflorist"
+CCLIII SET words(CXXXIX) = "telegraphflorists"
+CCLIV SET words(CXL) = "floriststelegraph"
+CCLV SET words(CXLI) = "floriststelegraphdelivery"
+CCLVI SET words(CXLII) = "floristtelegraph"
+CCLVII SET words(CXLIII) = "floristtelegraphdelivery"
+CCLVIII SET words(CXLIV) = "flowersonline"
+CCLIX SET words(CXLV) = "floweronline"
+CCLX SET words(CXLVI) = "flowershop"
+CCLXI SET words(CXLVII) = "flowerstore"
+CCLXII SET words(CXLVIII) = "floristshop"
+CCLXIII SET words(CXLIX) = "floriststore"
+CCLXIV SET words(CL) = "flowerbasket"
+CCLXV SET words(CLI) = "bouquetdelivery"
+CCLXVI SET words(CLII) = "rosebouquet"
+CCLXVII SET words(CLIII) = "rosedelivery"
+CCLXVIII SET words(CLIV) = "tulipdelivery"
+CCLXIX SET words(CLV) = "orchiddelivery"
+CCLXX SET words(CLVI) = "lilydelivery"
+CCLXXI SET words(CLVII) = "carnationdelivery"
+CCLXXII SET words(CLVIII) = "daisydelivery"
+CCLXXIII SET words(CLIX) = "sunflower"
+CCLXXIV SET words(CLX) = "sunflowers"
+CCLXXV SET words(CLXI) = "daffodil"
+CCLXXVI SET words(CLXII) = "daffodils"
+CCLXXVII SET words(CLXIII) = "iris"
+CCLXXVIII SET words(CLXIV) = "irises"
+CCLXXIX SET words(CLXV) = "peony"
+CCLXXX SET words(CLXVI) = "peonies"
+CCLXXXI SET words(CLXVII) = "fathersday"
+CCLXXXII SET words(CLXVIII) = "graduation"
+CCLXXXIII SET words(CLXIX) = "wedding"
+CCLXXXIV SET words(CLXX) = "weddingflowers"
+CCLXXXV SET words(CLXXI) = "valentinesday"
+CCLXXXVI SET words(CLXXII) = "mothersdayflowers"
+CCLXXXVII SET words(CLXXIII) = "birthdayflowers"
+CCLXXXVIII SET words(CLXXIV) = "anniversaryflowers"
+CCLXXXIX SET words(CLXXV) = "holidayflowers"
+CCXC SET words(CLXXVI) = "KNR"
+CCXCI SET words(CLXXVII) = "knr2"
+CCXCII SET words(CLXXVIII) = "KNR2E"
+CCXCIII SET words(CLXXIX) = "k&r"
+CCXCIV SET words(CLXXX) = "K&R"
+CCXCV SET words(CLXXXI) = "k&r2"
+CCXCVI SET words(CLXXXII) = "k&r2e"
+CCXCVII SET words(CLXXXIII) = "k&r2nd"
+CCXCVIII SET words(CLXXXIV) = "k&r2ndedition"
+CCXCIX SET words(CLXXXV) = "kandrc"
+CCC SET words(CLXXXVI) = "kandrc2"
+CCCI SET words(CLXXXVII) = "kandrc2e"
+CCCII SET words(CLXXXVIII) = "tcpl"
+CCCIII SET words(CLXXXIX) = "tcpl2"
+CCCIV SET words(CXC) = "tcpl2e"
+CCCV SET words(CXCI) = "thecprogramminglanguage2"
+CCCVI SET words(CXCII) = "thecprogramminglanguage2nd"
+CCCVII SET words(CXCIII) = "thecprogramminglanguage2ndedition"
+CCCVIII SET words(CXCIV) = "cprogramminglanguage2"
+CCCIX SET words(CXCV) = "cprogramminglanguage2nd"
+CCCX SET words(CXCVI) = "cprogramminglanguage2ndedition"
+CCCXI SET words(CXCVII) = "thepracticeofprogramming"
+CCCXII SET words(CXCVIII) = "programmingpearls"
+CCCXIII SET words(CXCIX) = "unixprogrammingenvironment"
+CCCXIV SET words(CC) = "theunixprogrammingenvironment"
+CCCXV SET words(CCI) = "ansic"
+CCCXVI SET words(CCII) = "ansic89"
+CCCXVII SET words(CCIII) = "ansic90"
+CCCXVIII SET words(CCIV) = "ansic99"
+CCCXIX SET words(CCV) = "ansic11"
+CCCXX SET words(CCVI) = "c17"
+CCCXXI SET words(CCVII) = "c23"
+CCCXXII SET words(CCVIII) = "helloworld"
+CCCXXIII SET words(CCIX) = "hello_world"
+CCCXXIV SET words(CCX) = "cprimer"
+CCCXXV SET words(CCXI) = "cbook"
+DC PRINT ((("attempting quick list of " + pwdcount) + " passwords ") + CHR(X))
+DCV DIM i AS INTEGER
+DCX SET i = I
+DCXV IF CHECKPASS(username, words(i)) THEN GOTO DCXL ELSE SKIP
+DCXX SET i = (i + I)
+DCXXV IF (i > pwdcount) THEN GOTO DCLV ELSE SKIP
+DCXXX GOTO DCXV
+DCXL PRINT (("found match!! for user " + username) + CHR(X))
+DCXLV PRINT (("password: " + words(i)) + CHR(X))
+DCL END
+DCLV PRINT (("no quick matches for user " + username) + CHR(X))
+DCLX END
+INTRO.QBC=10@999999|e6ee9c98b80b4dd04814a29a37bcba8
+Compiled.
+
+You have new mail. Type 'mail' to view.
+% attempting quick list of CCXI passwords 
+no quick matches for user ftd
+
+You have new mail. Type 'mail' to view.
+% attempting quick list of CCXI passwords 
+no quick matches for user knr
+
+You have new mail. Type 'mail' to view.
+% UMIX shutdown: console EOF

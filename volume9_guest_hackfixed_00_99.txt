@@ -1,0 +1,141 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: logged in as guest
+INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d
+
+
+You have new mail. Type 'mail' to view.
+% Begin sending characters. Terminate with EOF...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+writing 2005 characters
+INTRO.UMD=10@999999|7005f80d6cd9b7b837802f1e58b11b8
+
+You have new mail. Type 'mail' to view.
+% 
+You have new mail. Type 'mail' to view.
+% V SKIP
+X SKIP
+XV SKIP
+XX SKIP
+XXV IF (ARGS() > I) THEN GOTO XLV ELSE SKIP
+XXX PRINT "usage: ./hack_fixed_00_99.exe username"
+XXXV PRINT CHR(X)
+XL END
+XLV SKIP
+L SKIP
+LV DIM username AS STRING
+LX SET username = ARG(II)
+LXV SKIP
+LXX DIM pwdcount AS INTEGER
+LXXV SET pwdcount = XXVI
+LXXX DIM words(pwdcount) AS STRING
+LXXXV SET words(I) = "ftd"
+XC SET words(II) = "ftdflorist"
+XCV SET words(III) = "ftdflowers"
+C SET words(IV) = "teleflora"
+CV SET words(V) = "telegraph"
+CX SET words(VI) = "florist"
+CXV SET words(VII) = "flowers"
+CXX SET words(VIII) = "delivery"
+CXXV SET words(IX) = "floral"
+CXXX SET words(X) = "bouquet"
+CXXXV SET words(XI) = "knr"
+CXL SET words(XII) = "kernighan"
+CXLV SET words(XIII) = "ritchie"
+CL SET words(XIV) = "kandr"
+CLV SET words(XV) = "kr"
+CLX SET words(XVI) = "bwk"
+CLXV SET words(XVII) = "dmr"
+CLXX SET words(XVIII) = "ken"
+CLXXV SET words(XIX) = "dennis"
+CLXXX SET words(XX) = "thompson"
+CLXXXV SET words(XXI) = "bell"
+CXC SET words(XXII) = "unix"
+CXCV SET words(XXIII) = "c"
+CC SET words(XXIV) = "cprogramminglanguage"
+CCV SET words(XXV) = "thecprogramminglanguage"
+CCX SET words(XXVI) = "plan9"
+CCXV PRINT ((("attempting dictionary+number list of " + pwdcount) + " base words ") + CHR(X))
+CCXX DIM i AS INTEGER
+CCXXV DIM j AS INTEGER
+CCXXX DIM candidate AS STRING
+CCXXXV SET i = I
+CCXL IF (i > pwdcount) THEN GOTO CCCXV ELSE SKIP
+CCXLV SET candidate = (words(i) + "00")
+CCL IF CHECKPASS(username, candidate) THEN GOTO CCC ELSE SKIP
+CCLV SET j = I
+CCLX IF (j > XCIX) THEN GOTO CCXC ELSE SKIP
+qbasic: SYNTAX ERROR: EXPECTED  LINENVM STATEMENT
+
+You have new mail. Type 'mail' to view.
+% unknown command hack_fixed_00_99.exe
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command hack_fixed_00_99.exe
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% UMIX shutdown: console EOF

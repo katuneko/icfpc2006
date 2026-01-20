@@ -1,0 +1,5 @@
+gardener
+mathemantica
+ls /home/ftd
+ls /home/knr
+ls /home/bbarker

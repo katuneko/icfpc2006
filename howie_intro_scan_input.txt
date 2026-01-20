@@ -1,0 +1,12 @@
+howie
+xyzzy
+help
+telnet
+run
+dump
+cat
+ls
+pwd
+ls /bin
+ls /home
+ls /home/howie

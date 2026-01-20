@@ -1,0 +1,69 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as knr
+
+
+% -r-x    knr                 ? ucc
+-rw-    knr              1239 README
+-rw-    knr                38 hello.c
+-rw-    knr               624 io.c
+-rw-    knr               161 std.c
+-rw-    knr              2881 um.c
+-rw-    knr                49 .history
+% UMIX shutdown: console EOF

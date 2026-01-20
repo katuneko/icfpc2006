@@ -1,0 +1,3 @@
+gardener
+mathemantica
+./antomaton does_not_exist.ant

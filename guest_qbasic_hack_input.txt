@@ -1,0 +1,5 @@
+guest
+/bin/qbasic /home/guest/code/hack.bas
+hack.exe ftd
+hack.exe knr
+hack.exe bbarker

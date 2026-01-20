@@ -1,0 +1,89 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as hmonk
+
+
+% README
+advise*
+advise.man
+arith.adv
+arith.tests
+% cat: no such accessible file
+% cat: no such accessible file
+% cat: no such accessible file
+% Permission denied: ftd
+ls: not an accessible directory.
+% Permission denied: knr
+ls: not an accessible directory.
+% No unread messages.
+
+---------------------------------------------------------------------
+INBOX:
+
+Message  Read?  Sender                                Subject
+-------  -----  ------                                -------
+      0    Yes  Donald Nut <dnut@clv.net>             Yours loan is approved 7l0l
+
+---------------------------------------------------------------------
+
+Which message would you like to read?
+Type a number from '0' to '0'.
+Or type 'q' to quit.
+Goodbye!
+% UMIX shutdown: console EOF

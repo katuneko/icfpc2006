@@ -1,0 +1,22 @@
+yang
+U+262F
+run /bin/umodem addmem.bal EOF
+627c2c00
+EOF
+certify addmem addmem.bal
+run /bin/umodem addmem2.bal EOF
+67376600
+EOF
+certify addmem2 addmem2.bal
+run /bin/umodem swapmem.bal EOF
+687f5600
+EOF
+certify swapmem swapmem.bal
+run /bin/umodem swapreg.bal EOF
+617300
+EOF
+certify swapreg swapreg.bal
+run /bin/umodem swapreg2.bal EOF
+61617f6700
+EOF
+certify swapreg2 swapreg2.bal

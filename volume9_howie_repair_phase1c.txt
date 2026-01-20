@@ -1,0 +1,2772 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: Junk Room
+
+You are in a room with a pile of junk. A hallway leads south. 
+There is a bolt here. 
+Underneath the bolt, there is a spring. 
+Underneath the spring, there is a button. 
+Underneath the button, there is a (broken) processor. 
+Underneath the processor, there is a red pill. 
+Underneath the pill, there is a (broken) radio. 
+Underneath the radio, there is a cache. 
+Underneath the cache, there is a blue transistor. 
+Underneath the transistor, there is an antenna. 
+Underneath the antenna, there is a screw. 
+Underneath the screw, there is a (broken) motherboard. 
+Underneath the motherboard, there is a (broken) A-1920-IXB. 
+Underneath the A-1920-IXB, there is a red transistor. 
+Underneath the transistor, there is a (broken) keypad. 
+Underneath the keypad, there is some trash. 
+
+>: You are now carrying the bolt. 
+
+>: You are now carrying the spring. 
+
+>: ADVTR.INC=5@999999|f95731ab88952dfa4cb326fb99c085f
+The spring has been destroyed. 
+
+>: You are now carrying the button. 
+
+>: You are now carrying the processor. 
+
+>: You are now carrying the pill. 
+
+>: The pill has been destroyed. 
+
+>: You are now carrying the radio. 
+
+>: You are now carrying the cache. 
+
+>: ADVTR.CMB=5@999999|764e8a851411c66106e130374d8abbb
+You have successfully combined the processor and the cache!
+
+>: You are now carrying the transistor. 
+
+>: You have successfully combined the radio and the transistor!
+
+>: You are now carrying the antenna. 
+
+>: The antenna has been destroyed. 
+
+>: You are now carrying the screw. 
+
+>: You are now carrying the motherboard. 
+
+>: You have successfully combined the motherboard and the screw!
+
+>: You are now carrying the A-1920-IXB. 
+
+>: You have successfully combined the A-1920-IXB and the bolt!
+
+>: You have successfully combined the A-1920-IXB and the processor!
+
+>: You have successfully combined the A-1920-IXB and the radio!
+
+>: You are now carrying the transistor. 
+
+>: You have successfully combined the A-1920-IXB and the
+transistor!
+
+>: You have successfully combined the motherboard and the
+A-1920-IXB!
+
+>: You are now carrying the keypad. 
+
+>: You have successfully combined the keypad and the motherboard!
+
+>: You have successfully combined the keypad and the button!
+
+>: Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: ADVTR.KEY=20@999999|36995486a5be3bd747d778916846d2d
+You unlock and open the door. Passing through, you find yourself
+on the streets of Chicago. Seeing no reason you should ever go
+back, you allow the door to close behind you. 
+
+>: You are now carrying the /etc/passwd. 
+
+>: The /etc/passwd has been destroyed. 
+
+>: You are now carrying the note. 
+
+>: The note has been destroyed. 
+
+>: You are now carrying the downloader. 
+
+>: You are now carrying the uploader. 
+
+>: 54th Street and Dorchester Avenue
+
+You are standing at the corner of 54th Street and Dorchester
+Avenue. From here, you can go north, east, south, or west. 
+There is an orange-red X-9247-GWE here. 
+Underneath the X-9247-GWE, there is a (broken) magenta
+V-0010-XBD. 
+Underneath the V-0010-XBD, there is a pumpkin F-1403-QDS. 
+Underneath the F-1403-QDS, there is a (broken) heavy P-5065-WQO.
+
+Underneath the P-5065-WQO, there is a taupe B-4832-LAL. 
+Underneath the B-4832-LAL, there is a (broken) gray40
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) eggplant
+T-9887-OFC. 
+Underneath the T-9887-OFC, there is a (broken) indigo
+Z-1623-CEK. 
+Underneath the Z-1623-CEK, there is a yellow-green H-9887-MKY. 
+Underneath the H-9887-MKY, there is a (broken) shiny F-6678-DOX.
+
+Underneath the F-6678-DOX, there is a pale-green R-1403-SXU. 
+Underneath the R-1403-SXU, there is a (broken) USB cable. 
+Underneath the USB cable, there is a sienna N-4832-NUN. 
+Underneath the N-4832-NUN, there is a slate-gray J-9247-IRG. 
+Underneath the J-9247-IRG, there is a dim-gray B-5065-YLQ. 
+
+>: You are now carrying the X-9247-GWE. 
+
+>: The X-9247-GWE has been destroyed. 
+
+>: You are now carrying the V-0010-XBD. 
+
+>: The V-0010-XBD has been destroyed. 
+
+>: You are now carrying the F-1403-QDS. 
+
+>: The F-1403-QDS has been destroyed. 
+
+>: You are now carrying the P-5065-WQO. 
+
+>: The P-5065-WQO has been destroyed. 
+
+>: You are now carrying the B-4832-LAL. 
+
+>: The B-4832-LAL has been destroyed. 
+
+>: You are now carrying the L-6458-RNH. 
+
+>: The L-6458-RNH has been destroyed. 
+
+>: You are now carrying the T-9887-OFC. 
+
+>: The T-9887-OFC has been destroyed. 
+
+>: You are now carrying the Z-1623-CEK. 
+
+>: The Z-1623-CEK has been destroyed. 
+
+>: You are now carrying the H-9887-MKY. 
+
+>: The H-9887-MKY has been destroyed. 
+
+>: You are now carrying the F-6678-DOX. 
+
+>: The F-6678-DOX has been destroyed. 
+
+>: You are now carrying the R-1403-SXU. 
+
+>: The R-1403-SXU has been destroyed. 
+
+>: You are now carrying the USB cable. 
+
+>: You are now carrying the N-4832-NUN. 
+
+>: You have successfully combined the USB cable and the N-4832-NUN!
+
+>: You can't combine the USB cable and the downloader because they
+don't fit together. 
+
+>: 53th Street and Dorchester Avenue
+
+You are standing at the corner of 53th Street and Dorchester
+Avenue. From here, you can go north, east, or south. 
+There is a fern-green N-1623-AOE here. 
+Underneath the N-1623-AOE, there is a (broken) burgundy
+R-4292-FRL. 
+Underneath the R-4292-FRL, there is a (broken) pale-magenta
+F-6458-DDN. 
+Underneath the F-6458-DDN, there is a (broken) peach-yellow
+H-1623-MYO. 
+Underneath the H-1623-MYO, there is a (broken) rotating
+H-4292-ZHF. 
+Underneath the H-4292-ZHF, there is a (broken) low-carb
+R-6458-FXP. 
+Underneath the R-6458-FXP, there is a (broken) mysterious
+T-6458-BIL. 
+Underneath the T-6458-BIL, there is a (broken) brass R-9247-SMK.
+
+Underneath the R-9247-SMK, there is a (broken) puce Z-1403-CSY. 
+Underneath the Z-1403-CSY, there is a (broken) pink N-6678-NJD. 
+Underneath the N-6678-NJD, there is a (broken) jade X-4292-TWX. 
+Underneath the X-4292-TWX, there is a (broken) flax Z-6678-PEF. 
+Underneath the Z-6678-PEF, there is a (broken) pale-blue
+H-4832-ZKT. 
+Underneath the H-4832-ZKT, there is a (broken) gray60
+P-0010-JQJ. 
+Underneath the P-0010-JQJ, there is a (broken) olive-green
+J-1403-IDG. 
+Underneath the J-1403-IDG, there is a swamp-green D-9247-UHM. 
+Underneath the D-9247-UHM, there is a (broken) khaki N-6458-NDX.
+
+Underneath the N-6458-NDX, there is a (broken) red-violet
+V-9887-KUS. 
+Underneath the V-9887-KUS, there is a (broken) tea-green
+N-0010-NGN. 
+Underneath the N-0010-NGN, there is a (broken) cinnamon
+X-1403-GIE. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the N-1623-AOE. 
+
+>: You are now carrying the R-4292-FRL. 
+
+>: You can't take the F-6458-DDN because you can't carry any more
+items. 
+
+>: You aren't carrying a pale-magenta F-6458-DDN. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-1623-MYO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a peach-yellow H-1623-MYO. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-4292-ZHF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a rotating H-4292-ZHF. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-6458-FXP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a low-carb R-6458-FXP. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-6458-BIL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a mysterious T-6458-BIL. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-9247-SMK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a brass R-9247-SMK. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-1403-CSY because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a puce Z-1403-CSY. You can only incinerate
+items in your possession. 
+
+>: You can't take the N-6678-NJD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pink N-6678-NJD. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-4292-TWX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a jade X-4292-TWX. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-6678-PEF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a flax Z-6678-PEF. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-4832-ZKT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-blue H-4832-ZKT. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-0010-JQJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray60 P-0010-JQJ. You can only incinerate
+items in your possession. 
+
+>: You can't take the J-1403-IDG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an olive-green J-1403-IDG. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-9247-UHM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a swamp-green D-9247-UHM. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-6458-NDX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a khaki N-6458-NDX. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-9887-KUS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a red-violet V-9887-KUS. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-0010-NGN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a tea-green N-0010-NGN. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-1403-GIE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cinnamon X-1403-GIE. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-4832-BFV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray20 T-4832-BFV. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-6458-HSR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a beige D-6458-HSR. You can only incinerate
+items in your possession. 
+
+>: You can't take the F-4832-DAX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a ghost-white F-4832-DAX. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-4292-XMD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an olive-green V-4292-XMD. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-4292-ZHF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a light-brown H-4292-ZHF. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6678-TTJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lawn-green X-6678-TTJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-4292-BCH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an aquamarine T-4292-BCH. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-6458-JNT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a maroon P-6458-JNT. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-0010-PBP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a rust Z-0010-PBP. You can only incinerate
+items in your possession. 
+
+>: You can't take the F-5065-QLE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cyan F-5065-QLE. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-9887-KUS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lavender-blush V-9887-KUS. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-6458-LIV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an olive-drab B-6458-LIV. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-5065-UBI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a plum D-5065-UBI. You can only incinerate
+items in your possession. 
+
+>: You can't take the L-9247-EHW because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the P-1623-WYY because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an ochre P-1623-WYY. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-4832-HPD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray60 D-4832-HPD. You can only incinerate
+items in your possession. 
+
+>: You can't take the B-1623-YTC because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the Z-6458-PXZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a rust Z-6458-PXZ. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-6458-PXZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a robin-egg-blue Z-6458-PXZ. You can only
+incinerate items in your possession. 
+
+>: You can't take the display because there is another item on top
+of it (take the other item first). 
+
+>: You aren't carrying a display. You can only combine items in
+your possession. 
+
+>: You aren't carrying a display. You can only combine items in
+your possession. 
+
+>: You aren't carrying a display. You can only combine items in
+your possession. 
+
+>: You aren't carrying a display. You can only combine items in
+your possession. 
+
+>: You aren't carrying a display. You can only combine items in
+your possession. 
+
+>: 52nd Street and Dorchester Avenue
+
+You are standing at the corner of 52nd Street and Dorchester
+Avenue. From here, you can go east or south. 
+There is a (broken) cerise V-5065-KLY here. 
+Underneath the V-5065-KLY, there is a foreign J-5065-IQW. 
+Underneath the J-5065-IQW, there is a floating X-5065-GVU. 
+Underneath the X-5065-GVU, there is a chartreuse B-6678-LYD. 
+Underneath the B-6678-LYD, there is a lavender N-1403-AIY. 
+Underneath the N-1403-AIY, there is a bondi-blue R-0010-FLH. 
+Underneath the R-0010-FLH, there is an old V-1623-KOO. 
+Underneath the V-1623-KOO, there is a (broken) deep-sky-blue
+Z-1403-CDC. 
+Underneath the Z-1403-CDC, there is a hot-pink B-9887-YKI. 
+Underneath the B-9887-YKI, there is a (broken) ultramarine
+P-9887-WPG. 
+Underneath the P-9887-WPG, there is a (broken) fern-green
+F-9247-QCK. 
+Underneath the F-9247-QCK, there is a (broken) lime-green
+B-9247-YHS. 
+Underneath the B-9247-YHS, there is a (broken) reverse-chirality
+J-1403-INI. 
+Underneath the J-1403-INI, there is a school-bus-yellow
+L-4292-RMX. 
+Underneath the L-4292-RMX, there is a (broken) yellow-green
+R-6458-FIR. 
+Underneath the R-6458-FIR, there is a (broken) puce R-9247-SWM. 
+Underneath the R-9247-SWM, there is a carrot V-4832-XAT. 
+Underneath the V-4832-XAT, there is a (broken) discounted
+H-4832-ZUV. 
+Underneath the H-4832-ZUV, there is a hot-pink N-6678-NTF. 
+Underneath the N-6678-NTF, there is a (broken) exceptional
+L-6678-RJJ. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the V-5065-KLY because you can't carry any more
+items. 
+
+>: You aren't carrying a cerise V-5065-KLY. You can only incinerate
+items in your possession. 
+
+>: You can't take the J-5065-IQW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a foreign J-5065-IQW. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-5065-GVU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a floating X-5065-GVU. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-6678-LYD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a chartreuse B-6678-LYD. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-1403-AIY because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lavender N-1403-AIY. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-0010-FLH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a bondi-blue R-0010-FLH. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-1623-KOO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an old V-1623-KOO. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-1403-CDC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a deep-sky-blue Z-1403-CDC. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-9887-YKI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a hot-pink B-9887-YKI. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-9887-WPG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an ultramarine P-9887-WPG. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-9247-QCK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a fern-green F-9247-QCK. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-9247-YHS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lime-green B-9247-YHS. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-1403-INI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a reverse-chirality J-1403-INI. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-4292-RMX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a school-bus-yellow L-4292-RMX. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-6458-FIR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a yellow-green R-6458-FIR. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-9247-SWM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a puce R-9247-SWM. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-4832-XAT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a carrot V-4832-XAT. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-4832-ZUV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a discounted H-4832-ZUV. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-6678-NTF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a hot-pink N-6678-NTF. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-6678-RJJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an exceptional L-6678-RJJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-6458-DNP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a purple F-6458-DNP. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-4292-THZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lime X-4292-THZ. You can only incinerate
+items in your possession. 
+
+>: You can't take the L-9887-EUO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a beige L-9887-EUO. You can only incinerate
+items in your possession. 
+
+>: You can't take the T-1623-OES because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a deep-pink T-1623-OES. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-1403-GSG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a plum X-1403-GSG. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-9247-URO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a malachite D-9247-URO. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-0010-NQP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a fuchsia N-0010-NQP. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-0010-LVN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a dodger-blue B-0010-LVN. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-1623-UOY because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pine-green D-1623-UOY. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-4292-XWF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a floral-white V-4292-XWF. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-5065-MGC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a bisque H-5065-MGC. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-1403-KIK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a violet V-1403-KIK. You can only incinerate
+items in your possession. 
+
+>: You can't take the R-1623-STW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a burlywood-colored R-1623-STW. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-5065-SQI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a misty-rose R-5065-SQI. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6678-TEL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sea-green X-6678-TEL. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-1623-WJC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a bronze P-1623-WJC. You can only incinerate
+items in your possession. 
+
+>: You can't take the P-6458-JXV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a midnight-blue P-6458-JXV. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-6458-LSX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an old B-6458-LSX. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-1403-MDM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a rotating H-1403-MDM. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-6678-ZOR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cream H-6678-ZOR. You can only incinerate
+items in your possession. 
+
+>: You can't take the P-4832-JUH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a tepid P-4832-JUH. You can only incinerate
+items in your possession. 
+
+>: You can't take the R-4832-FFD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a powder-blue R-4832-FFD. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-9247-ACU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cobalt N-9247-ACU. You can only incinerate
+items in your possession. 
+
+>: You can't take the N-6458-NNZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a burlywood-colored N-6458-NNZ. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-6458-PID because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a foreign Z-6458-PID. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-9887-GPQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a discounted X-9887-GPQ. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-4292-BMJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a floating T-4292-BMJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4832-HAF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pine-green D-4832-HAF. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-5065-ULK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a hot-pink D-5065-ULK. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9887-KFU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a green V-9887-KFU. You can only incinerate
+items in your possession. 
+
+>: You can't take the F-4292-DHL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a violet-red F-4292-DHL. You can only
+incinerate items in your possession. 
+
+>: You can't take the progress bar because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a progress bar. You can only combine items
+in your possession. 
+
+>: 52nd Street and Blackstone Avenue
+
+You are standing at the corner of 52nd Street and Blackstone
+Avenue. From here, you can go east, south, or west. 
+There is a manual here. 
+
+>: 52nd Street and Harper Avenue
+
+You are standing at the corner of 52nd Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go south or west. 
+There is a (broken) moccasin N-4292-NWT here. 
+Underneath the N-4292-NWT, there is a gray-tea-green L-4832-RPN.
+
+Underneath the L-4832-RPN, there is a (broken) pale-chestnut
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a pale-cornflower-blue
+V-6458-XDJ. 
+Underneath the V-6458-XDJ, there is a (broken) misty-rose
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) sangria
+N-4292-NWT. 
+Underneath the N-4292-NWT, there is a (broken) jade P-1403-WSU. 
+Underneath the P-1403-WSU, there is a (broken) yellow-green
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) crimson
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) scarlet
+Z-5065-CGQ. 
+Underneath the Z-5065-CGQ, there is a (broken) organic
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a bright-turquoise
+J-1623-ITM. 
+Underneath the J-1623-ITM, there is a (broken) mint-green
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a (broken) denim T-9247-OHI.
+
+Underneath the T-9247-OHI, there is a (broken) gray30
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a gray60 T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) azure H-6458-ZXL.
+
+Underneath the H-6458-ZXL, there is a carmine D-6678-HJX. 
+Underneath the D-6678-HJX, there is a cornflower-blue
+D-6678-HJX. 
+Underneath the D-6678-HJX, there is a (broken) tan D-6678-HJX. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the N-4292-NWT because you can't carry any more
+items. 
+
+>: You aren't carrying a moccasin N-4292-NWT. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-4832-RPN because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the T-9247-OHI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-chestnut T-9247-OHI. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-6458-XDJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-cornflower-blue V-6458-XDJ. You can
+only incinerate items in your possession. 
+
+>: You can't take the T-9247-OHI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a misty-rose T-9247-OHI. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-4292-NWT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sangria N-4292-NWT. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-1403-WSU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a jade P-1403-WSU. You can only incinerate
+items in your possession. 
+
+>: You can't take the P-6678-JEZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a yellow-green P-6678-JEZ. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-6678-JEZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-5065-CGQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a scarlet Z-5065-CGQ. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9247-OHI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an organic T-9247-OHI. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-1623-ITM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a bright-turquoise J-1623-ITM. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-4832-TKP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a mint-green X-4832-TKP. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9247-OHI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a denim T-9247-OHI. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-4832-TKP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray30 X-4832-TKP. You can only incinerate
+items in your possession. 
+
+>: You can't take the T-9247-OHI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray60 T-9247-OHI. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-6458-ZXL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an azure H-6458-ZXL. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a carmine D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cornflower-blue D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a tan D-6678-HJX. You can only incinerate
+items in your possession. 
+
+>: You can't take the L-4832-RPN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-mauve L-4832-RPN. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a robin-egg-blue D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-1403-WSU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sandy-brown P-1403-WSU. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-9247-MMG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cadet-blue H-9247-MMG. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-1403-WSU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-brown P-1403-WSU. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-4832-RPN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray40 L-4832-RPN. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-9247-MMG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cream H-9247-MMG. You can only incinerate
+items in your possession. 
+
+>: You can't take the status LED because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: 53th Street and Harper Avenue
+
+You are standing at the corner of 53th Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north, south, or west. 
+There is a (broken) old X-1623-GTO here. 
+Underneath the X-1623-GTO, there is a (broken) corn V-0010-XBD. 
+Underneath the V-0010-XBD, there is a (broken) blue-violet
+P-4832-JFJ. 
+Underneath the P-4832-JFJ, there is a (broken) gamboge
+X-0010-TLX. 
+Underneath the X-0010-TLX, there is a (broken) denim D-4292-HHR.
+
+Underneath the D-4292-HHR, there is a (broken) low-carb
+D-5065-UVM. 
+Underneath the D-5065-UVM, there is a (broken) pear V-9247-KMI. 
+Underneath the V-9247-KMI, there is a (broken) ultramarine
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) pink D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) discounted
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) flax D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) cinnamon
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a lemon F-9887-QAE. 
+Underneath the F-9887-QAE, there is a (broken) low-carb
+X-1623-GTO. 
+Underneath the X-1623-GTO, there is a (broken) amethyst
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) reverse-chirality
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) lemon T-9887-OFC.
+
+Underneath the T-9887-OFC, there is a (broken) honeydew
+B-4292-LWV. 
+Underneath the B-4292-LWV, there is a (broken) white F-9887-QAE.
+
+Underneath the F-9887-QAE, there is a (broken) black B-4292-LWV.
+
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the X-1623-GTO because you can't carry any more
+items. 
+
+>: You can't take the V-0010-XBD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a corn V-0010-XBD. You can only incinerate
+items in your possession. 
+
+>: You can't take the P-4832-JFJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a blue-violet P-4832-JFJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-0010-TLX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gamboge X-0010-TLX. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4292-HHR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a denim D-4292-HHR. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-5065-UVM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a low-carb D-5065-UVM. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KMI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pear V-9247-KMI. You can only incinerate
+items in your possession. 
+
+>: You can't take the J-9247-IRG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an ultramarine J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4292-HHR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pink D-4292-HHR. You can only incinerate
+items in your possession. 
+
+>: You can't take the L-6458-RNH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a discounted L-6458-RNH. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4292-HHR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a flax D-4292-HHR. You can only incinerate
+items in your possession. 
+
+>: You can't take the J-9247-IRG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cinnamon J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-9887-QAE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lemon F-9887-QAE. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a low-carb X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-9247-IRG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an amethyst J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-9247-IRG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a reverse-chirality J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9887-OFC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lemon T-9887-OFC. You can only incinerate
+items in your possession. 
+
+>: You can't take the B-4292-LWV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a honeydew B-4292-LWV. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-9887-QAE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a white F-9887-QAE. You can only incinerate
+items in your possession. 
+
+>: You can't take the B-4292-LWV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a black B-4292-LWV. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-9247-KMI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a spring-green V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-0010-XBD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-goldenrod V-0010-XBD. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sangria X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-1623-AJI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lawn-green N-1623-AJI. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-1403-SXU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an imitation R-1403-SXU. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sapphire X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4832-PPP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sea-green Z-4832-PPP. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-9887-QAE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray10 F-9887-QAE. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-1623-CEK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sandy-brown Z-1623-CEK. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-4292-FMP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray90 R-4292-FMP. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-9887-KPW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sturdy V-9887-KPW. You can only incinerate
+items in your possession. 
+
+>: You can't take the J-6458-VDL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a camouflage-green J-6458-VDL. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-6458-VDL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sturdy J-6458-VDL. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-9247-GWE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a wisteria X-9247-GWE. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-9887-QAE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a persian-blue F-9887-QAE. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-1623-CEK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sturdy Z-1623-CEK. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pastel-pink X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-1403-SXU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sapphire R-1403-SXU. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-6458-VDL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a heliotrope J-6458-VDL. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4832-PPP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a mustard Z-4832-PPP. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TIJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a wisteria X-6458-TIJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4832-PPP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a coral Z-4832-PPP. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray80 X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an ivory X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: You can't take the T-0010-BQH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a raw-umber T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KMI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a foreign V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-0010-BQH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an imaginary T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a snow X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: You can't take the T-0010-BQH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a prussian-blue T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-0010-BQH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray-tea-green T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KMI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a miniature V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KMI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a steel-blue V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-0010-BQH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an indigo T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: You can't take the EPROM burner because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a EPROM burner. You can only combine items
+in your possession. 
+
+>: You aren't carrying a EPROM burner. You can only combine items
+in your possession. 
+
+>: 54th Street and Harper Avenue
+
+You are standing at the corner of 54th Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north, south, or west. 
+There is a (broken) gray60 Z-4292-PRV here. 
+Underneath the Z-4292-PRV, there is a (broken) pale-carmine
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a pale-cornflower-blue
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is an imported D-9887-UUE. 
+Underneath the D-9887-UUE, there is a (broken) gray90
+Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a sepia Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a (broken) gray30
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a robin-egg-blue Z-4292-PRV.
+
+Underneath the Z-4292-PRV, there is a (broken) slate-blue
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a (broken) rosy-brown
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a gray50 Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a (broken) misty-rose
+Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a cinnamon Z-9887-CUG. 
+Underneath the Z-9887-CUG, there is a (broken) saffron
+N-9247-AWO. 
+Underneath the N-9247-AWO, there is a (broken) indigo
+V-4292-XRX. 
+Underneath the V-4292-XRX, there is a pale-sandy-brown
+R-4832-FAV. 
+Underneath the R-4832-FAV, there is a (broken)
+momemtum-preserving Z-0010-PGL. 
+Underneath the Z-0010-PGL, there is a swamp-green V-4292-XRX. 
+Underneath the V-4292-XRX, there is a pale-pink R-1623-SOQ. 
+Underneath the R-1623-SOQ, there is a cream R-1623-SOQ. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the Z-4292-PRV because you can't carry any more
+items. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-cornflower-blue D-9887-UUE. You can
+only incinerate items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an imported D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sepia Z-4292-PRV. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray30 D-9887-UUE. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a robin-egg-blue Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a slate-blue D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a rosy-brown D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray50 Z-4292-PRV. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a misty-rose Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-9887-CUG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cinnamon Z-9887-CUG. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-9247-AWO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a saffron N-9247-AWO. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-4292-XRX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an indigo V-4292-XRX. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-4832-FAV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-sandy-brown R-4832-FAV. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-0010-PGL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a momemtum-preserving Z-0010-PGL. You can
+only incinerate items in your possession. 
+
+>: You can't take the V-4292-XRX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a swamp-green V-4292-XRX. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-1623-SOQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-pink R-1623-SOQ. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-1623-SOQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cream R-1623-SOQ. You can only incinerate
+items in your possession. 
+
+>: You can't take the B-9247-YCM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a royal-blue B-9247-YCM. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-1403-IIC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a burgundy J-1403-IIC. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-0010-PGL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a blue Z-0010-PGL. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-0010-PGL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pink Z-0010-PGL. You can only incinerate
+items in your possession. 
+
+>: You can't take the F-4832-DFT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a moss-green F-4832-DFT. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-9247-YCM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pine-green B-9247-YCM. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-4832-FAV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a floating R-4832-FAV. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-4832-FAV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a russet R-4832-FAV. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lavender-blush D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-9247-AWO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an old-gold N-9247-AWO. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-9247-AWO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pear N-9247-AWO. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pastel-pink D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a heliotrope D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a persian-blue Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an emerald Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a violet-red Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a blaze-orange Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: You can't take the RS232 adapter because there is another item
+on top of it (take the other item first). 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: 54th Place and Harper Avenue
+
+You are standing at the corner of 54th Place and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north or west. 
+There is a tea-green T-9887-OKW here. 
+Underneath the T-9887-OKW, there is a (broken) chartreuse
+N-5065-ALO. 
+Underneath the N-5065-ALO, there is a (broken) dim-gray
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) scarlet
+J-9247-IWC. 
+Underneath the J-9247-IWC, there is a (broken) mustard
+D-4292-HMN. 
+Underneath the D-4292-HMN, there is a (broken) turquoise
+N-4832-NAJ. 
+Underneath the N-4832-NAJ, there is a turquoise F-6678-DTT. 
+Underneath the F-6678-DTT, there is a (broken) celadon
+T-9887-OKW. 
+Underneath the T-9887-OKW, there is a burnt-orange T-9887-OKW. 
+Underneath the T-9887-OKW, there is a cadet-blue T-9887-OKW. 
+Underneath the T-9887-OKW, there is a pastel-green F-6678-DTT. 
+Underneath the F-6678-DTT, there is a (broken) prussian-blue
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) magenta
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) safety-orange
+F-6678-DTT. 
+Underneath the F-6678-DTT, there is an imported B-5065-YQM. 
+Underneath the B-5065-YQM, there is a (broken) puce X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) water-logged
+F-6678-DTT. 
+Underneath the F-6678-DTT, there is a (broken) thistle-colored
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a gamboge T-9887-OKW. 
+Underneath the T-9887-OKW, there is a sky-blue T-9887-OKW. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the T-9887-OKW because you can't carry any more
+items. 
+
+>: You aren't carrying a tea-green T-9887-OKW. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-5065-ALO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TNF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a dim-gray X-6458-TNF. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-9247-IWC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a scarlet J-9247-IWC. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4292-HMN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a mustard D-4292-HMN. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-4832-NAJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a turquoise N-4832-NAJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-6678-DTT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a turquoise F-6678-DTT. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9887-OKW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a celadon T-9887-OKW. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9887-OKW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a burnt-orange T-9887-OKW. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9887-OKW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cadet-blue T-9887-OKW. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-6678-DTT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pastel-green F-6678-DTT. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TNF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a prussian-blue X-6458-TNF. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TNF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a magenta X-6458-TNF. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-6678-DTT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a safety-orange F-6678-DTT. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-5065-YQM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an imported B-5065-YQM. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TNF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a puce X-6458-TNF. You can only incinerate
+items in your possession. 
+
+>: You can't take the F-6678-DTT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a water-logged F-6678-DTT. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TNF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a thistle-colored X-6458-TNF. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9887-OKW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gamboge T-9887-OKW. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9887-OKW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sky-blue T-9887-OKW. You can only
+incinerate items in your possession. 
+
+>: You can't take the MOSFET because there is another item on top
+of it (take the other item first). 
+
+>: You can't take the N-5065-ALO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an olive-green N-5065-ALO. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4832-PUL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pastel-pink Z-4832-PUL. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-1403-UXS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a seashell D-1403-UXS. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-1403-UXS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a peach-yellow D-1403-UXS. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-0010-XGX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a crimson V-0010-XGX. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-9247-IWC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cyan J-9247-IWC. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-0010-ZBZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a puce H-0010-ZBZ. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-1403-UXS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a chocolate-colored D-1403-UXS. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KRE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-brown V-9247-KRE. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-1403-UXS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a heliotrope D-1403-UXS. You can only
+incinerate items in your possession. 
+
+>: You can't take the MOSFET because there is another item on top
+of it (take the other item first). 
+
+>: You aren't carrying a crimson MOSFET. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-9247-KRE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a green-yellow V-9247-KRE. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KRE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a celadon V-9247-KRE. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KRE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an orange-red V-9247-KRE. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-5065-ALO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a bright-violet N-5065-ALO. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-6458-VIH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a MOSFET. You can only combine items in your
+possession. 
+
+>: You aren't carrying a MOSFET. You can only combine items in your
+possession. 
+
+>: 54th Place and Blackstone Avenue
+
+You are standing at the corner of 54th Place and Blackstone
+Avenue. From here, you can go north, east, or west. 
+There is a (broken) blaze-orange V-1623-KTK here. 
+Underneath the V-1623-KTK, there is a (broken) dodger-blue
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a taupe X-6458-TSZ. 
+Underneath the X-6458-TSZ, there is a (broken) pale-carmine
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a (broken) carrot
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a pale-violet-red
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a mint-green R-9887-SFW. 
+Underneath the R-9887-SFW, there is a taupe V-9247-KWY. 
+Underneath the V-9247-KWY, there is a (broken) dim-gray
+Z-4832-PAH. 
+Underneath the Z-4832-PAH, there is a (broken) old-lace
+P-1403-WXQ. 
+Underneath the P-1403-WXQ, there is a (broken) peach-yellow
+R-6678-FTR. 
+Underneath the R-6678-FTR, there is a (broken) selective-yellow
+T-0010-BBX. 
+Underneath the T-0010-BBX, there is a (broken) vegan D-6678-HOT.
+
+Underneath the D-6678-HOT, there is a (broken) hot-pink
+H-9247-MRC. 
+Underneath the H-9247-MRC, there is a (broken) mysterious
+L-6678-ROF. 
+Underneath the L-6678-ROF, there is a peach R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) old-gold
+V-6458-XIF. 
+Underneath the V-6458-XIF, there is a (broken) ivory N-4292-NCP.
+
+Underneath the N-4292-NCP, there is a rust R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) slate-gray
+P-6678-JJV. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the V-1623-KTK because you can't carry any more
+items. 
+
+>: You aren't carrying a blaze-orange V-1623-KTK. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-1623-KTK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a dodger-blue V-1623-KTK. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TSZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a taupe X-6458-TSZ. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-1623-KTK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-carmine V-1623-KTK. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9887-OPS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a carrot T-9887-OPS. You can only incinerate
+items in your possession. 
+
+>: You can't take the T-9887-OPS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-violet-red T-9887-OPS. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-9887-SFW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a mint-green R-9887-SFW. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KWY because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a taupe V-9247-KWY. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-4832-PAH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a dim-gray Z-4832-PAH. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-1403-WXQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an old-lace P-1403-WXQ. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-6678-FTR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a peach-yellow R-6678-FTR. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-0010-BBX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a selective-yellow T-0010-BBX. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-6678-HOT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a vegan D-6678-HOT. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-9247-MRC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a hot-pink H-9247-MRC. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-6678-ROF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a mysterious L-6678-ROF. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-9887-SFW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a peach R-9887-SFW. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-6458-XIF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an old-gold V-6458-XIF. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-4292-NCP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an ivory N-4292-NCP. You can only incinerate
+items in your possession. 
+
+>: You can't take the R-9887-SFW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a rust R-9887-SFW. You can only incinerate
+items in your possession. 
+
+>: You can't take the P-6678-JJV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a slate-gray P-6678-JJV. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-6458-ZDH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a camouflage-green H-6458-ZDH. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-5065-EGO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray20 L-5065-EGO. You can only incinerate
+items in your possession. 
+
+>: You can't take the L-5065-EGO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-green L-5065-EGO. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-6678-BOP because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the L-6678-ROF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pink L-6678-ROF. You can only incinerate
+items in your possession. 
+
+>: You can't take the P-9247-WRM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a moccasin P-9247-WRM. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-6458-HIP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cornflower-blue D-6458-HIP. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-6678-ROF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an organic L-6678-ROF. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-1623-QEQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a fuchsia F-1623-QEQ. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-4292-VHX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lavender J-4292-VHX. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-9887-AKG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lemon-cream N-9887-AKG. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-6678-PTD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a reverse-chirality Z-6678-PTD. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-0010-LBJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lime B-0010-LBJ. You can only incinerate
+items in your possession. 
+
+>: You can't take the N-9887-AKG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sapphire N-9887-AKG. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-5065-MLW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a blanched-almond-colored H-5065-MLW. You
+can only incinerate items in your possession. 
+
+>: You can't take the D-6458-HIP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray20 D-6458-HIP. You can only incinerate
+items in your possession. 
+
+>: You can't take the N-6678-NYZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a water-logged N-6678-NYZ. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-9247-SCI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a persian-blue R-9247-SCI. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-5065-IVS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a celadon J-5065-IVS. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-4832-XFP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a magenta V-4832-XFP. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-9887-WUC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a momemtum-preserving P-9887-WUC. You can
+only incinerate items in your possession. 
+
+>: You can't take the Z-1403-CIW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a bright-green Z-1403-CIW. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-6458-DSL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a school-bus-yellow F-6458-DSL. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-6458-BXJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a rosy-brown T-6458-BXJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-6458-DSL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-magenta F-6458-DSL. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-0010-JGH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a tan P-0010-JGH. You can only incinerate
+items in your possession. 
+
+>: You can't take the N-1403-ANU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-pink N-1403-ANU. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-1403-CIW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a goldenrod Z-1403-CIW. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-6458-HIP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pear D-6458-HIP. You can only incinerate
+items in your possession. 
+
+>: You can't take the N-9887-AKG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a dodger-blue N-9887-AKG. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-5065-WLI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a celadon P-5065-WLI. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4292-HCL because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the B-5065-YGK because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the jumper shunt because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a jumper shunt. You can only combine items
+in your possession. 
+
+>: You aren't carrying a jumper shunt. You can only combine items
+in your possession. 
+
+>: You aren't carrying a jumper shunt. You can only combine items
+in your possession. 
+
+>: You can't take the B-4832-LUF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a peach-yellow B-4832-LUF. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-4292-FHJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a low-carb R-4292-FHJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-6678-BOP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a mauve T-6678-BOP. You can only incinerate
+items in your possession. 
+
+>: You can't take the P-4832-JAD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a dodger-blue P-4832-JAD. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-6458-RIZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a jumper shunt. You can only combine items
+in your possession. 
+
+>: You aren't carrying a jumper shunt. You can only combine items
+in your possession. 
+
+>: 54th Place and Dorchester Avenue
+
+You are standing at the corner of 54th Place and Dorchester
+Avenue. From here, you can go north or east. 
+There is a (broken) terra-cotta T-9887-OAU here. 
+Underneath the T-9887-OAU, there is a carrot L-1623-ETG. 
+Underneath the L-1623-ETG, there is a (broken) heliotrope
+B-1403-YDU. 
+Underneath the B-1403-YDU, there is a (broken) imported
+H-9247-MCE. 
+Underneath the H-9247-MCE, there is a pear R-0010-FBF. 
+Underneath the R-0010-FBF, there is a (broken) pale-turquoise
+Z-4832-PKJ. 
+Underneath the Z-4832-PKJ, there is a (broken) sandy-brown
+T-0010-BLZ. 
+Underneath the T-0010-BLZ, there is a (broken) miniature
+R-6678-FET. 
+Underneath the R-6678-FET, there is a (broken) linen-colored
+H-9247-MCE. 
+Underneath the H-9247-MCE, there is a (broken) snow L-4832-RFL. 
+Underneath the L-4832-RFL, there is a (broken) lilac H-0010-ZQX.
+
+Underneath the H-0010-ZQX, there is a (broken) gray30
+X-1623-GOI. 
+Underneath the X-1623-GOI, there is a (broken) silver
+L-4832-RFL. 
+Underneath the L-4832-RFL, there is a (broken) bisque
+V-1623-KEM. 
+Underneath the V-1623-KEM, there is a (broken) gray40
+N-4013-DJW. 
+Underneath the N-4013-DJW, there is a (broken) pale-red-violet
+T-9247-OWG. 
+Underneath the T-9247-OWG, there is a (broken) peach F-0010-DGD.
+
+Underneath the F-0010-DGD, there is a pine-green H-6458-ZNJ. 
+Underneath the H-6458-ZNJ, there is a persian-blue X-4832-TAN. 
+Underneath the X-4832-TAN, there is a (broken) pink P-4292-JWN. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the T-9887-OAU because you can't carry any more
+items. 
+
+>: You aren't carrying a terra-cotta T-9887-OAU. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-1623-ETG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a carrot L-1623-ETG. You can only incinerate
+items in your possession. 
+
+>: You can't take the B-1403-YDU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a heliotrope B-1403-YDU. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-9247-MCE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an imported H-9247-MCE. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-0010-FBF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pear R-0010-FBF. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-4832-PKJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-turquoise Z-4832-PKJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-0010-BLZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sandy-brown T-0010-BLZ. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-6678-FET because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a miniature R-6678-FET. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-9247-MCE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a linen-colored H-9247-MCE. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-4832-RFL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a snow L-4832-RFL. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-0010-ZQX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lilac H-0010-ZQX. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-1623-GOI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray30 X-1623-GOI. You can only incinerate
+items in your possession. 
+
+>: You can't take the L-4832-RFL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a silver L-4832-RFL. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-1623-KEM because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the N-4013-DJW because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the T-9247-OWG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-red-violet T-9247-OWG. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-0010-DGD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a peach F-0010-DGD. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-6458-ZNJ because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the X-4832-TAN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a persian-blue X-4832-TAN. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-4292-JWN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pink P-4292-JWN. You can only incinerate
+items in your possession. 
+
+>: You can't take the F-0010-DGD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a coral F-0010-DGD. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-4292-PHT because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the B-1403-YDU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a teal B-1403-YDU. You can only incinerate
+items in your possession. 
+
+>: You can't take the J-1623-IJK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an old-gold J-1623-IJK. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-4832-TAN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a ghost-white X-4832-TAN. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-6678-JTX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an imitation P-6678-JTX. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PHT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a peach-orange Z-4292-PHT. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-4013-DJW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a yellow N-4013-DJW. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-4292-PHT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a red-violet Z-4292-PHT. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-6458-ZNJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a purple H-6458-ZNJ. You can only incinerate
+items in your possession. 
+
+>: You can't take the power cord because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a power cord. You can only combine items in
+your possession. 
+
+>: You aren't carrying a power cord. You can only combine items in
+your possession. 
+
+>: You aren't carrying a power cord. You can only combine items in
+your possession. 
+
+>: You aren't carrying a power cord. You can only combine items in
+your possession. 
+
+>: You aren't carrying a power cord. You can only combine items in
+your possession. 
+
+>: 54th Place and Blackstone Avenue
+
+You are standing at the corner of 54th Place and Blackstone
+Avenue. From here, you can go north, east, or west. 
+There is a (broken) blaze-orange V-1623-KTK here. 
+Underneath the V-1623-KTK, there is a (broken) dodger-blue
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a taupe X-6458-TSZ. 
+Underneath the X-6458-TSZ, there is a (broken) pale-carmine
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a (broken) carrot
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a pale-violet-red
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a mint-green R-9887-SFW. 
+Underneath the R-9887-SFW, there is a taupe V-9247-KWY. 
+Underneath the V-9247-KWY, there is a (broken) dim-gray
+Z-4832-PAH. 
+Underneath the Z-4832-PAH, there is a (broken) old-lace
+P-1403-WXQ. 
+Underneath the P-1403-WXQ, there is a (broken) peach-yellow
+R-6678-FTR. 
+Underneath the R-6678-FTR, there is a (broken) selective-yellow
+T-0010-BBX. 
+Underneath the T-0010-BBX, there is a (broken) vegan D-6678-HOT.
+
+Underneath the D-6678-HOT, there is a (broken) hot-pink
+H-9247-MRC. 
+Underneath the H-9247-MRC, there is a (broken) mysterious
+L-6678-ROF. 
+Underneath the L-6678-ROF, there is a peach R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) old-gold
+V-6458-XIF. 
+Underneath the V-6458-XIF, there is a (broken) ivory N-4292-NCP.
+
+Underneath the N-4292-NCP, there is a rust R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) slate-gray
+P-6678-JJV. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: 54th Street and Blackstone Avenue
+
+You are standing at the corner of 54th Street and Blackstone
+Avenue. From here, you can go north, east, south, or west. 
+There is a textbook here. 
+
+>: 53th Street and Blackstone Avenue
+
+You are standing at the corner of 53th Street and Blackstone
+Avenue. From here, you can go north, east, south, or west. 
+There is a (broken) battery here. 
+Underneath the battery, there is a buff F-6678-DYP. 
+Underneath the F-6678-DYP, there is a (broken) olive-green
+R-4292-FWH. 
+Underneath the R-4292-FWH, there is a (broken) green D-4832-HUX.
+
+Underneath the D-4832-HUX, there is a (broken) prussian-blue
+P-1623-WEU. 
+Underneath the P-1623-WEU, there is a (broken) black X-9887-GKK.
+
+Underneath the X-9887-GKK, there is a reciprocating H-9887-MUQ. 
+Underneath the H-9887-MUQ, there is a bright-violet T-4292-BHD. 
+Underneath the T-4292-BHD, there is a (broken) flax D-4292-HRJ. 
+Underneath the D-4292-HRJ, there is a (broken) yellow
+Z-1623-COC. 
+Underneath the Z-1623-COC, there is a (broken) goldenrod
+X-0010-TVP. 
+Underneath the X-0010-TVP, there is a forest-green F-6678-DYP. 
+Underneath the F-6678-DYP, there is a sky-blue N-1623-ATY. 
+Underneath the N-1623-ATY, there is a (broken) rotating
+H-6678-ZJL. 
+Underneath the H-6678-ZJL, there is a (broken) sienna
+T-6678-BEN. 
+Underneath the T-6678-BEN, there is a heliotrope D-5065-UGE. 
+Underneath the D-5065-UGE, there is a (broken) sea-green
+N-1623-ATY. 
+Underneath the N-1623-ATY, there is a (broken) ochre D-4292-HRJ.
+
+Underneath the D-4292-HRJ, there is a (broken) cream Z-1623-COC.
+
+Underneath the Z-1623-COC, there is a (broken) powder-blue
+T-6678-BEN. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the battery because you can't carry any more
+items. 
+
+>: You can't take the F-6678-DYP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a buff F-6678-DYP. You can only incinerate
+items in your possession. 
+
+>: You can't take the R-4292-FWH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an olive-green R-4292-FWH. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4832-HUX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a green D-4832-HUX. You can only incinerate
+items in your possession. 
+
+>: You can't take the P-1623-WEU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a prussian-blue P-1623-WEU. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-9887-GKK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a black X-9887-GKK. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-9887-MUQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a battery. You can only combine items in
+your possession. 
+
+>: You can't take the T-4292-BHD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a bright-violet T-4292-BHD. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4292-HRJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a flax D-4292-HRJ. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-1623-COC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a battery. You can only combine items in
+your possession. 
+
+>: You aren't carrying a battery. You can only combine items in
+your possession. 
+
+>: % UMIX shutdown: console EOF

@@ -1,0 +1,3 @@
+hmonk
+COMEFROM
+cat advise.man

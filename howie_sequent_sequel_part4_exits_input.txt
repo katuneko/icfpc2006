@@ -1,0 +1,13 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+north
+north
+north
+east
+west
+up
+down
+out
+enter

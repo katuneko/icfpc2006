@@ -1,0 +1,2795 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: Junk Room
+
+You are in a room with a pile of junk. A hallway leads south. 
+There is a bolt here. 
+Underneath the bolt, there is a spring. 
+Underneath the spring, there is a button. 
+Underneath the button, there is a (broken) processor. 
+Underneath the processor, there is a red pill. 
+Underneath the pill, there is a (broken) radio. 
+Underneath the radio, there is a cache. 
+Underneath the cache, there is a blue transistor. 
+Underneath the transistor, there is an antenna. 
+Underneath the antenna, there is a screw. 
+Underneath the screw, there is a (broken) motherboard. 
+Underneath the motherboard, there is a (broken) A-1920-IXB. 
+Underneath the A-1920-IXB, there is a red transistor. 
+Underneath the transistor, there is a (broken) keypad. 
+Underneath the keypad, there is some trash. 
+
+>: You are now carrying the bolt. 
+
+>: You are now carrying the spring. 
+
+>: ADVTR.INC=5@999999|f95731ab88952dfa4cb326fb99c085f
+The spring has been destroyed. 
+
+>: You are now carrying the button. 
+
+>: You are now carrying the processor. 
+
+>: You are now carrying the pill. 
+
+>: The pill has been destroyed. 
+
+>: You are now carrying the radio. 
+
+>: You are now carrying the cache. 
+
+>: ADVTR.CMB=5@999999|764e8a851411c66106e130374d8abbb
+You have successfully combined the processor and the cache!
+
+>: You are now carrying the transistor. 
+
+>: You have successfully combined the radio and the transistor!
+
+>: You are now carrying the antenna. 
+
+>: The antenna has been destroyed. 
+
+>: You are now carrying the screw. 
+
+>: You are now carrying the motherboard. 
+
+>: You have successfully combined the motherboard and the screw!
+
+>: You are now carrying the A-1920-IXB. 
+
+>: You have successfully combined the A-1920-IXB and the bolt!
+
+>: You have successfully combined the A-1920-IXB and the processor!
+
+>: You have successfully combined the A-1920-IXB and the radio!
+
+>: You are now carrying the transistor. 
+
+>: You have successfully combined the A-1920-IXB and the
+transistor!
+
+>: You have successfully combined the motherboard and the
+A-1920-IXB!
+
+>: You are now carrying the keypad. 
+
+>: You have successfully combined the keypad and the motherboard!
+
+>: You have successfully combined the keypad and the button!
+
+>: Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: There is no downloader here. 
+
+>: There is no uploader here. 
+
+>: ADVTR.KEY=20@999999|36995486a5be3bd747d778916846d2d
+You unlock and open the door. Passing through, you find yourself
+on the streets of Chicago. Seeing no reason you should ever go
+back, you allow the door to close behind you. 
+
+>: You aren't carrying a downloader. You can only drop items in
+your possession. 
+
+>: You aren't carrying an uploader. You can only drop items in your
+possession. 
+
+>: You can't drop the keypad because you can't bring yourself to
+part with it. 
+
+>: 54th Street and Dorchester Avenue
+
+You are standing at the corner of 54th Street and Dorchester
+Avenue. From here, you can go north, east, south, or west. 
+There is an orange-red X-9247-GWE here. 
+Underneath the X-9247-GWE, there is a (broken) magenta
+V-0010-XBD. 
+Underneath the V-0010-XBD, there is a pumpkin F-1403-QDS. 
+Underneath the F-1403-QDS, there is a (broken) heavy P-5065-WQO.
+
+Underneath the P-5065-WQO, there is a taupe B-4832-LAL. 
+Underneath the B-4832-LAL, there is a (broken) gray40
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) eggplant
+T-9887-OFC. 
+Underneath the T-9887-OFC, there is a (broken) indigo
+Z-1623-CEK. 
+Underneath the Z-1623-CEK, there is a yellow-green H-9887-MKY. 
+Underneath the H-9887-MKY, there is a (broken) shiny F-6678-DOX.
+
+Underneath the F-6678-DOX, there is a pale-green R-1403-SXU. 
+Underneath the R-1403-SXU, there is a (broken) USB cable. 
+Underneath the USB cable, there is a sienna N-4832-NUN. 
+Underneath the N-4832-NUN, there is a slate-gray J-9247-IRG. 
+Underneath the J-9247-IRG, there is a dim-gray B-5065-YLQ. 
+
+>: You are now carrying the X-9247-GWE. 
+
+>: The X-9247-GWE has been destroyed. 
+
+>: You are now carrying the V-0010-XBD. 
+
+>: The V-0010-XBD has been destroyed. 
+
+>: You are now carrying the F-1403-QDS. 
+
+>: The F-1403-QDS has been destroyed. 
+
+>: You are now carrying the P-5065-WQO. 
+
+>: The P-5065-WQO has been destroyed. 
+
+>: You are now carrying the B-4832-LAL. 
+
+>: The B-4832-LAL has been destroyed. 
+
+>: You are now carrying the L-6458-RNH. 
+
+>: The L-6458-RNH has been destroyed. 
+
+>: You are now carrying the T-9887-OFC. 
+
+>: The T-9887-OFC has been destroyed. 
+
+>: You are now carrying the Z-1623-CEK. 
+
+>: The Z-1623-CEK has been destroyed. 
+
+>: You are now carrying the H-9887-MKY. 
+
+>: The H-9887-MKY has been destroyed. 
+
+>: You are now carrying the F-6678-DOX. 
+
+>: The F-6678-DOX has been destroyed. 
+
+>: You are now carrying the R-1403-SXU. 
+
+>: The R-1403-SXU has been destroyed. 
+
+>: You are now carrying the USB cable. 
+
+>: You are now carrying the N-4832-NUN. 
+
+>: You have successfully combined the USB cable and the N-4832-NUN!
+
+>: You can't drop the USB cable because you can't bring yourself to
+part with it. 
+
+>: 53th Street and Dorchester Avenue
+
+You are standing at the corner of 53th Street and Dorchester
+Avenue. From here, you can go north, east, or south. 
+There is a fern-green N-1623-AOE here. 
+Underneath the N-1623-AOE, there is a (broken) burgundy
+R-4292-FRL. 
+Underneath the R-4292-FRL, there is a (broken) pale-magenta
+F-6458-DDN. 
+Underneath the F-6458-DDN, there is a (broken) peach-yellow
+H-1623-MYO. 
+Underneath the H-1623-MYO, there is a (broken) rotating
+H-4292-ZHF. 
+Underneath the H-4292-ZHF, there is a (broken) low-carb
+R-6458-FXP. 
+Underneath the R-6458-FXP, there is a (broken) mysterious
+T-6458-BIL. 
+Underneath the T-6458-BIL, there is a (broken) brass R-9247-SMK.
+
+Underneath the R-9247-SMK, there is a (broken) puce Z-1403-CSY. 
+Underneath the Z-1403-CSY, there is a (broken) pink N-6678-NJD. 
+Underneath the N-6678-NJD, there is a (broken) jade X-4292-TWX. 
+Underneath the X-4292-TWX, there is a (broken) flax Z-6678-PEF. 
+Underneath the Z-6678-PEF, there is a (broken) pale-blue
+H-4832-ZKT. 
+Underneath the H-4832-ZKT, there is a (broken) gray60
+P-0010-JQJ. 
+Underneath the P-0010-JQJ, there is a (broken) olive-green
+J-1403-IDG. 
+Underneath the J-1403-IDG, there is a swamp-green D-9247-UHM. 
+Underneath the D-9247-UHM, there is a (broken) khaki N-6458-NDX.
+
+Underneath the N-6458-NDX, there is a (broken) red-violet
+V-9887-KUS. 
+Underneath the V-9887-KUS, there is a (broken) tea-green
+N-0010-NGN. 
+Underneath the N-0010-NGN, there is a (broken) cinnamon
+X-1403-GIE. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the N-1623-AOE. 
+
+>: You are now carrying the R-4292-FRL. 
+
+>: You are now carrying the F-6458-DDN. 
+
+>: The F-6458-DDN has been destroyed. 
+
+>: You are now carrying the H-1623-MYO. 
+
+>: The H-1623-MYO has been destroyed. 
+
+>: Did you mean the light-brown H-4292-ZHF or the rotating
+H-4292-ZHF?
+
+>: You aren't carrying a H-4292-ZHF. You can only incinerate items
+in your possession. 
+
+>: You can't take the R-6458-FXP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a R-6458-FXP. You can only incinerate items
+in your possession. 
+
+>: You can't take the T-6458-BIL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a T-6458-BIL. You can only incinerate items
+in your possession. 
+
+>: You can't take the R-9247-SMK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a R-9247-SMK. You can only incinerate items
+in your possession. 
+
+>: You can't take the Z-1403-CSY because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a Z-1403-CSY. You can only incinerate items
+in your possession. 
+
+>: You can't take the N-6678-NJD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a N-6678-NJD. You can only incinerate items
+in your possession. 
+
+>: You can't take the X-4292-TWX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a X-4292-TWX. You can only incinerate items
+in your possession. 
+
+>: You can't take the Z-6678-PEF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a Z-6678-PEF. You can only incinerate items
+in your possession. 
+
+>: You can't take the H-4832-ZKT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a H-4832-ZKT. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-0010-JQJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-0010-JQJ. You can only incinerate items
+in your possession. 
+
+>: You can't take the J-1403-IDG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a J-1403-IDG. You can only incinerate items
+in your possession. 
+
+>: You can't take the D-9247-UHM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a D-9247-UHM. You can only incinerate items
+in your possession. 
+
+>: You can't take the N-6458-NDX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a N-6458-NDX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the lavender-blush V-9887-KUS or the red-violet
+V-9887-KUS?
+
+>: You aren't carrying a V-9887-KUS. You can only incinerate items
+in your possession. 
+
+>: You can't take the N-0010-NGN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a N-0010-NGN. You can only incinerate items
+in your possession. 
+
+>: You can't take the X-1403-GIE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a X-1403-GIE. You can only incinerate items
+in your possession. 
+
+>: You can't take the T-4832-BFV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a T-4832-BFV. You can only incinerate items
+in your possession. 
+
+>: You can't take the D-6458-HSR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a D-6458-HSR. You can only incinerate items
+in your possession. 
+
+>: You can't take the F-4832-DAX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a F-4832-DAX. You can only incinerate items
+in your possession. 
+
+>: You can't take the V-4292-XMD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a V-4292-XMD. You can only incinerate items
+in your possession. 
+
+>: Did you mean the light-brown H-4292-ZHF or the rotating
+H-4292-ZHF?
+
+>: You aren't carrying a H-4292-ZHF. You can only incinerate items
+in your possession. 
+
+>: You can't take the X-6678-TTJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a X-6678-TTJ. You can only incinerate items
+in your possession. 
+
+>: You can't take the T-4292-BCH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a T-4292-BCH. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-6458-JNT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-6458-JNT. You can only incinerate items
+in your possession. 
+
+>: You can't take the Z-0010-PBP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a Z-0010-PBP. You can only incinerate items
+in your possession. 
+
+>: You can't take the F-5065-QLE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a F-5065-QLE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the lavender-blush V-9887-KUS or the red-violet
+V-9887-KUS?
+
+>: You aren't carrying a V-9887-KUS. You can only incinerate items
+in your possession. 
+
+>: You can't take the B-6458-LIV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a B-6458-LIV. You can only incinerate items
+in your possession. 
+
+>: You can't take the D-5065-UBI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a D-5065-UBI. You can only incinerate items
+in your possession. 
+
+>: You can't take the L-9247-EHW because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the P-1623-WYY because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-1623-WYY. You can only incinerate items
+in your possession. 
+
+>: You can't take the D-4832-HPD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a D-4832-HPD. You can only incinerate items
+in your possession. 
+
+>: You can't take the B-1623-YTC because there is another item on
+top of it (take the other item first). 
+
+>: Did you mean the robin-egg-blue Z-6458-PXZ or the rust
+Z-6458-PXZ?
+
+>: You aren't carrying a Z-6458-PXZ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the robin-egg-blue Z-6458-PXZ or the rust
+Z-6458-PXZ?
+
+>: You aren't carrying a Z-6458-PXZ. You can only incinerate items
+in your possession. 
+
+>: You can't take the display because there is another item on top
+of it (take the other item first). 
+
+>: You aren't carrying a display. You can only combine items in
+your possession. 
+
+>: You aren't carrying a display. You can only combine items in
+your possession. 
+
+>: You aren't carrying a display. You can only combine items in
+your possession. 
+
+>: You aren't carrying a display. You can only combine items in
+your possession. 
+
+>: You aren't carrying a display. You can only drop items in your
+possession. 
+
+>: 52nd Street and Dorchester Avenue
+
+You are standing at the corner of 52nd Street and Dorchester
+Avenue. From here, you can go east or south. 
+There is a (broken) cerise V-5065-KLY here. 
+Underneath the V-5065-KLY, there is a foreign J-5065-IQW. 
+Underneath the J-5065-IQW, there is a floating X-5065-GVU. 
+Underneath the X-5065-GVU, there is a chartreuse B-6678-LYD. 
+Underneath the B-6678-LYD, there is a lavender N-1403-AIY. 
+Underneath the N-1403-AIY, there is a bondi-blue R-0010-FLH. 
+Underneath the R-0010-FLH, there is an old V-1623-KOO. 
+Underneath the V-1623-KOO, there is a (broken) deep-sky-blue
+Z-1403-CDC. 
+Underneath the Z-1403-CDC, there is a hot-pink B-9887-YKI. 
+Underneath the B-9887-YKI, there is a (broken) ultramarine
+P-9887-WPG. 
+Underneath the P-9887-WPG, there is a (broken) fern-green
+F-9247-QCK. 
+Underneath the F-9247-QCK, there is a (broken) lime-green
+B-9247-YHS. 
+Underneath the B-9247-YHS, there is a (broken) reverse-chirality
+J-1403-INI. 
+Underneath the J-1403-INI, there is a school-bus-yellow
+L-4292-RMX. 
+Underneath the L-4292-RMX, there is a (broken) yellow-green
+R-6458-FIR. 
+Underneath the R-6458-FIR, there is a (broken) puce R-9247-SWM. 
+Underneath the R-9247-SWM, there is a carrot V-4832-XAT. 
+Underneath the V-4832-XAT, there is a (broken) discounted
+H-4832-ZUV. 
+Underneath the H-4832-ZUV, there is a hot-pink N-6678-NTF. 
+Underneath the N-6678-NTF, there is a (broken) exceptional
+L-6678-RJJ. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the V-5065-KLY. 
+
+>: The V-5065-KLY has been destroyed. 
+
+>: You are now carrying the J-5065-IQW. 
+
+>: The J-5065-IQW has been destroyed. 
+
+>: You are now carrying the X-5065-GVU. 
+
+>: The X-5065-GVU has been destroyed. 
+
+>: You are now carrying the B-6678-LYD. 
+
+>: The B-6678-LYD has been destroyed. 
+
+>: You are now carrying the N-1403-AIY. 
+
+>: The N-1403-AIY has been destroyed. 
+
+>: You are now carrying the R-0010-FLH. 
+
+>: The R-0010-FLH has been destroyed. 
+
+>: You are now carrying the V-1623-KOO. 
+
+>: The V-1623-KOO has been destroyed. 
+
+>: You are now carrying the Z-1403-CDC. 
+
+>: The Z-1403-CDC has been destroyed. 
+
+>: You are now carrying the B-9887-YKI. 
+
+>: The B-9887-YKI has been destroyed. 
+
+>: You are now carrying the P-9887-WPG. 
+
+>: The P-9887-WPG has been destroyed. 
+
+>: You are now carrying the F-9247-QCK. 
+
+>: The F-9247-QCK has been destroyed. 
+
+>: You are now carrying the B-9247-YHS. 
+
+>: The B-9247-YHS has been destroyed. 
+
+>: You are now carrying the J-1403-INI. 
+
+>: The J-1403-INI has been destroyed. 
+
+>: You are now carrying the L-4292-RMX. 
+
+>: The L-4292-RMX has been destroyed. 
+
+>: You are now carrying the R-6458-FIR. 
+
+>: The R-6458-FIR has been destroyed. 
+
+>: You are now carrying the R-9247-SWM. 
+
+>: The R-9247-SWM has been destroyed. 
+
+>: You are now carrying the V-4832-XAT. 
+
+>: The V-4832-XAT has been destroyed. 
+
+>: You are now carrying the H-4832-ZUV. 
+
+>: The H-4832-ZUV has been destroyed. 
+
+>: You are now carrying the N-6678-NTF. 
+
+>: The N-6678-NTF has been destroyed. 
+
+>: You are now carrying the L-6678-RJJ. 
+
+>: The L-6678-RJJ has been destroyed. 
+
+>: You are now carrying the F-6458-DNP. 
+
+>: The F-6458-DNP has been destroyed. 
+
+>: You are now carrying the X-4292-THZ. 
+
+>: The X-4292-THZ has been destroyed. 
+
+>: You are now carrying the L-9887-EUO. 
+
+>: The L-9887-EUO has been destroyed. 
+
+>: You are now carrying the T-1623-OES. 
+
+>: The T-1623-OES has been destroyed. 
+
+>: You are now carrying the X-1403-GSG. 
+
+>: The X-1403-GSG has been destroyed. 
+
+>: You are now carrying the D-9247-URO. 
+
+>: The D-9247-URO has been destroyed. 
+
+>: You are now carrying the N-0010-NQP. 
+
+>: The N-0010-NQP has been destroyed. 
+
+>: You are now carrying the B-0010-LVN. 
+
+>: The B-0010-LVN has been destroyed. 
+
+>: You are now carrying the D-1623-UOY. 
+
+>: The D-1623-UOY has been destroyed. 
+
+>: You are now carrying the V-4292-XWF. 
+
+>: The V-4292-XWF has been destroyed. 
+
+>: You are now carrying the H-5065-MGC. 
+
+>: The H-5065-MGC has been destroyed. 
+
+>: You are now carrying the V-1403-KIK. 
+
+>: The V-1403-KIK has been destroyed. 
+
+>: You are now carrying the R-1623-STW. 
+
+>: The R-1623-STW has been destroyed. 
+
+>: You are now carrying the R-5065-SQI. 
+
+>: The R-5065-SQI has been destroyed. 
+
+>: You are now carrying the X-6678-TEL. 
+
+>: The X-6678-TEL has been destroyed. 
+
+>: You are now carrying the P-1623-WJC. 
+
+>: The P-1623-WJC has been destroyed. 
+
+>: You are now carrying the P-6458-JXV. 
+
+>: The P-6458-JXV has been destroyed. 
+
+>: You are now carrying the B-6458-LSX. 
+
+>: The B-6458-LSX has been destroyed. 
+
+>: You are now carrying the H-1403-MDM. 
+
+>: The H-1403-MDM has been destroyed. 
+
+>: You are now carrying the H-6678-ZOR. 
+
+>: The H-6678-ZOR has been destroyed. 
+
+>: You are now carrying the P-4832-JUH. 
+
+>: The P-4832-JUH has been destroyed. 
+
+>: You are now carrying the R-4832-FFD. 
+
+>: The R-4832-FFD has been destroyed. 
+
+>: You are now carrying the N-9247-ACU. 
+
+>: The N-9247-ACU has been destroyed. 
+
+>: You are now carrying the N-6458-NNZ. 
+
+>: The N-6458-NNZ has been destroyed. 
+
+>: You are now carrying the Z-6458-PID. 
+
+>: The Z-6458-PID has been destroyed. 
+
+>: You are now carrying the X-9887-GPQ. 
+
+>: The X-9887-GPQ has been destroyed. 
+
+>: You are now carrying the T-4292-BMJ. 
+
+>: The T-4292-BMJ has been destroyed. 
+
+>: You are now carrying the D-4832-HAF. 
+
+>: The D-4832-HAF has been destroyed. 
+
+>: You are now carrying the D-5065-ULK. 
+
+>: The D-5065-ULK has been destroyed. 
+
+>: You are now carrying the V-9887-KFU. 
+
+>: The V-9887-KFU has been destroyed. 
+
+>: You are now carrying the F-4292-DHL. 
+
+>: The F-4292-DHL has been destroyed. 
+
+>: ADVTR.PGB=5@999999|f879a9fd5cf6a981fe4e35a821d79e1
+You are now carrying the progress bar. 
+
+>: You can't drop the progress bar because you can't bring yourself
+to part with it. 
+
+>: 52nd Street and Blackstone Avenue
+
+You are standing at the corner of 52nd Street and Blackstone
+Avenue. From here, you can go east, south, or west. 
+There is a manual here. 
+
+>: 52nd Street and Harper Avenue
+
+You are standing at the corner of 52nd Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go south or west. 
+There is a (broken) moccasin N-4292-NWT here. 
+Underneath the N-4292-NWT, there is a gray-tea-green L-4832-RPN.
+
+Underneath the L-4832-RPN, there is a (broken) pale-chestnut
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a pale-cornflower-blue
+V-6458-XDJ. 
+Underneath the V-6458-XDJ, there is a (broken) misty-rose
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) sangria
+N-4292-NWT. 
+Underneath the N-4292-NWT, there is a (broken) jade P-1403-WSU. 
+Underneath the P-1403-WSU, there is a (broken) yellow-green
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) crimson
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) scarlet
+Z-5065-CGQ. 
+Underneath the Z-5065-CGQ, there is a (broken) organic
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a bright-turquoise
+J-1623-ITM. 
+Underneath the J-1623-ITM, there is a (broken) mint-green
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a (broken) denim T-9247-OHI.
+
+Underneath the T-9247-OHI, there is a (broken) gray30
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a gray60 T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) azure H-6458-ZXL.
+
+Underneath the H-6458-ZXL, there is a carmine D-6678-HJX. 
+Underneath the D-6678-HJX, there is a cornflower-blue
+D-6678-HJX. 
+Underneath the D-6678-HJX, there is a (broken) tan D-6678-HJX. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: Did you mean the sangria N-4292-NWT or the moccasin N-4292-NWT?
+
+>: You aren't carrying a N-4292-NWT. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray40 L-4832-RPN, the pale-mauve L-4832-RPN or
+the gray-tea-green L-4832-RPN?
+
+>: Did you mean the gray60 T-9247-OHI, the denim T-9247-OHI, the
+organic T-9247-OHI, the misty-rose T-9247-OHI or the
+pale-chestnut T-9247-OHI?
+
+>: You aren't carrying a T-9247-OHI. You can only incinerate items
+in your possession. 
+
+>: You can't take the V-6458-XDJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a V-6458-XDJ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray60 T-9247-OHI, the denim T-9247-OHI, the
+organic T-9247-OHI, the misty-rose T-9247-OHI or the
+pale-chestnut T-9247-OHI?
+
+>: You aren't carrying a T-9247-OHI. You can only incinerate items
+in your possession. 
+
+>: Did you mean the sangria N-4292-NWT or the moccasin N-4292-NWT?
+
+>: You aren't carrying a N-4292-NWT. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-brown P-1403-WSU, the sandy-brown
+P-1403-WSU or the jade P-1403-WSU?
+
+>: You aren't carrying a P-1403-WSU. You can only incinerate items
+in your possession. 
+
+>: Did you mean the crimson P-6678-JEZ or the yellow-green
+P-6678-JEZ?
+
+>: You aren't carrying a P-6678-JEZ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the crimson P-6678-JEZ or the yellow-green
+P-6678-JEZ?
+
+>: You aren't carrying a P-6678-JEZ. You can only incinerate items
+in your possession. 
+
+>: You can't take the Z-5065-CGQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a Z-5065-CGQ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray60 T-9247-OHI, the denim T-9247-OHI, the
+organic T-9247-OHI, the misty-rose T-9247-OHI or the
+pale-chestnut T-9247-OHI?
+
+>: You aren't carrying a T-9247-OHI. You can only incinerate items
+in your possession. 
+
+>: You can't take the J-1623-ITM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a J-1623-ITM. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray30 X-4832-TKP or the mint-green X-4832-TKP?
+
+>: You aren't carrying a X-4832-TKP. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray60 T-9247-OHI, the denim T-9247-OHI, the
+organic T-9247-OHI, the misty-rose T-9247-OHI or the
+pale-chestnut T-9247-OHI?
+
+>: You aren't carrying a T-9247-OHI. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray30 X-4832-TKP or the mint-green X-4832-TKP?
+
+>: You aren't carrying a X-4832-TKP. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray60 T-9247-OHI, the denim T-9247-OHI, the
+organic T-9247-OHI, the misty-rose T-9247-OHI or the
+pale-chestnut T-9247-OHI?
+
+>: You aren't carrying a T-9247-OHI. You can only incinerate items
+in your possession. 
+
+>: You can't take the H-6458-ZXL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a H-6458-ZXL. You can only incinerate items
+in your possession. 
+
+>: Did you mean the wheat-colored D-6678-HJX, the gray90
+D-6678-HJX, the gray10 D-6678-HJX, the eggplant D-6678-HJX, the
+peach D-6678-HJX, the pale-brown D-6678-HJX, the lemon-cream
+D-6678-HJX, the prussian-blue D-6678-HJX, the gross D-6678-HJX,
+the moss-green D-6678-HJX, the peppered D-6678-HJX, the
+burnt-sienna D-6678-HJX, the navy-blue D-6678-HJX, the old-lace
+D-6678-HJX, the violet D-6678-HJX, the periwinkle D-6678-HJX,
+the black D-6678-HJX, the robin-egg-blue D-6678-HJX, the tan
+D-6678-HJX, the cornflower-blue D-6678-HJX or the carmine
+D-6678-HJX?
+
+>: You aren't carrying a D-6678-HJX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the wheat-colored D-6678-HJX, the gray90
+D-6678-HJX, the gray10 D-6678-HJX, the eggplant D-6678-HJX, the
+peach D-6678-HJX, the pale-brown D-6678-HJX, the lemon-cream
+D-6678-HJX, the prussian-blue D-6678-HJX, the gross D-6678-HJX,
+the moss-green D-6678-HJX, the peppered D-6678-HJX, the
+burnt-sienna D-6678-HJX, the navy-blue D-6678-HJX, the old-lace
+D-6678-HJX, the violet D-6678-HJX, the periwinkle D-6678-HJX,
+the black D-6678-HJX, the robin-egg-blue D-6678-HJX, the tan
+D-6678-HJX, the cornflower-blue D-6678-HJX or the carmine
+D-6678-HJX?
+
+>: You aren't carrying a D-6678-HJX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the wheat-colored D-6678-HJX, the gray90
+D-6678-HJX, the gray10 D-6678-HJX, the eggplant D-6678-HJX, the
+peach D-6678-HJX, the pale-brown D-6678-HJX, the lemon-cream
+D-6678-HJX, the prussian-blue D-6678-HJX, the gross D-6678-HJX,
+the moss-green D-6678-HJX, the peppered D-6678-HJX, the
+burnt-sienna D-6678-HJX, the navy-blue D-6678-HJX, the old-lace
+D-6678-HJX, the violet D-6678-HJX, the periwinkle D-6678-HJX,
+the black D-6678-HJX, the robin-egg-blue D-6678-HJX, the tan
+D-6678-HJX, the cornflower-blue D-6678-HJX or the carmine
+D-6678-HJX?
+
+>: You aren't carrying a D-6678-HJX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray40 L-4832-RPN, the pale-mauve L-4832-RPN or
+the gray-tea-green L-4832-RPN?
+
+>: You aren't carrying a L-4832-RPN. You can only incinerate items
+in your possession. 
+
+>: Did you mean the wheat-colored D-6678-HJX, the gray90
+D-6678-HJX, the gray10 D-6678-HJX, the eggplant D-6678-HJX, the
+peach D-6678-HJX, the pale-brown D-6678-HJX, the lemon-cream
+D-6678-HJX, the prussian-blue D-6678-HJX, the gross D-6678-HJX,
+the moss-green D-6678-HJX, the peppered D-6678-HJX, the
+burnt-sienna D-6678-HJX, the navy-blue D-6678-HJX, the old-lace
+D-6678-HJX, the violet D-6678-HJX, the periwinkle D-6678-HJX,
+the black D-6678-HJX, the robin-egg-blue D-6678-HJX, the tan
+D-6678-HJX, the cornflower-blue D-6678-HJX or the carmine
+D-6678-HJX?
+
+>: You aren't carrying a D-6678-HJX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-brown P-1403-WSU, the sandy-brown
+P-1403-WSU or the jade P-1403-WSU?
+
+>: You aren't carrying a P-1403-WSU. You can only incinerate items
+in your possession. 
+
+>: Did you mean the cream H-9247-MMG or the cadet-blue H-9247-MMG?
+
+>: You aren't carrying a H-9247-MMG. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-brown P-1403-WSU, the sandy-brown
+P-1403-WSU or the jade P-1403-WSU?
+
+>: You aren't carrying a P-1403-WSU. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray40 L-4832-RPN, the pale-mauve L-4832-RPN or
+the gray-tea-green L-4832-RPN?
+
+>: You aren't carrying a L-4832-RPN. You can only incinerate items
+in your possession. 
+
+>: Did you mean the cream H-9247-MMG or the cadet-blue H-9247-MMG?
+
+>: You aren't carrying a H-9247-MMG. You can only incinerate items
+in your possession. 
+
+>: You can't take the status LED because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You aren't carrying a status LED. You can only drop items in
+your possession. 
+
+>: 53th Street and Harper Avenue
+
+You are standing at the corner of 53th Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north, south, or west. 
+There is a (broken) old X-1623-GTO here. 
+Underneath the X-1623-GTO, there is a (broken) corn V-0010-XBD. 
+Underneath the V-0010-XBD, there is a (broken) blue-violet
+P-4832-JFJ. 
+Underneath the P-4832-JFJ, there is a (broken) gamboge
+X-0010-TLX. 
+Underneath the X-0010-TLX, there is a (broken) denim D-4292-HHR.
+
+Underneath the D-4292-HHR, there is a (broken) low-carb
+D-5065-UVM. 
+Underneath the D-5065-UVM, there is a (broken) pear V-9247-KMI. 
+Underneath the V-9247-KMI, there is a (broken) ultramarine
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) pink D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) discounted
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) flax D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) cinnamon
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a lemon F-9887-QAE. 
+Underneath the F-9887-QAE, there is a (broken) low-carb
+X-1623-GTO. 
+Underneath the X-1623-GTO, there is a (broken) amethyst
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) reverse-chirality
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) lemon T-9887-OFC.
+
+Underneath the T-9887-OFC, there is a (broken) honeydew
+B-4292-LWV. 
+Underneath the B-4292-LWV, there is a (broken) white F-9887-QAE.
+
+Underneath the F-9887-QAE, there is a (broken) black B-4292-LWV.
+
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: Did you mean the brass X-1623-GTO, the snow X-1623-GTO, the
+ivory X-1623-GTO, the gray80 X-1623-GTO, the pastel-pink
+X-1623-GTO, the sapphire X-1623-GTO, the sangria X-1623-GTO, the
+low-carb X-1623-GTO or the old X-1623-GTO?
+
+>: Did you mean the pale-goldenrod V-0010-XBD or the corn
+V-0010-XBD?
+
+>: You aren't carrying a V-0010-XBD. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-4832-JFJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-4832-JFJ. You can only incinerate items
+in your possession. 
+
+>: You can't take the X-0010-TLX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a X-0010-TLX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the flax D-4292-HHR, the pink D-4292-HHR or the
+denim D-4292-HHR?
+
+>: You aren't carrying a D-4292-HHR. You can only incinerate items
+in your possession. 
+
+>: You can't take the D-5065-UVM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a D-5065-UVM. You can only incinerate items
+in your possession. 
+
+>: Did you mean the steel-blue V-9247-KMI, the miniature
+V-9247-KMI, the foreign V-9247-KMI, the spring-green V-9247-KMI
+or the pear V-9247-KMI?
+
+>: You aren't carrying a V-9247-KMI. You can only incinerate items
+in your possession. 
+
+>: Did you mean the reverse-chirality J-9247-IRG, the amethyst
+J-9247-IRG, the cinnamon J-9247-IRG or the ultramarine
+J-9247-IRG?
+
+>: You aren't carrying a J-9247-IRG. You can only incinerate items
+in your possession. 
+
+>: Did you mean the flax D-4292-HHR, the pink D-4292-HHR or the
+denim D-4292-HHR?
+
+>: You aren't carrying a D-4292-HHR. You can only incinerate items
+in your possession. 
+
+>: You can't take the L-6458-RNH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a L-6458-RNH. You can only incinerate items
+in your possession. 
+
+>: Did you mean the flax D-4292-HHR, the pink D-4292-HHR or the
+denim D-4292-HHR?
+
+>: You aren't carrying a D-4292-HHR. You can only incinerate items
+in your possession. 
+
+>: Did you mean the reverse-chirality J-9247-IRG, the amethyst
+J-9247-IRG, the cinnamon J-9247-IRG or the ultramarine
+J-9247-IRG?
+
+>: You aren't carrying a J-9247-IRG. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue F-9887-QAE, the gray10 F-9887-QAE,
+the white F-9887-QAE or the lemon F-9887-QAE?
+
+>: You aren't carrying a F-9887-QAE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the brass X-1623-GTO, the snow X-1623-GTO, the
+ivory X-1623-GTO, the gray80 X-1623-GTO, the pastel-pink
+X-1623-GTO, the sapphire X-1623-GTO, the sangria X-1623-GTO, the
+low-carb X-1623-GTO or the old X-1623-GTO?
+
+>: You aren't carrying a X-1623-GTO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the reverse-chirality J-9247-IRG, the amethyst
+J-9247-IRG, the cinnamon J-9247-IRG or the ultramarine
+J-9247-IRG?
+
+>: You aren't carrying a J-9247-IRG. You can only incinerate items
+in your possession. 
+
+>: Did you mean the reverse-chirality J-9247-IRG, the amethyst
+J-9247-IRG, the cinnamon J-9247-IRG or the ultramarine
+J-9247-IRG?
+
+>: You aren't carrying a J-9247-IRG. You can only incinerate items
+in your possession. 
+
+>: You can't take the T-9887-OFC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a T-9887-OFC. You can only incinerate items
+in your possession. 
+
+>: Did you mean the black B-4292-LWV or the honeydew B-4292-LWV?
+
+>: You aren't carrying a B-4292-LWV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue F-9887-QAE, the gray10 F-9887-QAE,
+the white F-9887-QAE or the lemon F-9887-QAE?
+
+>: You aren't carrying a F-9887-QAE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the black B-4292-LWV or the honeydew B-4292-LWV?
+
+>: You aren't carrying a B-4292-LWV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the steel-blue V-9247-KMI, the miniature
+V-9247-KMI, the foreign V-9247-KMI, the spring-green V-9247-KMI
+or the pear V-9247-KMI?
+
+>: You aren't carrying a V-9247-KMI. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-goldenrod V-0010-XBD or the corn
+V-0010-XBD?
+
+>: You aren't carrying a V-0010-XBD. You can only incinerate items
+in your possession. 
+
+>: Did you mean the brass X-1623-GTO, the snow X-1623-GTO, the
+ivory X-1623-GTO, the gray80 X-1623-GTO, the pastel-pink
+X-1623-GTO, the sapphire X-1623-GTO, the sangria X-1623-GTO, the
+low-carb X-1623-GTO or the old X-1623-GTO?
+
+>: You aren't carrying a X-1623-GTO. You can only incinerate items
+in your possession. 
+
+>: You can't take the N-1623-AJI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a N-1623-AJI. You can only incinerate items
+in your possession. 
+
+>: Did you mean the sapphire R-1403-SXU or the imitation
+R-1403-SXU?
+
+>: You aren't carrying a R-1403-SXU. You can only incinerate items
+in your possession. 
+
+>: Did you mean the brass X-1623-GTO, the snow X-1623-GTO, the
+ivory X-1623-GTO, the gray80 X-1623-GTO, the pastel-pink
+X-1623-GTO, the sapphire X-1623-GTO, the sangria X-1623-GTO, the
+low-carb X-1623-GTO or the old X-1623-GTO?
+
+>: You aren't carrying a X-1623-GTO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the coral Z-4832-PPP, the mustard Z-4832-PPP or the
+sea-green Z-4832-PPP?
+
+>: You aren't carrying a Z-4832-PPP. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue F-9887-QAE, the gray10 F-9887-QAE,
+the white F-9887-QAE or the lemon F-9887-QAE?
+
+>: You aren't carrying a F-9887-QAE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the sturdy Z-1623-CEK or the sandy-brown
+Z-1623-CEK?
+
+>: You aren't carrying a Z-1623-CEK. You can only incinerate items
+in your possession. 
+
+>: You can't take the R-4292-FMP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a R-4292-FMP. You can only incinerate items
+in your possession. 
+
+>: You can't take the V-9887-KPW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a V-9887-KPW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the heliotrope J-6458-VDL, the sturdy J-6458-VDL or
+the camouflage-green J-6458-VDL?
+
+>: You aren't carrying a J-6458-VDL. You can only incinerate items
+in your possession. 
+
+>: Did you mean the heliotrope J-6458-VDL, the sturdy J-6458-VDL or
+the camouflage-green J-6458-VDL?
+
+>: You aren't carrying a J-6458-VDL. You can only incinerate items
+in your possession. 
+
+>: You can't take the X-9247-GWE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a X-9247-GWE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue F-9887-QAE, the gray10 F-9887-QAE,
+the white F-9887-QAE or the lemon F-9887-QAE?
+
+>: You aren't carrying a F-9887-QAE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the sturdy Z-1623-CEK or the sandy-brown
+Z-1623-CEK?
+
+>: You aren't carrying a Z-1623-CEK. You can only incinerate items
+in your possession. 
+
+>: Did you mean the brass X-1623-GTO, the snow X-1623-GTO, the
+ivory X-1623-GTO, the gray80 X-1623-GTO, the pastel-pink
+X-1623-GTO, the sapphire X-1623-GTO, the sangria X-1623-GTO, the
+low-carb X-1623-GTO or the old X-1623-GTO?
+
+>: You aren't carrying a X-1623-GTO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the sapphire R-1403-SXU or the imitation
+R-1403-SXU?
+
+>: You aren't carrying a R-1403-SXU. You can only incinerate items
+in your possession. 
+
+>: Did you mean the heliotrope J-6458-VDL, the sturdy J-6458-VDL or
+the camouflage-green J-6458-VDL?
+
+>: You aren't carrying a J-6458-VDL. You can only incinerate items
+in your possession. 
+
+>: Did you mean the coral Z-4832-PPP, the mustard Z-4832-PPP or the
+sea-green Z-4832-PPP?
+
+>: You aren't carrying a Z-4832-PPP. You can only incinerate items
+in your possession. 
+
+>: You can't take the X-6458-TIJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a X-6458-TIJ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the coral Z-4832-PPP, the mustard Z-4832-PPP or the
+sea-green Z-4832-PPP?
+
+>: You aren't carrying a Z-4832-PPP. You can only incinerate items
+in your possession. 
+
+>: Did you mean the brass X-1623-GTO, the snow X-1623-GTO, the
+ivory X-1623-GTO, the gray80 X-1623-GTO, the pastel-pink
+X-1623-GTO, the sapphire X-1623-GTO, the sangria X-1623-GTO, the
+low-carb X-1623-GTO or the old X-1623-GTO?
+
+>: You aren't carrying a X-1623-GTO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the brass X-1623-GTO, the snow X-1623-GTO, the
+ivory X-1623-GTO, the gray80 X-1623-GTO, the pastel-pink
+X-1623-GTO, the sapphire X-1623-GTO, the sangria X-1623-GTO, the
+low-carb X-1623-GTO or the old X-1623-GTO?
+
+>: You aren't carrying a X-1623-GTO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the foreign T-0010-BQH, the old-gold T-0010-BQH,
+the indigo T-0010-BQH, the gray-tea-green T-0010-BQH, the
+prussian-blue T-0010-BQH, the imaginary T-0010-BQH or the
+raw-umber T-0010-BQH?
+
+>: You aren't carrying a T-0010-BQH. You can only incinerate items
+in your possession. 
+
+>: Did you mean the steel-blue V-9247-KMI, the miniature
+V-9247-KMI, the foreign V-9247-KMI, the spring-green V-9247-KMI
+or the pear V-9247-KMI?
+
+>: You aren't carrying a V-9247-KMI. You can only incinerate items
+in your possession. 
+
+>: Did you mean the foreign T-0010-BQH, the old-gold T-0010-BQH,
+the indigo T-0010-BQH, the gray-tea-green T-0010-BQH, the
+prussian-blue T-0010-BQH, the imaginary T-0010-BQH or the
+raw-umber T-0010-BQH?
+
+>: You aren't carrying a T-0010-BQH. You can only incinerate items
+in your possession. 
+
+>: Did you mean the brass X-1623-GTO, the snow X-1623-GTO, the
+ivory X-1623-GTO, the gray80 X-1623-GTO, the pastel-pink
+X-1623-GTO, the sapphire X-1623-GTO, the sangria X-1623-GTO, the
+low-carb X-1623-GTO or the old X-1623-GTO?
+
+>: You aren't carrying a X-1623-GTO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the foreign T-0010-BQH, the old-gold T-0010-BQH,
+the indigo T-0010-BQH, the gray-tea-green T-0010-BQH, the
+prussian-blue T-0010-BQH, the imaginary T-0010-BQH or the
+raw-umber T-0010-BQH?
+
+>: You aren't carrying a T-0010-BQH. You can only incinerate items
+in your possession. 
+
+>: Did you mean the foreign T-0010-BQH, the old-gold T-0010-BQH,
+the indigo T-0010-BQH, the gray-tea-green T-0010-BQH, the
+prussian-blue T-0010-BQH, the imaginary T-0010-BQH or the
+raw-umber T-0010-BQH?
+
+>: You aren't carrying a T-0010-BQH. You can only incinerate items
+in your possession. 
+
+>: Did you mean the steel-blue V-9247-KMI, the miniature
+V-9247-KMI, the foreign V-9247-KMI, the spring-green V-9247-KMI
+or the pear V-9247-KMI?
+
+>: You aren't carrying a V-9247-KMI. You can only incinerate items
+in your possession. 
+
+>: Did you mean the steel-blue V-9247-KMI, the miniature
+V-9247-KMI, the foreign V-9247-KMI, the spring-green V-9247-KMI
+or the pear V-9247-KMI?
+
+>: You aren't carrying a V-9247-KMI. You can only incinerate items
+in your possession. 
+
+>: Did you mean the foreign T-0010-BQH, the old-gold T-0010-BQH,
+the indigo T-0010-BQH, the gray-tea-green T-0010-BQH, the
+prussian-blue T-0010-BQH, the imaginary T-0010-BQH or the
+raw-umber T-0010-BQH?
+
+>: You aren't carrying a T-0010-BQH. You can only incinerate items
+in your possession. 
+
+>: You can't take the EPROM burner because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a EPROM burner. You can only combine items
+in your possession. 
+
+>: You aren't carrying a EPROM burner. You can only drop items in
+your possession. 
+
+>: 54th Street and Harper Avenue
+
+You are standing at the corner of 54th Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north, south, or west. 
+There is a (broken) gray60 Z-4292-PRV here. 
+Underneath the Z-4292-PRV, there is a (broken) pale-carmine
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a pale-cornflower-blue
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is an imported D-9887-UUE. 
+Underneath the D-9887-UUE, there is a (broken) gray90
+Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a sepia Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a (broken) gray30
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a robin-egg-blue Z-4292-PRV.
+
+Underneath the Z-4292-PRV, there is a (broken) slate-blue
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a (broken) rosy-brown
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a gray50 Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a (broken) misty-rose
+Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a cinnamon Z-9887-CUG. 
+Underneath the Z-9887-CUG, there is a (broken) saffron
+N-9247-AWO. 
+Underneath the N-9247-AWO, there is a (broken) indigo
+V-4292-XRX. 
+Underneath the V-4292-XRX, there is a pale-sandy-brown
+R-4832-FAV. 
+Underneath the R-4832-FAV, there is a (broken)
+momemtum-preserving Z-0010-PGL. 
+Underneath the Z-0010-PGL, there is a swamp-green V-4292-XRX. 
+Underneath the V-4292-XRX, there is a pale-pink R-1623-SOQ. 
+Underneath the R-1623-SOQ, there is a cream R-1623-SOQ. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: Did you mean the blaze-orange Z-4292-PRV, the violet-red
+Z-4292-PRV, the emerald Z-4292-PRV, the persian-blue Z-4292-PRV,
+the misty-rose Z-4292-PRV, the gray50 Z-4292-PRV, the
+robin-egg-blue Z-4292-PRV, the sepia Z-4292-PRV, the gray90
+Z-4292-PRV or the gray60 Z-4292-PRV?
+
+>: Did you mean the persian-blue D-9887-UUE, the steel-blue
+D-9887-UUE, the jade D-9887-UUE, the heliotrope D-9887-UUE, the
+pastel-pink D-9887-UUE, the lavender-blush D-9887-UUE, the
+rosy-brown D-9887-UUE, the slate-blue D-9887-UUE, the gray30
+D-9887-UUE, the imported D-9887-UUE, the pale-cornflower-blue
+D-9887-UUE or the pale-carmine D-9887-UUE?
+
+>: Did you mean the persian-blue D-9887-UUE, the steel-blue
+D-9887-UUE, the jade D-9887-UUE, the heliotrope D-9887-UUE, the
+pastel-pink D-9887-UUE, the lavender-blush D-9887-UUE, the
+rosy-brown D-9887-UUE, the slate-blue D-9887-UUE, the gray30
+D-9887-UUE, the imported D-9887-UUE, the pale-cornflower-blue
+D-9887-UUE or the pale-carmine D-9887-UUE?
+
+>: You aren't carrying a D-9887-UUE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue D-9887-UUE, the steel-blue
+D-9887-UUE, the jade D-9887-UUE, the heliotrope D-9887-UUE, the
+pastel-pink D-9887-UUE, the lavender-blush D-9887-UUE, the
+rosy-brown D-9887-UUE, the slate-blue D-9887-UUE, the gray30
+D-9887-UUE, the imported D-9887-UUE, the pale-cornflower-blue
+D-9887-UUE or the pale-carmine D-9887-UUE?
+
+>: You aren't carrying a D-9887-UUE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the blaze-orange Z-4292-PRV, the violet-red
+Z-4292-PRV, the emerald Z-4292-PRV, the persian-blue Z-4292-PRV,
+the misty-rose Z-4292-PRV, the gray50 Z-4292-PRV, the
+robin-egg-blue Z-4292-PRV, the sepia Z-4292-PRV, the gray90
+Z-4292-PRV or the gray60 Z-4292-PRV?
+
+>: Did you mean the blaze-orange Z-4292-PRV, the violet-red
+Z-4292-PRV, the emerald Z-4292-PRV, the persian-blue Z-4292-PRV,
+the misty-rose Z-4292-PRV, the gray50 Z-4292-PRV, the
+robin-egg-blue Z-4292-PRV, the sepia Z-4292-PRV, the gray90
+Z-4292-PRV or the gray60 Z-4292-PRV?
+
+>: You aren't carrying a Z-4292-PRV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue D-9887-UUE, the steel-blue
+D-9887-UUE, the jade D-9887-UUE, the heliotrope D-9887-UUE, the
+pastel-pink D-9887-UUE, the lavender-blush D-9887-UUE, the
+rosy-brown D-9887-UUE, the slate-blue D-9887-UUE, the gray30
+D-9887-UUE, the imported D-9887-UUE, the pale-cornflower-blue
+D-9887-UUE or the pale-carmine D-9887-UUE?
+
+>: You aren't carrying a D-9887-UUE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the blaze-orange Z-4292-PRV, the violet-red
+Z-4292-PRV, the emerald Z-4292-PRV, the persian-blue Z-4292-PRV,
+the misty-rose Z-4292-PRV, the gray50 Z-4292-PRV, the
+robin-egg-blue Z-4292-PRV, the sepia Z-4292-PRV, the gray90
+Z-4292-PRV or the gray60 Z-4292-PRV?
+
+>: You aren't carrying a Z-4292-PRV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue D-9887-UUE, the steel-blue
+D-9887-UUE, the jade D-9887-UUE, the heliotrope D-9887-UUE, the
+pastel-pink D-9887-UUE, the lavender-blush D-9887-UUE, the
+rosy-brown D-9887-UUE, the slate-blue D-9887-UUE, the gray30
+D-9887-UUE, the imported D-9887-UUE, the pale-cornflower-blue
+D-9887-UUE or the pale-carmine D-9887-UUE?
+
+>: You aren't carrying a D-9887-UUE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue D-9887-UUE, the steel-blue
+D-9887-UUE, the jade D-9887-UUE, the heliotrope D-9887-UUE, the
+pastel-pink D-9887-UUE, the lavender-blush D-9887-UUE, the
+rosy-brown D-9887-UUE, the slate-blue D-9887-UUE, the gray30
+D-9887-UUE, the imported D-9887-UUE, the pale-cornflower-blue
+D-9887-UUE or the pale-carmine D-9887-UUE?
+
+>: You aren't carrying a D-9887-UUE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the blaze-orange Z-4292-PRV, the violet-red
+Z-4292-PRV, the emerald Z-4292-PRV, the persian-blue Z-4292-PRV,
+the misty-rose Z-4292-PRV, the gray50 Z-4292-PRV, the
+robin-egg-blue Z-4292-PRV, the sepia Z-4292-PRV, the gray90
+Z-4292-PRV or the gray60 Z-4292-PRV?
+
+>: You aren't carrying a Z-4292-PRV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the blaze-orange Z-4292-PRV, the violet-red
+Z-4292-PRV, the emerald Z-4292-PRV, the persian-blue Z-4292-PRV,
+the misty-rose Z-4292-PRV, the gray50 Z-4292-PRV, the
+robin-egg-blue Z-4292-PRV, the sepia Z-4292-PRV, the gray90
+Z-4292-PRV or the gray60 Z-4292-PRV?
+
+>: You aren't carrying a Z-4292-PRV. You can only incinerate items
+in your possession. 
+
+>: You can't take the Z-9887-CUG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a Z-9887-CUG. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pear N-9247-AWO, the old-gold N-9247-AWO or the
+saffron N-9247-AWO?
+
+>: You aren't carrying a N-9247-AWO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the swamp-green V-4292-XRX or the indigo
+V-4292-XRX?
+
+>: You aren't carrying a V-4292-XRX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the russet R-4832-FAV, the floating R-4832-FAV or
+the pale-sandy-brown R-4832-FAV?
+
+>: You aren't carrying a R-4832-FAV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pink Z-0010-PGL, the blue Z-0010-PGL or the
+momemtum-preserving Z-0010-PGL?
+
+>: You aren't carrying a Z-0010-PGL. You can only incinerate items
+in your possession. 
+
+>: Did you mean the swamp-green V-4292-XRX or the indigo
+V-4292-XRX?
+
+>: You aren't carrying a V-4292-XRX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the cream R-1623-SOQ or the pale-pink R-1623-SOQ?
+
+>: You aren't carrying a R-1623-SOQ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the cream R-1623-SOQ or the pale-pink R-1623-SOQ?
+
+>: You aren't carrying a R-1623-SOQ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pine-green B-9247-YCM or the royal-blue
+B-9247-YCM?
+
+>: You aren't carrying a B-9247-YCM. You can only incinerate items
+in your possession. 
+
+>: You can't take the J-1403-IIC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a J-1403-IIC. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pink Z-0010-PGL, the blue Z-0010-PGL or the
+momemtum-preserving Z-0010-PGL?
+
+>: You aren't carrying a Z-0010-PGL. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pink Z-0010-PGL, the blue Z-0010-PGL or the
+momemtum-preserving Z-0010-PGL?
+
+>: You aren't carrying a Z-0010-PGL. You can only incinerate items
+in your possession. 
+
+>: You can't take the F-4832-DFT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a F-4832-DFT. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pine-green B-9247-YCM or the royal-blue
+B-9247-YCM?
+
+>: You aren't carrying a B-9247-YCM. You can only incinerate items
+in your possession. 
+
+>: Did you mean the russet R-4832-FAV, the floating R-4832-FAV or
+the pale-sandy-brown R-4832-FAV?
+
+>: You aren't carrying a R-4832-FAV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the russet R-4832-FAV, the floating R-4832-FAV or
+the pale-sandy-brown R-4832-FAV?
+
+>: You aren't carrying a R-4832-FAV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue D-9887-UUE, the steel-blue
+D-9887-UUE, the jade D-9887-UUE, the heliotrope D-9887-UUE, the
+pastel-pink D-9887-UUE, the lavender-blush D-9887-UUE, the
+rosy-brown D-9887-UUE, the slate-blue D-9887-UUE, the gray30
+D-9887-UUE, the imported D-9887-UUE, the pale-cornflower-blue
+D-9887-UUE or the pale-carmine D-9887-UUE?
+
+>: You aren't carrying a D-9887-UUE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pear N-9247-AWO, the old-gold N-9247-AWO or the
+saffron N-9247-AWO?
+
+>: You aren't carrying a N-9247-AWO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pear N-9247-AWO, the old-gold N-9247-AWO or the
+saffron N-9247-AWO?
+
+>: You aren't carrying a N-9247-AWO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue D-9887-UUE, the steel-blue
+D-9887-UUE, the jade D-9887-UUE, the heliotrope D-9887-UUE, the
+pastel-pink D-9887-UUE, the lavender-blush D-9887-UUE, the
+rosy-brown D-9887-UUE, the slate-blue D-9887-UUE, the gray30
+D-9887-UUE, the imported D-9887-UUE, the pale-cornflower-blue
+D-9887-UUE or the pale-carmine D-9887-UUE?
+
+>: You aren't carrying a D-9887-UUE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the persian-blue D-9887-UUE, the steel-blue
+D-9887-UUE, the jade D-9887-UUE, the heliotrope D-9887-UUE, the
+pastel-pink D-9887-UUE, the lavender-blush D-9887-UUE, the
+rosy-brown D-9887-UUE, the slate-blue D-9887-UUE, the gray30
+D-9887-UUE, the imported D-9887-UUE, the pale-cornflower-blue
+D-9887-UUE or the pale-carmine D-9887-UUE?
+
+>: You aren't carrying a D-9887-UUE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the blaze-orange Z-4292-PRV, the violet-red
+Z-4292-PRV, the emerald Z-4292-PRV, the persian-blue Z-4292-PRV,
+the misty-rose Z-4292-PRV, the gray50 Z-4292-PRV, the
+robin-egg-blue Z-4292-PRV, the sepia Z-4292-PRV, the gray90
+Z-4292-PRV or the gray60 Z-4292-PRV?
+
+>: You aren't carrying a Z-4292-PRV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the blaze-orange Z-4292-PRV, the violet-red
+Z-4292-PRV, the emerald Z-4292-PRV, the persian-blue Z-4292-PRV,
+the misty-rose Z-4292-PRV, the gray50 Z-4292-PRV, the
+robin-egg-blue Z-4292-PRV, the sepia Z-4292-PRV, the gray90
+Z-4292-PRV or the gray60 Z-4292-PRV?
+
+>: You aren't carrying a Z-4292-PRV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the blaze-orange Z-4292-PRV, the violet-red
+Z-4292-PRV, the emerald Z-4292-PRV, the persian-blue Z-4292-PRV,
+the misty-rose Z-4292-PRV, the gray50 Z-4292-PRV, the
+robin-egg-blue Z-4292-PRV, the sepia Z-4292-PRV, the gray90
+Z-4292-PRV or the gray60 Z-4292-PRV?
+
+>: You aren't carrying a Z-4292-PRV. You can only incinerate items
+in your possession. 
+
+>: Did you mean the blaze-orange Z-4292-PRV, the violet-red
+Z-4292-PRV, the emerald Z-4292-PRV, the persian-blue Z-4292-PRV,
+the misty-rose Z-4292-PRV, the gray50 Z-4292-PRV, the
+robin-egg-blue Z-4292-PRV, the sepia Z-4292-PRV, the gray90
+Z-4292-PRV or the gray60 Z-4292-PRV?
+
+>: You aren't carrying a Z-4292-PRV. You can only incinerate items
+in your possession. 
+
+>: You can't take the RS232 adapter because there is another item
+on top of it (take the other item first). 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only drop items in
+your possession. 
+
+>: 54th Place and Harper Avenue
+
+You are standing at the corner of 54th Place and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north or west. 
+There is a tea-green T-9887-OKW here. 
+Underneath the T-9887-OKW, there is a (broken) chartreuse
+N-5065-ALO. 
+Underneath the N-5065-ALO, there is a (broken) dim-gray
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) scarlet
+J-9247-IWC. 
+Underneath the J-9247-IWC, there is a (broken) mustard
+D-4292-HMN. 
+Underneath the D-4292-HMN, there is a (broken) turquoise
+N-4832-NAJ. 
+Underneath the N-4832-NAJ, there is a turquoise F-6678-DTT. 
+Underneath the F-6678-DTT, there is a (broken) celadon
+T-9887-OKW. 
+Underneath the T-9887-OKW, there is a burnt-orange T-9887-OKW. 
+Underneath the T-9887-OKW, there is a cadet-blue T-9887-OKW. 
+Underneath the T-9887-OKW, there is a pastel-green F-6678-DTT. 
+Underneath the F-6678-DTT, there is a (broken) prussian-blue
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) magenta
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) safety-orange
+F-6678-DTT. 
+Underneath the F-6678-DTT, there is an imported B-5065-YQM. 
+Underneath the B-5065-YQM, there is a (broken) puce X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) water-logged
+F-6678-DTT. 
+Underneath the F-6678-DTT, there is a (broken) thistle-colored
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a gamboge T-9887-OKW. 
+Underneath the T-9887-OKW, there is a sky-blue T-9887-OKW. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: Did you mean the sky-blue T-9887-OKW, the gamboge T-9887-OKW,
+the cadet-blue T-9887-OKW, the burnt-orange T-9887-OKW, the
+celadon T-9887-OKW or the tea-green T-9887-OKW?
+
+>: You aren't carrying a T-9887-OKW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the bright-violet N-5065-ALO, the olive-green
+N-5065-ALO or the chartreuse N-5065-ALO?
+
+>: You aren't carrying a N-5065-ALO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the thistle-colored X-6458-TNF, the puce
+X-6458-TNF, the magenta X-6458-TNF, the prussian-blue X-6458-TNF
+or the dim-gray X-6458-TNF?
+
+>: You aren't carrying a X-6458-TNF. You can only incinerate items
+in your possession. 
+
+>: Did you mean the cyan J-9247-IWC or the scarlet J-9247-IWC?
+
+>: You aren't carrying a J-9247-IWC. You can only incinerate items
+in your possession. 
+
+>: You can't take the D-4292-HMN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a D-4292-HMN. You can only incinerate items
+in your possession. 
+
+>: You can't take the N-4832-NAJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a N-4832-NAJ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the water-logged F-6678-DTT, the safety-orange
+F-6678-DTT, the pastel-green F-6678-DTT or the turquoise
+F-6678-DTT?
+
+>: You aren't carrying a F-6678-DTT. You can only incinerate items
+in your possession. 
+
+>: Did you mean the sky-blue T-9887-OKW, the gamboge T-9887-OKW,
+the cadet-blue T-9887-OKW, the burnt-orange T-9887-OKW, the
+celadon T-9887-OKW or the tea-green T-9887-OKW?
+
+>: You aren't carrying a T-9887-OKW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the sky-blue T-9887-OKW, the gamboge T-9887-OKW,
+the cadet-blue T-9887-OKW, the burnt-orange T-9887-OKW, the
+celadon T-9887-OKW or the tea-green T-9887-OKW?
+
+>: You aren't carrying a T-9887-OKW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the sky-blue T-9887-OKW, the gamboge T-9887-OKW,
+the cadet-blue T-9887-OKW, the burnt-orange T-9887-OKW, the
+celadon T-9887-OKW or the tea-green T-9887-OKW?
+
+>: You aren't carrying a T-9887-OKW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the water-logged F-6678-DTT, the safety-orange
+F-6678-DTT, the pastel-green F-6678-DTT or the turquoise
+F-6678-DTT?
+
+>: You aren't carrying a F-6678-DTT. You can only incinerate items
+in your possession. 
+
+>: Did you mean the thistle-colored X-6458-TNF, the puce
+X-6458-TNF, the magenta X-6458-TNF, the prussian-blue X-6458-TNF
+or the dim-gray X-6458-TNF?
+
+>: You aren't carrying a X-6458-TNF. You can only incinerate items
+in your possession. 
+
+>: Did you mean the thistle-colored X-6458-TNF, the puce
+X-6458-TNF, the magenta X-6458-TNF, the prussian-blue X-6458-TNF
+or the dim-gray X-6458-TNF?
+
+>: You aren't carrying a X-6458-TNF. You can only incinerate items
+in your possession. 
+
+>: Did you mean the water-logged F-6678-DTT, the safety-orange
+F-6678-DTT, the pastel-green F-6678-DTT or the turquoise
+F-6678-DTT?
+
+>: You aren't carrying a F-6678-DTT. You can only incinerate items
+in your possession. 
+
+>: You can't take the B-5065-YQM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a B-5065-YQM. You can only incinerate items
+in your possession. 
+
+>: Did you mean the thistle-colored X-6458-TNF, the puce
+X-6458-TNF, the magenta X-6458-TNF, the prussian-blue X-6458-TNF
+or the dim-gray X-6458-TNF?
+
+>: You aren't carrying a X-6458-TNF. You can only incinerate items
+in your possession. 
+
+>: Did you mean the water-logged F-6678-DTT, the safety-orange
+F-6678-DTT, the pastel-green F-6678-DTT or the turquoise
+F-6678-DTT?
+
+>: You aren't carrying a F-6678-DTT. You can only incinerate items
+in your possession. 
+
+>: Did you mean the thistle-colored X-6458-TNF, the puce
+X-6458-TNF, the magenta X-6458-TNF, the prussian-blue X-6458-TNF
+or the dim-gray X-6458-TNF?
+
+>: You aren't carrying a X-6458-TNF. You can only incinerate items
+in your possession. 
+
+>: Did you mean the sky-blue T-9887-OKW, the gamboge T-9887-OKW,
+the cadet-blue T-9887-OKW, the burnt-orange T-9887-OKW, the
+celadon T-9887-OKW or the tea-green T-9887-OKW?
+
+>: You aren't carrying a T-9887-OKW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the sky-blue T-9887-OKW, the gamboge T-9887-OKW,
+the cadet-blue T-9887-OKW, the burnt-orange T-9887-OKW, the
+celadon T-9887-OKW or the tea-green T-9887-OKW?
+
+>: You aren't carrying a T-9887-OKW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the plaid MOSFET, the crimson MOSFET or the
+navy-blue MOSFET?
+
+>: Did you mean the bright-violet N-5065-ALO, the olive-green
+N-5065-ALO or the chartreuse N-5065-ALO?
+
+>: You aren't carrying a N-5065-ALO. You can only incinerate items
+in your possession. 
+
+>: You can't take the Z-4832-PUL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a Z-4832-PUL. You can only incinerate items
+in your possession. 
+
+>: Did you mean the heliotrope D-1403-UXS, the chocolate-colored
+D-1403-UXS, the peach-yellow D-1403-UXS or the seashell
+D-1403-UXS?
+
+>: You aren't carrying a D-1403-UXS. You can only incinerate items
+in your possession. 
+
+>: Did you mean the heliotrope D-1403-UXS, the chocolate-colored
+D-1403-UXS, the peach-yellow D-1403-UXS or the seashell
+D-1403-UXS?
+
+>: You aren't carrying a D-1403-UXS. You can only incinerate items
+in your possession. 
+
+>: You can't take the V-0010-XGX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a V-0010-XGX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the cyan J-9247-IWC or the scarlet J-9247-IWC?
+
+>: You aren't carrying a J-9247-IWC. You can only incinerate items
+in your possession. 
+
+>: You can't take the H-0010-ZBZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a H-0010-ZBZ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the heliotrope D-1403-UXS, the chocolate-colored
+D-1403-UXS, the peach-yellow D-1403-UXS or the seashell
+D-1403-UXS?
+
+>: You aren't carrying a D-1403-UXS. You can only incinerate items
+in your possession. 
+
+>: Did you mean the orange-red V-9247-KRE, the celadon V-9247-KRE,
+the green-yellow V-9247-KRE or the pale-brown V-9247-KRE?
+
+>: You aren't carrying a V-9247-KRE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the heliotrope D-1403-UXS, the chocolate-colored
+D-1403-UXS, the peach-yellow D-1403-UXS or the seashell
+D-1403-UXS?
+
+>: You aren't carrying a D-1403-UXS. You can only incinerate items
+in your possession. 
+
+>: Did you mean the plaid MOSFET, the crimson MOSFET or the
+navy-blue MOSFET?
+
+>: You aren't carrying a MOSFET. You can only incinerate items in
+your possession. 
+
+>: Did you mean the orange-red V-9247-KRE, the celadon V-9247-KRE,
+the green-yellow V-9247-KRE or the pale-brown V-9247-KRE?
+
+>: You aren't carrying a V-9247-KRE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the orange-red V-9247-KRE, the celadon V-9247-KRE,
+the green-yellow V-9247-KRE or the pale-brown V-9247-KRE?
+
+>: You aren't carrying a V-9247-KRE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the orange-red V-9247-KRE, the celadon V-9247-KRE,
+the green-yellow V-9247-KRE or the pale-brown V-9247-KRE?
+
+>: You aren't carrying a V-9247-KRE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the bright-violet N-5065-ALO, the olive-green
+N-5065-ALO or the chartreuse N-5065-ALO?
+
+>: You aren't carrying a N-5065-ALO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the eggplant J-6458-VIH, the orange-red J-6458-VIH
+or the goldenrod J-6458-VIH?
+
+>: You aren't carrying a MOSFET. You can only combine items in your
+possession. 
+
+>: You aren't carrying a MOSFET. You can only drop items in your
+possession. 
+
+>: 54th Place and Blackstone Avenue
+
+You are standing at the corner of 54th Place and Blackstone
+Avenue. From here, you can go north, east, or west. 
+There is a (broken) blaze-orange V-1623-KTK here. 
+Underneath the V-1623-KTK, there is a (broken) dodger-blue
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a taupe X-6458-TSZ. 
+Underneath the X-6458-TSZ, there is a (broken) pale-carmine
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a (broken) carrot
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a pale-violet-red
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a mint-green R-9887-SFW. 
+Underneath the R-9887-SFW, there is a taupe V-9247-KWY. 
+Underneath the V-9247-KWY, there is a (broken) dim-gray
+Z-4832-PAH. 
+Underneath the Z-4832-PAH, there is a (broken) old-lace
+P-1403-WXQ. 
+Underneath the P-1403-WXQ, there is a (broken) peach-yellow
+R-6678-FTR. 
+Underneath the R-6678-FTR, there is a (broken) selective-yellow
+T-0010-BBX. 
+Underneath the T-0010-BBX, there is a (broken) vegan D-6678-HOT.
+
+Underneath the D-6678-HOT, there is a (broken) hot-pink
+H-9247-MRC. 
+Underneath the H-9247-MRC, there is a (broken) mysterious
+L-6678-ROF. 
+Underneath the L-6678-ROF, there is a peach R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) old-gold
+V-6458-XIF. 
+Underneath the V-6458-XIF, there is a (broken) ivory N-4292-NCP.
+
+Underneath the N-4292-NCP, there is a rust R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) slate-gray
+P-6678-JJV. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: Did you mean the pale-carmine V-1623-KTK, the dodger-blue
+V-1623-KTK or the blaze-orange V-1623-KTK?
+
+>: You aren't carrying a V-1623-KTK. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-carmine V-1623-KTK, the dodger-blue
+V-1623-KTK or the blaze-orange V-1623-KTK?
+
+>: You aren't carrying a V-1623-KTK. You can only incinerate items
+in your possession. 
+
+>: You can't take the X-6458-TSZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a X-6458-TSZ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-carmine V-1623-KTK, the dodger-blue
+V-1623-KTK or the blaze-orange V-1623-KTK?
+
+>: You aren't carrying a V-1623-KTK. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-violet-red T-9887-OPS or the carrot
+T-9887-OPS?
+
+>: You aren't carrying a T-9887-OPS. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-violet-red T-9887-OPS or the carrot
+T-9887-OPS?
+
+>: You aren't carrying a T-9887-OPS. You can only incinerate items
+in your possession. 
+
+>: Did you mean the rust R-9887-SFW, the peach R-9887-SFW or the
+mint-green R-9887-SFW?
+
+>: You aren't carrying a R-9887-SFW. You can only incinerate items
+in your possession. 
+
+>: You can't take the V-9247-KWY because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a V-9247-KWY. You can only incinerate items
+in your possession. 
+
+>: You can't take the Z-4832-PAH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a Z-4832-PAH. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-1403-WXQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-1403-WXQ. You can only incinerate items
+in your possession. 
+
+>: You can't take the R-6678-FTR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a R-6678-FTR. You can only incinerate items
+in your possession. 
+
+>: You can't take the T-0010-BBX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a T-0010-BBX. You can only incinerate items
+in your possession. 
+
+>: You can't take the D-6678-HOT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a D-6678-HOT. You can only incinerate items
+in your possession. 
+
+>: You can't take the H-9247-MRC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a H-9247-MRC. You can only incinerate items
+in your possession. 
+
+>: Did you mean the organic L-6678-ROF, the pink L-6678-ROF or the
+mysterious L-6678-ROF?
+
+>: You aren't carrying a L-6678-ROF. You can only incinerate items
+in your possession. 
+
+>: Did you mean the rust R-9887-SFW, the peach R-9887-SFW or the
+mint-green R-9887-SFW?
+
+>: You aren't carrying a R-9887-SFW. You can only incinerate items
+in your possession. 
+
+>: You can't take the V-6458-XIF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a V-6458-XIF. You can only incinerate items
+in your possession. 
+
+>: You can't take the N-4292-NCP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a N-4292-NCP. You can only incinerate items
+in your possession. 
+
+>: Did you mean the rust R-9887-SFW, the peach R-9887-SFW or the
+mint-green R-9887-SFW?
+
+>: You aren't carrying a R-9887-SFW. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-6678-JJV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-6678-JJV. You can only incinerate items
+in your possession. 
+
+>: You can't take the H-6458-ZDH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a H-6458-ZDH. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-green L-5065-EGO or the gray20 L-5065-EGO?
+
+>: You aren't carrying a L-5065-EGO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-green L-5065-EGO or the gray20 L-5065-EGO?
+
+>: You aren't carrying a L-5065-EGO. You can only incinerate items
+in your possession. 
+
+>: Did you mean the mauve T-6678-BOP or the amethyst T-6678-BOP?
+
+>: Did you mean the organic L-6678-ROF, the pink L-6678-ROF or the
+mysterious L-6678-ROF?
+
+>: You aren't carrying a L-6678-ROF. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-9247-WRM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-9247-WRM. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pear D-6458-HIP, the gray20 D-6458-HIP or the
+cornflower-blue D-6458-HIP?
+
+>: You aren't carrying a D-6458-HIP. You can only incinerate items
+in your possession. 
+
+>: Did you mean the organic L-6678-ROF, the pink L-6678-ROF or the
+mysterious L-6678-ROF?
+
+>: You aren't carrying a L-6678-ROF. You can only incinerate items
+in your possession. 
+
+>: You can't take the F-1623-QEQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a F-1623-QEQ. You can only incinerate items
+in your possession. 
+
+>: You can't take the J-4292-VHX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a J-4292-VHX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the dodger-blue N-9887-AKG, the sapphire N-9887-AKG
+or the lemon-cream N-9887-AKG?
+
+>: You aren't carrying a N-9887-AKG. You can only incinerate items
+in your possession. 
+
+>: You can't take the Z-6678-PTD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a Z-6678-PTD. You can only incinerate items
+in your possession. 
+
+>: You can't take the B-0010-LBJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a B-0010-LBJ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the dodger-blue N-9887-AKG, the sapphire N-9887-AKG
+or the lemon-cream N-9887-AKG?
+
+>: You aren't carrying a N-9887-AKG. You can only incinerate items
+in your possession. 
+
+>: You can't take the H-5065-MLW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a H-5065-MLW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pear D-6458-HIP, the gray20 D-6458-HIP or the
+cornflower-blue D-6458-HIP?
+
+>: You aren't carrying a D-6458-HIP. You can only incinerate items
+in your possession. 
+
+>: You can't take the N-6678-NYZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a N-6678-NYZ. You can only incinerate items
+in your possession. 
+
+>: You can't take the R-9247-SCI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a R-9247-SCI. You can only incinerate items
+in your possession. 
+
+>: You can't take the J-5065-IVS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a J-5065-IVS. You can only incinerate items
+in your possession. 
+
+>: You can't take the V-4832-XFP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a V-4832-XFP. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-9887-WUC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-9887-WUC. You can only incinerate items
+in your possession. 
+
+>: Did you mean the goldenrod Z-1403-CIW or the bright-green
+Z-1403-CIW?
+
+>: You aren't carrying a Z-1403-CIW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-magenta F-6458-DSL or the
+school-bus-yellow F-6458-DSL?
+
+>: You aren't carrying a F-6458-DSL. You can only incinerate items
+in your possession. 
+
+>: You can't take the T-6458-BXJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a T-6458-BXJ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-magenta F-6458-DSL or the
+school-bus-yellow F-6458-DSL?
+
+>: You aren't carrying a F-6458-DSL. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-0010-JGH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-0010-JGH. You can only incinerate items
+in your possession. 
+
+>: You can't take the N-1403-ANU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a N-1403-ANU. You can only incinerate items
+in your possession. 
+
+>: Did you mean the goldenrod Z-1403-CIW or the bright-green
+Z-1403-CIW?
+
+>: You aren't carrying a Z-1403-CIW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pear D-6458-HIP, the gray20 D-6458-HIP or the
+cornflower-blue D-6458-HIP?
+
+>: You aren't carrying a D-6458-HIP. You can only incinerate items
+in your possession. 
+
+>: Did you mean the dodger-blue N-9887-AKG, the sapphire N-9887-AKG
+or the lemon-cream N-9887-AKG?
+
+>: You aren't carrying a N-9887-AKG. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray80 P-5065-WLI or the celadon P-5065-WLI?
+
+>: You aren't carrying a P-5065-WLI. You can only incinerate items
+in your possession. 
+
+>: Did you mean the jade D-4292-HCL, the sapphire D-4292-HCL, the
+water-logged D-4292-HCL or the discounted D-4292-HCL?
+
+>: Did you mean the rust B-5065-YGK or the indigo B-5065-YGK?
+
+>: You can't take the jumper shunt because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the B-4832-LUF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a B-4832-LUF. You can only incinerate items
+in your possession. 
+
+>: You can't take the R-4292-FHJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a R-4292-FHJ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the mauve T-6678-BOP or the amethyst T-6678-BOP?
+
+>: You aren't carrying a T-6678-BOP. You can only incinerate items
+in your possession. 
+
+>: Did you mean the cyan P-4832-JAD, the gamboge P-4832-JAD or the
+dodger-blue P-4832-JAD?
+
+>: You aren't carrying a P-4832-JAD. You can only incinerate items
+in your possession. 
+
+>: You can't take the L-6458-RIZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a jumper shunt. You can only combine items
+in your possession. 
+
+>: You aren't carrying a jumper shunt. You can only combine items
+in your possession. 
+
+>: You aren't carrying a jumper shunt. You can only combine items
+in your possession. 
+
+>: You aren't carrying a jumper shunt. You can only combine items
+in your possession. 
+
+>: You aren't carrying a jumper shunt. You can only drop items in
+your possession. 
+
+>: 54th Place and Dorchester Avenue
+
+You are standing at the corner of 54th Place and Dorchester
+Avenue. From here, you can go north or east. 
+There is a (broken) terra-cotta T-9887-OAU here. 
+Underneath the T-9887-OAU, there is a carrot L-1623-ETG. 
+Underneath the L-1623-ETG, there is a (broken) heliotrope
+B-1403-YDU. 
+Underneath the B-1403-YDU, there is a (broken) imported
+H-9247-MCE. 
+Underneath the H-9247-MCE, there is a pear R-0010-FBF. 
+Underneath the R-0010-FBF, there is a (broken) pale-turquoise
+Z-4832-PKJ. 
+Underneath the Z-4832-PKJ, there is a (broken) sandy-brown
+T-0010-BLZ. 
+Underneath the T-0010-BLZ, there is a (broken) miniature
+R-6678-FET. 
+Underneath the R-6678-FET, there is a (broken) linen-colored
+H-9247-MCE. 
+Underneath the H-9247-MCE, there is a (broken) snow L-4832-RFL. 
+Underneath the L-4832-RFL, there is a (broken) lilac H-0010-ZQX.
+
+Underneath the H-0010-ZQX, there is a (broken) gray30
+X-1623-GOI. 
+Underneath the X-1623-GOI, there is a (broken) silver
+L-4832-RFL. 
+Underneath the L-4832-RFL, there is a (broken) bisque
+V-1623-KEM. 
+Underneath the V-1623-KEM, there is a (broken) gray40
+N-4013-DJW. 
+Underneath the N-4013-DJW, there is a (broken) pale-red-violet
+T-9247-OWG. 
+Underneath the T-9247-OWG, there is a (broken) peach F-0010-DGD.
+
+Underneath the F-0010-DGD, there is a pine-green H-6458-ZNJ. 
+Underneath the H-6458-ZNJ, there is a persian-blue X-4832-TAN. 
+Underneath the X-4832-TAN, there is a (broken) pink P-4292-JWN. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the T-9887-OAU. 
+
+>: The T-9887-OAU has been destroyed. 
+
+>: You are now carrying the L-1623-ETG. 
+
+>: The L-1623-ETG has been destroyed. 
+
+>: Did you mean the teal B-1403-YDU or the heliotrope B-1403-YDU?
+
+>: You aren't carrying a B-1403-YDU. You can only incinerate items
+in your possession. 
+
+>: Did you mean the linen-colored H-9247-MCE or the imported
+H-9247-MCE?
+
+>: You aren't carrying a H-9247-MCE. You can only incinerate items
+in your possession. 
+
+>: You can't take the R-0010-FBF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a R-0010-FBF. You can only incinerate items
+in your possession. 
+
+>: You can't take the Z-4832-PKJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a Z-4832-PKJ. You can only incinerate items
+in your possession. 
+
+>: You can't take the T-0010-BLZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a T-0010-BLZ. You can only incinerate items
+in your possession. 
+
+>: You can't take the R-6678-FET because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a R-6678-FET. You can only incinerate items
+in your possession. 
+
+>: Did you mean the linen-colored H-9247-MCE or the imported
+H-9247-MCE?
+
+>: You aren't carrying a H-9247-MCE. You can only incinerate items
+in your possession. 
+
+>: Did you mean the silver L-4832-RFL or the snow L-4832-RFL?
+
+>: You aren't carrying a L-4832-RFL. You can only incinerate items
+in your possession. 
+
+>: You can't take the H-0010-ZQX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a H-0010-ZQX. You can only incinerate items
+in your possession. 
+
+>: You can't take the X-1623-GOI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a X-1623-GOI. You can only incinerate items
+in your possession. 
+
+>: Did you mean the silver L-4832-RFL or the snow L-4832-RFL?
+
+>: You aren't carrying a L-4832-RFL. You can only incinerate items
+in your possession. 
+
+>: You can't take the V-1623-KEM because there is another item on
+top of it (take the other item first). 
+
+>: Did you mean the yellow N-4013-DJW or the gray40 N-4013-DJW?
+
+>: You can't take the T-9247-OWG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a T-9247-OWG. You can only incinerate items
+in your possession. 
+
+>: Did you mean the coral F-0010-DGD or the peach F-0010-DGD?
+
+>: You aren't carrying a F-0010-DGD. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray90 H-6458-ZNJ, the purple H-6458-ZNJ or the
+pine-green H-6458-ZNJ?
+
+>: Did you mean the ghost-white X-4832-TAN or the persian-blue
+X-4832-TAN?
+
+>: You aren't carrying a X-4832-TAN. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-4292-JWN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-4292-JWN. You can only incinerate items
+in your possession. 
+
+>: Did you mean the coral F-0010-DGD or the peach F-0010-DGD?
+
+>: You aren't carrying a F-0010-DGD. You can only incinerate items
+in your possession. 
+
+>: Did you mean the violet Z-4292-PHT, the purple Z-4292-PHT, the
+red-violet Z-4292-PHT, the peach-orange Z-4292-PHT or the
+salmon-colored Z-4292-PHT?
+
+>: Did you mean the teal B-1403-YDU or the heliotrope B-1403-YDU?
+
+>: You aren't carrying a B-1403-YDU. You can only incinerate items
+in your possession. 
+
+>: You can't take the J-1623-IJK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a J-1623-IJK. You can only incinerate items
+in your possession. 
+
+>: Did you mean the ghost-white X-4832-TAN or the persian-blue
+X-4832-TAN?
+
+>: You aren't carrying a X-4832-TAN. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-6678-JTX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-6678-JTX. You can only incinerate items
+in your possession. 
+
+>: Did you mean the violet Z-4292-PHT, the purple Z-4292-PHT, the
+red-violet Z-4292-PHT, the peach-orange Z-4292-PHT or the
+salmon-colored Z-4292-PHT?
+
+>: You aren't carrying a Z-4292-PHT. You can only incinerate items
+in your possession. 
+
+>: Did you mean the yellow N-4013-DJW or the gray40 N-4013-DJW?
+
+>: You aren't carrying a N-4013-DJW. You can only incinerate items
+in your possession. 
+
+>: Did you mean the violet Z-4292-PHT, the purple Z-4292-PHT, the
+red-violet Z-4292-PHT, the peach-orange Z-4292-PHT or the
+salmon-colored Z-4292-PHT?
+
+>: You aren't carrying a Z-4292-PHT. You can only incinerate items
+in your possession. 
+
+>: Did you mean the gray90 H-6458-ZNJ, the purple H-6458-ZNJ or the
+pine-green H-6458-ZNJ?
+
+>: You aren't carrying a H-6458-ZNJ. You can only incinerate items
+in your possession. 
+
+>: You can't take the power cord because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a power cord. You can only combine items in
+your possession. 
+
+>: You aren't carrying a power cord. You can only combine items in
+your possession. 
+
+>: You aren't carrying a power cord. You can only combine items in
+your possession. 
+
+>: You aren't carrying a power cord. You can only combine items in
+your possession. 
+
+>: You aren't carrying a power cord. You can only drop items in
+your possession. 
+
+>: 54th Place and Blackstone Avenue
+
+You are standing at the corner of 54th Place and Blackstone
+Avenue. From here, you can go north, east, or west. 
+There is a (broken) blaze-orange V-1623-KTK here. 
+Underneath the V-1623-KTK, there is a (broken) dodger-blue
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a taupe X-6458-TSZ. 
+Underneath the X-6458-TSZ, there is a (broken) pale-carmine
+V-1623-KTK. 
+Underneath the V-1623-KTK, there is a (broken) carrot
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a pale-violet-red
+T-9887-OPS. 
+Underneath the T-9887-OPS, there is a mint-green R-9887-SFW. 
+Underneath the R-9887-SFW, there is a taupe V-9247-KWY. 
+Underneath the V-9247-KWY, there is a (broken) dim-gray
+Z-4832-PAH. 
+Underneath the Z-4832-PAH, there is a (broken) old-lace
+P-1403-WXQ. 
+Underneath the P-1403-WXQ, there is a (broken) peach-yellow
+R-6678-FTR. 
+Underneath the R-6678-FTR, there is a (broken) selective-yellow
+T-0010-BBX. 
+Underneath the T-0010-BBX, there is a (broken) vegan D-6678-HOT.
+
+Underneath the D-6678-HOT, there is a (broken) hot-pink
+H-9247-MRC. 
+Underneath the H-9247-MRC, there is a (broken) mysterious
+L-6678-ROF. 
+Underneath the L-6678-ROF, there is a peach R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) old-gold
+V-6458-XIF. 
+Underneath the V-6458-XIF, there is a (broken) ivory N-4292-NCP.
+
+Underneath the N-4292-NCP, there is a rust R-9887-SFW. 
+Underneath the R-9887-SFW, there is a (broken) slate-gray
+P-6678-JJV. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: 54th Street and Blackstone Avenue
+
+You are standing at the corner of 54th Street and Blackstone
+Avenue. From here, you can go north, east, south, or west. 
+There is a textbook here. 
+
+>: 53th Street and Blackstone Avenue
+
+You are standing at the corner of 53th Street and Blackstone
+Avenue. From here, you can go north, east, south, or west. 
+There is a (broken) battery here. 
+Underneath the battery, there is a buff F-6678-DYP. 
+Underneath the F-6678-DYP, there is a (broken) olive-green
+R-4292-FWH. 
+Underneath the R-4292-FWH, there is a (broken) green D-4832-HUX.
+
+Underneath the D-4832-HUX, there is a (broken) prussian-blue
+P-1623-WEU. 
+Underneath the P-1623-WEU, there is a (broken) black X-9887-GKK.
+
+Underneath the X-9887-GKK, there is a reciprocating H-9887-MUQ. 
+Underneath the H-9887-MUQ, there is a bright-violet T-4292-BHD. 
+Underneath the T-4292-BHD, there is a (broken) flax D-4292-HRJ. 
+Underneath the D-4292-HRJ, there is a (broken) yellow
+Z-1623-COC. 
+Underneath the Z-1623-COC, there is a (broken) goldenrod
+X-0010-TVP. 
+Underneath the X-0010-TVP, there is a forest-green F-6678-DYP. 
+Underneath the F-6678-DYP, there is a sky-blue N-1623-ATY. 
+Underneath the N-1623-ATY, there is a (broken) rotating
+H-6678-ZJL. 
+Underneath the H-6678-ZJL, there is a (broken) sienna
+T-6678-BEN. 
+Underneath the T-6678-BEN, there is a heliotrope D-5065-UGE. 
+Underneath the D-5065-UGE, there is a (broken) sea-green
+N-1623-ATY. 
+Underneath the N-1623-ATY, there is a (broken) ochre D-4292-HRJ.
+
+Underneath the D-4292-HRJ, there is a (broken) cream Z-1623-COC.
+
+Underneath the Z-1623-COC, there is a (broken) powder-blue
+T-6678-BEN. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the battery. 
+
+>: Did you mean the burgundy F-6678-DYP, the peach-puff F-6678-DYP,
+the forest-green F-6678-DYP or the buff F-6678-DYP?
+
+>: You aren't carrying a F-6678-DYP. You can only incinerate items
+in your possession. 
+
+>: Did you mean the pale-mauve R-4292-FWH or the olive-green
+R-4292-FWH?
+
+>: You aren't carrying a R-4292-FWH. You can only incinerate items
+in your possession. 
+
+>: You can't take the D-4832-HUX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a D-4832-HUX. You can only incinerate items
+in your possession. 
+
+>: You can't take the P-1623-WEU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a P-1623-WEU. You can only incinerate items
+in your possession. 
+
+>: You can't take the X-9887-GKK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a X-9887-GKK. You can only incinerate items
+in your possession. 
+
+>: You can't take the H-9887-MUQ because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the T-4292-BHD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a T-4292-BHD. You can only incinerate items
+in your possession. 
+
+>: Did you mean the ochre D-4292-HRJ or the flax D-4292-HRJ?
+
+>: You aren't carrying a D-4292-HRJ. You can only incinerate items
+in your possession. 
+
+>: Did you mean the eggplant Z-1623-COC, the cream Z-1623-COC or
+the yellow Z-1623-COC?
+
+>: You aren't carrying a Z-1623-COC. You can only combine items in
+your possession. 
+
+>: You aren't carrying a H-9887-MUQ. You can only combine items in
+your possession. 
+
+>: You can't drop the battery because you can't bring yourself to
+part with it. 
+
+>: % UMIX shutdown: console EOF

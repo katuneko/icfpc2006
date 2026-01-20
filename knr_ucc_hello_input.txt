@@ -1,0 +1,4 @@
+knr
+X3.159-1989
+ucc hello.c io.c std.c
+ls -l

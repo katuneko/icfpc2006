@@ -1,0 +1,12 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+north
+north
+examine package robot
+switch XML
+look
+switch English
+examine package robot
+show

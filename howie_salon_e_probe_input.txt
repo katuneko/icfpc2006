@@ -1,0 +1,11 @@
+howie
+xyzzy
+adventure
+west
+look
+take bullet-point
+examine bullet-point
+take slides.ppt
+examine slides.ppt
+east
+look

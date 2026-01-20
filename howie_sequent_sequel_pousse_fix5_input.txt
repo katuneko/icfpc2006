@@ -1,0 +1,92 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+north
+take midnight-blue B-1623-YOG
+incinerate midnight-blue B-1623-YOG
+take blaze-orange H-6678-ZYT
+incinerate blaze-orange H-6678-ZYT
+take midnight-blue P-4832-JFJ
+incinerate midnight-blue P-4832-JFJ
+take beige Z-6458-PSF
+incinerate beige Z-6458-PSF
+take midnight-blue V-9887-KPW
+incinerate midnight-blue V-9887-KPW
+take ivory L-9247-ECC
+incinerate ivory L-9247-ECC
+take blue-violet H-6678-ZYT
+incinerate blue-violet H-6678-ZYT
+take azure H-6678-ZYT
+incinerate azure H-6678-ZYT
+take ivory N-1623-AJI
+incinerate ivory N-1623-AJI
+take bright-green J-0010-VGZ
+incinerate bright-green J-0010-VGZ
+take mauve F-4292-DRN
+incinerate mauve F-4292-DRN
+take brass J-0010-VGZ
+incinerate brass J-0010-VGZ
+take beige N-1623-AJI
+incinerate beige N-1623-AJI
+take black L-9247-ECC
+incinerate black L-9247-ECC
+take bisque H-6678-ZYT
+incinerate bisque H-6678-ZYT
+take ivory H-6678-ZYT
+incinerate ivory H-6678-ZYT
+take beige H-6678-ZYT
+incinerate beige H-6678-ZYT
+take midnight-blue H-6678-ZYT
+incinerate midnight-blue H-6678-ZYT
+take bright-turquoise J-0010-VGZ
+incinerate bright-turquoise J-0010-VGZ
+take midnight-blue L-9247-ECC
+incinerate midnight-blue L-9247-ECC
+take blanched-almond-colored J-0010-VGZ
+incinerate blanched-almond-colored J-0010-VGZ
+take blue J-0010-VGZ
+incinerate blue J-0010-VGZ
+take black H-6678-ZYT
+incinerate black H-6678-ZYT
+take blaze-orange J-0010-VGZ
+incinerate blaze-orange J-0010-VGZ
+take black D-5065-UVM
+incinerate black D-5065-UVM
+take ivory Z-6458-PSF
+take midnight-blue N-1623-AJI
+incinerate midnight-blue N-1623-AJI
+take azure J-0010-VGZ
+incinerate azure J-0010-VGZ
+take beige J-0010-VGZ
+incinerate beige J-0010-VGZ
+take pousse game
+take mauve N-1623-AJI
+take midnight-blue D-5065-UVM
+take blue-violet J-0010-VGZ
+combine mauve N-1623-AJI with blue-violet J-0010-VGZ
+combine mauve N-1623-AJI with midnight-blue D-5065-UVM
+combine mauve N-1623-AJI with ivory Z-6458-PSF
+take mauve D-5065-UVM
+incinerate mauve D-5065-UVM
+take black N-1623-AJI
+incinerate black N-1623-AJI
+take black Z-6458-PSF
+incinerate black Z-6458-PSF
+take midnight-blue J-0010-VGZ
+incinerate midnight-blue J-0010-VGZ
+take bisque J-0010-VGZ
+take midnight-blue R-4292-FMP
+incinerate midnight-blue R-4292-FMP
+take midnight-blue Z-6458-PSF
+take mauve J-0010-VGZ
+incinerate mauve J-0010-VGZ
+take black J-0010-VGZ
+take ivory J-0010-VGZ
+incinerate ivory J-0010-VGZ
+combine midnight-blue Z-6458-PSF with bisque J-0010-VGZ
+combine mauve N-1623-AJI with midnight-blue Z-6458-PSF
+combine pousse game with black J-0010-VGZ
+combine pousse game with mauve N-1623-AJI
+examine pousse game
+show

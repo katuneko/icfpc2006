@@ -1,0 +1,30 @@
+{ O'Cult XML SNF normalizer (CPS, direct continuation application) }
+
+SNF x => E x D;
+
+E (Seq x y) k => E x (K y k);
+E (Tag q d) k => E d (I q k);
+E v k => k v;
+
+(K y k) v => E y (M v k);
+
+{ merge sequences }
+M (Seq a b) k c => M b (Seq a k) c;
+(Seq a k) rest => k (Seq a rest);
+
+M (Tag q a) k (Tag q b) => M a (I q k) b;
+
+M a k b => k (Seq a b);
+
+{ insert tag in order and remove duplicates }
+I q k (Tag q d) => k (Tag q d);
+
+I Emph k (Tag Bold d) => I Emph (I Bold k) d;
+
+I Maj k (Tag q d) => I Maj (I q k) d;
+
+I q k d => k (Tag q d);
+
+D v => v;
+
+. { end }

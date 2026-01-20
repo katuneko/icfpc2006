@@ -1,0 +1,117 @@
+howie
+xyzzy
+adventure
+north
+take bolt
+take spring
+incinerate spring
+take button
+take processor
+take pill
+incinerate pill
+take radio
+take cache
+combine processor with cache
+take blue transistor
+combine radio with blue transistor
+take antenna
+incinerate antenna
+take screw
+take motherboard
+combine motherboard with screw
+take A-1920-IXB
+combine A-1920-IXB with bolt
+combine A-1920-IXB with processor
+combine A-1920-IXB with radio
+take red transistor
+combine A-1920-IXB with red transistor
+combine motherboard with A-1920-IXB
+take keypad
+combine keypad with motherboard
+combine keypad with button
+south
+use keypad
+incinerate keypad
+take /etc/passwd
+incinerate /etc/passwd
+take note
+incinerate note
+take downloader
+take uploader
+incinerate downloader
+east
+east
+east
+north
+north
+take moccasin N-4292-NWT
+incinerate moccasin N-4292-NWT
+take gray-tea-green L-4832-RPN
+take pale-chestnut T-9247-OHI
+incinerate pale-chestnut T-9247-OHI
+take pale-cornflower-blue V-6458-XDJ
+incinerate pale-cornflower-blue V-6458-XDJ
+take misty-rose T-9247-OHI
+incinerate misty-rose T-9247-OHI
+take sangria N-4292-NWT
+incinerate sangria N-4292-NWT
+take jade P-1403-WSU
+incinerate jade P-1403-WSU
+take yellow-green P-6678-JEZ
+incinerate yellow-green P-6678-JEZ
+take crimson P-6678-JEZ
+incinerate crimson P-6678-JEZ
+take scarlet Z-5065-CGQ
+incinerate scarlet Z-5065-CGQ
+take organic T-9247-OHI
+incinerate organic T-9247-OHI
+take bright-turquoise J-1623-ITM
+incinerate bright-turquoise J-1623-ITM
+take mint-green X-4832-TKP
+incinerate mint-green X-4832-TKP
+take denim T-9247-OHI
+incinerate denim T-9247-OHI
+take gray30 X-4832-TKP
+incinerate gray30 X-4832-TKP
+take gray60 T-9247-OHI
+incinerate gray60 T-9247-OHI
+take azure H-6458-ZXL
+take carmine D-6678-HJX
+incinerate carmine D-6678-HJX
+take cornflower-blue D-6678-HJX
+incinerate cornflower-blue D-6678-HJX
+take tan D-6678-HJX
+incinerate tan D-6678-HJX
+take pale-mauve L-4832-RPN
+incinerate pale-mauve L-4832-RPN
+take robin-egg-blue D-6678-HJX
+incinerate robin-egg-blue D-6678-HJX
+take sandy-brown P-1403-WSU
+incinerate sandy-brown P-1403-WSU
+take cadet-blue H-9247-MMG
+incinerate cadet-blue H-9247-MMG
+take pale-brown P-1403-WSU
+incinerate pale-brown P-1403-WSU
+take gray40 L-4832-RPN
+incinerate gray40 L-4832-RPN
+take cream H-9247-MMG
+incinerate cream H-9247-MMG
+take status LED
+combine status LED with gray-tea-green L-4832-RPN
+take black D-6678-HJX
+combine status LED with black D-6678-HJX
+take periwinkle D-6678-HJX
+combine status LED with periwinkle D-6678-HJX
+take violet D-6678-HJX
+combine status LED with violet D-6678-HJX
+take old-lace D-6678-HJX
+combine status LED with old-lace D-6678-HJX
+take navy-blue D-6678-HJX
+combine status LED with navy-blue D-6678-HJX
+take burnt-sienna D-6678-HJX
+incinerate burnt-sienna D-6678-HJX
+take peppered D-6678-HJX
+combine status LED with peppered D-6678-HJX
+combine status LED with azure H-6458-ZXL
+examine status LED
+combine uploader with status LED

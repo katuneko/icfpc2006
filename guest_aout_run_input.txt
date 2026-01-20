@@ -1,0 +1,2 @@
+guest
+run /home/guest/code/a.out

@@ -1,0 +1,5 @@
+gardener
+mathemantica
+cat /etc/passwd
+ls /etc
+ls /

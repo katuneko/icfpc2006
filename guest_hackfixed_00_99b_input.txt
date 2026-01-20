@@ -1,0 +1,96 @@
+guest
+run /bin/umodem hack_fixed_00_99.bas EOF
+V        REM  +------------------------------------------------+
+X        REM  | HACK.BAS      (c) 19100   fr33 v4r14bl3z       |
+XV       REM  |                                                |
+XX       REM  | Brute-forces passwords on UM vIX.0 systems.    |
+XXV      REM  | Compile with Qvickbasic VII.0 or later:        |
+XXX      REM  |    /bin/qbasic hack.bas                        |
+XXXV     REM  | Then run:                                      |
+XL       REM  |   ./hack.exe username                          |
+XLV      REM  |                                                |
+L        REM  | This program is for educational purposes only! |
+LV       REM  +------------------------------------------------+
+LX       REM
+LXV      IF ARGS() > I THEN GOTO LXXXV
+LXX      PRINT "usage: ./hack.exe username"
+LXXV     PRINT CHR(X)
+LXXX     END
+LXXXV    REM
+XC       REM  get username from command line
+XCV      DIM username AS STRING
+C        username = ARG(II)
+CV       REM  common words used in passwords
+CX       DIM pwdcount AS INTEGER
+CXV      pwdcount = XXVI
+CXX      DIM words(pwdcount) AS STRING
+CXXV     words(I) = "ftd"
+CXXX     words(II) = "ftdflorist"
+CXXXV    words(III) = "ftdflowers"
+CXL      words(IV) = "teleflora"
+CXLV     words(V) = "telegraph"
+CL       words(VI) = "florist"
+CLV      words(VII) = "flowers"
+CLX      words(VIII) = "delivery"
+CLXV     words(IX) = "floral"
+CLXX     words(X) = "bouquet"
+CLXXV    words(XI) = "knr"
+CLXXX    words(XII) = "kernighan"
+CLXXXV   words(XIII) = "ritchie"
+CXC      words(XIV) = "kandr"
+CXCV     words(XV) = "kr"
+CC       words(XVI) = "bwk"
+CCV      words(XVII) = "dmr"
+CCX      words(XVIII) = "ken"
+CCXV     words(XIX) = "dennis"
+CCXX     words(XX) = "thompson"
+CCXXV    words(XXI) = "bell"
+CCXXX    words(XXII) = "unix"
+CCXXXV   words(XXIII) = "c"
+CCXL     words(XXIV) = "cprogramminglanguage"
+CCXLV    words(XXV) = "thecprogramminglanguage"
+CCL      words(XXVI) = "plan9"
+CCCXC    REM try each password
+CCCXCV   PRINT "attempting hack with " + pwdcount + " passwords " + CHR(X)
+CD       DIM i AS INTEGER
+CDV      i = I
+CDX      IF CHECKPASS(username, words(i)) THEN GOTO CDXXX
+CDXV     i = i + I
+CDXX     IF i > pwdcount THEN GOTO CDXLV
+CDXXV    GOTO CDX
+CDXXX    PRINT "found match!! for user " + username + CHR(X)
+CDXXXV   PRINT "password: " + words(i) + CHR(X)
+CDXL     END
+CDXLV    PRINT "no simple matches for user " + username + CHR(X)
+CDL      REM
+CDLV     REM  the above code will probably crack passwords for many
+CDLX     REM  users so I always try it first. when it fails, I try the
+CDLXV    REM  more expensive method below.
+CDLXX    REM
+CDLXXV   REM  passwords often take the form
+CDLXXX   REM    dictwordDD
+CDLXXXV  REM  where DD is a two-digit decimal number. try these next:
+CDXC     DIM j AS INTEGER
+CDXCV    DIM candidate AS STRING
+CDXCIX   i = I
+D        IF i > pwdcount THEN GOTO DLXV
+DV       candidate = words(i) + "00"
+DVI      IF CHECKPASS(username, candidate) THEN GOTO DLI
+DVII     j = I
+DX       IF j > XCIX THEN GOTO DXLV
+DXV      IF j < X THEN candidate = words(i) + "0" + j
+DXX      IF j > IX THEN candidate = words(i) + j
+DXXV     IF CHECKPASS(username, candidate) THEN GOTO DLI
+DXXX     j = j + I
+DXXXV    GOTO DX
+DXL      i = i + I
+DXLV     GOTO D
+DLI      PRINT "found match!! for user " + username + CHR(X)
+DLV      PRINT "password: " + candidate + CHR(X)
+DLX      END
+DLXV     PRINT "no dictionary+number matches for user " + username + CHR(X)
+DLXX     END
+EOF
+/bin/qbasic hack_fixed_00_99.bas
+hack_fixed_00_99.exe ftd
+hack_fixed_00_99.exe knr

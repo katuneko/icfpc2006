@@ -1,0 +1,172 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: logged in as guest
+INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d
+
+
+You have new mail. Type 'mail' to view.
+% Begin sending characters. Terminate with EOF...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+Transferred 2048...
+Transferred 2560...
+Transferred 3072...
+writing 3456 characters
+INTRO.UMD=10@999999|7005f80d6cd9b7b837802f1e58b11b8
+
+You have new mail. Type 'mail' to view.
+% 
+You have new mail. Type 'mail' to view.
+% V SKIP
+X SKIP
+XV SKIP
+XX SKIP
+XXV SKIP
+XXX SKIP
+XXXV SKIP
+XL SKIP
+XLV SKIP
+L SKIP
+LV SKIP
+LX SKIP
+LXV IF (ARGS() > I) THEN GOTO LXXXV ELSE SKIP
+LXX PRINT "usage: ./hack.exe username"
+LXXV PRINT CHR(X)
+LXXX END
+LXXXV SKIP
+XC SKIP
+XCV DIM username AS STRING
+C SET username = ARG(II)
+CV SKIP
+CX DIM pwdcount AS INTEGER
+CXV SET pwdcount = XXVI
+CXX DIM words(pwdcount) AS STRING
+CXXV SET words(I) = "ftd"
+CXXX SET words(II) = "ftdflorist"
+CXXXV SET words(III) = "ftdflowers"
+CXL SET words(IV) = "teleflora"
+CXLV SET words(V) = "telegraph"
+CL SET words(VI) = "florist"
+CLV SET words(VII) = "flowers"
+CLX SET words(VIII) = "delivery"
+CLXV SET words(IX) = "floral"
+CLXX SET words(X) = "bouquet"
+CLXXV SET words(XI) = "knr"
+CLXXX SET words(XII) = "kernighan"
+CLXXXV SET words(XIII) = "ritchie"
+CXC SET words(XIV) = "kandr"
+CXCV SET words(XV) = "kr"
+CC SET words(XVI) = "bwk"
+CCV SET words(XVII) = "dmr"
+CCX SET words(XVIII) = "ken"
+CCXV SET words(XIX) = "dennis"
+CCXX SET words(XX) = "thompson"
+CCXXV SET words(XXI) = "bell"
+CCXXX SET words(XXII) = "unix"
+CCXXXV SET words(XXIII) = "c"
+CCXL SET words(XXIV) = "cprogramminglanguage"
+CCXLV SET words(XXV) = "thecprogramminglanguage"
+CCL SET words(XXVI) = "plan9"
+CCCXC SKIP
+CCCXCV PRINT ((("attempting hack with " + pwdcount) + " passwords ") + CHR(X))
+CD DIM i AS INTEGER
+CDV SET i = I
+CDX IF CHECKPASS(username, words(i)) THEN GOTO CDXXX ELSE SKIP
+CDXV SET i = (i + I)
+CDXX IF (i > pwdcount) THEN GOTO CDXLV ELSE SKIP
+CDXXV GOTO CDX
+CDXXX PRINT (("found match!! for user " + username) + CHR(X))
+CDXXXV PRINT (("password: " + words(i)) + CHR(X))
+CDXL END
+CDXLV PRINT (("no simple matches for user " + username) + CHR(X))
+CDL SKIP
+CDLV SKIP
+CDLX SKIP
+CDLXV SKIP
+CDLXX SKIP
+CDLXXV SKIP
+CDLXXX SKIP
+CDLXXXV SKIP
+CDXC DIM j AS INTEGER
+CDXCV DIM candidate AS STRING
+CDXCIX SET i = I
+D IF (i > pwdcount) THEN GOTO DLXV ELSE SKIP
+DV SET candidate = (words(i) + "00")
+DVI IF CHECKPASS(username, candidate) THEN GOTO DLI ELSE SKIP
+DVII SET j = I
+DX IF (j > XCIX) THEN GOTO DXLV ELSE SKIP
+DXV IF (j < X) THEN SET candidate = ((words(i) + "0") + j) ELSE SKIP
+DXX IF (j > IX) THEN SET candidate = (words(i) + j) ELSE SKIP
+DXXV IF CHECKPASS(username, candidate) THEN GOTO DLI ELSE SKIP
+DXXX SET j = (j + I)
+DXXXV GOTO DX
+DXL SET i = (i + I)
+DXLV GOTO D
+DLI PRINT (("found match!! for user " + username) + CHR(X))
+DLV PRINT (("password: " + candidate) + CHR(X))
+DLX END
+DLXV PRINT (("no dictionary+number matches for user " + username) + CHR(X))
+DLXX END
+INTRO.QBC=10@999999|e6ee9c98b80b4dd04814a29a37bcba8
+Compiled.
+
+You have new mail. Type 'mail' to view.
+% attempting hack with XXVI passwords 
+no simple matches for user ftd

@@ -1,0 +1,88 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+History of Technology Exhibit, Entrance
+
+You are at the entrance of an exhibit titled, "The History of
+Technology." A sign reads, "Due to recent difficulties, only
+robots with intact warranties will be admitted." From here, you
+can go north or east. 
+
+
+>: use: Exploit the functionality of an item.
+
+>: combine: Fix one item by adding a missing part. For example
+'combine radio with transistor'. Synonyms include comb and c.
+
+>: take: Pick up an item. Synonyms include get and grab.
+
+>: go: Move from one location to another. Usually you can move
+north, east, south, or west. These directions may be abbreviated
+n, e, s, and w. You can also use these single-letter directions
+without the 'go' keyword.
+
+>: examine: Inspect an item or your environment. Synonyms include
+ex, x, look, and l.
+
+>: % UMIX shutdown: console EOF

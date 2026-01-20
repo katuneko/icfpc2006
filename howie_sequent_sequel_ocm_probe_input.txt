@@ -1,0 +1,26 @@
+howie
+xyzzy
+adventure sequent-sequel
+take T-9247-OCM
+east
+take T-9247-OCM
+north
+take T-9247-OCM
+south
+east
+take T-9247-OCM
+west
+west
+take T-9247-OCM
+north
+take T-9247-OCM
+north
+take T-9247-OCM
+north
+take T-9247-OCM
+north
+take T-9247-OCM
+north
+take T-9247-OCM
+north
+take T-9247-OCM

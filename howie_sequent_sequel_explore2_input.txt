@@ -1,0 +1,16 @@
+howie
+xyzzy
+adventure sequent-sequel
+east
+look
+north
+look
+south
+look
+west
+look
+switch XML
+look
+switch English
+look
+show

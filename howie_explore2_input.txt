@@ -1,0 +1,10 @@
+howie
+xyzzy
+ls -a
+cat .history
+cat /etc/passwd
+cat /etc/shadow
+ls /home/ftd
+ls /home/knr
+mail
+q

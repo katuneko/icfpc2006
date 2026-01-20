@@ -1,0 +1,4 @@
+guest
+ls
+ls /home/guest
+ls /home/guest/code

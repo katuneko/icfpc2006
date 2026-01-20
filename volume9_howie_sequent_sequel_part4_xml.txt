@@ -1,0 +1,1795 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+History of Technology Exhibit, Entrance
+
+You are at the entrance of an exhibit titled, "The History of
+Technology." A sign reads, "Due to recent difficulties, only
+robots with intact warranties will be admitted." From here, you
+can go north or east. 
+
+
+>: History of Technology Exhibit, Part 1
+
+You are in an exhibit on the history of technology. A placard
+reads, "Race Car." From here, you can go north or south. 
+There is a (broken) cadet-blue H-1623-MEU here. 
+Underneath the H-1623-MEU, there is a (broken) magenta
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a beige P-9887-WKK. 
+Underneath the P-9887-WKK, there is a (broken) ivory P-9887-WKK.
+
+Underneath the P-9887-WKK, there is a bisque P-9887-WKK. 
+Underneath the P-9887-WKK, there is a (broken) plum H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) pastel-pink
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) peach-orange
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) wheat-colored
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) lavender
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a black P-9887-WKK. 
+Underneath the P-9887-WKK, there is a (broken) viridian
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) lime-green
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) chocolate-colored
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) midnight-blue
+P-9887-WKK. 
+Underneath the P-9887-WKK, there is a linen-colored H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) race car. 
+Underneath the race car, there is a (broken) malachite
+H-1623-MEU. 
+Underneath the H-1623-MEU, there is a burnt-umber H-1623-MEU. 
+Underneath the H-1623-MEU, there is a (broken) burnt-orange
+H-1623-MEU. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: History of Technology Exhibit, Part 2
+
+You are in an exhibit on the history of technology. A placard
+reads, "Pousse Game." From here, you can go north or south. 
+There is a (broken) midnight-blue B-1623-YOG here. 
+Underneath the B-1623-YOG, there is a (broken) blaze-orange
+H-6678-ZYT. 
+Underneath the H-6678-ZYT, there is a midnight-blue P-4832-JFJ. 
+Underneath the P-4832-JFJ, there is a (broken) beige Z-6458-PSF.
+
+Underneath the Z-6458-PSF, there is a (broken) midnight-blue
+V-9887-KPW. 
+Underneath the V-9887-KPW, there is a (broken) ivory L-9247-ECC.
+
+Underneath the L-9247-ECC, there is a blue-violet H-6678-ZYT. 
+Underneath the H-6678-ZYT, there is a (broken) azure H-6678-ZYT.
+
+Underneath the H-6678-ZYT, there is a (broken) ivory N-1623-AJI.
+
+Underneath the N-1623-AJI, there is a (broken) bright-green
+J-0010-VGZ. 
+Underneath the J-0010-VGZ, there is a mauve F-4292-DRN. 
+Underneath the F-4292-DRN, there is a brass J-0010-VGZ. 
+Underneath the J-0010-VGZ, there is a (broken) beige N-1623-AJI.
+
+Underneath the N-1623-AJI, there is a (broken) black L-9247-ECC.
+
+Underneath the L-9247-ECC, there is a (broken) bisque
+H-6678-ZYT. 
+Underneath the H-6678-ZYT, there is a (broken) ivory H-6678-ZYT.
+
+Underneath the H-6678-ZYT, there is a (broken) beige H-6678-ZYT.
+
+Underneath the H-6678-ZYT, there is a (broken) midnight-blue
+H-6678-ZYT. 
+Underneath the H-6678-ZYT, there is a bright-turquoise
+J-0010-VGZ. 
+Underneath the J-0010-VGZ, there is a (broken) midnight-blue
+L-9247-ECC. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: History of Technology Exhibit, Part 3
+
+You are in an exhibit on the history of technology. A placard
+reads, "Package Robot." From here, you can go north or south. 
+There is a flax D-4292-HMN here. 
+Underneath the D-4292-HMN, there is a burnt-orange D-4292-HMN. 
+Underneath the D-4292-HMN, there is a cream D-4292-HMN. 
+Underneath the D-4292-HMN, there is a (broken) foreign
+Z-1623-CJG. 
+Underneath the Z-1623-CJG, there is a taupe D-4292-HMN. 
+Underneath the D-4292-HMN, there is a (broken) firebrick
+D-4292-HMN. 
+Underneath the D-4292-HMN, there is a (broken) carrot
+D-4292-HMN. 
+Underneath the D-4292-HMN, there is a floral-white H-9887-MPU. 
+Underneath the H-9887-MPU, there is a (broken) organic
+Z-1623-CJG. 
+Underneath the Z-1623-CJG, there is a (broken) raw-umber
+D-4292-HMN. 
+Underneath the D-4292-HMN, there is a (broken) wheat-colored
+Z-1623-CJG. 
+Underneath the Z-1623-CJG, there is an olive D-4292-HMN. 
+Underneath the D-4292-HMN, there is a (broken) floating
+H-9887-MPU. 
+Underneath the H-9887-MPU, there is a terra-cotta Z-1623-CJG. 
+Underneath the Z-1623-CJG, there is a (broken) lavender-blush
+Z-1623-CJG. 
+Underneath the Z-1623-CJG, there is a (broken) peach Z-1623-CJG.
+
+Underneath the Z-1623-CJG, there is a (broken) sangria
+Z-1623-CJG. 
+Underneath the Z-1623-CJG, there is a (broken) buff D-4292-HMN. 
+Underneath the D-4292-HMN, there is a (broken) sky-blue
+D-4292-HMN. 
+Underneath the D-4292-HMN, there is a maroon Z-1623-CJG. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: History of Technology Exhibit, Part 4
+
+You are in an exhibit on the history of technology. A placard
+reads, "Robber." From here, you can go north or south. 
+There is a (broken) amber X-4832-TFT here. 
+Underneath the X-4832-TFT, there is a (broken) amethyst
+L-4832-RKR. 
+Underneath the L-4832-RKR, there is a (broken) aquamarine
+robber. 
+Underneath the robber, there is a (broken) azure L-4832-RKR. 
+Underneath the L-4832-RKR, there is a (broken) beige L-4832-RKR.
+
+Underneath the L-4832-RKR, there is a (broken) bisque
+L-4832-RKR. 
+Underneath the L-4832-RKR, there is a (broken) black H-9247-MHK.
+
+Underneath the H-9247-MHK, there is a blanched-almond-colored
+D-6678-HED. 
+Underneath the D-6678-HED, there is a blaze-orange L-4832-RKR. 
+Underneath the L-4832-RKR, there is a blue D-6678-HED. 
+Underneath the D-6678-HED, there is a blue-violet T-6458-BNR. 
+Underneath the T-6458-BNR, there is a bondi-blue X-5065-GQY. 
+Underneath the X-5065-GQY, there is a brass B-6678-LTH. 
+Underneath the B-6678-LTH, there is a bright-green F-9247-QWO. 
+Underneath the F-9247-QWO, there is a (broken) bright-turquoise
+L-4832-RKR. 
+Underneath the L-4832-RKR, there is a bright-violet J-4832-VAV. 
+Underneath the J-4832-VAV, there is a bronze N-1403-ADE. 
+Underneath the N-1403-ADE, there is a brown R-0010-FGL. 
+Underneath the R-0010-FGL, there is a (broken) buff B-1403-YIC. 
+Underneath the B-1403-YIC, there is a burgundy T-6458-BNR. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: <success>
+  <command>
+    <switch>
+      XML
+    </switch>
+  </command>
+</success>
+<success>
+  <command>
+    <look>
+      <room>
+        <name>
+          History of Technology Exhibit, Part 4
+        </name>
+        <description>
+          You are in an exhibit on the history of technology. A placard reads, "Robber." From here, you can go north or south. 
+        </description>
+        <items>
+          <item>
+            <name>
+              X-4832-TFT
+            </name>
+            <description>
+              an exemplary instance of part number X-4832-TFT
+            </description>
+            <adjectives>
+              <adjective>
+                amber
+              </adjective>
+            </adjectives>
+            <condition>
+              <broken>
+                <condition>
+                  <pristine>
+                  </pristine>
+                </condition>
+                <missing>
+                  <kind>
+                    <name>
+                      T-6458-BNR
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      X-5065-GQY
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      B-6678-LTH
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      F-9247-QWO
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      J-4832-VAV
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      N-1403-ADE
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      R-0010-FGL
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      V-1623-KJS
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      Z-4292-PMZ
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      D-9887-UPI
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      H-6458-ZSP
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      L-5065-EVW
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      P-6678-JYF
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      T-9247-OCM
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      F-0010-DLJ
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      J-1623-IOQ
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      N-4292-NRX
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                  <kind>
+                    <name>
+                      R-9887-SUG
+                    </name>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                  </kind>
+                </missing>
+              </broken>
+            </condition>
+            <piled_on>
+              <item>
+                <name>
+                  L-4832-RKR
+                </name>
+                <description>
+                  an exemplary instance of part number L-4832-RKR
+                </description>
+                <adjectives>
+                  <adjective>
+                    amethyst
+                  </adjective>
+                </adjectives>
+                <condition>
+                  <broken>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                    <missing>
+                      <kind>
+                        <name>
+                          Z-5065-CBU
+                        </name>
+                        <condition>
+                          <pristine>
+                          </pristine>
+                        </condition>
+                      </kind>
+                    </missing>
+                  </broken>
+                </condition>
+                <piled_on>
+                  <item>
+                    <name>
+                      robber
+                    </name>
+                    <description>
+                      labeled with the name gui-robber
+                    </description>
+                    <adjectives>
+                      <adjective>
+                        aquamarine
+                      </adjective>
+                    </adjectives>
+                    <condition>
+                      <broken>
+                        <condition>
+                          <pristine>
+                          </pristine>
+                        </condition>
+                        <missing>
+                          <kind>
+                            <name>
+                              T-9247-OCM
+                            </name>
+                            <condition>
+                              <pristine>
+                              </pristine>
+                            </condition>
+                          </kind>
+                        </missing>
+                      </broken>
+                    </condition>
+                    <piled_on>
+                      <item>
+                        <name>
+                          L-4832-RKR
+                        </name>
+                        <description>
+                          an exemplary instance of part number L-4832-RKR
+                        </description>
+                        <adjectives>
+                          <adjective>
+                            azure
+                          </adjective>
+                        </adjectives>
+                        <condition>
+                          <broken>
+                            <condition>
+                              <pristine>
+                              </pristine>
+                            </condition>
+                            <missing>
+                              <kind>
+                                <name>
+                                  L-4832-RKR
+                                </name>
+                                <condition>
+                                  <broken>
+                                    <condition>
+                                      <pristine>
+                                      </pristine>
+                                    </condition>
+                                    <missing>
+                                      <kind>
+                                        <name>
+                                          Z-5065-CBU
+                                        </name>
+                                        <condition>
+                                          <pristine>
+                                          </pristine>
+                                        </condition>
+                                      </kind>
+                                    </missing>
+                                  </broken>
+                                </condition>
+                              </kind>
+                            </missing>
+                          </broken>
+                        </condition>
+                        <piled_on>
+                          <item>
+                            <name>
+                              L-4832-RKR
+                            </name>
+                            <description>
+                              an exemplary instance of part number L-4832-RKR
+                            </description>
+                            <adjectives>
+                              <adjective>
+                                beige
+                              </adjective>
+                            </adjectives>
+                            <condition>
+                              <broken>
+                                <condition>
+                                  <pristine>
+                                  </pristine>
+                                </condition>
+                                <missing>
+                                  <kind>
+                                    <name>
+                                      L-4832-RKR
+                                    </name>
+                                    <condition>
+                                      <pristine>
+                                      </pristine>
+                                    </condition>
+                                  </kind>
+                                </missing>
+                              </broken>
+                            </condition>
+                            <piled_on>
+                              <item>
+                                <name>
+                                  L-4832-RKR
+                                </name>
+                                <description>
+                                  an exemplary instance of part number L-4832-RKR
+                                </description>
+                                <adjectives>
+                                  <adjective>
+                                    bisque
+                                  </adjective>
+                                </adjectives>
+                                <condition>
+                                  <broken>
+                                    <condition>
+                                      <broken>
+                                        <condition>
+                                          <pristine>
+                                          </pristine>
+                                        </condition>
+                                        <missing>
+                                          <kind>
+                                            <name>
+                                              D-6678-HED
+                                            </name>
+                                            <condition>
+                                              <pristine>
+                                              </pristine>
+                                            </condition>
+                                          </kind>
+                                        </missing>
+                                      </broken>
+                                    </condition>
+                                    <missing>
+                                      <kind>
+                                        <name>
+                                          L-4832-RKR
+                                        </name>
+                                        <condition>
+                                          <broken>
+                                            <condition>
+                                              <pristine>
+                                              </pristine>
+                                            </condition>
+                                            <missing>
+                                              <kind>
+                                                <name>
+                                                  D-6678-HED
+                                                </name>
+                                                <condition>
+                                                  <pristine>
+                                                  </pristine>
+                                                </condition>
+                                              </kind>
+                                              <kind>
+                                                <name>
+                                                  D-6678-HED
+                                                </name>
+                                                <condition>
+                                                  <pristine>
+                                                  </pristine>
+                                                </condition>
+                                              </kind>
+                                            </missing>
+                                          </broken>
+                                        </condition>
+                                      </kind>
+                                    </missing>
+                                  </broken>
+                                </condition>
+                                <piled_on>
+                                  <item>
+                                    <name>
+                                      H-9247-MHK
+                                    </name>
+                                    <description>
+                                      an exemplary instance of part number H-9247-MHK
+                                    </description>
+                                    <adjectives>
+                                      <adjective>
+                                        black
+                                      </adjective>
+                                    </adjectives>
+                                    <condition>
+                                      <broken>
+                                        <condition>
+                                          <pristine>
+                                          </pristine>
+                                        </condition>
+                                        <missing>
+                                          <kind>
+                                            <name>
+                                              L-4832-RKR
+                                            </name>
+                                            <condition>
+                                              <pristine>
+                                              </pristine>
+                                            </condition>
+                                          </kind>
+                                        </missing>
+                                      </broken>
+                                    </condition>
+                                    <piled_on>
+                                      <item>
+                                        <name>
+                                          D-6678-HED
+                                        </name>
+                                        <description>
+                                          an exemplary instance of part number D-6678-HED
+                                        </description>
+                                        <adjectives>
+                                          <adjective>
+                                            blanched-almond-colored
+                                          </adjective>
+                                        </adjectives>
+                                        <condition>
+                                          <pristine>
+                                          </pristine>
+                                        </condition>
+                                        <piled_on>
+                                          <item>
+                                            <name>
+                                              L-4832-RKR
+                                            </name>
+                                            <description>
+                                              an exemplary instance of part number L-4832-RKR
+                                            </description>
+                                            <adjectives>
+                                              <adjective>
+                                                blaze-orange
+                                              </adjective>
+                                            </adjectives>
+                                            <condition>
+                                              <pristine>
+                                              </pristine>
+                                            </condition>
+                                            <piled_on>
+                                              <item>
+                                                <name>
+                                                  D-6678-HED
+                                                </name>
+                                                <description>
+                                                  an exemplary instance of part number D-6678-HED
+                                                </description>
+                                                <adjectives>
+                                                  <adjective>
+                                                    blue
+                                                  </adjective>
+                                                </adjectives>
+                                                <condition>
+                                                  <pristine>
+                                                  </pristine>
+                                                </condition>
+                                                <piled_on>
+                                                  <item>
+                                                    <name>
+                                                      T-6458-BNR
+                                                    </name>
+                                                    <description>
+                                                      an exemplary instance of part number T-6458-BNR
+                                                    </description>
+                                                    <adjectives>
+                                                      <adjective>
+                                                        blue-violet
+                                                      </adjective>
+                                                    </adjectives>
+                                                    <condition>
+                                                      <pristine>
+                                                      </pristine>
+                                                    </condition>
+                                                    <piled_on>
+                                                      <item>
+                                                        <name>
+                                                          X-5065-GQY
+                                                        </name>
+                                                        <description>
+                                                          an exemplary instance of part number X-5065-GQY
+                                                        </description>
+                                                        <adjectives>
+                                                          <adjective>
+                                                            bondi-blue
+                                                          </adjective>
+                                                        </adjectives>
+                                                        <condition>
+                                                          <pristine>
+                                                          </pristine>
+                                                        </condition>
+                                                        <piled_on>
+                                                          <item>
+                                                            <name>
+                                                              B-6678-LTH
+                                                            </name>
+                                                            <description>
+                                                              an exemplary instance of part number B-6678-LTH
+                                                            </description>
+                                                            <adjectives>
+                                                              <adjective>
+                                                                brass
+                                                              </adjective>
+                                                            </adjectives>
+                                                            <condition>
+                                                              <pristine>
+                                                              </pristine>
+                                                            </condition>
+                                                            <piled_on>
+                                                              <item>
+                                                                <name>
+                                                                  F-9247-QWO
+                                                                </name>
+                                                                <description>
+                                                                  an exemplary instance of part number F-9247-QWO
+                                                                </description>
+                                                                <adjectives>
+                                                                  <adjective>
+                                                                    bright-green
+                                                                  </adjective>
+                                                                </adjectives>
+                                                                <condition>
+                                                                  <pristine>
+                                                                  </pristine>
+                                                                </condition>
+                                                                <piled_on>
+                                                                  <item>
+                                                                    <name>
+                                                                      L-4832-RKR
+                                                                    </name>
+                                                                    <description>
+                                                                      an exemplary instance of part number L-4832-RKR
+                                                                    </description>
+                                                                    <adjectives>
+                                                                      <adjective>
+                                                                        bright-turquoise
+                                                                      </adjective>
+                                                                    </adjectives>
+                                                                    <condition>
+                                                                      <broken>
+                                                                        <condition>
+                                                                          <pristine>
+                                                                          </pristine>
+                                                                        </condition>
+                                                                        <missing>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                          <kind>
+                                                                            <name>
+                                                                              D-6678-HED
+                                                                            </name>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                          </kind>
+                                                                        </missing>
+                                                                      </broken>
+                                                                    </condition>
+                                                                    <piled_on>
+                                                                      <item>
+                                                                        <name>
+                                                                          J-4832-VAV
+                                                                        </name>
+                                                                        <description>
+                                                                          an exemplary instance of part number J-4832-VAV
+                                                                        </description>
+                                                                        <adjectives>
+                                                                          <adjective>
+                                                                            bright-violet
+                                                                          </adjective>
+                                                                        </adjectives>
+                                                                        <condition>
+                                                                          <pristine>
+                                                                          </pristine>
+                                                                        </condition>
+                                                                        <piled_on>
+                                                                          <item>
+                                                                            <name>
+                                                                              N-1403-ADE
+                                                                            </name>
+                                                                            <description>
+                                                                              an exemplary instance of part number N-1403-ADE
+                                                                            </description>
+                                                                            <adjectives>
+                                                                              <adjective>
+                                                                                bronze
+                                                                              </adjective>
+                                                                            </adjectives>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                            <piled_on>
+                                                                              <item>
+                                                                                <name>
+                                                                                  R-0010-FGL
+                                                                                </name>
+                                                                                <description>
+                                                                                  an exemplary instance of part number R-0010-FGL
+                                                                                </description>
+                                                                                <adjectives>
+                                                                                  <adjective>
+                                                                                    brown
+                                                                                  </adjective>
+                                                                                </adjectives>
+                                                                                <condition>
+                                                                                  <pristine>
+                                                                                  </pristine>
+                                                                                </condition>
+                                                                                <piled_on>
+                                                                                  <item>
+                                                                                    <name>
+                                                                                      B-1403-YIC
+                                                                                    </name>
+                                                                                    <description>
+                                                                                      an exemplary instance of part number B-1403-YIC
+                                                                                    </description>
+                                                                                    <adjectives>
+                                                                                      <adjective>
+                                                                                        buff
+                                                                                      </adjective>
+                                                                                    </adjectives>
+                                                                                    <condition>
+                                                                                      <broken>
+                                                                                        <condition>
+                                                                                          <pristine>
+                                                                                          </pristine>
+                                                                                        </condition>
+                                                                                        <missing>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              T-6458-BNR
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              X-5065-GQY
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              B-6678-LTH
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              F-9247-QWO
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              J-4832-VAV
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              N-1403-ADE
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              R-0010-FGL
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              V-1623-KJS
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              Z-4292-PMZ
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              D-9887-UPI
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              H-6458-ZSP
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              L-5065-EVW
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              P-6678-JYF
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              T-9247-OCM
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              X-4832-TFT
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              F-0010-DLJ
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              J-1623-IOQ
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              N-4292-NRX
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              R-9887-SUG
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                          <kind>
+                                                                                            <name>
+                                                                                              V-6458-XXN
+                                                                                            </name>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                          </kind>
+                                                                                        </missing>
+                                                                                      </broken>
+                                                                                    </condition>
+                                                                                    <piled_on>
+                                                                                      <item>
+                                                                                        <name>
+                                                                                          T-6458-BNR
+                                                                                        </name>
+                                                                                        <description>
+                                                                                          an exemplary instance of part number T-6458-BNR
+                                                                                        </description>
+                                                                                        <adjectives>
+                                                                                          <adjective>
+                                                                                            burgundy
+                                                                                          </adjective>
+                                                                                        </adjectives>
+                                                                                        <condition>
+                                                                                          <pristine>
+                                                                                          </pristine>
+                                                                                        </condition>
+                                                                                        <piled_on>
+                                                                                          <item>
+                                                                                            <name>
+                                                                                              X-5065-GQY
+                                                                                            </name>
+                                                                                            <description>
+                                                                                              an exemplary instance of part number X-5065-GQY
+                                                                                            </description>
+                                                                                            <adjectives>
+                                                                                              <adjective>
+                                                                                                burlywood-colored
+                                                                                              </adjective>
+                                                                                            </adjectives>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                            <piled_on>
+                                                                                              <item>
+                                                                                                <name>
+                                                                                                  B-6678-LTH
+                                                                                                </name>
+                                                                                                <description>
+                                                                                                  an exemplary instance of part number B-6678-LTH
+                                                                                                </description>
+                                                                                                <adjectives>
+                                                                                                  <adjective>
+                                                                                                    burnt-orange
+                                                                                                  </adjective>
+                                                                                                </adjectives>
+                                                                                                <condition>
+                                                                                                  <pristine>
+                                                                                                  </pristine>
+                                                                                                </condition>
+                                                                                                <piled_on>
+                                                                                                  <item>
+                                                                                                    <name>
+                                                                                                      F-9247-QWO
+                                                                                                    </name>
+                                                                                                    <description>
+                                                                                                      an exemplary instance of part number F-9247-QWO
+                                                                                                    </description>
+                                                                                                    <adjectives>
+                                                                                                      <adjective>
+                                                                                                        burnt-sienna
+                                                                                                      </adjective>
+                                                                                                    </adjectives>
+                                                                                                    <condition>
+                                                                                                      <pristine>
+                                                                                                      </pristine>
+                                                                                                    </condition>
+                                                                                                    <piled_on>
+                                                                                                      <item>
+                                                                                                        <name>
+                                                                                                          J-4832-VAV
+                                                                                                        </name>
+                                                                                                        <description>
+                                                                                                          an exemplary instance of part number J-4832-VAV
+                                                                                                        </description>
+                                                                                                        <adjectives>
+                                                                                                          <adjective>
+                                                                                                            burnt-umber
+                                                                                                          </adjective>
+                                                                                                        </adjectives>
+                                                                                                        <condition>
+                                                                                                          <pristine>
+                                                                                                          </pristine>
+                                                                                                        </condition>
+                                                                                                        <piled_on>
+                                                                                                          <item>
+                                                                                                            <name>
+                                                                                                              N-1403-ADE
+                                                                                                            </name>
+                                                                                                            <description>
+                                                                                                              an exemplary instance of part number N-1403-ADE
+                                                                                                            </description>
+                                                                                                            <adjectives>
+                                                                                                              <adjective>
+                                                                                                                cadet-blue
+                                                                                                              </adjective>
+                                                                                                            </adjectives>
+                                                                                                            <condition>
+                                                                                                              <pristine>
+                                                                                                              </pristine>
+                                                                                                            </condition>
+                                                                                                            <piled_on>
+                                                                                                              <item>
+                                                                                                                <name>
+                                                                                                                  R-0010-FGL
+                                                                                                                </name>
+                                                                                                                <description>
+                                                                                                                  an exemplary instance of part number R-0010-FGL
+                                                                                                                </description>
+                                                                                                                <adjectives>
+                                                                                                                  <adjective>
+                                                                                                                    camouflage-green
+                                                                                                                  </adjective>
+                                                                                                                </adjectives>
+                                                                                                                <condition>
+                                                                                                                  <pristine>
+                                                                                                                  </pristine>
+                                                                                                                </condition>
+                                                                                                                <piled_on>
+                                                                                                                  <item>
+                                                                                                                    <name>
+                                                                                                                      B-1403-YIC
+                                                                                                                    </name>
+                                                                                                                    <description>
+                                                                                                                      an exemplary instance of part number B-1403-YIC
+                                                                                                                    </description>
+                                                                                                                    <adjectives>
+                                                                                                                      <adjective>
+                                                                                                                        cardinal
+                                                                                                                      </adjective>
+                                                                                                                    </adjectives>
+                                                                                                                    <condition>
+                                                                                                                      <broken>
+                                                                                                                        <condition>
+                                                                                                                          <pristine>
+                                                                                                                          </pristine>
+                                                                                                                        </condition>
+                                                                                                                        <missing>
+                                                                                                                          <kind>
+                                                                                                                            <name>
+                                                                                                                              X-4832-TFT
+                                                                                                                            </name>
+                                                                                                                            <condition>
+                                                                                                                              <broken>
+                                                                                                                                <condition>
+                                                                                                                                  <pristine>
+                                                                                                                                  </pristine>
+                                                                                                                                </condition>
+                                                                                                                                <missing>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      X-5065-GQY
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      B-6678-LTH
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      F-9247-QWO
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      J-4832-VAV
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      N-1403-ADE
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      V-1623-KJS
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      Z-4292-PMZ
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      D-9887-UPI
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      H-6458-ZSP
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      L-5065-EVW
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      T-9247-OCM
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      P-6678-JYF
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      F-0010-DLJ
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      J-1623-IOQ
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      N-4292-NRX
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      R-9887-SUG
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                </missing>
+                                                                                                                              </broken>
+                                                                                                                            </condition>
+                                                                                                                          </kind>
+                                                                                                                        </missing>
+                                                                                                                      </broken>
+                                                                                                                    </condition>
+                                                                                                                    <piled_on>
+                                                                                                                      <item>
+                                                                                                                        <name>
+                                                                                                                          robber
+                                                                                                                        </name>
+                                                                                                                        <description>
+                                                                                                                          labeled with the name Francois
+                                                                                                                        </description>
+                                                                                                                        <adjectives>
+                                                                                                                          <adjective>
+                                                                                                                            carmine
+                                                                                                                          </adjective>
+                                                                                                                        </adjectives>
+                                                                                                                        <condition>
+                                                                                                                          <broken>
+                                                                                                                            <condition>
+                                                                                                                              <pristine>
+                                                                                                                              </pristine>
+                                                                                                                            </condition>
+                                                                                                                            <missing>
+                                                                                                                              <kind>
+                                                                                                                                <name>
+                                                                                                                                  B-1403-YIC
+                                                                                                                                </name>
+                                                                                                                                <condition>
+                                                                                                                                  <pristine>
+                                                                                                                                  </pristine>
+                                                                                                                                </condition>
+                                                                                                                              </kind>
+                                                                                                                            </missing>
+                                                                                                                          </broken>
+                                                                                                                        </condition>
+                                                                                                                        <piled_on>
+                                                                                                                          <item>
+                                                                                                                            <name>
+                                                                                                                              robber
+                                                                                                                            </name>
+                                                                                                                            <description>
+                                                                                                                              labeled with the name OptimusPrime
+                                                                                                                            </description>
+                                                                                                                            <adjectives>
+                                                                                                                              <adjective>
+                                                                                                                                carrot
+                                                                                                                              </adjective>
+                                                                                                                            </adjectives>
+                                                                                                                            <condition>
+                                                                                                                              <broken>
+                                                                                                                                <condition>
+                                                                                                                                  <pristine>
+                                                                                                                                  </pristine>
+                                                                                                                                </condition>
+                                                                                                                                <missing>
+                                                                                                                                  <kind>
+                                                                                                                                    <name>
+                                                                                                                                      X-4832-TFT
+                                                                                                                                    </name>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                  </kind>
+                                                                                                                                </missing>
+                                                                                                                              </broken>
+                                                                                                                            </condition>
+                                                                                                                            <piled_on>
+                                                                                                                              <item>
+                                                                                                                                <name>
+                                                                                                                                  V-1623-KJS
+                                                                                                                                </name>
+                                                                                                                                <description>
+                                                                                                                                  an exemplary instance of part number V-1623-KJS
+                                                                                                                                </description>
+                                                                                                                                <adjectives>
+                                                                                                                                  <adjective>
+                                                                                                                                    celadon
+                                                                                                                                  </adjective>
+                                                                                                                                </adjectives>
+                                                                                                                                <condition>
+                                                                                                                                  <pristine>
+                                                                                                                                  </pristine>
+                                                                                                                                </condition>
+                                                                                                                                <piled_on>
+                                                                                                                                  <item>
+                                                                                                                                    <name>
+                                                                                                                                      Z-4292-PMZ
+                                                                                                                                    </name>
+                                                                                                                                    <description>
+                                                                                                                                      an exemplary instance of part number Z-4292-PMZ
+                                                                                                                                    </description>
+                                                                                                                                    <adjectives>
+                                                                                                                                      <adjective>
+                                                                                                                                        cerise
+                                                                                                                                      </adjective>
+                                                                                                                                    </adjectives>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                    <piled_on>
+                                                                                                                                      <item>
+                                                                                                                                        <name>
+                                                                                                                                          D-9887-UPI
+                                                                                                                                        </name>
+                                                                                                                                        <description>
+                                                                                                                                          an exemplary instance of part number D-9887-UPI
+                                                                                                                                        </description>
+                                                                                                                                        <adjectives>
+                                                                                                                                          <adjective>
+                                                                                                                                            cerulean-blue
+                                                                                                                                          </adjective>
+                                                                                                                                        </adjectives>
+                                                                                                                                        <condition>
+                                                                                                                                          <pristine>
+                                                                                                                                          </pristine>
+                                                                                                                                        </condition>
+                                                                                                                                        <piled_on>
+                                                                                                                                          <item>
+                                                                                                                                            <name>
+                                                                                                                                              H-6458-ZSP
+                                                                                                                                            </name>
+                                                                                                                                            <description>
+                                                                                                                                              an exemplary instance of part number H-6458-ZSP
+                                                                                                                                            </description>
+                                                                                                                                            <adjectives>
+                                                                                                                                              <adjective>
+                                                                                                                                                chartreuse
+                                                                                                                                              </adjective>
+                                                                                                                                            </adjectives>
+                                                                                                                                            <condition>
+                                                                                                                                              <pristine>
+                                                                                                                                              </pristine>
+                                                                                                                                            </condition>
+                                                                                                                                            <piled_on>
+                                                                                                                                              <item>
+                                                                                                                                                <name>
+                                                                                                                                                  L-5065-EVW
+                                                                                                                                                </name>
+                                                                                                                                                <description>
+                                                                                                                                                  an exemplary instance of part number L-5065-EVW
+                                                                                                                                                </description>
+                                                                                                                                                <adjectives>
+                                                                                                                                                  <adjective>
+                                                                                                                                                    chestnut
+                                                                                                                                                  </adjective>
+                                                                                                                                                </adjectives>
+                                                                                                                                                <condition>
+                                                                                                                                                  <pristine>
+                                                                                                                                                  </pristine>
+                                                                                                                                                </condition>
+                                                                                                                                                <piled_on>
+                                                                                                                                                  <item>
+                                                                                                                                                    <name>
+                                                                                                                                                      P-6678-JYF
+                                                                                                                                                    </name>
+                                                                                                                                                    <description>
+                                                                                                                                                      an exemplary instance of part number P-6678-JYF
+                                                                                                                                                    </description>
+                                                                                                                                                    <adjectives>
+                                                                                                                                                      <adjective>
+                                                                                                                                                        chocolate-colored
+                                                                                                                                                      </adjective>
+                                                                                                                                                    </adjectives>
+                                                                                                                                                    <condition>
+                                                                                                                                                      <pristine>
+                                                                                                                                                      </pristine>
+                                                                                                                                                    </condition>
+                                                                                                                                                    <piled_on>
+                                                                                                                                                      <item>
+                                                                                                                                                        <name>
+                                                                                                                                                          F-0010-DLJ
+                                                                                                                                                        </name>
+                                                                                                                                                        <description>
+                                                                                                                                                          an exemplary instance of part number F-0010-DLJ
+                                                                                                                                                        </description>
+                                                                                                                                                        <adjectives>
+                                                                                                                                                          <adjective>
+                                                                                                                                                            cinnamon
+                                                                                                                                                          </adjective>
+                                                                                                                                                        </adjectives>
+                                                                                                                                                        <condition>
+                                                                                                                                                          <pristine>
+                                                                                                                                                          </pristine>
+                                                                                                                                                        </condition>
+                                                                                                                                                        <piled_on>
+                                                                                                                                                          <item>
+                                                                                                                                                            <name>
+                                                                                                                                                              J-1623-IOQ
+                                                                                                                                                            </name>
+                                                                                                                                                            <description>
+                                                                                                                                                              an exemplary instance of part number J-1623-IOQ
+                                                                                                                                                            </description>
+                                                                                                                                                            <adjectives>
+                                                                                                                                                              <adjective>
+                                                                                                                                                                cobalt
+                                                                                                                                                              </adjective>
+                                                                                                                                                            </adjectives>
+                                                                                                                                                            <condition>
+                                                                                                                                                              <pristine>
+                                                                                                                                                              </pristine>
+                                                                                                                                                            </condition>
+                                                                                                                                                            <piled_on>
+                                                                                                                                                              <item>
+                                                                                                                                                                <name>
+                                                                                                                                                                  N-4292-NRX
+                                                                                                                                                                </name>
+                                                                                                                                                                <description>
+                                                                                                                                                                  an exemplary instance of part number N-4292-NRX
+                                                                                                                                                                </description>
+                                                                                                                                                                <adjectives>
+                                                                                                                                                                  <adjective>
+                                                                                                                                                                    copper
+                                                                                                                                                                  </adjective>
+                                                                                                                                                                </adjectives>
+                                                                                                                                                                <condition>
+                                                                                                                                                                  <pristine>
+                                                                                                                                                                  </pristine>
+                                                                                                                                                                </condition>
+                                                                                                                                                                <piled_on>
+                                                                                                                                                                  <item>
+                                                                                                                                                                    <name>
+                                                                                                                                                                      R-9887-SUG
+                                                                                                                                                                    </name>
+                                                                                                                                                                    <description>
+                                                                                                                                                                      an exemplary instance of part number R-9887-SUG
+                                                                                                                                                                    </description>
+                                                                                                                                                                    <adjectives>
+                                                                                                                                                                      <adjective>
+                                                                                                                                                                        coral
+                                                                                                                                                                      </adjective>
+                                                                                                                                                                    </adjectives>
+                                                                                                                                                                    <condition>
+                                                                                                                                                                      <pristine>
+                                                                                                                                                                      </pristine>
+                                                                                                                                                                    </condition>
+                                                                                                                                                                    <piled_on>
+                                                                                                                                                                    </piled_on>
+                                                                                                                                                                  </item>
+                                                                                                                                                                </piled_on>
+                                                                                                                                                              </item>
+                                                                                                                                                            </piled_on>
+                                                                                                                                                          </item>
+                                                                                                                                                        </piled_on>
+                                                                                                                                                      </item>
+                                                                                                                                                    </piled_on>
+                                                                                                                                                  </item>
+                                                                                                                                                </piled_on>
+                                                                                                                                              </item>
+                                                                                                                                            </piled_on>
+                                                                                                                                          </item>
+                                                                                                                                        </piled_on>
+                                                                                                                                      </item>
+                                                                                                                                    </piled_on>
+                                                                                                                                  </item>
+                                                                                                                                </piled_on>
+                                                                                                                              </item>
+                                                                                                                            </piled_on>
+                                                                                                                          </item>
+                                                                                                                        </piled_on>
+                                                                                                                      </item>
+                                                                                                                    </piled_on>
+                                                                                                                  </item>
+                                                                                                                </piled_on>
+                                                                                                              </item>
+                                                                                                            </piled_on>
+                                                                                                          </item>
+                                                                                                        </piled_on>
+                                                                                                      </item>
+                                                                                                    </piled_on>
+                                                                                                  </item>
+                                                                                                </piled_on>
+                                                                                              </item>
+                                                                                            </piled_on>
+                                                                                          </item>
+                                                                                        </piled_on>
+                                                                                      </item>
+                                                                                    </piled_on>
+                                                                                  </item>
+                                                                                </piled_on>
+                                                                              </item>
+                                                                            </piled_on>
+                                                                          </item>
+                                                                        </piled_on>
+                                                                      </item>
+                                                                    </piled_on>
+                                                                  </item>
+                                                                </piled_on>
+                                                              </item>
+                                                            </piled_on>
+                                                          </item>
+                                                        </piled_on>
+                                                      </item>
+                                                    </piled_on>
+                                                  </item>
+                                                </piled_on>
+                                              </item>
+                                            </piled_on>
+                                          </item>
+                                        </piled_on>
+                                      </item>
+                                    </piled_on>
+                                  </item>
+                                </piled_on>
+                              </item>
+                            </piled_on>
+                          </item>
+                        </piled_on>
+                      </item>
+                    </piled_on>
+                  </item>
+                </piled_on>
+              </item>
+            </piled_on>
+          </item>
+        </items>
+      </room>
+    </look>
+  </command>
+</success>
+Things look slightly different, but you can't put a diode on
+exactly how. 
+
+>: % UMIX shutdown: console EOF

@@ -1,0 +1,81 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as hmonk
+
+
+% Usage: advise <action> <advice_file> [<tests_file>]
+Available actions:
+    run      Runs the tests in the file given as the third argument.
+
+    step     Runs the tests in the file given as the third argument
+             and prints each step of the advice.
+
+    arith    Arithmetic suite:
+             Run automatically generated arithmetic tests.
+             The tests-file argument is optional for this suite;
+             if a tests file is given, the tests in it are run
+             along with the built-in tests.
+
+    xml      XML suite:
+             Run XML tests obtained from the Cult Wide Web.
+             The tests-file argument is optional for this suite;
+             if a tests file is given, the tests in it are run
+             along with the built-in tests.
+
+% UMIX shutdown: console EOF

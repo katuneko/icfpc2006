@@ -1,0 +1,120 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as ohmega
+
+
+% Begin sending characters. Terminate with __END_MULT__...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+Transferred 2048...
+Transferred 2560...
+Transferred 3072...
+writing 3064 characters
+% % Begin sending characters. Terminate with __END_REV__...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+Transferred 2048...
+Transferred 2560...
+Transferred 3072...
+writing 3094 characters
+% % Program area: 3280 (smaller is better)
+[2D] Parsing...
+[2D] Locating modules...
+[2D] Verifying wires in module 'plus'...
+[2D] Verifying wires in module 'mult'...
+[2D] Connecting wires...
+[2D] Done Parsing!
+[2D] Running mult test 1 of 22
+[2D] Running mult test 2 of 22
+[2D] Running mult test 3 of 22
+[2D] Running mult test 4 of 22
+[2D] Running mult test 5 of 22
+[2D] Running mult test 6 of 22
+[2D] Running mult test 7 of 22
+[2D] Running mult test 8 of 22
+[2D] Running mult test 9 of 22
+[2D] Running mult test 10 of 22
+[2D] Running mult test 11 of 22
+[2D] Running mult test 12 of 22
+[2D] Running mult test 13 of 22
+[2D] Running mult test 14 of 22
+[2D] Running mult test 15 of 22
+[2D] Running mult test 16 of 22
+[2D] Running mult test 17 of 22
+[2D] Running mult test 18 of 22
+[2D] Running mult test 19 of 22
+[2D] Running mult test 20 of 22
+[2D] Running mult test 21 of 22
+[2D] Running mult test 22 of 22
+Verification successful.
+CIRCS.MUL=30@999999|fe8a47581d2a95699b216c13fb250bd
+
+You have new mail. Type 'mail' to view.
+% Program area: 3150 (smaller is better)
+[2D] Parsing...
+[2D] Locating modules...
+[2D] Verification failed in parsing:
+[2D] Parse Error: only characters 0-9, a-z, and A-Z are allowed in module names.
+Invalid character seen at: (ln: 2, col: 4)
+
+
+You have new mail. Type 'mail' to view.
+% UMIX shutdown: console EOF

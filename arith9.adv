@@ -1,0 +1,29 @@
+{ comments are enclosed by curly-braces;
+  no nested comments are allowed  }
+
+{ evaluation entry point }
+Compute x => Eval x Done;
+
+{ evaluate expressions first }
+Eval (op x y) k => Eval x (K op y k);
+
+{ values }
+Eval v k => k v;
+
+{ evaluate binary ops }
+(K op y k) v => Eval y (op v k);
+Add v k w => AddN v k w;
+Mult v k w => Mul v w k;
+
+{ numeric addition }
+AddN Z k w => k w;
+AddN (S x) k w => AddN x k (S w);
+
+{ numeric multiplication }
+Mul Z w k => k Z;
+Mul (S x) w k => Mul x w (AddN w k);
+
+{ finish }
+Done v => v;
+
+. { end of rules }

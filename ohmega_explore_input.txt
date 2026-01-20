@@ -1,0 +1,6 @@
+ohmega
+bidirectional
+ls -a
+cat .history
+mail
+q

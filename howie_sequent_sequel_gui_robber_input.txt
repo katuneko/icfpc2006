@@ -1,0 +1,10 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+north
+north
+north
+examine gui-robber
+take gui-robber
+use gui-robber

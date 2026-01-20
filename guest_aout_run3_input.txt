@@ -1,0 +1,4 @@
+guest
+pwd
+ls
+run a.out

@@ -1,0 +1,160 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: logged in as guest
+INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d
+
+
+You have new mail. Type 'mail' to view.
+% Begin sending characters. Terminate with EOF...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+Transferred 2048...
+writing 2316 characters
+INTRO.UMD=10@999999|7005f80d6cd9b7b837802f1e58b11b8
+
+You have new mail. Type 'mail' to view.
+% 
+You have new mail. Type 'mail' to view.
+% V SKIP
+X SKIP
+XV SKIP
+XX SKIP
+XXV IF (ARGS() > I) THEN GOTO LXXXV ELSE SKIP
+XXX PRINT "usage: ./quick_hack.exe username"
+XXXV PRINT CHR(X)
+XL END
+LXXXV SKIP
+XC DIM username AS STRING
+XCV SET username = ARG(II)
+C DIM pwdcount AS INTEGER
+CV SET pwdcount = XLII
+CX DIM words(pwdcount) AS STRING
+CXV SET words(I) = "ftd"
+CXX SET words(II) = "flower"
+CXXV SET words(III) = "flowers"
+CXXX SET words(IV) = "florist"
+CXXXV SET words(V) = "florists"
+CXL SET words(VI) = "bouquet"
+CXLV SET words(VII) = "roses"
+CL SET words(VIII) = "delivery"
+CLV SET words(IX) = "telegraph"
+CLX SET words(X) = "teleflora"
+CLXV SET words(XI) = "flora"
+CLXX SET words(XII) = "knr"
+CLXXV SET words(XIII) = "kernighan"
+CLXXX SET words(XIV) = "ritchie"
+CLXXXV SET words(XV) = "kandr"
+CXC SET words(XVI) = "kr"
+CXCV SET words(XVII) = "c"
+CC SET words(XVIII) = "cprogramming"
+CCV SET words(XIX) = "thecprogramminglanguage"
+CCX SET words(XX) = "unix"
+CCXV SET words(XXI) = "bell"
+CCXX SET words(XXII) = "plan9"
+CCXXV SET words(XXIII) = "bbarker"
+CCXXX SET words(XXIV) = "barker"
+CCXXXV SET words(XXV) = "bob"
+CCXL SET words(XXVI) = "bobby"
+CCXLV SET words(XXVII) = "price"
+CCL SET words(XXVIII) = "priceisright"
+CCLV SET words(XXIX) = "thepriceisright"
+CCLX SET words(XXX) = "comeondown"
+CCLXV SET words(XXXI) = "spay"
+CCLXX SET words(XXXII) = "spayneuter"
+CCLXXV SET words(XXXIII) = "spayandneuter"
+CCLXXX SET words(XXXIV) = "plinko"
+CCLXXXV SET words(XXXV) = "bigwheel"
+CCXC SET words(XXXVI) = "showcase"
+CCXCV SET words(XXXVII) = "showdown"
+CCC SET words(XXXVIII) = "carey"
+CCCV SET words(XXXIX) = "drew"
+CCCX SET words(XL) = "comeon"
+CCCXV SET words(XLI) = "neuter"
+CCCXX SET words(XLII) = "down"
+CCCXXV PRINT ((("attempting quick list of " + pwdcount) + " passwords ") + CHR(X))
+CCCXXX DIM i AS INTEGER
+CCCXXXV SET i = I
+CCCXL IF CHECKPASS(username, words(i)) THEN GOTO CD ELSE SKIP
+CCCXLV SET i = (i + I)
+CCCL IF (i > pwdcount) THEN GOTO CDXV ELSE SKIP
+CCCLV GOTO CCCXL
+CD PRINT (("found match!! for user " + username) + CHR(X))
+CDV PRINT (("password: " + words(i)) + CHR(X))
+CDX END
+CDXV PRINT (("no quick matches for user " + username) + CHR(X))
+CDXX END
+INTRO.QBC=10@999999|e6ee9c98b80b4dd04814a29a37bcba8
+Compiled.
+
+You have new mail. Type 'mail' to view.
+% attempting quick list of XLII passwords 
+no quick matches for user ftd
+
+You have new mail. Type 'mail' to view.
+% attempting quick list of XLII passwords 
+no quick matches for user knr
+
+You have new mail. Type 'mail' to view.
+% attempting quick list of XLII passwords 
+found match!! for user bbarker
+password: plinko
+
+You have new mail. Type 'mail' to view.
+% UMIX shutdown: console EOF

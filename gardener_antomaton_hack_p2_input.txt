@@ -1,0 +1,25 @@
+gardener
+mathemantica
+/bin/umodem puzzle2_solution.ant ZZZEOFZZZ
+Puzzle 2: Rock climbing
+WNNNNEN
+ENNNNWN
+32 16
+ o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+ o - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - o
+ o - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - o
+ o - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - o
+ o - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - o
+ o - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - o
+ o - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - o
+ o - - - # - - - - - - - - - - - - - - - - - - - - - - - - - - o
+ o - - - - # - - - - - - - - - - - - - - - - - - - - - - - - - o
+ o - - - - - # - - - - - - - - - - - - - - - - - - - - - - - - o
+ o - - - - - - # - - - - - - - - - - - - - - - - - - - - - - - o
+ o - - - - - - - # - - - - - - - - - - - - - - - - - -0v - - - o
+ o - - - - - - - - # - - - - - - - - - - - - - - - - -1^ - - - o
+ o - - - - - - - - - # - - - - - - - - - - - - - - - - - - - - o
+ o - - - - - - - - - $ # - - - - - - - - - - - - - - - - - - - o
+ o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+ZZZEOFZZZ
+./antomaton puzzle2_solution.ant

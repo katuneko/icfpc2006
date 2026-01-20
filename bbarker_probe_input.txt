@@ -1,0 +1,6 @@
+bbarker
+plinko
+ls bk_specs*
+cat bk_specs
+run_bb
+verify

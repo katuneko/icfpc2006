@@ -1,0 +1,74 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+north
+north
+take flax D-4292-HMN
+incinerate flax D-4292-HMN
+take burnt-orange D-4292-HMN
+incinerate burnt-orange D-4292-HMN
+take cream D-4292-HMN
+incinerate cream D-4292-HMN
+take foreign Z-1623-CJG
+take taupe D-4292-HMN
+incinerate taupe D-4292-HMN
+take firebrick D-4292-HMN
+incinerate firebrick D-4292-HMN
+take carrot D-4292-HMN
+combine foreign Z-1623-CJG with carrot D-4292-HMN
+take floral-white H-9887-MPU
+incinerate floral-white H-9887-MPU
+take organic Z-1623-CJG
+incinerate organic Z-1623-CJG
+take raw-umber D-4292-HMN
+incinerate raw-umber D-4292-HMN
+take wheat-colored Z-1623-CJG
+incinerate wheat-colored Z-1623-CJG
+take olive D-4292-HMN
+incinerate olive D-4292-HMN
+take floating H-9887-MPU
+incinerate floating H-9887-MPU
+take terra-cotta Z-1623-CJG
+incinerate terra-cotta Z-1623-CJG
+take lavender-blush Z-1623-CJG
+incinerate lavender-blush Z-1623-CJG
+take peach Z-1623-CJG
+incinerate peach Z-1623-CJG
+take sangria Z-1623-CJG
+take buff D-4292-HMN
+incinerate buff D-4292-HMN
+take sky-blue D-4292-HMN
+incinerate sky-blue D-4292-HMN
+take maroon Z-1623-CJG
+incinerate maroon Z-1623-CJG
+take heavy D-4292-HMN
+incinerate heavy D-4292-HMN
+take amethyst H-9887-MPU
+incinerate amethyst H-9887-MPU
+take ivory Z-1623-CJG
+incinerate ivory Z-1623-CJG
+take gray20 H-9887-MPU
+incinerate gray20 H-9887-MPU
+take teal Z-1623-CJG
+incinerate teal Z-1623-CJG
+take lavender D-4292-HMN
+incinerate lavender D-4292-HMN
+take navajo-white H-9887-MPU
+incinerate navajo-white H-9887-MPU
+take azure Z-1623-CJG
+incinerate azure Z-1623-CJG
+take tepid D-4292-HMN
+incinerate tepid D-4292-HMN
+take package robot
+combine package robot with foreign Z-1623-CJG
+combine package robot with sangria Z-1623-CJG
+examine package robot
+show
+deliver package
+deliver package robot
+give package robot
+give package
+drop package robot
+throw package robot
+put package robot

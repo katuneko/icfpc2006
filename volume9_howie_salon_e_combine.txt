@@ -1,0 +1,102 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: Salon E
+
+You are in Salon E of the Oregon Ballroom. A door leads east. 
+There is a bullet-point here. 
+Underneath the bullet-point, there is a (broken) slides.ppt. 
+
+>: You are now carrying the bullet-point. 
+
+>: You are now carrying the slides.ppt. 
+
+>: ADVTR.CMB=5@999999|764e8a851411c66106e130374d8abbb
+You have successfully combined the slides.ppt and the
+bullet-point!
+
+>: The slides.ppt is part of a talk. It contains only one slide,
+which reads:
+
+	* Goal of game: build uploader, downloader
+
+	* Abstract adventure game (items as propositions)
+
+	* Solve by theorem proving
+
+	* Try switching your goggles!
+
+The presentation could use some more color. 
+Also, it is in pristine condition. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: % UMIX shutdown: console EOF

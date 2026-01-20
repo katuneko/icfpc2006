@@ -1,0 +1,1072 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+History of Technology Exhibit, Entrance
+
+You are at the entrance of an exhibit titled, "The History of
+Technology." A sign reads, "Due to recent difficulties, only
+robots with intact warranties will be admitted." From here, you
+can go north or east. 
+
+
+>: Rotunda
+
+You are in the rotunda of the Museum of Science and Industry.
+From here, you can go north, east, or west. 
+
+
+>: Games and Amusements Exhibit
+
+You standing before an exhibit on games and amusements. From
+here, you can go west. 
+There is a cribbage board here. 
+Underneath the cribbage board, there is an ace-of-hearts. 
+Underneath the ace-of-hearts, there is a king-of-hearts. 
+Underneath the king-of-hearts, there is a queen-of-hearts. 
+Underneath the queen-of-hearts, there is a jack-of-hearts. 
+Underneath the jack-of-hearts, there is a ten-of-hearts. 
+Underneath the ten-of-hearts, there is a nine-of-hearts. 
+Underneath the nine-of-hearts, there is an eight-of-hearts. 
+Underneath the eight-of-hearts, there is a seven-of-hearts. 
+Underneath the seven-of-hearts, there is a six-of-hearts. 
+Underneath the six-of-hearts, there is a five-of-hearts. 
+Underneath the five-of-hearts, there is a four-of-hearts. 
+Underneath the four-of-hearts, there is a three-of-hearts. 
+Underneath the three-of-hearts, there is a two-of-hearts. 
+Underneath the two-of-hearts, there is an ace-of-diamonds. 
+Underneath the ace-of-diamonds, there is a king-of-diamonds. 
+Underneath the king-of-diamonds, there is a queen-of-diamonds. 
+Underneath the queen-of-diamonds, there is a jack-of-diamonds. 
+Underneath the jack-of-diamonds, there is a ten-of-diamonds. 
+Underneath the ten-of-diamonds, there is a nine-of-diamonds. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: Things look slightly different, but you can't put a diode on
+exactly how. 
+
+>: Games and Amusements Exhibit
+
+You standing before an exhibit on games and amusements. From
+here, you can go west. 
+There is a cribbage board here. 
+Underneath the cribbage board, there is an ace-of-hearts. 
+Underneath the ace-of-hearts, there is a king-of-hearts. 
+Underneath the king-of-hearts, there is a queen-of-hearts. 
+Underneath the queen-of-hearts, there is a jack-of-hearts. 
+Underneath the jack-of-hearts, there is a ten-of-hearts. 
+Underneath the ten-of-hearts, there is a nine-of-hearts. 
+Underneath the nine-of-hearts, there is an eight-of-hearts. 
+Underneath the eight-of-hearts, there is a seven-of-hearts. 
+Underneath the seven-of-hearts, there is a six-of-hearts. 
+Underneath the six-of-hearts, there is a five-of-hearts. 
+Underneath the five-of-hearts, there is a four-of-hearts. 
+Underneath the four-of-hearts, there is a three-of-hearts. 
+Underneath the three-of-hearts, there is a two-of-hearts. 
+Underneath the two-of-hearts, there is an ace-of-diamonds. 
+Underneath the ace-of-diamonds, there is a king-of-diamonds. 
+Underneath the king-of-diamonds, there is a queen-of-diamonds. 
+Underneath the queen-of-diamonds, there is a jack-of-diamonds. 
+Underneath the jack-of-diamonds, there is a ten-of-diamonds. 
+Underneath the ten-of-diamonds, there is a nine-of-diamonds. 
+Underneath the nine-of-diamonds, there is an eight-of-diamonds. 
+Underneath the eight-of-diamonds, there is a seven-of-diamonds. 
+Underneath the seven-of-diamonds, there is a six-of-diamonds. 
+Underneath the six-of-diamonds, there is a five-of-diamonds. 
+Underneath the five-of-diamonds, there is a four-of-diamonds. 
+Underneath the four-of-diamonds, there is a three-of-diamonds. 
+Underneath the three-of-diamonds, there is a two-of-diamonds. 
+Underneath the two-of-diamonds, there is an ace-of-spades. 
+Underneath the ace-of-spades, there is a king-of-spades. 
+Underneath the king-of-spades, there is a queen-of-spades. 
+Underneath the queen-of-spades, there is a jack-of-spades. 
+Underneath the jack-of-spades, there is a ten-of-spades. 
+Underneath the ten-of-spades, there is a nine-of-spades. 
+Underneath the nine-of-spades, there is an eight-of-spades. 
+Underneath the eight-of-spades, there is a seven-of-spades. 
+Underneath the seven-of-spades, there is a six-of-spades. 
+Underneath the six-of-spades, there is a five-of-spades. 
+Underneath the five-of-spades, there is a four-of-spades. 
+Underneath the four-of-spades, there is a three-of-spades. 
+Underneath the three-of-spades, there is a two-of-spades. 
+Underneath the two-of-spades, there is an ace-of-clubs. 
+Underneath the ace-of-clubs, there is a king-of-clubs. 
+Underneath the king-of-clubs, there is a queen-of-clubs. 
+Underneath the queen-of-clubs, there is a jack-of-clubs. 
+Underneath the jack-of-clubs, there is a ten-of-clubs. 
+Underneath the ten-of-clubs, there is a nine-of-clubs. 
+Underneath the nine-of-clubs, there is an eight-of-clubs. 
+Underneath the eight-of-clubs, there is a seven-of-clubs. 
+Underneath the seven-of-clubs, there is a six-of-clubs. 
+Underneath the six-of-clubs, there is a five-of-clubs. 
+Underneath the five-of-clubs, there is a four-of-clubs. 
+Underneath the four-of-clubs, there is a three-of-clubs. 
+Underneath the three-of-clubs, there is a two-of-clubs. 
+
+>: There is no T-9247-OCM here. 
+
+>: <success>
+  <command>
+    <switch>
+      XML
+    </switch>
+  </command>
+</success>
+<success>
+  <command>
+    <look>
+      <room>
+        <name>
+          Games and Amusements Exhibit
+        </name>
+        <description>
+          You standing before an exhibit on games and amusements. From here, you can go west. 
+        </description>
+        <items>
+          <item>
+            <name>
+              cribbage board
+            </name>
+            <description>
+              an ordinary cribbage board
+            </description>
+            <adjectives>
+            </adjectives>
+            <condition>
+              <pristine>
+              </pristine>
+            </condition>
+            <piled_on>
+              <item>
+                <name>
+                  ace-of-hearts
+                </name>
+                <description>
+                  an ordinary playing card
+                </description>
+                <adjectives>
+                </adjectives>
+                <condition>
+                  <pristine>
+                  </pristine>
+                </condition>
+                <piled_on>
+                  <item>
+                    <name>
+                      king-of-hearts
+                    </name>
+                    <description>
+                      an ordinary playing card
+                    </description>
+                    <adjectives>
+                    </adjectives>
+                    <condition>
+                      <pristine>
+                      </pristine>
+                    </condition>
+                    <piled_on>
+                      <item>
+                        <name>
+                          queen-of-hearts
+                        </name>
+                        <description>
+                          an ordinary playing card
+                        </description>
+                        <adjectives>
+                        </adjectives>
+                        <condition>
+                          <pristine>
+                          </pristine>
+                        </condition>
+                        <piled_on>
+                          <item>
+                            <name>
+                              jack-of-hearts
+                            </name>
+                            <description>
+                              an ordinary playing card
+                            </description>
+                            <adjectives>
+                            </adjectives>
+                            <condition>
+                              <pristine>
+                              </pristine>
+                            </condition>
+                            <piled_on>
+                              <item>
+                                <name>
+                                  ten-of-hearts
+                                </name>
+                                <description>
+                                  an ordinary playing card
+                                </description>
+                                <adjectives>
+                                </adjectives>
+                                <condition>
+                                  <pristine>
+                                  </pristine>
+                                </condition>
+                                <piled_on>
+                                  <item>
+                                    <name>
+                                      nine-of-hearts
+                                    </name>
+                                    <description>
+                                      an ordinary playing card
+                                    </description>
+                                    <adjectives>
+                                    </adjectives>
+                                    <condition>
+                                      <pristine>
+                                      </pristine>
+                                    </condition>
+                                    <piled_on>
+                                      <item>
+                                        <name>
+                                          eight-of-hearts
+                                        </name>
+                                        <description>
+                                          an ordinary playing card
+                                        </description>
+                                        <adjectives>
+                                        </adjectives>
+                                        <condition>
+                                          <pristine>
+                                          </pristine>
+                                        </condition>
+                                        <piled_on>
+                                          <item>
+                                            <name>
+                                              seven-of-hearts
+                                            </name>
+                                            <description>
+                                              an ordinary playing card
+                                            </description>
+                                            <adjectives>
+                                            </adjectives>
+                                            <condition>
+                                              <pristine>
+                                              </pristine>
+                                            </condition>
+                                            <piled_on>
+                                              <item>
+                                                <name>
+                                                  six-of-hearts
+                                                </name>
+                                                <description>
+                                                  an ordinary playing card
+                                                </description>
+                                                <adjectives>
+                                                </adjectives>
+                                                <condition>
+                                                  <pristine>
+                                                  </pristine>
+                                                </condition>
+                                                <piled_on>
+                                                  <item>
+                                                    <name>
+                                                      five-of-hearts
+                                                    </name>
+                                                    <description>
+                                                      an ordinary playing card
+                                                    </description>
+                                                    <adjectives>
+                                                    </adjectives>
+                                                    <condition>
+                                                      <pristine>
+                                                      </pristine>
+                                                    </condition>
+                                                    <piled_on>
+                                                      <item>
+                                                        <name>
+                                                          four-of-hearts
+                                                        </name>
+                                                        <description>
+                                                          an ordinary playing card
+                                                        </description>
+                                                        <adjectives>
+                                                        </adjectives>
+                                                        <condition>
+                                                          <pristine>
+                                                          </pristine>
+                                                        </condition>
+                                                        <piled_on>
+                                                          <item>
+                                                            <name>
+                                                              three-of-hearts
+                                                            </name>
+                                                            <description>
+                                                              an ordinary playing card
+                                                            </description>
+                                                            <adjectives>
+                                                            </adjectives>
+                                                            <condition>
+                                                              <pristine>
+                                                              </pristine>
+                                                            </condition>
+                                                            <piled_on>
+                                                              <item>
+                                                                <name>
+                                                                  two-of-hearts
+                                                                </name>
+                                                                <description>
+                                                                  an ordinary playing card
+                                                                </description>
+                                                                <adjectives>
+                                                                </adjectives>
+                                                                <condition>
+                                                                  <pristine>
+                                                                  </pristine>
+                                                                </condition>
+                                                                <piled_on>
+                                                                  <item>
+                                                                    <name>
+                                                                      ace-of-diamonds
+                                                                    </name>
+                                                                    <description>
+                                                                      an ordinary playing card
+                                                                    </description>
+                                                                    <adjectives>
+                                                                    </adjectives>
+                                                                    <condition>
+                                                                      <pristine>
+                                                                      </pristine>
+                                                                    </condition>
+                                                                    <piled_on>
+                                                                      <item>
+                                                                        <name>
+                                                                          king-of-diamonds
+                                                                        </name>
+                                                                        <description>
+                                                                          an ordinary playing card
+                                                                        </description>
+                                                                        <adjectives>
+                                                                        </adjectives>
+                                                                        <condition>
+                                                                          <pristine>
+                                                                          </pristine>
+                                                                        </condition>
+                                                                        <piled_on>
+                                                                          <item>
+                                                                            <name>
+                                                                              queen-of-diamonds
+                                                                            </name>
+                                                                            <description>
+                                                                              an ordinary playing card
+                                                                            </description>
+                                                                            <adjectives>
+                                                                            </adjectives>
+                                                                            <condition>
+                                                                              <pristine>
+                                                                              </pristine>
+                                                                            </condition>
+                                                                            <piled_on>
+                                                                              <item>
+                                                                                <name>
+                                                                                  jack-of-diamonds
+                                                                                </name>
+                                                                                <description>
+                                                                                  an ordinary playing card
+                                                                                </description>
+                                                                                <adjectives>
+                                                                                </adjectives>
+                                                                                <condition>
+                                                                                  <pristine>
+                                                                                  </pristine>
+                                                                                </condition>
+                                                                                <piled_on>
+                                                                                  <item>
+                                                                                    <name>
+                                                                                      ten-of-diamonds
+                                                                                    </name>
+                                                                                    <description>
+                                                                                      an ordinary playing card
+                                                                                    </description>
+                                                                                    <adjectives>
+                                                                                    </adjectives>
+                                                                                    <condition>
+                                                                                      <pristine>
+                                                                                      </pristine>
+                                                                                    </condition>
+                                                                                    <piled_on>
+                                                                                      <item>
+                                                                                        <name>
+                                                                                          nine-of-diamonds
+                                                                                        </name>
+                                                                                        <description>
+                                                                                          an ordinary playing card
+                                                                                        </description>
+                                                                                        <adjectives>
+                                                                                        </adjectives>
+                                                                                        <condition>
+                                                                                          <pristine>
+                                                                                          </pristine>
+                                                                                        </condition>
+                                                                                        <piled_on>
+                                                                                          <item>
+                                                                                            <name>
+                                                                                              eight-of-diamonds
+                                                                                            </name>
+                                                                                            <description>
+                                                                                              an ordinary playing card
+                                                                                            </description>
+                                                                                            <adjectives>
+                                                                                            </adjectives>
+                                                                                            <condition>
+                                                                                              <pristine>
+                                                                                              </pristine>
+                                                                                            </condition>
+                                                                                            <piled_on>
+                                                                                              <item>
+                                                                                                <name>
+                                                                                                  seven-of-diamonds
+                                                                                                </name>
+                                                                                                <description>
+                                                                                                  an ordinary playing card
+                                                                                                </description>
+                                                                                                <adjectives>
+                                                                                                </adjectives>
+                                                                                                <condition>
+                                                                                                  <pristine>
+                                                                                                  </pristine>
+                                                                                                </condition>
+                                                                                                <piled_on>
+                                                                                                  <item>
+                                                                                                    <name>
+                                                                                                      six-of-diamonds
+                                                                                                    </name>
+                                                                                                    <description>
+                                                                                                      an ordinary playing card
+                                                                                                    </description>
+                                                                                                    <adjectives>
+                                                                                                    </adjectives>
+                                                                                                    <condition>
+                                                                                                      <pristine>
+                                                                                                      </pristine>
+                                                                                                    </condition>
+                                                                                                    <piled_on>
+                                                                                                      <item>
+                                                                                                        <name>
+                                                                                                          five-of-diamonds
+                                                                                                        </name>
+                                                                                                        <description>
+                                                                                                          an ordinary playing card
+                                                                                                        </description>
+                                                                                                        <adjectives>
+                                                                                                        </adjectives>
+                                                                                                        <condition>
+                                                                                                          <pristine>
+                                                                                                          </pristine>
+                                                                                                        </condition>
+                                                                                                        <piled_on>
+                                                                                                          <item>
+                                                                                                            <name>
+                                                                                                              four-of-diamonds
+                                                                                                            </name>
+                                                                                                            <description>
+                                                                                                              an ordinary playing card
+                                                                                                            </description>
+                                                                                                            <adjectives>
+                                                                                                            </adjectives>
+                                                                                                            <condition>
+                                                                                                              <pristine>
+                                                                                                              </pristine>
+                                                                                                            </condition>
+                                                                                                            <piled_on>
+                                                                                                              <item>
+                                                                                                                <name>
+                                                                                                                  three-of-diamonds
+                                                                                                                </name>
+                                                                                                                <description>
+                                                                                                                  an ordinary playing card
+                                                                                                                </description>
+                                                                                                                <adjectives>
+                                                                                                                </adjectives>
+                                                                                                                <condition>
+                                                                                                                  <pristine>
+                                                                                                                  </pristine>
+                                                                                                                </condition>
+                                                                                                                <piled_on>
+                                                                                                                  <item>
+                                                                                                                    <name>
+                                                                                                                      two-of-diamonds
+                                                                                                                    </name>
+                                                                                                                    <description>
+                                                                                                                      an ordinary playing card
+                                                                                                                    </description>
+                                                                                                                    <adjectives>
+                                                                                                                    </adjectives>
+                                                                                                                    <condition>
+                                                                                                                      <pristine>
+                                                                                                                      </pristine>
+                                                                                                                    </condition>
+                                                                                                                    <piled_on>
+                                                                                                                      <item>
+                                                                                                                        <name>
+                                                                                                                          ace-of-spades
+                                                                                                                        </name>
+                                                                                                                        <description>
+                                                                                                                          an ordinary playing card
+                                                                                                                        </description>
+                                                                                                                        <adjectives>
+                                                                                                                        </adjectives>
+                                                                                                                        <condition>
+                                                                                                                          <pristine>
+                                                                                                                          </pristine>
+                                                                                                                        </condition>
+                                                                                                                        <piled_on>
+                                                                                                                          <item>
+                                                                                                                            <name>
+                                                                                                                              king-of-spades
+                                                                                                                            </name>
+                                                                                                                            <description>
+                                                                                                                              an ordinary playing card
+                                                                                                                            </description>
+                                                                                                                            <adjectives>
+                                                                                                                            </adjectives>
+                                                                                                                            <condition>
+                                                                                                                              <pristine>
+                                                                                                                              </pristine>
+                                                                                                                            </condition>
+                                                                                                                            <piled_on>
+                                                                                                                              <item>
+                                                                                                                                <name>
+                                                                                                                                  queen-of-spades
+                                                                                                                                </name>
+                                                                                                                                <description>
+                                                                                                                                  an ordinary playing card
+                                                                                                                                </description>
+                                                                                                                                <adjectives>
+                                                                                                                                </adjectives>
+                                                                                                                                <condition>
+                                                                                                                                  <pristine>
+                                                                                                                                  </pristine>
+                                                                                                                                </condition>
+                                                                                                                                <piled_on>
+                                                                                                                                  <item>
+                                                                                                                                    <name>
+                                                                                                                                      jack-of-spades
+                                                                                                                                    </name>
+                                                                                                                                    <description>
+                                                                                                                                      an ordinary playing card
+                                                                                                                                    </description>
+                                                                                                                                    <adjectives>
+                                                                                                                                    </adjectives>
+                                                                                                                                    <condition>
+                                                                                                                                      <pristine>
+                                                                                                                                      </pristine>
+                                                                                                                                    </condition>
+                                                                                                                                    <piled_on>
+                                                                                                                                      <item>
+                                                                                                                                        <name>
+                                                                                                                                          ten-of-spades
+                                                                                                                                        </name>
+                                                                                                                                        <description>
+                                                                                                                                          an ordinary playing card
+                                                                                                                                        </description>
+                                                                                                                                        <adjectives>
+                                                                                                                                        </adjectives>
+                                                                                                                                        <condition>
+                                                                                                                                          <pristine>
+                                                                                                                                          </pristine>
+                                                                                                                                        </condition>
+                                                                                                                                        <piled_on>
+                                                                                                                                          <item>
+                                                                                                                                            <name>
+                                                                                                                                              nine-of-spades
+                                                                                                                                            </name>
+                                                                                                                                            <description>
+                                                                                                                                              an ordinary playing card
+                                                                                                                                            </description>
+                                                                                                                                            <adjectives>
+                                                                                                                                            </adjectives>
+                                                                                                                                            <condition>
+                                                                                                                                              <pristine>
+                                                                                                                                              </pristine>
+                                                                                                                                            </condition>
+                                                                                                                                            <piled_on>
+                                                                                                                                              <item>
+                                                                                                                                                <name>
+                                                                                                                                                  eight-of-spades
+                                                                                                                                                </name>
+                                                                                                                                                <description>
+                                                                                                                                                  an ordinary playing card
+                                                                                                                                                </description>
+                                                                                                                                                <adjectives>
+                                                                                                                                                </adjectives>
+                                                                                                                                                <condition>
+                                                                                                                                                  <pristine>
+                                                                                                                                                  </pristine>
+                                                                                                                                                </condition>
+                                                                                                                                                <piled_on>
+                                                                                                                                                  <item>
+                                                                                                                                                    <name>
+                                                                                                                                                      seven-of-spades
+                                                                                                                                                    </name>
+                                                                                                                                                    <description>
+                                                                                                                                                      an ordinary playing card
+                                                                                                                                                    </description>
+                                                                                                                                                    <adjectives>
+                                                                                                                                                    </adjectives>
+                                                                                                                                                    <condition>
+                                                                                                                                                      <pristine>
+                                                                                                                                                      </pristine>
+                                                                                                                                                    </condition>
+                                                                                                                                                    <piled_on>
+                                                                                                                                                      <item>
+                                                                                                                                                        <name>
+                                                                                                                                                          six-of-spades
+                                                                                                                                                        </name>
+                                                                                                                                                        <description>
+                                                                                                                                                          an ordinary playing card
+                                                                                                                                                        </description>
+                                                                                                                                                        <adjectives>
+                                                                                                                                                        </adjectives>
+                                                                                                                                                        <condition>
+                                                                                                                                                          <pristine>
+                                                                                                                                                          </pristine>
+                                                                                                                                                        </condition>
+                                                                                                                                                        <piled_on>
+                                                                                                                                                          <item>
+                                                                                                                                                            <name>
+                                                                                                                                                              five-of-spades
+                                                                                                                                                            </name>
+                                                                                                                                                            <description>
+                                                                                                                                                              an ordinary playing card
+                                                                                                                                                            </description>
+                                                                                                                                                            <adjectives>
+                                                                                                                                                            </adjectives>
+                                                                                                                                                            <condition>
+                                                                                                                                                              <pristine>
+                                                                                                                                                              </pristine>
+                                                                                                                                                            </condition>
+                                                                                                                                                            <piled_on>
+                                                                                                                                                              <item>
+                                                                                                                                                                <name>
+                                                                                                                                                                  four-of-spades
+                                                                                                                                                                </name>
+                                                                                                                                                                <description>
+                                                                                                                                                                  an ordinary playing card
+                                                                                                                                                                </description>
+                                                                                                                                                                <adjectives>
+                                                                                                                                                                </adjectives>
+                                                                                                                                                                <condition>
+                                                                                                                                                                  <pristine>
+                                                                                                                                                                  </pristine>
+                                                                                                                                                                </condition>
+                                                                                                                                                                <piled_on>
+                                                                                                                                                                  <item>
+                                                                                                                                                                    <name>
+                                                                                                                                                                      three-of-spades
+                                                                                                                                                                    </name>
+                                                                                                                                                                    <description>
+                                                                                                                                                                      an ordinary playing card
+                                                                                                                                                                    </description>
+                                                                                                                                                                    <adjectives>
+                                                                                                                                                                    </adjectives>
+                                                                                                                                                                    <condition>
+                                                                                                                                                                      <pristine>
+                                                                                                                                                                      </pristine>
+                                                                                                                                                                    </condition>
+                                                                                                                                                                    <piled_on>
+                                                                                                                                                                      <item>
+                                                                                                                                                                        <name>
+                                                                                                                                                                          two-of-spades
+                                                                                                                                                                        </name>
+                                                                                                                                                                        <description>
+                                                                                                                                                                          an ordinary playing card
+                                                                                                                                                                        </description>
+                                                                                                                                                                        <adjectives>
+                                                                                                                                                                        </adjectives>
+                                                                                                                                                                        <condition>
+                                                                                                                                                                          <pristine>
+                                                                                                                                                                          </pristine>
+                                                                                                                                                                        </condition>
+                                                                                                                                                                        <piled_on>
+                                                                                                                                                                          <item>
+                                                                                                                                                                            <name>
+                                                                                                                                                                              ace-of-clubs
+                                                                                                                                                                            </name>
+                                                                                                                                                                            <description>
+                                                                                                                                                                              an ordinary playing card
+                                                                                                                                                                            </description>
+                                                                                                                                                                            <adjectives>
+                                                                                                                                                                            </adjectives>
+                                                                                                                                                                            <condition>
+                                                                                                                                                                              <pristine>
+                                                                                                                                                                              </pristine>
+                                                                                                                                                                            </condition>
+                                                                                                                                                                            <piled_on>
+                                                                                                                                                                              <item>
+                                                                                                                                                                                <name>
+                                                                                                                                                                                  king-of-clubs
+                                                                                                                                                                                </name>
+                                                                                                                                                                                <description>
+                                                                                                                                                                                  an ordinary playing card
+                                                                                                                                                                                </description>
+                                                                                                                                                                                <adjectives>
+                                                                                                                                                                                </adjectives>
+                                                                                                                                                                                <condition>
+                                                                                                                                                                                  <pristine>
+                                                                                                                                                                                  </pristine>
+                                                                                                                                                                                </condition>
+                                                                                                                                                                                <piled_on>
+                                                                                                                                                                                  <item>
+                                                                                                                                                                                    <name>
+                                                                                                                                                                                      queen-of-clubs
+                                                                                                                                                                                    </name>
+                                                                                                                                                                                    <description>
+                                                                                                                                                                                      an ordinary playing card
+                                                                                                                                                                                    </description>
+                                                                                                                                                                                    <adjectives>
+                                                                                                                                                                                    </adjectives>
+                                                                                                                                                                                    <condition>
+                                                                                                                                                                                      <pristine>
+                                                                                                                                                                                      </pristine>
+                                                                                                                                                                                    </condition>
+                                                                                                                                                                                    <piled_on>
+                                                                                                                                                                                      <item>
+                                                                                                                                                                                        <name>
+                                                                                                                                                                                          jack-of-clubs
+                                                                                                                                                                                        </name>
+                                                                                                                                                                                        <description>
+                                                                                                                                                                                          an ordinary playing card
+                                                                                                                                                                                        </description>
+                                                                                                                                                                                        <adjectives>
+                                                                                                                                                                                        </adjectives>
+                                                                                                                                                                                        <condition>
+                                                                                                                                                                                          <pristine>
+                                                                                                                                                                                          </pristine>
+                                                                                                                                                                                        </condition>
+                                                                                                                                                                                        <piled_on>
+                                                                                                                                                                                          <item>
+                                                                                                                                                                                            <name>
+                                                                                                                                                                                              ten-of-clubs
+                                                                                                                                                                                            </name>
+                                                                                                                                                                                            <description>
+                                                                                                                                                                                              an ordinary playing card
+                                                                                                                                                                                            </description>
+                                                                                                                                                                                            <adjectives>
+                                                                                                                                                                                            </adjectives>
+                                                                                                                                                                                            <condition>
+                                                                                                                                                                                              <pristine>
+                                                                                                                                                                                              </pristine>
+                                                                                                                                                                                            </condition>
+                                                                                                                                                                                            <piled_on>
+                                                                                                                                                                                              <item>
+                                                                                                                                                                                                <name>
+                                                                                                                                                                                                  nine-of-clubs
+                                                                                                                                                                                                </name>
+                                                                                                                                                                                                <description>
+                                                                                                                                                                                                  an ordinary playing card
+                                                                                                                                                                                                </description>
+                                                                                                                                                                                                <adjectives>
+                                                                                                                                                                                                </adjectives>
+                                                                                                                                                                                                <condition>
+                                                                                                                                                                                                  <pristine>
+                                                                                                                                                                                                  </pristine>
+                                                                                                                                                                                                </condition>
+                                                                                                                                                                                                <piled_on>
+                                                                                                                                                                                                  <item>
+                                                                                                                                                                                                    <name>
+                                                                                                                                                                                                      eight-of-clubs
+                                                                                                                                                                                                    </name>
+                                                                                                                                                                                                    <description>
+                                                                                                                                                                                                      an ordinary playing card
+                                                                                                                                                                                                    </description>
+                                                                                                                                                                                                    <adjectives>
+                                                                                                                                                                                                    </adjectives>
+                                                                                                                                                                                                    <condition>
+                                                                                                                                                                                                      <pristine>
+                                                                                                                                                                                                      </pristine>
+                                                                                                                                                                                                    </condition>
+                                                                                                                                                                                                    <piled_on>
+                                                                                                                                                                                                      <item>
+                                                                                                                                                                                                        <name>
+                                                                                                                                                                                                          seven-of-clubs
+                                                                                                                                                                                                        </name>
+                                                                                                                                                                                                        <description>
+                                                                                                                                                                                                          an ordinary playing card
+                                                                                                                                                                                                        </description>
+                                                                                                                                                                                                        <adjectives>
+                                                                                                                                                                                                        </adjectives>
+                                                                                                                                                                                                        <condition>
+                                                                                                                                                                                                          <pristine>
+                                                                                                                                                                                                          </pristine>
+                                                                                                                                                                                                        </condition>
+                                                                                                                                                                                                        <piled_on>
+                                                                                                                                                                                                          <item>
+                                                                                                                                                                                                            <name>
+                                                                                                                                                                                                              six-of-clubs
+                                                                                                                                                                                                            </name>
+                                                                                                                                                                                                            <description>
+                                                                                                                                                                                                              an ordinary playing card
+                                                                                                                                                                                                            </description>
+                                                                                                                                                                                                            <adjectives>
+                                                                                                                                                                                                            </adjectives>
+                                                                                                                                                                                                            <condition>
+                                                                                                                                                                                                              <pristine>
+                                                                                                                                                                                                              </pristine>
+                                                                                                                                                                                                            </condition>
+                                                                                                                                                                                                            <piled_on>
+                                                                                                                                                                                                              <item>
+                                                                                                                                                                                                                <name>
+                                                                                                                                                                                                                  five-of-clubs
+                                                                                                                                                                                                                </name>
+                                                                                                                                                                                                                <description>
+                                                                                                                                                                                                                  an ordinary playing card
+                                                                                                                                                                                                                </description>
+                                                                                                                                                                                                                <adjectives>
+                                                                                                                                                                                                                </adjectives>
+                                                                                                                                                                                                                <condition>
+                                                                                                                                                                                                                  <pristine>
+                                                                                                                                                                                                                  </pristine>
+                                                                                                                                                                                                                </condition>
+                                                                                                                                                                                                                <piled_on>
+                                                                                                                                                                                                                  <item>
+                                                                                                                                                                                                                    <name>
+                                                                                                                                                                                                                      four-of-clubs
+                                                                                                                                                                                                                    </name>
+                                                                                                                                                                                                                    <description>
+                                                                                                                                                                                                                      an ordinary playing card
+                                                                                                                                                                                                                    </description>
+                                                                                                                                                                                                                    <adjectives>
+                                                                                                                                                                                                                    </adjectives>
+                                                                                                                                                                                                                    <condition>
+                                                                                                                                                                                                                      <pristine>
+                                                                                                                                                                                                                      </pristine>
+                                                                                                                                                                                                                    </condition>
+                                                                                                                                                                                                                    <piled_on>
+                                                                                                                                                                                                                      <item>
+                                                                                                                                                                                                                        <name>
+                                                                                                                                                                                                                          three-of-clubs
+                                                                                                                                                                                                                        </name>
+                                                                                                                                                                                                                        <description>
+                                                                                                                                                                                                                          an ordinary playing card
+                                                                                                                                                                                                                        </description>
+                                                                                                                                                                                                                        <adjectives>
+                                                                                                                                                                                                                        </adjectives>
+                                                                                                                                                                                                                        <condition>
+                                                                                                                                                                                                                          <pristine>
+                                                                                                                                                                                                                          </pristine>
+                                                                                                                                                                                                                        </condition>
+                                                                                                                                                                                                                        <piled_on>
+                                                                                                                                                                                                                          <item>
+                                                                                                                                                                                                                            <name>
+                                                                                                                                                                                                                              two-of-clubs
+                                                                                                                                                                                                                            </name>
+                                                                                                                                                                                                                            <description>
+                                                                                                                                                                                                                              an ordinary playing card
+                                                                                                                                                                                                                            </description>
+                                                                                                                                                                                                                            <adjectives>
+                                                                                                                                                                                                                            </adjectives>
+                                                                                                                                                                                                                            <condition>
+                                                                                                                                                                                                                              <pristine>
+                                                                                                                                                                                                                              </pristine>
+                                                                                                                                                                                                                            </condition>
+                                                                                                                                                                                                                            <piled_on>
+                                                                                                                                                                                                                            </piled_on>
+                                                                                                                                                                                                                          </item>
+                                                                                                                                                                                                                        </piled_on>
+                                                                                                                                                                                                                      </item>
+                                                                                                                                                                                                                    </piled_on>
+                                                                                                                                                                                                                  </item>
+                                                                                                                                                                                                                </piled_on>
+                                                                                                                                                                                                              </item>
+                                                                                                                                                                                                            </piled_on>
+                                                                                                                                                                                                          </item>
+                                                                                                                                                                                                        </piled_on>
+                                                                                                                                                                                                      </item>
+                                                                                                                                                                                                    </piled_on>
+                                                                                                                                                                                                  </item>
+                                                                                                                                                                                                </piled_on>
+                                                                                                                                                                                              </item>
+                                                                                                                                                                                            </piled_on>
+                                                                                                                                                                                          </item>
+                                                                                                                                                                                        </piled_on>
+                                                                                                                                                                                      </item>
+                                                                                                                                                                                    </piled_on>
+                                                                                                                                                                                  </item>
+                                                                                                                                                                                </piled_on>
+                                                                                                                                                                              </item>
+                                                                                                                                                                            </piled_on>
+                                                                                                                                                                          </item>
+                                                                                                                                                                        </piled_on>
+                                                                                                                                                                      </item>
+                                                                                                                                                                    </piled_on>
+                                                                                                                                                                  </item>
+                                                                                                                                                                </piled_on>
+                                                                                                                                                              </item>
+                                                                                                                                                            </piled_on>
+                                                                                                                                                          </item>
+                                                                                                                                                        </piled_on>
+                                                                                                                                                      </item>
+                                                                                                                                                    </piled_on>
+                                                                                                                                                  </item>
+                                                                                                                                                </piled_on>
+                                                                                                                                              </item>
+                                                                                                                                            </piled_on>
+                                                                                                                                          </item>
+                                                                                                                                        </piled_on>
+                                                                                                                                      </item>
+                                                                                                                                    </piled_on>
+                                                                                                                                  </item>
+                                                                                                                                </piled_on>
+                                                                                                                              </item>
+                                                                                                                            </piled_on>
+                                                                                                                          </item>
+                                                                                                                        </piled_on>
+                                                                                                                      </item>
+                                                                                                                    </piled_on>
+                                                                                                                  </item>
+                                                                                                                </piled_on>
+                                                                                                              </item>
+                                                                                                            </piled_on>
+                                                                                                          </item>
+                                                                                                        </piled_on>
+                                                                                                      </item>
+                                                                                                    </piled_on>
+                                                                                                  </item>
+                                                                                                </piled_on>
+                                                                                              </item>
+                                                                                            </piled_on>
+                                                                                          </item>
+                                                                                        </piled_on>
+                                                                                      </item>
+                                                                                    </piled_on>
+                                                                                  </item>
+                                                                                </piled_on>
+                                                                              </item>
+                                                                            </piled_on>
+                                                                          </item>
+                                                                        </piled_on>
+                                                                      </item>
+                                                                    </piled_on>
+                                                                  </item>
+                                                                </piled_on>
+                                                              </item>
+                                                            </piled_on>
+                                                          </item>
+                                                        </piled_on>
+                                                      </item>
+                                                    </piled_on>
+                                                  </item>
+                                                </piled_on>
+                                              </item>
+                                            </piled_on>
+                                          </item>
+                                        </piled_on>
+                                      </item>
+                                    </piled_on>
+                                  </item>
+                                </piled_on>
+                              </item>
+                            </piled_on>
+                          </item>
+                        </piled_on>
+                      </item>
+                    </piled_on>
+                  </item>
+                </piled_on>
+              </item>
+            </piled_on>
+          </item>
+        </items>
+      </room>
+    </look>
+  </command>
+</success>
+Things look slightly different, but you can't put a diode on
+exactly how. 
+
+>: Games and Amusements Exhibit
+
+You standing before an exhibit on games and amusements. From
+here, you can go west. 
+There is a cribbage board here. 
+Underneath the cribbage board, there is an ace-of-hearts. 
+Underneath the ace-of-hearts, there is a king-of-hearts. 
+Underneath the king-of-hearts, there is a queen-of-hearts. 
+Underneath the queen-of-hearts, there is a jack-of-hearts. 
+Underneath the jack-of-hearts, there is a ten-of-hearts. 
+Underneath the ten-of-hearts, there is a nine-of-hearts. 
+Underneath the nine-of-hearts, there is an eight-of-hearts. 
+Underneath the eight-of-hearts, there is a seven-of-hearts. 
+Underneath the seven-of-hearts, there is a six-of-hearts. 
+Underneath the six-of-hearts, there is a five-of-hearts. 
+Underneath the five-of-hearts, there is a four-of-hearts. 
+Underneath the four-of-hearts, there is a three-of-hearts. 
+Underneath the three-of-hearts, there is a two-of-hearts. 
+Underneath the two-of-hearts, there is an ace-of-diamonds. 
+Underneath the ace-of-diamonds, there is a king-of-diamonds. 
+Underneath the king-of-diamonds, there is a queen-of-diamonds. 
+Underneath the queen-of-diamonds, there is a jack-of-diamonds. 
+Underneath the jack-of-diamonds, there is a ten-of-diamonds. 
+Underneath the ten-of-diamonds, there is a nine-of-diamonds. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: % UMIX shutdown: console EOF

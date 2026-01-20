@@ -1,0 +1,47 @@
+hmonk
+COMEFROM
+run /bin/umodem xml2.adv EOF
+{ O'Cult XML SNF normalizer (CPS) }
+
+SNF x => Eval x Done;
+
+Eval A k => Apply k A;
+Eval B k => Apply k B;
+
+Eval (Seq x y) k => Eval x (KSeq y k);
+Apply (KSeq y k) v => Eval y (KSeq2 v k);
+Apply (KSeq2 v k) w => Merge v w k;
+
+Eval (Tag q d) k => Eval d (KTag q k);
+Apply (KTag q k) v => Ins q v k;
+
+{ merge sequences }
+Merge (Seq a b) c k => Merge b c (KMergeLeft a k);
+Apply (KMergeLeft a k) rest => Apply k (Seq a rest);
+
+Merge (Tag q a) (Tag q b) k => Merge a b (KMergeTag q k);
+Apply (KMergeTag q k) rest => Apply k (Tag q rest);
+
+Merge a b k => Apply k (Seq a b);
+
+{ insert tag in order and remove duplicates }
+Ins q (Tag q d) k => Apply k (Tag q d);
+
+Ins Bold (Tag Emph d) k => Apply k (Tag Bold (Tag Emph d));
+Ins Bold (Tag Maj d) k => Apply k (Tag Bold (Tag Maj d));
+
+Ins Emph (Tag Bold d) k => Ins Emph d (KWrap Bold k);
+Ins Emph (Tag Maj d) k => Apply k (Tag Emph (Tag Maj d));
+
+Ins Maj (Tag Bold d) k => Ins Maj d (KWrap Bold k);
+Ins Maj (Tag Emph d) k => Ins Maj d (KWrap Emph k);
+
+Apply (KWrap q k) v => Apply k (Tag q v);
+
+Ins q d k => Apply k (Tag q d);
+
+Apply Done v => v;
+
+. { end }
+EOF
+advise xml xml2.adv

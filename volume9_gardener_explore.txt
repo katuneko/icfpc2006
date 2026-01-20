@@ -1,0 +1,102 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as gardener
+
+
+% antomaton*
+.history
+README
+example.ant
+puzzle1.ant
+puzzle2.ant
+puzzle3.ant
+puzzle4.ant
+puzzle5.ant
+puzzle6.ant
+puzzle7.ant
+puzzle8.ant
+puzzle9.ant
+puzzle10.ant
+puzzle11.ant
+puzzle12.ant
+puzzle13.ant
+puzzle14.ant
+puzzle15.ant
+% ssh -login bbarker -pass plinko umix9.cbv.net
+^D
+^D
+eixt
+eixt
+logout
+% No unread messages.
+
+---------------------------------------------------------------------
+INBOX:
+
+Message  Read?  Sender                                Subject
+-------  -----  ------                                -------
+      0    Yes  Donald Nut <dnut@clv.net>             Yours loan is approved 7l0l
+
+---------------------------------------------------------------------
+
+Which message would you like to read?
+Type a number from '0' to '0'.
+Or type 'q' to quit.
+Goodbye!
+% UMIX shutdown: console EOF

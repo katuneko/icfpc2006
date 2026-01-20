@@ -1,0 +1,18 @@
+volume9_howie_sequent_sequel_part1_xml.txt
+  items: 2
+  missing: 3
+volume9_howie_sequent_sequel_part2_xml.txt
+  items: 11
+  missing: 14
+volume9_howie_sequent_sequel_part3_xml.txt
+  items: 3
+  missing: 3
+volume9_howie_sequent_sequel_part4_xml.txt
+  items: 22
+  missing: 24
+volume9_howie_sequent_sequel_part5_xml.txt
+  items: 3
+  missing: 3
+volume9_howie_sequent_sequel_part6_xml.txt
+  items: 4
+  missing: 4

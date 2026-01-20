@@ -1,0 +1,3 @@
+guest
+cd /home/guest/code
+run a.out

@@ -1,0 +1,79 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as ohmega
+
+
+% ls: not an accessible directory.
+% ls: not an accessible directory.
+% 2d: runs 2d programs
+usage: 2d prog.2d
+reads the program from the file specified,
+and invokes the module 'main' with no arguments.
+prints the result to the screen.
+% verify: verifies that a 2D program meets a specification.
+usage: verify testname prog.2d 
+verifies the provided program against the specified test.
+The program's score is determined by its area: 
+  Smaller is better.
+Built in tests are :
+  mult
+  rev
+  raytrace
+  ocult
+% UMIX shutdown: console EOF

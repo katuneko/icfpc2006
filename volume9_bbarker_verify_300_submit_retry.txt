@@ -1,0 +1,90 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as bbarker
+
+
+
+You have new mail. Type 'mail' to view.
+% Please enter your machine now using the |>< characters.
+Terminate with an empty line.
+
+[BK] Your machine has the same width as black-knot model 300.
+[BK] Checking against that model's spec...
+[BK] Your machine successfully replicated black-knot model 300!
+High score!
+Please enter your name: Please enter your password: ===============================
+         HIGH SCORES
+===============================
+SCORE      NAME     PASSWORD
+  200     team-k pw123
+   50      howie xyzzy^H^H^H^H^H
+   40       yang U+262F
+    0      guest 
+    0      guest 
+    0       yang how do I delete this??
+    0      guest 
+    0      guest 
+    0      guest 
+    0      guest 
+    0      guest 
+    0       yang please take my password off!
+BLACK.300=200@999999|ab4464b1cfdf9e33438689167ed8b8d
+
+You have new mail. Type 'mail' to view.
+% UMIX shutdown: console EOF

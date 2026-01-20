@@ -1,0 +1,37 @@
+gardener
+mathemantica
+/bin/umodem puzzle7_solution.ant ZZZEOFZZZ
+Puzzle 7: Threshing Machine
+NNNNNNN
+NNNNNNN
+NNNNNNN
+NNNNNNN
+NNNNNNN
+NNNNNNN
+NNNNNNN
+NNNNNNN
+NNNNNNN
+16 21
+ o o o o o o $ $ $ $ o o o o o o
+ o o o o o o - - - - o o o o o o
+ o o o o o o - - - - o o o o o o
+ o o o o o o -1v -1v o o o o o o
+ o o o o o o - - - - o o o o o o
+ o o o o o o1^ -1^ - o o o o o o
+ o o o o o o - - - - o o o o o o
+ o o o o o o -1< -1< o o o o o o
+ o o o o o o - - - - o o o o o o
+ o o o o o o1> -1> - o o o o o o
+ o o o o o o - - - - o o o o o o
+ o o o o o o - - - - o o o o o o
+ o o o o o o - - - - o o o o o o
+ o o o o o o3v3v3v3v o o o o o o
+ o o o o o o3^3^3^3^ o o o o o o
+ o o o o o o - - - - o o o o o o
+ - - - - - - - - - - - - - - - -
+ - - - - - - - - - - - - - - - -
+ - - - - - - - - - - - - - - - -
+ - - - - - - - - - - - - - - - -
+ o o o o o o o o o o o o o o o o
+ZZZEOFZZZ
+./antomaton puzzle7_solution.ant

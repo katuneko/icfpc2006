@@ -1,0 +1,6 @@
+ohmega
+bidirectional
+ls 2d*
+ls verify*
+./2d
+./verify

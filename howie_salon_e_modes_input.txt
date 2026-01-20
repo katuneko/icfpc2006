@@ -1,0 +1,31 @@
+howie
+xyzzy
+adventure
+west
+look
+examine bullet-point
+examine slides.ppt
+switch XML
+look
+examine bullet-point
+examine slides.ppt
+switch sexp
+look
+examine bullet-point
+examine slides.ppt
+switch ML
+look
+examine bullet-point
+examine slides.ppt
+switch Reading
+look
+examine bullet-point
+examine slides.ppt
+switch ANSI
+look
+examine bullet-point
+examine slides.ppt
+switch English
+look
+examine bullet-point
+examine slides.ppt
