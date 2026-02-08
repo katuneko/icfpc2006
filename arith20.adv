@@ -1,0 +1,15 @@
+Compute x => Eval x;
+
+Eval Z => Z;
+Eval (S x) => S (Eval x);
+
+Eval (Add x y) => AddF (Eval x) (Freeze y);
+Eval (Mult x y) => MulF (Eval x) (Freeze y);
+
+AddF Z (Freeze y) => Eval y;
+AddF (S x) (Freeze y) => S (AddF x (Freeze y));
+
+MulF Z (Freeze y) => Z;
+MulF (S x) (Freeze y) => AddF (Eval y) (Freeze (Mult x y));
+
+.

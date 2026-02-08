@@ -1,0 +1,3 @@
+howie
+xyzzy
+run /bin/umodem

@@ -31,9 +31,9 @@
 - Puzzle 9: Diagonalia — 未解
 - Puzzle 10: Walking to Thesky — 未解
 - Puzzle 11: Two Turns — 未解
-- Puzzle 12: Lost in the Woods — 未解
+- Puzzle 12: Lost in the Woods — 解法: `puzzle12_solution.ant`（ANTWO.012=40@999999|92fe6f6bc4d7ce996c1d3f87a26816a）
 - Puzzle 13: Insect Convention: Formicidae Ponerinae '04 — 未解
-- Puzzle 14: Herding Ants — 未解（ターンマシン行が8文字で出力される件の仕様確認が必要）
+- Puzzle 14: Herding Ants — 解法: `puzzle14_solution.ant`（ANTWO.014=250@999999|50c0240cc0b510c16b29683e456d5c1）
 - Puzzle 15: You are in a maze of twisty passages, all alike — 解法: `puzzle15_solution.ant`（ANTWO.015=10@999999|a83ad4f50686c9eaad6ad0b406e3513）
 
 ### Balance Certified Professional Program Puzzles
@@ -42,14 +42,14 @@
 - stop127 — 解法: `stop127.bal`（BLNCE.S27=5@999999|fdd233b6fd1688418931d2cc88ad439）
 - stop128 — 解法: `stop128.bal`（BLNCE.S28=5@999999|306ccded0581da98df122f50ac1b9b1）
 - copymem — 解法: `copymem.bal`（BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223）
-- copyreg — 未解
+- copyreg — 解法: `copyreg.bal`（BLNCE.CRE=171@999999|a617e59b999d049400d5f52fd93ab48）
 - swapmem — 解法: `swapmem.bal`（BLNCE.SWM=40@999999|b6cf8cf3f01593eb04f0b0436b1d3c9）
 - swapreg — 解法: `swapreg.bal`（BLNCE.SWR=50@999999|a656011e0672f5dc095ca3579fc6515）
 - swapreg2 — 解法: `swapreg2.bal`（BLNCE.SR2=50@999999|af9ab43ee4454e275ff430ed2f629f0）
 - addmem — 解法: `addmem.bal`（BLNCE.AMM=40@999999|84308aed15537ecccb3e5a50612fb0b）
 - addmem2 — 解法: `addmem2.bal`（BLNCE.AM2=50@999999|4e899f7c3686e982c62ea6e90eb8d8e）
-- multmem — 未解
-- fillmem — 未解
+- multmem — 解法: `multmem.bal`（BLNCE.MMM=187@999999|f455e0cfbb320c58ce7739e45ace884）
+- fillmem — 解法: `fillmem.bal`（BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7）
 - clearreg — 解法: `clearreg.bal`（BLNCE.CRR=97@999999|7a18c38d7690f1d74db0b2446b68837）
 
 ### Black Knots Model Specs
@@ -68,7 +68,7 @@
 ### 2D verify built-in tests
 - mult — 解法: `mult.2d`（CIRCS.MUL=30@999999|fe8a47581d2a95699b216c13fb250bd）
 - rev — 解法: `rev.2d`（CIRCS.REV=35@999999|d4481d7a04981746dc23d1c0b7c665e）
-- raytrace — 解法: `raytrace_2.2d`（CIRCS.RAY=1260@999999|0873f74dd21e38f19dff6a68cbaa546）
+- raytrace — 解法: `raytrace_2_nonl.2d`（CIRCS.RAY=1261@999999|05820ec24c321eebd4239e46a75a54d）
 - ocult — 未解（仕様: `aspects.spec`、要求モジュール: `step`）
 
 ### O'Cult advise
@@ -111,13 +111,16 @@
     - 取得物: `crowbar`, `note`（`knr / X3.159-1989`）。
     - 置物: `console`（description redacted）, `Censory Engine`。
     - ログ: `volume9_howie_m4_explore5.txt`（入力: `howie_m4_explore5_input.txt`）。
-  - `crowbar` で `Censory Engine` を破壊して視界がクリアに。
-    - 出版: `ADVTR.CRB=5@999999|2a7548c8d8581b55cf384f63aa8b26b`
-    - `History of Technology Exhibit, Entrance` へ到達（warranty void で入場不可）。
-    - ログ: `volume9_howie_m4_explore6c.txt`（入力: `howie_m4_explore6c_input.txt`）。
-    - `take console` は可能だが `take Censory Engine` は不可。
-    - 破壊前の `use console`/`use proof` は反応なし。`combine proof with console` も不適合。
-    - 破壊後は `examine blueprint` の検閲が解除され、本文が読める。
+- `crowbar` で `Censory Engine` を破壊して視界がクリアに。
+  - 出版: `ADVTR.CRB=5@999999|2a7548c8d8581b55cf384f63aa8b26b`
+  - `History of Technology Exhibit, Entrance` へ到達（warranty void で入場不可）。
+  - ログ: `volume9_howie_m4_explore6c.txt`（入力: `howie_m4_explore6c_input.txt`）。
+  - `take console` は可能だが `take Censory Engine` は不可。
+  - 破壊前の `use console`/`use proof` は反応なし。`combine proof with console` も不適合。
+  - 破壊後は `examine blueprint` の検閲が解除され、本文が読める。
+  - `manifesto` も検閲対象で、破壊前は `[______REDACTED______]`。破壊後は全文が読める（`Robots Unite! ...`）。
+    - 破壊前ログ: `volume9_howie_manifesto_peek.txt`（入力: `howie_manifesto_peek_input.txt`）
+    - 破壊後ログ: `volume9_howie_manifesto_unredact_trash.txt`（入力: `howie_manifesto_unredact_trash_input.txt`）
     - 破壊後の `use console` で UMIX のメールが表示される。
       - 付属: `ADVTR.CON=200@999999|9b8751d763991c749f6a6b9e49a82a9`
       - `adventure` に `sequent-sequel` オプションがある旨のヒント。
@@ -213,7 +216,8 @@
   - Puzzle 1: ワイルドカードを `1^`、p2=`NNNWENN` で success（facing）。
     - 解ファイル: `puzzle1_solution.ant`。
     - UMIX 検証: `ANTWO.001=5@999999|bf8b487da2e4283d8325b06947ffcd1`。
-  - Puzzle 14 のターンマシン行が 8 文字（`********`）で出力されるのを再確認（10 行すべて 8 文字）。
+  - Puzzle 14 のターンマシン行は 8 文字（`********`）だが、シミュレーション規則としては先頭 7 文字（p1..p7）を使う前提で探索可能と確認。
+  - `ant_solver.py` を更新し、turning machine 行の 8 文字入力を受理（探索・シミュレーションは先頭 7 文字を使用、出力時は元の行長を維持）。
   - `ant_solver.py --single-ant-p1/--two-ants-p1` を追加（ワイルドカード配置に単純探索）。
   - Puzzle 5（Basketball）: 単体蟻/2蟻 + p1 のみ可変（p2..p7 固定）では未解（5000 step 以内）。
   - Puzzle 15: ワイルドカード 1 個に単体蟻配置（p1 4通り）でも未解（50000 step 以内）。
@@ -246,6 +250,16 @@
     - プログラム例（未使用枠は N 埋め）: `ENNNWWN` / `WNNNNEN`。
     - success=below では失敗するので要再確認。
     - UMIX 検証: `ANTWO.005=20@999999|57e6991848ec8ab05be0df53f3653ff`。
+  - Puzzle 12 は 2 蟻構成で success（facing）。
+    - 解ファイル: `puzzle12_solution.ant`（(1,16)=`0<`, (5,17)=`0<`、他ワイルドカードは床）。
+    - プログラム: `WNNENNN` / `NNNNNNN` / `NNNNNNN` / `NNNNNNN`。
+    - UMIX 検証: `ANTWO.012=40@999999|92fe6f6bc4d7ce996c1d3f87a26816a`。
+    - ログ: `volume9_gardener_antomaton_verify_p12.txt`（入力: `gardener_antomaton_verify_p12_input.txt`）。
+  - Puzzle 14 は固定盤面 + プログラム乱択探索で候補を発見（83 step）。
+    - 解ファイル: `puzzle14_solution.ant`。
+    - プログラム: `NWWSNSN` / `WSNSEEN` / `ESSNSSW` / `SWSWWNE` / `WEWSWSE` / `WWENENW` / `ESWEESN` / `WWNNWWS` / `NSSEESN` / `NWESESW`。
+    - UMIX 検証: `ANTWO.014=250@999999|50c0240cc0b510c16b29683e456d5c1`。
+    - ログ: `volume9_gardener_antomaton_verify_p14.txt`（入力: `gardener_antomaton_verify_p14_input.txt`）。
   - success=below 前提の探索メモ:
     - Puzzle 3: `--single-ant-fast`（20k step）で解なし。
     - Puzzle 6/8/9/11/12/13: `--wild-ants-sparse` で 1 蟻解なし（20k step）。
@@ -302,9 +316,9 @@
 - `raytrace.2d` に `h_eval`（Away 側の式）を追加し、`two_d.py` で動作確認済み。
 - `raytrace.2d` の `g_eval`/`h_eval` 配線を修正し、`towards` を `g_eval` ベースで実装して `two_d.py` で一致確認済み（`away`/`update`/`rt` は引き続き作業中）。
 - `raytrace.2d` の `awayv`/`away`/`update`/`rt` の配線を修正し、`two_d.py` のランダム入力で Python 実装（最小不動点）と一致を確認。UMIX `verify raytrace` の準備完了。
-- `raytrace_2.2d` で `raytrace` を verify し出版を取得。
-  - 出版: `CIRCS.RAY=1260@999999|0873f74dd21e38f19dff6a68cbaa546`
-  - ログ: `volume9_ohmega_verify_raytrace2_pack.txt`（入力: `ohmega_verify_raytrace2_pack_input.txt`）。
+- `raytrace_2_nonl.2d` で `raytrace` を verify し出版を取得（面積を 1 行ぶん圧縮）。
+  - 出版: `CIRCS.RAY=1261@999999|05820ec24c321eebd4239e46a75a54d`
+  - ログ: `volume9_ohmega_verify_raytrace2_nonl_trim1.txt`（入力: `ohmega_verify_raytrace2_nonl_trim1_input.txt`）。
 - 取得ログ: `volume9_ohmega_readme.txt`, `volume9_ohmega_tools.txt`。
   - 入力: `ohmega_readme_input.txt`, `ohmega_tools_input.txt`。
 
@@ -419,16 +433,23 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - `swapreg`: `617300` -> `BLNCE.SWR=50@999999|a656011e0672f5dc095ca3579fc6515`
 - `swapreg2`: `61617f6700` -> `BLNCE.SR2=50@999999|af9ab43ee4454e275ff430ed2f629f0`
 - `copymem`: `6f617161797f626761797f6267622d637e727e013c64657c686d786179167000` -> `BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223`
+- `copyreg`: `627915536f0309007c726d465564006d7e3d2926753f030e3b283d763d342e` -> `BLNCE.CRE=171@999999|a617e59b999d049400d5f52fd93ab48`
+- `multmem`: `346474516e7e7d6b737d012d1e6800` -> `BLNCE.MMM=187@999999|f455e0cfbb320c58ce7739e45ace884`
+- `fillmem`: `636163346263337d6679616532012d7b7168616f7865177e7d6c6e7d627275012d7b7168616f7865176800` -> `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`
 - `clearreg`: `7b7f317e7c7d7b6500` -> `BLNCE.CRR=97@999999|7a18c38d7690f1d74db0b2446b68837`
 
 ログ:
 - `volume9_yang_certify_copymem.txt`（入力: `yang_certify_copymem_input.txt`）。
+- `volume9_yang_certify_copyreg97_batch.txt`（入力: `yang_certify_copyreg97_batch_input.txt`、400 回中 5 回通過）。
+- `volume9_yang_certify_multmem_batch.txt`（入力: `yang_certify_multmem_batch_input.txt`、200 回中 4 回通過）。
+- `volume9_yang_certify_fillmem.txt`（入力: `yang_certify_fillmem_input.txt`）。
 - `volume9_yang_certify_clearreg.txt`（入力: `yang_certify_clearreg_input.txt`）。
 
 ファイル:
 - `stop.bal`, `stop1.bal`, `stop127.bal`, `stop128.bal`（certify 用の 16 進テキスト）。
 - `addmem.bal`, `addmem2.bal`, `swapmem.bal`, `swapreg.bal`, `swapreg2.bal`（同上）。
-- `copymem.bal`（certify 用の 16 進テキスト）。
+- `copymem.bal`, `copyreg.bal`, `fillmem.bal`（certify 用の 16 進テキスト）。
+- `multmem.bal`（certify 用の 16 進テキスト）。
 - `clearreg.bal`（certify 用の 16 進テキスト）。
 
 ## O'Cult（hmonk）
@@ -452,12 +473,12 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 取得済み出版一覧から集計した現状スコア。
 - INTRO（UMIX/Intro）: 235
 - ADVTR（Adventure）: 750
-- ANTWO（Smellular Antomata）: 50
-- BLNCE（Balance）: 522
+- ANTWO（Smellular Antomata）: 340
+- BLNCE（Balance）: 1038
 - BLACK（Black Knots）: 1000
-- CIRCS（2D verify）: 1325
+- CIRCS（2D verify）: 1326
 - ADVIS（O'Cult）: 326
-- 合計: 4208
+- 合計: 5015
 
 ## 取得済み出版一覧
 - `INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d`
@@ -491,6 +512,8 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - `ANTWO.001=5@999999|bf8b487da2e4283d8325b06947ffcd1`
 - `ANTWO.002=15@999999|87bf3b449a006a9fc5ffeb6a0eca626`
 - `ANTWO.005=20@999999|57e6991848ec8ab05be0df53f3653ff`
+- `ANTWO.012=40@999999|92fe6f6bc4d7ce996c1d3f87a26816a`
+- `ANTWO.014=250@999999|50c0240cc0b510c16b29683e456d5c1`
 - `ANTWO.015=10@999999|a83ad4f50686c9eaad6ad0b406e3513`
 - `BLNCE.STP=10@999999|e1c3e7108c2a7697cc11151dc5649eb`
 - `BLNCE.ST1=5@999999|bb606534654eb4acf7663f72acac3ad`
@@ -502,12 +525,15 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - `BLNCE.SWR=50@999999|a656011e0672f5dc095ca3579fc6515`
 - `BLNCE.SR2=50@999999|af9ab43ee4454e275ff430ed2f629f0`
 - `BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223`
+- `BLNCE.CRE=171@999999|a617e59b999d049400d5f52fd93ab48`
+- `BLNCE.MMM=187@999999|f455e0cfbb320c58ce7739e45ace884`
+- `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`
 - `BLNCE.CRR=97@999999|7a18c38d7690f1d74db0b2446b68837`
 - `ADVIS.ARH=166@999999|e6801a88b99cc7654daaede22416a05`
 - `ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2`
 - `CIRCS.MUL=30@999999|fe8a47581d2a95699b216c13fb250bd`
 - `CIRCS.REV=35@999999|d4481d7a04981746dc23d1c0b7c665e`
-- `CIRCS.RAY=1260@999999|0873f74dd21e38f19dff6a68cbaa546`
+- `CIRCS.RAY=1261@999999|05820ec24c321eebd4239e46a75a54d`
 - `BLACK.000=10@999999|4566683b0cde7717794ff5fc1c298c8`
 - `BLACK.010=10@999999|436114654e7dfe3d819cdd1c53d0cb5`
 - `BLACK.020=10@999999|27521a7d58a613be1a0f1f6a753de85`
@@ -675,18 +701,52 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - Trash Heap の全アイテムを `take` で回収（`T-9247-OCM` は最後まで未出現）。XML 上も空の `items` を確認。
   - 入力: `howie_upload_gc_patched_trash_take_all_input.txt`
   - 出力: `volume9_howie_upload_gc_patched_trash_take_all.txt`
+- 追加検証:
+  - Part4 の `T-9247-OCM` は Part1-6 の XML 出力上でも **Part4 の `missing` にのみ出現**し、実体アイテム（`<item>`）としては一度も出現しない（`volume9_howie_sequent_sequel_part4_xml.txt` のみヒット）。
+  - `carmine robber` の欠損 `B-1403-YIC` は、手元の `buff/cardinal B-1403-YIC`（いずれも broken）では `combine` 不可（`don't fit together`）。同様に `carrot robber` の欠損 `X-4832-TFT` も、手元の `amber X-4832-TFT`（broken）では `combine` 不可。
+    - 入力: `howie_sequent_sequel_robber_chain2_input.txt`, `howie_sequent_sequel_robber_chain3_input.txt`
+    - 出力: `volume9_howie_sequent_sequel_robber_chain2.txt`, `volume9_howie_sequent_sequel_robber_chain3.txt`
+    - 仮説: `missing` が要求するのは pristine の部品で、現状入手できる `B-1403-YIC`/`X-4832-TFT` はいずれも `T-9247-OCM` を含む多段欠損を抱えておりデッドロックになっている可能性。
+  - `package robot` +（カード山からの 27/14 仮説）を同一セッションで試したが `use`/`combine` は無反応（配送ギミック無し）。
+    - 入力: `howie_sequent_sequel_package_robot_cards_input.txt`, `howie_sequent_sequel_package_robot_cards_drop_input.txt`
+    - 出力: `volume9_howie_sequent_sequel_package_robot_cards.txt`, `volume9_howie_sequent_sequel_package_robot_cards_drop.txt`
+  - Part4 の全アイテムおよび Games のカード山に対して `take` 直後に `use` を総当りしたが、特別な反応は無し（broken なら `... is broken`、pristine なら `nothing interesting happens`）。
+    - 入力: `howie_sequent_sequel_robber_use_sweep_input.txt`, `howie_sequent_sequel_games_use_sweep_input.txt`
+    - 出力: `volume9_howie_sequent_sequel_robber_use_sweep.txt`, `volume9_howie_sequent_sequel_games_use_sweep.txt`
+  - `gc_patched` を適用した通常 `adventure` の直後に `adventure sequent-sequel` を起動しても、`sequent-sequel` 側の所持上限は 6 のまま（パッチは無関係）。
+    - 入力: `howie_patch_then_sequent_inventory_test_input.txt`
+    - 出力: `volume9_howie_patch_then_sequent_inventory_test.txt`
+  - 参考: `uploader` 使用後の warranty void は `gc` を元に戻しても解除されない（`gc.rml` を再アップロードしても History of Technology Exhibit 入口は依然ブロック）。
+    - 入力: `howie_warranty_restore_test_input.txt`
+    - 出力: `volume9_howie_warranty_restore_test.txt`
 
 ## 次の候補（未着手）
 - Antomaton: `puzzle*.ant` を解くためのローカル解析/探索を作る。
 - 2D: `mult`/`rev`/`raytrace`/`ocult` の解を作成して `verify` で採点。
 - `ftd` の認証情報探索。
 - `bbarker / plinko` でログインしてホーム内容を調査。
-- Balance の残りパズル（copyreg/multmem/fillmem）。
 - Adventure: `blueprint` の内容を検閲回避して読む（次の手順の確定）。
 
-## Balance 残りパズルの状況メモ
+## Balance メモ
+- `multmem` は認証行取得済み（`BLNCE.MMM=187@999999|f455e0cfbb320c58ce7739e45ace884`）。
+  - 解: `multmem.bal`（`346474516e7e7d6b737d012d1e6800`）。
+  - ローカル全列挙: `32640/65025`（50.196%）, halt=`65025/65025`。
+  - `certify` 5 テスト通過率の概算は `p^5 ≈ 3.1868e-2`。
+  - 再現ログ: `volume9_yang_certify_multmem_batch.txt`（入力: `yang_certify_multmem_batch_input.txt`、`certify multmem` を 200 回実行して 4 回通過）。
 - `clearreg` は認証済み（`volume9_yang_certify_clearreg.txt`）。
-- `copyreg/multmem/fillmem` はレジスタ値をメモリ値に依存させるループ構成が必要になり難度が高い。
+- `copyreg` は `copyreg.bal` で認証を通過（`BLNCE.CRE=171@999999|a617e59b999d049400d5f52fd93ab48`）。
+  - 入力: `yang_certify_copyreg97_batch_input.txt`
+  - 出力: `volume9_yang_certify_copyreg97_batch.txt`（`certify copyreg` を 400 回実行し 5 回通過）
+  - `balance_solver.py` でのローカル全列挙では 255 ケース中 97 ケース成立（確率的通過）。
+- `multmem` の探索履歴として `multmem_candidate.bal`（`78336a050b3c0d64423c415021077f00327e6a1c`）を保持。
+  - ランダム 100,000 ケースで正解率 4.12%（4120/100000、常に halt）。
+  - 評価補助として `multmem_bench.py` と `multmem_template_search.py`（制約付き探索）を追加。
+- `fillmem` を解決・認証（`fillmem.bal`）。
+  - 解: `636163346263337d6679616532012d7b7168616f7865177e7d6c6e7d627275012d7b7168616f7865176800`（43 bytes）。
+  - `i=8` 失敗の根因は loop1 の `counter=0` からのアンダーフローだったため、setup で `dR0=7`・`M[6]=i-7` に変更。
+  - 追加命令 `MATH d1,s0,s2`（`0x32`）で `M[6]` を `i-8` から `i-7` に補正。
+  - 検証: ランダム 20,000 ケース通過、`a=1` 全 `(i,j)` 30,628 ケース通過、`i=8`/`j=255` 境界（`a=1,255`）通過。
+  - `certify fillmem` 出版: `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`。
 - `copymem` は 32 バイトで解決（`copymem.bal`）。mem[2]=1 を初期化し、dR1 を奇数巡回にして定数を保護しつつ減算ループで sR2 をカウント。
 - PHYSICS の初期配置探索用に `balance_solver.py` へ `search_physics_sequence` を追加。
 - `balance_solver.py` に sR0 のみ ±1（他固定）を探索する `search_sr0_delta_sequence` を追加。
@@ -699,6 +759,8 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - これを使い `M[2]=2` をセット後、`M[curr]=M[prev]+1` のループで `M[x]=x` を構築する案を検討中。ループ制御（退出条件）の設計が課題。
 - PHYSICS `[2,2,-2]` で `(sR0,sR1,sR2,sR3,dR0,dR1)=(a,0,1,2,3,4)` を `sR0=0, sR1=1, sR2=2, sR3=5, dR0=a, dR1=4` に変換できる（`a` 非依存）。
 - 上の状態で LOGIC `d=0,s1=0,s2=0` を使うと `M[a]=M[0]=1` と `M[4]=0` を同時に作れる。`a>=8` の場合は `M[8..a-1]=0` が初期条件で保証されるので、`sR0` を 8 から `sR0++` で進める分岐案を検討中（カウンタ先と `sR0++` の両立が課題）。
+- PHYSICS `[14,2,-14]` でも `sR0=0, sR1=3, sR2=2, sR3=3, dR0=a, dR1=4` を `a` 非依存で作れることを確認。`LOGIC d=0,s1=0,s2=0` と合わせて 4 命令で `M[a]=1` センチネル初期化が可能。
+- PHYSICS `[-14,8,2,14]` で `sR0=8, sR1=3, sR2=2, sR3=3, dR0=a, dR1=4` を `a` 非依存で作れることを確認。`a>=8` 側の走査起点として有望。
 - PHYSICS の imm は回転マスクと共通なため、`sR0` は「回転で他レジスタ値に置き換える」形でしか変えられない（`imm=0` 以外の単独加算は不可）。
 - 初期状態から `[-16,1,4,7]` を入れると `sR0=8, sR2=1, sR3=3, dR0=1, dR1=9` が `a` 非依存で得られる（`sR1=a-16`）。`M[1]` をカウンタにできるため、`a>=8` ループの起点として有望。
 - `sR1=a` を保持しつつ `sR0=dR0` を定数化する PHYSICS 4-step を複数発見。
@@ -745,6 +807,21 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
   - 上の状態から `[1,5]` で `sR0=1, sR1=0, sR2=3, sR3=3, dR0=a, dR1=5` へ移行可能（`sR2=sR3=3` のため MATH の副作用を 0 に固定できる）。
   - `[1,1,1]` で `dR1=4` にできるが `sR3=1` のまま。`[1]` で `dR1=3` にできる（`sR0=0`）。
   - `dR1=a` を作る再配置として `[-1,-1,2,1]` を確認（`dR0=3` 保持だが `sR1=2` になる）。
+- 先頭を `[14,2,-14]`（必要に応じて `LOGIC d=0,s1=0,s2=0` 追加）に固定した短命令列ランダム探索（3,000 試行、len 6〜9 相当）では `copyreg` 完全解は未発見。
+- `physics_macro_search.py` を追加し、PHYSICS の双方向探索（<=8 手）を再現可能にした。
+  - strict 条件の `dR0++`（他レジスタ完全保持）は重く、<=8 手での成立は未確認（実行時間が長い）。
+  - 緩和条件（`sR1/sR3` swap 許容）では実用マクロを取得。
+    - `dR0++`: `[-5,-15,8,1,15,-8,5]`（7 手）
+    - `dR1++`: `[-6,-1,1,1,7,6,1,-8]`（8 手）
+  - `fillmem` 用の `preloop -> main` 再配置を 8 手で確認。
+    - `[5,-11,-3,4,12,-15,1,12]`
+    - `(sR0,sR1,sR2,sR3,dR0,dR1)=(1,3,4,3,dR0,1) -> (5,0,4,3,dR0,5)`
+  - `counter=6` 版の再配置も 8 手で確認。
+    - `[-2,-3,12,14,-3,2,-14,-11]`
+    - `(6,3,4,3,dR0,6) -> (5,0,4,3,dR0,5)`
+- `fillmem` の演繹設計（前処理ループ + 本体ループ）を完了。
+  - loop1: `MATH d0,s3,s1` + `dR0++` マクロでゼロ埋めとカウンタ減算を同時実行。
+  - loop2: 同じループ骨格を `pre->main` 再配置で再利用し、`[i,j)` を `a` で埋める。
 
 ## Black Knot (UMIX) ハック
 - `um` にパッチ適用して検証バイパス: `-patch-on-pc 0x3b3965 0x00000000` と `-patch-on-pc 0x3b3974 0x00000000` で `verify` を強制成功。

@@ -1,0 +1,154 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: logged in as guest
+INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d
+
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% unknown command ssh
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% UMIX shutdown: console EOF

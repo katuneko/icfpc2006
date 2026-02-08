@@ -1,0 +1,88 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as gardener
+
+
+% Begin sending characters. Terminate with ZZZEOFZZZ...
+writing 44 characters
+% % [2J[HFreeform mode.
+[H
+  $$  
+. $$. 
+  0^  
+. @@. 
+      
+. . . 
+Ant reached goal!
+% Begin sending characters. Terminate with ZZZEOFZZZ...
+writing 45 characters
+% % [2J[HFreeform mode.
+[H
+  $$  
+. $$. 
+  0^  
+. @@. 
+      
+. . . 
+Ant reached goal!
+% unknown command shutdown
+new to UMIX? try
+  help
+for help.
+% UMIX shutdown: console EOF

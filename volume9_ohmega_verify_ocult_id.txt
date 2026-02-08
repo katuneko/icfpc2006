@@ -1,0 +1,82 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as ohmega
+
+
+% Begin sending characters. Terminate with __END_OCULT_ID__...
+writing 492 characters
+% % Program area: 520 (smaller is better)
+[2D] Parsing...
+[2D] Locating modules...
+[2D] Verifying wires in module 'step'...
+[2D] Connecting wires...
+[2D] Done Parsing!
+----------------------------------------------------------------------
+
+Initial Term: Inl (Inr Inr Inr Inl (),Inl (Inl (Inr Inr Inr Inr Inl (),Inl (Inr Inl (),Inl (Inr Inl (),Inr Inr Inl ()))),Inl (Inr Inl (),Inl (Inr Inl (),Inl (Inr Inl (),Inr Inr Inl ())))))
+Applying advice...
+Next Term   : Inl (Inr Inr Inr Inl (),Inl (Inl (Inr Inr Inr Inr Inl (),Inl (Inr Inl (),Inl (Inr Inl (),Inr Inr Inl ()))),Inl (Inr Inl (),Inl (Inr Inl (),Inl (Inr Inl (),Inr Inr Inl ())))))
+
+----------------------------------------------------------------------
+
+[2D] Verification failed:
+INCORRECT!
+Expected    : Inr Inl (Inr Inr Inr Inl (),Inl (Inr Inl (),Inl (Inl (Inr Inr Inr Inr Inl (),Inl (Inr Inl (),Inr Inr Inl ())),Inl (Inr Inl (),Inl (Inr Inl (),Inl (Inr Inl (),Inr Inr Inl ()))))))
+
+% UMIX shutdown: console EOF

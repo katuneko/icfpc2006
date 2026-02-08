@@ -1,0 +1,168 @@
+howie
+xyzzy
+adventure sequent-sequel
+north
+north
+north
+north
+take amber X-4832-TFT
+use amber X-4832-TFT
+incinerate amber X-4832-TFT
+take T-9247-OCM
+take amethyst L-4832-RKR
+use amethyst L-4832-RKR
+incinerate amethyst L-4832-RKR
+take T-9247-OCM
+take aquamarine robber
+use aquamarine robber
+incinerate aquamarine robber
+take T-9247-OCM
+take azure L-4832-RKR
+use azure L-4832-RKR
+incinerate azure L-4832-RKR
+take T-9247-OCM
+take beige L-4832-RKR
+use beige L-4832-RKR
+incinerate beige L-4832-RKR
+take T-9247-OCM
+take bisque L-4832-RKR
+use bisque L-4832-RKR
+incinerate bisque L-4832-RKR
+take T-9247-OCM
+take black H-9247-MHK
+use black H-9247-MHK
+incinerate black H-9247-MHK
+take T-9247-OCM
+take blanched-almond-colored D-6678-HED
+use blanched-almond-colored D-6678-HED
+incinerate blanched-almond-colored D-6678-HED
+take T-9247-OCM
+take blaze-orange L-4832-RKR
+use blaze-orange L-4832-RKR
+incinerate blaze-orange L-4832-RKR
+take T-9247-OCM
+take blue D-6678-HED
+use blue D-6678-HED
+incinerate blue D-6678-HED
+take T-9247-OCM
+take blue-violet T-6458-BNR
+use blue-violet T-6458-BNR
+incinerate blue-violet T-6458-BNR
+take T-9247-OCM
+take bondi-blue X-5065-GQY
+use bondi-blue X-5065-GQY
+incinerate bondi-blue X-5065-GQY
+take T-9247-OCM
+take brass B-6678-LTH
+use brass B-6678-LTH
+incinerate brass B-6678-LTH
+take T-9247-OCM
+take bright-green F-9247-QWO
+use bright-green F-9247-QWO
+incinerate bright-green F-9247-QWO
+take T-9247-OCM
+take bright-turquoise L-4832-RKR
+use bright-turquoise L-4832-RKR
+incinerate bright-turquoise L-4832-RKR
+take T-9247-OCM
+take bright-violet J-4832-VAV
+use bright-violet J-4832-VAV
+incinerate bright-violet J-4832-VAV
+take T-9247-OCM
+take bronze N-1403-ADE
+use bronze N-1403-ADE
+incinerate bronze N-1403-ADE
+take T-9247-OCM
+take brown R-0010-FGL
+use brown R-0010-FGL
+incinerate brown R-0010-FGL
+take T-9247-OCM
+take buff B-1403-YIC
+use buff B-1403-YIC
+incinerate buff B-1403-YIC
+take T-9247-OCM
+take burgundy T-6458-BNR
+use burgundy T-6458-BNR
+incinerate burgundy T-6458-BNR
+take T-9247-OCM
+take burlywood-colored X-5065-GQY
+use burlywood-colored X-5065-GQY
+incinerate burlywood-colored X-5065-GQY
+take T-9247-OCM
+take burnt-orange B-6678-LTH
+use burnt-orange B-6678-LTH
+incinerate burnt-orange B-6678-LTH
+take T-9247-OCM
+take burnt-sienna F-9247-QWO
+use burnt-sienna F-9247-QWO
+incinerate burnt-sienna F-9247-QWO
+take T-9247-OCM
+take burnt-umber J-4832-VAV
+use burnt-umber J-4832-VAV
+incinerate burnt-umber J-4832-VAV
+take T-9247-OCM
+take cadet-blue N-1403-ADE
+use cadet-blue N-1403-ADE
+incinerate cadet-blue N-1403-ADE
+take T-9247-OCM
+take camouflage-green R-0010-FGL
+use camouflage-green R-0010-FGL
+incinerate camouflage-green R-0010-FGL
+take T-9247-OCM
+take cardinal B-1403-YIC
+use cardinal B-1403-YIC
+incinerate cardinal B-1403-YIC
+take T-9247-OCM
+take carmine robber
+use carmine robber
+incinerate carmine robber
+take T-9247-OCM
+take carrot robber
+use carrot robber
+incinerate carrot robber
+take T-9247-OCM
+take celadon V-1623-KJS
+use celadon V-1623-KJS
+incinerate celadon V-1623-KJS
+take T-9247-OCM
+take cerise Z-4292-PMZ
+use cerise Z-4292-PMZ
+incinerate cerise Z-4292-PMZ
+take T-9247-OCM
+take cerulean-blue D-9887-UPI
+use cerulean-blue D-9887-UPI
+incinerate cerulean-blue D-9887-UPI
+take T-9247-OCM
+take chartreuse H-6458-ZSP
+use chartreuse H-6458-ZSP
+incinerate chartreuse H-6458-ZSP
+take T-9247-OCM
+take chestnut L-5065-EVW
+use chestnut L-5065-EVW
+incinerate chestnut L-5065-EVW
+take T-9247-OCM
+take chocolate-colored P-6678-JYF
+use chocolate-colored P-6678-JYF
+incinerate chocolate-colored P-6678-JYF
+take T-9247-OCM
+take cinnamon F-0010-DLJ
+use cinnamon F-0010-DLJ
+incinerate cinnamon F-0010-DLJ
+take T-9247-OCM
+take cobalt J-1623-IOQ
+use cobalt J-1623-IOQ
+incinerate cobalt J-1623-IOQ
+take T-9247-OCM
+take copper N-4292-NRX
+use copper N-4292-NRX
+incinerate copper N-4292-NRX
+take T-9247-OCM
+take coral R-9887-SUG
+use coral R-9887-SUG
+incinerate coral R-9887-SUG
+take T-9247-OCM
+look
+show
+take T-9247-OCM
+examine T-9247-OCM
+show

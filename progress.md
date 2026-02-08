@@ -6,7 +6,8 @@
 - メモ:
   - `missing` 表示は再帰的だが、`combine` が要求するのは直下の missing のみ（Broken の多層スタック）。
   - `gc_patched.rml` によりインベントリ上限解除・`drop` 有効化・`speak trash/home/museum` を追加。
-  - `adventure sequent-sequel` ではインベントリ上限が 6 のままに見えるため、不要品は `incinerate` で処理する必要がある。
+  - `adventure sequent-sequel` は別実装で、`gc_patched` の影響を受けない（所持上限 6 のまま）。`drop` も引き続き不可。
+    - 検証ログ: `volume9_howie_patch_then_sequent_inventory_test.txt`
   - `sequent-sequel` Part 1（Race Car）を修理して `ADVTR.RCC=60@999999|ad325af41695424ac0f7ac3c6fad4c5` を取得（ログ: `volume9_howie_sequent_sequel_racecar_fix2.txt`）。
   - `sequent-sequel` Part 2（Pousse Game）を修理して `ADVTR.PSG=60@999999|96aaff0cd1044046b1b5c7d064ebfc7` を取得（ログ: `volume9_howie_sequent_sequel_pousse_fix5.txt`）。
     - `mauve N-1623-AJI` は 2 層 broken。`ivory Z-6458-PSF` + `midnight-blue Z-6458-PSF`（`J-0010-VGZ` 1 個で部分修理）を使って両層を埋め、`D-5065-UVM` と `J-0010-VGZ` で外側を修理。
@@ -14,15 +15,19 @@
   - `sequent-sequel` Part 4（Robber）は `T-9247-OCM` 未発見。スタック全消去でも追加アイテムなし（ログ: `volume9_howie_sequent_sequel_robber_clear.txt`）。
 
 ### 未解決タスク
-- `History of Technology Exhibit` に入る方法（保証の回復 or 迂回）を見つける。Censory Engine 破壊後も入場不可。
+- `History of Technology Exhibit` に入る方法（保証の回復 or 迂回）を見つける。
+  - `uploader` 使用で warranty void になり、`gc.rml` を再アップロードしても解除されない（入口が引き続きブロック）。
+  - 検証ログ: `volume9_howie_warranty_restore_test.txt`
 - `Machine Room M4` の console は破壊後に `use` でメールが読める（`ADVTR.CON` 添付あり）。`sequent-sequel` オプションの冒険を試す。
-- `adventure sequent-sequel` の Part 4（Robber）の `T-9247-OCM` を探す。Part 1 Race Car は修理済み（`ADVTR.RCC`）、Part 2 Pousse Game は修理済み（`ADVTR.PSG`）、Part 3 Package Robot は修理済み（`ADVTR.PKG`）、Part 5 Finite-State Machine は修理済み（`ADVTR.FSM`）、Part 6 Codex は修理済み（`ADVTR.CDX`）。
+- `adventure sequent-sequel` の Part 4（Robber）の `T-9247-OCM` を探す。
+  - `T-9247-OCM` は Part4 の `missing` にのみ出現し、実体アイテムとしては未確認（`volume9_howie_sequent_sequel_part4_xml.txt` のみヒット）。
+  - Part 1 Race Car は修理済み（`ADVTR.RCC`）、Part 2 Pousse Game は修理済み（`ADVTR.PSG`）、Part 3 Package Robot は修理済み（`ADVTR.PKG`）、Part 5 Finite-State Machine は修理済み（`ADVTR.FSM`）、Part 6 Codex は修理済み（`ADVTR.CDX`）。
 - `knr` 環境（`ucc`/`um.c`）の活用方針を詰める。
 
 ## Antomaton (gardener)
 - 成功条件は回転不変（食料に隣接して向いている蟻）で確定。
   - `./antomaton puzzle1_solution.ant` で `Ant reached goal!` を確認（ログ: `volume9_gardener_antomaton_verify_p1_umodem.txt`、入力: `gardener_antomaton_verify_p1_umodem_input.txt`）。
-  - `ant_solver.py` でも `puzzle1/2/5/15` は facing で成功し、`--success-below` では失敗。
+  - `ant_solver.py` でも `puzzle1/2/5/14/15` は facing で成功し、`--success-below` では失敗。
 - Puzzle 1 解決済み（`puzzle1_solution.ant`、success=facing）。
 - Puzzle 15 解決済み（`puzzle15_solution.ant`、success=facing）。
 - Puzzle 15 UMIX 検証: `ANTWO.015=10@999999|a83ad4f50686c9eaad6ad0b406e3513`。
@@ -30,11 +35,17 @@
 - Puzzle 2 UMIX 検証: `ANTWO.002=15@999999|87bf3b449a006a9fc5ffeb6a0eca626`。
 - Puzzle 5 解決済み（`puzzle5_solution.ant`、success=facing）。
 - Puzzle 5 UMIX 検証: `ANTWO.005=20@999999|57e6991848ec8ab05be0df53f3653ff`。
-- Puzzle 14 はターンマシン行が 8 文字で出力されるため仕様確認が必要。
+- Puzzle 12 解決済み（`puzzle12_solution.ant`、success=facing）。
+- Puzzle 12 UMIX 検証: `ANTWO.012=40@999999|92fe6f6bc4d7ce996c1d3f87a26816a`。
+- `volume9_gardener_antomaton_verify_p12.txt`（入力: `gardener_antomaton_verify_p12_input.txt`）で再現。
+- Puzzle 14 解決済み（`puzzle14_solution.ant`、success=facing, 83 step）。
+- Puzzle 14 UMIX 検証: `ANTWO.014=250@999999|50c0240cc0b510c16b29683e456d5c1`。
+- `volume9_gardener_antomaton_verify_p14.txt`（入力: `gardener_antomaton_verify_p14_input.txt`）で再現。
+- `ant_solver.py` は turning machine 行の 8 文字入力を受理し、シミュレーション規則は先頭 7 文字（p1..p7）を使用するように更新。
 - 他パズルは探索/ヒューリスティクスの強化が必要。
 
 ## 2D (ohmega)
-- `mult`/`rev` は UMIX 検証済み（`mult.2d`/`rev.2d`）。`raytrace`/`ocult` は作業中。
+- `mult`/`rev`/`raytrace` は UMIX 検証・出版済み（`mult.2d`/`rev.2d`/`raytrace_2_nonl.2d`）。`ocult` は作業中。
 - `verify` は面積スコアなので最小面積設計が必要。
 - `()`/`(val,val)`/`Inl`/`Inr` の配線設計が未整理。
 - `two_d.py`（簡易 2D 解釈器）と `plus.2d` を追加。`plus.2d` の N/W 接続が競合するため仕様解釈の確認が必要。
@@ -43,7 +54,8 @@
 - `rev_acc` のモジュール名を `revacc0` に変更し、`rev.2d` 側も `use revacc0` に更新。
 - UMIX 検証: `mult` → `CIRCS.MUL=30@999999|fe8a47581d2a95699b216c13fb250bd`（ログ: `volume9_ohmega_verify_mult_rev2.txt`、入力: `ohmega_verify_mult_rev2_input.txt`）。
 - UMIX 検証: `rev` → `CIRCS.REV=35@999999|d4481d7a04981746dc23d1c0b7c665e`（ログ: `volume9_ohmega_verify_rev3.txt`、入力: `ohmega_verify_rev3_input.txt`）。
-- `raytrace.2d` の強度演算補助モジュール（`i_max`/`i_min`）を作成し、`two_d.py` で動作確認済み（`i_max`=強度加算、`i_min`=強度乗算/最小）。`raytrace` 本体は引き続き作業中。
+- UMIX 検証: `raytrace` → `CIRCS.RAY=1261@999999|05820ec24c321eebd4239e46a75a54d`（ログ: `volume9_ohmega_verify_raytrace2_nonl_trim1.txt`、入力: `ohmega_verify_raytrace2_nonl_trim1_input.txt`）。
+- `raytrace.2d` は設計メモ（`i_max`/`i_min` 等の補助モジュールを `two_d.py` で動作確認）。提出は `raytrace_2_nonl.2d`。
 - `raytrace.2d` に `f_apply`（Fテーブル適用）/`g_eval`（Towards 側の式）を追加し、`two_d.py` で動作確認済み。
 - `raytrace.2d` に `h_eval`（Away 側の式）を追加し、`two_d.py` で動作確認済み。
 
@@ -52,14 +64,39 @@
 - `|><` グリッド探索の自動化/再利用戦略が必要。
 
 ## Balance (yang)
-- 未解決: `copyreg`/`multmem`/`fillmem`。
+- 認証行取得済み: `stop`, `stop1`, `stop127`, `stop128`, `addmem`, `addmem2`, `swapmem`, `swapreg`, `swapreg2`, `copymem`, `copyreg`, `multmem`, `fillmem`, `clearreg`。
 - `clearreg` を認証済み（`BLNCE.CRR=97@999999|7a18c38d7690f1d74db0b2446b68837`、ログ: `volume9_yang_certify_clearreg.txt`、入力: `yang_certify_clearreg_input.txt`）。
 - メモリ依存のレジスタ更新を含む短いループ構成が必要。
 - 既存の短ループ探索は不発のため戦略見直しが必要。
 - `balance_solver.py` に PHYSICS 初期配置探索用の `search_physics_sequence` を追加。
 - `copymem` は 32 バイトで解決・認証済み（`copymem.bal`、`BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223`）。
+- `copyreg` は `copyreg.bal`（`627915536f0309007c726d465564006d7e3d2926753f030e3b283d763d342e`）で認証行を取得（`BLNCE.CRE=171@999999|a617e59b999d049400d5f52fd93ab48`）。
+  - 再現ログ: `volume9_yang_certify_copyreg97_batch.txt`（入力: `yang_certify_copyreg97_batch_input.txt`）。
+  - ローカル全探索では 255 ケース中 97 ケースのみ成立。`certify copyreg` を 400 回実行して 5 回通過。
 - `copyreg` は mem[1..7] を 0 に落として mem[0] をカウンタにするループ案を検討中。
+- `multmem` の探索を拡張。現状ベスト候補は `multmem_candidate.bal`（`78336a050b3c0d64423c415021077f00327e6a1c`）。
+  - ランダム 100,000 ケースで正解率 4.12%（4120/100000、常に halt）。
+  - `certify` 5 テスト通過率の概算は `p^5 ≈ 1.1871e-7`（実用不足）。
+  - 候補評価用スクリプト `multmem_bench.py` を追加。
+  - 負の `SCIENCE` を必須化した制約探索スクリプト `multmem_template_search.py` を追加（短パラメータで動作確認済み）。
+- `multmem` の認証行を取得（`multmem.bal`）。
+  - 解: `346474516e7e7d6b737d012d1e6800`（15 bytes）。
+  - ローカル全列挙: `32640/65025`（50.196%）で halt は `65025/65025`。
+  - `certify` 5 テスト通過率の概算は `p^5 ≈ 3.1868e-2`。
+  - `certify multmem` を 200 回実行して 4 回通過。
+  - 出版: `BLNCE.MMM=187@999999|f455e0cfbb320c58ce7739e45ace884`。
+  - ログ: `volume9_yang_certify_multmem_batch.txt`（入力: `yang_certify_multmem_batch_input.txt`）。
+- `fillmem` のローカル解を追加（`fillmem.bal`）。
+  - 解: `636163346263337d6679616532012d7b7168616f7865177e7d6c6e7d627275012d7b7168616f7865176800`（43 bytes）。
+  - 検証: ランダム 20,000 ケースで `20000/20000` 通過。
+  - 境界検証: `i=8` 全 `j`（`a=1,255`）で通過、`j=255` 全 `i`（`a=1,255`）で通過。
+  - 追加検証: `a=1` の全 `(i,j)`（30,628 ケース）で通過。
+  - `certify fillmem` 成功: `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`。
+  - ログ: `volume9_yang_certify_fillmem.txt`（入力: `yang_certify_fillmem_input.txt`）。
 - PHYSICS `[1,1]` は `sR0`/`dR1` を +1、`sR1..sR3,dR0` を固定できる（`sR0++` マクロ）。
+- `copyreg` 初期状態から PHYSICS `[14,2,-14]` で `sR0=0, sR1=3, sR2=2, sR3=3, dR0=a, dR1=4` を `a` 非依存で作れることを確認。
+- 上の状態で `LOGIC d=0,s1=0,s2=0` を使うと `M[a]=1` と `M[4]=0` を同時に作れる（4 命令のセンチネル初期化: `[14,2,-14] + LOGIC(0,0,0)`）。
+- `copyreg` 初期状態から PHYSICS `[-14,8,2,14]` で `sR0=8, sR1=3, sR2=2, sR3=3, dR0=a, dR1=4` を `a` 非依存で作れることを確認（`a>=8` 走査の起点候補）。
 - `copyreg` のレジスタ再配置探索で `[-14,-1,-2,9]` を発見（`[1,1,-1]` 後に `sR0=242, sR1=dR0=3, sR2=0, dR1=11` になる）。
 - 追加の再配置として `[-15,-14,-4,-1]` で `sR0=1, sR2=0, dR1=2` を固定できることを確認。`M[x]=x` を作るループ案に使えそうだが、停止制御が未解決。
 - 追加で PHYSICS `[2,2,-2]` により `sR0=0, dR0=a` の再配置が可能。`M[a]=1` センチネルの設計が進められる見込み。
@@ -108,6 +145,18 @@
   - 上の状態から `[1,5]` で `sR0=1, sR1=0, sR2=3, sR3=3, dR0=a, dR1=5` に移行できる（`sR2=sR3=3` なので MATH の副作用を 0 に固定可能）。
   - `[1,1,1]` で `dR1=4` にできるが `sR3=1` のまま。`[1]` で `dR1=3` にできる（`sR0=0`）。
   - `dR1=a` を作る再配置として `[-1,-1,2,1]` を確認（`dR0=3` 保持だが `sR1=2` になる）。
+- `physics_macro_search.py` を追加。PHYSICS の双方向探索（<=8 手）を再現可能な形で実装。
+  - `dr0++`（`sR0/sR2/dR1` 保持、`sR1/sR3` swap 許容）: 7 手マクロを確認。
+    - 例: `[-5,-15,8,1,15,-8,5]`
+  - `dr1++`（`sR0/sR2/dR0` 保持、`sR1/sR3` swap 許容）: 8 手マクロを確認。
+    - 例: `[-6,-1,1,1,7,6,1,-8]`
+  - `preloop -> main` の再配置（`(1,3,4,3,dR0,1) -> (5,0,4,3,dR0,5)`）を 8 手で確認。
+    - `[5,-11,-3,4,12,-15,1,12]`
+  - `counter=6` 版の再配置（`(6,3,4,3,dR0,6) -> (5,0,4,3,dR0,5)`）も 8 手で確認。
+    - `[-2,-3,12,14,-3,2,-14,-11]`
+- `fillmem` は「2ループ構成（前処理ループ + 本体ループ）」で解決。
+  - ループ1開始を `(sR0,sR1,sR2,sR3,dR0,dR1)=(6,3,4,3,7,6)`、カウンタ `M[6]=i-7` に調整して `i=8` の非停止を解消。
+  - ループ遷移は既存の 8-step 再配置 `[-2,-3,12,14,-3,2,-14,-11]` を使用。
 
 ## Accounts / Exploration
 - `knr / X3.159-1989` を取得（Machine Room M4 の note）。

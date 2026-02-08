@@ -1,0 +1,23 @@
+howie
+xyzzy
+run /bin/umodem readfile2.bas BASEND
+V REM Simple file reader
+X IF ARGS() > I THEN GOTO XX
+XV PRINT "usage: ./readfile2.exe path" + CHR(X)
+XX END
+XXV DIM path AS STRING
+XXX path = ARG(II)
+XXXV ON ERROR GOTO LXXX
+XL DIM line AS STRING
+XLV OPEN path FOR INPUT AS #I
+L WHILE NOT EOF(I)
+LV LINE INPUT #I, line
+LX PRINT line
+LXV WEND
+LXX CLOSE #I
+LXXV END
+LXXX PRINT "ERR " + ERR + CHR(X)
+LXXXV END
+BASEND
+/bin/qbasic readfile2.bas
+readfile2.exe README

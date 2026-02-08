@@ -1,0 +1,3795 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: Junk Room
+
+You are in a room with a pile of junk. A hallway leads south. 
+There is a bolt here. 
+Underneath the bolt, there is a spring. 
+Underneath the spring, there is a button. 
+Underneath the button, there is a (broken) processor. 
+Underneath the processor, there is a red pill. 
+Underneath the pill, there is a (broken) radio. 
+Underneath the radio, there is a cache. 
+Underneath the cache, there is a blue transistor. 
+Underneath the transistor, there is an antenna. 
+Underneath the antenna, there is a screw. 
+Underneath the screw, there is a (broken) motherboard. 
+Underneath the motherboard, there is a (broken) A-1920-IXB. 
+Underneath the A-1920-IXB, there is a red transistor. 
+Underneath the transistor, there is a (broken) keypad. 
+Underneath the keypad, there is some trash. 
+
+>: You are now carrying the bolt. 
+
+>: You are now carrying the spring. 
+
+>: ADVTR.INC=5@999999|f95731ab88952dfa4cb326fb99c085f
+The spring has been destroyed. 
+
+>: You are now carrying the button. 
+
+>: You are now carrying the processor. 
+
+>: You are now carrying the pill. 
+
+>: The pill has been destroyed. 
+
+>: You are now carrying the radio. 
+
+>: You are now carrying the cache. 
+
+>: ADVTR.CMB=5@999999|764e8a851411c66106e130374d8abbb
+You have successfully combined the processor and the cache!
+
+>: You are now carrying the transistor. 
+
+>: You have successfully combined the radio and the transistor!
+
+>: You are now carrying the antenna. 
+
+>: The antenna has been destroyed. 
+
+>: You are now carrying the screw. 
+
+>: You are now carrying the motherboard. 
+
+>: You have successfully combined the motherboard and the screw!
+
+>: You are now carrying the A-1920-IXB. 
+
+>: You have successfully combined the A-1920-IXB and the bolt!
+
+>: You have successfully combined the A-1920-IXB and the processor!
+
+>: You have successfully combined the A-1920-IXB and the radio!
+
+>: You are now carrying the transistor. 
+
+>: You have successfully combined the A-1920-IXB and the
+transistor!
+
+>: You have successfully combined the motherboard and the
+A-1920-IXB!
+
+>: You are now carrying the keypad. 
+
+>: You have successfully combined the keypad and the motherboard!
+
+>: You have successfully combined the keypad and the button!
+
+>: Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: You are now carrying the pamphlet. 
+
+>: You are now carrying the manifesto. 
+
+>: The pamphlet has been destroyed. 
+
+>: ADVTR.KEY=20@999999|36995486a5be3bd747d778916846d2d
+You unlock and open the door. Passing through, you find yourself
+on the streets of Chicago. Seeing no reason you should ever go
+back, you allow the door to close behind you. 
+
+>: The keypad has been destroyed. 
+
+>: You are now carrying the /etc/passwd. 
+
+>: The /etc/passwd has been destroyed. 
+
+>: You are now carrying the note. 
+
+>: The note has been destroyed. 
+
+>: You are now carrying the downloader. 
+
+>: You are now carrying the uploader. 
+
+>: The downloader has been destroyed. 
+
+>: 54th Street and Dorchester Avenue
+
+You are standing at the corner of 54th Street and Dorchester
+Avenue. From here, you can go north, east, south, or west. 
+There is an orange-red X-9247-GWE here. 
+Underneath the X-9247-GWE, there is a (broken) magenta
+V-0010-XBD. 
+Underneath the V-0010-XBD, there is a pumpkin F-1403-QDS. 
+Underneath the F-1403-QDS, there is a (broken) heavy P-5065-WQO.
+
+Underneath the P-5065-WQO, there is a taupe B-4832-LAL. 
+Underneath the B-4832-LAL, there is a (broken) gray40
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) eggplant
+T-9887-OFC. 
+Underneath the T-9887-OFC, there is a (broken) indigo
+Z-1623-CEK. 
+Underneath the Z-1623-CEK, there is a yellow-green H-9887-MKY. 
+Underneath the H-9887-MKY, there is a (broken) shiny F-6678-DOX.
+
+Underneath the F-6678-DOX, there is a pale-green R-1403-SXU. 
+Underneath the R-1403-SXU, there is a (broken) USB cable. 
+Underneath the USB cable, there is a sienna N-4832-NUN. 
+Underneath the N-4832-NUN, there is a slate-gray J-9247-IRG. 
+Underneath the J-9247-IRG, there is a dim-gray B-5065-YLQ. 
+
+>: 54th Street and Blackstone Avenue
+
+You are standing at the corner of 54th Street and Blackstone
+Avenue. From here, you can go north, east, south, or west. 
+There is a textbook here. 
+
+>: 53th Street and Blackstone Avenue
+
+You are standing at the corner of 53th Street and Blackstone
+Avenue. From here, you can go north, east, south, or west. 
+There is a (broken) battery here. 
+Underneath the battery, there is a buff F-6678-DYP. 
+Underneath the F-6678-DYP, there is a (broken) olive-green
+R-4292-FWH. 
+Underneath the R-4292-FWH, there is a (broken) green D-4832-HUX.
+
+Underneath the D-4832-HUX, there is a (broken) prussian-blue
+P-1623-WEU. 
+Underneath the P-1623-WEU, there is a (broken) black X-9887-GKK.
+
+Underneath the X-9887-GKK, there is a reciprocating H-9887-MUQ. 
+Underneath the H-9887-MUQ, there is a bright-violet T-4292-BHD. 
+Underneath the T-4292-BHD, there is a (broken) flax D-4292-HRJ. 
+Underneath the D-4292-HRJ, there is a (broken) yellow
+Z-1623-COC. 
+Underneath the Z-1623-COC, there is a (broken) goldenrod
+X-0010-TVP. 
+Underneath the X-0010-TVP, there is a forest-green F-6678-DYP. 
+Underneath the F-6678-DYP, there is a sky-blue N-1623-ATY. 
+Underneath the N-1623-ATY, there is a (broken) rotating
+H-6678-ZJL. 
+Underneath the H-6678-ZJL, there is a (broken) sienna
+T-6678-BEN. 
+Underneath the T-6678-BEN, there is a heliotrope D-5065-UGE. 
+Underneath the D-5065-UGE, there is a (broken) sea-green
+N-1623-ATY. 
+Underneath the N-1623-ATY, there is a (broken) ochre D-4292-HRJ.
+
+Underneath the D-4292-HRJ, there is a (broken) cream Z-1623-COC.
+
+Underneath the Z-1623-COC, there is a (broken) powder-blue
+T-6678-BEN. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the battery. 
+
+>: You are now carrying the F-6678-DYP. 
+
+>: The F-6678-DYP has been destroyed. 
+
+>: You are now carrying the R-4292-FWH. 
+
+>: The R-4292-FWH has been destroyed. 
+
+>: You are now carrying the D-4832-HUX. 
+
+>: The D-4832-HUX has been destroyed. 
+
+>: You are now carrying the P-1623-WEU. 
+
+>: You are now carrying the X-9887-GKK. 
+
+>: The X-9887-GKK has been destroyed. 
+
+>: You are now carrying the H-9887-MUQ. 
+
+>: You have successfully combined the battery and the H-9887-MUQ!
+
+>: You are now carrying the T-4292-BHD. 
+
+>: You have successfully combined the P-1623-WEU and the
+T-4292-BHD!
+
+>: You are now carrying the D-4292-HRJ. 
+
+>: The D-4292-HRJ has been destroyed. 
+
+>: You are now carrying the Z-1623-COC. 
+
+>: You have successfully combined the Z-1623-COC and the
+P-1623-WEU!
+
+>: You are now carrying the X-0010-TVP. 
+
+>: The X-0010-TVP has been destroyed. 
+
+>: You are now carrying the F-6678-DYP. 
+
+>: The F-6678-DYP has been destroyed. 
+
+>: You are now carrying the N-1623-ATY. 
+
+>: The N-1623-ATY has been destroyed. 
+
+>: You are now carrying the H-6678-ZJL. 
+
+>: The H-6678-ZJL has been destroyed. 
+
+>: You are now carrying the T-6678-BEN. 
+
+>: The T-6678-BEN has been destroyed. 
+
+>: You are now carrying the D-5065-UGE. 
+
+>: The D-5065-UGE has been destroyed. 
+
+>: You are now carrying the N-1623-ATY. 
+
+>: The N-1623-ATY has been destroyed. 
+
+>: You are now carrying the D-4292-HRJ. 
+
+>: The D-4292-HRJ has been destroyed. 
+
+>: You are now carrying the Z-1623-COC. 
+
+>: The Z-1623-COC has been destroyed. 
+
+>: You are now carrying the T-6678-BEN. 
+
+>: The T-6678-BEN has been destroyed. 
+
+>: You are now carrying the N-4832-NFF. 
+
+>: You are now carrying the V-0010-XLT. 
+
+>: You can't take the J-9247-ICW because you can't carry any more
+items. 
+
+>: You aren't carrying a bronze J-9247-ICW. You can only incinerate
+items in your possession. 
+
+>: You can't take the N-4832-NFF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a selective-yellow N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-6678-DYP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a peach-puff F-6678-DYP. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-4832-NFF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a bright-violet N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-4832-NFF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a moccasin N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-9247-ICW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a royal-blue J-9247-ICW. You can only
+combine items in your possession. 
+
+>: You can't combine the V-0010-XLT and the Z-1623-COC because they
+don't fit together. 
+
+>: You can't combine the Z-1623-COC and the battery because they
+don't fit together. 
+
+>: You can't take the R-4292-FWH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-mauve R-4292-FWH. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-6458-NIT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lavender-blush N-6458-NIT. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-9887-IFM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a mint-green J-9887-IFM. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-1623-ATY because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an olive-drab N-1623-ATY. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-4292-DCF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a violet F-4292-DCF. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-9247-GHU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray30 X-9247-GHU. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-9887-KAO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-blue V-9887-KAO. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-4832-NFF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a steel-blue N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-1623-ATY because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-magenta N-1623-ATY. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-9247-GHU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-cornflower-blue X-9247-GHU. You can
+only incinerate items in your possession. 
+
+>: You can't take the N-4832-NFF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a low-carb N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-5065-WBG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a peach-orange P-5065-WBG. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-6458-RXX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a green L-6458-RXX. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-1623-COC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an eggplant Z-1623-COC. You can only combine
+items in your possession. 
+
+>: You can't take the J-9247-ICW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a camouflage-green J-9247-ICW. You can only
+combine items in your possession. 
+
+>: You can't take the N-4832-NFF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a violet-eggplant N-4832-NFF. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-4832-NFF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pear N-4832-NFF. You can only incinerate
+items in your possession. 
+
+>: You can't take the J-9247-ICW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a navy-blue J-9247-ICW. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-6678-DYP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a burgundy F-6678-DYP. You can only combine
+items in your possession. 
+
+>: You can't combine the N-4832-NFF and the battery because they
+don't fit together. 
+
+>: You can't combine the battery and the uploader because they
+don't fit together. 
+
+>: 54th Street and Blackstone Avenue
+
+You are standing at the corner of 54th Street and Blackstone
+Avenue. From here, you can go north, east, south, or west. 
+There is a textbook here. 
+
+>: 54th Street and Harper Avenue
+
+You are standing at the corner of 54th Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north, south, or west. 
+There is a (broken) gray60 Z-4292-PRV here. 
+Underneath the Z-4292-PRV, there is a (broken) pale-carmine
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a pale-cornflower-blue
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is an imported D-9887-UUE. 
+Underneath the D-9887-UUE, there is a (broken) gray90
+Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a sepia Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a (broken) gray30
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a robin-egg-blue Z-4292-PRV.
+
+Underneath the Z-4292-PRV, there is a (broken) slate-blue
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a (broken) rosy-brown
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a gray50 Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a (broken) misty-rose
+Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a cinnamon Z-9887-CUG. 
+Underneath the Z-9887-CUG, there is a (broken) saffron
+N-9247-AWO. 
+Underneath the N-9247-AWO, there is a (broken) indigo
+V-4292-XRX. 
+Underneath the V-4292-XRX, there is a pale-sandy-brown
+R-4832-FAV. 
+Underneath the R-4832-FAV, there is a (broken)
+momemtum-preserving Z-0010-PGL. 
+Underneath the Z-0010-PGL, there is a swamp-green V-4292-XRX. 
+Underneath the V-4292-XRX, there is a pale-pink R-1623-SOQ. 
+Underneath the R-1623-SOQ, there is a cream R-1623-SOQ. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: 54th Place and Harper Avenue
+
+You are standing at the corner of 54th Place and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north or west. 
+There is a tea-green T-9887-OKW here. 
+Underneath the T-9887-OKW, there is a (broken) chartreuse
+N-5065-ALO. 
+Underneath the N-5065-ALO, there is a (broken) dim-gray
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) scarlet
+J-9247-IWC. 
+Underneath the J-9247-IWC, there is a (broken) mustard
+D-4292-HMN. 
+Underneath the D-4292-HMN, there is a (broken) turquoise
+N-4832-NAJ. 
+Underneath the N-4832-NAJ, there is a turquoise F-6678-DTT. 
+Underneath the F-6678-DTT, there is a (broken) celadon
+T-9887-OKW. 
+Underneath the T-9887-OKW, there is a burnt-orange T-9887-OKW. 
+Underneath the T-9887-OKW, there is a cadet-blue T-9887-OKW. 
+Underneath the T-9887-OKW, there is a pastel-green F-6678-DTT. 
+Underneath the F-6678-DTT, there is a (broken) prussian-blue
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) magenta
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) safety-orange
+F-6678-DTT. 
+Underneath the F-6678-DTT, there is an imported B-5065-YQM. 
+Underneath the B-5065-YQM, there is a (broken) puce X-6458-TNF. 
+Underneath the X-6458-TNF, there is a (broken) water-logged
+F-6678-DTT. 
+Underneath the F-6678-DTT, there is a (broken) thistle-colored
+X-6458-TNF. 
+Underneath the X-6458-TNF, there is a gamboge T-9887-OKW. 
+Underneath the T-9887-OKW, there is a sky-blue T-9887-OKW. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the T-9887-OKW because you can't carry any more
+items. 
+
+>: You can't take the N-5065-ALO because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the X-6458-TNF because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the J-9247-IWC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a scarlet J-9247-IWC. You can only combine
+items in your possession. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You can't take the D-4292-HMN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a mustard D-4292-HMN. You can only combine
+items in your possession. 
+
+>: You can't take the N-4832-NAJ because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the F-6678-DTT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You can't take the T-9887-OKW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a celadon T-9887-OKW. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9887-OKW because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the T-9887-OKW because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the F-6678-DTT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You can't take the X-6458-TNF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a prussian-blue X-6458-TNF. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TNF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a magenta X-6458-TNF. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-6678-DTT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a safety-orange F-6678-DTT. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-5065-YQM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an imported B-5065-YQM. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TNF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a puce X-6458-TNF. You can only incinerate
+items in your possession. 
+
+>: You can't take the F-6678-DTT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a water-logged F-6678-DTT. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TNF because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a thistle-colored X-6458-TNF. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9887-OKW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a chartreuse N-5065-ALO. You can only
+combine items in your possession. 
+
+>: You can't take the T-9887-OKW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sky-blue T-9887-OKW. You can only
+incinerate items in your possession. 
+
+>: You can't take the MOSFET because there is another item on top
+of it (take the other item first). 
+
+>: You aren't carrying a navy-blue MOSFET. You can only incinerate
+items in your possession. 
+
+>: You can't take the N-5065-ALO because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the Z-4832-PUL because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the D-1403-UXS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a seashell D-1403-UXS. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-1403-UXS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a peach-yellow D-1403-UXS. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-0010-XGX because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the J-9247-IWC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cyan J-9247-IWC. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-0010-ZBZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a puce H-0010-ZBZ. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-1403-UXS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pastel-pink Z-4832-PUL. You can only
+combine items in your possession. 
+
+>: You aren't carrying a pastel-pink Z-4832-PUL. You can only
+combine items in your possession. 
+
+>: You aren't carrying a pastel-pink Z-4832-PUL. You can only
+combine items in your possession. 
+
+>: You can't take the V-9247-KRE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-brown V-9247-KRE. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-1403-UXS because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a heliotrope D-1403-UXS. You can only
+incinerate items in your possession. 
+
+>: You can't take the MOSFET because there is another item on top
+of it (take the other item first). 
+
+>: You aren't carrying a crimson MOSFET. You can only combine items
+in your possession. 
+
+>: You aren't carrying a crimson MOSFET. You can only combine items
+in your possession. 
+
+>: You aren't carrying a crimson MOSFET. You can only combine items
+in your possession. 
+
+>: 54th Street and Harper Avenue
+
+You are standing at the corner of 54th Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north, south, or west. 
+There is a (broken) gray60 Z-4292-PRV here. 
+Underneath the Z-4292-PRV, there is a (broken) pale-carmine
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a pale-cornflower-blue
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is an imported D-9887-UUE. 
+Underneath the D-9887-UUE, there is a (broken) gray90
+Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a sepia Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a (broken) gray30
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a robin-egg-blue Z-4292-PRV.
+
+Underneath the Z-4292-PRV, there is a (broken) slate-blue
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a (broken) rosy-brown
+D-9887-UUE. 
+Underneath the D-9887-UUE, there is a gray50 Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a (broken) misty-rose
+Z-4292-PRV. 
+Underneath the Z-4292-PRV, there is a cinnamon Z-9887-CUG. 
+Underneath the Z-9887-CUG, there is a (broken) saffron
+N-9247-AWO. 
+Underneath the N-9247-AWO, there is a (broken) indigo
+V-4292-XRX. 
+Underneath the V-4292-XRX, there is a pale-sandy-brown
+R-4832-FAV. 
+Underneath the R-4832-FAV, there is a (broken)
+momemtum-preserving Z-0010-PGL. 
+Underneath the Z-0010-PGL, there is a swamp-green V-4292-XRX. 
+Underneath the V-4292-XRX, there is a pale-pink R-1623-SOQ. 
+Underneath the R-1623-SOQ, there is a cream R-1623-SOQ. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the Z-4292-PRV because you can't carry any more
+items. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-carmine D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-cornflower-blue D-9887-UUE. You can
+only incinerate items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an imported D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray90 Z-4292-PRV. You can only combine
+items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray30 D-9887-UUE. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray60 Z-4292-PRV. You can only combine
+items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a slate-blue D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a rosy-brown D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a misty-rose Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-9887-CUG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cinnamon Z-9887-CUG. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-9247-AWO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a saffron N-9247-AWO. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-4292-XRX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an indigo V-4292-XRX. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-4832-FAV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-sandy-brown R-4832-FAV. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-0010-PGL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a momemtum-preserving Z-0010-PGL. You can
+only incinerate items in your possession. 
+
+>: You can't take the V-4292-XRX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a swamp-green V-4292-XRX. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-1623-SOQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-pink R-1623-SOQ. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-1623-SOQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cream R-1623-SOQ. You can only incinerate
+items in your possession. 
+
+>: You can't take the B-9247-YCM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a royal-blue B-9247-YCM. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-1403-IIC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a burgundy J-1403-IIC. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-0010-PGL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a blue Z-0010-PGL. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-0010-PGL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pink Z-0010-PGL. You can only incinerate
+items in your possession. 
+
+>: You can't take the F-4832-DFT because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a moss-green F-4832-DFT. You can only
+incinerate items in your possession. 
+
+>: You can't take the B-9247-YCM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pine-green B-9247-YCM. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-4832-FAV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a floating R-4832-FAV. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-4832-FAV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a russet R-4832-FAV. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lavender-blush D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-9247-AWO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an old-gold N-9247-AWO. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-9247-AWO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pear N-9247-AWO. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pastel-pink D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a heliotrope D-9887-UUE. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a persian-blue Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an emerald Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the Z-4292-PRV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a blaze-orange Z-4292-PRV. You can only
+incinerate items in your possession. 
+
+>: You can't take the RS232 adapter because there is another item
+on top of it (take the other item first). 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a jade D-9887-UUE. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-9887-UUE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: The RS232 adapter is capable of operating at speeds as high as
+300 baud. It is clear to send. 
+Also, it is broken: it is (a RS232 adapter missing ((a
+Z-4292-PRV missing a D-9887-UUE and a D-9887-UUE and a
+D-9887-UUE) missing a D-9887-UUE and a D-9887-UUE and a
+D-9887-UUE) and a Z-4292-PRV) missing ((a D-9887-UUE missing a
+Z-4292-PRV and a Z-4292-PRV and a Z-4292-PRV and a Z-4292-PRV)
+missing a Z-4292-PRV and a Z-4292-PRV and a Z-4292-PRV and a
+Z-4292-PRV) and ((a Z-4292-PRV missing a D-9887-UUE and a
+D-9887-UUE and a D-9887-UUE) missing a D-9887-UUE and a
+D-9887-UUE and a D-9887-UUE) and ((a Z-4292-PRV missing a
+D-9887-UUE and a D-9887-UUE and a D-9887-UUE) missing a
+D-9887-UUE and a D-9887-UUE and a D-9887-UUE). 
+
+>: You aren't carrying a RS232 adapter. You can only combine items
+in your possession. 
+
+>: 53th Street and Harper Avenue
+
+You are standing at the corner of 53th Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north, south, or west. 
+There is a (broken) old X-1623-GTO here. 
+Underneath the X-1623-GTO, there is a (broken) corn V-0010-XBD. 
+Underneath the V-0010-XBD, there is a (broken) blue-violet
+P-4832-JFJ. 
+Underneath the P-4832-JFJ, there is a (broken) gamboge
+X-0010-TLX. 
+Underneath the X-0010-TLX, there is a (broken) denim D-4292-HHR.
+
+Underneath the D-4292-HHR, there is a (broken) low-carb
+D-5065-UVM. 
+Underneath the D-5065-UVM, there is a (broken) pear V-9247-KMI. 
+Underneath the V-9247-KMI, there is a (broken) ultramarine
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) pink D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) discounted
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) flax D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) cinnamon
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a lemon F-9887-QAE. 
+Underneath the F-9887-QAE, there is a (broken) low-carb
+X-1623-GTO. 
+Underneath the X-1623-GTO, there is a (broken) amethyst
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) reverse-chirality
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) lemon T-9887-OFC.
+
+Underneath the T-9887-OFC, there is a (broken) honeydew
+B-4292-LWV. 
+Underneath the B-4292-LWV, there is a (broken) white F-9887-QAE.
+
+Underneath the F-9887-QAE, there is a (broken) black B-4292-LWV.
+
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the X-1623-GTO because you can't carry any more
+items. 
+
+>: You aren't carrying an old X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-0010-XBD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a corn V-0010-XBD. You can only incinerate
+items in your possession. 
+
+>: You can't take the P-4832-JFJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a blue-violet P-4832-JFJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-0010-TLX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gamboge X-0010-TLX. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4292-HHR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a denim D-4292-HHR. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-5065-UVM because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a low-carb D-5065-UVM. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KMI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pear V-9247-KMI. You can only incinerate
+items in your possession. 
+
+>: You can't take the J-9247-IRG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an ultramarine J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4292-HHR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pink D-4292-HHR. You can only incinerate
+items in your possession. 
+
+>: You can't take the L-6458-RNH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a discounted L-6458-RNH. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-4292-HHR because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a flax D-4292-HHR. You can only incinerate
+items in your possession. 
+
+>: You can't take the J-9247-IRG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cinnamon J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-9887-QAE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lemon F-9887-QAE. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a low-carb X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-9247-IRG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an amethyst J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-9247-IRG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a reverse-chirality J-9247-IRG. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-9887-OFC because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lemon T-9887-OFC. You can only incinerate
+items in your possession. 
+
+>: You can't take the B-4292-LWV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a honeydew B-4292-LWV. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-9887-QAE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a white F-9887-QAE. You can only incinerate
+items in your possession. 
+
+>: You can't take the B-4292-LWV because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a black B-4292-LWV. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-9247-KMI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a spring-green V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-0010-XBD because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-goldenrod V-0010-XBD. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sangria X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-1623-AJI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a lawn-green N-1623-AJI. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-1403-SXU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an imitation R-1403-SXU. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sapphire X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4832-PPP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sea-green Z-4832-PPP. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-9887-QAE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray10 F-9887-QAE. You can only incinerate
+items in your possession. 
+
+>: You can't take the Z-1623-CEK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sandy-brown Z-1623-CEK. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-4292-FMP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray90 R-4292-FMP. You can only incinerate
+items in your possession. 
+
+>: You can't take the V-9887-KPW because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sturdy V-9887-KPW. You can only incinerate
+items in your possession. 
+
+>: You can't take the J-6458-VDL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a camouflage-green J-6458-VDL. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-6458-VDL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sturdy J-6458-VDL. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-9247-GWE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a wisteria X-9247-GWE. You can only
+incinerate items in your possession. 
+
+>: You can't take the F-9887-QAE because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a persian-blue F-9887-QAE. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-1623-CEK because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sturdy Z-1623-CEK. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pastel-pink X-1623-GTO. You can only
+incinerate items in your possession. 
+
+>: You can't take the R-1403-SXU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sapphire R-1403-SXU. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-6458-VDL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a heliotrope J-6458-VDL. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4832-PPP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a mustard Z-4832-PPP. You can only
+incinerate items in your possession. 
+
+>: You can't take the X-6458-TIJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a wisteria X-6458-TIJ. You can only
+incinerate items in your possession. 
+
+>: You can't take the Z-4832-PPP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a coral Z-4832-PPP. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray80 X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an ivory X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: You can't take the T-0010-BQH because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the V-9247-KMI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a foreign V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-0010-BQH because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a snow X-1623-GTO. You can only incinerate
+items in your possession. 
+
+>: You can't take the T-0010-BQH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a prussian-blue T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-0010-BQH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray-tea-green T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KMI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a miniature V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-9247-KMI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a steel-blue V-9247-KMI. You can only
+incinerate items in your possession. 
+
+>: You can't take the T-0010-BQH because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an indigo T-0010-BQH. You can only
+incinerate items in your possession. 
+
+>: You can't take the EPROM burner because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the X-1623-GTO because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a brass X-1623-GTO. You can only combine
+items in your possession. 
+
+>: You aren't carrying a EPROM burner. You can only combine items
+in your possession. 
+
+>: You aren't carrying a EPROM burner. You can only combine items
+in your possession. 
+
+>: The EPROM burner is device with the usual non-warranty. 
+Also, it is broken: it is (a EPROM burner missing (a T-0010-BQH
+missing a X-1623-GTO and a X-1623-GTO and (a X-1623-GTO missing
+a T-0010-BQH))) missing ((a X-1623-GTO missing a T-0010-BQH and
+a T-0010-BQH) missing a B-4292-LWV and (a T-0010-BQH missing a
+X-1623-GTO and a X-1623-GTO) and (a T-0010-BQH missing a
+F-9887-QAE and a X-1623-GTO and a B-4292-LWV and a F-9887-QAE
+and a X-1623-GTO and a X-1623-GTO) and (a J-6458-VDL missing a
+T-0010-BQH and a F-9887-QAE) and a F-9887-QAE). 
+
+>: You aren't carrying a EPROM burner. You can only combine items
+in your possession. 
+
+>: 52nd Street and Harper Avenue
+
+You are standing at the corner of 52nd Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go south or west. 
+There is a (broken) moccasin N-4292-NWT here. 
+Underneath the N-4292-NWT, there is a gray-tea-green L-4832-RPN.
+
+Underneath the L-4832-RPN, there is a (broken) pale-chestnut
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a pale-cornflower-blue
+V-6458-XDJ. 
+Underneath the V-6458-XDJ, there is a (broken) misty-rose
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) sangria
+N-4292-NWT. 
+Underneath the N-4292-NWT, there is a (broken) jade P-1403-WSU. 
+Underneath the P-1403-WSU, there is a (broken) yellow-green
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) crimson
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) scarlet
+Z-5065-CGQ. 
+Underneath the Z-5065-CGQ, there is a (broken) organic
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a bright-turquoise
+J-1623-ITM. 
+Underneath the J-1623-ITM, there is a (broken) mint-green
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a (broken) denim T-9247-OHI.
+
+Underneath the T-9247-OHI, there is a (broken) gray30
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a gray60 T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) azure H-6458-ZXL.
+
+Underneath the H-6458-ZXL, there is a carmine D-6678-HJX. 
+Underneath the D-6678-HJX, there is a cornflower-blue
+D-6678-HJX. 
+Underneath the D-6678-HJX, there is a (broken) tan D-6678-HJX. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You can't take the N-4292-NWT because you can't carry any more
+items. 
+
+>: You can't take the L-4832-RPN because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the T-9247-OHI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-chestnut T-9247-OHI. You can only
+incinerate items in your possession. 
+
+>: You can't take the V-6458-XDJ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-cornflower-blue V-6458-XDJ. You can
+only incinerate items in your possession. 
+
+>: You can't take the T-9247-OHI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a misty-rose T-9247-OHI. You can only
+incinerate items in your possession. 
+
+>: You can't take the N-4292-NWT because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the P-1403-WSU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a jade P-1403-WSU. You can only combine
+items in your possession. 
+
+>: You can't take the P-6678-JEZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a yellow-green P-6678-JEZ. You can only
+combine items in your possession. 
+
+>: You can't take the P-6678-JEZ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only combine
+items in your possession. 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only combine
+items in your possession. 
+
+>: You can't take the Z-5065-CGQ because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only combine
+items in your possession. 
+
+>: You can't take the T-9247-OHI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an organic T-9247-OHI. You can only
+incinerate items in your possession. 
+
+>: You can't take the J-1623-ITM because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the X-4832-TKP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only combine
+items in your possession. 
+
+>: You aren't carrying a crimson P-6678-JEZ. You can only combine
+items in your possession. 
+
+>: You can't take the T-9247-OHI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a denim T-9247-OHI. You can only incinerate
+items in your possession. 
+
+>: You can't take the X-4832-TKP because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray30 X-4832-TKP. You can only incinerate
+items in your possession. 
+
+>: You can't take the T-9247-OHI because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray60 T-9247-OHI. You can only incinerate
+items in your possession. 
+
+>: You can't take the H-6458-ZXL because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an azure H-6458-ZXL. You can only combine
+items in your possession. 
+
+>: You aren't carrying an azure H-6458-ZXL. You can only combine
+items in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a cornflower-blue D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a tan D-6678-HJX. You can only combine items
+in your possession. 
+
+>: You can't take the L-4832-RPN because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a robin-egg-blue D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: You can't take the P-1403-WSU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a sandy-brown P-1403-WSU. You can only
+incinerate items in your possession. 
+
+>: You can't take the H-9247-MMG because there is another item on
+top of it (take the other item first). 
+
+>: You can't take the P-1403-WSU because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a pale-brown P-1403-WSU. You can only
+incinerate items in your possession. 
+
+>: You can't take the L-4832-RPN because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray40 L-4832-RPN. You can only combine
+items in your possession. 
+
+>: You can't take the H-9247-MMG because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray40 L-4832-RPN. You can only combine
+items in your possession. 
+
+>: You can't take the status LED because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gray40 L-4832-RPN. You can only combine
+items in your possession. 
+
+>: You aren't carrying a tan D-6678-HJX. You can only combine items
+in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying an old-lace D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a burnt-sienna D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a moss-green D-6678-HJX. You can only
+incinerate items in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a gross D-6678-HJX. You can only incinerate
+items in your possession. 
+
+>: You can't take the D-6678-HJX because there is another item on
+top of it (take the other item first). 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: The status LED is is designed to indicate when the status LED is
+operational. 
+Also, it is broken: it is (((((((a status LED missing (a
+H-6458-ZXL missing (a L-5065-EBS missing a L-5065-EBS))) missing
+a D-6678-HJX) missing a D-6678-HJX) missing (a D-6678-HJX
+missing a H-9247-MMG and a H-9247-MMG and a H-9247-MMG and (a
+H-9247-MMG missing a D-6678-HJX and a D-6678-HJX and a
+D-6678-HJX and a L-4832-RPN))) missing a D-6678-HJX) missing a
+D-6678-HJX) missing a D-6678-HJX) missing a L-4832-RPN. 
+
+>: You aren't carrying a status LED. You can only combine items in
+your possession. 
+
+>: The uploader is used to update firmware on municipal robots. A
+label reads, Warning: use of this device will void your robot's
+warranty. 
+Also, it is broken: it is an uploader missing a MOSFET and a
+status LED and a RS232 adapter and a EPROM burner and a battery.
+
+
+>: Your efforts are to no avail: the uploader is broken. 
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh?
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: Huh? Try 'help'.
+
+>: You speak the words "m4" aloud, but there is no one around to
+hear them. 
+
+>: 52nd Street and Harper Avenue
+
+You are standing at the corner of 52nd Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go south or west. 
+There is a (broken) moccasin N-4292-NWT here. 
+Underneath the N-4292-NWT, there is a gray-tea-green L-4832-RPN.
+
+Underneath the L-4832-RPN, there is a (broken) pale-chestnut
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a pale-cornflower-blue
+V-6458-XDJ. 
+Underneath the V-6458-XDJ, there is a (broken) misty-rose
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) sangria
+N-4292-NWT. 
+Underneath the N-4292-NWT, there is a (broken) jade P-1403-WSU. 
+Underneath the P-1403-WSU, there is a (broken) yellow-green
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) crimson
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) scarlet
+Z-5065-CGQ. 
+Underneath the Z-5065-CGQ, there is a (broken) organic
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a bright-turquoise
+J-1623-ITM. 
+Underneath the J-1623-ITM, there is a (broken) mint-green
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a (broken) denim T-9247-OHI.
+
+Underneath the T-9247-OHI, there is a (broken) gray30
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a gray60 T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) azure H-6458-ZXL.
+
+Underneath the H-6458-ZXL, there is a carmine D-6678-HJX. 
+Underneath the D-6678-HJX, there is a cornflower-blue
+D-6678-HJX. 
+Underneath the D-6678-HJX, there is a (broken) tan D-6678-HJX. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: There is no crowbar here. 
+
+>: There is no note here. 
+
+>: There is no note here. 
+
+>: There is no console here. 
+
+>: There is no Censory Engine here. 
+
+>: You can't go north because there is no way north from here. 
+
+>: 52nd Street and Harper Avenue
+
+You are standing at the corner of 52nd Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go south or west. 
+There is a (broken) moccasin N-4292-NWT here. 
+Underneath the N-4292-NWT, there is a gray-tea-green L-4832-RPN.
+
+Underneath the L-4832-RPN, there is a (broken) pale-chestnut
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a pale-cornflower-blue
+V-6458-XDJ. 
+Underneath the V-6458-XDJ, there is a (broken) misty-rose
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) sangria
+N-4292-NWT. 
+Underneath the N-4292-NWT, there is a (broken) jade P-1403-WSU. 
+Underneath the P-1403-WSU, there is a (broken) yellow-green
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) crimson
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) scarlet
+Z-5065-CGQ. 
+Underneath the Z-5065-CGQ, there is a (broken) organic
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a bright-turquoise
+J-1623-ITM. 
+Underneath the J-1623-ITM, there is a (broken) mint-green
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a (broken) denim T-9247-OHI.
+
+Underneath the T-9247-OHI, there is a (broken) gray30
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a gray60 T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) azure H-6458-ZXL.
+
+Underneath the H-6458-ZXL, there is a carmine D-6678-HJX. 
+Underneath the D-6678-HJX, there is a cornflower-blue
+D-6678-HJX. 
+Underneath the D-6678-HJX, there is a (broken) tan D-6678-HJX. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: 53th Street and Harper Avenue
+
+You are standing at the corner of 53th Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north, south, or west. 
+There is a (broken) old X-1623-GTO here. 
+Underneath the X-1623-GTO, there is a (broken) corn V-0010-XBD. 
+Underneath the V-0010-XBD, there is a (broken) blue-violet
+P-4832-JFJ. 
+Underneath the P-4832-JFJ, there is a (broken) gamboge
+X-0010-TLX. 
+Underneath the X-0010-TLX, there is a (broken) denim D-4292-HHR.
+
+Underneath the D-4292-HHR, there is a (broken) low-carb
+D-5065-UVM. 
+Underneath the D-5065-UVM, there is a (broken) pear V-9247-KMI. 
+Underneath the V-9247-KMI, there is a (broken) ultramarine
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) pink D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) discounted
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) flax D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) cinnamon
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a lemon F-9887-QAE. 
+Underneath the F-9887-QAE, there is a (broken) low-carb
+X-1623-GTO. 
+Underneath the X-1623-GTO, there is a (broken) amethyst
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) reverse-chirality
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) lemon T-9887-OFC.
+
+Underneath the T-9887-OFC, there is a (broken) honeydew
+B-4292-LWV. 
+Underneath the B-4292-LWV, there is a (broken) white F-9887-QAE.
+
+Underneath the F-9887-QAE, there is a (broken) black B-4292-LWV.
+
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: 53th Street and Harper Avenue
+
+You are standing at the corner of 53th Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north, south, or west. 
+There is a (broken) old X-1623-GTO here. 
+Underneath the X-1623-GTO, there is a (broken) corn V-0010-XBD. 
+Underneath the V-0010-XBD, there is a (broken) blue-violet
+P-4832-JFJ. 
+Underneath the P-4832-JFJ, there is a (broken) gamboge
+X-0010-TLX. 
+Underneath the X-0010-TLX, there is a (broken) denim D-4292-HHR.
+
+Underneath the D-4292-HHR, there is a (broken) low-carb
+D-5065-UVM. 
+Underneath the D-5065-UVM, there is a (broken) pear V-9247-KMI. 
+Underneath the V-9247-KMI, there is a (broken) ultramarine
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) pink D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) discounted
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) flax D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) cinnamon
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a lemon F-9887-QAE. 
+Underneath the F-9887-QAE, there is a (broken) low-carb
+X-1623-GTO. 
+Underneath the X-1623-GTO, there is a (broken) amethyst
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) reverse-chirality
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) lemon T-9887-OFC.
+
+Underneath the T-9887-OFC, there is a (broken) honeydew
+B-4292-LWV. 
+Underneath the B-4292-LWV, there is a (broken) white F-9887-QAE.
+
+Underneath the F-9887-QAE, there is a (broken) black B-4292-LWV.
+
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You speak the words "m4" aloud, but there is no one around to
+hear them. 
+
+>: 53th Street and Harper Avenue
+
+You are standing at the corner of 53th Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go north, south, or west. 
+There is a (broken) old X-1623-GTO here. 
+Underneath the X-1623-GTO, there is a (broken) corn V-0010-XBD. 
+Underneath the V-0010-XBD, there is a (broken) blue-violet
+P-4832-JFJ. 
+Underneath the P-4832-JFJ, there is a (broken) gamboge
+X-0010-TLX. 
+Underneath the X-0010-TLX, there is a (broken) denim D-4292-HHR.
+
+Underneath the D-4292-HHR, there is a (broken) low-carb
+D-5065-UVM. 
+Underneath the D-5065-UVM, there is a (broken) pear V-9247-KMI. 
+Underneath the V-9247-KMI, there is a (broken) ultramarine
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) pink D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) discounted
+L-6458-RNH. 
+Underneath the L-6458-RNH, there is a (broken) flax D-4292-HHR. 
+Underneath the D-4292-HHR, there is a (broken) cinnamon
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a lemon F-9887-QAE. 
+Underneath the F-9887-QAE, there is a (broken) low-carb
+X-1623-GTO. 
+Underneath the X-1623-GTO, there is a (broken) amethyst
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) reverse-chirality
+J-9247-IRG. 
+Underneath the J-9247-IRG, there is a (broken) lemon T-9887-OFC.
+
+Underneath the T-9887-OFC, there is a (broken) honeydew
+B-4292-LWV. 
+Underneath the B-4292-LWV, there is a (broken) white F-9887-QAE.
+
+Underneath the F-9887-QAE, there is a (broken) black B-4292-LWV.
+
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You aren't carrying a console. You can only use items in your
+possession. 
+
+>: You aren't carrying a Censory Engine. You can only use items in
+your possession. 
+
+>: You aren't carrying a proof. You can only use items in your
+possession. 
+
+>: You aren't carrying a proof. You can only combine items in your
+possession. 
+
+>: You aren't carrying a proof. You can only combine items in your
+possession. 
+
+>: You aren't carrying a crowbar. You can only use items in your
+possession. 
+
+>: The manifesto is [______REDACTED______]. 
+Also, it is in pristine condition. 
+
+>: You aren't carrying a crowbar. You can only combine items in
+your possession. 
+
+>: You aren't carrying a crowbar. You can only combine items in
+your possession. 
+
+>: 52nd Street and Harper Avenue
+
+You are standing at the corner of 52nd Street and Harper Avenue.
+A sign reads, "No access east of Lakeshore Blvd (incl. Museum of
+Science and Industry) due to construction." From here, you can
+go south or west. 
+There is a (broken) moccasin N-4292-NWT here. 
+Underneath the N-4292-NWT, there is a gray-tea-green L-4832-RPN.
+
+Underneath the L-4832-RPN, there is a (broken) pale-chestnut
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a pale-cornflower-blue
+V-6458-XDJ. 
+Underneath the V-6458-XDJ, there is a (broken) misty-rose
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) sangria
+N-4292-NWT. 
+Underneath the N-4292-NWT, there is a (broken) jade P-1403-WSU. 
+Underneath the P-1403-WSU, there is a (broken) yellow-green
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) crimson
+P-6678-JEZ. 
+Underneath the P-6678-JEZ, there is a (broken) scarlet
+Z-5065-CGQ. 
+Underneath the Z-5065-CGQ, there is a (broken) organic
+T-9247-OHI. 
+Underneath the T-9247-OHI, there is a bright-turquoise
+J-1623-ITM. 
+Underneath the J-1623-ITM, there is a (broken) mint-green
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a (broken) denim T-9247-OHI.
+
+Underneath the T-9247-OHI, there is a (broken) gray30
+X-4832-TKP. 
+Underneath the X-4832-TKP, there is a gray60 T-9247-OHI. 
+Underneath the T-9247-OHI, there is a (broken) azure H-6458-ZXL.
+
+Underneath the H-6458-ZXL, there is a carmine D-6678-HJX. 
+Underneath the D-6678-HJX, there is a cornflower-blue
+D-6678-HJX. 
+Underneath the D-6678-HJX, there is a (broken) tan D-6678-HJX. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: 52nd Street and Blackstone Avenue
+
+You are standing at the corner of 52nd Street and Blackstone
+Avenue. From here, you can go east, south, or west. 
+There is a manual here. 
+
+>: You aren't carrying a proof. You can only use items in your
+possession. 
+
+>: 52nd Street and Blackstone Avenue
+
+You are standing at the corner of 52nd Street and Blackstone
+Avenue. From here, you can go east, south, or west. 
+There is a manual here. 
+
+>: % UMIX shutdown: console EOF

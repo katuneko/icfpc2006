@@ -1,0 +1,10 @@
+howie
+xyzzy
+run /bin/umodem readarg.bas BASEND
+V DIM filename AS STRING
+X filename = ARG(II)
+XV PRINT filename + CHR(X)
+XX END
+BASEND
+/bin/qbasic readarg.bas
+readarg.exe README

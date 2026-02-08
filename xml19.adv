@@ -1,0 +1,23 @@
+SNF x => Eval x Done;
+
+Seq (Seq a b) y => Seq a (Seq b y);
+
+Eval (Seq x y) k => Eval x (KSeq y k);
+Eval (Tag q d) k => Eval d (Ins q k);
+Eval v k => k v;
+
+(KSeq y k) v => Eval y (Merge v k);
+
+Merge (Tag q a) k (Tag q b) => Merge a (Ins q k) b;
+Merge a k b => k (Seq a b);
+
+Ins q k (Tag q d) => k (Tag q d);
+
+Ins Emph k (Tag Bold d) => Ins Emph (Ins Bold k) d;
+Ins Maj k (Tag q d) => Ins Maj (Ins q k) d;
+
+Ins q k d => k (Tag q d);
+
+Done v => v;
+
+.

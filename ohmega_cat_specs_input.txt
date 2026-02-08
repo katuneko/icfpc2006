@@ -1,0 +1,6 @@
+ohmega
+bidirectional
+cat aspects.spec
+cat mult.spec
+cat reverse.spec
+cat raytrace.spec

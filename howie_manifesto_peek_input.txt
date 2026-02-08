@@ -1,0 +1,8 @@
+howie
+xyzzy
+adventure
+take pamphlet
+take manifesto
+examine pamphlet
+examine manifesto
+show

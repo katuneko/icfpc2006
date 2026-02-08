@@ -1,0 +1,20 @@
+howie
+xyzzy
+run /bin/umodem readfile3.bas BASEND
+V REM Simple file reader
+X IF ARGS() > I THEN GOTO XX
+XV PRINT "usage: ./readfile3.exe path" + CHR(X)
+XX END
+XXV DIM filename AS STRING
+XXX filename = ARG(II)
+XXXV DIM line AS STRING
+XL OPEN filename FOR INPUT AS #I
+XLV WHILE NOT EOF(I)
+L LINE INPUT #I, line
+LV PRINT line
+LX WEND
+LXV CLOSE #I
+LXX END
+BASEND
+/bin/qbasic readfile3.bas
+readfile3.exe README

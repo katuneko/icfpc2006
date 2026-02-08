@@ -1,0 +1,15 @@
+Compute (op x y) k => Compute x (op y k);
+Compute x k => k x;
+
+Add Z k x => k x;
+Add (S x) k y => Add x k (S y);
+
+Mult Z k x => k Z;
+Mult (S x) k y => Mult x (Add y k) y;
+
+op y k x => Compute y (op x k);
+
+Compute x => Compute x Done;
+Done x => x;
+
+.

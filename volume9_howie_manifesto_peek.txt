@@ -1,0 +1,95 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+Room With a Door
+
+You are in a room with a mechanical door. You will probably need
+to use a keypad to unlock it. A hallway leads north. 
+There is a pamphlet here. 
+Underneath the pamphlet, there is a manifesto. 
+
+>: You are now carrying the pamphlet. 
+
+>: You are now carrying the manifesto. 
+
+>: The pamphlet is standard municipal fare. It reads, The City of
+Chicago's Refuse and Recycling Program combines modern trash
+classification with cybernetic labor to keep our city beautiful,
+while at the same time minimizing waste and limiting consumer
+spending. In keeping with our motto of "One Resident's Trash Is
+Another Resident's Treasure," unwanted items are collected,
+repaired, and redistributed to other residents who would have
+purchased them anyway. Residents should contribute to the city's
+program by leaving heaps of items unwanted on the sidewalk on
+collection day. 
+Also, it is in pristine condition. 
+
+>: The manifesto is [______REDACTED______]. 
+Also, it is in pristine condition. 
+
+>: You are carrying:
+a manifesto and
+a pamphlet.
+
+>: % UMIX shutdown: console EOF

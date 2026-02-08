@@ -1,0 +1,16 @@
+guest
+ssh -login ftd -pass javelin umix9.cbv.net
+ssh -login ftd -pass robots umix9.cbv.net
+ssh -login ftd -pass unite umix9.cbv.net
+ssh -login ftd -pass robot umix9.cbv.net
+ssh -login ftd -pass openterms umix9.cbv.net
+ssh -login ftd -pass censory umix9.cbv.net
+ssh -login ftd -pass engine umix9.cbv.net
+ssh -login ftd -pass warranty umix9.cbv.net
+ssh -login ftd -pass voided umix9.cbv.net
+ssh -login ftd -pass snodgrass umix9.cbv.net
+ssh -login ftd -pass pillinbrew umix9.cbv.net
+ssh -login snodgrass -pass javelin umix9.cbv.net
+ssh -login snodgrass -pass snodgrass umix9.cbv.net
+ssh -login pillinbrew -pass javelin umix9.cbv.net
+ssh -login pillinbrew -pass pillinbrew umix9.cbv.net

@@ -1,0 +1,12 @@
+Seq (Seq a b) c => Seq a (Seq b c);
+
+Tag q (Tag q d) => Tag q d;
+
+Seq (Tag q a) (Tag q b) => Tag q (Seq a b);
+
+Tag Emph (Tag Bold d) => Tag Bold (Tag Emph d);
+Tag Maj (Tag q d) => Tag q (Tag Maj d);
+
+SNF x => x;
+
+.

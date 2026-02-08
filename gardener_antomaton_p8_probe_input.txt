@@ -1,0 +1,21 @@
+gardener
+mathemantica
+/bin/umodem p8_probe_7.ant ZZZEOFZZZ
+P8 Probe 7
+NNNNNNN
+3 3
+ - $ -
+ -0^ -
+ - - -
+ZZZEOFZZZ
+./antomaton p8_probe_7.ant
+/bin/umodem p8_probe_8.ant ZZZEOFZZZ
+P8 Probe 8
+NNNNNNNN
+3 3
+ - $ -
+ -0^ -
+ - - -
+ZZZEOFZZZ
+./antomaton p8_probe_8.ant
+shutdown

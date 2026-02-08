@@ -1,0 +1,6 @@
+yang
+U+262F
+run /bin/umodem fillmem.bal EOF
+636163346263337d6679616532012d7b7168616f7865177e7d6c6e7d627275012d7b7168616f7865176800
+EOF
+certify fillmem fillmem.bal

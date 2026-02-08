@@ -829,8 +829,78 @@ fun process (c : command) : datum =
                                       case s = "machine room m4" of
                                         True { } =>
                                           return goto_room_by_name ("Machine Room M4")
-                                      | False { } =>
-                                          return success_command ("speak", Atom { s })
+	                                      | False { } =>
+	                                          case s = "tech0" of
+	                                            True { } =>
+	                                              return goto_room_by_name ("History of Technology Exhibit, Entrance")
+	                                          | False { } =>
+	                                              case s = "tech" of
+	                                                True { } =>
+	                                                  return goto_room_by_name ("History of Technology Exhibit, Entrance")
+	                                              | False { } =>
+	                                                  case s = "tech1p" of
+	                                                    True { } => [
+	                                                      case room_from_name ("History of Technology Exhibit, Part 1") of
+	                                                        NoRoom { } =>
+	                                                          return failed_command ("speak", Atom { s }, "no such room")
+	                                                      | SomeRoom { r } =>
+	                                                          return success_command ("speak", Atom { "found" })
+	                                                    ]
+	                                                  | False { } =>
+	                                                      case s = "tech1m" of
+	                                                        True { } => [
+	                                                          case room_from_name ("History of Technology Exhibit, Part 1") of
+	                                                            NoRoom { } =>
+	                                                              return failed_command ("speak", Atom { s }, "no such room")
+	                                                          | SomeRoom { r } => [
+	                                                              do move_self_to_room (r).
+	                                                              return success_command ("speak", Atom { "moved" })
+	                                                            ]
+	                                                        ]
+	                                                      | False { } =>
+	                                                          case s = "tech1n" of
+	                                                            True { } => [
+	                                                              case room_from_name ("History of Technology Exhibit, Part 1") of
+	                                                                NoRoom { } =>
+	                                                                  return failed_command ("speak", Atom { s }, "no such room")
+	                                                              | SomeRoom { r } =>
+	                                                                  return success_command ("speak", Atom { room_name (r) })
+	                                                            ]
+	                                                          | False { } =>
+	                                                              case s = "tech1d" of
+	                                                                True { } => [
+	                                                                  case room_from_name ("History of Technology Exhibit, Part 1") of
+	                                                                    NoRoom { } =>
+	                                                                      return failed_command ("speak", Atom { s }, "no such room")
+	                                                                  | SomeRoom { r } =>
+	                                                                      return success_command ("speak", Atom { room_description (r) })
+	                                                                ]
+	                                                              | False { } =>
+	                                                          case s = "tech1" of
+	                                                            True { } =>
+	                                                              return goto_room_by_name ("History of Technology Exhibit, Part 1")
+	                                                          | False { } =>
+	                                                              case s = "tech2" of
+	                                                                True { } =>
+	                                                                  return goto_room_by_name ("History of Technology Exhibit, Part 2")
+	                                                              | False { } =>
+	                                                                  case s = "tech3" of
+	                                                                    True { } =>
+	                                                                      return goto_room_by_name ("History of Technology Exhibit, Part 3")
+	                                                                  | False { } =>
+	                                                                      case s = "tech4" of
+	                                                                        True { } =>
+	                                                                          return goto_room_by_name ("History of Technology Exhibit, Part 4")
+	                                                                      | False { } =>
+	                                                                          case s = "tech5" of
+	                                                                            True { } =>
+	                                                                              return goto_room_by_name ("History of Technology Exhibit, Part 5")
+	                                                                          | False { } =>
+	                                                                              case s = "tech6" of
+	                                                                                True { } =>
+	                                                                                  return goto_room_by_name ("History of Technology Exhibit, Part 6")
+	                                                                              | False { } =>
+	                                                                                  return success_command ("speak", Atom { s })
                                 ]
                             ]
                         ]

@@ -1,0 +1,7 @@
+howie
+xyzzy
+run /bin/umodem open_test.bas BASEND
+V OPEN "README" FOR INPUT AS #I
+X END
+BASEND
+/bin/qbasic open_test.bas

@@ -1,0 +1,465 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as howie
+
+
+% [Building vocabulary]
+[Initializing command processor]
+[Populating environment]
+History of Technology Exhibit, Entrance
+
+You are at the entrance of an exhibit titled, "The History of
+Technology." A sign reads, "Due to recent difficulties, only
+robots with intact warranties will be admitted." From here, you
+can go north or east. 
+
+
+>: Rotunda
+
+You are in the rotunda of the Museum of Science and Industry.
+From here, you can go north, east, or west. 
+
+
+>: Games and Amusements Exhibit
+
+You standing before an exhibit on games and amusements. From
+here, you can go west. 
+There is a cribbage board here. 
+Underneath the cribbage board, there is an ace-of-hearts. 
+Underneath the ace-of-hearts, there is a king-of-hearts. 
+Underneath the king-of-hearts, there is a queen-of-hearts. 
+Underneath the queen-of-hearts, there is a jack-of-hearts. 
+Underneath the jack-of-hearts, there is a ten-of-hearts. 
+Underneath the ten-of-hearts, there is a nine-of-hearts. 
+Underneath the nine-of-hearts, there is an eight-of-hearts. 
+Underneath the eight-of-hearts, there is a seven-of-hearts. 
+Underneath the seven-of-hearts, there is a six-of-hearts. 
+Underneath the six-of-hearts, there is a five-of-hearts. 
+Underneath the five-of-hearts, there is a four-of-hearts. 
+Underneath the four-of-hearts, there is a three-of-hearts. 
+Underneath the three-of-hearts, there is a two-of-hearts. 
+Underneath the two-of-hearts, there is an ace-of-diamonds. 
+Underneath the ace-of-diamonds, there is a king-of-diamonds. 
+Underneath the king-of-diamonds, there is a queen-of-diamonds. 
+Underneath the queen-of-diamonds, there is a jack-of-diamonds. 
+Underneath the jack-of-diamonds, there is a ten-of-diamonds. 
+Underneath the ten-of-diamonds, there is a nine-of-diamonds. 
+There are more items beneath it, but the pile is so tall you
+feel a little dizzy.
+Try switching your goggles.
+
+>: You are now carrying the cribbage board. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The cribbage board has been destroyed. 
+
+>: You are now carrying the ace-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The ace-of-hearts has been destroyed. 
+
+>: You are now carrying the king-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The king-of-hearts has been destroyed. 
+
+>: You are now carrying the queen-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The queen-of-hearts has been destroyed. 
+
+>: You are now carrying the jack-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The jack-of-hearts has been destroyed. 
+
+>: You are now carrying the ten-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The ten-of-hearts has been destroyed. 
+
+>: You are now carrying the nine-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The nine-of-hearts has been destroyed. 
+
+>: You are now carrying the eight-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The eight-of-hearts has been destroyed. 
+
+>: You are now carrying the seven-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The seven-of-hearts has been destroyed. 
+
+>: You are now carrying the six-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The six-of-hearts has been destroyed. 
+
+>: You are now carrying the five-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The five-of-hearts has been destroyed. 
+
+>: You are now carrying the four-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The four-of-hearts has been destroyed. 
+
+>: You are now carrying the three-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The three-of-hearts has been destroyed. 
+
+>: You are now carrying the two-of-hearts. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The two-of-hearts has been destroyed. 
+
+>: You are now carrying the ace-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The ace-of-diamonds has been destroyed. 
+
+>: You are now carrying the king-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The king-of-diamonds has been destroyed. 
+
+>: You are now carrying the queen-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The queen-of-diamonds has been destroyed. 
+
+>: You are now carrying the jack-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The jack-of-diamonds has been destroyed. 
+
+>: You are now carrying the ten-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The ten-of-diamonds has been destroyed. 
+
+>: You are now carrying the nine-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The nine-of-diamonds has been destroyed. 
+
+>: You are now carrying the eight-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The eight-of-diamonds has been destroyed. 
+
+>: You are now carrying the seven-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The seven-of-diamonds has been destroyed. 
+
+>: You are now carrying the six-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The six-of-diamonds has been destroyed. 
+
+>: You are now carrying the five-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The five-of-diamonds has been destroyed. 
+
+>: You are now carrying the four-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The four-of-diamonds has been destroyed. 
+
+>: You are now carrying the three-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The three-of-diamonds has been destroyed. 
+
+>: You are now carrying the two-of-diamonds. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The two-of-diamonds has been destroyed. 
+
+>: You are now carrying the ace-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The ace-of-spades has been destroyed. 
+
+>: You are now carrying the king-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The king-of-spades has been destroyed. 
+
+>: You are now carrying the queen-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The queen-of-spades has been destroyed. 
+
+>: You are now carrying the jack-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The jack-of-spades has been destroyed. 
+
+>: You are now carrying the ten-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The ten-of-spades has been destroyed. 
+
+>: You are now carrying the nine-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The nine-of-spades has been destroyed. 
+
+>: You are now carrying the eight-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The eight-of-spades has been destroyed. 
+
+>: You are now carrying the seven-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The seven-of-spades has been destroyed. 
+
+>: You are now carrying the six-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The six-of-spades has been destroyed. 
+
+>: You are now carrying the five-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The five-of-spades has been destroyed. 
+
+>: You are now carrying the four-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The four-of-spades has been destroyed. 
+
+>: You are now carrying the three-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The three-of-spades has been destroyed. 
+
+>: You are now carrying the two-of-spades. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The two-of-spades has been destroyed. 
+
+>: You are now carrying the ace-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The ace-of-clubs has been destroyed. 
+
+>: You are now carrying the king-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The king-of-clubs has been destroyed. 
+
+>: You are now carrying the queen-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The queen-of-clubs has been destroyed. 
+
+>: You are now carrying the jack-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The jack-of-clubs has been destroyed. 
+
+>: You are now carrying the ten-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The ten-of-clubs has been destroyed. 
+
+>: You are now carrying the nine-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The nine-of-clubs has been destroyed. 
+
+>: You are now carrying the eight-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The eight-of-clubs has been destroyed. 
+
+>: You are now carrying the seven-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The seven-of-clubs has been destroyed. 
+
+>: You are now carrying the six-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The six-of-clubs has been destroyed. 
+
+>: You are now carrying the five-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The five-of-clubs has been destroyed. 
+
+>: You are now carrying the four-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The four-of-clubs has been destroyed. 
+
+>: You are now carrying the three-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The three-of-clubs has been destroyed. 
+
+>: You are now carrying the two-of-clubs. 
+
+>: Your efforts are to no avail: nothing interesting happens. 
+
+>: The two-of-clubs has been destroyed. 
+
+>: Games and Amusements Exhibit
+
+You standing before an exhibit on games and amusements. From
+here, you can go west. 
+
+
+>: <success>
+  <command>
+    <switch>
+      XML
+    </switch>
+  </command>
+</success>
+<success>
+  <command>
+    <look>
+      <room>
+        <name>
+          Games and Amusements Exhibit
+        </name>
+        <description>
+          You standing before an exhibit on games and amusements. From here, you can go west. 
+        </description>
+        <items>
+        </items>
+      </room>
+    </look>
+  </command>
+</success>
+Things look slightly different, but you can't put a diode on
+exactly how. 
+
+>: Games and Amusements Exhibit
+
+You standing before an exhibit on games and amusements. From
+here, you can go west. 
+
+
+>: You are carrying nothing. 
+
+>: % UMIX shutdown: console EOF

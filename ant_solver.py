@@ -85,6 +85,16 @@ class Programs:
     programs: List[List[int]]
 
 
+@dataclass(frozen=True)
+class CarveSolution:
+    start_idx: int
+    start_dir: int
+    p1: int
+    floor_mask: int
+    wall_mask: int
+    wild_list: Tuple[int, ...]
+
+
 def rotate_dir(direction: int, steps: int) -> int:
     return (direction + steps) % 4
 
@@ -194,9 +204,9 @@ def build_programs(programs: List[str], default: Optional[List[int]] = None) -> 
     for line in programs:
         if any(ch == "*" for ch in line):
             raise ValueError("wildcards in programs not supported in build_programs")
-        if len(line) != 7:
+        if len(line) < 7:
             raise ValueError(f"unsupported program length: {line!r}")
-        built.append([DIR_TO_IDX[ch] for ch in line])
+        built.append([DIR_TO_IDX[ch] for ch in line[:7]])
     if default is not None:
         # extend to 10 clans
         while len(built) < 10:
@@ -215,9 +225,9 @@ def build_programs_for_clans(programs: List[str], used_clans: List[int]) -> Prog
         line = programs[clan]
         if any(ch == "*" for ch in line):
             raise ValueError(f"wildcards in program for clan {clan}")
-        if len(line) != 7:
+        if len(line) < 7:
             raise ValueError(f"unsupported program length for clan {clan}: {line!r}")
-        built.append([DIR_TO_IDX[ch] for ch in line])
+        built.append([DIR_TO_IDX[ch] for ch in line[:7]])
     return Programs(built)
 
 
@@ -1553,15 +1563,18 @@ def build_base_state_with_wildcards(
 def parse_program_assignments(programs: List[str]) -> List[int]:
     assignments: List[int] = []
     for line in programs:
-        if len(line) != 7:
+        if len(line) < 7:
             raise ValueError(f"unsupported program length: {line!r}")
-        for ch in line:
+        for ch in line[:7]:
             if ch == "*":
                 assignments.append(-1)
             elif ch in DIR_TO_IDX:
                 assignments.append(DIR_TO_IDX[ch])
             else:
                 raise ValueError(f"invalid program char: {ch!r}")
+        for ch in line[7:]:
+            if ch != "*" and ch not in DIR_TO_IDX:
+                raise ValueError(f"invalid extra program char: {ch!r}")
     return assignments
 
 
@@ -2173,13 +2186,20 @@ def search_partial_programs(
     return None
 
 
-def render_programs(assignments: List[int], program_count: int) -> List[str]:
+def render_programs(assignments: List[int], template_programs: List[str]) -> List[str]:
     lines = []
-    for clan in range(program_count):
+    for clan, template in enumerate(template_programs):
         chars = []
         for idx in range(7):
             val = assignments[(clan * 7) + idx]
             chars.append("*" if val == -1 else DIRS[val])
+        for ch in template[7:]:
+            if ch == "*":
+                chars.append("N")
+            elif ch in DIR_TO_IDX:
+                chars.append(ch)
+            else:
+                raise ValueError(f"invalid extra program char in template: {template!r}")
         lines.append("".join(chars))
     return lines
 
@@ -2204,6 +2224,66 @@ def render_grid_assignments(
     return " | ".join(items) if items else "-"
 
 
+def fill_program_template(
+    template: str,
+    p1: Optional[int] = None,
+    apply_p1: bool = False,
+) -> str:
+    if len(template) < 7:
+        raise ValueError(f"unsupported program length: {template!r}")
+    out = []
+    for i, ch in enumerate(template):
+        if ch == "*":
+            if apply_p1 and i == 0:
+                if p1 is None:
+                    raise ValueError("p1 is required when apply_p1 is true")
+                out.append(DIRS[p1])
+            else:
+                out.append("N")
+            continue
+        if ch not in DIR_TO_IDX:
+            raise ValueError(f"invalid program char: {ch!r}")
+        out.append(ch)
+    return "".join(out)
+
+
+def carve_solution_replacements(
+    puzzle: Puzzle,
+    solution: CarveSolution,
+    clan: int = 0,
+) -> Dict[int, Cell]:
+    all_wilds = find_wildcards(puzzle)
+    wild_map = {idx: bit for bit, idx in enumerate(solution.wild_list)}
+    replacements: Dict[int, Cell] = {}
+    for idx in all_wilds:
+        if idx == solution.start_idx:
+            replacements[idx] = Cell(KIND_ANT, clan, solution.start_dir)
+            continue
+        bit = wild_map.get(idx)
+        if bit is not None and ((solution.floor_mask >> bit) & 1) == 1:
+            replacements[idx] = Cell(KIND_FLOOR)
+        else:
+            replacements[idx] = Cell(KIND_WALL)
+    return replacements
+
+
+def write_ant_world(
+    path: Path,
+    title: str,
+    programs: List[str],
+    world: World,
+) -> None:
+    lines: List[str] = [title]
+    lines.extend(programs)
+    lines.append(f"{world.width} {world.height}")
+    for y in range(world.height):
+        row = []
+        for x in range(world.width):
+            row.append(cell_to_token(world.grid[y * world.width + x]))
+        lines.append("".join(row))
+    path.write_text("\n".join(lines) + "\n")
+
+
 def search_carve_single_ant(
     puzzle: Puzzle,
     max_steps: int,
@@ -2213,6 +2293,34 @@ def search_carve_single_ant(
     allowed_grid_positions: Optional[List[int]] = None,
     greedy: bool = False,
 ) -> Optional[str]:
+    solution = find_carve_single_ant_solution(
+        puzzle,
+        max_steps=max_steps,
+        success_mode=success_mode,
+        p1_dir=p1_dir,
+        start_positions=start_positions,
+        allowed_grid_positions=allowed_grid_positions,
+        greedy=greedy,
+    )
+    if solution is None:
+        return None
+    y, x = divmod(solution.start_idx, puzzle.width)
+    floors = int(solution.floor_mask.bit_count())
+    return (
+        f"ant=({x},{y}) start={DIRS[solution.start_dir]} "
+        f"p1={DIRS[solution.p1]} steps<={max_steps} floors={floors}"
+    )
+
+
+def find_carve_single_ant_solution(
+    puzzle: Puzzle,
+    max_steps: int,
+    success_mode: str,
+    p1_dir: Optional[int] = None,
+    start_positions: Optional[List[int]] = None,
+    allowed_grid_positions: Optional[List[int]] = None,
+    greedy: bool = False,
+) -> Optional[CarveSolution]:
     base_state, wilds, food_indices = build_base_state_with_wildcards(puzzle)
     if not wilds:
         return None
@@ -2291,19 +2399,13 @@ def search_carve_single_ant(
                         else:
                             raise ValueError(f"unknown success mode: {success_mode!r}")
                         if success:
-                            # Success: render grid assignments
-                            grid_assignments = [CELL_WALL] * len(wild_list)
-                            for bit, idx in enumerate(wild_list):
-                                mask = 1 << bit
-                                if floor_mask & mask:
-                                    grid_assignments[bit] = CELL_FLOOR
-                            grid_desc = render_grid_assignments(
-                                grid_assignments, wild_list, puzzle.width
-                            )
-                            y, x = divmod(start_idx, puzzle.width)
-                            return (
-                                f"ant=({x},{y}) start={DIRS[start_dir]} "
-                                f"p1={DIRS[p1]} grid={grid_desc} steps={steps}"
+                            return CarveSolution(
+                                start_idx=start_idx,
+                                start_dir=start_dir,
+                                p1=p1,
+                                floor_mask=floor_mask,
+                                wall_mask=wall_mask,
+                                wild_list=tuple(wild_list),
                             )
                     key = (pos, direction, floor_mask, wall_mask)
                     prev = seen.get(key)
@@ -2488,7 +2590,7 @@ def search_wild_ants(
             )
             if result:
                 final_assignments, steps = result
-                programs = render_programs(final_assignments, program_count)
+                programs = render_programs(final_assignments, puzzle.programs)
                 programs_desc = " ".join(programs)
                 ants_joined = " | ".join(ants_desc)
                 return (
@@ -2565,7 +2667,7 @@ def search_wild_ants_sparse(
             )
             if result:
                 final_assignments, steps = result
-                programs = render_programs(final_assignments, program_count)
+                programs = render_programs(final_assignments, puzzle.programs)
                 programs_desc = " ".join(programs)
                 ants_joined = " | ".join(ants_desc)
                 return (
@@ -2674,7 +2776,7 @@ def search_wild_ants_grid_sparse(
             )
             if result:
                 final_assignments, final_grid_assignments, steps = result
-                programs = render_programs(final_assignments, program_count)
+                programs = render_programs(final_assignments, puzzle.programs)
                 programs_desc = " ".join(programs)
                 ants_joined = " | ".join(ants_desc) if ants_desc else "-"
                 grid_desc = render_grid_assignments(
@@ -2805,7 +2907,7 @@ def search_wild_ants_grid_enum(
                 )
                 if result:
                     final_assignments, steps = result
-                    programs = render_programs(final_assignments, program_count)
+                    programs = render_programs(final_assignments, puzzle.programs)
                     programs_desc = " ".join(programs)
                     ants_joined = " | ".join(ants_desc) if ants_desc else "-"
                     grid_desc = render_grid_assignments(
@@ -3157,6 +3259,10 @@ def main() -> None:
         help="Use greedy branching for --carve-single-ant.",
     )
     parser.add_argument(
+        "--carve-write",
+        help="Write the carved single-ant solution to this .ant file (implies --carve-single-ant).",
+    )
+    parser.add_argument(
         "--wild-ants",
         action="store_true",
         help="Search wildcard placements with N ants and lazy programs.",
@@ -3393,9 +3499,11 @@ def main() -> None:
             )
             print(result or "no single-ant grid solution")
         return
+    if args.carve_write:
+        args.carve_single_ant = True
     if args.carve_single_ant:
         if not args.match:
-            raise SystemExit("--match is required for --carve-single-ant")
+            raise SystemExit("--match is required for --carve-single-ant/--carve-write")
         p1_dir = parse_dir_value(args.carve_p1)
         for puzzle in puzzles:
             if args.match not in puzzle.title:
@@ -3414,7 +3522,7 @@ def main() -> None:
                 args.grid_max_dist,
                 args.grid_limit,
             )
-            result = search_carve_single_ant(
+            solution = find_carve_single_ant_solution(
                 puzzle,
                 max_steps=args.max_steps,
                 success_mode=success_mode,
@@ -3423,7 +3531,33 @@ def main() -> None:
                 allowed_grid_positions=allowed_grid_positions,
                 greedy=args.carve_greedy,
             )
-            print(result or "no carved single-ant solution")
+            if not solution:
+                print("no carved single-ant solution")
+                continue
+            if args.carve_write:
+                programs = [
+                    fill_program_template(
+                        template,
+                        p1=solution.p1,
+                        apply_p1=(clan == 0),
+                    )
+                    for clan, template in enumerate(puzzle.programs)
+                ]
+                replacements = carve_solution_replacements(puzzle, solution, clan=0)
+                world = build_world(puzzle, replacements)
+                write_ant_world(Path(args.carve_write), puzzle.title, programs, world)
+                print(f"wrote {args.carve_write}")
+            else:
+                result = search_carve_single_ant(
+                    puzzle,
+                    max_steps=args.max_steps,
+                    success_mode=success_mode,
+                    p1_dir=p1_dir,
+                    start_positions=start_positions,
+                    allowed_grid_positions=allowed_grid_positions,
+                    greedy=args.carve_greedy,
+                )
+                print(result or "no carved single-ant solution")
         return
     if args.wild_ants:
         if not args.match:
