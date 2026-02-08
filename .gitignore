@@ -24,3 +24,4 @@ um_opt
 # Large binary dumps (kept locally)
 volume9_sequent_sequel_dump.bin
 volume9_sequent_sequel_part4_dump.bin
+dump_*.bin
