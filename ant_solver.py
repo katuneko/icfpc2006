@@ -1583,18 +1583,30 @@ def parse_grid_wild_values(values: str) -> List[int]:
         "floor": CELL_FLOOR,
         "wall": CELL_WALL,
         "hole": CELL_HOLE,
+        "food": CELL_FOOD,
         "-": CELL_FLOOR,
         "#": CELL_WALL,
         "o": CELL_HOLE,
+        "$": CELL_FOOD,
     }
     result: List[int] = []
     for part in values.split(","):
         key = part.strip().lower()
         if not key:
             continue
-        if key not in mapping:
-            raise ValueError(f"unknown grid wildcard value: {part!r}")
-        val = mapping[key]
+        if key in mapping:
+            val = mapping[key]
+        else:
+            m = re.fullmatch(r"([0-9])([\^>v<nesw])", key)
+            if not m:
+                raise ValueError(f"unknown grid wildcard value: {part!r}")
+            clan = int(m.group(1))
+            dir_ch = m.group(2)
+            if dir_ch in ANT_CHAR_TO_DIR:
+                direction = ANT_CHAR_TO_DIR[dir_ch]
+            else:
+                direction = DIR_TO_IDX[dir_ch.upper()]
+            val = make_ant(clan, direction)
         if val not in result:
             result.append(val)
     if not result:
@@ -3290,7 +3302,10 @@ def main() -> None:
     parser.add_argument(
         "--grid-wild-values",
         default="floor,wall,hole",
-        help="Comma-separated grid wildcard values for --grid-wilds-sparse.",
+        help=(
+            "Comma-separated grid wildcard values for --grid-wilds-sparse "
+            "(e.g. floor,wall,hole,food,1^,3v)."
+        ),
     )
     parser.add_argument(
         "--grid-wild-max-nonfloor",
