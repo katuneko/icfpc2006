@@ -1,0 +1,101 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as ohmega
+
+
+% Begin sending characters. Terminate with __END_OCULT_SUBMIT__...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+Transferred 2048...
+Transferred 2560...
+Transferred 3072...
+Transferred 3584...
+Transferred 4096...
+Transferred 4608...
+Transferred 5120...
+Transferred 5632...
+Transferred 6144...
+Transferred 6656...
+Transferred 7168...
+Transferred 7680...
+writing 8137 characters
+% % Program area: 19176 (smaller is better)
+[2D] Parsing...
+[2D] Locating modules...
+[2D] Verifying wires in module 'step'...
+[2D] Verifying wires in module 'd'...
+[2D] Verifying wires in module 's0'...
+[2D] Verifying wires in module 's1'...
+[2D] Verifying wires in module 's2'...
+[2D] Verifying wires in module 's3'...
+[2D] Verifying wires in module 'e0'...
+[2D] Verifying wires in module 'e1'...
+[2D] Verifying wires in module 'e2'...
+[2D] Verifying wires in module 'e3'...
+[2D] Connecting wires...
+[2D] Done Parsing!
+----------------------------------------------------------------------
+
+Initial Term: Inl (Inr Inr Inr Inl (),Inl (Inl (Inr Inr Inr Inr Inl (),Inl (Inr Inl (),Inl (Inr Inl (),Inr Inr Inl ()))),Inl (Inr Inl (),Inl (Inr Inl (),Inl (Inr Inl (),Inr Inr Inl ())))))
+Applying advice...
+[2D] Verification failed in evaluation:
+[2D] Eval Error : box case W of S, E used an output interface that doesn't exist
+
+% UMIX shutdown: console EOF

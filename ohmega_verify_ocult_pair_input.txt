@@ -1,0 +1,12 @@
+ohmega
+bidirectional
+run /bin/umodem ocult_pair.2d __END_OCULT_PAIR__
+,....................................,
+:step                                :
+:                                    :
+: *===========*                      :
+->!send[(W,E)]!-----------------------
+: *===========*                      :
+,....................................,
+__END_OCULT_PAIR__
+verify ocult ocult_pair.2d

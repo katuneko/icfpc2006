@@ -1,0 +1,87 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as ohmega
+
+
+% Begin sending characters. Terminate with __END_OCULT_SUBMIT__...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+Transferred 2048...
+Transferred 2560...
+Transferred 3072...
+Transferred 3584...
+Transferred 4096...
+Transferred 4608...
+Transferred 5120...
+Transferred 5632...
+Transferred 6144...
+Transferred 6656...
+Transferred 7168...
+Transferred 7680...
+writing 8137 characters
+% % Program area: 19176 (smaller is better)
+[2D] Parsing...
+[2D] Locating modules...
+[2D] Verifying wires in module 'step'...
+[2D] Verifying wires in module 'd'...
+[2D] Verification failed in parsing:
+[2D] Parse Error: Wire character - at (ln: 13, col: 137) not properly connected.
+
+% UMIX shutdown: console EOF
