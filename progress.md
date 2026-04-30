@@ -303,6 +303,8 @@
   - seed 803 で `p7_local_seed803_p7focus_best.ant` が `FOUND step=27`。標準名として `puzzle7_solution.ant` を保存。
   - UMIX でも `Ant reached goal!`。入力/ログ: `gardener_antomaton_verify_p7_solution_input.txt` / `volume9_gardener_antomaton_verify_p7_solution.txt`。
   - 出版: `ANTWO.007=30@999999|73be091344104ac048550d8dcfd324c`。
+- `icfp.exe` に P6/P7 と `CIRCS.RAY=1264` を含む既知出版を投入し、CV weight 5713 / Full Administrator を確認。
+  - 入力/ログ: `ftd_icfp_all_final_input.txt` / `volume9_ftd_icfp_all_final.txt`。
 
 ## Accounts / Exploration
 - `knr / X3.159-1989` を取得（Machine Room M4 の note）。

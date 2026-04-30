@@ -4,19 +4,19 @@
 
 ## 現在の到達点
 
-現在の CV weight は 5643、権限は Full Administrator です。内訳は次の通りです。
+現在の CV weight は 5713、権限は Full Administrator です。内訳は次の通りです。
 
 | 分野 | 点 |
 | --- | ---: |
 | INTRO | 235 |
 | ADVTR | 810 |
-| ANTWO | 790 |
+| ANTWO | 860 |
 | BLNCE | 1053 |
 | BLACK | 1000 |
 | CIRCS | 1329 |
 | ADVIS | 326 |
 | BASIC | 100 |
-| 合計 | 5643 |
+| 合計 | 5713 |
 
 このスコアは単なる「解けた問題数」ではなく、いくつかの分野ではプログラム長、面積、アドバイス規則数などの品質が直接点数に反映されます。特に CIRCS と ADVIS は、正解を出した後も表現を洗練する余地が大きい分野です。
 
@@ -140,7 +140,7 @@ Balance の高得点化では、命令列を短くするより先に「どの状
 
 `raytrace` は最も大きな成果です。Python の least-fixed-point 参照実装を作り、2D 側では intensity の max/min、`F` table、Towards/Away、`awayv`、`away`、`update`、`rt` といった module に分割しました。各 module を参照実装と突き合わせ、全体として verifier を通した後、配置を詰め直して `raytrace_2_repack.2d` を作りました。
 
-この repack は意味を変えずに module 配置を整理するもので、公式 `verify raytrace` の Program area を 13340 まで下げ、提出コードを `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` に改善しました。従来の `1261` から CIRCS が 3 点増え、その後 Antomaton P6/P7 の完走で現在の CV weight は 5643 になりました。
+この repack は意味を変えずに module 配置を整理するもので、公式 `verify raytrace` の Program area を 13340 まで下げ、提出コードを `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` に改善しました。従来の `1261` から CIRCS が 3 点増え、その後 Antomaton P6/P7 の完走で現在の CV weight は 5713 になりました。
 
 `ocult` については未完成ですが、重要な意味論は見えています。`verify ocult` が期待するのは生の次項ではなく、`Inl ()` で「適用なし」、`Inr <term>` で「一回 rewrite した項」を表す Option です。この理解がないと、内部の rewrite が正しくても verifier の型に合いません。
 

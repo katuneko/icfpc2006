@@ -617,13 +617,13 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 取得済み出版一覧から集計した現状スコア。
 - INTRO（UMIX/Intro）: 235
 - ADVTR（Adventure）: 810
-- ANTWO（Smellular Antomata）: 790
+- ANTWO（Smellular Antomata）: 860
 - BLNCE（Balance）: 1053
 - BLACK（Black Knots）: 1000
 - CIRCS（2D verify）: 1329
 - ADVIS（O'Cult）: 326
 - BASIC（ML 19100）: 100
-- 合計: 5643
+- 合計: 5713
 
 ## 取得済み出版一覧
 - `INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d`
