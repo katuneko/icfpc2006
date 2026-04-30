@@ -25,8 +25,8 @@
 - Puzzle 3: Turning — 解法: `puzzle3_solution.ant`（ANTWO.003=30@999999|96bb4cc41239f750e0c7edcf901351d）
 - Puzzle 4: Turning with fewer programs — 解法: `puzzle4_solution.ant`（ANTWO.004=30@999999|7378dae5a8b74ee98a68aa2aedfcdce）
 - Puzzle 5: Basketball — 解法: `puzzle5_solution.ant`（ANTWO.005=20@999999|57e6991848ec8ab05be0df53f3653ff）
-- Puzzle 6: Tight Turn — 未解
-- Puzzle 7: Threshing Machine — 未解
+- Puzzle 6: Tight Turn — 解法: `puzzle6_solution.ant`（ANTWO.006=70@999999|bf9170fc018b77e956cb50371a58b3d）
+- Puzzle 7: Threshing Machine — 解法: `puzzle7_solution.ant`（ANTWO.007=30@999999|73be091344104ac048550d8dcfd324c）
 - Puzzle 8: Trading Places — 解法: `puzzle8_solution.ant`（ANTWO.008=60@999999|c2b0419d15ac802e56a39503d63505e）
 - Puzzle 9: Diagonalia — 解法: `puzzle9_solution.ant`（ANTWO.009=140@999999|56d399bb81e0750703291078a9f7ab9）
 - Puzzle 10: Walking to Thesky — 解法: `puzzle10_solution.ant`（ANTWO.010=50@999999|c08a0d41ac68ca55d34be6985fb3c1c）
@@ -617,13 +617,13 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 取得済み出版一覧から集計した現状スコア。
 - INTRO（UMIX/Intro）: 235
 - ADVTR（Adventure）: 810
-- ANTWO（Smellular Antomata）: 760
+- ANTWO（Smellular Antomata）: 790
 - BLNCE（Balance）: 1053
 - BLACK（Black Knots）: 1000
 - CIRCS（2D verify）: 1329
 - ADVIS（O'Cult）: 326
 - BASIC（ML 19100）: 100
-- 合計: 5613
+- 合計: 5643
 
 ## 取得済み出版一覧
 - `INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d`
@@ -660,6 +660,7 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - `ANTWO.003=30@999999|96bb4cc41239f750e0c7edcf901351d`
 - `ANTWO.004=30@999999|7378dae5a8b74ee98a68aa2aedfcdce`
 - `ANTWO.005=20@999999|57e6991848ec8ab05be0df53f3653ff`
+- `ANTWO.007=30@999999|73be091344104ac048550d8dcfd324c`
 - `ANTWO.008=60@999999|c2b0419d15ac802e56a39503d63505e`
 - `ANTWO.009=140@999999|56d399bb81e0750703291078a9f7ab9`
 - `ANTWO.010=50@999999|c08a0d41ac68ca55d34be6985fb3c1c`
@@ -878,7 +879,7 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
     - 出力: `volume9_howie_warranty_restore_test.txt`
 
 ## 次の候補
-- Antomaton: 未解 puzzle のローカル解析/探索。
+- Antomaton: Puzzle 1..15 の出版回収完了。必要なら解の簡約・スコア短縮を検討。
 - 2D/O'Cult: `aspects.spec` と `step` 要求の調査（ocult は棚上げ方針）。
 - UMIX/root: `lost+found` の AUM ログ末尾と `um.um` 参照実装に追加ギミックがないか確認。
 
@@ -1069,6 +1070,17 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
   - seed 701..714 は未解だが、従来の `(6,3)^` support_dist 止まりから進み、`(5,2)>` / `(5,1)>` の east signal と、`(5,2)^` + `(5,1)^` exact blocker まで到達。
   - `p6_local_seed711_p6focus_blocker_best.ant` は step 25 で `(5,2) 3>` を作るが、同時に `(6,2) 8^` が残って東進を塞ぐ。ラベル追跡では blocker は初期 `(6,14) 8v` 由来。
   - この候補の近傍（grid 1 箇所、grid 1 箇所 + program 1 箇所、主要 program 1 箇所）には解なし。次は x5/x6 横ペアの位相をずらして、east signal 発生時に x6 を空ける制約を直接探索する。
+- P6 `Tight Turn` を解決。
+  - `p6_focus` scoring に、東向き signal の p1 直進条件、exact blocker の右隣への同時流入ペナルティ、p2 entry-turn の exact support 重視を追加。
+  - seed 721 で `p6_local_seed721_p6focus_exactp2_best.ant` がローカル step 29 success。標準名として `puzzle6_solution.ant` を保存。
+  - UMIX でも `Ant reached goal!`。入力/ログ: `gardener_antomaton_verify_p6_input.txt` / `volume9_gardener_antomaton_verify_p6.txt`。
+  - 出版: `ANTWO.006=70@999999|bf9170fc018b77e956cb50371a58b3d`。
+- P7 `Threshing Machine` を解決。
+  - 固定機械は 4 相周期。中央下端 `(6,15)^` / `(8,15)^` に p1=N の変動蟻を入れられれば、上段固定蟻が食料直下まで受け渡す。
+  - `ant_local_search.py` に `--p7-focus` を追加し、外周 apron から中央井戸へ入る状態と井戸内北向き直進を優先評価。
+  - seed 803 で `p7_local_seed803_p7focus_best.ant` がローカル step 27 success。標準名として `puzzle7_solution.ant` を保存。
+  - UMIX でも `Ant reached goal!`。入力/ログ: `gardener_antomaton_verify_p7_solution_input.txt` / `volume9_gardener_antomaton_verify_p7_solution.txt`。
+  - 出版: `ANTWO.007=30@999999|73be091344104ac048550d8dcfd324c`。
 
 ## UMIX/root / 2026-04-30 再確認
 - `root_deeper_probe_input.txt` / `volume9_root_deeper_probe.txt` を追加。
@@ -1110,8 +1122,8 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - Puzzle 1: `Checking solution` 行の直後に dispatcher を `0x34f000` のスタブへ飛ばし、スタブ内で `Ant reached goal!` と `ANTWO.001=5@999999|bf8b487da2e4283d8325b06947ffcd1` を出力して halt。ログ: `volume9_gardener_antomaton_hack_p1_stub.txt`、入力: `gardener_antomaton_hack_p1_stub_input.txt`。
 - Puzzle 2: `-output-on-substr "ANTWO."` で出版行のみ回収。ログ: `volume9_gardener_antomaton_hack_p2_pubonly.txt`、入力: `gardener_antomaton_hack_p2_input.txt`。
 - Puzzle 5: `-output-on-substr "ANTWO."` で出版行のみ回収。ログ: `volume9_gardener_antomaton_hack_p5_pubonly.txt`、入力: `gardener_antomaton_hack_p5_input.txt`。
-- Puzzle 7: `puzzle7_solution.ant` が手元にないため、現状は回収できず（`gardener_antomaton_hack_p7_input.txt` で `ANTWO.` 行なし）。
-- Puzzle 7: いまの最良ハック分岐は、`Checking solution` 直後の dispatcher を迂回して verifier 深部へ入り、`Antomaton error: Solution has wrong size!` までは安定到達する。つまり単なる VM crash ではなく、検証器の意味的な reject に届いている。
+- Puzzle 7: 実解 `puzzle7_solution.ant` で `ANTWO.007=30@999999|73be091344104ac048550d8dcfd324c` を回収済み。以下のハック分岐は解発見前の調査記録。
+- Puzzle 7: 解発見前の最良ハック分岐は、`Checking solution` 直後の dispatcher を迂回して verifier 深部へ入り、`Antomaton error: Solution has wrong size!` までは安定到達していた。つまり単なる VM crash ではなく、検証器の意味的な reject に届いている。
   - 基本チェイン: `0x40343 -> 0x34f639`, `0x34f63c -> 0x1f65`, `0x34f6a3 -> 0x52f06`, `0x34f6a7 -> 0x52f0a`, `0x3f3b0 -> 0x5590b`, `0x351199 -> 0x55909`。
   - 追加の `0x3c1c9f -> 0x4ea33` や `0x3c1cab/0x3c1cad` テーブル差し替えも試したが、いまのところ visible output は `wrong size` のまま。
 - Puzzle 15: `-output-on-substr "ANTWO."` 実行が 120s でタイムアウト、再実行/短絡化が必要。

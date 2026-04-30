@@ -44,6 +44,9 @@
 - Puzzle 14 解決済み（`puzzle14_solution.ant`、success=facing, 83 step）。
 - Puzzle 14 UMIX 検証: `ANTWO.014=250@999999|50c0240cc0b510c16b29683e456d5c1`。
 - `volume9_gardener_antomaton_verify_p14.txt`（入力: `gardener_antomaton_verify_p14_input.txt`）で再現。
+- Puzzle 7 解決済み（`puzzle7_solution.ant`、success=facing, 27 step）。
+- Puzzle 7 UMIX 検証: `ANTWO.007=30@999999|73be091344104ac048550d8dcfd324c`。
+- `volume9_gardener_antomaton_verify_p7_solution.txt`（入力: `gardener_antomaton_verify_p7_solution_input.txt`）で再現。
 - `ant_solver.py` は turning machine 行の 8 文字入力を受理し、シミュレーション規則は先頭 7 文字（p1..p7）を使用するように更新。
 - `ant_solver.py` は `--time-limit-seconds` 到達時に `timeout` を出すよう修正し、時間切れと `no solution` を区別できるようにした。
 - `ant_solver.py` に `--no-dominance-prune` を追加。代表ケース（`all wilds` の `ants=1, clan4`、gate 周辺 16 点の `grid-wild-max-nonfloor 1`、位相バケット分割した `ants=2, clans 5..8`）を exact-state prune だけで再走しても `no solution` で、dominance 由来の false negative 疑いは一段下がった。
@@ -75,7 +78,7 @@
   - 同じ `4 ants`, no-obstacle を `--outer-position-order fooddist` で 60s 回しても throughput はほぼ同じで、やはり出版なし（`volume9_gardener_antomaton_p7_clan56_allwild4_seed101_cand5ms_fooddist_60s.txt` / `volume9_gardener_antomaton_p7_allclans_allwild4_seed103_cand5ms_fooddist_60s.txt`、入力: `gardener_antomaton_p7_clan56_allwild4_seed101_cand5ms_fooddist_60s_input.txt` / `gardener_antomaton_p7_allclans_allwild4_seed103_cand5ms_fooddist_60s_input.txt`）。
   - `5 ants`, `--outer-position-order fooddist`, no-obstacle は 20s で 5000 sampled tries を、60s で 15000 sampled tries を消化できたが出版なし（`volume9_gardener_antomaton_p7_clan56_allwild5_seed113_cand3ms_fooddist_60s.txt` / `volume9_gardener_antomaton_p7_allclans_allwild5_seed127_cand3ms_fooddist_60s.txt`、入力: `gardener_antomaton_p7_clan56_allwild5_seed113_cand3ms_fooddist_60s_input.txt` / `gardener_antomaton_p7_allclans_allwild5_seed127_cand3ms_fooddist_60s_input.txt`）。
   - `2 ants + 1 obstacle` の sampled all-wild は 20s で約 990 候補しか処理できず、ほぼ全件が candidate cap に達した（`volume9_gardener_antomaton_p7_clan56_allwild2_grid1_seed11_cand20ms_stats_fix1.txt` / `volume9_gardener_antomaton_p7_allclans_allwild2_grid1_seed41_cand20ms_stats_fix1.txt`）。当面は obstacle 追加より `ants>=5` の no-obstacle と、spec/clan 側の bias 強化を優先する。
-- 他パズルは探索/ヒューリスティクスの強化が必要。
+- Antomaton は Puzzle 1..15 の出版回収が完了。
 
 ## 2D (ohmega)
 - `mult`/`rev`/`raytrace` は UMIX 検証・出版済み（`mult.2d`/`rev.2d`/`raytrace_2_nonl.2d`）。`ocult` は棚上げ。
@@ -289,6 +292,17 @@
   - 最良候補 `p6_local_seed711_p6focus_blocker_best.ant` は step 25 で `(5,2) 3>` を作るが、同時に `(6,2) 8^` が残って東進を塞ぐ。初期 `(6,14) 8v` がこの blocker の系譜。
   - `p6_local_seed711_p6focus_blocker_best.ant` 周辺で、grid 1 箇所変更、grid 1 箇所 + program 1 箇所変更、主要候補の program 1 箇所変更を検査したが解なし。
   - 次は「x5/x6 の横ペアで作った east signal を、右隣 blocker なしで発生させる」または「blocked east signal を p4..p7 で東向き保持して1拍待たせる」制約を探索器へさらに明示する。
+- Puzzle 6 を解決。
+  - `--p6-focus` を追加調整し、右隣が空でも同時に下から流入する false positive、p1 が直進でない east signal、p2 entry-turn の support_dist=1 止まりを強く減点。
+  - seed 721 で `p6_local_seed721_p6focus_exactp2_best.ant` を発見し、`puzzle6_solution.ant` として保存。ローカル step 29 success。
+  - UMIX 検証ログ: `volume9_gardener_antomaton_verify_p6.txt`（入力: `gardener_antomaton_verify_p6_input.txt`）。
+  - 出版: `ANTWO.006=70@999999|bf9170fc018b77e956cb50371a58b3d`。
+- Puzzle 7 を解決。
+  - 固定機械の 4 相周期を再確認し、変動 clan が中央井戸の下端 `(6,15)^` / `(8,15)^` へ入れば、p1=N の直進だけで上段固定蟻に受け渡される構造を確認。
+  - `ant_local_search.py` に `--p7-focus` を追加し、外周 apron から中央井戸へ入る変動蟻と、井戸内を北向き直進できる蟻を優先評価。
+  - seed 803 で `p7_local_seed803_p7focus_best.ant` が `FOUND step=27`。標準名として `puzzle7_solution.ant` を保存。
+  - UMIX でも `Ant reached goal!`。入力/ログ: `gardener_antomaton_verify_p7_solution_input.txt` / `volume9_gardener_antomaton_verify_p7_solution.txt`。
+  - 出版: `ANTWO.007=30@999999|73be091344104ac048550d8dcfd324c`。
 
 ## Accounts / Exploration
 - `knr / X3.159-1989` を取得（Machine Room M4 の note）。

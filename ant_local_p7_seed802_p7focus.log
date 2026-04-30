@@ -1,0 +1,61 @@
+BEST score=215 step=3 evals=1 restart=1 p7-entry ant=(10,17) 6< entry_dist=3 entry_dir_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW ESSSESW WNWENSS NWNWNES WNSNWNN WSSWNEN
+BEST score=213 step=1 evals=7 restart=1 p7-entry ant=(10,17) 6< entry_dist=3 entry_dir_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW SWSWESW WNWENSS NWWWNWS WNSSWNN WSSWNEN
+BEST score=201 step=3 evals=19 restart=1 p7-entry ant=(10,16) 6< entry_dist=2 entry_dir_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW SNSWESW WNSESSS NWSNNWS SSNSSNN WSSSNWN
+BEST score=199 step=1 evals=35 restart=1 p7-entry ant=(10,16) 5< entry_dist=2 entry_dir_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW WNWWSSW NSSWSSS NNENNEE SSSSNSN ESNEWSW
+BEST score=158 step=16 evals=41 restart=1 p7-well ant=(7,14) 6^ p1_penalty=0 north_penalty=0 clear_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW WNWWSSS NSSWSSS NNENNEW SSNSNSS ENNEESW
+BEST score=154 step=12 evals=43 restart=1 p7-well ant=(7,14) 6^ p1_penalty=0 north_penalty=0 clear_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW WNWWSSS NSSWSSS NNENNEE SSNSNSS ENNEESW
+BEST score=152 step=10 evals=1611 restart=1 p7-well ant=(7,14) 4^ p1_penalty=0 north_penalty=0 clear_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW NENESWE SEWSESS WNSENSW NWSSSNE WENEENN
+BEST score=114 step=28 evals=13812 restart=5 p7-well ant=(6,8) 4^ p1_penalty=0 north_penalty=0 clear_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW NESESSW WWSNWNS NSSEWWW WEEEWES NWESNSS
+NOFOUND best=114 step=28 p7-well ant=(6,8) 4^ p1_penalty=0 north_penalty=0 clear_penalty=0 evals=21178
+PROGRAMS
+WWWWEEE
+EEEEWWW
+NNNNWWW
+SSSSESW
+NESESSW
+WWSNWNS
+NSSEWWW
+WEEEWES
+NWESNSS
+GRID
+0,16 7^
+1,16 6v
+2,16 8v
+3,16 6v
+4,16 4^
+11,16 6<
+12,16 6>
+13,16 6>
+14,16 4v
+15,16 6>
+0,17 4<
+1,17 6^
+2,17 7<
+3,17 7^
+4,17 4^
+11,17 4^
+12,17 8v
+13,17 6<
+14,17 4>
+15,17  -
+0,18 6^
+1,18 8>
+2,18 7>
+3,18 5^
+4,18 5^
+11,18 5<
+12,18 7>
+13,18 4^
+14,18 7>
+15,18 5<
+0,19 4>
+1,19 6v
+2,19 7^
+3,19 6>
+4,19 4>
+11,19 8v
+12,19 6<
+13,19 5>
+14,19 6<
+15,19  -
+WROTE p7_local_seed802_p7focus_best.ant

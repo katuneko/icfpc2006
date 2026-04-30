@@ -1,0 +1,31 @@
+BEST score=176 step=24 evals=1 restart=1 p6-exact-blocker ant=(6,2) 8^ ahead=(6,1) rel=0 turn_penalty=70 lateral_penalty=0 lateral_wait_penalty=0 incoming_penalty=0 programs=ESWSEWS EESSWES EWSWSSS SSWWSEE NWWENWW SEENSWN WSNWNEE EWNNWNN NESNEEE SSWNNSW
+BEST score=175 step=24 evals=7504 restart=4 p6-exact-blocker ant=(6,2) 8^ ahead=(6,1) rel=0 turn_penalty=70 lateral_penalty=0 lateral_wait_penalty=0 incoming_penalty=0 programs=ESWSEWS EESSWES EWSWSSS SSWWSEE NWWENWW SEENSWN WSNWNEE EWNNWEN NENNEEE SEWNNSW
+BEST score=173 step=24 evals=20158 restart=9 p6-exact-blocker ant=(6,2) 8^ ahead=(6,1) rel=0 turn_penalty=70 lateral_penalty=0 lateral_wait_penalty=0 incoming_penalty=0 programs=ESWSSWE SWSWSNS WWWSWES SSWNESS ESNSNES NWWWEWW WSSSWEW SWWSENW NNWNSEE SSNNNNW
+BEST score=128 step=20 evals=31034 restart=13 p6-exact-blocker ant=(5,4) 8^ ahead=(5,3) rel=0 turn_penalty=0 lateral_penalty=0 lateral_wait_penalty=0 incoming_penalty=0 programs=EWWWEWE EWNEESN WENSENS EWNSSWE SSNSSSW SESWEEE WNNWEEW ENSENNN NSNEEEW ENSEEEE
+BEST score=127 step=20 evals=31041 restart=13 p6-exact-blocker ant=(5,4) 8^ ahead=(5,3) rel=0 turn_penalty=0 lateral_penalty=0 lateral_wait_penalty=0 incoming_penalty=0 programs=EWWWEWE EWNENSN WENSSNS EWNSSWS SSNSSSW SESWEEE WNNWEEW ENSENNN NSNEEEW ENSEEEE
+BEST score=126 step=20 evals=31046 restart=13 p6-exact-blocker ant=(5,4) 8^ ahead=(5,3) rel=0 turn_penalty=0 lateral_penalty=0 lateral_wait_penalty=0 incoming_penalty=0 programs=EWWWEWE EWNENSN WENSSNS EWNSSWS SSNSSSW SESWEEE WNNWEEW EWSENNN NSNEEES ENSEEEE
+FOUND step=29 evals=31203
+PROGRAMS
+WSWNEWE
+EEWENSS
+WNSSSNS
+ENNSSWN
+WSNSWWS
+NENWEEE
+WNSENEW
+EWSEWNN
+NSEEEEN
+NWSNESN
+GRID
+1,13 3<
+2,13  #
+3,13 1>
+4,13 1<
+5,13 3^
+6,13 6^
+1,14  #
+2,14 8>
+4,14  #
+5,14 8>
+6,14 4^
+WROTE p6_local_seed722_p6focus_exactp2_p1n8_best.ant

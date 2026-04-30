@@ -2,6 +2,15 @@
 
 Working directory for the ICFPC 2006 puzzle.
 
+## Solution Report
+
+The current write-up is [solution_report.md](solution_report.md). It summarizes the solved areas, the core ideas behind each solution, and the current score state.
+
+Current highlights:
+- CV weight: 5643, Full Administrator.
+- Smellular Antomata is complete: Puzzle 1..15 all have solution files and ANTWO publications.
+- The report focuses on reusable solving structure rather than raw command history; detailed logs remain in `walkthrough.md`, `progress.md`, `*_input.txt`, and `volume9_*.txt`.
+
 ## Highlights
 - UM interpreter source: `um.rs` (builds to `um`)
 - O'Cult evaluator: `occult.py`

@@ -1,0 +1,67 @@
+BEST score=230 step=0 evals=1 restart=1 p7-apron ant=(11,16) 4< entry_dist=1 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW WENSNWW SWWSNWW WSWWEEE SEENESE WSNSSES
+BEST score=201 step=3 evals=26 restart=1 p7-entry ant=(5,16) 7> entry_dist=2 entry_dir_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW SWWSNWW SEEENWN WNWWEEE NEWWSSN WSENNEN
+BEST score=192 step=8 evals=27 restart=1 p7-entry ant=(9,16) 7^ entry_dist=1 entry_dir_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW SWWSNWS SEEENWN SNWWEEW NEWWSSN WSENSEN
+BEST score=191 step=7 evals=49 restart=1 p7-entry ant=(6,16) 7^ entry_dist=1 entry_dir_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW SWESWWN NNEEESE SNWWNNW NWENSES WWSNNEN
+BEST score=189 step=5 evals=50 restart=1 p7-entry ant=(6,16) 7^ entry_dist=1 entry_dir_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW SWESWWN NNEEESE SNWWNNW NWENSWS WWSNNEN
+BEST score=172 step=16 evals=195 restart=1 p7-well ant=(6,15) 6^ p1_penalty=0 north_penalty=0 clear_penalty=0 incoming_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW ENWSNWN WNSEWNW NNNNWSE SSWSSWS WWWNNNE
+BEST score=164 step=8 evals=1977 restart=1 p7-well ant=(6,15) 7^ p1_penalty=0 north_penalty=0 clear_penalty=0 incoming_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW WESWSEW WSWEWWS WEENSEE NSWNEWE NWWENWS
+BEST score=163 step=11 evals=6076 restart=3 p7-well ant=(8,15) 8^ p1_penalty=0 north_penalty=0 clear_penalty=0 incoming_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW ESNNESS NEENWWE ENNEWWN WNSEWWE NNENWWE
+BEST score=161 step=9 evals=6281 restart=3 p7-well ant=(7,15) 8^ p1_penalty=0 north_penalty=0 clear_penalty=0 incoming_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW WWWWWNN WWWEWWW NNSNWWN NSWESNE NWSWNEW
+BEST score=160 step=8 evals=12126 restart=5 p7-well ant=(8,15) 4^ p1_penalty=0 north_penalty=0 clear_penalty=0 incoming_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW NESNWES NENEESE NNWWNEE WESSNWN ESWEESN
+BEST score=133 step=19 evals=19800 restart=7 p7-well ant=(7,11) 4^ p1_penalty=0 north_penalty=0 clear_penalty=0 incoming_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW NEWEEWN SEEWWWW SSESSSN NENEWEN NSSSWWE
+BEST score=106 step=22 evals=19817 restart=7 p7-well ant=(7,8) 4^ p1_penalty=0 north_penalty=0 clear_penalty=0 incoming_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW NNWEEWN SEEWWWW SSESSNN NENEWEN NSSNWWE
+BEST score=105 step=22 evals=19835 restart=7 p7-well ant=(7,8) 4^ p1_penalty=0 north_penalty=0 clear_penalty=0 incoming_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW NNEEEWN SEEWWWW SNESSNN NENEWEE NSSNWWE
+BEST score=104 step=22 evals=19838 restart=7 p7-well ant=(7,8) 4^ p1_penalty=0 north_penalty=0 clear_penalty=0 incoming_penalty=0 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW NNEEEWN SEEWWWW SWESSNN NENEWEE NSSNWWE
+NOFOUND best=104 step=22 p7-well ant=(7,8) 4^ p1_penalty=0 north_penalty=0 clear_penalty=0 incoming_penalty=0 evals=20224
+PROGRAMS
+WWWWEEE
+EEEEWWW
+NNNNWWW
+SSSSESW
+NNEEEWN
+SEEWWWW
+SWESSNN
+NENEWEE
+NSSNWWE
+GRID
+0,16 8v
+1,16 7>
+2,16 7^
+3,16 8<
+4,16 8v
+11,16 5>
+12,16 6<
+13,16 7>
+14,16 5^
+15,16 6v
+0,17 4<
+1,17 8<
+2,17 5<
+3,17 5^
+4,17 4>
+11,17 8<
+12,17 7v
+13,17 8v
+14,17 6<
+15,17 6<
+0,18 6<
+1,18 5<
+2,18 6>
+3,18 4<
+4,18 4^
+11,18 7v
+12,18 8v
+13,18 5>
+14,18  -
+15,18 8v
+0,19 6<
+1,19 7<
+2,19 6<
+3,19 6>
+4,19 5v
+11,19 4v
+12,19 8>
+13,19 7v
+14,19 8<
+15,19 7>
+WROTE p7_local_seed805_p7focus_incoming_best.ant

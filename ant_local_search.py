@@ -181,6 +181,7 @@ def state_score(
     support_program_aware: bool,
     support_entry_turn: bool,
     p6_focus: bool,
+    p7_focus: bool,
 ) -> Tuple[int, str]:
     best = 10**9
     detail = "no ants"
@@ -192,6 +193,10 @@ def state_score(
             p6_score = p6_focused_score(state, neighbors, live_ants, programs, pos, value)
             if p6_score is not None and p6_score[0] < best:
                 best, detail = p6_score
+        if p7_focus:
+            p7_score = p7_focused_score(state, neighbors, live_ants, programs, pos, value)
+            if p7_score is not None and p7_score[0] < best:
+                best, detail = p7_score
         d = dist[pos]
         dist_hint = 1000 if d is None else d * distance_weight
         for target_pos, target_dir in targets:
@@ -331,7 +336,7 @@ def p6_focused_score(
     # Once an east-facing ant exists in the top corridor, only horizontal progress
     # remains. This should dominate generic "north and close" scores.
     if direction == 1 and 1 <= y <= 3 and 1 <= x <= 9:
-        p1_penalty = 0 if programs[clan][0] == 0 else 180
+        p1_penalty = 0 if programs[clan][0] == 0 else 500
         ahead = neighbors[pos][1]
         ahead_value = state[ahead] if ahead != -1 else ant.CELL_WALL
         wait_penalty = 0
@@ -343,8 +348,9 @@ def p6_focused_score(
             clear_penalty = 35 + wait_penalty
         else:
             clear_penalty = 140
+        base = 10 if p1_penalty == 0 and clear_penalty == 0 else 60
         return (
-            (9 - x) * 20 + abs(y - 2) * 6 + p1_penalty + clear_penalty,
+            base + (9 - x) * 10 + abs(y - 2) * 6 + p1_penalty + clear_penalty,
             f"p6-east-signal ant=({x},{y}) {clan}> "
             f"clear_penalty={clear_penalty} wait_penalty={wait_penalty}",
         )
@@ -357,13 +363,14 @@ def p6_focused_score(
             left = neighbors[ahead][3]
             if left != -1:
                 support = directed_support_distance(live_ants, pos, left, 1)
-                p2_penalty = 0 if programs[clan][1] == 1 else 80
-                p1_penalty = 0 if programs[clan][0] == 0 else 180
+                p2_penalty = 0 if programs[clan][1] == 1 else 160
+                p1_penalty = 0 if programs[clan][0] == 0 else 400
+                base = 25 if support == 0 else 95
                 score = (
-                    80
-                    + (9 - ax) * 16
+                    base
+                    + (9 - ax) * 10
                     + abs(ay - 2) * 8
-                    + support * 25
+                    + support * 60
                     + p1_penalty
                     + p2_penalty
                 )
@@ -380,8 +387,8 @@ def p6_focused_score(
             ay, ax = divmod(ahead, WIDTH_HINT)
             if ant.is_ant(state[ahead]):
                 rel = (ant.ant_dir(state[ahead]) - direction) & 3
-                turn_penalty = 0 if programs[clan][3 + rel] == 1 else 70
-                p1_penalty = 0 if programs[clan][0] == 0 else 180
+                turn_penalty = 0 if programs[clan][3 + rel] == 1 else 220
+                p1_penalty = 0 if programs[clan][0] == 0 else 400
                 right = neighbors[pos][1]
                 right_value = state[right] if right != -1 else ant.CELL_WALL
                 lateral_wait_penalty = 0
@@ -395,6 +402,17 @@ def p6_focused_score(
                     lateral_penalty = 45 + lateral_wait_penalty
                 else:
                     lateral_penalty = 220
+                incoming_penalty = 0
+                if right != -1 and right_value in (ant.CELL_FLOOR, ant.CELL_FOOD):
+                    for source_dir, source in enumerate(neighbors[right]):
+                        if source == -1 or source == pos:
+                            continue
+                        source_value = state[source]
+                        if (
+                            ant.is_ant(source_value)
+                            and ant.ant_dir(source_value) == ((source_dir + 2) & 3)
+                        ):
+                            incoming_penalty += 90
                 score = (
                     60
                     + (9 - x) * 10
@@ -402,13 +420,15 @@ def p6_focused_score(
                     + p1_penalty
                     + turn_penalty
                     + lateral_penalty
+                    + incoming_penalty
                 )
                 return (
                     score,
                     f"p6-exact-blocker ant=({x},{y}) {clan}^ "
                     f"ahead=({ax},{ay}) rel={rel} turn_penalty={turn_penalty} "
                     f"lateral_penalty={lateral_penalty} "
-                    f"lateral_wait_penalty={lateral_wait_penalty}",
+                    f"lateral_wait_penalty={lateral_wait_penalty} "
+                    f"incoming_penalty={incoming_penalty}",
                 )
             blocker_dist = support_distance(
                 state,
@@ -430,6 +450,89 @@ def p6_focused_score(
                 f"p6-blocker-prep ant=({x},{y}) {clan}^ "
                 f"ahead=({ax},{ay}) blocker_dist={blocker_dist}",
             )
+    return None
+
+
+def p7_focused_score(
+    state: List[int],
+    neighbors: List[Tuple[int, int, int, int]],
+    live_ants: List[Tuple[int, int]],
+    programs: List[List[int]],
+    pos: int,
+    value: int,
+) -> Optional[Tuple[int, str]]:
+    """Reward P7 progress from the wildcard apron into the central well."""
+    y, x = divmod(pos, WIDTH_HINT)
+    direction = ant.ant_dir(value)
+    clan = ant.ant_clan(value)
+    variable_penalty = 0 if clan >= 4 else 160
+    p1_penalty = 0 if programs[clan][0] == 0 else 120
+    north_penalty = 0 if direction == 0 else 35
+    if 6 <= x <= 9 and 1 <= y <= 15:
+        ahead = neighbors[pos][0]
+        ahead_value = state[ahead] if ahead != -1 else ant.CELL_WALL
+        clear_penalty = 0
+        if ahead_value in (ant.CELL_FLOOR, ant.CELL_FOOD):
+            clear_penalty = 0
+        elif ant.is_ant(ahead_value):
+            rel = (ant.ant_dir(ahead_value) - direction) & 3
+            clear_penalty = 25 if programs[clan][3 + rel] == 0 else 80
+        else:
+            clear_penalty = 140
+        incoming_penalty = 0
+        if (
+            direction == 0
+            and ahead != -1
+            and ahead_value in (ant.CELL_FLOOR, ant.CELL_FOOD)
+        ):
+            for source_dir, source in enumerate(neighbors[ahead]):
+                if source == -1 or source == pos:
+                    continue
+                source_value = state[source]
+                if (
+                    ant.is_ant(source_value)
+                    and ant.ant_dir(source_value) == ((source_dir + 2) & 3)
+                ):
+                    incoming_penalty += 120
+        score = (
+            20
+            + y * 10
+            + abs((x * 2) - 15) * 2
+            + variable_penalty
+            + p1_penalty
+            + north_penalty
+            + clear_penalty
+            + incoming_penalty
+        )
+        return (
+            score,
+            f"p7-well ant=({x},{y}) {clan}{ant.DIR_TO_ANT_CHAR[direction]} "
+            f"p1_penalty={p1_penalty} north_penalty={north_penalty} "
+            f"clear_penalty={clear_penalty} incoming_penalty={incoming_penalty}",
+        )
+    if clan >= 4 and 5 <= x <= 10 and 16 <= y <= 19:
+        entry_dist = min(abs(x - tx) + abs(y - 15) for tx in range(6, 10))
+        entry_dir_penalty = 0
+        if x < 6 and direction != 1:
+            entry_dir_penalty = 30
+        elif x > 9 and direction != 3:
+            entry_dir_penalty = 30
+        elif 6 <= x <= 9 and direction != 0:
+            entry_dir_penalty = 30
+        score = 190 + entry_dist * 14 + entry_dir_penalty + min(p1_penalty, 60)
+        return (
+            score,
+            f"p7-entry ant=({x},{y}) {clan}{ant.DIR_TO_ANT_CHAR[direction]} "
+            f"entry_dist={entry_dist} entry_dir_penalty={entry_dir_penalty}",
+        )
+    if clan >= 4 and 0 <= y <= 19:
+        entry_dist = min(abs(x - tx) + abs(y - ty) for tx in (5, 10) for ty in range(16, 20))
+        score = 240 + entry_dist * 10
+        return (
+            score,
+            f"p7-apron ant=({x},{y}) {clan}{ant.DIR_TO_ANT_CHAR[direction]} "
+            f"entry_dist={entry_dist}",
+        )
     return None
 
 
@@ -514,6 +617,7 @@ def evaluate(
     support_program_aware: bool,
     support_entry_turn: bool,
     p6_focus: bool,
+    p7_focus: bool,
 ) -> EvalResult:
     global WIDTH_HINT
     WIDTH_HINT = puzzle.width
@@ -541,6 +645,7 @@ def evaluate(
             support_program_aware,
             support_entry_turn,
             p6_focus,
+            p7_focus,
         )
         score += step
         if score < best_score:
@@ -719,6 +824,7 @@ def main() -> None:
     parser.add_argument("--support-program-aware", action="store_true")
     parser.add_argument("--support-entry-turn", action="store_true")
     parser.add_argument("--p6-focus", action="store_true")
+    parser.add_argument("--p7-focus", action="store_true")
     parser.add_argument("--start-candidate")
     parser.add_argument("--start-every-restart", action="store_true")
     args = parser.parse_args()
@@ -775,6 +881,7 @@ def main() -> None:
             args.support_program_aware,
             args.support_entry_turn,
             args.p6_focus,
+            args.p7_focus,
         )
         temp0 = 150.0
         restart_evals = 0
@@ -812,6 +919,7 @@ def main() -> None:
                 args.support_program_aware,
                 args.support_entry_turn,
                 args.p6_focus,
+                args.p7_focus,
             )
             delta = child_eval.score - cur_eval.score
             elapsed_frac = 1.0 - max(0.0, deadline - monotonic()) / max(args.seconds, 1e-6)

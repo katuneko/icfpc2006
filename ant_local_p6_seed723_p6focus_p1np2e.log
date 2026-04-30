@@ -1,0 +1,32 @@
+BEST score=256 step=14 evals=1 restart=1 p6-p2-prep ant=(6,3) 7^ dest=(6,2) left_support_dist=2 programs=NEEESES NESEWNW NEWNWEE NESEESS NESNWNN NESSWWN NEEEWNS NENNENW NEEENNN NEESSWN
+BEST score=250 step=11 evals=50 restart=1 p6-p2-prep ant=(6,3) 0^ dest=(6,2) left_support_dist=2 programs=NENSEES NEEESNW NEEWSWW NEEEEEN NEENNNN NEESWNN NESSSNS NENSSSE NEEESEN NEWNSSN
+BEST score=249 step=11 evals=66 restart=1 p6-p2-prep ant=(6,3) 2^ dest=(6,2) left_support_dist=2 programs=NEEEEES NEEEEWE NEEWSSW NEEWEEW NEEWNNN NEWSNWN NESSSNE NENSSWE NEEENWW NEENSSN
+BEST score=248 step=11 evals=68 restart=1 p6-p2-prep ant=(6,3) 2^ dest=(6,2) left_support_dist=2 programs=NEEEEES NEEEEWE NEWWSSW NEEWEEW NEEWNNN NEWSNWN NESSSSE NENSSWE NEEENWW NEENSSN
+BEST score=247 step=11 evals=6323 restart=3 p6-p2-prep ant=(6,3) 8^ dest=(6,2) left_support_dist=2 programs=NEESWNW NENNSSN NEESNNS NESWNNW NESSSSE NEWEEWS NENNWWS NEWWWSS NENNEEW NEESNES
+BEST score=246 step=11 evals=8273 restart=3 p6-p2-prep ant=(6,3) 3^ dest=(6,2) left_support_dist=2 programs=NENNEES NEEESSW NEENNEE NESSWSW NENWSEE NEWNNSE NEWSSEE NEEEWNW NEWNSNW NENWNSN
+BEST score=245 step=11 evals=29392 restart=10 p6-p2-prep ant=(6,3) 3^ dest=(6,2) left_support_dist=2 programs=NEESNWW NESNNWW NENEWNN NENSWNE NEWENES NENWSWS NENEESN NEWNWSW NEEENWN NEWWWSN
+NOFOUND best=245 step=11 p6-p2-prep ant=(6,3) 3^ dest=(6,2) left_support_dist=2 evals=39727
+PROGRAMS
+NEESNWW
+NESNNWW
+NENEWNN
+NENSWNE
+NEWENES
+NENWSWS
+NENEESN
+NEWNWSW
+NEEENWN
+NEWWWSN
+GRID
+1,13 8^
+2,13 3v
+3,13 0v
+4,13 2<
+5,13 9^
+6,13 3v
+1,14 0>
+2,14 2^
+4,14 6^
+5,14 9<
+6,14 2v
+WROTE p6_local_seed723_p6focus_p1np2e_best.ant

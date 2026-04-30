@@ -65,6 +65,9 @@ def simulate(
     wilds: List[int],
     max_steps: int,
     trace: bool,
+    trace_all: bool,
+    row_start: int,
+    row_end: int,
     emit: bool = True,
 ) -> bool:
     neighbors = ant.build_neighbors(puzzle.width, puzzle.height)
@@ -76,16 +79,16 @@ def simulate(
         if ant.has_success_fast(state, neighbors, food, "facing"):
             if emit:
                 print(f"SUCCESS step={step}")
-                print(render_top(state, puzzle.width))
+                print(render_top(state, puzzle.width, row_start, row_end))
             return True
         events = p6_events(state, neighbors, candidate.programs, puzzle.width)
         if events and (best_events is None or event_rank(events) < event_rank(best_events[1])):
             best_events = (step, events, state[:])
-        if emit and trace and events:
+        if emit and trace and (events or trace_all):
             print(f"STEP {step}")
             for event in events:
                 print(f"  {event}")
-            print(render_top(state, puzzle.width))
+            print(render_top(state, puzzle.width, row_start, row_end))
         key = bytes(state)
         if key in seen:
             break
@@ -96,7 +99,7 @@ def simulate(
         print(f"BEST_EVENT step={step}")
         for event in events:
             print(f"  {event}")
-        print(render_top(best_state, puzzle.width))
+        print(render_top(best_state, puzzle.width, row_start, row_end))
     if emit:
         print("NO_SUCCESS")
     return False
@@ -144,12 +147,76 @@ def try_one_program(
                     continue
                 probe = local.clone_candidate(candidate)
                 probe.programs[clan][idx] = new
-                ok = simulate(puzzle, probe, wilds, max_steps, trace=False, emit=False)
+                ok = simulate(
+                    puzzle,
+                    probe,
+                    wilds,
+                    max_steps,
+                    trace=False,
+                    trace_all=False,
+                    row_start=1,
+                    row_end=4,
+                    emit=False,
+                )
                 if ok:
                     print(f"HIT program {clan}:p{idx + 1}={ant.DIRS[new]}")
                     found += 1
     if found == 0:
         print("NO_ONE_PROGRAM_HIT")
+
+
+def parse_grid_values(text: str) -> List[int]:
+    values: List[int] = []
+    for part in text.split(","):
+        part = part.strip()
+        if not part:
+            continue
+        values.extend(ant.parse_grid_wild_values(part))
+    out: List[int] = []
+    for value in values:
+        if value not in out:
+            out.append(value)
+    return out
+
+
+def parse_ant_clans(text: str, program_count: int) -> List[int]:
+    if not text:
+        return list(range(program_count))
+    return [int(part) for part in text.split(",") if part.strip()]
+
+
+def try_one_grid(
+    puzzle: ant.Puzzle,
+    candidate: local.Candidate,
+    wilds: List[int],
+    max_steps: int,
+    values: List[int],
+) -> None:
+    found = 0
+    for grid_idx, old in enumerate(candidate.grid):
+        for new in values:
+            if new == old:
+                continue
+            probe = local.clone_candidate(candidate)
+            probe.grid[grid_idx] = new
+            ok = simulate(
+                puzzle,
+                probe,
+                wilds,
+                max_steps,
+                trace=False,
+                trace_all=False,
+                row_start=1,
+                row_end=4,
+                emit=False,
+            )
+            if ok:
+                pos = wilds[grid_idx]
+                y, x = divmod(pos, puzzle.width)
+                print(f"HIT grid {x},{y}={cell_text(new)}")
+                found += 1
+    if found == 0:
+        print("NO_ONE_GRID_HIT")
 
 
 def main() -> None:
@@ -159,8 +226,14 @@ def main() -> None:
     parser.add_argument("--match", default="Puzzle 6")
     parser.add_argument("--max-steps", type=int, default=260)
     parser.add_argument("--trace", action="store_true")
+    parser.add_argument("--trace-all", action="store_true")
+    parser.add_argument("--row-start", type=int, default=1)
+    parser.add_argument("--row-end", type=int, default=4)
     parser.add_argument("--set-program", action="append", default=[])
     parser.add_argument("--try-one-program", action="store_true")
+    parser.add_argument("--try-one-grid", action="store_true")
+    parser.add_argument("--grid-values", default="floor,wall,hole")
+    parser.add_argument("--ant-clans", default="")
     args = parser.parse_args()
 
     puzzles = ant.parse_puzzles(Path(args.puzzles))
@@ -175,8 +248,24 @@ def main() -> None:
         candidate.programs[clan][idx] = value
     if args.try_one_program:
         try_one_program(puzzle, candidate, wilds, args.max_steps)
+    elif args.try_one_grid:
+        values = parse_grid_values(args.grid_values)
+        clans = parse_ant_clans(args.ant_clans, len(candidate.programs))
+        values.extend(
+            ant.make_ant(clan, direction) for clan in clans for direction in range(4)
+        )
+        try_one_grid(puzzle, candidate, wilds, args.max_steps, values)
     else:
-        simulate(puzzle, candidate, wilds, args.max_steps, args.trace)
+        simulate(
+            puzzle,
+            candidate,
+            wilds,
+            args.max_steps,
+            args.trace,
+            args.trace_all,
+            args.row_start,
+            args.row_end,
+        )
 
 
 if __name__ == "__main__":

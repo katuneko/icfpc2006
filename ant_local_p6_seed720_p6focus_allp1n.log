@@ -1,0 +1,35 @@
+BEST score=230 step=14 evals=1 restart=1 p6-p2-prep ant=(5,3) 0^ dest=(5,2) left_support_dist=3 programs=NENEWWN NWNWWSS NSSSWES NSWWSWN NEEWWEE NSWSEWS NSNNENE NSWWSEN NWENWNS NSSNWNW
+BEST score=222 step=14 evals=5 restart=1 p6-p2-prep ant=(4,3) 5^ dest=(4,2) left_support_dist=2 programs=NENEWWN NNNWWSS NSSSWES NSWWSWN NEEWWEE NEWSEWS NSNNENW NSWWSEN NWENENS NESNWNW
+BEST score=218 step=11 evals=31 restart=1 p6-p2-prep ant=(4,3) 4^ dest=(4,2) left_support_dist=2 programs=NSNSNWN NEEWNNS NSWSWWS NWWESWW NEEWWWE NEWSEES NSNNEWW NSWNWEN NEENENS NNSNWES
+BEST score=184 step=11 evals=37 restart=1 p6-p2-prep ant=(6,3) 1^ dest=(6,2) left_support_dist=2 programs=NSSSNWN NEESNNS NSWSEWS NWNESWW NEEWWWE NEWSEES NWNNEWW NSWNWEN NWESENS NESNWES
+BEST score=183 step=11 evals=40 restart=1 p6-p2-prep ant=(6,3) 1^ dest=(6,2) left_support_dist=2 programs=NSSSNWN NEESNNS NSWSEWS NWNESSW NEEWWWE NEWSSES NWNNEWW NEWNWEN NWESENS NESNWES
+BEST score=182 step=11 evals=41 restart=1 p6-p2-prep ant=(6,3) 1^ dest=(6,2) left_support_dist=2 programs=NSSSNWN NEESNNS NSWSEWS NWNESNW NEENSWE NEWSSES NWNNEWW NEWNWEN NWESENS NESNWES
+BEST score=181 step=11 evals=316 restart=1 p6-p2-prep ant=(6,3) 4^ dest=(6,2) left_support_dist=2 programs=NENESWE NEEEEES NNEEWWS NNSNSEE NENESWE NNWNNSE NSENWSN NWNWNNN NNNSSWS NNWWEEE
+BEST score=180 step=11 evals=2001 restart=1 p6-p2-prep ant=(6,3) 5^ dest=(6,2) left_support_dist=2 programs=NWWNWEE NNWNENW NESSEEE NESWSNN NWSWENW NEESNEE NSNWNWN NNENESE NSSNSNN NSWESEN
+BEST score=179 step=11 evals=31808 restart=11 p6-p2-prep ant=(6,3) 2^ dest=(6,2) left_support_dist=2 programs=NEWEENW NEEEEEE NEWSWNS NSSWWSN NSWWWNW NWESSEW NNNWEWW NSWWNNN NESEENS NENEWNN
+BEST score=178 step=11 evals=31814 restart=11 p6-p2-prep ant=(6,3) 2^ dest=(6,2) left_support_dist=2 programs=NEWEENW NEEEEEE NESSWNW NESWWSN NSSWNNW NWESSEW NNNWEWW NSWWNNN NESEENS NENEWNN
+NOFOUND best=178 step=11 p6-p2-prep ant=(6,3) 2^ dest=(6,2) left_support_dist=2 evals=40465
+PROGRAMS
+NEWEENW
+NEEEEEE
+NESSWNW
+NESWWSN
+NSSWNNW
+NWESSEW
+NNNWEWW
+NSWWNNN
+NESEENS
+NENEWNN
+GRID
+1,13 3^
+2,13 0<
+3,13 6>
+4,13 8<
+5,13 3^
+6,13 2v
+1,14 7>
+2,14 2^
+4,14 7<
+5,14 1>
+6,14 4v
+WROTE p6_local_seed720_p6focus_allp1n_best.ant
