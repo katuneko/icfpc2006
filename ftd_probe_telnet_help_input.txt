@@ -1,0 +1,4 @@
+guest
+help telnet
+telnet
+logout

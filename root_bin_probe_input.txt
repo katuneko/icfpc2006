@@ -1,0 +1,8 @@
+root
+c@Rn3g!e
+ls /bin
+ls -l /bin
+cat /bin/README
+run /bin/umodem
+run /bin/qbasic
+logout

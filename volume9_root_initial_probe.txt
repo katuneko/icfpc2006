@@ -1,0 +1,106 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as root
+
+---------------------------------------------------------
+Administrative account is for maintenance only.
+No research is allowed.
+---------------------------------------------------------
+
+% /root/
+% tools/
+lost+found/
+% drwx    root                ? tools
+drwx    root                ? lost+found
+% ftd/
+knr/
+guest/
+gardener/
+ohmega/
+yang/
+howie/
+hmonk/
+bbarker/
+% drwx    ftd                 ? ftd
+drwx    knr                 ? knr
+drwx    guest               ? guest
+drwx    gardener            ? gardener
+drwx    ohmega              ? ohmega
+drwx    yang                ? yang
+drwx    howie               ? howie
+drwx    hmonk               ? hmonk
+drwx    bbarker             ? bbarker
+% cat: no such accessible file
+% cat: no such accessible file
+% No unread messages.
+
+---------------------------------------------------------------------
+INBOX:
+
+Message  Read?  Sender                                Subject
+-------  -----  ------                                -------
+      0    Yes  Donald Nut <dnut@clv.net>             Yours loan is approved 7l0l
+
+---------------------------------------------------------------------
+
+Which message would you like to read?
+Type a number from '0' to '0'.
+Or type 'q' to quit.
+Goodbye!
+% 

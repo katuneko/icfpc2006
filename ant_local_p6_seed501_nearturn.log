@@ -1,0 +1,27 @@
+BEST score=337 step=12 evals=1 restart=1 near-turn-support ant=(6,3) 2^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 programs=NNENNSS NEWENWE NWNEENW NNSWSNW NNESNNW NSNEWWE NWNSNEN NENESSN NSWSSEN NSESSES
+BEST score=336 step=19 evals=14376 restart=4 near-turn-support ant=(6,3) 1< target=(9,3) E dist=3 ahead=(5,3) support_dist=0 programs=EWWNESW WSWENEN EWESWWS NESSNES NWENEWE EESNEWE SSNWWNN SEEESES WSWNSEW ESNWWWS
+NOFOUND best=336 step=19 near-turn-support ant=(6,3) 1< target=(9,3) E dist=3 ahead=(5,3) support_dist=0 evals=43450
+PROGRAMS
+EWWNESW
+WSWENEN
+EWESWWS
+NESSNES
+NWENEWE
+EESNEWE
+SSNWWNN
+SEEESES
+WSWNSEW
+ESNWWWS
+GRID
+1,13 2v
+2,13 2>
+3,13 1^
+4,13 0v
+5,13 2^
+6,13 1^
+1,14 2<
+2,14 2>
+4,14 2<
+5,14 2>
+6,14  -
+WROTE p6_local_seed501_nearturn_best.ant

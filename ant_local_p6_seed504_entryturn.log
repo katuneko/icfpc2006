@@ -1,0 +1,33 @@
+BEST score=403 step=10 evals=1 restart=1 entry-turn-p3 ant=(6,3) 0^ target=(9,3) E dest=(6,2) support_dist=10 programs=NNENNSS NEWENWE NWNEENW NNSWSNW NNESNNW NSNEWWE NWNSNEN NENESSN NSWSSEN NSESSES
+BEST score=356 step=10 evals=2 restart=1 entry-turn-p2 ant=(6,3) 0^ target=(9,3) E dest=(6,2) support_dist=4 programs=NEENNSS NEWENWE NWNEENW NNSWSNW NNESNNW NSNEWWE NWNSNEN NENESSN NSWSSEN NSESSES
+BEST score=348 step=11 evals=140 restart=1 entry-turn-p2 ant=(6,3) 1^ target=(9,3) E dest=(6,2) support_dist=2 programs=WSESEWW NEENEEN SWSNEWW WNWENSW NNWEENW WNSWNNE WENSNEN EWEWENW WSWWWSN EWSEWWS
+BEST score=347 step=11 evals=141 restart=1 entry-turn-p2 ant=(6,3) 1^ target=(9,3) E dest=(6,2) support_dist=2 programs=WSESEWW NEENEEN SWSNEWW WNWENSW NNWEENW WNSWNNE WENSNEN NWEWENW WSWWWSN EWSEWWS
+BEST score=344 step=12 evals=273 restart=1 entry-turn-p2 ant=(6,3) 1^ target=(9,3) E dest=(6,2) support_dist=2 programs=NENEWES NENWESN WWNEENW ESNWWWW NWWEEES NNSSSWE SNEESSS NNWWEWE SNEWEEW SEWWEEW
+BEST score=343 step=11 evals=10471 restart=5 entry-turn-p2 ant=(6,3) 1^ target=(9,3) E dest=(6,2) support_dist=2 programs=NESWENN NEEESWS ESEENNW ESEWSSN WSWWNWW WEENSEN SENSSSE WWENSNW WEWNWES WEWSENE
+BEST score=342 step=11 evals=10473 restart=5 entry-turn-p2 ant=(6,3) 1^ target=(9,3) E dest=(6,2) support_dist=2 programs=NWSWENN NEEESWS ESEENNW ESEWSSN WSWWNWW WEENSEN SENSSSE WWENSNW WEWNWES WEWSENE
+BEST score=341 step=11 evals=34792 restart=14 entry-turn-p2 ant=(6,3) 1^ target=(9,3) E dest=(6,2) support_dist=2 programs=NESEEWW NESNSSW NSEWENS ESEENWW WWESWEE EWSWSEW ENWWNNS SNEEWNW WEEWESS NWNENSS
+NOFOUND best=341 step=11 entry-turn-p2 ant=(6,3) 1^ target=(9,3) E dest=(6,2) support_dist=2 evals=58026
+PROGRAMS
+NESEEWW
+NESNSSW
+NSEWENS
+ESEENWW
+WWESWEE
+EWSWSEW
+ENWWNNS
+SNEEWNW
+WEEWESS
+NWNENSS
+GRID
+1,13 0^
+2,13 0>
+3,13 1>
+4,13 1>
+5,13 2^
+6,13 1v
+1,14 1^
+2,14  #
+4,14 2<
+5,14 2>
+6,14 2^
+WROTE p6_local_seed504_entryturn_best.ant

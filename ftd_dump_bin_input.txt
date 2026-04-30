@@ -1,0 +1,4 @@
+guest
+dump /bin/qbasic
+dump /bin/umodem
+logout

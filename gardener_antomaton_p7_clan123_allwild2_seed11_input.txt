@@ -1,0 +1,1 @@
+python3 ant_solver.py --wild-ants-sparse --match 'Puzzle 7' --ants 2 --ant-clans 1,2,3 --max-steps 12000 --distance-prune --sparse-order best --random-tries 50000 --shuffle-seed 11 --time-limit-seconds 180

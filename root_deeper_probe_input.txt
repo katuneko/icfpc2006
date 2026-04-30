@@ -1,0 +1,21 @@
+root
+c@Rn3g!e
+help run
+help more
+cd /root/lost+found
+pwd
+more CREDITS
+more aum_log_29_12_19004_235107
+recover ./CREDITS
+recover ./aum_log_29_12_19004_235107
+recover /root/lost+found/CREDITS
+recover /root/lost+found/aum_log_29_12_19004_235107
+dump recover
+run recover
+run recover CREDITS
+run /root/lost+found/recover CREDITS
+cd /root/tools
+more README
+dump um.um
+run um.um
+logout

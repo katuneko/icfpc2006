@@ -1,0 +1,46 @@
+BEST score=1373 step=2 evals=1 restart=1 ant=(6,12) 8< target=(9,3) E dist=12 manhattan=12 programs=SWNWNSS SEEENNS WNWSNEW WENESSN ENEWNWN SWSWEES NWNSSES SWEWEEE WNWESNW SSWEWNN
+BEST score=1358 step=1 evals=9 restart=1 ant=(6,13) 8> target=(9,3) E dist=13 manhattan=13 programs=SENWNSS SEEENES WNWSNEW WENNSSS ENEWNWN SWSWEES NWNWSES SWESEEE WNWEWNW SEWWWNN
+BEST score=442 step=10 evals=10 restart=1 ant=(6,3) 6^ target=(9,3) E dist=3 manhattan=3 programs=SENWNSS SEEENES WNWSNEW WENNSSS ENEWNWN SWSWEES NWNWSES NWESEEE WNWEWNW SEWWWNN
+BEST score=426 step=10 evals=12 restart=1 p6-p2-prep ant=(6,3) 6^ dest=(6,2) left_support_dist=10 programs=SENWNSS SEEENES WNWSNEW WENNSSS ENEWNWN SWSWEES NWNWSES NWESEEE WNWEENW SEWWWEN
+BEST score=424 step=10 evals=13 restart=1 p6-p2-prep ant=(6,3) 6^ dest=(6,2) left_support_dist=10 programs=SEWWNSS SEEENES WNWSNEW WENNESS ENEWNWN SWSWEES NWNWSES NWESEEE WNWEENW SEWWWEN
+BEST score=324 step=10 evals=14 restart=1 p6-p2-prep ant=(6,3) 6^ dest=(6,2) left_support_dist=6 programs=SEWWNSS SEEENES WNWSNEW WENNENS ENEWNWS NWSWEEN NWNWSES NWESEEE WNWEENW SEWWWEN
+BEST score=322 step=10 evals=16 restart=1 p6-p2-prep ant=(6,3) 6^ dest=(6,2) left_support_dist=6 programs=SEWSNSS SEEENES WNWSNEW WENNENS ENEWNWS NWSWEEN NWNWSES NWESEEE WNWEENW SEWWWEN
+BEST score=298 step=10 evals=17 restart=1 p6-p2-prep ant=(6,3) 6^ dest=(6,2) left_support_dist=5 programs=WEWSNSS SEEENES WNWSNSW WENNENS ENEWNWS NWSWEEN NWNWSES NWESEEE WNWEENW SEWWWEN
+BEST score=216 step=12 evals=26 restart=1 p6-p2-prep ant=(4,3) 5^ dest=(4,2) left_support_dist=2 programs=WEWSNES SWEEEES WNWSNSN SENNENS SNEWNWS NESEEEN NWWWSES SSESNNE WNWEENW SEWNWEN
+BEST score=215 step=12 evals=28 restart=1 p6-p2-prep ant=(4,3) 5^ dest=(4,2) left_support_dist=2 programs=WEWSNES SWEEEES WWWNNSN SENNENS SNEWNWS NESEEEN NWWWSES SSESNNE WNWEENW SEWSWEN
+BEST score=214 step=12 evals=29 restart=1 p6-p2-prep ant=(4,3) 5^ dest=(4,2) left_support_dist=2 programs=WEWSNES SWEEEES WWWNNSN SEENENS SNEWNWS NESEEEN NWWWSES SSESNNE WNWEENW SEWSWEN
+BEST score=212 step=11 evals=120 restart=1 p6-p2-prep ant=(6,3) 8^ dest=(6,2) left_support_dist=3 programs=NESWSEE NWNEEES WWSWNSN SESWWSE SSWNWEE SSNNNEW NSESSES ESNWWNS NEWEEWE SEWWSNN
+BEST score=209 step=11 evals=122 restart=1 p6-p2-prep ant=(6,3) 8^ dest=(6,2) left_support_dist=3 programs=NEWWSEE NWNEEES WWSWNSN SESWWSE SSWNWEE SSNNNEW NSESSES EENWWNS NEWEEWE SEWWWNN
+BEST score=203 step=13 evals=740 restart=1 p6-p2-prep ant=(5,3) 9^ dest=(5,2) left_support_dist=2 programs=NEENNEN SEEEWES ENEEESN NWSESEW NEWSWEE SENWNSW SSEWWSN WWWESEE WEWNWNW NENNENN
+BEST score=186 step=11 evals=932 restart=1 p6-p2-prep ant=(6,3) 9^ dest=(6,2) left_support_dist=2 programs=ENENSWN WSWWNWE ENEEESN WNENWSE WNNENWW NNEEENE WSSWSNN SWSWSSN WSENWSW NESESSN
+BEST score=185 step=11 evals=933 restart=1 p6-p2-prep ant=(6,3) 9^ dest=(6,2) left_support_dist=2 programs=ENENSWN WSWWNWE ENEEESN WNENWSE WNNEWWW NNEEENE WSSWSNN SWSWSSN WSENWSW NESESSN
+BEST score=183 step=11 evals=4129 restart=2 p6-p2-prep ant=(6,3) 3^ dest=(6,2) left_support_dist=2 programs=EEWNENE NWEENWE NWWWESE NEENWSS WENNSWN EEWNESE SSWNNNE SSNSWSW WWNWNEE WSSNNNE
+BEST score=182 step=11 evals=6706 restart=3 p6-p2-prep ant=(6,3) 9^ dest=(6,2) left_support_dist=2 programs=NSWSESN SSNSWSS SWWSNWS ENSNWSE SWWNESN WSWNNWW NENNNWW SENSWEN SWENSES NEWWENN
+BEST score=181 step=11 evals=11151 restart=4 p6-p2-prep ant=(6,3) 7^ dest=(6,2) left_support_dist=2 programs=NWNSWEN ENSNNSW SNESSSW NNSWWWW WEEWSSW SSWNSES ENNSSSS NEEWSEE WSWNWSE EESSWEN
+BEST score=180 step=11 evals=19719 restart=7 p6-p2-prep ant=(6,3) 8^ dest=(6,2) left_support_dist=2 programs=NESESSE NSESWNE WNWSWNN WESENWN SENNEWW NSNENSN ENSNNNN WWWNEES NESEEEN SNEWSEW
+BEST score=179 step=12 evals=33934 restart=12 p6-p2-prep ant=(6,3) 2^ dest=(6,2) left_support_dist=2 programs=NSWNENS SWNESNW NENEEEE WSEEWEE NWNEENW SWNNWNN SNSWNWN WNSWSWS WEEEENS SEWSWSS
+NOFOUND best=179 step=12 p6-p2-prep ant=(6,3) 2^ dest=(6,2) left_support_dist=2 evals=37360
+PROGRAMS
+NSWNENS
+SWNESNW
+NENEEEE
+WSEEWEE
+NWNEENW
+SWNNWNN
+SNSWNWN
+WNSWSWS
+WEEEENS
+SEWSWSS
+GRID
+1,13 0v
+2,13 9v
+3,13 1<
+4,13 8<
+5,13 4<
+6,13 2v
+1,14 6>
+2,14 4^
+4,14 2>
+5,14 5v
+6,14 4^
+WROTE p6_local_seed706_p6focus_clear_best.ant

@@ -1,0 +1,34 @@
+BEST score=536 step=10 evals=1 restart=1 near-turn-support ant=(4,3) 8^ target=(9,3) E dist=5 ahead=(4,2) support_dist=2 programs=NENEEEE NNWEEEE NWWEEEE NNNEEEE NSWEEEE NSEEEEE NEWEEEE NSSEEEE NWEEEEE NEWEEEE
+BEST score=534 step=10 evals=2 restart=1 near-turn-support ant=(4,3) 8^ target=(9,3) E dist=5 ahead=(4,2) support_dist=2 programs=NEWEEEE NNWEEEE NWWEEEE NNNEEEE NSWEEEE NSEEEEE NEWEEEE NSSEEEE NWEEEEE NEWEEEE
+BEST score=444 step=10 evals=4 restart=1 near-turn-support ant=(5,3) 5^ target=(9,3) E dist=4 ahead=(5,2) support_dist=2 programs=NEWEEEE NNWEEEE NWWEEEE NNNEEEE NWWEEEE NSEEEEE NEWEEEE NSSEEEE NWWEEEE NEWEEEE
+BEST score=353 step=10 evals=5 restart=1 near-turn-support ant=(6,3) 7^ target=(9,3) E dist=3 ahead=(6,2) support_dist=2 programs=NEWEEEE NNWEEEE NWWEEEE NNNEEEE NSWEEEE NSEEEEE NEWEEEE NSSEEEE NWWEEEE NEWEEEE
+BEST score=352 step=10 evals=6 restart=1 near-turn-support ant=(6,3) 7^ target=(9,3) E dist=3 ahead=(6,2) support_dist=2 programs=NNWEEEE NNWEEEE NWWEEEE NWWEEEE NSWEEEE NSEEEEE NEWEEEE NSSEEEE NWWEEEE NNWEEEE
+BEST score=351 step=10 evals=10 restart=1 near-turn-support ant=(6,3) 5^ target=(9,3) E dist=3 ahead=(6,2) support_dist=2 programs=NNWEEEE NNWEEEE NWWEEEE NWWEEEE NSWEEEE NSEEEEE NEWEEEE NSSEEEE NNWEEEE NNNEEEE
+BEST score=320 step=13 evals=13 restart=1 near-turn-support ant=(6,3) 1^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 programs=NEWEEEE NNWEEEE NWWEEEE NSWEEEE NSWEEEE NSEEEEE NEWEEEE NSSEEEE NNWEEEE NNNEEEE
+BEST score=312 step=11 evals=15 restart=1 near-turn-support ant=(6,3) 5^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 programs=NEEEEEE NNWEEEE NWWEEEE NSWEEEE NWWEEEE NSEEEEE NEWEEEE NSSEEEE NNWEEEE NWNEEEE
+BEST score=311 step=11 evals=11339 restart=3 near-turn-support ant=(6,3) 0^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 programs=NNEEEEE NWEEEEE NWWEEEE NNWEEEE NNSEEEE NSNEEEE NWEEEEE NWWEEEE NNSEEEE NNSEEEE
+NOFOUND best=311 step=11 near-turn-support ant=(6,3) 0^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 evals=26678
+PROGRAMS
+NNEEEEE
+NWEEEEE
+NWWEEEE
+NNWEEEE
+NNSEEEE
+NSNEEEE
+NWEEEEE
+NWWEEEE
+NNSEEEE
+NNSEEEE
+GRID
+1,13 1^
+2,13 5^
+3,13 6^
+4,13 7^
+5,13 1^
+6,13 0<
+1,14 7>
+2,14 5v
+4,14 9<
+5,14 6<
+6,14 2v
+WROTE p6_local_seed601_p4east_best.ant

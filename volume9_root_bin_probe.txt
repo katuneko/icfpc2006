@@ -1,0 +1,79 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as root
+
+---------------------------------------------------------
+Administrative account is for maintenance only.
+No research is allowed.
+---------------------------------------------------------
+
+% qbasic*
+umodem*
+% -r-x    root                ? qbasic
+-r-x    root                ? umodem
+% cat: no such accessible file
+% umodem: transfer files between UMIX systems
+usage: umodem file.out EOF_SENTINEL
+Writes characters from the console into the file
+until the specified sequence EOF_SENTINEL is reached.
+% QVICKBASIC version VII.0
+The programming language of choice for
+discriminating hackers.
+usage: qbasic file.bas
+% 

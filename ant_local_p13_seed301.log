@@ -1,0 +1,69 @@
+BEST score=419 step=16 evals=1 restart=1 ant=(5,22) 0< target=(5,26) W dist=4 manhattan=4 programs=NNNNNNN NNNSSSS NWWWESN NEENWSN NESSWEW NNNNWSE NSENSNN NSEWNNW
+BEST score=418 step=18 evals=8 restart=1 ant=(5,22) 3< target=(5,26) W dist=4 manhattan=4 programs=NNNNNNN NNNSSSS NWWWESN NEENWSW NEEEWEW NNSNWSW NSENSNN NSENNNW
+BEST score=415 step=15 evals=47 restart=1 ant=(5,22) 3< target=(5,26) W dist=4 manhattan=4 programs=NNNNNNN NNNSSSS NESSSNW NEESWSE NSNWWNS NNSNSWE NEWNSWW NWENNNS
+BEST score=361 step=53 evals=228 restart=1 ant=(1,25) 1v target=(4,25) S dist=3 manhattan=3 programs=NNNNNNN NNNSSSS NSNWWWE NSNWWEW NSWNNWE NSSENWE NNSNESE NNNSNWN
+BEST score=360 step=53 evals=232 restart=1 ant=(1,25) 1v target=(4,25) S dist=3 manhattan=3 programs=NNNNNNN NNNSSSS NSNWWWE NSNWWEW NSWNWWE NNSENWE NNENESE NENSNWN
+BEST score=359 step=53 evals=235 restart=1 ant=(1,25) 1v target=(4,25) S dist=3 manhattan=3 programs=NNNNNNN NNNSSSS NSNWWWE NSNWWEW NSWNEWE NNSENWE NNENESE NENSNWN
+BEST score=116 step=29 evals=271 restart=1 ant=(5,25) 2v target=(4,25) S dist=1 manhattan=1 programs=NNNNNNN NNNSSSS NNNSESS NSNSWWS NSNWNWN NWSENWE NWWNSES NSNNSWS
+BEST score=114 step=29 evals=276 restart=1 ant=(5,25) 2v target=(4,25) S dist=1 manhattan=1 programs=NNNNNNN NNNSSSS NNNSESS NSSSWWW NSNWNWN NESENWE NWWSSES NSNNSWS
+BEST score=113 step=28 evals=505 restart=1 ant=(3,25) 2v target=(4,25) S dist=1 manhattan=1 programs=NNNNNNN NNNSSSS NNWWWSE NENSWWN NSNSNWS NNNSNSE NEEWNWW NNNEWSS
+BEST score=109 step=24 evals=609 restart=1 ant=(3,25) 2v target=(4,25) S dist=1 manhattan=1 programs=NNNNNNN NNNSSSS NNWWWSN NWSEWWS NWSWNWN NNWNSNS NNWSWNE NNSWEWS
+BEST score=107 step=22 evals=679 restart=1 ant=(5,25) 1v target=(4,25) S dist=1 manhattan=1 programs=NNNNNNN NNNSSSS NSNWWSS NNNEESE NNWSWWE NESNWNN NNSSWNN NNNWSSS
+NOFOUND best=107 step=22 ant=(5,25) 1v target=(4,25) S dist=1 manhattan=1 evals=679
+PROGRAMS
+NNNNNNN
+NNNSSSS
+NSNWWSS
+NNNEESE
+NNWSWWE
+NESNWNN
+NNSSWNN
+NNNWSSS
+GRID
+22,3 3v
+23,3 1v
+24,3  -
+21,4 1v
+22,4 3^
+23,4 0v
+24,4  o
+25,4 1>
+20,5 3>
+21,5 1v
+22,5 1^
+23,5 3^
+24,5  #
+25,5 0^
+26,5 1v
+21,6 1v
+22,6 0^
+23,6 2<
+24,6  -
+25,6  o
+22,7 3^
+23,7 0^
+24,7 2>
+14,13 0>
+15,13 1<
+16,13 2<
+13,14 1^
+14,14 1<
+15,14 2v
+16,14 0<
+17,14  o
+12,15 0<
+13,15 3v
+14,15 1<
+15,15 3^
+16,15 3<
+17,15 3^
+18,15  -
+13,16 0<
+14,16 0<
+15,16 3>
+16,16  -
+17,16 3<
+14,17 3v
+15,17 2v
+16,17 1v
+WROTE p13_local_seed301_best.ant

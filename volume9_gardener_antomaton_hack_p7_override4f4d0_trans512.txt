@@ -1,0 +1,106 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as gardener
+
+
+% Begin sending characters. Terminate with ZZZEOFZZZ...
+Transferred 512...
+writing 503 characters
+% unknown command o
+new to UMIX? try
+  help
+for help.
+% unknown command o
+new to UMIX? try
+  help
+for help.
+% unknown command o
+new to UMIX? try
+  help
+for help.
+% unknown command o
+new to UMIX? try
+  help
+for help.
+% unknown command -
+new to UMIX? try
+  help
+for help.
+% unknown command -
+new to UMIX? try
+  help
+for help.
+% unknown command -
+new to UMIX? try
+  help
+for help.
+% unknown command -
+new to UMIX? try
+  help
+for help.
+% unknown command o
+new to UMIX? try
+  help
+for help.
+% unknown command ZZZEOFZZZ
+new to UMIX? try
+  help
+for help.
+% Antomaton error: unexpected end of line
+% UMIX shutdown: console EOF

@@ -1,0 +1,31 @@
+BEST score=769 step=10 evals=1 restart=1 ant=(5,3) 3^ target=(9,3) E dist=4 manhattan=4 programs=NWEEEEE NSSEEEE NWWEEEE NWNEEEE NNSEEEE NWWEEEE NESEEEE NEEEEEE NEEEEEE NNWEEEE
+BEST score=648 step=10 evals=2 restart=1 near-turn-support ant=(5,3) 3^ target=(9,3) E dist=4 ahead=(5,2) support_dist=7 programs=NWEEEEE NSSEEEE NWWEEEE NWNEEEE NNNEEEE NWWEEEE NESEEEE NEEEEEE NEEEEEE NNWEEEE
+BEST score=314 step=12 evals=3 restart=1 near-turn-support ant=(6,3) 6^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 programs=NWEEEEE NSWEEEE NWWEEEE NWNEEEE NNNEEEE NWWEEEE NESEEEE NEEEEEE NEEEEEE NNWEEEE
+BEST score=313 step=11 evals=739 restart=1 near-turn-support ant=(6,3) 5^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 programs=NEEEEEE NNWEEEE NNWEEEE NNEEEEE NWWEEEE NWNEEEE NNNEEEE NNSEEEE NESEEEE NNWEEEE
+BEST score=312 step=11 evals=1150 restart=1 near-turn-support ant=(6,3) 0^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 programs=NEWEEEE NNWEEEE NSEEEEE NSSEEEE NENEEEE NNWEEEE NWEEEEE NENEEEE NWNEEEE NWSEEEE
+BEST score=311 step=11 evals=9685 restart=3 near-turn-support ant=(6,3) 5^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 programs=NWNEEEE NSSEEEE NEEEEEE NNWEEEE NSSEEEE NEWEEEE NWSEEEE NEWEEEE NWNEEEE NWWEEEE
+NOFOUND best=311 step=11 near-turn-support ant=(6,3) 5^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 evals=26895
+PROGRAMS
+NWNEEEE
+NSSEEEE
+NEEEEEE
+NNWEEEE
+NSSEEEE
+NEWEEEE
+NWSEEEE
+NEWEEEE
+NWNEEEE
+NWWEEEE
+GRID
+1,13 7^
+2,13 4<
+3,13 0<
+4,13 3<
+5,13 1^
+6,13 5<
+1,14 2>
+2,14 6v
+4,14 4<
+5,14 3v
+6,14 6v
+WROTE p6_local_seed602_p4east_best.ant

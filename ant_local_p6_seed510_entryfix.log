@@ -1,0 +1,33 @@
+BEST score=80 step=0 evals=1 restart=1 ant=(4,13) 1> target=(9,3) E dist=15 manhattan=15 programs=NESEEWW NESNSSW NSEWENS ESEENWW WWESWEE EWSWSEW ENWWNNS SNEEWNW WEEWESS NWNENSS
+BEST score=68 step=0 evals=4 restart=1 ant=(6,13) 3> target=(9,3) E dist=13 manhattan=13 programs=NESEEWW NESNSSW NSEWENS ESSEWWW WWEWWEE EWSSSEW ENWWNNS SNEEWNW WEEWESS NWNENES
+BEST score=67 step=0 evals=6 restart=1 ant=(6,13) 3> target=(9,3) E dist=13 manhattan=13 programs=NESEEWW NESNSSW NSEWENS ESSNWWW WWEWWEE EWSSSEW ENWWNNS SNEEWNW WEEWNSS NWNENES
+BEST score=66 step=4 evals=179 restart=1 ant=(6,12) 5> target=(9,3) E dist=12 manhattan=12 programs=NENSNSW NENWNSE NSWENNW ESENWSN WWSSESW EWWENNW ENEESWE SNWSNES WENSWNN NWESSNN
+BEST score=65 step=4 evals=182 restart=1 ant=(5,11) 5> target=(9,3) E dist=12 manhattan=12 programs=NENSNSW NENNNSE NSWENNW ESENWSN WWSSNSW EWWEWNW ENEESWE SNWSNES WENSWNN NWESSNN
+BEST score=63 step=1 evals=213 restart=1 ant=(6,12) 3> target=(9,3) E dist=12 manhattan=12 programs=NEESNNW NENSNSE NSWEWSN ESSNWWN WWSSWNW EWENENN ENSWSNE SNESWSS WENSWNN NWEESWW
+BEST score=59 step=26 evals=533 restart=1 ant=(3,3) 5> target=(9,3) E dist=6 manhattan=6 programs=NEWWENS NEWWNSW NSNENSE ESNNSEW WWSWWES EWWNNWS ENEEEEE SNNEESW WESESSE NWEESES
+BEST score=34 step=19 evals=1094 restart=1 ant=(5,3) 3> target=(9,3) E dist=4 manhattan=4 programs=NESWNNE NEENNWS NSNSSNN ESSWNWS WWNNWEW EWESNSE ENNESSW SNNSESS WEWENNN NWNSSNN
+NOFOUND best=34 step=19 ant=(5,3) 3> target=(9,3) E dist=4 manhattan=4 evals=55693
+PROGRAMS
+NESWNNE
+NEENNWS
+NSNSSNN
+ESSWNWS
+WWNNWEW
+EWESNSE
+ENNESSW
+SNNSESS
+WEWENNN
+NWNSSNN
+GRID
+1,13 4<
+2,13 5v
+3,13 1>
+4,13 4>
+5,13 3^
+6,13 4^
+1,14 2>
+2,14 0<
+4,14 2<
+5,14 0v
+6,14 3v
+WROTE p6_local_seed510_entryfix_best.ant

@@ -1,0 +1,1070 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: logged in as guest
+INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d
+
+
+You have new mail. Type 'mail' to view.
+% Begin sending characters. Terminate with EOF...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+Transferred 2048...
+Transferred 2560...
+Transferred 3072...
+Transferred 3584...
+Transferred 4096...
+Transferred 4608...
+Transferred 5120...
+Transferred 5632...
+Transferred 6144...
+Transferred 6656...
+Transferred 7168...
+Transferred 7680...
+Transferred 8192...
+Transferred 8704...
+Transferred 9216...
+Transferred 9728...
+Transferred 10240...
+Transferred 10752...
+Transferred 11264...
+Transferred 11776...
+Transferred 12288...
+Transferred 12800...
+Transferred 13312...
+Transferred 13824...
+Transferred 14336...
+Transferred 14848...
+Transferred 15360...
+Transferred 15872...
+Transferred 16384...
+Transferred 16896...
+Transferred 17408...
+Transferred 17920...
+Transferred 18432...
+Transferred 18944...
+Transferred 19456...
+Transferred 19968...
+Transferred 20480...
+Transferred 20992...
+Transferred 21504...
+Transferred 22016...
+Transferred 22528...
+Transferred 23040...
+Transferred 23552...
+Transferred 24064...
+Transferred 24576...
+Transferred 25088...
+Transferred 25600...
+Transferred 26112...
+Transferred 26624...
+Transferred 27136...
+Transferred 27648...
+Transferred 28160...
+Transferred 28672...
+Transferred 29184...
+Transferred 29696...
+Transferred 30208...
+Transferred 30720...
+Transferred 31232...
+Transferred 31744...
+Transferred 32256...
+Transferred 32768...
+Transferred 33280...
+Transferred 33792...
+Transferred 34304...
+Transferred 34816...
+Transferred 35328...
+Transferred 35840...
+Transferred 36352...
+Transferred 36864...
+Transferred 37376...
+Transferred 37888...
+Transferred 38400...
+Transferred 38912...
+Transferred 39424...
+Transferred 39936...
+Transferred 40448...
+Transferred 40960...
+Transferred 41472...
+Transferred 41984...
+Transferred 42496...
+Transferred 43008...
+Transferred 43520...
+Transferred 44032...
+Transferred 44544...
+Transferred 45056...
+Transferred 45568...
+Transferred 46080...
+Transferred 46592...
+Transferred 47104...
+Transferred 47616...
+Transferred 48128...
+Transferred 48640...
+Transferred 49152...
+Transferred 49664...
+Transferred 50176...
+Transferred 50688...
+Transferred 51200...
+Transferred 51712...
+Transferred 52224...
+Transferred 52736...
+Transferred 53248...
+Transferred 53760...
+Transferred 54272...
+Transferred 54784...
+Transferred 55296...
+Transferred 55808...
+Transferred 56320...
+Transferred 56832...
+Transferred 57344...
+Transferred 57856...
+Transferred 58368...
+Transferred 58880...
+Transferred 59392...
+Transferred 59904...
+Transferred 60416...
+Transferred 60928...
+Transferred 61440...
+Transferred 61952...
+Transferred 62464...
+Transferred 62976...
+Transferred 63488...
+Transferred 64000...
+Transferred 64512...
+Transferred 65024...
+Transferred 65536...
+Transferred 66048...
+Transferred 66560...
+Transferred 67072...
+Transferred 67584...
+Transferred 68096...
+Transferred 68608...
+Transferred 69120...
+Transferred 69632...
+Transferred 70144...
+Transferred 70656...
+Transferred 71168...
+Transferred 71680...
+Transferred 72192...
+Transferred 72704...
+Transferred 73216...
+Transferred 73728...
+Transferred 74240...
+Transferred 74752...
+Transferred 75264...
+Transferred 75776...
+Transferred 76288...
+Transferred 76800...
+Transferred 77312...
+Transferred 77824...
+Transferred 78336...
+Transferred 78848...
+Transferred 79360...
+Transferred 79872...
+Transferred 80384...
+Transferred 80896...
+Transferred 81408...
+Transferred 81920...
+Transferred 82432...
+Transferred 82944...
+Transferred 83456...
+Transferred 83968...
+Transferred 84480...
+Transferred 84992...
+Transferred 85504...
+Transferred 86016...
+Transferred 86528...
+Transferred 87040...
+Transferred 87552...
+Transferred 88064...
+Transferred 88576...
+Transferred 89088...
+Transferred 89600...
+Transferred 90112...
+Transferred 90624...
+Transferred 91136...
+Transferred 91648...
+Transferred 92160...
+Transferred 92672...
+Transferred 93184...
+Transferred 93696...
+Transferred 94208...
+Transferred 94720...
+Transferred 95232...
+Transferred 95744...
+Transferred 96256...
+Transferred 96768...
+Transferred 97280...
+Transferred 97792...
+writing 98206 characters
+INTRO.UMD=10@999999|7005f80d6cd9b7b837802f1e58b11b8
+
+You have new mail. Type 'mail' to view.
+% 
+You have new mail. Type 'mail' to view.
+% V IF (ARGS() > I) THEN GOTO XXV ELSE SKIP
+X PRINT "usage: ./checkbatch.exe username"
+XV PRINT CHR(X)
+XX END
+XXV DIM username AS STRING
+XXX SET username = ARG(II)
+XXXV DIM candidate AS STRING
+XL DIM words(MMCD) AS STRING
+XLV SET words(I) = "airplane00"
+L SET words(II) = "airplane01"
+LV SET words(III) = "airplane02"
+LX SET words(IV) = "airplane03"
+LXV SET words(V) = "airplane04"
+LXX SET words(VI) = "airplane05"
+LXXV SET words(VII) = "airplane06"
+LXXX SET words(VIII) = "airplane07"
+LXXXV SET words(IX) = "airplane08"
+XC SET words(X) = "airplane09"
+XCV SET words(XI) = "airplane10"
+C SET words(XII) = "airplane11"
+CV SET words(XIII) = "airplane12"
+CX SET words(XIV) = "airplane13"
+CXV SET words(XV) = "airplane14"
+CXX SET words(XVI) = "airplane15"
+CXXV SET words(XVII) = "airplane16"
+CXXX SET words(XVIII) = "airplane17"
+CXXXV SET words(XIX) = "airplane18"
+CXL SET words(XX) = "airplane19"
+CXLV SET words(XXI) = "airplane20"
+CL SET words(XXII) = "airplane21"
+CLV SET words(XXIII) = "airplane22"
+CLX SET words(XXIV) = "airplane23"
+CLXV SET words(XXV) = "airplane24"
+CLXX SET words(XXVI) = "airplane25"
+CLXXV SET words(XXVII) = "airplane26"
+CLXXX SET words(XXVIII) = "airplane27"
+CLXXXV SET words(XXIX) = "airplane28"
+CXC SET words(XXX) = "airplane29"
+CXCV SET words(XXXI) = "airplane30"
+CC SET words(XXXII) = "airplane31"
+CCV SET words(XXXIII) = "airplane32"
+CCX SET words(XXXIV) = "airplane33"
+CCXV SET words(XXXV) = "airplane34"
+CCXX SET words(XXXVI) = "airplane35"
+CCXXV SET words(XXXVII) = "airplane36"
+CCXXX SET words(XXXVIII) = "airplane37"
+CCXXXV SET words(XXXIX) = "airplane38"
+CCXL SET words(XL) = "airplane39"
+CCXLV SET words(XLI) = "airplane40"
+CCL SET words(XLII) = "airplane41"
+CCLV SET words(XLIII) = "airplane42"
+CCLX SET words(XLIV) = "airplane43"
+CCLXV SET words(XLV) = "airplane44"
+CCLXX SET words(XLVI) = "airplane45"
+CCLXXV SET words(XLVII) = "airplane46"
+CCLXXX SET words(XLVIII) = "airplane47"
+CCLXXXV SET words(XLIX) = "airplane48"
+CCXC SET words(L) = "airplane49"
+CCXCV SET words(LI) = "airplane50"
+CCC SET words(LII) = "airplane51"
+CCCV SET words(LIII) = "airplane52"
+CCCX SET words(LIV) = "airplane53"
+CCCXV SET words(LV) = "airplane54"
+CCCXX SET words(LVI) = "airplane55"
+CCCXXV SET words(LVII) = "airplane56"
+CCCXXX SET words(LVIII) = "airplane57"
+CCCXXXV SET words(LIX) = "airplane58"
+CCCXL SET words(LX) = "airplane59"
+CCCXLV SET words(LXI) = "airplane60"
+CCCL SET words(LXII) = "airplane61"
+CCCLV SET words(LXIII) = "airplane62"
+CCCLX SET words(LXIV) = "airplane63"
+CCCLXV SET words(LXV) = "airplane64"
+CCCLXX SET words(LXVI) = "airplane65"
+CCCLXXV SET words(LXVII) = "airplane66"
+CCCLXXX SET words(LXVIII) = "airplane67"
+CCCLXXXV SET words(LXIX) = "airplane68"
+CCCXC SET words(LXX) = "airplane69"
+CCCXCV SET words(LXXI) = "airplane70"
+CD SET words(LXXII) = "airplane71"
+CDV SET words(LXXIII) = "airplane72"
+CDX SET words(LXXIV) = "airplane73"
+CDXV SET words(LXXV) = "airplane74"
+CDXX SET words(LXXVI) = "airplane75"
+CDXXV SET words(LXXVII) = "airplane76"
+CDXXX SET words(LXXVIII) = "airplane77"
+CDXXXV SET words(LXXIX) = "airplane78"
+CDXL SET words(LXXX) = "airplane79"
+CDXLV SET words(LXXXI) = "airplane80"
+CDL SET words(LXXXII) = "airplane81"
+CDLV SET words(LXXXIII) = "airplane82"
+CDLX SET words(LXXXIV) = "airplane83"
+CDLXV SET words(LXXXV) = "airplane84"
+CDLXX SET words(LXXXVI) = "airplane85"
+CDLXXV SET words(LXXXVII) = "airplane86"
+CDLXXX SET words(LXXXVIII) = "airplane87"
+CDLXXXV SET words(LXXXIX) = "airplane88"
+CDXC SET words(XC) = "airplane89"
+CDXCV SET words(XCI) = "airplane90"
+D SET words(XCII) = "airplane91"
+DV SET words(XCIII) = "airplane92"
+DX SET words(XCIV) = "airplane93"
+DXV SET words(XCV) = "airplane94"
+DXX SET words(XCVI) = "airplane95"
+DXXV SET words(XCVII) = "airplane96"
+DXXX SET words(XCVIII) = "airplane97"
+DXXXV SET words(XCIX) = "airplane98"
+DXL SET words(C) = "airplane99"
+DXLV SET words(CI) = "alphabet00"
+DL SET words(CII) = "alphabet01"
+DLV SET words(CIII) = "alphabet02"
+DLX SET words(CIV) = "alphabet03"
+DLXV SET words(CV) = "alphabet04"
+DLXX SET words(CVI) = "alphabet05"
+DLXXV SET words(CVII) = "alphabet06"
+DLXXX SET words(CVIII) = "alphabet07"
+DLXXXV SET words(CIX) = "alphabet08"
+DXC SET words(CX) = "alphabet09"
+DXCV SET words(CXI) = "alphabet10"
+DC SET words(CXII) = "alphabet11"
+DCV SET words(CXIII) = "alphabet12"
+DCX SET words(CXIV) = "alphabet13"
+DCXV SET words(CXV) = "alphabet14"
+DCXX SET words(CXVI) = "alphabet15"
+DCXXV SET words(CXVII) = "alphabet16"
+DCXXX SET words(CXVIII) = "alphabet17"
+DCXXXV SET words(CXIX) = "alphabet18"
+DCXL SET words(CXX) = "alphabet19"
+DCXLV SET words(CXXI) = "alphabet20"
+DCL SET words(CXXII) = "alphabet21"
+DCLV SET words(CXXIII) = "alphabet22"
+DCLX SET words(CXXIV) = "alphabet23"
+DCLXV SET words(CXXV) = "alphabet24"
+DCLXX SET words(CXXVI) = "alphabet25"
+DCLXXV SET words(CXXVII) = "alphabet26"
+DCLXXX SET words(CXXVIII) = "alphabet27"
+DCLXXXV SET words(CXXIX) = "alphabet28"
+DCXC SET words(CXXX) = "alphabet29"
+DCXCV SET words(CXXXI) = "alphabet30"
+DCC SET words(CXXXII) = "alphabet31"
+DCCV SET words(CXXXIII) = "alphabet32"
+DCCX SET words(CXXXIV) = "alphabet33"
+DCCXV SET words(CXXXV) = "alphabet34"
+DCCXX SET words(CXXXVI) = "alphabet35"
+DCCXXV SET words(CXXXVII) = "alphabet36"
+DCCXXX SET words(CXXXVIII) = "alphabet37"
+DCCXXXV SET words(CXXXIX) = "alphabet38"
+DCCXL SET words(CXL) = "alphabet39"
+DCCXLV SET words(CXLI) = "alphabet40"
+DCCL SET words(CXLII) = "alphabet41"
+DCCLV SET words(CXLIII) = "alphabet42"
+DCCLX SET words(CXLIV) = "alphabet43"
+DCCLXV SET words(CXLV) = "alphabet44"
+DCCLXX SET words(CXLVI) = "alphabet45"
+DCCLXXV SET words(CXLVII) = "alphabet46"
+DCCLXXX SET words(CXLVIII) = "alphabet47"
+DCCLXXXV SET words(CXLIX) = "alphabet48"
+DCCXC SET words(CL) = "alphabet49"
+DCCXCV SET words(CLI) = "alphabet50"
+DCCC SET words(CLII) = "alphabet51"
+DCCCV SET words(CLIII) = "alphabet52"
+DCCCX SET words(CLIV) = "alphabet53"
+DCCCXV SET words(CLV) = "alphabet54"
+DCCCXX SET words(CLVI) = "alphabet55"
+DCCCXXV SET words(CLVII) = "alphabet56"
+DCCCXXX SET words(CLVIII) = "alphabet57"
+DCCCXXXV SET words(CLIX) = "alphabet58"
+DCCCXL SET words(CLX) = "alphabet59"
+DCCCXLV SET words(CLXI) = "alphabet60"
+DCCCL SET words(CLXII) = "alphabet61"
+DCCCLV SET words(CLXIII) = "alphabet62"
+DCCCLX SET words(CLXIV) = "alphabet63"
+DCCCLXV SET words(CLXV) = "alphabet64"
+DCCCLXX SET words(CLXVI) = "alphabet65"
+DCCCLXXV SET words(CLXVII) = "alphabet66"
+DCCCLXXX SET words(CLXVIII) = "alphabet67"
+DCCCLXXXV SET words(CLXIX) = "alphabet68"
+DCCCXC SET words(CLXX) = "alphabet69"
+DCCCXCV SET words(CLXXI) = "alphabet70"
+CM SET words(CLXXII) = "alphabet71"
+CMV SET words(CLXXIII) = "alphabet72"
+CMX SET words(CLXXIV) = "alphabet73"
+CMXV SET words(CLXXV) = "alphabet74"
+CMXX SET words(CLXXVI) = "alphabet75"
+CMXXV SET words(CLXXVII) = "alphabet76"
+CMXXX SET words(CLXXVIII) = "alphabet77"
+CMXXXV SET words(CLXXIX) = "alphabet78"
+CMXL SET words(CLXXX) = "alphabet79"
+CMXLV SET words(CLXXXI) = "alphabet80"
+CML SET words(CLXXXII) = "alphabet81"
+CMLV SET words(CLXXXIII) = "alphabet82"
+CMLX SET words(CLXXXIV) = "alphabet83"
+CMLXV SET words(CLXXXV) = "alphabet84"
+CMLXX SET words(CLXXXVI) = "alphabet85"
+CMLXXV SET words(CLXXXVII) = "alphabet86"
+CMLXXX SET words(CLXXXVIII) = "alphabet87"
+CMLXXXV SET words(CLXXXIX) = "alphabet88"
+CMXC SET words(CXC) = "alphabet89"
+CMXCV SET words(CXCI) = "alphabet90"
+M SET words(CXCII) = "alphabet91"
+MV SET words(CXCIII) = "alphabet92"
+MX SET words(CXCIV) = "alphabet93"
+MXV SET words(CXCV) = "alphabet94"
+MXX SET words(CXCVI) = "alphabet95"
+MXXV SET words(CXCVII) = "alphabet96"
+MXXX SET words(CXCVIII) = "alphabet97"
+MXXXV SET words(CXCIX) = "alphabet98"
+MXL SET words(CC) = "alphabet99"
+MXLV SET words(CCI) = "aviator00"
+ML SET words(CCII) = "aviator01"
+MLV SET words(CCIII) = "aviator02"
+MLX SET words(CCIV) = "aviator03"
+MLXV SET words(CCV) = "aviator04"
+MLXX SET words(CCVI) = "aviator05"
+MLXXV SET words(CCVII) = "aviator06"
+MLXXX SET words(CCVIII) = "aviator07"
+MLXXXV SET words(CCIX) = "aviator08"
+MXC SET words(CCX) = "aviator09"
+MXCV SET words(CCXI) = "aviator10"
+MC SET words(CCXII) = "aviator11"
+MCV SET words(CCXIII) = "aviator12"
+MCX SET words(CCXIV) = "aviator13"
+MCXV SET words(CCXV) = "aviator14"
+MCXX SET words(CCXVI) = "aviator15"
+MCXXV SET words(CCXVII) = "aviator16"
+MCXXX SET words(CCXVIII) = "aviator17"
+MCXXXV SET words(CCXIX) = "aviator18"
+MCXL SET words(CCXX) = "aviator19"
+MCXLV SET words(CCXXI) = "aviator20"
+MCL SET words(CCXXII) = "aviator21"
+MCLV SET words(CCXXIII) = "aviator22"
+MCLX SET words(CCXXIV) = "aviator23"
+MCLXV SET words(CCXXV) = "aviator24"
+MCLXX SET words(CCXXVI) = "aviator25"
+MCLXXV SET words(CCXXVII) = "aviator26"
+MCLXXX SET words(CCXXVIII) = "aviator27"
+MCLXXXV SET words(CCXXIX) = "aviator28"
+MCXC SET words(CCXXX) = "aviator29"
+MCXCV SET words(CCXXXI) = "aviator30"
+MCC SET words(CCXXXII) = "aviator31"
+MCCV SET words(CCXXXIII) = "aviator32"
+MCCX SET words(CCXXXIV) = "aviator33"
+MCCXV SET words(CCXXXV) = "aviator34"
+MCCXX SET words(CCXXXVI) = "aviator35"
+MCCXXV SET words(CCXXXVII) = "aviator36"
+MCCXXX SET words(CCXXXVIII) = "aviator37"
+MCCXXXV SET words(CCXXXIX) = "aviator38"
+MCCXL SET words(CCXL) = "aviator39"
+MCCXLV SET words(CCXLI) = "aviator40"
+MCCL SET words(CCXLII) = "aviator41"
+MCCLV SET words(CCXLIII) = "aviator42"
+MCCLX SET words(CCXLIV) = "aviator43"
+MCCLXV SET words(CCXLV) = "aviator44"
+MCCLXX SET words(CCXLVI) = "aviator45"
+MCCLXXV SET words(CCXLVII) = "aviator46"
+MCCLXXX SET words(CCXLVIII) = "aviator47"
+MCCLXXXV SET words(CCXLIX) = "aviator48"
+MCCXC SET words(CCL) = "aviator49"
+MCCXCV SET words(CCLI) = "aviator50"
+MCCC SET words(CCLII) = "aviator51"
+MCCCV SET words(CCLIII) = "aviator52"
+MCCCX SET words(CCLIV) = "aviator53"
+MCCCXV SET words(CCLV) = "aviator54"
+MCCCXX SET words(CCLVI) = "aviator55"
+MCCCXXV SET words(CCLVII) = "aviator56"
+MCCCXXX SET words(CCLVIII) = "aviator57"
+MCCCXXXV SET words(CCLIX) = "aviator58"
+MCCCXL SET words(CCLX) = "aviator59"
+MCCCXLV SET words(CCLXI) = "aviator60"
+MCCCL SET words(CCLXII) = "aviator61"
+MCCCLV SET words(CCLXIII) = "aviator62"
+MCCCLX SET words(CCLXIV) = "aviator63"
+MCCCLXV SET words(CCLXV) = "aviator64"
+MCCCLXX SET words(CCLXVI) = "aviator65"
+MCCCLXXV SET words(CCLXVII) = "aviator66"
+MCCCLXXX SET words(CCLXVIII) = "aviator67"
+MCCCLXXXV SET words(CCLXIX) = "aviator68"
+MCCCXC SET words(CCLXX) = "aviator69"
+MCCCXCV SET words(CCLXXI) = "aviator70"
+MCD SET words(CCLXXII) = "aviator71"
+MCDV SET words(CCLXXIII) = "aviator72"
+MCDX SET words(CCLXXIV) = "aviator73"
+MCDXV SET words(CCLXXV) = "aviator74"
+MCDXX SET words(CCLXXVI) = "aviator75"
+MCDXXV SET words(CCLXXVII) = "aviator76"
+MCDXXX SET words(CCLXXVIII) = "aviator77"
+MCDXXXV SET words(CCLXXIX) = "aviator78"
+MCDXL SET words(CCLXXX) = "aviator79"
+MCDXLV SET words(CCLXXXI) = "aviator80"
+MCDL SET words(CCLXXXII) = "aviator81"
+MCDLV SET words(CCLXXXIII) = "aviator82"
+MCDLX SET words(CCLXXXIV) = "aviator83"
+MCDLXV SET words(CCLXXXV) = "aviator84"
+MCDLXX SET words(CCLXXXVI) = "aviator85"
+MCDLXXV SET words(CCLXXXVII) = "aviator86"
+MCDLXXX SET words(CCLXXXVIII) = "aviator87"
+MCDLXXXV SET words(CCLXXXIX) = "aviator88"
+MCDXC SET words(CCXC) = "aviator89"
+MCDXCV SET words(CCXCI) = "aviator90"
+MD SET words(CCXCII) = "aviator91"
+MDV SET words(CCXCIII) = "aviator92"
+MDX SET words(CCXCIV) = "aviator93"
+MDXV SET words(CCXCV) = "aviator94"
+MDXX SET words(CCXCVI) = "aviator95"
+MDXXV SET words(CCXCVII) = "aviator96"
+MDXXX SET words(CCXCVIII) = "aviator97"
+MDXXXV SET words(CCXCIX) = "aviator98"
+MDXL SET words(CCC) = "aviator99"
+MDXLV SET words(CCCI) = "bidirectional00"
+MDL SET words(CCCII) = "bidirectional01"
+MDLV SET words(CCCIII) = "bidirectional02"
+MDLX SET words(CCCIV) = "bidirectional03"
+MDLXV SET words(CCCV) = "bidirectional04"
+MDLXX SET words(CCCVI) = "bidirectional05"
+MDLXXV SET words(CCCVII) = "bidirectional06"
+MDLXXX SET words(CCCVIII) = "bidirectional07"
+MDLXXXV SET words(CCCIX) = "bidirectional08"
+MDXC SET words(CCCX) = "bidirectional09"
+MDXCV SET words(CCCXI) = "bidirectional10"
+MDC SET words(CCCXII) = "bidirectional11"
+MDCV SET words(CCCXIII) = "bidirectional12"
+MDCX SET words(CCCXIV) = "bidirectional13"
+MDCXV SET words(CCCXV) = "bidirectional14"
+MDCXX SET words(CCCXVI) = "bidirectional15"
+MDCXXV SET words(CCCXVII) = "bidirectional16"
+MDCXXX SET words(CCCXVIII) = "bidirectional17"
+MDCXXXV SET words(CCCXIX) = "bidirectional18"
+MDCXL SET words(CCCXX) = "bidirectional19"
+MDCXLV SET words(CCCXXI) = "bidirectional20"
+MDCL SET words(CCCXXII) = "bidirectional21"
+MDCLV SET words(CCCXXIII) = "bidirectional22"
+MDCLX SET words(CCCXXIV) = "bidirectional23"
+MDCLXV SET words(CCCXXV) = "bidirectional24"
+MDCLXX SET words(CCCXXVI) = "bidirectional25"
+MDCLXXV SET words(CCCXXVII) = "bidirectional26"
+MDCLXXX SET words(CCCXXVIII) = "bidirectional27"
+MDCLXXXV SET words(CCCXXIX) = "bidirectional28"
+MDCXC SET words(CCCXXX) = "bidirectional29"
+MDCXCV SET words(CCCXXXI) = "bidirectional30"
+MDCC SET words(CCCXXXII) = "bidirectional31"
+MDCCV SET words(CCCXXXIII) = "bidirectional32"
+MDCCX SET words(CCCXXXIV) = "bidirectional33"
+MDCCXV SET words(CCCXXXV) = "bidirectional34"
+MDCCXX SET words(CCCXXXVI) = "bidirectional35"
+MDCCXXV SET words(CCCXXXVII) = "bidirectional36"
+MDCCXXX SET words(CCCXXXVIII) = "bidirectional37"
+MDCCXXXV SET words(CCCXXXIX) = "bidirectional38"
+MDCCXL SET words(CCCXL) = "bidirectional39"
+MDCCXLV SET words(CCCXLI) = "bidirectional40"
+MDCCL SET words(CCCXLII) = "bidirectional41"
+MDCCLV SET words(CCCXLIII) = "bidirectional42"
+MDCCLX SET words(CCCXLIV) = "bidirectional43"
+MDCCLXV SET words(CCCXLV) = "bidirectional44"
+MDCCLXX SET words(CCCXLVI) = "bidirectional45"
+MDCCLXXV SET words(CCCXLVII) = "bidirectional46"
+MDCCLXXX SET words(CCCXLVIII) = "bidirectional47"
+MDCCLXXXV SET words(CCCXLIX) = "bidirectional48"
+MDCCXC SET words(CCCL) = "bidirectional49"
+MDCCXCV SET words(CCCLI) = "bidirectional50"
+MDCCC SET words(CCCLII) = "bidirectional51"
+MDCCCV SET words(CCCLIII) = "bidirectional52"
+MDCCCX SET words(CCCLIV) = "bidirectional53"
+MDCCCXV SET words(CCCLV) = "bidirectional54"
+MDCCCXX SET words(CCCLVI) = "bidirectional55"
+MDCCCXXV SET words(CCCLVII) = "bidirectional56"
+MDCCCXXX SET words(CCCLVIII) = "bidirectional57"
+MDCCCXXXV SET words(CCCLIX) = "bidirectional58"
+MDCCCXL SET words(CCCLX) = "bidirectional59"
+MDCCCXLV SET words(CCCLXI) = "bidirectional60"
+MDCCCL SET words(CCCLXII) = "bidirectional61"
+MDCCCLV SET words(CCCLXIII) = "bidirectional62"
+MDCCCLX SET words(CCCLXIV) = "bidirectional63"
+MDCCCLXV SET words(CCCLXV) = "bidirectional64"
+MDCCCLXX SET words(CCCLXVI) = "bidirectional65"
+MDCCCLXXV SET words(CCCLXVII) = "bidirectional66"
+MDCCCLXXX SET words(CCCLXVIII) = "bidirectional67"
+MDCCCLXXXV SET words(CCCLXIX) = "bidirectional68"
+MDCCCXC SET words(CCCLXX) = "bidirectional69"
+MDCCCXCV SET words(CCCLXXI) = "bidirectional70"
+MCM SET words(CCCLXXII) = "bidirectional71"
+MCMV SET words(CCCLXXIII) = "bidirectional72"
+MCMX SET words(CCCLXXIV) = "bidirectional73"
+MCMXV SET words(CCCLXXV) = "bidirectional74"
+MCMXX SET words(CCCLXXVI) = "bidirectional75"
+MCMXXV SET words(CCCLXXVII) = "bidirectional76"
+MCMXXX SET words(CCCLXXVIII) = "bidirectional77"
+MCMXXXV SET words(CCCLXXIX) = "bidirectional78"
+MCMXL SET words(CCCLXXX) = "bidirectional79"
+MCMXLV SET words(CCCLXXXI) = "bidirectional80"
+MCML SET words(CCCLXXXII) = "bidirectional81"
+MCMLV SET words(CCCLXXXIII) = "bidirectional82"
+MCMLX SET words(CCCLXXXIV) = "bidirectional83"
+MCMLXV SET words(CCCLXXXV) = "bidirectional84"
+MCMLXX SET words(CCCLXXXVI) = "bidirectional85"
+MCMLXXV SET words(CCCLXXXVII) = "bidirectional86"
+MCMLXXX SET words(CCCLXXXVIII) = "bidirectional87"
+MCMLXXXV SET words(CCCLXXXIX) = "bidirectional88"
+MCMXC SET words(CCCXC) = "bidirectional89"
+MCMXCV SET words(CCCXCI) = "bidirectional90"
+MM SET words(CCCXCII) = "bidirectional91"
+MMV SET words(CCCXCIII) = "bidirectional92"
+MMX SET words(CCCXCIV) = "bidirectional93"
+MMXV SET words(CCCXCV) = "bidirectional94"
+MMXX SET words(CCCXCVI) = "bidirectional95"
+MMXXV SET words(CCCXCVII) = "bidirectional96"
+MMXXX SET words(CCCXCVIII) = "bidirectional97"
+MMXXXV SET words(CCCXCIX) = "bidirectional98"
+MMXL SET words(CD) = "bidirectional99"
+MMXLV SET words(CDI) = "changeme00"
+MML SET words(CDII) = "changeme01"
+MMLV SET words(CDIII) = "changeme02"
+MMLX SET words(CDIV) = "changeme03"
+MMLXV SET words(CDV) = "changeme04"
+MMLXX SET words(CDVI) = "changeme05"
+MMLXXV SET words(CDVII) = "changeme06"
+MMLXXX SET words(CDVIII) = "changeme07"
+MMLXXXV SET words(CDIX) = "changeme08"
+MMXC SET words(CDX) = "changeme09"
+MMXCV SET words(CDXI) = "changeme10"
+MMC SET words(CDXII) = "changeme11"
+MMCV SET words(CDXIII) = "changeme12"
+MMCX SET words(CDXIV) = "changeme13"
+MMCXV SET words(CDXV) = "changeme14"
+MMCXX SET words(CDXVI) = "changeme15"
+MMCXXV SET words(CDXVII) = "changeme16"
+MMCXXX SET words(CDXVIII) = "changeme17"
+MMCXXXV SET words(CDXIX) = "changeme18"
+MMCXL SET words(CDXX) = "changeme19"
+MMCXLV SET words(CDXXI) = "changeme20"
+MMCL SET words(CDXXII) = "changeme21"
+MMCLV SET words(CDXXIII) = "changeme22"
+MMCLX SET words(CDXXIV) = "changeme23"
+MMCLXV SET words(CDXXV) = "changeme24"
+MMCLXX SET words(CDXXVI) = "changeme25"
+MMCLXXV SET words(CDXXVII) = "changeme26"
+MMCLXXX SET words(CDXXVIII) = "changeme27"
+MMCLXXXV SET words(CDXXIX) = "changeme28"
+MMCXC SET words(CDXXX) = "changeme29"
+MMCXCV SET words(CDXXXI) = "changeme30"
+MMCC SET words(CDXXXII) = "changeme31"
+MMCCV SET words(CDXXXIII) = "changeme32"
+MMCCX SET words(CDXXXIV) = "changeme33"
+MMCCXV SET words(CDXXXV) = "changeme34"
+MMCCXX SET words(CDXXXVI) = "changeme35"
+MMCCXXV SET words(CDXXXVII) = "changeme36"
+MMCCXXX SET words(CDXXXVIII) = "changeme37"
+MMCCXXXV SET words(CDXXXIX) = "changeme38"
+MMCCXL SET words(CDXL) = "changeme39"
+MMCCXLV SET words(CDXLI) = "changeme40"
+MMCCL SET words(CDXLII) = "changeme41"
+MMCCLV SET words(CDXLIII) = "changeme42"
+MMCCLX SET words(CDXLIV) = "changeme43"
+MMCCLXV SET words(CDXLV) = "changeme44"
+MMCCLXX SET words(CDXLVI) = "changeme45"
+MMCCLXXV SET words(CDXLVII) = "changeme46"
+MMCCLXXX SET words(CDXLVIII) = "changeme47"
+MMCCLXXXV SET words(CDXLIX) = "changeme48"
+MMCCXC SET words(CDL) = "changeme49"
+MMCCXCV SET words(CDLI) = "changeme50"
+MMCCC SET words(CDLII) = "changeme51"
+MMCCCV SET words(CDLIII) = "changeme52"
+MMCCCX SET words(CDLIV) = "changeme53"
+MMCCCXV SET words(CDLV) = "changeme54"
+MMCCCXX SET words(CDLVI) = "changeme55"
+MMCCCXXV SET words(CDLVII) = "changeme56"
+MMCCCXXX SET words(CDLVIII) = "changeme57"
+MMCCCXXXV SET words(CDLIX) = "changeme58"
+MMCCCXL SET words(CDLX) = "changeme59"
+MMCCCXLV SET words(CDLXI) = "changeme60"
+MMCCCL SET words(CDLXII) = "changeme61"
+MMCCCLV SET words(CDLXIII) = "changeme62"
+MMCCCLX SET words(CDLXIV) = "changeme63"
+MMCCCLXV SET words(CDLXV) = "changeme64"
+MMCCCLXX SET words(CDLXVI) = "changeme65"
+MMCCCLXXV SET words(CDLXVII) = "changeme66"
+MMCCCLXXX SET words(CDLXVIII) = "changeme67"
+MMCCCLXXXV SET words(CDLXIX) = "changeme68"
+MMCCCXC SET words(CDLXX) = "changeme69"
+MMCCCXCV SET words(CDLXXI) = "changeme70"
+MMCD SET words(CDLXXII) = "changeme71"
+MMCDV SET words(CDLXXIII) = "changeme72"
+MMCDX SET words(CDLXXIV) = "changeme73"
+MMCDXV SET words(CDLXXV) = "changeme74"
+MMCDXX SET words(CDLXXVI) = "changeme75"
+MMCDXXV SET words(CDLXXVII) = "changeme76"
+MMCDXXX SET words(CDLXXVIII) = "changeme77"
+MMCDXXXV SET words(CDLXXIX) = "changeme78"
+MMCDXL SET words(CDLXXX) = "changeme79"
+MMCDXLV SET words(CDLXXXI) = "changeme80"
+MMCDL SET words(CDLXXXII) = "changeme81"
+MMCDLV SET words(CDLXXXIII) = "changeme82"
+MMCDLX SET words(CDLXXXIV) = "changeme83"
+MMCDLXV SET words(CDLXXXV) = "changeme84"
+MMCDLXX SET words(CDLXXXVI) = "changeme85"
+MMCDLXXV SET words(CDLXXXVII) = "changeme86"
+MMCDLXXX SET words(CDLXXXVIII) = "changeme87"
+MMCDLXXXV SET words(CDLXXXIX) = "changeme88"
+MMCDXC SET words(CDXC) = "changeme89"
+MMCDXCV SET words(CDXCI) = "changeme90"
+MMD SET words(CDXCII) = "changeme91"
+MMDV SET words(CDXCIII) = "changeme92"
+MMDX SET words(CDXCIV) = "changeme93"
+MMDXV SET words(CDXCV) = "changeme94"
+MMDXX SET words(CDXCVI) = "changeme95"
+MMDXXV SET words(CDXCVII) = "changeme96"
+MMDXXX SET words(CDXCVIII) = "changeme97"
+MMDXXXV SET words(CDXCIX) = "changeme98"
+MMDXL SET words(D) = "changeme99"
+MMDXLV SET words(DI) = "creosote00"
+MMDL SET words(DII) = "creosote01"
+MMDLV SET words(DIII) = "creosote02"
+MMDLX SET words(DIV) = "creosote03"
+MMDLXV SET words(DV) = "creosote04"
+MMDLXX SET words(DVI) = "creosote05"
+MMDLXXV SET words(DVII) = "creosote06"
+MMDLXXX SET words(DVIII) = "creosote07"
+MMDLXXXV SET words(DIX) = "creosote08"
+MMDXC SET words(DX) = "creosote09"
+MMDXCV SET words(DXI) = "creosote10"
+MMDC SET words(DXII) = "creosote11"
+MMDCV SET words(DXIII) = "creosote12"
+MMDCX SET words(DXIV) = "creosote13"
+MMDCXV SET words(DXV) = "creosote14"
+MMDCXX SET words(DXVI) = "creosote15"
+MMDCXXV SET words(DXVII) = "creosote16"
+MMDCXXX SET words(DXVIII) = "creosote17"
+MMDCXXXV SET words(DXIX) = "creosote18"
+MMDCXL SET words(DXX) = "creosote19"
+MMDCXLV SET words(DXXI) = "creosote20"
+MMDCL SET words(DXXII) = "creosote21"
+MMDCLV SET words(DXXIII) = "creosote22"
+MMDCLX SET words(DXXIV) = "creosote23"
+MMDCLXV SET words(DXXV) = "creosote24"
+MMDCLXX SET words(DXXVI) = "creosote25"
+MMDCLXXV SET words(DXXVII) = "creosote26"
+MMDCLXXX SET words(DXXVIII) = "creosote27"
+MMDCLXXXV SET words(DXXIX) = "creosote28"
+MMDCXC SET words(DXXX) = "creosote29"
+MMDCXCV SET words(DXXXI) = "creosote30"
+MMDCC SET words(DXXXII) = "creosote31"
+MMDCCV SET words(DXXXIII) = "creosote32"
+MMDCCX SET words(DXXXIV) = "creosote33"
+MMDCCXV SET words(DXXXV) = "creosote34"
+MMDCCXX SET words(DXXXVI) = "creosote35"
+MMDCCXXV SET words(DXXXVII) = "creosote36"
+MMDCCXXX SET words(DXXXVIII) = "creosote37"
+MMDCCXXXV SET words(DXXXIX) = "creosote38"
+MMDCCXL SET words(DXL) = "creosote39"
+MMDCCXLV SET words(DXLI) = "creosote40"
+MMDCCL SET words(DXLII) = "creosote41"
+MMDCCLV SET words(DXLIII) = "creosote42"
+MMDCCLX SET words(DXLIV) = "creosote43"
+MMDCCLXV SET words(DXLV) = "creosote44"
+MMDCCLXX SET words(DXLVI) = "creosote45"
+MMDCCLXXV SET words(DXLVII) = "creosote46"
+MMDCCLXXX SET words(DXLVIII) = "creosote47"
+MMDCCLXXXV SET words(DXLIX) = "creosote48"
+MMDCCXC SET words(DL) = "creosote49"
+MMDCCXCV SET words(DLI) = "creosote50"
+MMDCCC SET words(DLII) = "creosote51"
+MMDCCCV SET words(DLIII) = "creosote52"
+MMDCCCX SET words(DLIV) = "creosote53"
+MMDCCCXV SET words(DLV) = "creosote54"
+MMDCCCXX SET words(DLVI) = "creosote55"
+MMDCCCXXV SET words(DLVII) = "creosote56"
+MMDCCCXXX SET words(DLVIII) = "creosote57"
+MMDCCCXXXV SET words(DLIX) = "creosote58"
+MMDCCCXL SET words(DLX) = "creosote59"
+MMDCCCXLV SET words(DLXI) = "creosote60"
+MMDCCCL SET words(DLXII) = "creosote61"
+MMDCCCLV SET words(DLXIII) = "creosote62"
+MMDCCCLX SET words(DLXIV) = "creosote63"
+MMDCCCLXV SET words(DLXV) = "creosote64"
+MMDCCCLXX SET words(DLXVI) = "creosote65"
+MMDCCCLXXV SET words(DLXVII) = "creosote66"
+MMDCCCLXXX SET words(DLXVIII) = "creosote67"
+MMDCCCLXXXV SET words(DLXIX) = "creosote68"
+MMDCCCXC SET words(DLXX) = "creosote69"
+MMDCCCXCV SET words(DLXXI) = "creosote70"
+MMCM SET words(DLXXII) = "creosote71"
+MMCMV SET words(DLXXIII) = "creosote72"
+MMCMX SET words(DLXXIV) = "creosote73"
+MMCMXV SET words(DLXXV) = "creosote74"
+MMCMXX SET words(DLXXVI) = "creosote75"
+MMCMXXV SET words(DLXXVII) = "creosote76"
+MMCMXXX SET words(DLXXVIII) = "creosote77"
+MMCMXXXV SET words(DLXXIX) = "creosote78"
+MMCMXL SET words(DLXXX) = "creosote79"
+MMCMXLV SET words(DLXXXI) = "creosote80"
+MMCML SET words(DLXXXII) = "creosote81"
+MMCMLV SET words(DLXXXIII) = "creosote82"
+MMCMLX SET words(DLXXXIV) = "creosote83"
+MMCMLXV SET words(DLXXXV) = "creosote84"
+MMCMLXX SET words(DLXXXVI) = "creosote85"
+MMCMLXXV SET words(DLXXXVII) = "creosote86"
+MMCMLXXX SET words(DLXXXVIII) = "creosote87"
+MMCMLXXXV SET words(DLXXXIX) = "creosote88"
+MMCMXC SET words(DXC) = "creosote89"
+MMCMXCV SET words(DXCI) = "creosote90"
+MMM SET words(DXCII) = "creosote91"
+MMMV SET words(DXCIII) = "creosote92"
+MMMX SET words(DXCIV) = "creosote93"
+MMMXV SET words(DXCV) = "creosote94"
+MMMXX SET words(DXCVI) = "creosote95"
+MMMXXV SET words(DXCVII) = "creosote96"
+MMMXXX SET words(DXCVIII) = "creosote97"
+MMMXXXV SET words(DXCIX) = "creosote98"
+MMMXL SET words(DC) = "creosote99"
+MMMXLV SET words(DCI) = "cyclone00"
+MMML SET words(DCII) = "cyclone01"
+MMMLV SET words(DCIII) = "cyclone02"
+MMMLX SET words(DCIV) = "cyclone03"
+MMMLXV SET words(DCV) = "cyclone04"
+MMMLXX SET words(DCVI) = "cyclone05"
+MMMLXXV SET words(DCVII) = "cyclone06"
+MMMLXXX SET words(DCVIII) = "cyclone07"
+MMMLXXXV SET words(DCIX) = "cyclone08"
+MMMXC SET words(DCX) = "cyclone09"
+MMMXCV SET words(DCXI) = "cyclone10"
+MMMC SET words(DCXII) = "cyclone11"
+MMMCV SET words(DCXIII) = "cyclone12"
+MMMCX SET words(DCXIV) = "cyclone13"
+MMMCXV SET words(DCXV) = "cyclone14"
+MMMCXX SET words(DCXVI) = "cyclone15"
+MMMCXXV SET words(DCXVII) = "cyclone16"
+MMMCXXX SET words(DCXVIII) = "cyclone17"
+MMMCXXXV SET words(DCXIX) = "cyclone18"
+MMMCXL SET words(DCXX) = "cyclone19"
+MMMCXLV SET words(DCXXI) = "cyclone20"
+MMMCL SET words(DCXXII) = "cyclone21"
+MMMCLV SET words(DCXXIII) = "cyclone22"
+MMMCLX SET words(DCXXIV) = "cyclone23"
+MMMCLXV SET words(DCXXV) = "cyclone24"
+MMMCLXX SET words(DCXXVI) = "cyclone25"
+MMMCLXXV SET words(DCXXVII) = "cyclone26"
+MMMCLXXX SET words(DCXXVIII) = "cyclone27"
+MMMCLXXXV SET words(DCXXIX) = "cyclone28"
+MMMCXC SET words(DCXXX) = "cyclone29"
+MMMCXCV SET words(DCXXXI) = "cyclone30"
+MMMCC SET words(DCXXXII) = "cyclone31"
+MMMCCV SET words(DCXXXIII) = "cyclone32"
+MMMCCX SET words(DCXXXIV) = "cyclone33"
+MMMCCXV SET words(DCXXXV) = "cyclone34"
+MMMCCXX SET words(DCXXXVI) = "cyclone35"
+MMMCCXXV SET words(DCXXXVII) = "cyclone36"
+MMMCCXXX SET words(DCXXXVIII) = "cyclone37"
+MMMCCXXXV SET words(DCXXXIX) = "cyclone38"
+MMMCCXL SET words(DCXL) = "cyclone39"
+MMMCCXLV SET words(DCXLI) = "cyclone40"
+MMMCCL SET words(DCXLII) = "cyclone41"
+MMMCCLV SET words(DCXLIII) = "cyclone42"
+MMMCCLX SET words(DCXLIV) = "cyclone43"
+MMMCCLXV SET words(DCXLV) = "cyclone44"
+MMMCCLXX SET words(DCXLVI) = "cyclone45"
+MMMCCLXXV SET words(DCXLVII) = "cyclone46"
+MMMCCLXXX SET words(DCXLVIII) = "cyclone47"
+MMMCCLXXXV SET words(DCXLIX) = "cyclone48"
+MMMCCXC SET words(DCL) = "cyclone49"
+MMMCCXCV SET words(DCLI) = "cyclone50"
+MMMCCC SET words(DCLII) = "cyclone51"
+MMMCCCV SET words(DCLIII) = "cyclone52"
+MMMCCCX SET words(DCLIV) = "cyclone53"
+MMMCCCXV SET words(DCLV) = "cyclone54"
+MMMCCCXX SET words(DCLVI) = "cyclone55"
+MMMCCCXXV SET words(DCLVII) = "cyclone56"
+MMMCCCXXX SET words(DCLVIII) = "cyclone57"
+MMMCCCXXXV SET words(DCLIX) = "cyclone58"
+MMMCCCXL SET words(DCLX) = "cyclone59"
+MMMCCCXLV SET words(DCLXI) = "cyclone60"
+MMMCCCL SET words(DCLXII) = "cyclone61"
+MMMCCCLV SET words(DCLXIII) = "cyclone62"
+MMMCCCLX SET words(DCLXIV) = "cyclone63"
+MMMCCCLXV SET words(DCLXV) = "cyclone64"
+MMMCCCLXX SET words(DCLXVI) = "cyclone65"
+MMMCCCLXXV SET words(DCLXVII) = "cyclone66"
+MMMCCCLXXX SET words(DCLXVIII) = "cyclone67"
+MMMCCCLXXXV SET words(DCLXIX) = "cyclone68"
+MMMCCCXC SET words(DCLXX) = "cyclone69"
+MMMCCCXCV SET words(DCLXXI) = "cyclone70"
+MMMCD SET words(DCLXXII) = "cyclone71"
+MMMCDV SET words(DCLXXIII) = "cyclone72"
+MMMCDX SET words(DCLXXIV) = "cyclone73"
+MMMCDXV SET words(DCLXXV) = "cyclone74"
+MMMCDXX SET words(DCLXXVI) = "cyclone75"
+MMMCDXXV SET words(DCLXXVII) = "cyclone76"
+MMMCDXXX SET words(DCLXXVIII) = "cyclone77"
+MMMCDXXXV SET words(DCLXXIX) = "cyclone78"
+MMMCDXL SET words(DCLXXX) = "cyclone79"
+MMMCDXLV SET words(DCLXXXI) = "cyclone80"
+MMMCDL SET words(DCLXXXII) = "cyclone81"
+MMMCDLV SET words(DCLXXXIII) = "cyclone82"
+MMMCDLX SET words(DCLXXXIV) = "cyclone83"
+MMMCDLXV SET words(DCLXXXV) = "cyclone84"
+MMMCDLXX SET words(DCLXXXVI) = "cyclone85"
+MMMCDLXXV SET words(DCLXXXVII) = "cyclone86"
+MMMCDLXXX SET words(DCLXXXVIII) = "cyclone87"
+MMMCDLXXXV SET words(DCLXXXIX) = "cyclone88"
+MMMCDXC SET words(DCXC) = "cyclone89"
+MMMCDXCV SET words(DCXCI) = "cyclone90"
+MMMD SET words(DCXCII) = "cyclone91"
+MMMDV SET words(DCXCIII) = "cyclone92"
+MMMDX SET words(DCXCIV) = "cyclone93"
+MMMDXV SET words(DCXCV) = "cyclone94"
+MMMDXX SET words(DCXCVI) = "cyclone95"
+MMMDXXV SET words(DCXCVII) = "cyclone96"
+MMMDXXX SET words(DCXCVIII) = "cyclone97"
+MMMDXXXV SET words(DCXCIX) = "cyclone98"
+MMMDXL SET words(DCC) = "cyclone99"
+MMMDXLV SET words(DCCI) = "december00"
+MMMDL SET words(DCCII) = "december01"
+MMMDLV SET words(DCCIII) = "december02"
+MMMDLX SET words(DCCIV) = "december03"
+MMMDLXV SET words(DCCV) = "december04"
+MMMDLXX SET words(DCCVI) = "december05"
+MMMDLXXV SET words(DCCVII) = "december06"
+MMMDLXXX SET words(DCCVIII) = "december07"
+MMMDLXXXV SET words(DCCIX) = "december08"
+MMMDXC SET words(DCCX) = "december09"
+MMMDXCV SET words(DCCXI) = "december10"
+MMMDC SET words(DCCXII) = "december11"
+MMMDCV SET words(DCCXIII) = "december12"
+MMMDCX SET words(DCCXIV) = "december13"
+MMMDCXV SET words(DCCXV) = "december14"
+MMMDCXX SET words(DCCXVI) = "december15"
+MMMDCXXV SET words(DCCXVII) = "december16"
+MMMDCXXX SET words(DCCXVIII) = "december17"
+MMMDCXXXV SET words(DCCXIX) = "december18"
+MMMDCXL SET words(DCCXX) = "december19"
+MMMDCXLV SET words(DCCXXI) = "december20"
+MMMDCL SET words(DCCXXII) = "december21"
+MMMDCLV SET words(DCCXXIII) = "december22"
+MMMDCLX SET words(DCCXXIV) = "december23"
+MMMDCLXV SET words(DCCXXV) = "december24"
+MMMDCLXX SET words(DCCXXVI) = "december25"
+MMMDCLXXV SET words(DCCXXVII) = "december26"
+MMMDCLXXX SET words(DCCXXVIII) = "december27"
+MMMDCLXXXV SET words(DCCXXIX) = "december28"
+MMMDCXC SET words(DCCXXX) = "december29"
+MMMDCXCV SET words(DCCXXXI) = "december30"
+MMMDCC SET words(DCCXXXII) = "december31"
+MMMDCCV SET words(DCCXXXIII) = "december32"
+MMMDCCX SET words(DCCXXXIV) = "december33"
+MMMDCCXV SET words(DCCXXXV) = "december34"
+MMMDCCXX SET words(DCCXXXVI) = "december35"
+MMMDCCXXV SET words(DCCXXXVII) = "december36"
+MMMDCCXXX SET words(DCCXXXVIII) = "december37"
+MMMDCCXXXV SET words(DCCXXXIX) = "december38"
+MMMDCCXL SET words(DCCXL) = "december39"
+MMMDCCXLV SET words(DCCXLI) = "december40"
+MMMDCCL SET words(DCCXLII) = "december41"
+MMMDCCLV SET words(DCCXLIII) = "december42"
+MMMDCCLX SET words(DCCXLIV) = "december43"
+MMMDCCLXV SET words(DCCXLV) = "december44"
+MMMDCCLXX SET words(DCCXLVI) = "december45"
+MMMDCCLXXV SET words(DCCXLVII) = "december46"
+MMMDCCLXXX SET words(DCCXLVIII) = "december47"
+MMMDCCLXXXV SET words(DCCXLIX) = "december48"
+MMMDCCXC SET words(DCCL) = "december49"
+MMMDCCXCV SET words(DCCLI) = "december50"
+MMMDCCC SET words(DCCLII) = "december51"
+MMMDCCCV SET words(DCCLIII) = "december52"
+MMMDCCCX SET words(DCCLIV) = "december53"
+MMMDCCCXV SET words(DCCLV) = "december54"
+MMMDCCCXX SET words(DCCLVI) = "december55"
+MMMDCCCXXV SET words(DCCLVII) = "december56"
+MMMDCCCXXX SET words(DCCLVIII) = "december57"
+MMMDCCCXXXV SET words(DCCLIX) = "december58"
+MMMDCCCXL SET words(DCCLX) = "december59"
+MMMDCCCXLV SET words(DCCLXI) = "december60"
+MMMDCCCL SET words(DCCLXII) = "december61"
+MMMDCCCLV SET words(DCCLXIII) = "december62"
+MMMDCCCLX SET words(DCCLXIV) = "december63"
+MMMDCCCLXV SET words(DCCLXV) = "december64"
+MMMDCCCLXX SET words(DCCLXVI) = "december65"
+MMMDCCCLXXV SET words(DCCLXVII) = "december66"
+MMMDCCCLXXX SET words(DCCLXVIII) = "december67"
+MMMDCCCLXXXV SET words(DCCLXIX) = "december68"
+MMMDCCCXC SET words(DCCLXX) = "december69"
+MMMDCCCXCV SET words(DCCLXXI) = "december70"
+MMMCM SET words(DCCLXXII) = "december71"
+MMMCMV SET words(DCCLXXIII) = "december72"
+MMMCMX SET words(DCCLXXIV) = "december73"
+MMMCMXV SET words(DCCLXXV) = "december74"
+MMMCMXX SET words(DCCLXXVI) = "december75"
+MMMCMXXV SET words(DCCLXXVII) = "december76"
+MMMCMXXX SET words(DCCLXXVIII) = "december77"
+MMMCMXXXV SET words(DCCLXXIX) = "december78"
+MMMCMXL SET words(DCCLXXX) = "december79"
+MMMCMXLV SET words(DCCLXXXI) = "december80"
+MMMCML SET words(DCCLXXXII) = "december81"
+MMMCMLV SET words(DCCLXXXIII) = "december82"
+MMMCMLX SET words(DCCLXXXIV) = "december83"
+MMMCMLXV SET words(DCCLXXXV) = "december84"
+MMMCMLXX SET words(DCCLXXXVI) = "december85"
+MMMCMLXXV SET words(DCCLXXXVII) = "december86"
+MMMCMLXXX SET words(DCCLXXXVIII) = "december87"
+MMMCMLXXXV SET words(DCCLXXXIX) = "december88"
+MMMCMXC SET words(DCCXC) = "december89"
+MMMCMXCV SET words(DCCXCI) = "december90"
+qbasic: NVMERAL TOO LARGE: MMMM
+
+You have new mail. Type 'mail' to view.
+% unknown command ftd_common2_1.exe
+new to UMIX? try
+  help
+for help.
+
+You have new mail. Type 'mail' to view.
+% 

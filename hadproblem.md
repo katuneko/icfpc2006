@@ -1,5 +1,7 @@
 # CIRCS.ocult (O'Cult) — Complete Problem Definition + Real Test Vector
 
+Status note: archived reference. Active work on `verify ocult` is currently paused because the existing 2D implementation effort appears unlikely to converge by local patching alone.
+
 This document is meant to be copy-pasted to another solver/model as the full, precise statement of what needs to be implemented to pass `verify ocult` (ICFPC 2006 / UMIX / Ohmega).
 
 The deliverable is a **2D module named `step`**. It must implement **one O'Cult rewrite step** on a 2D-encoded `(advice, term)` input.

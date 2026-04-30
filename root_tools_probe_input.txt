@@ -1,0 +1,20 @@
+root
+c@Rn3g!e
+pwd
+ls tools
+ls -l tools
+ls lost+found
+ls -l lost+found
+cd tools
+pwd
+ls
+ls -l
+cat README
+cat readme
+cd ../lost+found
+pwd
+ls
+ls -l
+cat README
+cat readme
+logout

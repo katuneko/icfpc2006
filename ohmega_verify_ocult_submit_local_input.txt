@@ -1,0 +1,25 @@
+python3 - <<'PY'
+from pathlib import Path
+import two_d
+import ocult_ref as ref
+
+def conv(v):
+    if isinstance(v, ref.Unit): return two_d.UNIT
+    if isinstance(v, ref.Inl): return two_d.inl(conv(v.v))
+    if isinstance(v, ref.Inr): return two_d.inr(conv(v.v))
+    if isinstance(v, ref.Pair): return two_d.pair(conv(v.a), conv(v.b))
+    raise TypeError(type(v))
+
+base=Path('ocult_submit.2d').read_text()
+mods=two_d.parse_modules(base, hash_crossover=True, strict_wires=True)
+print('d outputs', mods['d'].output_wires)
+raw=Path('ocult_input_pair_val_20260214.txt').read_text().strip()
+v=conv(ref.parse_val(raw))
+try:
+    two_d.eval_module(mods['step'], mods, None, v)
+    print('eval ok')
+except Exception as e:
+    print(type(e).__name__, e)
+    for name in ['d','s0','s1','s2','s3']:
+        print(name, mods[name].output_wires)
+PY

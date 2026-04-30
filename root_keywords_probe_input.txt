@@ -1,0 +1,27 @@
+root
+c@Rn3g!e
+help dump
+help telnet
+help recover
+cd /root/lost+found
+recover CODE
+recover OBSIDIAN
+recover obsidian
+recover Vault
+recover vault
+recover Portland
+recover portland
+cd /
+ls Vault
+ls vault
+ls Portland
+ls portland
+ls Chicago
+ls Philadelphia
+ls Boston
+ls Virginia
+telnet vault 23
+telnet Vault 23
+telnet portland 23
+telnet Portland 23
+logout

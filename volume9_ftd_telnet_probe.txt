@@ -1,0 +1,81 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: logged in as guest
+INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d
+
+
+You have new mail. Type 'mail' to view.
+% telnet: could not resolve umix9.cbv.net/23: Name or service not known
+
+You have new mail. Type 'mail' to view.
+% telnet: could not resolve umix9.cbv.net/19100: Name or service not known
+
+You have new mail. Type 'mail' to view.
+% telnet: could not resolve cbv.net/23: Name or service not known
+
+You have new mail. Type 'mail' to view.
+% Trying 127.0.0.1...
+telnet: Unable to connect to remote host: Connection refused
+
+You have new mail. Type 'mail' to view.
+% Trying 127.0.0.1...
+telnet: Unable to connect to remote host: Connection refused
+
+You have new mail. Type 'mail' to view.
+% 

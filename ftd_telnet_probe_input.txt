@@ -1,0 +1,7 @@
+guest
+telnet umix9.cbv.net 23
+telnet umix9.cbv.net 19100
+telnet cbv.net 23
+telnet localhost 23
+telnet 127.0.0.1 23
+logout

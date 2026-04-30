@@ -1,0 +1,20 @@
+ftd
+falderal90
+run /bin/umodem hello.ml EOF
+print "hello"
+EOF
+run /bin/umodem empty.ml EOF
+EOF
+ls
+ls -l
+ml19100.exe -h
+ml19100.exe --help
+ml19100.exe hello.ml
+ml19100.exe empty.ml
+ml19100.exe nonexistent.ml
+ml19100.exe icfp.exe
+ml19100.exe ml19100.exe
+ml19100.exe
+let x = 1
+
+logout

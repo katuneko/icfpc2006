@@ -1,0 +1,12 @@
+root
+c@Rn3g!e
+help
+ls -a
+ls -a /root
+ls -a /root/tools
+ls -a /root/lost+found
+ls /
+ls -l /
+cd /root/tools
+dump um.um
+logout

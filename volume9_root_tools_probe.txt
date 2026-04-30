@@ -1,0 +1,113 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as root
+
+---------------------------------------------------------
+Administrative account is for maintenance only.
+No research is allowed.
+---------------------------------------------------------
+
+% /root/
+% README
+um.um
+% -rw-    root              473 README
+-rw-    root             1024 um.um
+% recover*
+CREDITS
+aum_log_29_12_19004_172107
+aum_log_29_12_19004_222107
+aum_log_29_12_19004_235107
+% -r-x    root                ? recover
+-rw-    root               40 CREDITS
+-rw-    root               40 aum_log_29_12_19004_172107
+-rw-    root               40 aum_log_29_12_19004_222107
+-rw-    root               40 aum_log_29_12_19004_235107
+% % /root/tools/
+% README
+um.um
+% -rw-    root              473 README
+-rw-    root             1024 um.um
+% This is a reference implementation of the Universal Machine.
+
+The implementation supports all UM programs, including uncompressed
+.um files and self-decompressing .umz files. To use this
+implementation to run a UM binary called c.um, simply concatenate the
+two files together:
+
+cat um.um c.um > cmu.um
+
+(Note: Not all versions of UMIX support the redirection operator >)
+
+The resulting binary can be run in any compliant universal machine
+implementation, including itself.
+% cat: no such accessible file
+% % /root/lost+found/
+% recover*
+CREDITS
+aum_log_29_12_19004_172107
+aum_log_29_12_19004_222107
+aum_log_29_12_19004_235107
+% -r-x    root                ? recover
+-rw-    root               40 CREDITS
+-rw-    root               40 aum_log_29_12_19004_172107
+-rw-    root               40 aum_log_29_12_19004_222107
+-rw-    root               40 aum_log_29_12_19004_235107
+% cat: no such accessible file
+% cat: no such accessible file
+% 

@@ -1,0 +1,54 @@
+BEST score=259 step=3 evals=1 restart=1 near-turn-support ant=(6,3) 1> target=(6,1) N dist=2 ahead=(7,3) support_dist=2 programs=WWWWEEE EEEEWWW NNNNWWW SSSSESW ENNWWWN NSWSEEW SSWEEWN WENNNWS ESWNNEN
+NOFOUND best=259 step=3 near-turn-support ant=(6,3) 1> target=(6,1) N dist=2 ahead=(7,3) support_dist=2 evals=27592
+PROGRAMS
+WWWWEEE
+EEEEWWW
+NNNNWWW
+SSSSESW
+ENNWWWN
+NSWSEEW
+SSWEEWN
+WENNNWS
+ESWNNEN
+GRID
+0,16 8<
+1,16 5v
+2,16  -
+3,16  o
+4,16 5<
+11,16 7>
+12,16 4>
+13,16 6^
+14,16  o
+15,16  -
+0,17 8<
+1,17  o
+2,17  #
+3,17  o
+4,17  #
+11,17  #
+12,17  o
+13,17  -
+14,17 5v
+15,17 5v
+0,18  -
+1,18  o
+2,18  -
+3,18  #
+4,18  -
+11,18  -
+12,18 8^
+13,18 8<
+14,18 8<
+15,18 5<
+0,19 8v
+1,19  #
+2,19 5v
+3,19  o
+4,19  #
+11,19 6<
+12,19  #
+13,19  o
+14,19  o
+15,19  -
+WROTE p7_local_seed601_best.ant

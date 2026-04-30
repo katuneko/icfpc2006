@@ -1,0 +1,631 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: logged in as guest
+INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d
+
+
+You have new mail. Type 'mail' to view.
+% Begin sending characters. Terminate with EOF...
+Transferred 512...
+Transferred 1024...
+Transferred 1536...
+Transferred 2048...
+Transferred 2560...
+Transferred 3072...
+Transferred 3584...
+Transferred 4096...
+Transferred 4608...
+Transferred 5120...
+Transferred 5632...
+Transferred 6144...
+Transferred 6656...
+Transferred 7168...
+Transferred 7680...
+Transferred 8192...
+Transferred 8704...
+Transferred 9216...
+Transferred 9728...
+Transferred 10240...
+Transferred 10752...
+Transferred 11264...
+Transferred 11776...
+Transferred 12288...
+Transferred 12800...
+Transferred 13312...
+Transferred 13824...
+Transferred 14336...
+Transferred 14848...
+Transferred 15360...
+Transferred 15872...
+Transferred 16384...
+Transferred 16896...
+writing 17191 characters
+INTRO.UMD=10@999999|7005f80d6cd9b7b837802f1e58b11b8
+
+You have new mail. Type 'mail' to view.
+% 
+You have new mail. Type 'mail' to view.
+% V IF (ARGS() > I) THEN GOTO XXV ELSE SKIP
+X PRINT "usage: ./checkbatch.exe username"
+XV PRINT CHR(X)
+XX END
+XXV DIM username AS STRING
+XXX SET username = ARG(II)
+XXXV DIM candidate AS STRING
+XL DIM words(D) AS STRING
+XLV SET words(I) = "xanadu00"
+L SET words(II) = "xanadu01"
+LV SET words(III) = "xanadu02"
+LX SET words(IV) = "xanadu03"
+LXV SET words(V) = "xanadu04"
+LXX SET words(VI) = "xanadu05"
+LXXV SET words(VII) = "xanadu06"
+LXXX SET words(VIII) = "xanadu07"
+LXXXV SET words(IX) = "xanadu08"
+XC SET words(X) = "xanadu09"
+XCV SET words(XI) = "xanadu10"
+C SET words(XII) = "xanadu11"
+CV SET words(XIII) = "xanadu12"
+CX SET words(XIV) = "xanadu13"
+CXV SET words(XV) = "xanadu14"
+CXX SET words(XVI) = "xanadu15"
+CXXV SET words(XVII) = "xanadu16"
+CXXX SET words(XVIII) = "xanadu17"
+CXXXV SET words(XIX) = "xanadu18"
+CXL SET words(XX) = "xanadu19"
+CXLV SET words(XXI) = "xanadu20"
+CL SET words(XXII) = "xanadu21"
+CLV SET words(XXIII) = "xanadu22"
+CLX SET words(XXIV) = "xanadu23"
+CLXV SET words(XXV) = "xanadu24"
+CLXX SET words(XXVI) = "xanadu25"
+CLXXV SET words(XXVII) = "xanadu26"
+CLXXX SET words(XXVIII) = "xanadu27"
+CLXXXV SET words(XXIX) = "xanadu28"
+CXC SET words(XXX) = "xanadu29"
+CXCV SET words(XXXI) = "xanadu30"
+CC SET words(XXXII) = "xanadu31"
+CCV SET words(XXXIII) = "xanadu32"
+CCX SET words(XXXIV) = "xanadu33"
+CCXV SET words(XXXV) = "xanadu34"
+CCXX SET words(XXXVI) = "xanadu35"
+CCXXV SET words(XXXVII) = "xanadu36"
+CCXXX SET words(XXXVIII) = "xanadu37"
+CCXXXV SET words(XXXIX) = "xanadu38"
+CCXL SET words(XL) = "xanadu39"
+CCXLV SET words(XLI) = "xanadu40"
+CCL SET words(XLII) = "xanadu41"
+CCLV SET words(XLIII) = "xanadu42"
+CCLX SET words(XLIV) = "xanadu43"
+CCLXV SET words(XLV) = "xanadu44"
+CCLXX SET words(XLVI) = "xanadu45"
+CCLXXV SET words(XLVII) = "xanadu46"
+CCLXXX SET words(XLVIII) = "xanadu47"
+CCLXXXV SET words(XLIX) = "xanadu48"
+CCXC SET words(L) = "xanadu49"
+CCXCV SET words(LI) = "xanadu50"
+CCC SET words(LII) = "xanadu51"
+CCCV SET words(LIII) = "xanadu52"
+CCCX SET words(LIV) = "xanadu53"
+CCCXV SET words(LV) = "xanadu54"
+CCCXX SET words(LVI) = "xanadu55"
+CCCXXV SET words(LVII) = "xanadu56"
+CCCXXX SET words(LVIII) = "xanadu57"
+CCCXXXV SET words(LIX) = "xanadu58"
+CCCXL SET words(LX) = "xanadu59"
+CCCXLV SET words(LXI) = "xanadu60"
+CCCL SET words(LXII) = "xanadu61"
+CCCLV SET words(LXIII) = "xanadu62"
+CCCLX SET words(LXIV) = "xanadu63"
+CCCLXV SET words(LXV) = "xanadu64"
+CCCLXX SET words(LXVI) = "xanadu65"
+CCCLXXV SET words(LXVII) = "xanadu66"
+CCCLXXX SET words(LXVIII) = "xanadu67"
+CCCLXXXV SET words(LXIX) = "xanadu68"
+CCCXC SET words(LXX) = "xanadu69"
+CCCXCV SET words(LXXI) = "xanadu70"
+CD SET words(LXXII) = "xanadu71"
+CDV SET words(LXXIII) = "xanadu72"
+CDX SET words(LXXIV) = "xanadu73"
+CDXV SET words(LXXV) = "xanadu74"
+CDXX SET words(LXXVI) = "xanadu75"
+CDXXV SET words(LXXVII) = "xanadu76"
+CDXXX SET words(LXXVIII) = "xanadu77"
+CDXXXV SET words(LXXIX) = "xanadu78"
+CDXL SET words(LXXX) = "xanadu79"
+CDXLV SET words(LXXXI) = "xanadu80"
+CDL SET words(LXXXII) = "xanadu81"
+CDLV SET words(LXXXIII) = "xanadu82"
+CDLX SET words(LXXXIV) = "xanadu83"
+CDLXV SET words(LXXXV) = "xanadu84"
+CDLXX SET words(LXXXVI) = "xanadu85"
+CDLXXV SET words(LXXXVII) = "xanadu86"
+CDLXXX SET words(LXXXVIII) = "xanadu87"
+CDLXXXV SET words(LXXXIX) = "xanadu88"
+CDXC SET words(XC) = "xanadu89"
+CDXCV SET words(XCI) = "xanadu90"
+D SET words(XCII) = "xanadu91"
+DV SET words(XCIII) = "xanadu92"
+DX SET words(XCIV) = "xanadu93"
+DXV SET words(XCV) = "xanadu94"
+DXX SET words(XCVI) = "xanadu95"
+DXXV SET words(XCVII) = "xanadu96"
+DXXX SET words(XCVIII) = "xanadu97"
+DXXXV SET words(XCIX) = "xanadu98"
+DXL SET words(C) = "xanadu99"
+DXLV SET words(CI) = "xyzzy00"
+DL SET words(CII) = "xyzzy01"
+DLV SET words(CIII) = "xyzzy02"
+DLX SET words(CIV) = "xyzzy03"
+DLXV SET words(CV) = "xyzzy04"
+DLXX SET words(CVI) = "xyzzy05"
+DLXXV SET words(CVII) = "xyzzy06"
+DLXXX SET words(CVIII) = "xyzzy07"
+DLXXXV SET words(CIX) = "xyzzy08"
+DXC SET words(CX) = "xyzzy09"
+DXCV SET words(CXI) = "xyzzy10"
+DC SET words(CXII) = "xyzzy11"
+DCV SET words(CXIII) = "xyzzy12"
+DCX SET words(CXIV) = "xyzzy13"
+DCXV SET words(CXV) = "xyzzy14"
+DCXX SET words(CXVI) = "xyzzy15"
+DCXXV SET words(CXVII) = "xyzzy16"
+DCXXX SET words(CXVIII) = "xyzzy17"
+DCXXXV SET words(CXIX) = "xyzzy18"
+DCXL SET words(CXX) = "xyzzy19"
+DCXLV SET words(CXXI) = "xyzzy20"
+DCL SET words(CXXII) = "xyzzy21"
+DCLV SET words(CXXIII) = "xyzzy22"
+DCLX SET words(CXXIV) = "xyzzy23"
+DCLXV SET words(CXXV) = "xyzzy24"
+DCLXX SET words(CXXVI) = "xyzzy25"
+DCLXXV SET words(CXXVII) = "xyzzy26"
+DCLXXX SET words(CXXVIII) = "xyzzy27"
+DCLXXXV SET words(CXXIX) = "xyzzy28"
+DCXC SET words(CXXX) = "xyzzy29"
+DCXCV SET words(CXXXI) = "xyzzy30"
+DCC SET words(CXXXII) = "xyzzy31"
+DCCV SET words(CXXXIII) = "xyzzy32"
+DCCX SET words(CXXXIV) = "xyzzy33"
+DCCXV SET words(CXXXV) = "xyzzy34"
+DCCXX SET words(CXXXVI) = "xyzzy35"
+DCCXXV SET words(CXXXVII) = "xyzzy36"
+DCCXXX SET words(CXXXVIII) = "xyzzy37"
+DCCXXXV SET words(CXXXIX) = "xyzzy38"
+DCCXL SET words(CXL) = "xyzzy39"
+DCCXLV SET words(CXLI) = "xyzzy40"
+DCCL SET words(CXLII) = "xyzzy41"
+DCCLV SET words(CXLIII) = "xyzzy42"
+DCCLX SET words(CXLIV) = "xyzzy43"
+DCCLXV SET words(CXLV) = "xyzzy44"
+DCCLXX SET words(CXLVI) = "xyzzy45"
+DCCLXXV SET words(CXLVII) = "xyzzy46"
+DCCLXXX SET words(CXLVIII) = "xyzzy47"
+DCCLXXXV SET words(CXLIX) = "xyzzy48"
+DCCXC SET words(CL) = "xyzzy49"
+DCCXCV SET words(CLI) = "xyzzy50"
+DCCC SET words(CLII) = "xyzzy51"
+DCCCV SET words(CLIII) = "xyzzy52"
+DCCCX SET words(CLIV) = "xyzzy53"
+DCCCXV SET words(CLV) = "xyzzy54"
+DCCCXX SET words(CLVI) = "xyzzy55"
+DCCCXXV SET words(CLVII) = "xyzzy56"
+DCCCXXX SET words(CLVIII) = "xyzzy57"
+DCCCXXXV SET words(CLIX) = "xyzzy58"
+DCCCXL SET words(CLX) = "xyzzy59"
+DCCCXLV SET words(CLXI) = "xyzzy60"
+DCCCL SET words(CLXII) = "xyzzy61"
+DCCCLV SET words(CLXIII) = "xyzzy62"
+DCCCLX SET words(CLXIV) = "xyzzy63"
+DCCCLXV SET words(CLXV) = "xyzzy64"
+DCCCLXX SET words(CLXVI) = "xyzzy65"
+DCCCLXXV SET words(CLXVII) = "xyzzy66"
+DCCCLXXX SET words(CLXVIII) = "xyzzy67"
+DCCCLXXXV SET words(CLXIX) = "xyzzy68"
+DCCCXC SET words(CLXX) = "xyzzy69"
+DCCCXCV SET words(CLXXI) = "xyzzy70"
+CM SET words(CLXXII) = "xyzzy71"
+CMV SET words(CLXXIII) = "xyzzy72"
+CMX SET words(CLXXIV) = "xyzzy73"
+CMXV SET words(CLXXV) = "xyzzy74"
+CMXX SET words(CLXXVI) = "xyzzy75"
+CMXXV SET words(CLXXVII) = "xyzzy76"
+CMXXX SET words(CLXXVIII) = "xyzzy77"
+CMXXXV SET words(CLXXIX) = "xyzzy78"
+CMXL SET words(CLXXX) = "xyzzy79"
+CMXLV SET words(CLXXXI) = "xyzzy80"
+CML SET words(CLXXXII) = "xyzzy81"
+CMLV SET words(CLXXXIII) = "xyzzy82"
+CMLX SET words(CLXXXIV) = "xyzzy83"
+CMLXV SET words(CLXXXV) = "xyzzy84"
+CMLXX SET words(CLXXXVI) = "xyzzy85"
+CMLXXV SET words(CLXXXVII) = "xyzzy86"
+CMLXXX SET words(CLXXXVIII) = "xyzzy87"
+CMLXXXV SET words(CLXXXIX) = "xyzzy88"
+CMXC SET words(CXC) = "xyzzy89"
+CMXCV SET words(CXCI) = "xyzzy90"
+M SET words(CXCII) = "xyzzy91"
+MV SET words(CXCIII) = "xyzzy92"
+MX SET words(CXCIV) = "xyzzy93"
+MXV SET words(CXCV) = "xyzzy94"
+MXX SET words(CXCVI) = "xyzzy95"
+MXXV SET words(CXCVII) = "xyzzy96"
+MXXX SET words(CXCVIII) = "xyzzy97"
+MXXXV SET words(CXCIX) = "xyzzy98"
+MXL SET words(CC) = "xyzzy99"
+MXLV SET words(CCI) = "zephyr00"
+ML SET words(CCII) = "zephyr01"
+MLV SET words(CCIII) = "zephyr02"
+MLX SET words(CCIV) = "zephyr03"
+MLXV SET words(CCV) = "zephyr04"
+MLXX SET words(CCVI) = "zephyr05"
+MLXXV SET words(CCVII) = "zephyr06"
+MLXXX SET words(CCVIII) = "zephyr07"
+MLXXXV SET words(CCIX) = "zephyr08"
+MXC SET words(CCX) = "zephyr09"
+MXCV SET words(CCXI) = "zephyr10"
+MC SET words(CCXII) = "zephyr11"
+MCV SET words(CCXIII) = "zephyr12"
+MCX SET words(CCXIV) = "zephyr13"
+MCXV SET words(CCXV) = "zephyr14"
+MCXX SET words(CCXVI) = "zephyr15"
+MCXXV SET words(CCXVII) = "zephyr16"
+MCXXX SET words(CCXVIII) = "zephyr17"
+MCXXXV SET words(CCXIX) = "zephyr18"
+MCXL SET words(CCXX) = "zephyr19"
+MCXLV SET words(CCXXI) = "zephyr20"
+MCL SET words(CCXXII) = "zephyr21"
+MCLV SET words(CCXXIII) = "zephyr22"
+MCLX SET words(CCXXIV) = "zephyr23"
+MCLXV SET words(CCXXV) = "zephyr24"
+MCLXX SET words(CCXXVI) = "zephyr25"
+MCLXXV SET words(CCXXVII) = "zephyr26"
+MCLXXX SET words(CCXXVIII) = "zephyr27"
+MCLXXXV SET words(CCXXIX) = "zephyr28"
+MCXC SET words(CCXXX) = "zephyr29"
+MCXCV SET words(CCXXXI) = "zephyr30"
+MCC SET words(CCXXXII) = "zephyr31"
+MCCV SET words(CCXXXIII) = "zephyr32"
+MCCX SET words(CCXXXIV) = "zephyr33"
+MCCXV SET words(CCXXXV) = "zephyr34"
+MCCXX SET words(CCXXXVI) = "zephyr35"
+MCCXXV SET words(CCXXXVII) = "zephyr36"
+MCCXXX SET words(CCXXXVIII) = "zephyr37"
+MCCXXXV SET words(CCXXXIX) = "zephyr38"
+MCCXL SET words(CCXL) = "zephyr39"
+MCCXLV SET words(CCXLI) = "zephyr40"
+MCCL SET words(CCXLII) = "zephyr41"
+MCCLV SET words(CCXLIII) = "zephyr42"
+MCCLX SET words(CCXLIV) = "zephyr43"
+MCCLXV SET words(CCXLV) = "zephyr44"
+MCCLXX SET words(CCXLVI) = "zephyr45"
+MCCLXXV SET words(CCXLVII) = "zephyr46"
+MCCLXXX SET words(CCXLVIII) = "zephyr47"
+MCCLXXXV SET words(CCXLIX) = "zephyr48"
+MCCXC SET words(CCL) = "zephyr49"
+MCCXCV SET words(CCLI) = "zephyr50"
+MCCC SET words(CCLII) = "zephyr51"
+MCCCV SET words(CCLIII) = "zephyr52"
+MCCCX SET words(CCLIV) = "zephyr53"
+MCCCXV SET words(CCLV) = "zephyr54"
+MCCCXX SET words(CCLVI) = "zephyr55"
+MCCCXXV SET words(CCLVII) = "zephyr56"
+MCCCXXX SET words(CCLVIII) = "zephyr57"
+MCCCXXXV SET words(CCLIX) = "zephyr58"
+MCCCXL SET words(CCLX) = "zephyr59"
+MCCCXLV SET words(CCLXI) = "zephyr60"
+MCCCL SET words(CCLXII) = "zephyr61"
+MCCCLV SET words(CCLXIII) = "zephyr62"
+MCCCLX SET words(CCLXIV) = "zephyr63"
+MCCCLXV SET words(CCLXV) = "zephyr64"
+MCCCLXX SET words(CCLXVI) = "zephyr65"
+MCCCLXXV SET words(CCLXVII) = "zephyr66"
+MCCCLXXX SET words(CCLXVIII) = "zephyr67"
+MCCCLXXXV SET words(CCLXIX) = "zephyr68"
+MCCCXC SET words(CCLXX) = "zephyr69"
+MCCCXCV SET words(CCLXXI) = "zephyr70"
+MCD SET words(CCLXXII) = "zephyr71"
+MCDV SET words(CCLXXIII) = "zephyr72"
+MCDX SET words(CCLXXIV) = "zephyr73"
+MCDXV SET words(CCLXXV) = "zephyr74"
+MCDXX SET words(CCLXXVI) = "zephyr75"
+MCDXXV SET words(CCLXXVII) = "zephyr76"
+MCDXXX SET words(CCLXXVIII) = "zephyr77"
+MCDXXXV SET words(CCLXXIX) = "zephyr78"
+MCDXL SET words(CCLXXX) = "zephyr79"
+MCDXLV SET words(CCLXXXI) = "zephyr80"
+MCDL SET words(CCLXXXII) = "zephyr81"
+MCDLV SET words(CCLXXXIII) = "zephyr82"
+MCDLX SET words(CCLXXXIV) = "zephyr83"
+MCDLXV SET words(CCLXXXV) = "zephyr84"
+MCDLXX SET words(CCLXXXVI) = "zephyr85"
+MCDLXXV SET words(CCLXXXVII) = "zephyr86"
+MCDLXXX SET words(CCLXXXVIII) = "zephyr87"
+MCDLXXXV SET words(CCLXXXIX) = "zephyr88"
+MCDXC SET words(CCXC) = "zephyr89"
+MCDXCV SET words(CCXCI) = "zephyr90"
+MD SET words(CCXCII) = "zephyr91"
+MDV SET words(CCXCIII) = "zephyr92"
+MDX SET words(CCXCIV) = "zephyr93"
+MDXV SET words(CCXCV) = "zephyr94"
+MDXX SET words(CCXCVI) = "zephyr95"
+MDXXV SET words(CCXCVII) = "zephyr96"
+MDXXX SET words(CCXCVIII) = "zephyr97"
+MDXXXV SET words(CCXCIX) = "zephyr98"
+MDXL SET words(CCC) = "zephyr99"
+MDXLV SET words(CCCI) = "zeppelin00"
+MDL SET words(CCCII) = "zeppelin01"
+MDLV SET words(CCCIII) = "zeppelin02"
+MDLX SET words(CCCIV) = "zeppelin03"
+MDLXV SET words(CCCV) = "zeppelin04"
+MDLXX SET words(CCCVI) = "zeppelin05"
+MDLXXV SET words(CCCVII) = "zeppelin06"
+MDLXXX SET words(CCCVIII) = "zeppelin07"
+MDLXXXV SET words(CCCIX) = "zeppelin08"
+MDXC SET words(CCCX) = "zeppelin09"
+MDXCV SET words(CCCXI) = "zeppelin10"
+MDC SET words(CCCXII) = "zeppelin11"
+MDCV SET words(CCCXIII) = "zeppelin12"
+MDCX SET words(CCCXIV) = "zeppelin13"
+MDCXV SET words(CCCXV) = "zeppelin14"
+MDCXX SET words(CCCXVI) = "zeppelin15"
+MDCXXV SET words(CCCXVII) = "zeppelin16"
+MDCXXX SET words(CCCXVIII) = "zeppelin17"
+MDCXXXV SET words(CCCXIX) = "zeppelin18"
+MDCXL SET words(CCCXX) = "zeppelin19"
+MDCXLV SET words(CCCXXI) = "zeppelin20"
+MDCL SET words(CCCXXII) = "zeppelin21"
+MDCLV SET words(CCCXXIII) = "zeppelin22"
+MDCLX SET words(CCCXXIV) = "zeppelin23"
+MDCLXV SET words(CCCXXV) = "zeppelin24"
+MDCLXX SET words(CCCXXVI) = "zeppelin25"
+MDCLXXV SET words(CCCXXVII) = "zeppelin26"
+MDCLXXX SET words(CCCXXVIII) = "zeppelin27"
+MDCLXXXV SET words(CCCXXIX) = "zeppelin28"
+MDCXC SET words(CCCXXX) = "zeppelin29"
+MDCXCV SET words(CCCXXXI) = "zeppelin30"
+MDCC SET words(CCCXXXII) = "zeppelin31"
+MDCCV SET words(CCCXXXIII) = "zeppelin32"
+MDCCX SET words(CCCXXXIV) = "zeppelin33"
+MDCCXV SET words(CCCXXXV) = "zeppelin34"
+MDCCXX SET words(CCCXXXVI) = "zeppelin35"
+MDCCXXV SET words(CCCXXXVII) = "zeppelin36"
+MDCCXXX SET words(CCCXXXVIII) = "zeppelin37"
+MDCCXXXV SET words(CCCXXXIX) = "zeppelin38"
+MDCCXL SET words(CCCXL) = "zeppelin39"
+MDCCXLV SET words(CCCXLI) = "zeppelin40"
+MDCCL SET words(CCCXLII) = "zeppelin41"
+MDCCLV SET words(CCCXLIII) = "zeppelin42"
+MDCCLX SET words(CCCXLIV) = "zeppelin43"
+MDCCLXV SET words(CCCXLV) = "zeppelin44"
+MDCCLXX SET words(CCCXLVI) = "zeppelin45"
+MDCCLXXV SET words(CCCXLVII) = "zeppelin46"
+MDCCLXXX SET words(CCCXLVIII) = "zeppelin47"
+MDCCLXXXV SET words(CCCXLIX) = "zeppelin48"
+MDCCXC SET words(CCCL) = "zeppelin49"
+MDCCXCV SET words(CCCLI) = "zeppelin50"
+MDCCC SET words(CCCLII) = "zeppelin51"
+MDCCCV SET words(CCCLIII) = "zeppelin52"
+MDCCCX SET words(CCCLIV) = "zeppelin53"
+MDCCCXV SET words(CCCLV) = "zeppelin54"
+MDCCCXX SET words(CCCLVI) = "zeppelin55"
+MDCCCXXV SET words(CCCLVII) = "zeppelin56"
+MDCCCXXX SET words(CCCLVIII) = "zeppelin57"
+MDCCCXXXV SET words(CCCLIX) = "zeppelin58"
+MDCCCXL SET words(CCCLX) = "zeppelin59"
+MDCCCXLV SET words(CCCLXI) = "zeppelin60"
+MDCCCL SET words(CCCLXII) = "zeppelin61"
+MDCCCLV SET words(CCCLXIII) = "zeppelin62"
+MDCCCLX SET words(CCCLXIV) = "zeppelin63"
+MDCCCLXV SET words(CCCLXV) = "zeppelin64"
+MDCCCLXX SET words(CCCLXVI) = "zeppelin65"
+MDCCCLXXV SET words(CCCLXVII) = "zeppelin66"
+MDCCCLXXX SET words(CCCLXVIII) = "zeppelin67"
+MDCCCLXXXV SET words(CCCLXIX) = "zeppelin68"
+MDCCCXC SET words(CCCLXX) = "zeppelin69"
+MDCCCXCV SET words(CCCLXXI) = "zeppelin70"
+MCM SET words(CCCLXXII) = "zeppelin71"
+MCMV SET words(CCCLXXIII) = "zeppelin72"
+MCMX SET words(CCCLXXIV) = "zeppelin73"
+MCMXV SET words(CCCLXXV) = "zeppelin74"
+MCMXX SET words(CCCLXXVI) = "zeppelin75"
+MCMXXV SET words(CCCLXXVII) = "zeppelin76"
+MCMXXX SET words(CCCLXXVIII) = "zeppelin77"
+MCMXXXV SET words(CCCLXXIX) = "zeppelin78"
+MCMXL SET words(CCCLXXX) = "zeppelin79"
+MCMXLV SET words(CCCLXXXI) = "zeppelin80"
+MCML SET words(CCCLXXXII) = "zeppelin81"
+MCMLV SET words(CCCLXXXIII) = "zeppelin82"
+MCMLX SET words(CCCLXXXIV) = "zeppelin83"
+MCMLXV SET words(CCCLXXXV) = "zeppelin84"
+MCMLXX SET words(CCCLXXXVI) = "zeppelin85"
+MCMLXXV SET words(CCCLXXXVII) = "zeppelin86"
+MCMLXXX SET words(CCCLXXXVIII) = "zeppelin87"
+MCMLXXXV SET words(CCCLXXXIX) = "zeppelin88"
+MCMXC SET words(CCCXC) = "zeppelin89"
+MCMXCV SET words(CCCXCI) = "zeppelin90"
+MM SET words(CCCXCII) = "zeppelin91"
+MMV SET words(CCCXCIII) = "zeppelin92"
+MMX SET words(CCCXCIV) = "zeppelin93"
+MMXV SET words(CCCXCV) = "zeppelin94"
+MMXX SET words(CCCXCVI) = "zeppelin95"
+MMXXV SET words(CCCXCVII) = "zeppelin96"
+MMXXX SET words(CCCXCVIII) = "zeppelin97"
+MMXXXV SET words(CCCXCIX) = "zeppelin98"
+MMXL SET words(CD) = "zeppelin99"
+MMXLV SET words(CDI) = "zxcvbnm00"
+MML SET words(CDII) = "zxcvbnm01"
+MMLV SET words(CDIII) = "zxcvbnm02"
+MMLX SET words(CDIV) = "zxcvbnm03"
+MMLXV SET words(CDV) = "zxcvbnm04"
+MMLXX SET words(CDVI) = "zxcvbnm05"
+MMLXXV SET words(CDVII) = "zxcvbnm06"
+MMLXXX SET words(CDVIII) = "zxcvbnm07"
+MMLXXXV SET words(CDIX) = "zxcvbnm08"
+MMXC SET words(CDX) = "zxcvbnm09"
+MMXCV SET words(CDXI) = "zxcvbnm10"
+MMC SET words(CDXII) = "zxcvbnm11"
+MMCV SET words(CDXIII) = "zxcvbnm12"
+MMCX SET words(CDXIV) = "zxcvbnm13"
+MMCXV SET words(CDXV) = "zxcvbnm14"
+MMCXX SET words(CDXVI) = "zxcvbnm15"
+MMCXXV SET words(CDXVII) = "zxcvbnm16"
+MMCXXX SET words(CDXVIII) = "zxcvbnm17"
+MMCXXXV SET words(CDXIX) = "zxcvbnm18"
+MMCXL SET words(CDXX) = "zxcvbnm19"
+MMCXLV SET words(CDXXI) = "zxcvbnm20"
+MMCL SET words(CDXXII) = "zxcvbnm21"
+MMCLV SET words(CDXXIII) = "zxcvbnm22"
+MMCLX SET words(CDXXIV) = "zxcvbnm23"
+MMCLXV SET words(CDXXV) = "zxcvbnm24"
+MMCLXX SET words(CDXXVI) = "zxcvbnm25"
+MMCLXXV SET words(CDXXVII) = "zxcvbnm26"
+MMCLXXX SET words(CDXXVIII) = "zxcvbnm27"
+MMCLXXXV SET words(CDXXIX) = "zxcvbnm28"
+MMCXC SET words(CDXXX) = "zxcvbnm29"
+MMCXCV SET words(CDXXXI) = "zxcvbnm30"
+MMCC SET words(CDXXXII) = "zxcvbnm31"
+MMCCV SET words(CDXXXIII) = "zxcvbnm32"
+MMCCX SET words(CDXXXIV) = "zxcvbnm33"
+MMCCXV SET words(CDXXXV) = "zxcvbnm34"
+MMCCXX SET words(CDXXXVI) = "zxcvbnm35"
+MMCCXXV SET words(CDXXXVII) = "zxcvbnm36"
+MMCCXXX SET words(CDXXXVIII) = "zxcvbnm37"
+MMCCXXXV SET words(CDXXXIX) = "zxcvbnm38"
+MMCCXL SET words(CDXL) = "zxcvbnm39"
+MMCCXLV SET words(CDXLI) = "zxcvbnm40"
+MMCCL SET words(CDXLII) = "zxcvbnm41"
+MMCCLV SET words(CDXLIII) = "zxcvbnm42"
+MMCCLX SET words(CDXLIV) = "zxcvbnm43"
+MMCCLXV SET words(CDXLV) = "zxcvbnm44"
+MMCCLXX SET words(CDXLVI) = "zxcvbnm45"
+MMCCLXXV SET words(CDXLVII) = "zxcvbnm46"
+MMCCLXXX SET words(CDXLVIII) = "zxcvbnm47"
+MMCCLXXXV SET words(CDXLIX) = "zxcvbnm48"
+MMCCXC SET words(CDL) = "zxcvbnm49"
+MMCCXCV SET words(CDLI) = "zxcvbnm50"
+MMCCC SET words(CDLII) = "zxcvbnm51"
+MMCCCV SET words(CDLIII) = "zxcvbnm52"
+MMCCCX SET words(CDLIV) = "zxcvbnm53"
+MMCCCXV SET words(CDLV) = "zxcvbnm54"
+MMCCCXX SET words(CDLVI) = "zxcvbnm55"
+MMCCCXXV SET words(CDLVII) = "zxcvbnm56"
+MMCCCXXX SET words(CDLVIII) = "zxcvbnm57"
+MMCCCXXXV SET words(CDLIX) = "zxcvbnm58"
+MMCCCXL SET words(CDLX) = "zxcvbnm59"
+MMCCCXLV SET words(CDLXI) = "zxcvbnm60"
+MMCCCL SET words(CDLXII) = "zxcvbnm61"
+MMCCCLV SET words(CDLXIII) = "zxcvbnm62"
+MMCCCLX SET words(CDLXIV) = "zxcvbnm63"
+MMCCCLXV SET words(CDLXV) = "zxcvbnm64"
+MMCCCLXX SET words(CDLXVI) = "zxcvbnm65"
+MMCCCLXXV SET words(CDLXVII) = "zxcvbnm66"
+MMCCCLXXX SET words(CDLXVIII) = "zxcvbnm67"
+MMCCCLXXXV SET words(CDLXIX) = "zxcvbnm68"
+MMCCCXC SET words(CDLXX) = "zxcvbnm69"
+MMCCCXCV SET words(CDLXXI) = "zxcvbnm70"
+MMCD SET words(CDLXXII) = "zxcvbnm71"
+MMCDV SET words(CDLXXIII) = "zxcvbnm72"
+MMCDX SET words(CDLXXIV) = "zxcvbnm73"
+MMCDXV SET words(CDLXXV) = "zxcvbnm74"
+MMCDXX SET words(CDLXXVI) = "zxcvbnm75"
+MMCDXXV SET words(CDLXXVII) = "zxcvbnm76"
+MMCDXXX SET words(CDLXXVIII) = "zxcvbnm77"
+MMCDXXXV SET words(CDLXXIX) = "zxcvbnm78"
+MMCDXL SET words(CDLXXX) = "zxcvbnm79"
+MMCDXLV SET words(CDLXXXI) = "zxcvbnm80"
+MMCDL SET words(CDLXXXII) = "zxcvbnm81"
+MMCDLV SET words(CDLXXXIII) = "zxcvbnm82"
+MMCDLX SET words(CDLXXXIV) = "zxcvbnm83"
+MMCDLXV SET words(CDLXXXV) = "zxcvbnm84"
+MMCDLXX SET words(CDLXXXVI) = "zxcvbnm85"
+MMCDLXXV SET words(CDLXXXVII) = "zxcvbnm86"
+MMCDLXXX SET words(CDLXXXVIII) = "zxcvbnm87"
+MMCDLXXXV SET words(CDLXXXIX) = "zxcvbnm88"
+MMCDXC SET words(CDXC) = "zxcvbnm89"
+MMCDXCV SET words(CDXCI) = "zxcvbnm90"
+MMD SET words(CDXCII) = "zxcvbnm91"
+MMDV SET words(CDXCIII) = "zxcvbnm92"
+MMDX SET words(CDXCIV) = "zxcvbnm93"
+MMDXV SET words(CDXCV) = "zxcvbnm94"
+MMDXX SET words(CDXCVI) = "zxcvbnm95"
+MMDXXV SET words(CDXCVII) = "zxcvbnm96"
+MMDXXX SET words(CDXCVIII) = "zxcvbnm97"
+MMDXXXV SET words(CDXCIX) = "zxcvbnm98"
+MMDXL SET words(D) = "zxcvbnm99"
+MMDXLV DIM i AS INTEGER
+MMDL SET i = I
+MMDLV SET candidate = words(i)
+MMDLX IF CHECKPASS(username, candidate) THEN GOTO MMDLXXX ELSE SKIP
+MMDLXV SET i = (i + I)
+MMDLXX IF (i > D) THEN GOTO MMDXCV ELSE SKIP
+MMDLXXV GOTO MMDLV
+MMDLXXX PRINT (("found match!! for user " + username) + CHR(X))
+MMDLXXXV PRINT (("password: " + candidate) + CHR(X))
+MMDXC END
+MMDXCV PRINT ("no matches" + CHR(X))
+MMDC END
+INTRO.QBC=10@999999|e6ee9c98b80b4dd04814a29a37bcba8
+Compiled.
+
+You have new mail. Type 'mail' to view.
+% no matches
+
+You have new mail. Type 'mail' to view.
+% 

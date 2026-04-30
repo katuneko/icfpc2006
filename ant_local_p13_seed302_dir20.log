@@ -1,0 +1,72 @@
+BEST score=376 step=58 evals=1 restart=1 ant=(4,30) 2< target=(4,27) N dist=3 manhattan=3 programs=NNNNNNN NNNSSSS NWWENWW NEWSNNE NENNSWW NSWWSEN NNSEWSE NSWEENE
+BEST score=346 step=31 evals=5 restart=1 ant=(4,30) 2< target=(4,27) N dist=3 manhattan=3 programs=NNNNNNN NNNSSSS NWWENWW NEWSNNE NENNSWW NEWWSNN NNSEWSE NWWESNE
+BEST score=345 step=30 evals=13 restart=1 ant=(4,30) 3< target=(4,27) N dist=3 manhattan=3 programs=NNNNNNN NNNSSSS NSWENWW NEWSNNN NENESWE NWWWSWE NSSEWWE NWWESNE
+BEST score=150 step=41 evals=217 restart=1 ant=(2,26) 3v target=(3,26) E dist=1 manhattan=1 programs=NNNNNNN NNNSSSS NEENSWN NNEWWNN NWNSWWW NNNNSNE NWEESNW NEENSNE
+BEST score=149 step=41 evals=221 restart=1 ant=(2,26) 3v target=(3,26) E dist=1 manhattan=1 programs=NNNNNNN NNNSSSS NEENSWN NNEWWNN NWNSWSW NNNNSNE NWEESNW NESNSNE
+BEST score=32 step=25 evals=543 restart=1 ant=(5,26) 3v target=(5,26) W dist=0 manhattan=0 programs=NNNNNNN NNNSSSS NSSNEEN NNSNSEW NSNWWWW NSENSWW NEENSWN NNENSEE
+BEST score=31 step=25 evals=545 restart=1 ant=(5,26) 3v target=(5,26) W dist=0 manhattan=0 programs=NNNNNNN NNNSSSS NSSNEWN NNSNSEW NSNWWWW NSENSWW NEESSWN NNENSEE
+BEST score=30 step=25 evals=547 restart=1 ant=(5,26) 3v target=(5,26) W dist=0 manhattan=0 programs=NNNNNNN NNNSSSS NSSNEWN NNSNSEW NENWWWW NSENSWW NWESWWN NNEESEE
+BEST score=29 step=25 evals=548 restart=1 ant=(5,26) 3v target=(5,26) W dist=0 manhattan=0 programs=NNNNNNN NNNSSSS NSSNEWN NNSNSEW NENWWWW NSENSWW NWESWWN NWEESEE
+BEST score=28 step=25 evals=549 restart=1 ant=(5,26) 3v target=(5,26) W dist=0 manhattan=0 programs=NNNNNNN NNNSSSS NSSNEWN NNSNSEW NENWWWW NSENSSW NWESWWN NWEESEE
+BEST score=27 step=25 evals=558 restart=1 ant=(5,26) 3v target=(5,26) W dist=0 manhattan=0 programs=NNNNNNN NNNSSSS NNSNEWN NNSNSEW NENWWWN NNWNSSW NWENNWN NWWESEE
+BEST score=26 step=25 evals=559 restart=1 ant=(5,26) 3v target=(5,26) W dist=0 manhattan=0 programs=NNNNNNN NNNSSSS NNSNEWN NNSNSEW NENWWWN NNWNSSW NWENNWN NWWENEE
+BEST score=24 step=23 evals=577 restart=1 ant=(5,26) 1v target=(5,26) W dist=0 manhattan=0 programs=NNNNNNN NNNSSSS NSSSENN NNSNSEW NESWWEN NSWNWEN NEEESEE NEWENEE
+BEST score=23 step=23 evals=580 restart=1 ant=(5,26) 1v target=(5,26) W dist=0 manhattan=0 programs=NNNNNNN NNNSSSS NSSSENN NESESEW NWSWWEN NEWNWEN NEEWSEE NENENEE
+NOFOUND best=23 step=23 ant=(5,26) 1v target=(5,26) W dist=0 manhattan=0 evals=791
+PROGRAMS
+NNNNNNN
+NNNSSSS
+NSSSENN
+NESESEW
+NWSWWEN
+NEWNWEN
+NEEWSEE
+NENENEE
+GRID
+22,3 2^
+23,3 3^
+24,3 1>
+21,4 3^
+22,4 1<
+23,4 2>
+24,4  -
+25,4 0^
+20,5  #
+21,5 3>
+22,5 3>
+23,5 1v
+24,5 1^
+25,5 3>
+26,5 0^
+21,6 1^
+22,6 3<
+23,6 2<
+24,6 2<
+25,6 0>
+22,7  #
+23,7  o
+24,7 3<
+14,13 3>
+15,13 3^
+16,13 1>
+13,14 1v
+14,14 0<
+15,14 0^
+16,14 2<
+17,14 3v
+12,15 0>
+13,15 2^
+14,15 1<
+15,15 2^
+16,15  -
+17,15 2>
+18,15 0v
+13,16  -
+14,16 3>
+15,16 2>
+16,16  o
+17,16 3v
+14,17 2<
+15,17 1>
+16,17 1v
+WROTE p13_local_seed302_dir20_best.ant

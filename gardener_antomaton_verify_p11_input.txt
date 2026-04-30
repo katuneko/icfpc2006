@@ -1,0 +1,24 @@
+gardener
+mathemantica
+run /bin/umodem puzzle11_solution.ant EOF
+Puzzle 11: Two Turns
+NSSENWN
+SNSEWES
+14 14
+ - # #1> - - - - - -1< #1v0^
+ - - -1v - - - - - -1v0<1< #
+ -0^1>0> - - - - - - o0<1> o
+ o o o o o o - - - o o o o o
+ - - - - - o - - - o - - - -
+ - - - - - o - - - o - - - -
+ - - $ - - - - - - - - - $ -
+ - - $ - - - - - - - - - $ -
+ - - - - - o - - - o - - - -
+ - - - - - o - - - o - - - -
+ o o o o o o - - - o o o o o
+ - #1v0> - - - - - -0>0^ - #
+ -0<1>1< - - - - - -1^0> -1^
+ - #0^0> - - - - - -0<0<0v1<
+EOF
+./antomaton puzzle11_solution.ant
+shutdown

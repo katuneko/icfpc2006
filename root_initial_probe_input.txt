@@ -1,0 +1,12 @@
+root
+c@Rn3g!e
+pwd
+ls
+ls -l
+ls /home
+ls -l /home
+cat /etc/passwd
+cat /etc/shadow
+mail
+q
+logout

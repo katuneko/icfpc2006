@@ -1,0 +1,30 @@
+gardener
+mathemantica
+run /bin/umodem puzzle8_solution.ant EOF
+Puzzle 8: Trading Places
+NENNESW
+ENWSEWN
+WESSSES
+ESNEWSN
+WWWSNEE
+SEWENNE
+NWNWESS
+ENENSSS
+SEWNSNE
+WNNNEWE
+12 12
+2^2v3>1^ - o o o o o o o
+0<2>0>3^ - - o o o o o o
+0<2v1>3^ - - - o o o o o
+1<2^0>2^ - - - - o o o o
+ - - - - - - - - - o o o
+ o - - - - - - - - - o o
+ o o - - - - - - - - - o
+ o o o - - - - $ $ $ $ o
+ o o o o - - - $ $ $ $ o
+ o o o o o - - $ $ $ $ o
+ o o o o o o - $ $ $ $ o
+ o o o o o o o o o o o o
+EOF
+./antomaton puzzle8_solution.ant
+shutdown

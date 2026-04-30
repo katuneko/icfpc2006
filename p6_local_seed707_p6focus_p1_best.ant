@@ -1,0 +1,27 @@
+Puzzle 6: Tight Turn
+EEENENE
+NEENWNE
+WWSESNE
+EWSWNWN
+NSEWNNN
+WWNWWWE
+SSSWWEE
+SSNSSWS
+WEWWNEW
+ENNSSWE
+11 15
+ o o o o o o o o o o o
+ o - - - - - - - - - $
+ o - - - - - - - - - $
+ o - - - - - - - - - $
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o1>6<0<5^3^8^ o o o o
+ o8<0v -4>7v1v o o o o

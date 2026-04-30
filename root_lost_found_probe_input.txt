@@ -1,0 +1,15 @@
+root
+c@Rn3g!e
+cd lost+found
+cat CREDITS
+cat aum_log_29_12_19004_172107
+cat aum_log_29_12_19004_222107
+cat aum_log_29_12_19004_235107
+recover
+recover CREDITS
+recover aum_log_29_12_19004_172107
+recover aum_log_29_12_19004_222107
+recover aum_log_29_12_19004_235107
+ls
+ls -l
+logout

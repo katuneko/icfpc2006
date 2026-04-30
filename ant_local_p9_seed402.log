@@ -1,0 +1,61 @@
+BEST score=1909 step=2 evals=1 restart=1 ant=(7,6) 2< target=(15,16) E dist=18 manhattan=18 programs=WNWWSWW WENWWEE SWNEWNE SWSSNNS
+BEST score=1815 step=7 evals=2 restart=1 ant=(6,8) 1^ target=(15,16) E dist=17 manhattan=17 programs=WEWNSNW WENWWEE SWNEWNE SSSSNNS
+BEST score=1813 step=7 evals=7 restart=1 ant=(6,8) 1^ target=(15,16) E dist=17 manhattan=17 programs=SEWNSNW WENWWNE SWNEWNE SSSSNSS
+BEST score=1812 step=7 evals=14 restart=1 ant=(6,8) 1^ target=(15,16) E dist=17 manhattan=17 programs=SEWSENW WEWWWWE SSNEWEE SSSSWES
+BEST score=1706 step=5 evals=15 restart=1 ant=(7,8) 2< target=(15,16) E dist=16 manhattan=16 programs=SEWSENW WEWWWWE ESNEWEE SSSSWES
+BEST score=1568 step=7 evals=73 restart=1 ant=(6,10) 0v target=(16,15) S dist=15 manhattan=15 programs=NEENNNS NEENESN WEWWWSN SSNSSNS
+BEST score=1566 step=7 evals=74 restart=1 ant=(6,10) 0v target=(16,15) S dist=15 manhattan=15 programs=NEENNNS NEENENN WEWWWSN SSNSSNS
+BEST score=1565 step=5 evals=144 restart=1 ant=(6,10) 0v target=(16,15) S dist=15 manhattan=15 programs=NSSWNSE SWWSSEE WWNSSSN NWESNNE
+BEST score=1559 step=4 evals=185 restart=1 ant=(10,6) 2> target=(15,16) E dist=15 manhattan=15 programs=NEESSSE ENNSNSE NWEWNSN NNSESSS
+BEST score=1374 step=17 evals=249 restart=1 ant=(7,11) 0v target=(16,15) S dist=13 manhattan=13 programs=NNSWENE WNEWEEW ESSEEEW NESWNNS
+BEST score=1363 step=9 evals=519 restart=1 ant=(7,11) 2v target=(16,15) S dist=13 manhattan=13 programs=EESSEWS ENWEWSE NEESEWN SNNSESS
+BEST score=1362 step=8 evals=520 restart=1 ant=(7,11) 2v target=(16,15) S dist=13 manhattan=13 programs=EWSSESS ENWEWSS NEESEWW SNNSESS
+BEST score=1360 step=8 evals=523 restart=1 ant=(7,11) 2v target=(16,15) S dist=13 manhattan=13 programs=EWNSESS EWWENSS NEESEWW WNWSEES
+BEST score=1359 step=8 evals=524 restart=1 ant=(7,11) 2v target=(16,15) S dist=13 manhattan=13 programs=EWNSSSS EWWENSS NEESEWW WNWSEES
+BEST score=1357 step=10 evals=2526 restart=2 ant=(11,7) 0> target=(15,16) E dist=13 manhattan=13 programs=NWNNNNN SNSESWS ENESNSN EWSWEEN
+BEST score=1163 step=12 evals=3070 restart=2 ant=(8,12) 1v target=(16,15) S dist=11 manhattan=11 programs=EENWWSW NESEWEN NNWEWSS ESNEENW
+BEST score=1161 step=12 evals=3074 restart=2 ant=(8,12) 1v target=(16,15) S dist=11 manhattan=11 programs=EENWWSW NESEWEN NNWEWSS ESNEEEW
+BEST score=1156 step=12 evals=6426 restart=3 ant=(12,8) 3> target=(15,16) E dist=11 manhattan=11 programs=SWWWEWE ENSWSWW WEWWNSW NWNSWNS
+BEST score=1154 step=12 evals=6432 restart=3 ant=(12,8) 3> target=(15,16) E dist=11 manhattan=11 programs=SWWWEWE ENWWSWW WEEWESW NWNSWNS
+BEST score=1153 step=12 evals=15778 restart=7 ant=(12,8) 1> target=(15,16) E dist=11 manhattan=11 programs=NEEEESW NWNNENE ESEESWW WSSEWNN
+BEST score=1150 step=12 evals=15779 restart=7 ant=(12,8) 1> target=(15,16) E dist=11 manhattan=11 programs=NEEEESN NWNNENE ESEESWW WSSEWNN
+BEST score=1149 step=12 evals=15780 restart=7 ant=(12,8) 1> target=(15,16) E dist=11 manhattan=11 programs=NEEEESN NWWNENE ESEESWW WSSEWNN
+BEST score=1148 step=13 evals=16382 restart=7 ant=(12,8) 0> target=(15,16) E dist=11 manhattan=11 programs=NWSNWNN SWNEEWW EWWNNNE ESNSSNN
+BEST score=1146 step=11 evals=18833 restart=8 ant=(8,12) 0v target=(16,15) S dist=11 manhattan=11 programs=NEESEES SSWEWNN WWSNNNS ESSSSSW
+NOFOUND best=1146 step=11 ant=(8,12) 0v target=(16,15) S dist=11 manhattan=11 evals=26697
+PROGRAMS
+NEESEES
+SSWEWNN
+WWSNNNS
+ESSSSSW
+GRID
+0,0 1>
+1,0 0<
+2,0 2v
+0,1 2^
+1,1 0^
+2,1 3>
+3,1 1v
+0,2 1>
+1,2 2<
+2,2 0>
+3,2 2<
+4,2 2^
+1,3 1^
+2,3 0>
+3,3 3v
+4,3 2v
+5,3 0>
+2,4 2v
+3,4 3^
+4,4 1>
+5,4 0v
+6,4 3>
+3,5 1>
+4,5 2>
+5,5  -
+6,5 1^
+4,6 0^
+5,6 1^
+6,6 3>
+WROTE p9_local_seed402_best.ant

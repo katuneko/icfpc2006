@@ -1,0 +1,12 @@
+ftd
+falderal90
+pwd
+cat TODO
+icfp.exe
+icfp.exe README
+icfp.exe TODO
+icfp.exe -h
+icfp.exe --help
+ml19100.exe
+ml19100.exe README
+logout

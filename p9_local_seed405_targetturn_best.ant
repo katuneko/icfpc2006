@@ -1,0 +1,24 @@
+Puzzle 9: Diagonalia
+NEWWSNS
+WNEEWNS
+EEESSNS
+WSESNES
+18 18
+0<1^2> - - o o o o o o o o o o o o o
+1<2> o1^ - - o o o o o o o o o o o o
+0<3v3>2v3^ - - o o o o o o o o o o o
+ -2>1v0^ #2> - - o o o o o o o o o o
+ - -1^ #2^2^2> - - o o o o o o o o o
+ o - -0v1v1<3v - - - o o o o o o o o
+ o o - -2^3>3^ - - - - o o o o o o o
+ o o o - - - - - - - - - o o o o o o
+ o o o o - - - - - - - - - o o o o o
+ o o o o o - - - - - - - - - o o o o
+ o o o o o o - - - - - - - - - o o o
+ o o o o o o o - - - - - - - - - o o
+ o o o o o o o o - - - - - - - - - o
+ o o o o o o o o o - - - - - - - - o
+ o o o o o o o o o o - - - - - - - o
+ o o o o o o o o o o o - - - - - - o
+ o o o o o o o o o o o o - - - - $ o
+ o o o o o o o o o o o o o o o o o o

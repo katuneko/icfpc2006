@@ -12,16 +12,13 @@
   - `sequent-sequel` Part 2（Pousse Game）を修理して `ADVTR.PSG=60@999999|96aaff0cd1044046b1b5c7d064ebfc7` を取得（ログ: `volume9_howie_sequent_sequel_pousse_fix5.txt`）。
     - `mauve N-1623-AJI` は 2 層 broken。`ivory Z-6458-PSF` + `midnight-blue Z-6458-PSF`（`J-0010-VGZ` 1 個で部分修理）を使って両層を埋め、`D-5065-UVM` と `J-0010-VGZ` で外側を修理。
   - `sequent-sequel` Part 3（Package Robot）を修理して `ADVTR.PKG=60@999999|d68be9b7bea3399b57bcacce2ea630a` を取得（ログ: `volume9_howie_sequent_sequel_package_robot_fix2.txt`）。
-  - `sequent-sequel` Part 4（Robber）は `T-9247-OCM` 未発見。スタック全消去でも追加アイテムなし（ログ: `volume9_howie_sequent_sequel_robber_clear.txt`）。
+  - `sequent-sequel` Part 4（Robber）は、`amber X-4832-TFT` を `blue-violet T-6458-BNR` と `brown R-0010-FGL` だけで部分修理し、その broken `X-4832-TFT` を `cardinal B-1403-YIC` に組み込んでから `carmine robber` を修理。`ADVTR.ROB=60@999999|852c1d7ee2f7e8f82c456185bba9225` を取得（ログ: `volume9_howie_sequent_sequel_robber_cardinal_chain2.txt`）。
 
 ### 未解決タスク
 - `History of Technology Exhibit` に入る方法（保証の回復 or 迂回）を見つける。
   - `uploader` 使用で warranty void になり、`gc.rml` を再アップロードしても解除されない（入口が引き続きブロック）。
   - 検証ログ: `volume9_howie_warranty_restore_test.txt`
-- `Machine Room M4` の console は破壊後に `use` でメールが読める（`ADVTR.CON` 添付あり）。`sequent-sequel` オプションの冒険を試す。
-- `adventure sequent-sequel` の Part 4（Robber）の `T-9247-OCM` を探す。
-  - `T-9247-OCM` は Part4 の `missing` にのみ出現し、実体アイテムとしては未確認（`volume9_howie_sequent_sequel_part4_xml.txt` のみヒット）。
-  - Part 1 Race Car は修理済み（`ADVTR.RCC`）、Part 2 Pousse Game は修理済み（`ADVTR.PSG`）、Part 3 Package Robot は修理済み（`ADVTR.PKG`）、Part 5 Finite-State Machine は修理済み（`ADVTR.FSM`）、Part 6 Codex は修理済み（`ADVTR.CDX`）。
+- `Machine Room M4` の console は破壊後に `use` でメールが読める（`ADVTR.CON` 添付あり）。`sequent-sequel` は Part 1-6 すべて出版取得済み（`RCC/PSG/PKG/ROB/FSM/CDX`）。
 - `knr` 環境（`ucc`/`um.c`）の活用方針を詰める。
 
 ## Antomaton (gardener)
@@ -38,14 +35,50 @@
 - Puzzle 12 解決済み（`puzzle12_solution.ant`、success=facing）。
 - Puzzle 12 UMIX 検証: `ANTWO.012=40@999999|92fe6f6bc4d7ce996c1d3f87a26816a`。
 - `volume9_gardener_antomaton_verify_p12.txt`（入力: `gardener_antomaton_verify_p12_input.txt`）で再現。
+- Puzzle 13 解決済み（`puzzle13_solution.ant`、success=facing, 69 step）。
+- Puzzle 13 UMIX 検証: `ANTWO.013=40@999999|64d289f7555e6303b692ad36c70b015`。
+- `volume9_gardener_antomaton_verify_p13.txt`（入力: `gardener_antomaton_verify_p13_input.txt`）で再現。
+- Puzzle 9 解決済み（`puzzle9_solution.ant`、success=facing, 30 step）。
+- Puzzle 9 UMIX 検証: `ANTWO.009=140@999999|56d399bb81e0750703291078a9f7ab9`。
+- `volume9_gardener_antomaton_verify_p9.txt`（入力: `gardener_antomaton_verify_p9_input.txt`）で再現。
 - Puzzle 14 解決済み（`puzzle14_solution.ant`、success=facing, 83 step）。
 - Puzzle 14 UMIX 検証: `ANTWO.014=250@999999|50c0240cc0b510c16b29683e456d5c1`。
 - `volume9_gardener_antomaton_verify_p14.txt`（入力: `gardener_antomaton_verify_p14_input.txt`）で再現。
 - `ant_solver.py` は turning machine 行の 8 文字入力を受理し、シミュレーション規則は先頭 7 文字（p1..p7）を使用するように更新。
+- `ant_solver.py` は `--time-limit-seconds` 到達時に `timeout` を出すよう修正し、時間切れと `no solution` を区別できるようにした。
+- `ant_solver.py` に `--no-dominance-prune` を追加。代表ケース（`all wilds` の `ants=1, clan4`、gate 周辺 16 点の `grid-wild-max-nonfloor 1`、位相バケット分割した `ants=2, clans 5..8`）を exact-state prune だけで再走しても `no solution` で、dominance 由来の false negative 疑いは一段下がった。
+- `ant_solver.py` の `grid-wilds-sparse` 系で、wildcard が `food` に解決されたケースを成功判定が見落としていたバグを修正した。あわせて、未対応だった ant-literal wildcard（`1^` など）は sparse/grid 探索では明示的にエラーにした。
+- `ant_solver.py` に `--candidate-time-limit-seconds` を追加し、sparse 系 outer search で重い候補だけを早めに打ち切って次候補へ進めるようにした。local candidate timeout が 1 件でも出た run は `no solution` ではなく `timeout` とし、`timeout candidates=N candidate_timeouts=M` の形で探索密度も出す。
+- `ant_solver.py` の `grid-wilds-sparse` 系は、未確定 wildcard を success 判定で読んだときに `ValueError` で落ちるバグがあった。未確定 cell は `food` 候補の有無だけを見るように直し、step 側の concrete resolver とは分離した。
+- `ant_solver.py` に `--outer-position-order fooddist` を追加し、outer sampler が food 近傍の wildcard 位置を優先できるようにした。`Puzzle 7` では gate 近傍を引きつつ throughput はほぼ維持できる。
+- 2026-04-29 再確認:
+  - README 上、grid wildcard は `$` 以外に置換可能（ant/hole/wall/floor）。
+  - 成功図は north-below だが、ルール全体が回転不変で、既存 UMIX 検証とローカル探索では「任意方向で food に隣接し、その food を向く ant」で扱う。
+  - 未解 puzzle 群に `--single-ant-fast` / `--carve-single-ant` を再適用したが追加解なし。
+  - `--wild-ants-sparse --ants 2` は `Tight Turn`/`Trading Places`/`Diagonalia`/`Insect Convention` で追加解なし。
+  - `--small-scan --scan-ants-max 3 --scan-nonfloor-max 1` は `Two Turns`/`Tight Turn`/`Diagonalia` で追加解なし。
+- Puzzle 7 を clan `1/2/3` 固定で再探索したが未解。
+  - ゲート近傍 8 点で `--wild-ants-sparse --ants 2 --ant-clans 1,2,3 --sparse-order best --distance-prune` は `no solution`（`volume9_gardener_antomaton_p7_clan123_gate.txt`、入力: `gardener_antomaton_p7_clan123_gate_input.txt`）。
+  - `all wilds` で `--wild-ants-sparse --ants 1 --ant-clans 1,2,3 --sparse-order best --distance-prune` は `no solution`（`volume9_gardener_antomaton_p7_clan123_allwild1.txt`、入力: `gardener_antomaton_p7_clan123_allwild1_input.txt`）。
+  - `all wilds` で `--wild-ants-sparse --ants 2 --ant-clans 1,2,3 --random-tries 50000 --shuffle-seed 11` も `no solution`（`volume9_gardener_antomaton_p7_clan123_allwild2_seed11.txt`、入力: `gardener_antomaton_p7_clan123_allwild2_seed11_input.txt`）。
+  - 背景の既存 clan `1/3` は 4 相周期で、clan `3` 帯は `{y=13,14}` と `{y=12,15}` を往復することを確認。
+  - `all wilds` で `--wild-ants-sparse --ants 1 --ant-clans 4` は `no solution`（`volume9_gardener_antomaton_p7_clan4_allwild1.txt`、入力: `gardener_antomaton_p7_clan4_allwild1_input.txt`）。
+  - gate 周辺 16 点に対する `--grid-wilds-sparse --ants 1 --ant-clans 4 --grid-wild-max-nonfloor 1` も `no solution`（`volume9_gardener_antomaton_p7_clan4_gate16_grid1.txt`、入力: `gardener_antomaton_p7_clan4_gate16_grid1_input.txt`）。
+  - 位相バケットを分けたゲート探索でも、`--wild-ants-sparse --ants 2 --ant-clans 5,6,7,8` は両方 `no solution`（`volume9_gardener_antomaton_p7_clan5678_gate_phase13.txt` / `volume9_gardener_antomaton_p7_clan5678_gate_phase02.txt`、入力: `gardener_antomaton_p7_clan5678_gate_phase13_input.txt` / `gardener_antomaton_p7_clan5678_gate_phase02_input.txt`）。
+  - 上の phase 分割は mixed-phase 16 組を落としていたため、gate 8 点をまとめた `--wild-ants-sparse --ants 2 --ant-clans 5,6,7,8` も追加したが、180s で `timeout`（`volume9_gardener_antomaton_p7_clan5678_gate_all8.txt`、入力: `gardener_antomaton_p7_clan5678_gate_all8_input.txt`）。
+  - `fixed-ants` で gate に clan `3` アンカーを置き、反対側 1 蟻を探索しても `no solution`（`volume9_gardener_antomaton_p7_anchor_left_fixed3e.txt` / `volume9_gardener_antomaton_p7_anchor_right_fixed3w.txt`、入力: `gardener_antomaton_p7_anchor_left_fixed3e_input.txt` / `gardener_antomaton_p7_anchor_right_fixed3w_input.txt`）。
+  - gate 周辺 16 点に対する `--grid-enum-sparse --ants 1 --ant-clans 5,6,7,8 --grid-wild-max-nonfloor 2` は左右位相とも `no solution`（`volume9_gardener_antomaton_p7_phase13_gridenum2.txt` / `volume9_gardener_antomaton_p7_phase02_gridenum2.txt`、入力: `gardener_antomaton_p7_phase13_gridenum2_input.txt` / `gardener_antomaton_p7_phase02_gridenum2_input.txt`）。
+  - 同条件で `--grid-wild-max-nonfloor 3` に上げても左右位相とも `no solution`（`volume9_gardener_antomaton_p7_phase13_gridenum3.txt` / `volume9_gardener_antomaton_p7_phase02_gridenum3.txt`、入力: `gardener_antomaton_p7_phase13_gridenum3_input.txt` / `gardener_antomaton_p7_phase02_gridenum3_input.txt`）。
+  - phase13 側で `--grid-enum-sparse --ants 2 --ant-clans 5,6,7,8 --grid-wild-max-nonfloor 1` を回すと 180s で `timeout`。`2 蟻 + 1 障害物` は gate 局所でも別格に重い（`volume9_gardener_antomaton_p7_phase13_ants2_gridenum1.txt`、入力: `gardener_antomaton_p7_phase13_ants2_gridenum1_input.txt`）。
+  - sampled all-wild の探索密度を比較すると、20s あたりの処理候補数は `2 ants` で約 1.7k〜2.2k（`volume9_gardener_antomaton_p7_clan56_allwild2_seed1_cand20ms_stats.txt` / `volume9_gardener_antomaton_p7_allclans_allwild2_seed31_cand20ms_stats.txt`）、`3 ants` で約 2.2k〜2.4k（`volume9_gardener_antomaton_p7_clan56_allwild3_seed51_cand10ms_stats.txt` / `volume9_gardener_antomaton_p7_allclans_allwild3_seed61_cand10ms_stats.txt`）、`4 ants` で約 3.9k〜4.1k（`volume9_gardener_antomaton_p7_clan56_allwild4_seed71_cand5ms_stats.txt` / `volume9_gardener_antomaton_p7_allclans_allwild4_seed79_cand5ms_stats.txt`）。いずれも出版なし。
+  - `4 ants`, no-obstacle を 60s に延ばすと約 1.18 万〜1.21 万候補まで伸びたが、やはり出版なし（`volume9_gardener_antomaton_p7_clan56_allwild4_seed89_cand5ms_60s.txt` / `volume9_gardener_antomaton_p7_allclans_allwild4_seed97_cand5ms_60s.txt`、入力: `gardener_antomaton_p7_clan56_allwild4_seed89_cand5ms_60s_input.txt` / `gardener_antomaton_p7_allclans_allwild4_seed97_cand5ms_60s_input.txt`）。
+  - 同じ `4 ants`, no-obstacle を `--outer-position-order fooddist` で 60s 回しても throughput はほぼ同じで、やはり出版なし（`volume9_gardener_antomaton_p7_clan56_allwild4_seed101_cand5ms_fooddist_60s.txt` / `volume9_gardener_antomaton_p7_allclans_allwild4_seed103_cand5ms_fooddist_60s.txt`、入力: `gardener_antomaton_p7_clan56_allwild4_seed101_cand5ms_fooddist_60s_input.txt` / `gardener_antomaton_p7_allclans_allwild4_seed103_cand5ms_fooddist_60s_input.txt`）。
+  - `5 ants`, `--outer-position-order fooddist`, no-obstacle は 20s で 5000 sampled tries を、60s で 15000 sampled tries を消化できたが出版なし（`volume9_gardener_antomaton_p7_clan56_allwild5_seed113_cand3ms_fooddist_60s.txt` / `volume9_gardener_antomaton_p7_allclans_allwild5_seed127_cand3ms_fooddist_60s.txt`、入力: `gardener_antomaton_p7_clan56_allwild5_seed113_cand3ms_fooddist_60s_input.txt` / `gardener_antomaton_p7_allclans_allwild5_seed127_cand3ms_fooddist_60s_input.txt`）。
+  - `2 ants + 1 obstacle` の sampled all-wild は 20s で約 990 候補しか処理できず、ほぼ全件が candidate cap に達した（`volume9_gardener_antomaton_p7_clan56_allwild2_grid1_seed11_cand20ms_stats_fix1.txt` / `volume9_gardener_antomaton_p7_allclans_allwild2_grid1_seed41_cand20ms_stats_fix1.txt`）。当面は obstacle 追加より `ants>=5` の no-obstacle と、spec/clan 側の bias 強化を優先する。
 - 他パズルは探索/ヒューリスティクスの強化が必要。
 
 ## 2D (ohmega)
-- `mult`/`rev`/`raytrace` は UMIX 検証・出版済み（`mult.2d`/`rev.2d`/`raytrace_2_nonl.2d`）。`ocult` は作業中。
+- `mult`/`rev`/`raytrace` は UMIX 検証・出版済み（`mult.2d`/`rev.2d`/`raytrace_2_nonl.2d`）。`ocult` は棚上げ。
 - `verify` は面積スコアなので最小面積設計が必要。
 - `()`/`(val,val)`/`Inl`/`Inr` の配線設計が未整理。
 - `two_d.py`（簡易 2D 解釈器）と `plus.2d` を追加。`plus.2d` の N/W 接続が競合するため仕様解釈の確認が必要。
@@ -58,6 +91,9 @@
 - `raytrace.2d` は設計メモ（`i_max`/`i_min` 等の補助モジュールを `two_d.py` で動作確認）。提出は `raytrace_2_nonl.2d`。
 - `raytrace.2d` に `f_apply`（Fテーブル適用）/`g_eval`（Towards 側の式）を追加し、`two_d.py` で動作確認済み。
 - `raytrace.2d` に `h_eval`（Away 側の式）を追加し、`two_d.py` で動作確認済み。
+- `ocult_submit.2d` の `d` モジュールが東境界に 2 本出力していたため、下段右端を切って `d outputs [8]` へ改善。
+  - その後のローカル評価では `EvalError split on non-pair` に進み、`s0/s1/s2/s3` がまだ複数出力候補を持つ構造であることを確認（`volume9_ohmega_verify_ocult_submit_local.txt`、入力: `ohmega_verify_ocult_submit_local_input.txt`）。
+  - 現状は局所修正で収束する見込みが薄いため、能動作業対象から外し、必要なら `hadproblem.md` と既存解析ログを参照して後日再開する。
 
 ## Black Knots (bbarker)
 - モデル 000/010/020/030/040/050/100/200/300/400/500 は解答・出版済み。
@@ -91,8 +127,14 @@
   - 検証: ランダム 20,000 ケースで `20000/20000` 通過。
   - 境界検証: `i=8` 全 `j`（`a=1,255`）で通過、`j=255` 全 `i`（`a=1,255`）で通過。
   - 追加検証: `a=1` の全 `(i,j)`（30,628 ケース）で通過。
-  - `certify fillmem` 成功: `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`。
+- `certify fillmem` 成功: `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`。
   - ログ: `volume9_yang_certify_fillmem.txt`（入力: `yang_certify_fillmem_input.txt`）。
+- `stop127`/`stop128` を短縮。
+  - `stop128`: `PHYSICS -16` を 16 回で `sR0=128` にして `SCIENCE 0`。
+  - `stop127`: 上記から `PHYSICS -1; PHYSICS 1` で `sR0=127`。
+  - 出版: `BLNCE.S27=13@999999|09371405f7a438a2adbfeb53d5d5317`, `BLNCE.S28=12@999999|39eabd9f583a28bad260f1981e745ac`。
+  - `icfp.exe` 再集計で CV weight 5190。
+  - ログ: `volume9_yang_certify_stop_short.txt`, `volume9_ftd_icfp_all.txt`。
 - PHYSICS `[1,1]` は `sR0`/`dR1` を +1、`sR1..sR3,dR0` を固定できる（`sR0++` マクロ）。
 - `copyreg` 初期状態から PHYSICS `[14,2,-14]` で `sR0=0, sR1=3, sR2=2, sR3=3, dR0=a, dR1=4` を `a` 非依存で作れることを確認。
 - 上の状態で `LOGIC d=0,s1=0,s2=0` を使うと `M[a]=1` と `M[4]=0` を同時に作れる（4 命令のセンチネル初期化: `[14,2,-14] + LOGIC(0,0,0)`）。
@@ -158,11 +200,115 @@
   - ループ1開始を `(sR0,sR1,sR2,sR3,dR0,dR1)=(6,3,4,3,7,6)`、カウンタ `M[6]=i-7` に調整して `i=8` の非停止を解消。
   - ループ遷移は既存の 8-step 再配置 `[-2,-3,12,14,-3,2,-14,-11]` を使用。
 
+## Antomaton / 2026-04-29
+- 外部解答調査は停止。以後はローカル解析と自前探索のみで継続。
+- Puzzle 3 の wildcard 直接 `$` 置きは UMIX verifier が `Can't place goal in wildcard region` で reject。既存 food への到達が必須。
+- Puzzle 3/4 の右端近傍 `grid-wilds-sparse`、Puzzle 6 の 2〜4 蟻 sparse、Puzzle 7 の 6 蟻 sampled run は追加出版なし。
+- Puzzle 6 は上端が穴なので、単独北上の基本案は成立しない。局所進化探索では food 近傍まで寄る個体は出たが成功未達。
+
+## Antomaton / 2026-04-30
+- `ant_solver.py` の探索前提を修正。
+  - `--single-ant-grid-fast` の既定 success mode を `facing` に修正し、締切チェックを追加。
+  - `wild-ants-sparse` は wildcard を床扱いへ戻した。`CELL_WILD=-1` が回転テーブル負 index で clan9 ant に化ける誤判定を防ぐ。
+  - `grid-enum-sparse` は wildcard を保持して列挙し、未列挙分を床へ戻すよう修正。
+- 修正後の再探索では新規出版なし。
+  - Puzzle 6/8/11 の 3 蟻 sampled sparse、2 蟻 + 非床<=2 grid enum は timeout。
+  - Puzzle 9 の単体 grid fast（非床<=12）は timeout。
+  - Puzzle 3/4 の下段ゲート絞り込み単体 grid fast は timeout/狭域 no solution。
+  - Puzzle 7/10 は追加 ant なし/1 蟻 sampled run で no solution。
+- 追加探索でも新規出版なし。
+  - Balance: `multmem_template_search.py` の短尺テンプレート探索（seed 501/502/503）は初期候補が既存 `multmem.bal` より大きく劣り、長時間化したため停止。既存 `multmem.bal` は 20k sample で ok 8071、`multmem_candidate.bal` は ok 824。
+  - Puzzle 6/8/11/13: 4 蟻 sampled sparse を各 35s 走らせたが timeout（候補 1812/1762/2376/1798、hit なし）。
+  - Puzzle 3/4: `single-ant-grid-fast`（非床<=4、food 距離<=8、近傍 24 点）は no solution。
+  - Puzzle 9: `single-ant-grid-fast`（非床<=8）は no solution。
+  - Puzzle 10: 1 蟻 sampled sparse は no solution。
+  - Puzzle 7: clan 5/6 の 2 蟻 sampled sparse は timeout（候補 2092、hit なし）。
+- 攻略方針を前向きランダムから food 側逆算へ変更し、`ant_solver.py` に新モードを追加。
+  - `--route-single-ant`: 単独蟻の経路だけを先に合成し、後から wildcard の壁/床割当を検証する軽量モード。
+  - `--fixed-entry-sparse`: wildcard 側から「固定領域内だけで food に到達できる入口状態」まで到達する prefix を探索し、入口以降は p1 のみで検証する分解モード。
+  - `Puzzle 3/4` は `--route-single-ant` で no routed single-ant solution。固定領域内で曲がれない制約が強く、単独 p1 経路では足りない可能性が高い。
+  - `Puzzle 6/8/11/P3/P4` に `--fixed-entry-sparse`（2〜3 蟻、best-first、fooddist、短時間）を当てたが、新規 hit なし。P6 の 2 蟻 exhaustive 60s も no fixed-entry solution。
+- Puzzle 4 を解決。
+  - 直接 x21 に注入する理想モデルでは 6-event 解が見つかったが、実盤面では x20 が floor として残って固定領域から漏れるため不採用。
+  - x20 発射口込みの動的モデルに切り替え、`NWSWWSN` / `ENNNEEW` で、初期 x20 seed 2 匹 + clan0 delay line 3 本の実盤面候補を合成。
+  - ローカルシミュレーションは `puzzle4_solution.ant` で step 182 success。
+  - UMIX 検証ログ: `volume9_gardener_antomaton_verify_p4.txt`（入力: `gardener_antomaton_verify_p4_input.txt`）。
+  - 出版: `ANTWO.004=30@999999|7378dae5a8b74ee98a68aa2aedfcdce`。
+- Puzzle 3 も同じ盤面だったため、P4 解を 3-program 形式へ移植して解決。
+  - `puzzle3_solution.ant`: `NWSWWSN` / `ENNNEEW` / `NNNNNNN`。
+  - ローカル step 182 success、UMIX 検証ログ: `volume9_gardener_antomaton_verify_p3.txt`（入力: `gardener_antomaton_verify_p3_input.txt`）。
+  - 出版: `ANTWO.003=30@999999|96bb4cc41239f750e0c7edcf901351d`。
+- Puzzle 8 を解決。
+  - 固定領域入口 event schedule から program 候補を作り、`NENNESW` / `ENWSEWN` / `WESSSES` / `ESNEWSN` / `WWWSNEE` / `SEWENNE` / `NWNWESS` / `ENENSSS` / `SEWNSNE` / `WNNNEWE` で実盤面局所探索。
+  - `puzzle8_solution.ant` は 4x4 wildcard をすべて ant にする配置で、ローカル step 15 success。
+  - UMIX 検証ログ: `volume9_gardener_antomaton_verify_p8.txt`（入力: `gardener_antomaton_verify_p8_input.txt`）。
+  - 出版: `ANTWO.008=60@999999|c2b0419d15ac802e56a39503d63505e`。
+- Puzzle 11 を解決。
+  - 発射口込み schedule から program 候補を作り、`NSSENWN` / `SNSEWES` 固定で実盤面局所探索。
+  - `puzzle11_solution.ant` はローカル step 15 success。
+  - UMIX 検証ログ: `volume9_gardener_antomaton_verify_p11.txt`（入力: `gardener_antomaton_verify_p11_input.txt`）。
+  - 出版: `ANTWO.011=70@999999|e6988b0a4f02dd8002740f2e1cb4a67`。
+- 続けて Puzzle 6 / Puzzle 9 の program+wildcard 同時局所探索を実施したが、出版未達。
+  - Puzzle 6: 240s run、best score 299。
+  - Puzzle 9: 240s run、best score 881。
+- Puzzle 10 `Walking to Thesky` を解決。
+  - `ant_local_search.py` を追加し、固定プログラムを保持したまま concrete programs + wildcard contents を局所探索できるようにした。
+  - `puzzle10_solution.ant` はローカル step 79 success。
+  - UMIX 検証ログ: `volume9_gardener_antomaton_verify_p10.txt`（入力: `gardener_antomaton_verify_p10_input.txt`）。
+  - 出版: `ANTWO.010=50@999999|c08a0d41ac68ca55d34be6985fb3c1c`。
+- `ANTWO.003/004/008/010/011` 追加後に `icfp.exe` で再集計し、CV weight 5430 を確認。
+  - ログ: `volume9_ftd_icfp_all_antwo_more.txt`（入力: `ftd_icfp_all_antwo_more_input.txt`）。
+- 同じ局所探索器を P6/P7/P9/P13 に再投入したが追加出版は未達。
+  - P6 は `(6,3)` 付近まで北上する候補で止まり、東向きに曲げる局所イベントが未解。
+  - P7 は固定蟻が `(6,4)` まで上がるが、food 直下 `(6,1)` へ押し上げる同期が未解。
+- Puzzle 13 を解決。
+  - `ant_local_search.py` に近接評価の重み調整（`--manhattan-weight`, `--direction-penalty`, `--distance-weight`）と、food 隣接で向き違いになった蟻の前方へ支援蟻を寄せる `--support-target-turn` を追加。
+  - `p13_local_seed305_support_best.ant` は support_dist=1 まで到達。そこから program 2 箇所変更（row 2 p7 `N->E`, row 5 p5 `W->N`）で `puzzle13_solution.ant` がローカル step 69 success。
+  - UMIX 検証ログ: `volume9_gardener_antomaton_verify_p13.txt`（入力: `gardener_antomaton_verify_p13_input.txt`）。
+  - 出版: `ANTWO.013=40@999999|64d289f7555e6303b692ad36c70b015`。
+- Puzzle 9 を解決。
+  - `ant_local_search.py` に `--start-candidate` / `--start-every-restart` と、目標近傍で前方ブロッカーを寄せる `--support-near-target-turn` を追加。
+  - `p9_local_seed403_nearturn_best.ant` は `(16,15)` 北向きまで到達。seed 404 の target-turn 探索で `p9_local_seed404_targetturn_best.ant` を発見し、`puzzle9_solution.ant` はローカル step 30 success。
+  - UMIX 検証ログ: `volume9_gardener_antomaton_verify_p9.txt`（入力: `gardener_antomaton_verify_p9_input.txt`）。
+  - 出版: `ANTWO.009=140@999999|56d399bb81e0750703291078a9f7ab9`。
+  - `icfp.exe` に ANTWO.013 と ANTWO.009 を追加投入し、CV weight 5610 を確認。
+    ログ: `volume9_ftd_icfp_all_antwo_p9.txt`（入力: `ftd_icfp_all_antwo_p9_input.txt`）。
+- Puzzle 6 の追加探索。
+  - `ant_local_search.py` に `--support-program-aware` を追加し、前方ブロッカーが実際に目的方向へ曲げられる program slot かどうかを support score に反映。
+  - seed 502/503 は未解。最良は `(6,3)` 北向き、前方 `(6,2)` への有効 support_dist=1（`p6_local_seed502_programaware_best.ant`, `p6_local_seed503_programaware_best.ant`）。
+  - `--support-entry-turn` を追加し、移動先セルで p2/p3 により向きを変えるケース（例: `(6,3)^` が `(6,2)` へ入り、左支援で東向き化）を直接 scoring。
+  - `--start-candidate` と `--fix-program` の併用時に、読み込んだ候補へ固定スロットを上書きしていなかった問題を修正。
+  - seed 504/505/506/507/508 と、`p1=N,p2=E` 固定の seed 509/510/511/512 を追加実行したが未解。
+    最良は entry-turn-p2 の support_dist=2（`p6_local_seed511_entryfix_best.ant`, `p6_local_seed512_entryfix_best.ant`）。program 2 箇所変更、grid 1 箇所変更、program 1 箇所 + grid 1 箇所の局所検査も解なし。
+- Puzzle 7 の局所探索。
+  - `ant_local_search.py` で seed 601/602 を実行したが、初期固定蟻の `(6,3)` 近傍状態（target `(6,1)` まで dist=2）から改善せず未解。
+  - ログ: `ant_local_p7_seed601.log`, `ant_local_p7_seed602.log`。
+- Puzzle 6 の本質条件をさらに分解。
+  - `ant_local_search.py` に `--p6-focus` を追加し、上段 `y=1..3` の東向き signal、p2 entry-turn 直前、p4..p7 exact blocker を直接 score するようにした。
+  - seed 701..714 では出版未達だが、従来の「北向きで近い」止まりから、`(5,2)>` / `(5,1)>` の上段 east signal、さらに `(5,2)^` + `(5,1)^` の exact blocker まで到達。
+  - 最良候補 `p6_local_seed711_p6focus_blocker_best.ant` は step 25 で `(5,2) 3>` を作るが、同時に `(6,2) 8^` が残って東進を塞ぐ。初期 `(6,14) 8v` がこの blocker の系譜。
+  - `p6_local_seed711_p6focus_blocker_best.ant` 周辺で、grid 1 箇所変更、grid 1 箇所 + program 1 箇所変更、主要候補の program 1 箇所変更を検査したが解なし。
+  - 次は「x5/x6 の横ペアで作った east signal を、右隣 blocker なしで発生させる」または「blocked east signal を p4..p7 で東向き保持して1拍待たせる」制約を探索器へさらに明示する。
+
 ## Accounts / Exploration
 - `knr / X3.159-1989` を取得（Machine Room M4 の note）。
 - `knr` で `ucc io.c std.c hello.c` → `a.um`（5844 bytes）。`a_dump.um` をローカル実行すると `hello world`。
 - `INTRO.UCC=10@999999|8f9afed874f2737d2da23b2044d4868` を取得。
-- `ftd` の認証情報が未取得。
+- `ftd / falderal90` を取得。
+  - `CHECKPASS` brute force を候補文字列事前展開の QBasic batch に分割し、`ftd_common2b_1.bas` で一致。
+  - ログ: `volume9_ftd_common2b_batch1.txt`（入力: `ftd_common2b_batch1_input.txt`）。
+  - ホーム: `TODO`, `README`, `ml19100.exe*`, `icfp.exe*`。
+  - `ml19100.exe` で `BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930` を取得。
+  - `icfp.exe` に既知出版 + `BASIC.MLC` を投入し、CV weight 5175 / Full Administrator を確認（後の Balance 短縮後は 5190、Antomaton 追加後は 5610）。
+  - root 認証情報: `root / c@Rn3g!e`。
+  - ログ: `volume9_ftd_login_explore.txt`, `volume9_ftd_ml19100_probe.txt`, `volume9_ftd_icfp_mlc.txt`, `volume9_ftd_icfp_all.txt`, `volume9_ftd_icfp_all_antwo_more.txt`（入力: `ftd_login_explore_input.txt`, `ftd_ml19100_probe_input.txt`, `ftd_icfp_mlc_input.txt`, `ftd_icfp_all_input.txt`, `ftd_icfp_all_antwo_more_input.txt`）。
+  - `ml19100.exe` は `-h`/`--help`/`.ml` ファイル/存在しないファイル/標準入力断片のいずれでも同じ `BASIC.MLC` のみを出力（ログ: `volume9_ftd_ml19100_deep_probe.txt`）。
+- `root / c@Rn3g!e` でログイン成功。
+  - `/root/tools/README` は UM 参照実装 `um.um` の説明。
+  - `/root/lost+found/recover` で `CREDITS` と AUM ログを復元。CODE LIMESTONE/OBSIDIAN、Vault、Portland の背景情報あり。新しい出版コードは未確認。
+  - `recover` は arbitrary keyword/file 復元ではなく、`Vault`/`Portland` 等も directory/telnet host ではなかった。
+  - ログ: `volume9_root_initial_probe.txt`, `volume9_root_tools_probe.txt`, `volume9_root_lost_found_probe.txt`, `volume9_root_hidden_help_probe.txt`, `volume9_root_dump_recover_probe.txt`, `volume9_root_keywords_probe.txt`。
+  - 追加 probe: `more` は corrupted files を復元しない。`recover ./file` と絶対パス指定は不可、`run recover CREDITS` / `run /root/lost+found/recover CREDITS` は通常の `recover CREDITS` と同等。`dump recover` は不可、`run /root/tools/um.um` は executable 扱いされない。ログ: `volume9_root_deeper_probe.txt`（入力: `root_deeper_probe_input.txt`）。
 - `quick_hack` の辞書拡張版（42/88/120語）でも `ftd`/`knr` は `no quick matches`（`volume9_guest_quick_hack*.txt`）。
 - `quick_hack4`（211語）でも `ftd`/`knr` は `no quick matches`（`volume9_guest_quick_hack4.txt`）。
 - `hack_fixed` の簡易辞書 + 00-99 付加でも `ftd` はヒットせず（`volume9_guest_hackfixed_ftd.txt`）。

@@ -1,0 +1,28 @@
+BEST score=161 step=45 evals=1 restart=1 p6-east-signal ant=(5,2) 1> clear_penalty=0 programs=NSSNNWS WWSEWWN SNEEENE SSNWESS WWSWEEN NSWSENW NENESNN SSNWNEW EWNESNE NNEEENN
+BEST score=160 step=45 evals=7506 restart=4 p6-east-signal ant=(5,2) 1> clear_penalty=0 programs=NSSNNWS WWSEWWN SNESENE SSNWESS WWSWEEN NSWSENW NENESNN SSNWNEW EWNESNE NNEEENN
+BEST score=149 step=27 evals=11410 restart=5 p6-east-signal ant=(5,1) 4> clear_penalty=0 programs=EWSENNE NSNWEES NNNNSSE ESWNEWS ENEENWW NWSNESW WNSWNES NNWNSWS WSESSSW EESWWSE
+NOFOUND best=149 step=27 p6-east-signal ant=(5,1) 4> clear_penalty=0 evals=35436
+PROGRAMS
+EWSENNE
+NSNWEES
+NNNNSSE
+ESWNEWS
+ENEENWW
+NWSNESW
+WNSWNES
+NNWNSWS
+WSESSSW
+EESWWSE
+GRID
+1,13 6>
+2,13  -
+3,13 3>
+4,13 8v
+5,13 3^
+6,13 6^
+1,14 3>
+2,14 5<
+4,14 3>
+5,14 4>
+6,14 1<
+WROTE p6_local_seed705_p6focus_clear_best.ant

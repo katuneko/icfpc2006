@@ -1,0 +1,44 @@
+BEST score=275 step=38 evals=1 restart=1 near-turn-support ant=(15,14) 1^ target=(15,16) E dist=2 ahead=(15,13) support_dist=3 programs=WNWNWNS WNNWNES ESSSSNW EWSEWWE
+BEST score=273 step=38 evals=3 restart=1 near-turn-support ant=(15,14) 1^ target=(15,16) E dist=2 ahead=(15,13) support_dist=3 programs=WNWNWNS WNNWNES ESWSSNW EWSEWWE
+BEST score=271 step=30 evals=11108 restart=4 near-turn-support ant=(15,14) 1^ target=(15,16) E dist=2 ahead=(15,13) support_dist=3 programs=ENSNNSN WEWSNES ENESSNE ESSSSSS
+BEST score=267 step=30 evals=11123 restart=4 near-turn-support ant=(15,14) 1^ target=(15,16) E dist=2 ahead=(15,13) support_dist=3 programs=ENSNNSN WNWSNES EWESSNE ESSSSSS
+BEST score=262 step=26 evals=13599 restart=5 near-turn-support ant=(15,14) 3^ target=(15,16) E dist=2 ahead=(15,13) support_dist=3 programs=ENSNNES WSNNNSS EWNSSSN WSNSNES
+BEST score=50 step=29 evals=14569 restart=5 turn-support ant=(16,15) 3^ target=(16,15) S ahead=(16,14) support_dist=3 programs=ENEWNES WSESNSS EWEESNS WENSEES
+BEST score=47 step=29 evals=14575 restart=5 turn-support ant=(16,15) 3^ target=(16,15) S ahead=(16,14) support_dist=3 programs=ENNWNES WSWSNSS EWEESNS WENSEES
+NOFOUND best=47 step=29 turn-support ant=(16,15) 3^ target=(16,15) S ahead=(16,14) support_dist=3 evals=23728
+PROGRAMS
+ENNWNES
+WSWSNSS
+EWEESNS
+WENSEES
+GRID
+0,0 2<
+1,0 2<
+2,0 1>
+0,1 2v
+1,1 2^
+2,1 1^
+3,1 3>
+0,2  #
+1,2 2>
+2,2 3<
+3,2 0<
+4,2  #
+1,3 0>
+2,3 3^
+3,3 1^
+4,3  #
+5,3 2>
+2,4 1<
+3,4 3<
+4,4 2^
+5,4 0<
+6,4 2>
+3,5 3^
+4,5 3>
+5,5 1<
+6,5 3v
+4,6 0>
+5,6 2^
+6,6 3^
+WROTE p9_local_seed403_nearturn_best.ant

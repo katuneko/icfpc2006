@@ -1,0 +1,98 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as ftd
+
+
+% Begin sending characters. Terminate with EOF...
+writing 14 characters
+% % Begin sending characters. Terminate with EOF...
+writing 0 characters
+% % empty.ml
+hello.ml
+TODO
+README
+ml19100.exe*
+icfp.exe*
+% -rw-    ftd                 0 empty.ml
+-rw-    ftd                14 hello.ml
+-rw-    ftd               247 TODO
+-rw-    ftd               626 README
+-r-x    ftd                 ? ml19100.exe
+-r-x    ftd                 ? icfp.exe
+% Uncaught exception: Unimplemented
+BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930
+% Uncaught exception: Unimplemented
+BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930
+% Uncaught exception: Unimplemented
+BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930
+% Uncaught exception: Unimplemented
+BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930
+% Uncaught exception: Unimplemented
+BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930
+% Uncaught exception: Unimplemented
+BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930
+% Uncaught exception: Unimplemented
+BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930
+% Uncaught exception: Unimplemented
+BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930
+% unknown command let
+new to UMIX? try
+  help
+for help.
+% % 

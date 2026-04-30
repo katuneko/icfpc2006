@@ -232,3 +232,107 @@ H（手数上限）を 10, 20, 30… と増やしていくと見つかること�
 
 * p2/p3 は“調整沼”になりやすい
 * まずは **合流が起きない盤面**に寄せる
+
+---
+
+## 7. 未解組に対する深い方針転換
+
+2026-04-30 の再検討で、未解組は単独蟻の p1 経路探索では足りない可能性が高いと判断した。
+
+### 本質: アリは「移動体」ではなく oriented signal
+
+通常移動では、蟻の次方向は毎回同じ p1 で決まる。したがって単独蟻は、
+
+* p1=N: 直進 + 壁で右折
+* p1=E/W/S: 毎歩同じ相対回転をする
+
+というかなり狭い運動しかできない。任意の曲がり角を作る道具ではない。
+
+自由な向き変更は、実質的に次の局所イベントでしか起きない。
+
+* p2: L 字合流。2 本の入力 signal から 1 本の出力 signal を作る。
+* p3: T 字合流。3 本の入力 signal から 1 本の出力 signal を作る。
+* p4..p7: 前方に蟻が詰まったときの blocker / reflection。
+* 非可 orientable 衝突: signal の消去。
+
+つまり出版を得るには「蟻を走らせる」より、「signal を作る、曲げる、消す」gadget を合成するのが本筋。
+
+### 重要な観察
+
+未解の主要盤面で、wildcard と固定領域の境界セルから単独蟻が p1 だけで food 到達する入口状態を調べたが、P3/P4/P6/P8/P9/P11/P13 では有効な境界状態が出なかった。
+
+これは、いまの `--route-single-ant` / `--fixed-entry-sparse` が弱いというだけでなく、単独 signal では境界から food へ入れない構造になっている可能性が高い、という意味を持つ。
+
+### 次に作るべき探索器
+
+前向きランダム探索ではなく、局所 gadget 列挙にする。
+
+1. 固定領域内で food に到達できる「目標状態」 `(cell, dir, p1)` を列挙する。
+2. 目標状態の近く、または wildcard/固定境界の小矩形（5x5〜7x7）だけを切り出す。
+3. その小矩形内で、2〜4 匹の蟻 + p1/p2/p3/p4..p7 の局所割当を全列挙する。
+4. 数ステップ後に「指定セルへ指定方向の signal を出す」「余計な蟻を消す」gadget だけを採用する。
+5. 採用 gadget を通常シミュレーションへ戻して UMIX verifier 用 `.ant` を生成する。
+
+この探索なら、全盤面を状態空間に入れずに済む。特に P3/P4 は wildcard 領域が巨大なので、局所 gadget の出力だけ固定領域へ注入する形に落とすべき。
+
+### 優先順
+
+1. P3/P4: 巨大 wildcard があり、局所 gadget を置く自由度が最大。p2/p3 merge launcher を境界 x=20/21 近辺に作る。
+2. P8/P11: 小さく、food 周辺の固定領域も近い。gadget 列挙器の検証に向く。
+3. P6/P9/P13: 境界から固定 food 近傍まで距離があり、複数 gadget の合成が必要。
+4. P7/P10: 既存蟻群の interference が主問題。gadget 列挙より、既存蟻の掃除/同期解析を先にする。
+
+## 8. P4 で有効だった分解
+
+Puzzle 4 はこの方針で解けた。重要だったのは、固定領域への「理想注入」と実盤面の差を分けて扱ったこと。
+
+最初に x21 境界へ任意 event を注入するモデルで、固定領域だけなら success する signal schedule を探した。しかし、このモデルは x20 を壁として扱う。実際の wildcard から signal を入れると、x20 は ant が抜けたあと floor として残り、固定領域から西へ漏れるため、直接注入 schedule はそのままでは壊れた。
+
+有効だったモデルは次の形。
+
+1. wildcard 側の最後の列 x20 を「発射口」として扱う。
+2. event は x20 に east-facing ant を置く。
+3. event が起きた x20 セルだけ、その時刻以降 floor として残す。
+4. この発射口込みモデルで固定領域 success schedule を探す。
+5. 得られた x20 event を、p1=N の clan0 delay line で実盤面化する。
+
+最終解は `NWSWWSN` / `ENNNEEW`。x20 の初期 seed 2 匹に加え、clan0 delay line 3 本で t=47/60/103 の signal を作った。`puzzle4_solution.ant` は UMIX verifier で通り、`ANTWO.004=30@999999|7378dae5a8b74ee98a68aa2aedfcdce` を取得。
+
+この成功から、P3 も同じく「x21 注入」ではなく「x20 発射口込み」で schedule を探すべき。発射口セルが floor として残る影響をモデルに入れない候補は信用しない。
+
+## 9. P8/P11 で有効だった局所探索
+
+P8 と P11 は、P4 のように広い delay line を構成するより、先に program を絞ってから wildcard 初期配置を局所探索する方が強かった。
+
+手順は次の通り。
+
+1. wildcard に隣接する固定領域セル、または wildcard 側の発射口セルに、時刻付き event を仮注入する。
+2. その緩いモデルで success する schedule/program を探す。
+3. 得られた program を固定し、実盤面の wildcard 初期配置を simulated annealing 的に変異させる。
+4. score は「food-adjacent target までの距離 + 向き違い penalty + 生存 ant 数」で置く。
+5. success が出たら UMIX verifier へ送る。
+
+この方法で P8 は `puzzle8_solution.ant`、P11 は `puzzle11_solution.ant` として解けた。どちらもローカル step 15 success なので、緩い event schedule は最終解そのものではなく、良い program を見つけるための足場として効いた。
+
+残りの P6/P9/P13 も、まず event schedule で program を絞り、その program 固定で実盤面局所探索する方がよい。P6/P9 は発射口が少なく、P13 は wildcard が複数の島に分かれるので、島ごとに score を作る必要がある。
+
+## 10. P10 で有効だった concrete 局所探索
+
+P10 は固定蟻が多く、event schedule を先に作るより、実盤面の concrete simulation を直接 score する方が効いた。
+
+`ant_local_search.py` を追加し、次の制約で探索した。
+
+1. puzzle の固定 program 文字は絶対に変更しない。
+2. `*` program と wildcard contents だけを変異させる。
+3. score は food-adjacent target ごとの位置差 + 向き違い penalty + 生存 ant 数で評価する。
+4. 一定評価数ごとに restart し、局所最小に張り付かないようにする。
+
+この方法で `puzzle10_solution.ant` が step 79 success。UMIX verifier でも `ANTWO.010=50@999999|c08a0d41ac68ca55d34be6985fb3c1c` を取得した。
+
+同じ探索器の現状限界も見えた。
+
+* P6: `(6,3)` までは届くが、東向きへ曲げる event が score に入っていない。
+* P7: `(6,4)` までは上がるが、food 直下へ押し上げる同期が未解。
+* P13: food 近傍 `(5,25)`/`(5,26)` までは寄るが、最後の向き合わせが未解。
+
+次は、単なる距離 score ではなく「目的セルの直前に必要な helper ant がいるか」を score に入れる。P6 なら `(6,3)` で east-facing を作る p2/p3/blocker setup、P13 なら food 東隣 `(5,26)` で west-facing にする side/helper setup を明示的に報酬化する。

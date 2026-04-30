@@ -131,6 +131,7 @@ fn run<R: Read, W: Write>(
     dump_on_substr: &Option<(Vec<u8>, String)>,
     trace_on_substr: &Option<(Vec<u8>, String)>,
     output_on_substr: &Option<Vec<u8>>,
+    dump_on_error: &Option<String>,
     jump_log: &mut Option<fs::File>,
     jump_log_after: &mut Option<(u64, fs::File)>,
     log_substr_step: &mut Option<(Vec<u8>, fs::File)>,
@@ -151,6 +152,7 @@ fn run<R: Read, W: Write>(
     let mut free_ids: Vec<usize> = Vec::new();
     let mut pc: usize = 0;
     let mut dumped = false;
+    let mut error_dumped = false;
 
     let mut prog_len = arrays[0].len();
     let mut prog_ptr = arrays[0].as_ptr();
@@ -279,6 +281,12 @@ fn run<R: Read, W: Write>(
                                 $step_check
                                 continue;
                             }
+                            if !error_dumped {
+                                if let Some(path) = dump_on_error.as_deref() {
+                                    dump_arrays(path, &arrays, &active)?;
+                                }
+                                error_dumped = true;
+                            }
                             return Err(format!(
                                 "array index from inactive array id {} pc={:#x} step={:#x}",
                                 id, cur_pc, step_count
@@ -292,6 +300,12 @@ fn run<R: Read, W: Write>(
                                 step_count = step_count.wrapping_add(1);
                                 $step_check
                                 continue;
+                            }
+                            if !error_dumped {
+                                if let Some(path) = dump_on_error.as_deref() {
+                                    dump_arrays(path, &arrays, &active)?;
+                                }
+                                error_dumped = true;
                             }
                             return Err(format!(
                                 "array index out of bounds: id={} idx={} pc={:#x} step={:#x}",
@@ -309,6 +323,12 @@ fn run<R: Read, W: Write>(
                                 $step_check
                                 continue;
                             }
+                            if !error_dumped {
+                                if let Some(path) = dump_on_error.as_deref() {
+                                    dump_arrays(path, &arrays, &active)?;
+                                }
+                                error_dumped = true;
+                            }
                             return Err(format!(
                                 "array amend inactive array id {} pc={:#x} step={:#x}",
                                 id, cur_pc, step_count
@@ -321,6 +341,12 @@ fn run<R: Read, W: Write>(
                                 step_count = step_count.wrapping_add(1);
                                 $step_check
                                 continue;
+                            }
+                            if !error_dumped {
+                                if let Some(path) = dump_on_error.as_deref() {
+                                    dump_arrays(path, &arrays, &active)?;
+                                }
+                                error_dumped = true;
                             }
                             return Err(format!(
                                 "array amend out of bounds: id={} idx={} pc={:#x} step={:#x}",
@@ -612,6 +638,7 @@ fn main() {
     let mut dump_on_substr: Option<(Vec<u8>, String)> = None;
     let mut trace_on_substr: Option<(Vec<u8>, String)> = None;
     let mut output_on_substr: Option<Vec<u8>> = None;
+    let mut dump_on_error: Option<String> = None;
     let mut jump_log: Option<fs::File> = None;
     let mut jump_log_after: Option<(u64, fs::File)> = None;
     let mut log_substr_step: Option<(Vec<u8>, fs::File)> = None;
@@ -726,12 +753,23 @@ fn main() {
                 Some(v) => v,
                 None => {
                     eprintln!(
-                        "usage: um [-steps N] [-dump PATH] [-dump-on-pub PATH] [-trace-on-pub PATH] [-dump-on-substr STR PATH] [-trace-on-substr STR PATH] [-output-on-substr STR] [-log-substr-step STR PATH] [-log-jumps PATH] [-log-jumps-after-step N PATH] [-trace-pc ADDR PATH] [-watch-array ID IDX PATH] [-patch-array ID IDX VALUE] [-patch ADDR VALUE] [-patch-after-substr STR ADDR VALUE] [-patch-on-pc ADDR VALUE] [-override-on-substr STR ADDR VALUE] [-override-on-blank-line ADDR VALUE] [-oob-zero] program.um"
+                        "usage: um [-steps N] [-dump PATH] [-dump-on-pub PATH] [-trace-on-pub PATH] [-dump-on-substr STR PATH] [-trace-on-substr STR PATH] [-output-on-substr STR] [-dump-on-error PATH] [-log-substr-step STR PATH] [-log-jumps PATH] [-log-jumps-after-step N PATH] [-trace-pc ADDR PATH] [-watch-array ID IDX PATH] [-patch-array ID IDX VALUE] [-patch ADDR VALUE] [-patch-after-substr STR ADDR VALUE] [-patch-on-pc ADDR VALUE] [-override-on-substr STR ADDR VALUE] [-override-on-blank-line ADDR VALUE] [-oob-zero] program.um"
                     );
                     std::process::exit(2);
                 }
             };
             output_on_substr = Some(needle.into_bytes());
+        } else if arg == "-dump-on-error" {
+            let path = match args.next() {
+                Some(p) => p,
+                None => {
+                    eprintln!(
+                        "usage: um [-steps N] [-dump PATH] [-dump-on-pub PATH] [-trace-on-pub PATH] [-dump-on-substr STR PATH] [-trace-on-substr STR PATH] [-output-on-substr STR] [-dump-on-error PATH] [-log-substr-step STR PATH] [-log-jumps PATH] [-log-jumps-after-step N PATH] [-trace-pc ADDR PATH] [-watch-array ID IDX PATH] [-patch-array ID IDX VALUE] [-patch ADDR VALUE] [-patch-after-substr STR ADDR VALUE] [-patch-on-pc ADDR VALUE] [-override-on-substr STR ADDR VALUE] [-override-on-blank-line ADDR VALUE] [-oob-zero] program.um"
+                    );
+                    std::process::exit(2);
+                }
+            };
+            dump_on_error = Some(path);
         } else if arg == "-log-substr-step" {
             let needle = match args.next() {
                 Some(v) => v,
@@ -1175,7 +1213,7 @@ fn main() {
             program_path = Some(arg);
         } else {
             eprintln!(
-                "usage: um [-steps N] [-dump PATH] [-dump-on-pub PATH] [-trace-on-pub PATH] [-dump-on-substr STR PATH] [-trace-on-substr STR PATH] [-output-on-substr STR] [-log-substr-step STR PATH] [-log-jumps PATH] [-log-jumps-after-step N PATH] [-trace-pc ADDR PATH] [-watch-array ID IDX PATH] [-patch-array ID IDX VALUE] [-patch ADDR VALUE] [-patch-after-substr STR ADDR VALUE] [-patch-on-pc ADDR VALUE] [-override-on-substr STR ADDR VALUE] [-override-on-blank-line ADDR VALUE] [-oob-zero] program.um"
+                "usage: um [-steps N] [-dump PATH] [-dump-on-pub PATH] [-trace-on-pub PATH] [-dump-on-substr STR PATH] [-trace-on-substr STR PATH] [-output-on-substr STR] [-dump-on-error PATH] [-log-substr-step STR PATH] [-log-jumps PATH] [-log-jumps-after-step N PATH] [-trace-pc ADDR PATH] [-watch-array ID IDX PATH] [-patch-array ID IDX VALUE] [-patch ADDR VALUE] [-patch-after-substr STR ADDR VALUE] [-patch-on-pc ADDR VALUE] [-override-on-substr STR ADDR VALUE] [-override-on-blank-line ADDR VALUE] [-oob-zero] program.um"
             );
             std::process::exit(2);
         }
@@ -1217,6 +1255,7 @@ fn main() {
         &dump_on_substr,
         &trace_on_substr,
         &output_on_substr,
+        &dump_on_error,
         &mut jump_log,
         &mut jump_log_after,
         &mut log_substr_step,

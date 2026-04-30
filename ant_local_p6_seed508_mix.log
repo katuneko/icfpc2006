@@ -1,0 +1,26 @@
+BEST score=335 step=12 evals=1 restart=1 near-turn-support ant=(6,3) 2^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 programs=NNENNSS NEWENWE NWNEENW NNSWSNW NNESNNW NSNEWWE NWNSNEN NENESSN NSWSSEN NSESSES
+NOFOUND best=335 step=12 near-turn-support ant=(6,3) 2^ target=(9,3) E dist=3 ahead=(6,2) support_dist=1 evals=67766
+PROGRAMS
+NNENNSS
+NEWENWE
+NWNEENW
+NNSWSNW
+NNESNNW
+NSNEWWE
+NWNSNEN
+NENESSN
+NSWSSEN
+NSESSES
+GRID
+1,13 0>
+2,13 0v
+3,13 1<
+4,13 2<
+5,13 1<
+6,13 0^
+1,14 2>
+2,14 2<
+4,14 2^
+5,14 0^
+6,14 2<
+WROTE p6_local_seed508_mix_best.ant

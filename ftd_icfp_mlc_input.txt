@@ -1,0 +1,6 @@
+ftd
+falderal90
+icfp.exe
+BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930
+
+logout

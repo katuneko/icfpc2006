@@ -1,0 +1,26 @@
+BEST score=113 step=24 evals=1 restart=1 p6-exact-blocker ant=(5,2) 8^ ahead=(5,1) rel=0 turn_penalty=0 lateral_penalty=0 lateral_wait_penalty=0 programs=ESWNSWE WEWSEEE EWWNNSW SSSWNNE ESWWWWW EWNNWNN EWWSWSE SWNESWN NWNEEWS NENSWNE
+NOFOUND best=113 step=24 p6-exact-blocker ant=(5,2) 8^ ahead=(5,1) rel=0 turn_penalty=0 lateral_penalty=0 lateral_wait_penalty=0 evals=36910
+PROGRAMS
+ESWNSWE
+WEWSEEE
+EWWNNSW
+SSSWNNE
+ESWWWWW
+EWNNWNN
+EWWSWSE
+SWNESWN
+NWNEEWS
+NENSWNE
+GRID
+1,13 2v
+2,13 8>
+3,13 5>
+4,13 5<
+5,13 0^
+6,13 1^
+1,14 7>
+2,14 3^
+4,14 9^
+5,14 8^
+6,14 1v
+WROTE p6_local_seed716_p6focus_lateral_best.ant

@@ -1,0 +1,27 @@
+Puzzle 6: Tight Turn
+NNENNSS
+NEWENWE
+NWNEENW
+NNSWSNW
+NNESNNW
+NSNEWWE
+NWNSNEN
+NENESSN
+NSWSSEN
+NSESSES
+11 15
+ o o o o o o o o o o o
+ o - - - - - - - - - $
+ o - - - - - - - - - $
+ o - - - - - - - - - $
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o0>0v1<2<1<0^ o o o o
+ o2>2< -2^0^2< o o o o

@@ -1,0 +1,11 @@
+ftd
+falderal90
+pwd
+ls
+ls -l
+cat README
+cat .history
+mail
+0
+q
+logout

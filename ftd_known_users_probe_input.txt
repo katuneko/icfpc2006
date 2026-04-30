@@ -1,0 +1,12 @@
+knr
+X3.159-1989
+pwd
+ls -l /
+ls -l /home
+ls -l /home/ftd
+cat /home/ftd/.history
+cat /home/ftd/README
+mail
+0
+q
+logout

@@ -1,0 +1,276 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as root
+
+---------------------------------------------------------
+Administrative account is for maintenance only.
+No research is allowed.
+---------------------------------------------------------
+
+% % File corrupted.  Try running 'recover'.
+% File corrupted.  Try running 'recover'.
+% File corrupted.  Try running 'recover'.
+% File corrupted.  Try running 'recover'.
+% usage: recover <filename>
+% File recovered!  Text follows:
+ 
+                     ICFP Programming Contest 2006
+                          Codename: Homework 7
+
+
+                                  CAST
+
+                  (in reverse order of disappearance)
+
+Cult Leader..............................................Tom Murphy VII
+
+Robot Psychologist....................................Daniel Spoonhower
+
+Chief Parser...........................................Chris Casinghino
+
+Point Cutter.................................................Dan Licata
+
+Trapeze Artist.............................................Ruy Ley-Wild
+
+Embedded Systems Designer....................................Adam Goode
+
+Ant Brain.................................................William Lovas
+
+First Reporter..............................................Jake Donham
+
+Awkward Programmer......................................Noam Zeilberger
+
+Perl Harborer................................................Jason Reed
+
+Lead Archaeolinguist.....................................Harry Q. Bovik
+
+                                  With
+Studio Producer..............................................Karl Crary
+
+                                  And
+;Managing Editor..........................................Robert Harper
+
+
+
+                           Special Thanks To
+
+Alexander the Great......................................Sridhar Ramesh
+
+Knight Errant...........................................Spencer Whitman
+
+Alexander the Lesser......................................Susmit Sarkar
+
+John Philip Sousa.........................................Akiva Leffert
+
+Graduate Student.........................................Zessa Birbaslo
+
+Graduate Student (Understudy)..............................Grol Blirtri
+
+Computational Archaeolinguist (Understudy)..........................YOU
+
+% File recovered!  Text follows:
+ AUM (Arkose Urgent Messenger) Log
+29 Dec, 19004 17:21:07
+
+ZB> how's work?
+GB> boring.  I'm working on a tedious date translation system
+ZB> date translation?
+GB> yeah.  you know that the CLV uses a different date system than we
+    do, right?
+ZB> yes, of course!  theirs goes back to before the Separating Disjunction!
+GB> a lot of good that does us now.  we need to correlate their dates
+    with ours so we can interpret the signal intercepts and figure out
+    what they're planning to do next.
+ZB> that doesn't sound hard.
+GB> well, I have to account for the internal/external date distinction.
+    our dates alpha-convert; theirs occur in a strict sequence.
+ZB> interesting!  I didn't realize that anyone still used external
+    dates.  
+GB> and you've only been studying this kind of thing for a decade.
+ZB> in a historical context!  what's their current system like?
+GB> it's strange.  they seem to be counting *down* to something.
+    near as I can tell, we're nearing the end of the year 1 in their
+    system.
+ZB> so the Separating Disjunction was 200 or so?
+GB> near as I can tell.    
+ZB> what's going to happen to their programs?
+GB> their programs?
+ZB> haven't you ever written some code that assumes that the year is a
+    positive integer?
+GB> hmmmm. that's a good point.
+GB> want to get some dinner soon?
+ZB> not just yet.  I'm close to finishing this translation I've been
+    working on.  
+GB> what are you translating?
+ZB> a history from before the Separating Disjunction.  you know how hard
+    it is to reason about heaps from then.
+GB> fine, I can wait.
+
+****URGENT SYSTEM MESSAGE> CODE LIMESTONE.****
+
+ZB> you think this is a drill?
+GB> probably.  we've been having so many lately.
+ZB> it could be real.
+GB> you don't think that the CLV has...?
+ZB> I don't know.  I'll see you at the bunker in the north hills.
+GB> okay.
+ZB> see you.
+% File recovered!  Text follows:
+ AUM (Arkose Urgent Messenger) Log
+29 Dec, 19004 22:21:07
+
+ZB> are you here yet?
+GB> just got in.
+ZB> good.  any word?
+GB> not yet.  we don't know if it's a drill or not.
+ZB> it must be a drill.  the Cult of the LValue can't have an actual
+    sandworm.
+GB> they might.
+ZB> they don't.
+GB> they could.
+ZB> I know.
+ZB> I hate hiding out here.  
+GB> what choice do we have?  a sandworm could take down the UM.
+ZB> too much runs on the UM.
+GB> everything runs on the UM.  the economy, agriculture, ...
+ZB> the weather!
+GB> did you bring your winter coat?
+ZB> you think this is a good time for jokes?
+GB> we might not have another time for jokes, so I think this one's
+    pretty good, yeah.
+ZB> if they have a sandworm... everything we've worked for, everything
+    we've learned...
+GB> not everything.  you know we have contingency plans.
+ZB> have they been implemented?
+GB> we have partial relics deployed already.
+ZB> where?
+GB> Chicago, Philadelphia, Portland.
+GB> Rocquencourt, Ithaca, and Chalmers.
+GB> and Boston and Virginia.
+ZB> and the real thing?
+GB> the omega codex is being backed up nightly to the Vault.
+ZB> that's reassuring.
+GB> 11:59 every night; everything we've learned.  even if the CLV has a
+    sandworm, all won't be lost.
+ZB> the codex is encrypted in case CLV gets their hands on it.
+    why do we think that people will be able to decrypt it?
+GB> the people in Futures have planned for this.  at worst, the
+    necessary people will gather in Portland in about 2006 years.
+ZB> these people will be interested?
+GB> the people in Futures tell me that they'll gather in Portland
+    whether they're interested or not.
+ZB> the people in Futures creep me out.
+GB> well, don't call them unless you need to.
+ZB> the people in Futures can make something happen 2006 years from now?
+GB> you know as well as I do how they're going to do it.
+ZB> ...
+GB> so what's it about?
+ZB> huh?
+GB> the scroll you were translating before the alarm.  what's it about?
+ZB> it's mostly the story that everyone knows.
+ZB> Rumulous and Rimis fighting over who gets to name the UM;
+    the Disjunction between us and CLV.  it's a first-hand account,
+    though!  details that I've never seen before.
+GB> finish it up while we wait.  it'll take your mind off things.
+ZB> you're right.
+% File recovered!  Text follows:
+ AUM (Arkose Urgent Messenger) Log
+29 Dec, 19004 23:51:07
+
+****URGENT SYSTEM MESSAGE> CODE LIMESTONE REVOKED.****
+
+GB> whew.
+GB> guess it was just a drill after all.
+GB> where'd you go?
+ZB> quick, what's the date today?
+GB> 29 Dec, 19004.  
+ZB> no, what's the external date today?
+GB> oh, funny you should ask.
+GB> I was just finishing the translation.
+ZB> what's the damn date?
+GB> it turns out that it's 31 Dec, year 1.  
+ZB> no!
+GB> what's wrong?!
+ZB> I finished the translation.
+GB> so?
+ZB> details I've never seen before.  here's one: before the Separating
+    Disjunction, Rimis wrote the UM I operating system kernel.
+GB> ...?
+ZB> *before the Separating Disjunction*!  
+GB> I don't get it.
+ZB> they were still using external dates then!
+GB> which means that if any of the UMI code is still being used in
+    UMIX...
+ZB> then the UM's going down for system halt NOW!
+GB> we're just as dead as CLV.  the economy, agriculture.
+ZB> I hope you brought your winter coat.
+GB> Zes, do you want to send the code obsidian? or should I?
+ZB> I'll do it.
+
+****URGENT SYSTEM MESSAGE> CODE OBS% recover*
+CREDITS
+aum_log_29_12_19004_172107
+aum_log_29_12_19004_222107
+aum_log_29_12_19004_235107
+% -r-x    root                ? recover
+-rw-    root               40 CREDITS
+-rw-    root               40 aum_log_29_12_19004_172107
+-rw-    root               40 aum_log_29_12_19004_222107
+-rw-    root               40 aum_log_29_12_19004_235107
+% 

@@ -1,0 +1,24 @@
+Puzzle 9: Diagonalia
+WSNSENN
+WEWSNSS
+EWNSSSS
+WESSSES
+18 18
+0^1v o - - o o o o o o o o o o o o o
+0v0v #2v - - o o o o o o o o o o o o
+2^0<1v1v3< - - o o o o o o o o o o o
+ -0^0<2< #2> - - o o o o o o o o o o
+ - -3>0^2v2^2> - - o o o o o o o o o
+ o - -0>0<1<3v - - - o o o o o o o o
+ o o - -1>2^3^ - - - - o o o o o o o
+ o o o - - - - - - - - - o o o o o o
+ o o o o - - - - - - - - - o o o o o
+ o o o o o - - - - - - - - - o o o o
+ o o o o o o - - - - - - - - - o o o
+ o o o o o o o - - - - - - - - - o o
+ o o o o o o o o - - - - - - - - - o
+ o o o o o o o o o - - - - - - - - o
+ o o o o o o o o o o - - - - - - - o
+ o o o o o o o o o o o - - - - - - o
+ o o o o o o o o o o o o - - - - $ o
+ o o o o o o o o o o o o o o o o o o

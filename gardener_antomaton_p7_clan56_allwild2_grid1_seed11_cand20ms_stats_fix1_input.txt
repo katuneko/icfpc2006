@@ -1,0 +1,1 @@
+python3 ant_solver.py --grid-wilds-sparse --match 'Puzzle 7' --ants 2 --ant-clans 5,6 --grid-wild-values floor,wall,hole --grid-wild-max-nonfloor 1 --max-steps 12000 --distance-prune --sparse-order best --random-tries 8000 --shuffle-seed 11 --candidate-time-limit-seconds 0.02 --time-limit-seconds 20

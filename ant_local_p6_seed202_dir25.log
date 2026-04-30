@@ -1,0 +1,32 @@
+BEST score=772 step=14 evals=1 restart=1 ant=(2,3) 2^ target=(9,3) E dist=7 manhattan=7 programs=NWWWEEW NNWWWNS NEEWEWS NWEWWNE NSWWWSN NENNWSN NEEENSE NEEWESS NESSSWE NSNEWWS
+BEST score=768 step=10 evals=5 restart=1 ant=(2,3) 0^ target=(9,3) E dist=7 manhattan=7 programs=NEWWEEW NNWWWNS NWEWEWS NWEWWNE NSWWWEN NESNWSN NNEENSE NEWWESS NESSSWE NSNEWWS
+BEST score=453 step=11 evals=9 restart=1 ant=(5,3) 0^ target=(9,3) E dist=4 manhattan=4 programs=NEWWEES NNWWWNS NWESWWS NWEWWNE NSWWEEN NWSNWSN NSEENSS NEWWESS NESSSWE NSNEWWS
+BEST score=451 step=11 evals=11 restart=1 ant=(5,3) 0^ target=(9,3) E dist=4 manhattan=4 programs=NEWWEES NNWWWNS NWESWNS NWEWWNE NSWWEEN NWSNWSN NSEENSS NEWWESS NEWSSWE NSNEWWS
+BEST score=447 step=11 evals=13 restart=1 ant=(5,3) 0^ target=(9,3) E dist=4 manhattan=4 programs=NEWWEES NNWWWNS NWESWNS NWEWWNW NSWSEEE NWSNWSN NSEENSS NEWWESS NEWSSWN NSNEWWS
+BEST score=340 step=10 evals=14 restart=1 ant=(6,3) 0^ target=(9,3) E dist=3 manhattan=3 programs=NEWWEES NNWWWNS NWESWNS NWEWWNW NSWSEEE NESNWSN NSEENSS NEWWESS NEWSSWN NSNEWWS
+BEST score=339 step=10 evals=10824 restart=5 ant=(6,3) 0^ target=(9,3) E dist=3 manhattan=3 programs=NNENNSS NEWENWE NWNEENW NNSWSNW NNESNNW NSNEWWE NWNSNEN NENESSN NSWSSEN NSESSES
+NOFOUND best=339 step=10 ant=(6,3) 0^ target=(9,3) E dist=3 manhattan=3 evals=23079
+PROGRAMS
+NNENNSS
+NEWENWE
+NWNEENW
+NNSWSNW
+NNESNNW
+NSNEWWE
+NWNSNEN
+NENESSN
+NSWSSEN
+NSESSES
+GRID
+1,13 0>
+2,13 0v
+3,13 1<
+4,13 2<
+5,13 1<
+6,13 0^
+1,14 2>
+2,14 2<
+4,14 2^
+5,14 0^
+6,14 2<
+WROTE p6_local_seed202_dir25_best.ant

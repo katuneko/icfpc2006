@@ -11,6 +11,8 @@ from collections import Counter, deque
 from itertools import combinations, product
 import re
 import heapq
+import random
+from time import monotonic
 
 # Directions: 0=N,1=E,2=S,3=W
 DIRS = "NESW"
@@ -93,6 +95,19 @@ class CarveSolution:
     floor_mask: int
     wall_mask: int
     wild_list: Tuple[int, ...]
+
+
+@dataclass(frozen=True)
+class RouteSolution:
+    start_idx: int
+    start_dir: int
+    p1: int
+    grid_assignments: Tuple[Tuple[int, int], ...]
+    steps: int
+
+
+class SearchTimeout(RuntimeError):
+    """Raised when a search exceeds the configured deadline."""
 
 
 def rotate_dir(direction: int, steps: int) -> int:
@@ -530,6 +545,104 @@ def has_success_sparse(
     raise ValueError(f"unknown success mode: {mode!r}")
 
 
+def resolve_sparse_grid_cell(
+    idx: int,
+    ants: Dict[int, int],
+    base_state: List[int],
+    grid_assignments: List[int],
+    grid_entry_by_idx: Dict[int, int],
+) -> int:
+    if idx == -1:
+        return CELL_WALL
+    ant_val = ants.get(idx)
+    if ant_val is not None:
+        return ant_val
+    base_val = base_state[idx]
+    if base_val != CELL_WILD:
+        return base_val
+    entry = grid_entry_by_idx.get(idx)
+    if entry is None:
+        raise ValueError(f"missing grid entry for wildcard at {idx}")
+    assigned = grid_assignments[entry]
+    if assigned == -1:
+        raise ValueError("grid wildcard not assigned before use")
+    return assigned
+
+
+def sparse_grid_cell_is_value(
+    idx: int,
+    ants: Dict[int, int],
+    base_state: List[int],
+    grid_assignments: List[int],
+    grid_entry_by_idx: Dict[int, int],
+    target: int,
+    unresolved_values: Optional[List[int]] = None,
+) -> bool:
+    if idx == -1:
+        return target == CELL_WALL
+    ant_val = ants.get(idx)
+    if ant_val is not None:
+        return ant_val == target
+    base_val = base_state[idx]
+    if base_val != CELL_WILD:
+        return base_val == target
+    entry = grid_entry_by_idx.get(idx)
+    if entry is None:
+        raise ValueError(f"missing grid entry for wildcard at {idx}")
+    assigned = grid_assignments[entry]
+    if assigned == -1:
+        return unresolved_values is not None and target in unresolved_values
+    return assigned == target
+
+
+def has_success_sparse_with_grid(
+    ants: Dict[int, int],
+    neighbors: List[Tuple[int, int, int, int]],
+    base_state: List[int],
+    grid_assignments: List[int],
+    grid_entry_by_idx: Dict[int, int],
+    grid_values: List[int],
+    mode: str,
+) -> bool:
+    if mode == "facing":
+        for pos, val in ants.items():
+            ahead = neighbors[pos][ant_dir(val)]
+            if (
+                ahead != -1
+                and sparse_grid_cell_is_value(
+                    ahead,
+                    ants,
+                    base_state,
+                    grid_assignments,
+                    grid_entry_by_idx,
+                    CELL_FOOD,
+                    unresolved_values=grid_values,
+                )
+            ):
+                return True
+        return False
+    if mode == "below":
+        for pos, val in ants.items():
+            if ant_dir(val) != 0:
+                continue
+            ahead = neighbors[pos][0]
+            if (
+                ahead != -1
+                and sparse_grid_cell_is_value(
+                    ahead,
+                    ants,
+                    base_state,
+                    grid_assignments,
+                    grid_entry_by_idx,
+                    CELL_FOOD,
+                    unresolved_values=grid_values,
+                )
+            ):
+                return True
+        return False
+    raise ValueError(f"unknown success mode: {mode!r}")
+
+
 def step_sparse(
     ants: Dict[int, int],
     neighbors: List[Tuple[int, int, int, int]],
@@ -588,6 +701,8 @@ def step_sparse_partial(
     base_state: List[int],
     assignments: List[int],
     program_count: int,
+    rng: Optional[random.Random] = None,
+    deadline: Optional[float] = None,
 ) -> List[Tuple[Dict[int, int], List[int]]]:
     affected = set()
     for pos in ants:
@@ -609,6 +724,7 @@ def step_sparse_partial(
         deps.setdefault(entry, []).append((idx, outputs))
 
     for idx in affected:
+        ensure_deadline(deadline)
         val = ants.get(idx, base_state[idx])
         if val in (CELL_WALL, CELL_HOLE, CELL_FOOD):
             continue
@@ -747,17 +863,25 @@ def step_sparse_partial(
             new_ants[idx] = val
 
     unassigned = [entry for entry in deps if assignments[entry] == -1]
+    if rng is not None and len(unassigned) > 1:
+        rng.shuffle(unassigned)
     if not unassigned:
         return [(new_ants, assignments)]
 
     results: List[Tuple[Dict[int, int], List[int]]] = []
 
     def recurse(i: int, cur_ants: Dict[int, int], cur_assignments: List[int]) -> None:
+        ensure_deadline(deadline)
         if i == len(unassigned):
             results.append((cur_ants, cur_assignments))
             return
         entry = unassigned[i]
-        for val in range(4):
+        if rng is None:
+            value_order = range(4)
+        else:
+            value_order = [0, 1, 2, 3]
+            rng.shuffle(value_order)
+        for val in value_order:
             next_ants = dict(cur_ants)
             next_assignments = cur_assignments[:]
             next_assignments[entry] = val
@@ -783,6 +907,8 @@ def step_sparse_partial_with_grid(
     grid_values: List[int],
     grid_nonfloor_limit: Optional[int],
     program_count: int,
+    rng: Optional[random.Random] = None,
+    deadline: Optional[float] = None,
 ) -> List[Tuple[Dict[int, int], List[int], List[int]]]:
     affected = set()
     for pos in ants:
@@ -820,25 +946,12 @@ def step_sparse_partial_with_grid(
         if grid_assignments[entry] == -1 and entry not in unassigned_set:
             unassigned_set.add(entry)
             unassigned_entries.append(entry)
+    if rng is not None and len(unassigned_entries) > 1:
+        rng.shuffle(unassigned_entries)
 
     results: List[Tuple[Dict[int, int], List[int], List[int]]] = []
 
     def resolve_step(cur_grid_assignments: List[int]) -> None:
-        def get_val(idx: int) -> int:
-            ant_val = ants.get(idx)
-            if ant_val is not None:
-                return ant_val
-            base_val = base_state[idx]
-            if base_val != CELL_WILD:
-                return base_val
-            entry = grid_entry_by_idx.get(idx)
-            if entry is None:
-                raise ValueError(f"missing grid entry for wildcard at {idx}")
-            assigned = cur_grid_assignments[entry]
-            if assigned == -1:
-                raise ValueError("grid wildcard not assigned before use")
-            return assigned
-
         new_ants: Dict[int, int] = {}
         deps: Dict[int, List[Tuple[int, List[int]]]] = {}
 
@@ -846,14 +959,25 @@ def step_sparse_partial_with_grid(
             deps.setdefault(entry, []).append((idx, outputs))
 
         for idx in affected:
-            val = get_val(idx)
+            ensure_deadline(deadline)
+            val = resolve_sparse_grid_cell(
+                idx, ants, base_state, cur_grid_assignments, grid_entry_by_idx
+            )
             if val in (CELL_WALL, CELL_HOLE, CELL_FOOD):
                 continue
             n_idx, e_idx, s_idx, w_idx = neighbors[idx]
-            n_val = get_val(n_idx) if n_idx != -1 else CELL_WALL
-            e_val = get_val(e_idx) if e_idx != -1 else CELL_WALL
-            s_val = get_val(s_idx) if s_idx != -1 else CELL_WALL
-            w_val = get_val(w_idx) if w_idx != -1 else CELL_WALL
+            n_val = resolve_sparse_grid_cell(
+                n_idx, ants, base_state, cur_grid_assignments, grid_entry_by_idx
+            )
+            e_val = resolve_sparse_grid_cell(
+                e_idx, ants, base_state, cur_grid_assignments, grid_entry_by_idx
+            )
+            s_val = resolve_sparse_grid_cell(
+                s_idx, ants, base_state, cur_grid_assignments, grid_entry_by_idx
+            )
+            w_val = resolve_sparse_grid_cell(
+                w_idx, ants, base_state, cur_grid_assignments, grid_entry_by_idx
+            )
             vals = (n_val, e_val, s_val, w_val)
 
             if is_ant(val):
@@ -986,6 +1110,8 @@ def step_sparse_partial_with_grid(
                 new_ants[idx] = val
 
         unassigned = [entry for entry in deps if assignments[entry] == -1]
+        if rng is not None and len(unassigned) > 1:
+            rng.shuffle(unassigned)
         if not unassigned:
             results.append((new_ants, assignments, cur_grid_assignments))
             return
@@ -993,11 +1119,17 @@ def step_sparse_partial_with_grid(
         def recurse(
             i: int, cur_ants: Dict[int, int], cur_assignments: List[int]
         ) -> None:
+            ensure_deadline(deadline)
             if i == len(unassigned):
                 results.append((cur_ants, cur_assignments, cur_grid_assignments))
                 return
             entry = unassigned[i]
-            for val in range(4):
+            if rng is None:
+                value_order = range(4)
+            else:
+                value_order = [0, 1, 2, 3]
+                rng.shuffle(value_order)
+            for val in value_order:
                 next_ants = dict(cur_ants)
                 next_assignments = cur_assignments[:]
                 next_assignments[entry] = val
@@ -1011,6 +1143,7 @@ def step_sparse_partial_with_grid(
 
         recurse(0, new_ants, assignments[:])
 
+    ensure_deadline(deadline)
     if not unassigned_entries:
         resolve_step(grid_assignments)
         return results
@@ -1018,11 +1151,17 @@ def step_sparse_partial_with_grid(
     def recurse_grid(
         i: int, cur_grid_assignments: List[int], nonfloor_count: int
     ) -> None:
+        ensure_deadline(deadline)
         if i == len(unassigned_entries):
             resolve_step(cur_grid_assignments)
             return
         entry = unassigned_entries[i]
-        for val in grid_values:
+        if rng is None:
+            value_order = grid_values
+        else:
+            value_order = grid_values[:]
+            rng.shuffle(value_order)
+        for val in value_order:
             next_nonfloor_count = nonfloor_count
             if val != CELL_FLOOR:
                 next_nonfloor_count += 1
@@ -1059,19 +1198,60 @@ def search_partial_programs_sparse_with_grid(
     max_steps: int,
     success_mode: str,
     dist_map: Optional[List[Optional[int]]] = None,
+    rng: Optional[random.Random] = None,
+    deadline: Optional[float] = None,
+    search_order: str = "dfs",
+    use_dominance: bool = True,
 ) -> Optional[Tuple[List[int], List[int], int]]:
     seen_by_ants: Dict[
         Tuple[Tuple[int, int], ...],
         List[Tuple[int, Tuple[int, ...], int, Tuple[int, ...], int]],
     ] = {}
-    stack: List[Tuple[Dict[int, int], List[int], List[int], int]] = [
-        (ants, assignments, grid_assignments, 0)
-    ]
-    while stack:
-        cur_ants, cur_assignments, cur_grid_assignments, step = stack.pop()
+    seen_exact: Dict[
+        Tuple[Tuple[Tuple[int, int], ...], Tuple[int, ...], Tuple[int, ...]],
+        int,
+    ] = {}
+    stack: List[Tuple[Dict[int, int], List[int], List[int], int]] = []
+    heap: List[Tuple[int, int, int, int, Dict[int, int], List[int], List[int]]] = []
+    order_counter = 0
+    if search_order == "dfs":
+        stack.append((ants, assignments, grid_assignments, 0))
+    elif search_order == "best":
+        start_est = 0
+        if dist_map is not None:
+            start_md = compute_min_distance_from_ant_positions(ants, dist_map)
+            start_est = start_md if start_md is not None else max_steps + 1
+        heapq.heappush(
+            heap,
+            (start_est, start_est, 0, order_counter, ants, assignments, grid_assignments),
+        )
+    else:
+        raise ValueError(f"unknown search order: {search_order!r}")
+    while stack or heap:
+        ensure_deadline(deadline)
+        if search_order == "dfs":
+            cur_ants, cur_assignments, cur_grid_assignments, step = stack.pop()
+        else:
+            (
+                _priority,
+                _est,
+                step,
+                _ord,
+                cur_ants,
+                cur_assignments,
+                cur_grid_assignments,
+        ) = heapq.heappop(heap)
         if not cur_ants:
             continue
-        if has_success_sparse(cur_ants, neighbors, base_state, success_mode):
+        if has_success_sparse_with_grid(
+            cur_ants,
+            neighbors,
+            base_state,
+            cur_grid_assignments,
+            grid_entry_by_idx,
+            grid_values,
+            success_mode,
+        ):
             return cur_assignments, cur_grid_assignments, step
         if step >= max_steps:
             continue
@@ -1083,20 +1263,27 @@ def search_partial_programs_sparse_with_grid(
         key = tuple(sorted(cur_ants.items()))
         cur_prog_values = tuple(cur_assignments)
         cur_grid_values = tuple(cur_grid_assignments)
-        cur_prog_mask = assignment_mask(cur_assignments)
-        cur_grid_mask = assignment_mask(cur_grid_assignments)
-        records = seen_by_ants.get(key, [])
-        records, skip = update_dominance_records_pair(
-            records,
-            cur_prog_values,
-            cur_prog_mask,
-            cur_grid_values,
-            cur_grid_mask,
-            step,
-        )
-        seen_by_ants[key] = records
-        if skip:
-            continue
+        if use_dominance:
+            cur_prog_mask = assignment_mask(cur_assignments)
+            cur_grid_mask = assignment_mask(cur_grid_assignments)
+            records = seen_by_ants.get(key, [])
+            records, skip = update_dominance_records_pair(
+                records,
+                cur_prog_values,
+                cur_prog_mask,
+                cur_grid_values,
+                cur_grid_mask,
+                step,
+            )
+            seen_by_ants[key] = records
+            if skip:
+                continue
+        else:
+            exact_key = (key, cur_prog_values, cur_grid_values)
+            prev_step = seen_exact.get(exact_key)
+            if prev_step is not None and prev_step <= step:
+                continue
+            seen_exact[exact_key] = step
         next_states = step_sparse_partial_with_grid(
             cur_ants,
             neighbors,
@@ -1107,11 +1294,40 @@ def search_partial_programs_sparse_with_grid(
             grid_values,
             grid_nonfloor_limit,
             program_count,
+            rng=rng,
+            deadline=deadline,
         )
+        if rng is not None and len(next_states) > 1:
+            rng.shuffle(next_states)
+        next_step = step + 1
         for next_ants, next_assignments, next_grid_assignments in next_states:
-            stack.append(
-                (next_ants, next_assignments, next_grid_assignments, step + 1)
-            )
+            if not next_ants:
+                continue
+            if search_order == "dfs":
+                stack.append(
+                    (next_ants, next_assignments, next_grid_assignments, next_step)
+                )
+            else:
+                est = 0
+                if dist_map is not None:
+                    md = compute_min_distance_from_ant_positions(next_ants, dist_map)
+                    if md is None:
+                        continue
+                    est = md
+                order_counter += 1
+                priority = next_step + est
+                heapq.heappush(
+                    heap,
+                    (
+                        priority,
+                        est,
+                        next_step,
+                        order_counter,
+                        next_ants,
+                        next_assignments,
+                        next_grid_assignments,
+                    ),
+                )
     return None
 
 
@@ -1124,11 +1340,32 @@ def search_partial_programs_sparse(
     max_steps: int,
     success_mode: str,
     dist_map: Optional[List[Optional[int]]] = None,
+    rng: Optional[random.Random] = None,
+    deadline: Optional[float] = None,
+    search_order: str = "dfs",
+    use_dominance: bool = True,
 ) -> Optional[Tuple[List[int], int]]:
     seen_by_ants: Dict[Tuple[Tuple[int, int], ...], List[Tuple[int, Tuple[int, ...], int]]] = {}
-    stack: List[Tuple[Dict[int, int], List[int], int]] = [(ants, assignments, 0)]
-    while stack:
-        cur_ants, cur_assignments, step = stack.pop()
+    seen_exact: Dict[Tuple[Tuple[Tuple[int, int], ...], Tuple[int, ...]], int] = {}
+    stack: List[Tuple[Dict[int, int], List[int], int]] = []
+    heap: List[Tuple[int, int, int, int, Dict[int, int], List[int]]] = []
+    order_counter = 0
+    if search_order == "dfs":
+        stack.append((ants, assignments, 0))
+    elif search_order == "best":
+        start_est = 0
+        if dist_map is not None:
+            start_md = compute_min_distance_from_ant_positions(ants, dist_map)
+            start_est = start_md if start_md is not None else max_steps + 1
+        heapq.heappush(heap, (start_est, start_est, 0, order_counter, ants, assignments))
+    else:
+        raise ValueError(f"unknown search order: {search_order!r}")
+    while stack or heap:
+        ensure_deadline(deadline)
+        if search_order == "dfs":
+            cur_ants, cur_assignments, step = stack.pop()
+        else:
+            _priority, _est, step, _ord, cur_ants, cur_assignments = heapq.heappop(heap)
         if not cur_ants:
             continue
         if has_success_sparse(cur_ants, neighbors, base_state, success_mode):
@@ -1142,26 +1379,175 @@ def search_partial_programs_sparse(
                 continue
         key = tuple(sorted(cur_ants.items()))
         cur_values = tuple(cur_assignments)
-        cur_mask = assignment_mask(cur_assignments)
-        records = seen_by_ants.get(key, [])
-        records, skip = update_dominance_records(
-            records,
-            cur_values,
-            cur_mask,
-            step,
-        )
-        seen_by_ants[key] = records
-        if skip:
-            continue
+        if use_dominance:
+            cur_mask = assignment_mask(cur_assignments)
+            records = seen_by_ants.get(key, [])
+            records, skip = update_dominance_records(
+                records,
+                cur_values,
+                cur_mask,
+                step,
+            )
+            seen_by_ants[key] = records
+            if skip:
+                continue
+        else:
+            exact_key = (key, cur_values)
+            prev_step = seen_exact.get(exact_key)
+            if prev_step is not None and prev_step <= step:
+                continue
+            seen_exact[exact_key] = step
         next_states = step_sparse_partial(
             cur_ants,
             neighbors,
             base_state,
             cur_assignments,
             program_count,
+            rng=rng,
+            deadline=deadline,
         )
+        if rng is not None and len(next_states) > 1:
+            rng.shuffle(next_states)
+        next_step = step + 1
         for next_ants, next_assignments in next_states:
-            stack.append((next_ants, next_assignments, step + 1))
+            if not next_ants:
+                continue
+            if search_order == "dfs":
+                stack.append((next_ants, next_assignments, next_step))
+            else:
+                est = 0
+                if dist_map is not None:
+                    md = compute_min_distance_from_ant_positions(next_ants, dist_map)
+                    if md is None:
+                        continue
+                    est = md
+                order_counter += 1
+                priority = next_step + est
+                heapq.heappush(
+                    heap,
+                    (priority, est, next_step, order_counter, next_ants, next_assignments),
+                )
+    return None
+
+
+def search_partial_programs_sparse_to_targets(
+    ants: Dict[int, int],
+    neighbors: List[Tuple[int, int, int, int]],
+    base_state: List[int],
+    assignments: List[int],
+    program_count: int,
+    max_steps: int,
+    targets_by_p1: Dict[int, set[Tuple[int, int]]],
+    dist_map: Optional[List[Optional[int]]] = None,
+    rng: Optional[random.Random] = None,
+    deadline: Optional[float] = None,
+    search_order: str = "dfs",
+    use_dominance: bool = True,
+) -> Optional[Tuple[List[int], int]]:
+    seen_by_ants: Dict[Tuple[Tuple[int, int], ...], List[Tuple[int, Tuple[int, ...], int]]] = {}
+    seen_exact: Dict[Tuple[Tuple[Tuple[int, int], ...], Tuple[int, ...]], int] = {}
+    stack: List[Tuple[Dict[int, int], List[int], int]] = []
+    heap: List[Tuple[int, int, int, Dict[int, int], List[int]]] = []
+    order_counter = 0
+    if search_order == "dfs":
+        stack.append((ants, assignments, 0))
+    elif search_order == "best":
+        start_est = 0
+        if dist_map is not None:
+            start_md = compute_min_distance_from_ant_positions(ants, dist_map)
+            start_est = start_md if start_md is not None else max_steps + 1
+        heapq.heappush(heap, (start_est, 0, order_counter, ants, assignments))
+    else:
+        raise ValueError(f"unknown search order: {search_order!r}")
+
+    def accepted_assignments(
+        cur_ants: Dict[int, int], cur_assignments: List[int]
+    ) -> Optional[List[int]]:
+        for pos, val in cur_ants.items():
+            direction = ant_dir(val)
+            clan = ant_clan(val)
+            if clan >= program_count:
+                continue
+            entry = program_entry_index(clan, 1)
+            for p1, targets in targets_by_p1.items():
+                if (pos, direction) not in targets:
+                    continue
+                assigned = cur_assignments[entry]
+                if assigned not in (-1, p1):
+                    continue
+                next_assignments = cur_assignments[:]
+                next_assignments[entry] = p1
+                return next_assignments
+        return None
+
+    while stack or heap:
+        ensure_deadline(deadline)
+        if search_order == "dfs":
+            cur_ants, cur_assignments, step = stack.pop()
+        else:
+            _priority, step, _ord, cur_ants, cur_assignments = heapq.heappop(heap)
+        if not cur_ants:
+            continue
+        accepted = accepted_assignments(cur_ants, cur_assignments)
+        if accepted is not None:
+            return accepted, step
+        if step >= max_steps:
+            continue
+        if dist_map is not None:
+            remaining = max_steps - step
+            min_dist = compute_min_distance_from_ant_positions(cur_ants, dist_map)
+            if min_dist is None or min_dist > remaining:
+                continue
+        key = tuple(sorted(cur_ants.items()))
+        cur_values = tuple(cur_assignments)
+        if use_dominance:
+            cur_mask = assignment_mask(cur_assignments)
+            records = seen_by_ants.get(key, [])
+            records, skip = update_dominance_records(records, cur_values, cur_mask, step)
+            seen_by_ants[key] = records
+            if skip:
+                continue
+        else:
+            exact_key = (key, cur_values)
+            prev_step = seen_exact.get(exact_key)
+            if prev_step is not None and prev_step <= step:
+                continue
+            seen_exact[exact_key] = step
+        next_states = step_sparse_partial(
+            cur_ants,
+            neighbors,
+            base_state,
+            cur_assignments,
+            program_count,
+            rng=rng,
+            deadline=deadline,
+        )
+        if rng is not None and len(next_states) > 1:
+            rng.shuffle(next_states)
+        next_step = step + 1
+        for next_ants, next_assignments in next_states:
+            if not next_ants:
+                continue
+            if search_order == "dfs":
+                stack.append((next_ants, next_assignments, next_step))
+            else:
+                order_counter += 1
+                est = 0
+                if dist_map is not None:
+                    md = compute_min_distance_from_ant_positions(next_ants, dist_map)
+                    if md is None:
+                        continue
+                    est = md
+                heapq.heappush(
+                    heap,
+                    (
+                        next_step + est,
+                        next_step,
+                        order_counter,
+                        next_ants,
+                        next_assignments,
+                    ),
+                )
     return None
 
 
@@ -1614,6 +2000,13 @@ def parse_grid_wild_values(values: str) -> List[int]:
     return result
 
 
+def ensure_sparse_grid_values_supported(grid_values: List[int]) -> None:
+    if any(is_ant(val) for val in grid_values):
+        raise ValueError(
+            "grid ant literals are not supported in sparse/grid wildcard searches"
+        )
+
+
 def parse_position_list(value: str, width: int, height: int) -> List[int]:
     if not value:
         return []
@@ -1776,6 +2169,75 @@ def compute_min_distance_from_positions(
             continue
         best = d if best is None or d < best else best
     return best
+
+
+def order_candidate_positions(
+    positions: List[int],
+    dist: Optional[List[Optional[int]]],
+    order: str,
+) -> List[int]:
+    if order == "natural" or dist is None:
+        return positions
+    if order != "fooddist":
+        raise ValueError(f"unknown outer position order: {order!r}")
+    return sorted(
+        positions,
+        key=lambda idx: (
+            dist[idx] is None,
+            dist[idx] if dist[idx] is not None else len(dist),
+            idx,
+        ),
+    )
+
+
+def build_position_sampling_weights(
+    positions: List[int],
+    dist: Optional[List[Optional[int]]],
+    order: str,
+) -> Optional[List[float]]:
+    if order == "natural" or dist is None:
+        return None
+    if order != "fooddist":
+        raise ValueError(f"unknown outer position order: {order!r}")
+    finite = [dist[idx] for idx in positions if dist[idx] is not None]
+    if not finite:
+        return None
+    max_dist = max(finite)
+    return [
+        float(max_dist + 1 - dist[idx]) if dist[idx] is not None else 1.0
+        for idx in positions
+    ]
+
+
+def sample_weighted_without_replacement(
+    positions: List[int],
+    count: int,
+    weights: Optional[List[float]],
+    rng: random.Random,
+) -> Tuple[int, ...]:
+    if count == 0:
+        return ()
+    if weights is None:
+        return tuple(sorted(rng.sample(positions, count)))
+    pool = positions[:]
+    pool_weights = weights[:]
+    picked: List[int] = []
+    for _ in range(count):
+        total = sum(pool_weights)
+        if total <= 0:
+            choice_idx = rng.randrange(len(pool))
+        else:
+            threshold = rng.random() * total
+            choice_idx = len(pool_weights) - 1
+            running = 0.0
+            for idx, weight in enumerate(pool_weights):
+                running += weight
+                if running >= threshold:
+                    choice_idx = idx
+                    break
+        picked.append(pool.pop(choice_idx))
+        pool_weights.pop(choice_idx)
+    return tuple(sorted(picked))
 
 
 def compute_min_distance_from_ant_positions(
@@ -2005,6 +2467,27 @@ def program_entry_index(clan: int, p_idx: int) -> int:
     return (clan * 7) + (p_idx - 1)
 
 
+def deadline_exceeded(deadline: Optional[float]) -> bool:
+    return deadline is not None and monotonic() >= deadline
+
+
+def ensure_deadline(deadline: Optional[float]) -> None:
+    if deadline_exceeded(deadline):
+        raise SearchTimeout()
+
+
+def combine_deadlines(
+    deadline: Optional[float],
+    time_limit_seconds: Optional[float],
+) -> Optional[float]:
+    if time_limit_seconds is None:
+        return deadline
+    local_deadline = monotonic() + time_limit_seconds
+    if deadline is None or local_deadline < deadline:
+        return local_deadline
+    return deadline
+
+
 def step_state_partial(
     state: List[int],
     neighbors: List[Tuple[int, int, int, int]],
@@ -2177,10 +2660,12 @@ def search_partial_programs(
     program_count: int,
     max_steps: int,
     success_mode: str,
+    deadline: Optional[float] = None,
 ) -> Optional[Tuple[List[int], int]]:
     seen = set()
     stack: List[Tuple[List[int], List[int], int]] = [(state, assignments, 0)]
     while stack:
+        ensure_deadline(deadline)
         cur_state, cur_assignments, step = stack.pop()
         if has_success_fast(cur_state, neighbors, food_indices, success_mode):
             return cur_assignments, step
@@ -2322,6 +2807,422 @@ def search_carve_single_ant(
         f"ant=({x},{y}) start={DIRS[solution.start_dir]} "
         f"p1={DIRS[solution.p1]} steps<={max_steps} floors={floors}"
     )
+
+
+def route_solution_replacements(
+    puzzle: Puzzle,
+    solution: RouteSolution,
+    clan: int = 0,
+) -> Dict[int, Cell]:
+    assignments = dict(solution.grid_assignments)
+    replacements: Dict[int, Cell] = {}
+    for idx in find_wildcards(puzzle):
+        if idx == solution.start_idx:
+            replacements[idx] = Cell(KIND_ANT, clan, solution.start_dir)
+            continue
+        val = assignments.get(idx, CELL_FLOOR)
+        if val == CELL_WALL:
+            replacements[idx] = Cell(KIND_WALL)
+        elif val == CELL_HOLE:
+            replacements[idx] = Cell(KIND_HOLE)
+        elif val == CELL_FLOOR:
+            replacements[idx] = Cell(KIND_FLOOR)
+        else:
+            raise ValueError(f"unsupported route assignment {val} at {idx}")
+    return replacements
+
+
+def route_solution_description(puzzle: Puzzle, solution: RouteSolution) -> str:
+    y, x = divmod(solution.start_idx, puzzle.width)
+    grid_positions = [idx for idx, _val in solution.grid_assignments]
+    grid_values = [val for _idx, val in solution.grid_assignments]
+    grid_desc = render_grid_assignments(grid_values, grid_positions, puzzle.width)
+    return (
+        f"ant=({x},{y}) start={DIRS[solution.start_dir]} "
+        f"p1={DIRS[solution.p1]} steps={solution.steps} grid={grid_desc}"
+    )
+
+
+def verify_route_solution(
+    puzzle: Puzzle,
+    solution: RouteSolution,
+    success_mode: str,
+    max_steps: int,
+    clan: int = 0,
+) -> bool:
+    programs = [
+        fill_program_template(
+            template,
+            p1=solution.p1,
+            apply_p1=(program_clan == clan),
+        )
+        for program_clan, template in enumerate(puzzle.programs)
+    ]
+    replacements = route_solution_replacements(puzzle, solution, clan=clan)
+    world = build_world(puzzle, replacements)
+    state = [encode_cell(cell) for cell in world.grid]
+    neighbors = build_neighbors(puzzle.width, puzzle.height)
+    program_values = build_programs(programs).programs
+    _base_state, _wilds, food_indices = build_base_state(puzzle)
+    ok, _steps = simulate_fast(
+        state,
+        neighbors,
+        program_values,
+        food_indices,
+        max_steps=max_steps,
+        success_mode=success_mode,
+    )
+    return ok
+
+
+def compute_fixed_entry_targets(
+    puzzle: Puzzle,
+    p1: int,
+    suffix_steps: int,
+    success_mode: str,
+) -> set[Tuple[int, int]]:
+    base_state, _wilds, _food_indices = build_base_state_with_wildcards(puzzle)
+    fixed_state = base_state[:]
+    for idx, val in enumerate(fixed_state):
+        if val == CELL_WILD:
+            fixed_state[idx] = CELL_WALL
+    neighbors = build_neighbors(puzzle.width, puzzle.height)
+    target_states: set[Tuple[int, int]] = set()
+    for start, val in enumerate(fixed_state):
+        if val != CELL_FLOOR:
+            continue
+        for start_dir in range(4):
+            pos = start
+            direction = start_dir
+            seen: set[Tuple[int, int]] = set()
+            for _step in range(suffix_steps + 1):
+                ahead = neighbors[pos][direction]
+                if ahead != -1 and fixed_state[ahead] == CELL_FOOD:
+                    if success_mode == "facing" or direction == 0:
+                        target_states.add((start, start_dir))
+                    break
+                key = (pos, direction)
+                if key in seen:
+                    break
+                seen.add(key)
+                ahead_val = CELL_WALL if ahead == -1 else fixed_state[ahead]
+                if ahead_val == CELL_WALL:
+                    direction = (direction + 1) & 3
+                elif ahead_val == CELL_FLOOR:
+                    pos = ahead
+                    direction = (direction + p1) & 3
+                else:
+                    break
+    return target_states
+
+
+def search_fixed_entry_sparse(
+    puzzle: Puzzle,
+    ants: int,
+    max_steps: int,
+    suffix_steps: int,
+    success_mode: str,
+    ant_specs: Optional[List[int]] = None,
+    wild_positions: Optional[List[int]] = None,
+    fixed_ants: Optional[Dict[int, int]] = None,
+    rng: Optional[random.Random] = None,
+    deadline: Optional[float] = None,
+    search_order: str = "dfs",
+    random_tries: Optional[int] = None,
+    candidate_time_limit_seconds: Optional[float] = None,
+    outer_position_order: str = "natural",
+    use_dominance: bool = True,
+) -> Optional[str]:
+    base_state, wilds, _food_indices = build_base_state(puzzle)
+    if wild_positions is not None:
+        allowed = set(wild_positions)
+        wilds = [idx for idx in wilds if idx in allowed]
+    neighbors = build_neighbors(puzzle.width, puzzle.height)
+    program_count = len(puzzle.programs)
+    if program_count == 0:
+        raise ValueError("no programs in puzzle")
+    assignments = parse_program_assignments(puzzle.programs)
+    base_state, fixed_ants_map = split_static_ants(base_state)
+    if fixed_ants:
+        for idx, val in fixed_ants.items():
+            if idx in fixed_ants_map:
+                raise ValueError("fixed ant overlaps existing ant")
+            if base_state[idx] != CELL_FLOOR:
+                raise ValueError("fixed ant overlaps non-floor cell")
+            fixed_ants_map[idx] = val
+    wilds = [idx for idx in wilds if idx not in fixed_ants_map]
+    wilds = filter_reachable_positions(base_state, neighbors, wilds)
+    if not wilds and not fixed_ants_map:
+        return None
+
+    targets_by_p1 = {
+        p1: targets
+        for p1 in range(4)
+        if (targets := compute_fixed_entry_targets(puzzle, p1, suffix_steps, success_mode))
+    }
+    if not targets_by_p1:
+        return None
+
+    target_positions = {pos for targets in targets_by_p1.values() for pos, _dir in targets}
+    dist = compute_distances_to_targets(base_state, neighbors, sorted(target_positions))
+    position_pool = order_candidate_positions(wilds, dist, outer_position_order)
+    spec_pool = ant_specs or build_ant_specs(program_count, None)
+    spec_values = spec_pool[:]
+    if rng is not None and len(spec_values) > 1:
+        rng.shuffle(spec_values)
+    sample_rng = rng if rng is not None else random.Random(0)
+    position_weights = build_position_sampling_weights(
+        position_pool, dist, outer_position_order
+    )
+    processed_candidates = 0
+    candidate_timeouts = 0
+    had_candidate_timeout = False
+
+    def iter_position_specs() -> Iterable[Tuple[Tuple[int, ...], Tuple[int, ...]]]:
+        if random_tries is None:
+            for positions in combinations(position_pool, ants):
+                for specs in product(spec_values, repeat=ants):
+                    yield positions, specs
+            return
+        if ants > len(position_pool):
+            return
+        seen_samples = set()
+        for _ in range(random_tries):
+            sampled_positions = sample_weighted_without_replacement(
+                position_pool, ants, position_weights, sample_rng
+            )
+            sampled_specs = tuple(sample_rng.choice(spec_values) for _ in range(ants))
+            key = (sampled_positions, sampled_specs)
+            if key in seen_samples:
+                continue
+            seen_samples.add(key)
+            yield sampled_positions, sampled_specs
+
+    try:
+        for positions, specs in iter_position_specs():
+            ensure_deadline(deadline)
+            ants_state = dict(fixed_ants_map)
+            ants_desc = []
+            for pos, spec in zip(positions, specs):
+                clan = spec // 4
+                direction = spec & 3
+                ants_state[pos] = make_ant(clan, direction)
+                y, x = divmod(pos, puzzle.width)
+                ants_desc.append(f"{x},{y},{clan}{DIR_TO_ANT_CHAR[direction]}")
+            processed_candidates += 1
+            candidate_deadline = combine_deadlines(
+                deadline, candidate_time_limit_seconds
+            )
+            try:
+                result = search_partial_programs_sparse_to_targets(
+                    ants_state,
+                    neighbors,
+                    base_state,
+                    assignments[:],
+                    program_count,
+                    max_steps,
+                    targets_by_p1,
+                    dist_map=dist,
+                    rng=rng,
+                    deadline=candidate_deadline,
+                    search_order=search_order,
+                    use_dominance=use_dominance,
+                )
+            except SearchTimeout:
+                if deadline_exceeded(deadline):
+                    raise
+                had_candidate_timeout = True
+                candidate_timeouts += 1
+                continue
+            if not result:
+                continue
+            final_assignments, prefix_steps = result
+            programs = render_programs(final_assignments, puzzle.programs)
+            state = base_state[:]
+            for pos, spec in zip(positions, specs):
+                state[pos] = make_ant(spec // 4, spec & 3)
+            ok, total_steps = simulate_fast(
+                state,
+                neighbors,
+                build_programs(programs).programs,
+                [idx for idx, val in enumerate(base_state) if val == CELL_FOOD],
+                max_steps=max_steps + suffix_steps + 20,
+                success_mode=success_mode,
+            )
+            if not ok:
+                continue
+            programs_desc = " ".join(programs)
+            ants_joined = " | ".join(ants_desc)
+            return (
+                f"ants={ants_joined} programs={programs_desc} "
+                f"prefix_steps={prefix_steps} total_steps={total_steps}"
+            )
+    except SearchTimeout:
+        raise SearchTimeout(
+            f"candidates={processed_candidates} candidate_timeouts={candidate_timeouts}"
+        ) from None
+    if had_candidate_timeout:
+        raise SearchTimeout(
+            f"candidates={processed_candidates} candidate_timeouts={candidate_timeouts}"
+        )
+    return None
+
+
+def find_route_single_ant_solution(
+    puzzle: Puzzle,
+    max_steps: int,
+    success_mode: str,
+    p1_dir: Optional[int] = None,
+    start_positions: Optional[List[int]] = None,
+    allowed_grid_positions: Optional[List[int]] = None,
+    deadline: Optional[float] = None,
+) -> Optional[RouteSolution]:
+    base_state, wilds, _food_indices = build_base_state_with_wildcards(puzzle)
+    if not wilds:
+        return None
+    neighbors = build_neighbors(puzzle.width, puzzle.height)
+    targets = compute_food_adjacent_positions(base_state, neighbors)
+    if not targets:
+        return None
+    optimistic_base, _floor_wilds, _ = build_base_state(puzzle)
+    dist = compute_distances_to_targets(optimistic_base, neighbors, targets)
+    wild_set = set(wilds)
+    allowed_grid = set(allowed_grid_positions) if allowed_grid_positions else wild_set
+    if start_positions is None:
+        starts = [idx for idx in wilds if idx in allowed_grid]
+    else:
+        starts = [idx for idx in start_positions if idx in wild_set]
+    if not starts:
+        return None
+
+    def optimistic_distance(idx: int) -> int:
+        if idx == -1:
+            return 10**6
+        value = dist[idx]
+        return value if value is not None else 10**6
+
+    starts.sort(key=optimistic_distance)
+
+    def is_success(pos: int, direction: int) -> bool:
+        ahead = neighbors[pos][direction]
+        if ahead == -1 or base_state[ahead] != CELL_FOOD:
+            return False
+        if success_mode == "facing":
+            return True
+        if success_mode == "below":
+            return direction == 0
+        raise ValueError(f"unknown success mode: {success_mode!r}")
+
+    def reconstruct(
+        parents: Dict[Tuple[int, int], Tuple[Optional[Tuple[int, int]], str, int]],
+        end_state: Tuple[int, int],
+        start_idx: int,
+    ) -> Optional[Dict[int, int]]:
+        assignments: Dict[int, int] = {start_idx: CELL_FLOOR}
+        cursor: Optional[Tuple[int, int]] = end_state
+        actions: List[Tuple[str, int]] = []
+        while cursor is not None:
+            prev, action, idx = parents[cursor]
+            if action:
+                actions.append((action, idx))
+            cursor = prev
+        for action, idx in reversed(actions):
+            if idx not in wild_set:
+                continue
+            if idx not in allowed_grid:
+                return None
+            value = CELL_WALL if action == "turn-wall" else CELL_FLOOR
+            existing = assignments.get(idx)
+            if existing is not None and existing != value:
+                return None
+            assignments[idx] = value
+        return assignments
+
+    p1_dirs = [p1_dir] if p1_dir is not None else list(range(4))
+    counter = 0
+    for p1 in p1_dirs:
+        for start_idx in starts:
+            for start_dir in range(4):
+                ensure_deadline(deadline)
+                start_state = (start_idx, start_dir)
+                parents: Dict[
+                    Tuple[int, int], Tuple[Optional[Tuple[int, int]], str, int]
+                ] = {start_state: (None, "", -1)}
+                heap: List[Tuple[int, int, int, int, int]] = []
+                heapq.heappush(
+                    heap,
+                    (
+                        optimistic_distance(start_idx),
+                        0,
+                        counter,
+                        start_idx,
+                        start_dir,
+                    ),
+                )
+                counter += 1
+                while heap:
+                    ensure_deadline(deadline)
+                    _priority, steps, _order, pos, direction = heapq.heappop(heap)
+                    if steps > max_steps:
+                        continue
+                    if is_success(pos, direction):
+                        assignments = reconstruct(parents, (pos, direction), start_idx)
+                        if assignments is None:
+                            continue
+                        solution = RouteSolution(
+                            start_idx=start_idx,
+                            start_dir=start_dir,
+                            p1=p1,
+                            grid_assignments=tuple(sorted(assignments.items())),
+                            steps=steps,
+                        )
+                        if verify_route_solution(
+                            puzzle,
+                            solution,
+                            success_mode=success_mode,
+                            max_steps=max_steps,
+                        ):
+                            return solution
+                        continue
+                    ahead = neighbors[pos][direction]
+                    ahead_kind = CELL_WALL if ahead == -1 else base_state[ahead]
+                    next_states: List[Tuple[int, int, str, int]] = []
+                    if ahead_kind == CELL_WALL:
+                        next_states.append((pos, (direction + 1) & 3, "turn", ahead))
+                    elif ahead_kind == CELL_FLOOR:
+                        next_states.append(
+                            (ahead, (direction + p1) & 3, "move", ahead)
+                        )
+                    elif ahead_kind == CELL_WILD:
+                        if ahead in allowed_grid:
+                            next_states.append(
+                                (ahead, (direction + p1) & 3, "move-floor", ahead)
+                            )
+                            next_states.append(
+                                (pos, (direction + 1) & 3, "turn-wall", ahead)
+                            )
+                        else:
+                            next_states.append(
+                                (ahead, (direction + p1) & 3, "move-floor", ahead)
+                            )
+                    elif ahead_kind == CELL_FOOD:
+                        next_states = []
+                    else:
+                        next_states = []
+
+                    for new_pos, new_dir, action, action_idx in next_states:
+                        state_key = (new_pos, new_dir)
+                        if state_key in parents:
+                            continue
+                        parents[state_key] = ((pos, direction), action, action_idx)
+                        new_steps = steps + 1
+                        priority = new_steps + optimistic_distance(new_pos)
+                        heapq.heappush(
+                            heap,
+                            (priority, new_steps, counter, new_pos, new_dir),
+                        )
+                        counter += 1
+    return None
 
 
 def find_carve_single_ant_solution(
@@ -2549,6 +3450,7 @@ def search_wild_ants(
     wild_positions: Optional[List[int]] = None,
     fixed_ants: Optional[Dict[int, int]] = None,
     distance_prune: bool = False,
+    deadline: Optional[float] = None,
 ) -> Optional[str]:
     base_state, wilds, food_indices = build_base_state(puzzle)
     if fixed_ants:
@@ -2577,12 +3479,14 @@ def search_wild_ants(
     spec_pool = ant_specs or build_ant_specs(program_count, None)
 
     for positions in combinations(wilds, ants):
+        ensure_deadline(deadline)
         if distance_prune and dist is not None:
             combined = fixed_positions + list(positions)
             min_dist = compute_min_distance_from_positions(combined, dist)
             if min_dist is None or min_dist > max_steps:
                 continue
         for specs in product(spec_pool, repeat=ants):
+            ensure_deadline(deadline)
             state = base_state[:]
             ants_desc = []
             for pos, spec in zip(positions, specs):
@@ -2599,6 +3503,7 @@ def search_wild_ants(
                 program_count,
                 max_steps,
                 success_mode,
+                deadline=deadline,
             )
             if result:
                 final_assignments, steps = result
@@ -2620,6 +3525,13 @@ def search_wild_ants_sparse(
     wild_positions: Optional[List[int]] = None,
     fixed_ants: Optional[Dict[int, int]] = None,
     distance_prune: bool = False,
+    rng: Optional[random.Random] = None,
+    deadline: Optional[float] = None,
+    search_order: str = "dfs",
+    random_tries: Optional[int] = None,
+    candidate_time_limit_seconds: Optional[float] = None,
+    outer_position_order: str = "natural",
+    use_dominance: bool = True,
 ) -> Optional[str]:
     base_state, wilds, _food_indices = build_base_state(puzzle)
     if wild_positions is not None:
@@ -2651,14 +3563,65 @@ def search_wild_ants_sparse(
         fixed_positions = list(fixed_ants_map.keys())
         dist_map = build_optimistic_dist_map(base_state, neighbors)
     spec_pool = ant_specs or build_ant_specs(program_count, None)
+    position_pool = wilds
+    position_pool = order_candidate_positions(position_pool, dist, outer_position_order)
+    if (
+        rng is not None
+        and len(position_pool) > 1
+        and random_tries is None
+        and outer_position_order == "natural"
+    ):
+        position_pool = position_pool[:]
+        rng.shuffle(position_pool)
+    spec_values = spec_pool
+    if rng is not None and len(spec_pool) > 1:
+        spec_values = spec_pool[:]
+        rng.shuffle(spec_values)
 
-    for positions in combinations(wilds, ants):
-        if distance_prune and dist is not None:
-            combined = fixed_positions + list(positions)
-            min_dist = compute_min_distance_from_positions(combined, dist)
-            if min_dist is None or min_dist > max_steps:
+    sample_rng = rng if rng is not None else random.Random(0)
+    position_weights = build_position_sampling_weights(
+        position_pool, dist, outer_position_order
+    )
+    had_candidate_timeout = False
+    processed_candidates = 0
+    candidate_timeouts = 0
+
+    def iter_position_specs() -> Iterable[Tuple[Tuple[int, ...], Tuple[int, ...]]]:
+        if random_tries is None:
+            for positions in combinations(position_pool, ants):
+                for specs in product(spec_values, repeat=ants):
+                    yield positions, specs
+            return
+        if ants > len(position_pool):
+            return
+        tries = 1 if ants == 0 else random_tries
+        seen_samples = set()
+        for _ in range(tries):
+            if ants == 0:
+                key = ((), ())
+                if key in seen_samples:
+                    continue
+                seen_samples.add(key)
+                yield (), ()
                 continue
-        for specs in product(spec_pool, repeat=ants):
+            sampled_positions = sample_weighted_without_replacement(
+                position_pool, ants, position_weights, sample_rng
+            )
+            sampled_specs = tuple(sample_rng.choice(spec_values) for _ in range(ants))
+            key = (sampled_positions, sampled_specs)
+            if key in seen_samples:
+                continue
+            seen_samples.add(key)
+            yield sampled_positions, sampled_specs
+
+    try:
+        for positions, specs in iter_position_specs():
+            ensure_deadline(deadline)
+            if distance_prune and dist is not None:
+                combined = fixed_positions + list(positions)
+                min_dist = compute_min_distance_from_positions(combined, dist)
+                if min_dist is None or min_dist > max_steps:
+                    continue
             ants_state = dict(fixed_ants_map)
             ants_desc = []
             for pos, spec in zip(positions, specs):
@@ -2667,16 +3630,31 @@ def search_wild_ants_sparse(
                 ants_state[pos] = make_ant(clan, direction)
                 y, x = divmod(pos, puzzle.width)
                 ants_desc.append(f"{x},{y},{clan}{DIR_TO_ANT_CHAR[direction]}")
-            result = search_partial_programs_sparse(
-                ants_state,
-                neighbors,
-                base_state,
-                assignments[:],
-                program_count,
-                max_steps,
-                success_mode,
-                dist_map=dist_map,
+            processed_candidates += 1
+            candidate_deadline = combine_deadlines(
+                deadline, candidate_time_limit_seconds
             )
+            try:
+                result = search_partial_programs_sparse(
+                    ants_state,
+                    neighbors,
+                    base_state,
+                    assignments[:],
+                    program_count,
+                    max_steps,
+                    success_mode,
+                    dist_map=dist_map,
+                    rng=rng,
+                    deadline=candidate_deadline,
+                    search_order=search_order,
+                    use_dominance=use_dominance,
+                )
+            except SearchTimeout:
+                if deadline_exceeded(deadline):
+                    raise
+                had_candidate_timeout = True
+                candidate_timeouts += 1
+                continue
             if result:
                 final_assignments, steps = result
                 programs = render_programs(final_assignments, puzzle.programs)
@@ -2685,6 +3663,14 @@ def search_wild_ants_sparse(
                 return (
                     f"ants={ants_joined} programs={programs_desc} steps={steps}"
                 )
+    except SearchTimeout:
+        raise SearchTimeout(
+            f"candidates={processed_candidates} candidate_timeouts={candidate_timeouts}"
+        ) from None
+    if had_candidate_timeout:
+        raise SearchTimeout(
+            f"candidates={processed_candidates} candidate_timeouts={candidate_timeouts}"
+        )
     return None
 
 
@@ -2700,7 +3686,15 @@ def search_wild_ants_grid_sparse(
     grid_positions: Optional[List[int]] = None,
     fixed_ants: Optional[Dict[int, int]] = None,
     distance_prune: bool = False,
+    rng: Optional[random.Random] = None,
+    deadline: Optional[float] = None,
+    search_order: str = "dfs",
+    random_tries: Optional[int] = None,
+    candidate_time_limit_seconds: Optional[float] = None,
+    outer_position_order: str = "natural",
+    use_dominance: bool = True,
 ) -> Optional[str]:
+    ensure_sparse_grid_values_supported(grid_values)
     base_state, wilds, _food_indices = build_base_state_with_wildcards(puzzle)
     neighbors = build_neighbors(puzzle.width, puzzle.height)
     program_count = len(puzzle.programs)
@@ -2737,32 +3731,88 @@ def search_wild_ants_grid_sparse(
     if wild_positions is not None:
         allowed = set(wild_positions)
         candidate_positions = [idx for idx in wilds if idx in allowed]
-    positions_iter = combinations(candidate_positions, ants) if ants > 0 else [()]
-    for positions in positions_iter:
-        if distance_prune and dist is not None:
-            combined = fixed_positions + list(positions)
-            min_dist = compute_min_distance_from_positions(combined, dist)
-            if min_dist is None or min_dist > max_steps:
-                continue
-        positions_set = set(positions)
-        base_state_cur = base_state[:] if positions_set or grid_positions is not None else base_state
-        for pos in positions_set:
-            base_state_cur[pos] = CELL_FLOOR
-        grid_positions_list = [idx for idx in wilds if idx not in positions_set]
-        if grid_positions is not None:
-            allowed_grid = set(grid_positions)
-            for idx in wilds:
-                if idx in positions_set or idx in allowed_grid:
-                    continue
-                base_state_cur[idx] = CELL_FLOOR
-            grid_positions_list = [
-                idx for idx in grid_positions_list if idx in allowed_grid
-            ]
-        grid_entry_by_idx = {
-            idx: i for i, idx in enumerate(grid_positions_list)
-        }
+    candidate_positions = order_candidate_positions(
+        candidate_positions, dist, outer_position_order
+    )
+    if (
+        rng is not None
+        and ants > 0
+        and len(candidate_positions) > 1
+        and random_tries is None
+        and outer_position_order == "natural"
+    ):
+        candidate_positions = candidate_positions[:]
+        rng.shuffle(candidate_positions)
+    spec_values = spec_pool
+    if rng is not None and len(spec_pool) > 1:
+        spec_values = spec_pool[:]
+        rng.shuffle(spec_values)
+    sample_rng = rng if rng is not None else random.Random(0)
+    position_weights = build_position_sampling_weights(
+        candidate_positions, dist, outer_position_order
+    )
+    had_candidate_timeout = False
+    processed_candidates = 0
+    candidate_timeouts = 0
 
-        for specs in product(spec_pool, repeat=ants):
+    def iter_position_specs() -> Iterable[Tuple[Tuple[int, ...], Tuple[int, ...]]]:
+        if random_tries is None:
+            positions_iter = combinations(candidate_positions, ants) if ants > 0 else [()]
+            for positions in positions_iter:
+                for specs in product(spec_values, repeat=ants):
+                    yield positions, specs
+            return
+        if ants > len(candidate_positions):
+            return
+        tries = 1 if ants == 0 else random_tries
+        seen_samples = set()
+        for _ in range(tries):
+            if ants == 0:
+                key = ((), ())
+                if key in seen_samples:
+                    continue
+                seen_samples.add(key)
+                yield (), ()
+                continue
+            sampled_positions = sample_weighted_without_replacement(
+                candidate_positions, ants, position_weights, sample_rng
+            )
+            sampled_specs = tuple(sample_rng.choice(spec_values) for _ in range(ants))
+            key = (sampled_positions, sampled_specs)
+            if key in seen_samples:
+                continue
+            seen_samples.add(key)
+            yield sampled_positions, sampled_specs
+
+    try:
+        for positions, specs in iter_position_specs():
+            ensure_deadline(deadline)
+            if distance_prune and dist is not None:
+                combined = fixed_positions + list(positions)
+                min_dist = compute_min_distance_from_positions(combined, dist)
+                if min_dist is None or min_dist > max_steps:
+                    continue
+            positions_set = set(positions)
+            base_state_cur = (
+                base_state[:] if positions_set or grid_positions is not None else base_state
+            )
+            for pos in positions_set:
+                base_state_cur[pos] = CELL_FLOOR
+            grid_positions_list = [idx for idx in wilds if idx not in positions_set]
+            if grid_positions is not None:
+                allowed_grid = set(grid_positions)
+                for idx in wilds:
+                    if idx in positions_set or idx in allowed_grid:
+                        continue
+                    base_state_cur[idx] = CELL_FLOOR
+                grid_positions_list = [
+                    idx for idx in grid_positions_list if idx in allowed_grid
+                ]
+            grid_entry_by_idx = {
+                idx: i for i, idx in enumerate(grid_positions_list)
+            }
+
+            ensure_deadline(deadline)
             ants_state = dict(fixed_ants_map)
             ants_desc = []
             for pos, spec in zip(positions, specs):
@@ -2772,20 +3822,35 @@ def search_wild_ants_grid_sparse(
                 y, x = divmod(pos, puzzle.width)
                 ants_desc.append(f"{x},{y},{clan}{DIR_TO_ANT_CHAR[direction]}")
             grid_assignments = [-1] * len(grid_positions_list)
-            result = search_partial_programs_sparse_with_grid(
-                ants_state,
-                neighbors,
-                base_state_cur,
-                assignments[:],
-                grid_assignments,
-                grid_entry_by_idx,
-                grid_values,
-                grid_nonfloor_limit,
-                program_count,
-                max_steps,
-                success_mode,
-                dist_map=dist_map,
+            processed_candidates += 1
+            candidate_deadline = combine_deadlines(
+                deadline, candidate_time_limit_seconds
             )
+            try:
+                result = search_partial_programs_sparse_with_grid(
+                    ants_state,
+                    neighbors,
+                    base_state_cur,
+                    assignments[:],
+                    grid_assignments,
+                    grid_entry_by_idx,
+                    grid_values,
+                    grid_nonfloor_limit,
+                    program_count,
+                    max_steps,
+                    success_mode,
+                    dist_map=dist_map,
+                    rng=rng,
+                    deadline=candidate_deadline,
+                    search_order=search_order,
+                    use_dominance=use_dominance,
+                )
+            except SearchTimeout:
+                if deadline_exceeded(deadline):
+                    raise
+                had_candidate_timeout = True
+                candidate_timeouts += 1
+                continue
             if result:
                 final_assignments, final_grid_assignments, steps = result
                 programs = render_programs(final_assignments, puzzle.programs)
@@ -2798,6 +3863,14 @@ def search_wild_ants_grid_sparse(
                     f"ants={ants_joined} programs={programs_desc} "
                     f"grid={grid_desc} steps={steps}"
                 )
+    except SearchTimeout:
+        raise SearchTimeout(
+            f"candidates={processed_candidates} candidate_timeouts={candidate_timeouts}"
+        ) from None
+    if had_candidate_timeout:
+        raise SearchTimeout(
+            f"candidates={processed_candidates} candidate_timeouts={candidate_timeouts}"
+        )
     return None
 
 
@@ -2813,8 +3886,15 @@ def search_wild_ants_grid_enum(
     grid_positions: Optional[List[int]] = None,
     fixed_ants: Optional[Dict[int, int]] = None,
     distance_prune: bool = False,
+    rng: Optional[random.Random] = None,
+    deadline: Optional[float] = None,
+    search_order: str = "dfs",
+    candidate_time_limit_seconds: Optional[float] = None,
+    outer_position_order: str = "natural",
+    use_dominance: bool = True,
 ) -> Optional[str]:
-    base_state, wilds, _food_indices = build_base_state(puzzle)
+    ensure_sparse_grid_values_supported(grid_values)
+    base_state, wilds, _food_indices = build_base_state_with_wildcards(puzzle)
     neighbors = build_neighbors(puzzle.width, puzzle.height)
     program_count = len(puzzle.programs)
     if program_count == 0:
@@ -2853,82 +3933,132 @@ def search_wild_ants_grid_enum(
         dist_map = build_optimistic_dist_map(base_state, neighbors)
 
     spec_pool = ant_specs or build_ant_specs(program_count, None)
+    position_pool = wilds
+    position_pool = order_candidate_positions(position_pool, dist, outer_position_order)
+    if (
+        rng is not None
+        and ants > 0
+        and len(position_pool) > 1
+        and outer_position_order == "natural"
+    ):
+        position_pool = position_pool[:]
+        rng.shuffle(position_pool)
+    spec_values = spec_pool
+    if rng is not None and len(spec_pool) > 1:
+        spec_values = spec_pool[:]
+        rng.shuffle(spec_values)
     if ants == 0 and not fixed_ants_map:
         return None
+    had_candidate_timeout = False
+    processed_candidates = 0
+    candidate_timeouts = 0
 
-    for positions in combinations(wilds, ants):
-        if distance_prune and dist is not None:
-            combined = fixed_positions + list(positions)
-            min_dist = compute_min_distance_from_positions(combined, dist)
-            if min_dist is None or min_dist > max_steps:
-                continue
-        positions_set = set(positions)
-        grid_positions_list = [idx for idx in wilds if idx not in positions_set]
-        grid_entry_by_idx = {
-            idx: i for i, idx in enumerate(grid_positions_list)
-        }
-        grid_candidates = grid_positions_list
-        if allowed_grid is not None:
-            grid_candidates = [idx for idx in grid_positions_list if idx in allowed_grid]
-            if not allow_floor and len(grid_candidates) < len(grid_positions_list):
-                continue
+    try:
+        for positions in combinations(position_pool, ants):
+            ensure_deadline(deadline)
+            if distance_prune and dist is not None:
+                combined = fixed_positions + list(positions)
+                min_dist = compute_min_distance_from_positions(combined, dist)
+                if min_dist is None or min_dist > max_steps:
+                    continue
+            positions_set = set(positions)
+            grid_positions_list = [idx for idx in wilds if idx not in positions_set]
+            grid_entry_by_idx = {
+                idx: i for i, idx in enumerate(grid_positions_list)
+            }
+            grid_candidates = grid_positions_list
+            if allowed_grid is not None:
+                grid_candidates = [idx for idx in grid_positions_list if idx in allowed_grid]
+                if not allow_floor and len(grid_candidates) < len(grid_positions_list):
+                    continue
 
-        def iter_grid_assignments() -> Iterable[Dict[int, int]]:
-            if not allow_floor:
-                if grid_nonfloor_limit is not None and grid_nonfloor_limit < len(grid_candidates):
+            def iter_grid_assignments() -> Iterable[Dict[int, int]]:
+                if not allow_floor:
+                    if grid_nonfloor_limit is not None and grid_nonfloor_limit < len(grid_candidates):
+                        return
+                    if not allowed_nonfloor:
+                        return
+                    for values in product(allowed_nonfloor, repeat=len(grid_candidates)):
+                        yield dict(zip(grid_candidates, values))
                     return
-                if not allowed_nonfloor:
-                    return
-                for values in product(allowed_nonfloor, repeat=len(grid_candidates)):
-                    yield dict(zip(grid_candidates, values))
-                return
-            max_k = grid_nonfloor_limit if grid_nonfloor_limit is not None else len(grid_candidates)
-            if not allowed_nonfloor:
-                yield {}
-                return
-            yield {}
-            for k in range(1, max_k + 1):
-                for idxs in combinations(grid_candidates, k):
-                    for values in product(allowed_nonfloor, repeat=k):
-                        yield dict(zip(idxs, values))
-
-        for grid_assign in iter_grid_assignments():
-            base_state_cur = base_state[:]
-            grid_assignments = [CELL_FLOOR] * len(grid_positions_list)
-            for idx, val in grid_assign.items():
-                base_state_cur[idx] = val
-                grid_assignments[grid_entry_by_idx[idx]] = val
-            for specs in product(spec_pool, repeat=ants):
-                ants_state = dict(fixed_ants_map)
-                ants_desc = []
-                for pos, spec in zip(positions, specs):
-                    clan = spec // 4
-                    direction = spec & 3
-                    ants_state[pos] = make_ant(clan, direction)
-                    y, x = divmod(pos, puzzle.width)
-                    ants_desc.append(f"{x},{y},{clan}{DIR_TO_ANT_CHAR[direction]}")
-                result = search_partial_programs_sparse(
-                    ants_state,
-                    neighbors,
-                    base_state_cur,
-                    assignments[:],
-                    program_count,
-                    max_steps,
-                    success_mode,
-                    dist_map=dist_map,
+                max_k = (
+                    grid_nonfloor_limit
+                    if grid_nonfloor_limit is not None
+                    else len(grid_candidates)
                 )
-                if result:
-                    final_assignments, steps = result
-                    programs = render_programs(final_assignments, puzzle.programs)
-                    programs_desc = " ".join(programs)
-                    ants_joined = " | ".join(ants_desc) if ants_desc else "-"
-                    grid_desc = render_grid_assignments(
-                        grid_assignments, grid_positions_list, puzzle.width
+                if not allowed_nonfloor:
+                    yield {}
+                    return
+                yield {}
+                for k in range(1, max_k + 1):
+                    for idxs in combinations(grid_candidates, k):
+                        for values in product(allowed_nonfloor, repeat=k):
+                            yield dict(zip(idxs, values))
+
+            for grid_assign in iter_grid_assignments():
+                ensure_deadline(deadline)
+                base_state_cur = base_state[:]
+                for idx in wilds:
+                    base_state_cur[idx] = CELL_FLOOR
+                grid_assignments = [CELL_FLOOR] * len(grid_positions_list)
+                for idx, val in grid_assign.items():
+                    base_state_cur[idx] = val
+                    grid_assignments[grid_entry_by_idx[idx]] = val
+                for specs in product(spec_values, repeat=ants):
+                    ensure_deadline(deadline)
+                    ants_state = dict(fixed_ants_map)
+                    ants_desc = []
+                    for pos, spec in zip(positions, specs):
+                        clan = spec // 4
+                        direction = spec & 3
+                        ants_state[pos] = make_ant(clan, direction)
+                        y, x = divmod(pos, puzzle.width)
+                        ants_desc.append(f"{x},{y},{clan}{DIR_TO_ANT_CHAR[direction]}")
+                    processed_candidates += 1
+                    candidate_deadline = combine_deadlines(
+                        deadline, candidate_time_limit_seconds
                     )
-                    return (
-                        f"ants={ants_joined} programs={programs_desc} "
-                        f"grid={grid_desc} steps={steps}"
-                    )
+                    try:
+                        result = search_partial_programs_sparse(
+                            ants_state,
+                            neighbors,
+                            base_state_cur,
+                            assignments[:],
+                            program_count,
+                            max_steps,
+                            success_mode,
+                            dist_map=dist_map,
+                            rng=rng,
+                            deadline=candidate_deadline,
+                            search_order=search_order,
+                            use_dominance=use_dominance,
+                        )
+                    except SearchTimeout:
+                        if deadline_exceeded(deadline):
+                            raise
+                        had_candidate_timeout = True
+                        candidate_timeouts += 1
+                        continue
+                    if result:
+                        final_assignments, steps = result
+                        programs = render_programs(final_assignments, puzzle.programs)
+                        programs_desc = " ".join(programs)
+                        ants_joined = " | ".join(ants_desc) if ants_desc else "-"
+                        grid_desc = render_grid_assignments(
+                            grid_assignments, grid_positions_list, puzzle.width
+                        )
+                        return (
+                            f"ants={ants_joined} programs={programs_desc} "
+                            f"grid={grid_desc} steps={steps}"
+                        )
+    except SearchTimeout:
+        raise SearchTimeout(
+            f"candidates={processed_candidates} candidate_timeouts={candidate_timeouts}"
+        ) from None
+    if had_candidate_timeout:
+        raise SearchTimeout(
+            f"candidates={processed_candidates} candidate_timeouts={candidate_timeouts}"
+        )
     return None
 
 
@@ -3054,6 +4184,7 @@ def search_single_ant_grid_fast(
     grid_nonfloor_limit: Optional[int],
     start_positions: Optional[List[int]] = None,
     allowed_grid_positions: Optional[List[int]] = None,
+    deadline: Optional[float] = None,
 ) -> Optional[str]:
     base_state, wilds, _food_indices = build_base_state_with_wildcards(puzzle)
     if not wilds:
@@ -3106,15 +4237,19 @@ def search_single_ant_grid_fast(
         return CELL_WILD, bit
 
     for start_idx in start_positions:
+        ensure_deadline(deadline)
         start_bit = 0
         bit = wild_map.get(start_idx)
         if bit is not None:
             start_bit = 1 << bit
         for p1_dir in range(4):
+            ensure_deadline(deadline)
             for start_dir in range(4):
+                ensure_deadline(deadline)
                 seen = set()
                 stack = [(start_idx, start_dir, 0, 0, start_bit, 0)]
                 while stack:
+                    ensure_deadline(deadline)
                     pos, direction, wall_mask, hole_mask, floor_mask, steps = (
                         stack.pop()
                     )
@@ -3237,6 +4372,44 @@ def main() -> None:
         help="Max steps for searches.",
     )
     parser.add_argument(
+        "--time-limit-seconds",
+        type=float,
+        help="Stop searches after this many seconds and print timeout.",
+    )
+    parser.add_argument(
+        "--shuffle-seed",
+        type=int,
+        help="Shuffle sparse search order deterministically with this RNG seed.",
+    )
+    parser.add_argument(
+        "--sparse-order",
+        choices=("dfs", "best"),
+        default="dfs",
+        help="State expansion order for sparse searches.",
+    )
+    parser.add_argument(
+        "--random-tries",
+        type=int,
+        help=(
+            "Sample this many random ant placement/spec combinations for sparse "
+            "wildcard searches instead of exhaustive outer enumeration."
+        ),
+    )
+    parser.add_argument(
+        "--outer-position-order",
+        choices=("natural", "fooddist"),
+        default="natural",
+        help="Order or bias outer wildcard positions by food distance.",
+    )
+    parser.add_argument(
+        "--candidate-time-limit-seconds",
+        type=float,
+        help=(
+            "Cap sparse inner search time per outer candidate and continue with "
+            "later candidates until the global time limit expires."
+        ),
+    )
+    parser.add_argument(
         "--single-ant-p1",
         action="store_true",
         help="Search wildcard placements with one ant; only p1 varies.",
@@ -3273,6 +4446,30 @@ def main() -> None:
     parser.add_argument(
         "--carve-write",
         help="Write the carved single-ant solution to this .ant file (implies --carve-single-ant).",
+    )
+    parser.add_argument(
+        "--route-single-ant",
+        action="store_true",
+        help="Synthesize a single-ant route first, then verify grid assignments.",
+    )
+    parser.add_argument(
+        "--route-p1",
+        help="Fix p1 direction for --route-single-ant (N/E/S/W or 0..3).",
+    )
+    parser.add_argument(
+        "--route-write",
+        help="Write the routed single-ant solution to this .ant file.",
+    )
+    parser.add_argument(
+        "--fixed-entry-sparse",
+        action="store_true",
+        help="Search to fixed-region states that can then reach food with p1 only.",
+    )
+    parser.add_argument(
+        "--suffix-steps",
+        type=int,
+        default=80,
+        help="Max fixed-region suffix steps for --fixed-entry-sparse.",
     )
     parser.add_argument(
         "--wild-ants",
@@ -3378,6 +4575,11 @@ def main() -> None:
         action="store_true",
         help="Prune if min ant distance to food exceeds max steps.",
     )
+    parser.add_argument(
+        "--no-dominance-prune",
+        action="store_true",
+        help="Disable symbolic dominance pruning and use exact-state pruning only.",
+    )
     success_group = parser.add_mutually_exclusive_group()
     success_group.add_argument(
         "--success-facing",
@@ -3390,7 +4592,25 @@ def main() -> None:
         help="Treat success as an ant facing north below a food cell.",
     )
     args = parser.parse_args()
+    if args.time_limit_seconds is not None and args.time_limit_seconds < 0:
+        raise SystemExit("--time-limit-seconds must be >= 0")
+    if (
+        args.candidate_time_limit_seconds is not None
+        and args.candidate_time_limit_seconds < 0
+    ):
+        raise SystemExit("--candidate-time-limit-seconds must be >= 0")
+    if args.random_tries is not None and args.random_tries <= 0:
+        raise SystemExit("--random-tries must be > 0")
+    deadline = (
+        monotonic() + args.time_limit_seconds
+        if args.time_limit_seconds is not None
+        else None
+    )
+    search_rng = (
+        random.Random(args.shuffle_seed) if args.shuffle_seed is not None else None
+    )
     success_mode = "below" if args.success_below else "facing"
+    use_dominance = not args.no_dominance_prune
 
     puzzles = parse_puzzles(Path(args.puzzles))
     if args.stats:
@@ -3437,6 +4657,13 @@ def main() -> None:
                         grid_positions=grid_positions,
                         fixed_ants=fixed_ants,
                         distance_prune=args.distance_prune,
+                        rng=search_rng,
+                        deadline=deadline,
+                        search_order=args.sparse_order,
+                        random_tries=args.random_tries,
+                        candidate_time_limit_seconds=args.candidate_time_limit_seconds,
+                        outer_position_order=args.outer_position_order,
+                        use_dominance=use_dominance,
                     )
                     if result:
                         print(f"ants={ants} nonfloor={nonfloor} {result}")
@@ -3484,7 +4711,7 @@ def main() -> None:
     if args.single_ant_grid_fast:
         if not args.match:
             raise SystemExit("--match is required for --single-ant-grid-fast")
-        success_mode = "facing" if args.success_facing else "below"
+        success_mode = "below" if args.success_below else "facing"
         grid_values = parse_grid_wild_values(args.grid_wild_values)
         for puzzle in puzzles:
             if args.match not in puzzle.title:
@@ -3511,6 +4738,7 @@ def main() -> None:
                 grid_nonfloor_limit=args.grid_wild_max_nonfloor,
                 start_positions=start_positions,
                 allowed_grid_positions=allowed_grid_positions,
+                deadline=deadline,
             )
             print(result or "no single-ant grid solution")
         return
@@ -3574,6 +4802,105 @@ def main() -> None:
                 )
                 print(result or "no carved single-ant solution")
         return
+    if args.route_write:
+        args.route_single_ant = True
+    if args.route_single_ant:
+        if not args.match:
+            raise SystemExit("--match is required for --route-single-ant/--route-write")
+        p1_dir = parse_dir_value(args.route_p1)
+        for puzzle in puzzles:
+            if args.match not in puzzle.title:
+                continue
+            start_positions = build_wild_position_filter(
+                puzzle,
+                args.ant_positions,
+                args.ant_rect,
+                args.ant_max_dist,
+                args.ant_limit,
+            )
+            allowed_grid_positions = build_wild_position_filter(
+                puzzle,
+                args.grid_positions,
+                args.grid_rect,
+                args.grid_max_dist,
+                args.grid_limit,
+            )
+            try:
+                solution = find_route_single_ant_solution(
+                    puzzle,
+                    max_steps=args.max_steps,
+                    success_mode=success_mode,
+                    p1_dir=p1_dir,
+                    start_positions=start_positions,
+                    allowed_grid_positions=allowed_grid_positions,
+                    deadline=deadline,
+                )
+            except SearchTimeout:
+                print("timeout")
+                continue
+            if not solution:
+                print("no routed single-ant solution")
+                continue
+            if args.route_write:
+                programs = [
+                    fill_program_template(
+                        template,
+                        p1=solution.p1,
+                        apply_p1=(clan == 0),
+                    )
+                    for clan, template in enumerate(puzzle.programs)
+                ]
+                replacements = route_solution_replacements(puzzle, solution, clan=0)
+                world = build_world(puzzle, replacements)
+                write_ant_world(Path(args.route_write), puzzle.title, programs, world)
+                print(f"wrote {args.route_write}")
+            else:
+                print(route_solution_description(puzzle, solution))
+        return
+    if args.fixed_entry_sparse:
+        if not args.match:
+            raise SystemExit("--match is required for --fixed-entry-sparse")
+        if args.ants is None:
+            raise SystemExit("--ants is required for --fixed-entry-sparse")
+        for puzzle in puzzles:
+            if args.match not in puzzle.title:
+                continue
+            allowed_clans = parse_ant_clans(args.ant_clans, len(puzzle.programs))
+            ant_specs = build_ant_specs(len(puzzle.programs), allowed_clans)
+            fixed_ants = parse_fixed_ants(
+                args.fixed_ants, puzzle.width, puzzle.height
+            )
+            wild_positions = build_wild_position_filter(
+                puzzle,
+                args.ant_positions,
+                args.ant_rect,
+                args.ant_max_dist,
+                args.ant_limit,
+            )
+            try:
+                result = search_fixed_entry_sparse(
+                    puzzle,
+                    ants=args.ants,
+                    max_steps=args.max_steps,
+                    suffix_steps=args.suffix_steps,
+                    success_mode=success_mode,
+                    ant_specs=ant_specs,
+                    wild_positions=wild_positions,
+                    fixed_ants=fixed_ants,
+                    rng=search_rng,
+                    deadline=deadline,
+                    search_order=args.sparse_order,
+                    random_tries=args.random_tries,
+                    candidate_time_limit_seconds=args.candidate_time_limit_seconds,
+                    outer_position_order=args.outer_position_order,
+                    use_dominance=use_dominance,
+                )
+            except SearchTimeout as exc:
+                detail = str(exc)
+                print(f"timeout {detail}".rstrip())
+                continue
+            print(result or "no fixed-entry solution")
+        return
     if args.wild_ants:
         if not args.match:
             raise SystemExit("--match is required for --wild-ants")
@@ -3603,6 +4930,7 @@ def main() -> None:
                 wild_positions=wild_positions,
                 fixed_ants=fixed_ants,
                 distance_prune=args.distance_prune,
+                deadline=deadline,
             )
             print(result or "no solution")
         return
@@ -3635,6 +4963,13 @@ def main() -> None:
                 wild_positions=wild_positions,
                 fixed_ants=fixed_ants,
                 distance_prune=args.distance_prune,
+                rng=search_rng,
+                deadline=deadline,
+                search_order=args.sparse_order,
+                random_tries=args.random_tries,
+                candidate_time_limit_seconds=args.candidate_time_limit_seconds,
+                outer_position_order=args.outer_position_order,
+                use_dominance=use_dominance,
             )
             print(result or "no solution")
         return
@@ -3677,6 +5012,13 @@ def main() -> None:
                 grid_positions=grid_positions,
                 fixed_ants=fixed_ants,
                 distance_prune=args.distance_prune,
+                rng=search_rng,
+                deadline=deadline,
+                search_order=args.sparse_order,
+                random_tries=args.random_tries,
+                candidate_time_limit_seconds=args.candidate_time_limit_seconds,
+                outer_position_order=args.outer_position_order,
+                use_dominance=use_dominance,
             )
             print(result or "no solution")
         return
@@ -3721,6 +5063,12 @@ def main() -> None:
                 grid_positions=grid_positions,
                 fixed_ants=fixed_ants,
                 distance_prune=args.distance_prune,
+                rng=search_rng,
+                deadline=deadline,
+                search_order=args.sparse_order,
+                candidate_time_limit_seconds=args.candidate_time_limit_seconds,
+                outer_position_order=args.outer_position_order,
+                use_dominance=use_dominance,
             )
             print(result or "no solution")
         return
@@ -3733,4 +5081,11 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except SearchTimeout as exc:
+        details = str(exc).strip()
+        if details:
+            print(f"timeout {details}")
+        else:
+            print("timeout")

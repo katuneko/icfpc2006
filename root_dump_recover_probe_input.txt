@@ -1,0 +1,10 @@
+root
+c@Rn3g!e
+cd /root/lost+found
+recover aum_log_29_12_19004_235107
+dump recover
+dump CREDITS
+dump aum_log_29_12_19004_235107
+cd /root/tools
+dump um.um
+logout

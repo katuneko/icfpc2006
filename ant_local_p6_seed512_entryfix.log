@@ -1,0 +1,35 @@
+BEST score=247 step=10 evals=1 restart=1 entry-turn-p2 ant=(6,3) 4^ target=(9,3) E dest=(6,2) support_dist=3 programs=NESWNNE NEENNWS NENSSNN NESWNWS NENNWEW NEESNSE NENESSW NENSESS NEWENNN NENSSNN
+BEST score=214 step=11 evals=8 restart=1 entry-turn-p2 ant=(5,3) 5^ target=(9,3) E dest=(5,2) support_dist=2 programs=NESWNNE NEENNWW NENSSNN NESWEWS NENSWEW NEESESE NENESSW NENSEWS NEWENNN NESSNNN
+BEST score=195 step=12 evals=61 restart=1 entry-turn-p2 ant=(6,3) 2^ target=(9,3) E dest=(6,2) support_dist=2 programs=NENNNSN NESENSE NENWSEW NESSSEW NENSNSS NENSENW NEEWSWW NESSNNS NENWWNN NENSNNE
+BEST score=194 step=13 evals=73 restart=1 entry-turn-p2 ant=(6,3) 1^ target=(9,3) E dest=(6,2) support_dist=2 programs=NENNNEN NENENSE NENWSEW NESSSEW NEWSSSS NENSENW NEWWSWW NESWSNE NESWWNN NENSNWE
+BEST score=192 step=13 evals=74 restart=1 entry-turn-p2 ant=(6,3) 1^ target=(9,3) E dest=(6,2) support_dist=2 programs=NENNNEN NENENSE NENWSEW NESSSEW NEWNSSS NENSENW NEWWSWW NESWSNE NESWWNN NENSNWE
+BEST score=191 step=12 evals=624 restart=1 entry-turn-p2 ant=(6,3) 0^ target=(9,3) E dest=(6,2) support_dist=2 programs=NENWENE NENENWN NEEWWSW NEWNEWE NEWSWEN NENNENS NEWEWWS NEWEEEE NEWESWN NESWNWE
+BEST score=190 step=11 evals=1244 restart=1 entry-turn-p2 ant=(6,3) 3^ target=(9,3) E dest=(6,2) support_dist=2 programs=NEESNNW NEWNEWE NESENWN NEESSNN NEESEWN NESWSES NEWNWWW NENEWWW NEWWNEN NEESSNS
+BEST score=188 step=11 evals=2207 restart=2 entry-turn-p2 ant=(6,3) 5^ target=(9,3) E dest=(6,2) support_dist=2 programs=NESWNNE NEENNWS NENSSNN NENWNWS NENNWEN NENSNSE NENESSW NENSESS NEWWNNN NENSSNS
+BEST score=187 step=11 evals=19041 restart=9 entry-turn-p2 ant=(6,3) 3^ target=(9,3) E dest=(6,2) support_dist=2 programs=NENNEEN NESSWEN NESWENS NEENEEW NESWEEE NESNWSW NESWSEN NENSWWE NENSESS NEWEWNS
+BEST score=186 step=11 evals=55007 restart=26 entry-turn-p2 ant=(6,3) 2^ target=(9,3) E dest=(6,2) support_dist=2 programs=NENWNNE NEENNWS NENSENN NESWNWE NENNWEW NESSNSE NENSSSW NENSESS NEWEENN NENSSNN
+NOFOUND best=186 step=11 entry-turn-p2 ant=(6,3) 2^ target=(9,3) E dest=(6,2) support_dist=2 evals=57983
+PROGRAMS
+NENWNNE
+NEENNWS
+NENSENN
+NESWNWE
+NENNWEW
+NESSNSE
+NENSSSW
+NENSESS
+NEWEENN
+NENSSNN
+GRID
+1,13 0>
+2,13 5v
+3,13 3^
+4,13 4>
+5,13 3^
+6,13 2v
+1,14 2>
+2,14 0<
+4,14 2<
+5,14 0v
+6,14 3v
+WROTE p6_local_seed512_entryfix_best.ant

@@ -1,0 +1,27 @@
+Puzzle 6: Tight Turn
+NENEWNW
+NENNSWE
+NEWNEEN
+NENNNNE
+NENEENE
+NENNENE
+NEWEESN
+NENNSSE
+NENNESS
+NENSNSE
+11 15
+ o o o o o o o o o o o
+ o - - - - - - - - - $
+ o - - - - - - - - - $
+ o - - - - - - - - - $
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o - - - - - - o o o o
+ o4v4<4v1^1^2< o o o o
+ o5^2v -5>3v5< o o o o

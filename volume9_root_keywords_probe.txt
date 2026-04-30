@@ -1,0 +1,90 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12:00:00 1/1/19100
+Welcome to Universal Machine IX (UMIX).
+
+This machine is a shared resource. Please do not log
+in to multiple simultaneous UMIX servers. No game playing
+is allowed.
+
+Please log in (use 'guest' for visitor access).
+;login: password: logged in as root
+
+---------------------------------------------------------
+Administrative account is for maintenance only.
+No research is allowed.
+---------------------------------------------------------
+
+% dump : Prints a hexidecimal dump of a binary file.
+usage : dump file
+% telnet : Connect to UMIX host.
+usage : telnet host port
+% help: unknown command recover
+% % File could not be recovered.
+% File could not be recovered.
+% File could not be recovered.
+% File could not be recovered.
+% File could not be recovered.
+% File could not be recovered.
+% File could not be recovered.
+% % ls: not an accessible directory.
+% ls: not an accessible directory.
+% ls: not an accessible directory.
+% ls: not an accessible directory.
+% ls: not an accessible directory.
+% ls: not an accessible directory.
+% ls: not an accessible directory.
+% ls: not an accessible directory.
+% telnet: could not resolve vault/23: Name or service not known
+% telnet: could not resolve Vault/23: Name or service not known
+% telnet: could not resolve portland/23: Name or service not known
+% telnet: could not resolve Portland/23: Name or service not known
+% 
