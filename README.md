@@ -7,11 +7,11 @@ Working directory for the ICFPC 2006 puzzle.
 The current write-up is [solution_report.md](solution_report.md). It summarizes the solved areas, the core ideas behind each solution, and the current score state.
 
 Current highlights:
-- CV weight: 5713, Full Administrator.
+- CV weight: 5747, Full Administrator.
 - Smellular Antomata is complete: Puzzle 1..15 all have solution files and ANTWO publications.
 - The report focuses on reusable solving structure rather than raw command history; detailed logs remain in `walkthrough.md`, `progress.md`, `*_input.txt`, and `volume9_*.txt`.
 
-![CV weight proof](score_5713_proof.png)
+![Current CV weight proof](score_5747_proof.png)
 
 ## Highlights
 - UM interpreter source: `um.rs` (builds to `um`)

@@ -94,6 +94,10 @@
 - `raytrace.2d` は設計メモ（`i_max`/`i_min` 等の補助モジュールを `two_d.py` で動作確認）。提出は `raytrace_2_nonl.2d`。
 - `raytrace.2d` に `f_apply`（Fテーブル適用）/`g_eval`（Towards 側の式）を追加し、`two_d.py` で動作確認済み。
 - `raytrace.2d` に `h_eval`（Away 側の式）を追加し、`two_d.py` で動作確認済み。
+- `raytrace_2_repack2.2d` で既存モジュールを再配置し、公式 `verify raytrace` の Program area を `13340` から `13299` へ削減。ただし出版コードは既存と同じ `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` で、CV weight は増えず。
+  - ログ: `volume9_ohmega_verify_raytrace_repack2.txt`（入力: `ohmega_verify_raytrace_repack2_input.txt`）。
+- `raytrace_2_repack3.2d` で `A` module 内の `All` 出力を `send[(Inr Inr W,E)]` に短縮し、公式 `verify raytrace` の Program area を `13206` へ削減。ただし出版コードは引き続き `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` で、CV weight は増えず。
+  - ログ: `volume9_ohmega_verify_raytrace_repack3.txt`（入力: `ohmega_verify_raytrace_repack3_input.txt`）。
 - `ocult_submit.2d` の `d` モジュールが東境界に 2 本出力していたため、下段右端を切って `d outputs [8]` へ改善。
   - その後のローカル評価では `EvalError split on non-pair` に進み、`s0/s1/s2/s3` がまだ複数出力候補を持つ構造であることを確認（`volume9_ohmega_verify_ocult_submit_local.txt`、入力: `ohmega_verify_ocult_submit_local_input.txt`）。
   - 現状は局所修正で収束する見込みが薄いため、能動作業対象から外し、必要なら `hadproblem.md` と既存解析ログを参照して後日再開する。
@@ -109,9 +113,10 @@
 - 既存の短ループ探索は不発のため戦略見直しが必要。
 - `balance_solver.py` に PHYSICS 初期配置探索用の `search_physics_sequence` を追加。
 - `copymem` は 32 バイトで解決・認証済み（`copymem.bal`、`BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223`）。
-- `copyreg` は `copyreg.bal`（`627915536f0309007c726d465564006d7e3d2926753f030e3b283d763d342e`）で認証行を取得（`BLNCE.CRE=171@999999|a617e59b999d049400d5f52fd93ab48`）。
-  - 再現ログ: `volume9_yang_certify_copyreg97_batch.txt`（入力: `yang_certify_copyreg97_batch_input.txt`）。
-  - ローカル全探索では 255 ケース中 97 ケースのみ成立。`certify copyreg` を 400 回実行して 5 回通過。
+- `copyreg` は `copyreg.bal`（`2829672e0b0029295528036759770a`）で 15 bytes 化し、認証行を取得（`BLNCE.CRE=187@999999|b6a7e82ce7cb07c20a093c16a740925`）。
+  - 再現ログ: `volume9_yang_certify_copyreg15_best_batch.txt`（入力: `yang_certify_copyreg15_best_batch_input.txt`）。
+  - ローカル全探索では 255 ケース中 195 ケース成立、halt は 254/255（非停止は `a=251`）。`certify copyreg` の反復実行で 3 回通過。
+  - 中間候補として `copyreg30.bal`（`BLNCE.CRE=172`）、`copyreg29.bal`（`BLNCE.CRE=173`）、`copyreg28.bal`（`BLNCE.CRE=174`）、`copyreg26.bal`（`BLNCE.CRE=176`）、`copyreg25.bal`（`BLNCE.CRE=177`）、`copyreg23.bal`（`BLNCE.CRE=179`）、`copyreg22_best.bal`（`BLNCE.CRE=180`）、`copyreg21_best.bal`（`BLNCE.CRE=181`）、`copyreg20.bal`（`BLNCE.CRE=182`）、`copyreg19.bal`（`BLNCE.CRE=183`）、`copyreg18.bal`（`BLNCE.CRE=184`）、`copyreg17.bal`（`BLNCE.CRE=185`）、`copyreg16.bal`（`BLNCE.CRE=186`）も認証済み。
 - `copyreg` は mem[1..7] を 0 に落として mem[0] をカウンタにするループ案を検討中。
 - `multmem` の探索を拡張。現状ベスト候補は `multmem_candidate.bal`（`78336a050b3c0d64423c415021077f00327e6a1c`）。
   - ランダム 100,000 ケースで正解率 4.12%（4120/100000、常に halt）。
@@ -133,11 +138,17 @@
 - `certify fillmem` 成功: `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`。
   - ログ: `volume9_yang_certify_fillmem.txt`（入力: `yang_certify_fillmem_input.txt`）。
 - `stop127`/`stop128` を短縮。
-  - `stop128`: `PHYSICS -16` を 16 回で `sR0=128` にして `SCIENCE 0`。
-  - `stop127`: 上記から `PHYSICS -1; PHYSICS 1` で `sR0=127`。
-  - 出版: `BLNCE.S27=13@999999|09371405f7a438a2adbfeb53d5d5317`, `BLNCE.S28=12@999999|39eabd9f583a28bad260f1981e745ac`。
-  - `icfp.exe` 再集計で CV weight 5190。
-  - ログ: `volume9_yang_certify_stop_short.txt`, `volume9_ftd_icfp_all.txt`。
+  - `stop1`: `6100`（`PHYSICS 1; SCIENCE 0`）で 2 bytes 化、`BLNCE.ST1=10@999999|3417ffced484d8ab26e1062e7cd8feb`。
+  - `stop128`: `7000`（`PHYSICS -16; SCIENCE 0`）で 2 bytes 化、`BLNCE.S28=15@999999|cc21c682563623f9df8d1bba37e5ee6`。
+  - `stop127`: `0061`（`SCIENCE 0; PHYSICS 1`）で 2 bytes 化、`BLNCE.S27=20@999999|a7f8d6a06903f3a8956d0f958a50a33`。
+  - BLNCE は 1053 -> 1084、`icfp.exe` 再集計で CV weight 5713 -> 5747。
+  - ログ: `volume9_yang_certify_stop1_loop.txt`, `volume9_yang_certify_stop_loop.txt`, `volume9_yang_certify_stop_loop2.txt`（入力: `yang_certify_stop1_loop_input.txt`, `yang_certify_stop_loop_input.txt`, `yang_certify_stop_loop2_input.txt`）。
+  - 再集計ログ: `volume9_ftd_icfp_all_5747.txt`（入力: `ftd_icfp_all_5747_input.txt`）。
+- 追加の短縮探索:
+  - `copyreg.bal` は 15 bytes まで短縮。25/23/22/21/20/19/18/17/16 bytes の各確率通過型を公式認証した後、15 bytes 版で `BLNCE.CRE=187` を取得。
+  - `multmem.bal` から 14 bytes への deletion + substitution とランダム近傍探索を実施。single deletion の最高は 1024/65025 程度で、現行の奇数 `b` 全通過パターン（32640/65025）を超える候補は未発見。
+  - `copymem.bal` から 31 bytes への deletion + substitution は代表値 train で全通過候補なし。
+  - `clearreg.bal` は PHYSICS 7 手 + memory write + halt の 9 bytes 構造が現行最短。8 bytes ring で命令再利用する限定探索では候補なし。
 - PHYSICS `[1,1]` は `sR0`/`dR1` を +1、`sR1..sR3,dR0` を固定できる（`sR0++` マクロ）。
 - `copyreg` 初期状態から PHYSICS `[14,2,-14]` で `sR0=0, sR1=3, sR2=2, sR3=3, dR0=a, dR1=4` を `a` 非依存で作れることを確認。
 - 上の状態で `LOGIC d=0,s1=0,s2=0` を使うと `M[a]=1` と `M[4]=0` を同時に作れる（4 命令のセンチネル初期化: `[14,2,-14] + LOGIC(0,0,0)`）。
@@ -303,7 +314,7 @@
   - seed 803 で `p7_local_seed803_p7focus_best.ant` が `FOUND step=27`。標準名として `puzzle7_solution.ant` を保存。
   - UMIX でも `Ant reached goal!`。入力/ログ: `gardener_antomaton_verify_p7_solution_input.txt` / `volume9_gardener_antomaton_verify_p7_solution.txt`。
   - 出版: `ANTWO.007=30@999999|73be091344104ac048550d8dcfd324c`。
-- `icfp.exe` に P6/P7 と `CIRCS.RAY=1264` を含む既知出版を投入し、CV weight 5713 / Full Administrator を確認。
+- `icfp.exe` に P6/P7 と `CIRCS.RAY=1264` を含む既知出版を投入し、CV weight 5713 / Full Administrator を確認。後続の Balance / ADVIS 短縮を反映した再集計で CV weight 5747 / Full Administrator を確認。
   - 入力/ログ: `ftd_icfp_all_final_input.txt` / `volume9_ftd_icfp_all_final.txt`。
 
 ## Accounts / Exploration

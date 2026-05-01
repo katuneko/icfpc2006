@@ -1,0 +1,14 @@
+Compute x => Eval x Done;
+
+Eval (op x y) k => Eval x (op y k);
+
+Eval v (op y k) => op y k v;
+Eval v Done => v;
+
+Add Z k w => k w;
+Add (S x) k w => Add x k (S w);
+
+Mult Z k w => k Z;
+Mult (S x) k w => Mult x (Add w k) w;
+
+.

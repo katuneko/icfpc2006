@@ -4,19 +4,19 @@
 
 ## 現在の到達点
 
-現在の CV weight は 5713、権限は Full Administrator です。内訳は次の通りです。
+現在の CV weight は 5747、権限は Full Administrator です。内訳は次の通りです。
 
 | 分野 | 点 |
 | --- | ---: |
 | INTRO | 235 |
 | ADVTR | 810 |
 | ANTWO | 860 |
-| BLNCE | 1053 |
+| BLNCE | 1084 |
 | BLACK | 1000 |
 | CIRCS | 1329 |
-| ADVIS | 326 |
+| ADVIS | 329 |
 | BASIC | 100 |
-| 合計 | 5713 |
+| 合計 | 5747 |
 
 このスコアは単なる「解けた問題数」ではなく、いくつかの分野ではプログラム長、面積、アドバイス規則数などの品質が直接点数に反映されます。特に CIRCS と ADVIS は、正解を出した後も表現を洗練する余地が大きい分野です。
 
@@ -116,11 +116,11 @@ Balance は hex bytecode の小さな機械語 puzzle です。ここで重要�
 
 ### 解法
 
-`stop127` / `stop128` では、値を直接作るのではなく `PHYSICS -16` の繰り返しで `sR0=128` を作り、`SCIENCE 0` へ渡しました。127 ではその前後に `PHYSICS -1; PHYSICS 1` を追加することで短く調整しています。
+`stop1` / `stop127` / `stop128` では、停止判定の `SCIENCE 0` を番兵として使い、2 bytes で目的セルに来た時だけ止める形まで短縮しました。`stop1` は `PHYSICS 1; SCIENCE 0`、`stop128` は `PHYSICS -16; SCIENCE 0`、`stop127` は `SCIENCE 0; PHYSICS 1` です。
 
 `fillmem` では、最初に preloop でレジスタの意味を整え、main loop へ入ってから同じ骨格を使い回しました。loop1 は zero-fill と counter decrement を担当し、`MATH d0,s3,s1` と `dR0++` の組み合わせで範囲を進めます。loop2 は pre から main への register relocation 後に同じ構造を再利用し、`[i,j)` を `a` で埋めます。
 
-`copymem`、`copyreg`、`swapmem`、`swapreg`、`swapreg2`、`addmem`、`addmem2`、`clearreg` などは、最終的に命令列の個別発明ではなく、小さなデータ移動 idiom の組み合わせとして整理できました。
+`copyreg` は既存の確率通過型 31 bytes 解から、30/29/28/26/25 bytes、さらに 16 bytes を経て 15 bytes 解へ短縮しました。15 bytes 版はローカル全列挙で 195/255 ケース成立し、254/255 ケースで halt します。公式 `certify copyreg` の反復実行で `BLNCE.CRE=187` を取得できました。`copymem`、`swapmem`、`swapreg`、`swapreg2`、`addmem`、`addmem2`、`clearreg` なども、最終的に命令列の個別発明ではなく、小さなデータ移動 idiom の組み合わせとして整理できました。
 
 ### 教訓
 
@@ -140,13 +140,13 @@ Balance の高得点化では、命令列を短くするより先に「どの状
 
 `raytrace` は最も大きな成果です。Python の least-fixed-point 参照実装を作り、2D 側では intensity の max/min、`F` table、Towards/Away、`awayv`、`away`、`update`、`rt` といった module に分割しました。各 module を参照実装と突き合わせ、全体として verifier を通した後、配置を詰め直して `raytrace_2_repack.2d` を作りました。
 
-この repack は意味を変えずに module 配置を整理するもので、公式 `verify raytrace` の Program area を 13340 まで下げ、提出コードを `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` に改善しました。従来の `1261` から CIRCS が 3 点増え、その後 Antomaton P6/P7 の完走で現在の CV weight は 5713 になりました。
+この repack は意味を変えずに module 配置を整理するもので、公式 `verify raytrace` の Program area を 13340 まで下げ、提出コードを `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` に改善しました。さらに同じ module 群の再配置で `raytrace_2_repack2.2d` を作り、Program area は 13299 まで下がりました。続いて `A` module 内の `All` 出力を branch payload から再構成する `send[(Inr Inr W,E)]` に短縮し、`raytrace_2_repack3.2d` で Program area を 13206 まで下げました。ただし出版コードは `1264` のままで CV weight は増えませんでした。従来の `1261` から CIRCS が 3 点増え、その後 Antomaton P6/P7、Balance 短縮、ADVIS.ARH の短縮を反映した現在の CV weight は 5747 です。
 
 `ocult` については未完成ですが、重要な意味論は見えています。`verify ocult` が期待するのは生の次項ではなく、`Inl ()` で「適用なし」、`Inr <term>` で「一回 rewrite した項」を表す Option です。この理解がないと、内部の rewrite が正しくても verifier の型に合いません。
 
 ### 高スコア化への示唆
 
-CIRCS は、現在解けている問題だけでも得点を伸ばせる領域です。`raytrace_2_repack.2d` の改善が示した通り、論理を変えずに配置と module 境界を洗練するだけで点が動きます。次に見るべきなのは、重複 module の統合、pair/unpair の経路短縮、広い空白を生む module 配置の再探索です。
+CIRCS は、現在解けている問題だけでも得点を伸ばせる領域です。`raytrace_2_repack.2d` の改善が示した通り、論理を変えずに配置と module 境界を洗練するだけで点が動きます。ただし `raytrace_2_repack3.2d` の 13206 area でも出版点が変わらなかったため、次に見るべきなのは、単なる外形 packing よりも、再帰 module の分割、`X`/`Q` の右端経路短縮、または採点上限の確認です。
 
 ## O'Cult Advice / ADVIS
 
@@ -158,13 +158,13 @@ Arithmetic では、個別の演算を展開しすぎるとサイズが増えま
 
 ### 解法
 
-Arithmetic は `arith12.adv` に整理し、K を削り、rule 9、size 118 の形で `ADVIS.ARH=166@999999|6d55d8bb13c171ebbd8e85c642ff838` を得ました。
+Arithmetic は `arith28.adv` で、CPS の `Eval`/`Done` を捨てて `Compute` 自体を評価関数にし、`AddF`/`MulF` に左辺だけを正規化して渡す形へ短縮しました。rule 7、size 82 の形で `ADVIS.ARH=169@999999|ac21e73f0f47d168d1c2ea1b62c31fa` を得ました。
 
-XML は `xml17.adv` で、Seq recombination を global rule として分離したことが効きました。rule 13、size 214 の形で `ADVIS.XML=160@999999|11603b62b57f24410f77a0e2417328c` を得ています。
+XML は `xml28.adv` で、Seq recombination を global rule として分離した骨格を保ちつつ、`Tag q` を constructor continuation として `Ins` に渡す形へ短縮しました。`Eval (t d)` と `Ins t k (t d)` が効き、rule 13、size 210 の形で `ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2` を得ています。出版点は `xml17.adv` の size 214 と同じでした。
 
 ### 教訓
 
-ADVIS では、テストを通す規則を作った時点ではまだ半分です。その後、どの規則が本当に意味論の核で、どの規則がたまたま特定入力を処理しているだけかを分ける必要があります。短縮は、行数削減ではなく抽象化の発見でした。
+ADVIS では、テストを通す規則を作った時点ではまだ半分です。その後、どの規則が本当に意味論の核で、どの規則がたまたま特定入力を処理しているだけかを分ける必要があります。短縮は、行数削減ではなく抽象化の発見でした。特に O'Cult の「左右の match 数が同じなら適用しない」規則を避けるため、ARH では同じ形の未評価部分式を左右へ同時に置かず、乗算は `x*y` を先に `Compute` してから `+ y` する向きにしました。XML では `Merge` と `Ins` 継続の境界を崩しすぎないことが重要でした。`xml28.adv` では constructor continuation 化で安全に 4 size 縮みましたが、`Merge (t a) k (t b)` まで一般化すると `Seq` も誤って同一 constructor と見なされます。late global cleanup 系の試行は固定テストを通っても公式内部テストで未正規形を残しました。
 
 ## Accounts / Administration
 
@@ -186,9 +186,9 @@ UMIX のアカウントは報酬ではなく、探索空間の分岐です。各
 
 Antomaton は Puzzle 1..15 の見えている問題をすべて解き切りました。今後この分野で伸ばすなら、未解探索ではなく、解の簡約、step 数短縮、または探索器の一般化が主な方向です。
 
-CIRCS では `ocult` が未完成です。まず verifier の Option 型期待に合わせた一歩 rewrite 器を module 単位で完成させるべきです。一方、既に解けている `raytrace` はさらに面積圧縮の余地があり、短期的なスコア改善候補です。
+CIRCS では `ocult` が未完成です。まず verifier の Option 型期待に合わせた一歩 rewrite 器を module 単位で完成させるべきです。一方、既に解けている `raytrace` はさらに面積圧縮の余地がありますが、最新の内部短縮では 13206 area でも出版点が変わらなかったため、次の改善にはより大きい構造削減か、RAY の採点上限に関する見極めが必要です。
 
-ADVIS は arithmetic/XML ともまだ短縮余地があります。今後は failed variant を捨てるのではなく、どの規則が失敗を生んだかを evaluator trace と対応づけることで、意味を保ったまま規則を統合できる可能性があります。
+ADVIS は XML 側にまだ短縮余地があります。ただし 210 から次の出版点に進むには、`Merge` の同一タグ判定を `Seq` に誤爆させずに短くする必要があります。今後は failed variant を捨てるのではなく、どの規則が失敗を生んだかを evaluator trace と対応づけることで、意味を保ったまま規則を統合できる可能性があります。
 
 Adventure / root 周辺は、未使用の recovered file や権限差分をもう一度棚卸しする価値があります。ここは「新しいコードが隠れている」よりも、「既存 puzzle を解くための道具やヒントがまだ残っている」可能性が高いです。
 

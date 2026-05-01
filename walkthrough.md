@@ -38,11 +38,11 @@
 
 ### Balance Certified Professional Program Puzzles
 - stop — 解法: `stop.bal`（BLNCE.STP=10@999999|e1c3e7108c2a7697cc11151dc5649eb）
-- stop1 — 解法: `stop1.bal`（BLNCE.ST1=5@999999|bb606534654eb4acf7663f72acac3ad）
-- stop127 — 解法: `stop127_short.bal`（BLNCE.S27=13@999999|09371405f7a438a2adbfeb53d5d5317）
-- stop128 — 解法: `stop128_short.bal`（BLNCE.S28=12@999999|39eabd9f583a28bad260f1981e745ac）
+- stop1 — 解法: `stop1.bal`（BLNCE.ST1=10@999999|3417ffced484d8ab26e1062e7cd8feb）
+- stop127 — 解法: `stop127_short.bal`（BLNCE.S27=20@999999|a7f8d6a06903f3a8956d0f958a50a33）
+- stop128 — 解法: `stop128_short.bal`（BLNCE.S28=15@999999|cc21c682563623f9df8d1bba37e5ee6）
 - copymem — 解法: `copymem.bal`（BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223）
-- copyreg — 解法: `copyreg.bal`（BLNCE.CRE=171@999999|a617e59b999d049400d5f52fd93ab48）
+- copyreg — 解法: `copyreg.bal`（BLNCE.CRE=187@999999|b6a7e82ce7cb07c20a093c16a740925）
 - swapmem — 解法: `swapmem.bal`（BLNCE.SWM=40@999999|b6cf8cf3f01593eb04f0b0436b1d3c9）
 - swapreg — 解法: `swapreg.bal`（BLNCE.SWR=50@999999|a656011e0672f5dc095ca3579fc6515）
 - swapreg2 — 解法: `swapreg2.bal`（BLNCE.SR2=50@999999|af9ab43ee4454e275ff430ed2f629f0）
@@ -55,25 +55,25 @@
 ### Black Knots Model Specs
 - Model 000 — 解法: `bbarker_verify_000_submit_input.txt`（BLACK.000=10@999999|4566683b0cde7717794ff5fc1c298c8）
 - Model 010 — 解法: `bbarker_verify_010_submit_input.txt`（BLACK.010=10@999999|436114654e7dfe3d819cdd1c53d0cb5）
-- Model 020 — 未解
+- Model 020 — 解法: `bbarker_verify_020_submit_input.txt`（BLACK.020=10@999999|27521a7d58a613be1a0f1f6a753de85）
 - Model 030 — 解法: `bbarker_verify_030_submit_input.txt`（BLACK.030=20@999999|70e22c6182351791f1506f943688e81）
 - Model 040 — 解法: `bbarker_verify_040_submit_input.txt`（BLACK.040=20@999999|e9479593582652a324a6f18b49d6dea）
 - Model 050 — 解法: `bbarker_verify_050_submit_input.txt`（BLACK.050=30@999999|00eefe8f2fc45c83519272902cb7aca）
 - Model 100 — 解法: `bbarker_verify_100_submit_input.txt`（BLACK.100=100@999999|1789ef95410423e12419a2cba30c128）
 - Model 200 — 解法: `bbarker_verify_200_submit_input.txt`（BLACK.200=200@999999|03222cb8f7f7c05b59e51d4594ac2d5）
 - Model 300 — 解法: `bbarker_verify_300_submit_retry_input.txt`（BLACK.300=200@999999|ab4464b1cfdf9e33438689167ed8b8d）
-- Model 400 — 未解
+- Model 400 — 解法: `bbarker_verify_400_submit_input.txt`（BLACK.400=200@999999|66129c05bbdca7b5aff4b33f1ab7526）
 - Model 500 — 解法: `bbarker_verify_500_submit_fast_input.txt`（BLACK.500=200@999999|4e8e2021d24489a4e1f65d3161c38f8）
 
 ### 2D verify built-in tests
 - mult — 解法: `mult.2d`（CIRCS.MUL=30@999999|fe8a47581d2a95699b216c13fb250bd）
 - rev — 解法: `rev.2d`（CIRCS.REV=35@999999|d4481d7a04981746dc23d1c0b7c665e）
-- raytrace — 解法: `raytrace_2_repack.2d`（CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd）
+- raytrace — 解法: `raytrace_2_repack3.2d`（CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd）
 - ocult — 棚上げ（未解。仕様: `aspects.spec`、要求モジュール: `step`）
 
 ### O'Cult advise
-- arith — 解法: `arith12.adv` + `arith.tests`（ADVIS.ARH=166@999999|e6801a88b99cc7654daaede22416a05）
-- xml — 解法: `xml17.adv`（ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2）
+- arith — 解法: `arith28.adv` + `arith.tests`（ADVIS.ARH=169@999999|ac21e73f0f47d168d1c2ea1b62c31fa）
+- xml — 解法: `xml28.adv`（ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2）
 
 ## howie のパスワード解析（QBasic）
 - `hack_fixed.bas` をアップロードし `qbasic` でコンパイル → 実行。
@@ -462,6 +462,13 @@
   - 出版: `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd`
   - ログ: `volume9_ohmega_verify_raytrace_repack.txt`（入力: `ohmega_verify_raytrace_repack_input.txt`）。
   - `icfp.exe` に差し替え投入して CV weight 5613 を確認（入力/ログ: `ftd_icfp_all_ray1264_input.txt` / `volume9_ftd_icfp_all_ray1264.txt`）。
+- `raytrace_2_repack2.2d` で同じモジュール群をさらに再配置し、公式 `verify raytrace` の Program area を 13299 まで削減。
+  - 出版は既存と同じ `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` で、CV weight 増分はなし。
+  - ログ: `volume9_ohmega_verify_raytrace_repack2.txt`（入力: `ohmega_verify_raytrace_repack2_input.txt`）。
+- `raytrace_2_repack3.2d` では `A` module 内の `All` 出力を `send[(Inr Inr Inl(),E)]` から `send[(Inr Inr W,E)]` へ置換し、branch payload を使って同じ値を作るようにした。
+  - `A` は 44 列から 42 列になり、全体の Program area は 13206 まで削減。
+  - 出版はなお `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` で、CV weight 増分はなし。
+  - ログ: `volume9_ohmega_verify_raytrace_repack3.txt`（入力: `ohmega_verify_raytrace_repack3_input.txt`）。
 - `rev_compact.2d` は `rev.2d` の右端境界をクロップして面積 1638 まで縮小できたが、出版コードは既存と同じ `CIRCS.REV=35@999999|d4481d7a04981746dc23d1c0b7c665e`。
 - 取得ログ: `volume9_ohmega_readme.txt`, `volume9_ohmega_tools.txt`。
   - 入力: `ohmega_readme_input.txt`, `ohmega_tools_input.txt`。
@@ -568,26 +575,29 @@
 ## Balance パズル（yang）
 Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認証済み:
 - `stop`: `7000` -> `BLNCE.STP=10@999999|e1c3e7108c2a7697cc11151dc5649eb`
-- `stop1`: `616100` -> `BLNCE.ST1=5@999999|bb606534654eb4acf7663f72acac3ad`
-- `stop127`: `70`*16 + `7f6100` -> `BLNCE.S27=13@999999|09371405f7a438a2adbfeb53d5d5317`
-- `stop128`: `70`*16 + `00` -> `BLNCE.S28=12@999999|39eabd9f583a28bad260f1981e745ac`
+- `stop1`: `6100` -> `BLNCE.ST1=10@999999|3417ffced484d8ab26e1062e7cd8feb`
+- `stop127`: `0061` -> `BLNCE.S27=20@999999|a7f8d6a06903f3a8956d0f958a50a33`
+- `stop128`: `7000` -> `BLNCE.S28=15@999999|cc21c682563623f9df8d1bba37e5ee6`
 - `addmem`: `627c2c00` -> `BLNCE.AMM=40@999999|84308aed15537ecccb3e5a50612fb0b`
 - `addmem2`: `67376600` -> `BLNCE.AM2=50@999999|4e899f7c3686e982c62ea6e90eb8d8e`
 - `swapmem`: `687f5600` -> `BLNCE.SWM=40@999999|b6cf8cf3f01593eb04f0b0436b1d3c9`
 - `swapreg`: `617300` -> `BLNCE.SWR=50@999999|a656011e0672f5dc095ca3579fc6515`
 - `swapreg2`: `61617f6700` -> `BLNCE.SR2=50@999999|af9ab43ee4454e275ff430ed2f629f0`
 - `copymem`: `6f617161797f626761797f6267622d637e727e013c64657c686d786179167000` -> `BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223`
-- `copyreg`: `627915536f0309007c726d465564006d7e3d2926753f030e3b283d763d342e` -> `BLNCE.CRE=171@999999|a617e59b999d049400d5f52fd93ab48`
+- `copyreg`: `2829672e0b0029295528036759770a` -> `BLNCE.CRE=187@999999|b6a7e82ce7cb07c20a093c16a740925`
 - `multmem`: `346474516e7e7d6b737d012d1e6800` -> `BLNCE.MMM=187@999999|f455e0cfbb320c58ce7739e45ace884`
 - `fillmem`: `636163346263337d6679616532012d7b7168616f7865177e7d6c6e7d627275012d7b7168616f7865176800` -> `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`
 - `clearreg`: `7b7f317e7c7d7b6500` -> `BLNCE.CRR=97@999999|7a18c38d7690f1d74db0b2446b68837`
 
 ログ:
 - `volume9_yang_certify_copymem.txt`（入力: `yang_certify_copymem_input.txt`）。
-- `volume9_yang_certify_copyreg97_batch.txt`（入力: `yang_certify_copyreg97_batch_input.txt`、400 回中 5 回通過）。
+- `volume9_yang_certify_copyreg15_best_batch.txt`（入力: `yang_certify_copyreg15_best_batch_input.txt`、15 bytes 版で 10 回中 3 回通過）。
 - `volume9_yang_certify_multmem_batch.txt`（入力: `yang_certify_multmem_batch_input.txt`、200 回中 4 回通過）。
 - `volume9_yang_certify_fillmem.txt`（入力: `yang_certify_fillmem_input.txt`）。
 - `volume9_yang_certify_clearreg.txt`（入力: `yang_certify_clearreg_input.txt`）。
+- `volume9_yang_certify_stop1_loop.txt`（入力: `yang_certify_stop1_loop_input.txt`、`stop1` 2 bytes 短縮）。
+- `volume9_yang_certify_stop_loop.txt`（入力: `yang_certify_stop_loop_input.txt`、`stop128` 短縮）。
+- `volume9_yang_certify_stop_loop2.txt`（入力: `yang_certify_stop_loop2_input.txt`、`stop127` 2 bytes 短縮）。
 
 ファイル:
 - `stop.bal`, `stop1.bal`, `stop127_short.bal`, `stop128_short.bal`（certify 用の 16 進テキスト）。
@@ -598,32 +608,43 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 
 ## O'Cult（hmonk）
 算術スイートを通して出版を得る。
-- 有効なアドバイス: `arith12.adv`（K を削除、rule 9、size 118）。
-- 出版: `ADVIS.ARH=166@999999|e6801a88b99cc7654daaede22416a05`（ログ: `volume9_hmonk_arith12_run.txt`、入力: `hmonk_arith12_upload_input.bin`）。
-- 旧: `arith11.adv`（ADVIS.ARH=166@999999|e6801a88b99cc7654daaede22416a05）、`arith10.adv`（ADVIS.ARH=165@999999|8189471eac27a2128fe58813dc19204）、`arith9.adv`（ADVIS.ARH=164@999999|f9306a83b69ab2a1ffa3dfc48c8ca33）、`arith8.adv`（ADVIS.ARH=163@999999|18dbba7f98154aa0f483504339f9b65）、`arith7.adv`（ADVIS.ARH=163@999999|18dbba7f98154aa0f483504339f9b65）、`arith6.adv`（ADVIS.ARH=160@999999|7f7dd9e30730e46abc332612a6442fc）、`arith5.adv`（ADVIS.ARH=158@999999|420508e3f967d5beb9cdc6053e576a0）、`arith4.adv`（ADVIS.ARH=156@999999|c0f19e8dbb5f847727de74a5d682172）。
+- 有効なアドバイス: `arith28.adv`（`Compute` を評価関数として再利用、rule 7、size 82）。
+- 出版: `ADVIS.ARH=169@999999|ac21e73f0f47d168d1c2ea1b62c31fa`（ログ: `volume9_hmonk_arith28_run.txt`、入力: `hmonk_arith28_upload_input.txt`）。
+- 旧: `arith27.adv`（size 88、ADVIS.ARH=168@999999|9531a452d414a4c5e2d1d7da20bbf96。ログ: `volume9_hmonk_arith27_run.txt`、入力: `hmonk_arith27_upload_input.txt`）、`arith12.adv`（ADVIS.ARH=166@999999|e6801a88b99cc7654daaede22416a05）、`arith11.adv`（ADVIS.ARH=166@999999|e6801a88b99cc7654daaede22416a05）、`arith10.adv`（ADVIS.ARH=165@999999|8189471eac27a2128fe58813dc19204）、`arith9.adv`（ADVIS.ARH=164@999999|f9306a83b69ab2a1ffa3dfc48c8ca33）、`arith8.adv`（ADVIS.ARH=163@999999|18dbba7f98154aa0f483504339f9b65）、`arith7.adv`（ADVIS.ARH=163@999999|18dbba7f98154aa0f483504339f9b65）、`arith6.adv`（ADVIS.ARH=160@999999|7f7dd9e30730e46abc332612a6442fc）、`arith5.adv`（ADVIS.ARH=158@999999|420508e3f967d5beb9cdc6053e576a0）、`arith4.adv`（ADVIS.ARH=156@999999|c0f19e8dbb5f847727de74a5d682172）。
 - 試行: `arith17.adv`（Compute 継続化、size 122、ADVIS.ARH 同一。ログ: `volume9_hmonk_arith17_run.txt`、入力: `hmonk_arith17_upload_input.bin`）、`arith18.adv`（Eval を Compute に統合、size 118 で改善なし。ログ: `volume9_hmonk_arith18_run.txt`、入力: `hmonk_arith18_upload_input.bin`）。
+- 追加調査（2026-04-30）: `advise run` の size probe で、O'Cult の size は RHS ではなく LHS パターン側だけで決まることを確認。例: `A => B C;` は size 2、`A B => C;` は size 6。RHS に制御構造を押し込む方針が有効。ただし `arith20` 系の小さい LHS（size 114）は内部生成テストで失敗し、`Freeze` を外した `AddF`/`MulF` 系の候補（size 98/116 相当）もネストした乗算で未正規形が残る。
+- 追加調査（2026-05-01）: `Done` を `Eval v Done => v` へ畳む案は、継続を `Eval` 内に持ち込むと `Eval w (Add Z k)` などの LHS が大きくなり、size 132 まで悪化。小型の tail-recursive 直評価候補（size 98）は `arith.tests` を通るが、UMIX 内部テストの `Mult (Mult ...) (Mult ...)` で `AddF`/`MulF` が露出して失敗。`arith21`/`arith23`/`arith26` の size 114 変種も同じ本質で、`Freeze` 内外に `MulF` match が同数残ると O'Cult の同数マッチ停止に落ちる。`arith24`/`arith25` の size 116 変種は `Eval v (op y k)` と継続適用を統合しようとしたが、同値 operand で自己ループするか、未評価 RHS を直接 `Add`/`Mult` に渡して停止する。
+- 追加調査（2026-05-01 後半）: CPS ではなく直評価に戻し、`AddF`/`MulF` の左辺だけを `Compute` してから処理する形に変更。乗算の再帰を `MulF (S x) y => AddF (Compute (Mult x y)) y` として「残りの積」を先に評価してから `+ y` する向きにしたことで、未評価の同形部分式が左右に同時出現しにくくなった。`arith27.adv` は `Eval` 入口のまま size 88 で `ADVIS.ARH=168`、`arith28.adv` は `Compute` を評価関数に統合して size 82 / `ADVIS.ARH=169` まで短縮。
 
 補足:
 - `arith.adv`, `arith2.adv`, `arith3.adv` は内部テストで失敗。
 - ローカル検証用: `occult.py`（簡易 O'Cult 実行器）。
 
 ### O'Cult XML
-- XML スイート用: `xml17.adv`（Seq の再結合をグローバル規則に分離、rule 13、size 214）。
-- 出版: `ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2`（ログ: `volume9_hmonk_xml17_run.txt`、入力: `hmonk_xml17_upload_input.bin`）。
+- XML スイート用: `xml28.adv`（`Tag q` を constructor continuation として `Ins` に渡し、`Eval (t d)` と `Ins t k (t d)` で共通化。rule 13、size 210）。
+- 出版: `ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2`（ログ: `volume9_hmonk_xml28_run.txt`、入力: `hmonk_xml28_upload_input.txt`）。`xml17.adv` から 4 size 短縮したが、出版点は同じ。
+- 旧: `xml17.adv`（Seq の再結合をグローバル規則に分離、rule 13、size 214。同じ `ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2`。ログ: `volume9_hmonk_xml17_run.txt`、入力: `hmonk_xml17_upload_input.bin`）。
 - 旧: `xml16.adv`（ADVIS.XML=159@999999|4e6cf8e2e21446d6e1431ae08b9db83）、`xml10.adv`（ADVIS.XML=158@999999|69ae374e3b4a63ff688f72dca20da8d）、`xml7.adv`（ADVIS.XML=157@999999|7dd5e74f178107284c0e22d4f1ca8d7）、`xml6.adv`（ADVIS.XML=156@999999|1dacfc913eedfdf814946328b4e2e14）、`xml5.adv`（ADVIS.XML=151@999999|614f20f565838ae2dfbe057dd3f8cdd）、`xml4.adv`（ADVIS.XML=149@999999|f06c0bc731825de0561528db1440e92）、`xml3.adv`（ADVIS.XML=145@999999|7e21ab0145c412a819e0771304f0d75）、`xml2.adv`（ADVIS.XML=139@999999|fe25caa79cf08545cf5c67b350194bf）。
 - 試行: `xml12.adv`（Done を Eval で代替、size 232 で改善なし。ログ: `volume9_hmonk_xml12_run.txt`、入力: `hmonk_xml12_upload_input.bin`）、`xml13.adv`（内部シンボル短縮、size 232 で改善なし。ログ: `volume9_hmonk_xml13_run.txt`、入力: `hmonk_xml13_upload_input.bin`）、`xml14.adv`（Tag 重複除去のみでローカルテスト失敗）、`xml15.adv`（Seq 再結合省略で UMIX 内部テスト失敗。ログ: `volume9_hmonk_xml15_run.txt`、入力: `hmonk_xml15_upload_input.bin`）。
+- 追加調査（2026-04-30）: 直接 rewrite 系（`xml18`/`xml20` 型）は LHS size は大幅に小さいが、O'Cult の「左右同数マッチなら適用しない」規則で内部テストの SNF が崩れる。`Ins` の順序規則をグローバルな `Tag` 並べ替えへ逃がす size 206 相当の候補も、`Tag` 文脈や同一タグ merge 後に短正規形でない項を残すため不可。現状は `xml17` の CPS + `Ins` 継続が最も堅い。
+- 追加調査（2026-05-01）: `Ins` を廃して `T` 継続 + グローバル `Tag` cleanup に寄せる `xml21` は固定テストを通り size 202 まで下がるが、`Tag Maj (Tag q d)` が `q=Maj` にも一致して no-op 連鎖や深い重複生成を起こし、UMIX ではタイムアウト。`Ins q k (Tag q d)` だけをグローバル duplicate cleanup に逃がす `xml22` は size 210 まで下がるが、ランダム検査で `Ins Maj` 継続が重複して 20,000 step 上限に達し、UMIX でも 90s timeout。`Merge (Tag q a) k (Tag q b)` をグローバル `Seq (Tag q a) (Tag q b)` へ移す `xml23`/`xml25` は、早すぎる merge を避けるため late 配置にしても、外側の `Ins` 文脈で後から同タグ sibling が生成されると短正規形を崩し、公式内部テストで失敗。`Ins Emph` だけを late global order に逃がす `xml26`、`Ins Maj` だけを late global order に逃がす `xml27` も size 210 までは下がるが、どちらも公式内部テストで nested tag / sibling tag の未正規形を残した。XML は `Merge` と `Ins` を分離しすぎると、正規化済み部分木の境界でタグ順序を再保証できない。
+- 追加調査（2026-05-01 続き）: `Merge (t a) k (t b)` による同一 constructor の汎用化は size 202 まで落ちるが、`Seq B A` と `Seq B B` も同一 function part として誤 merge するため不可。安全に通った短縮は `xml28.adv` の constructor continuation 化までで、`xml3.tests`、深さ 3 網羅、depth 5/6/7 のランダム比較、UMIX 内部テストを通過した。
 
 ## スコア集計（ジャンル別）
 取得済み出版一覧から集計した現状スコア。
 - INTRO（UMIX/Intro）: 235
 - ADVTR（Adventure）: 810
 - ANTWO（Smellular Antomata）: 860
-- BLNCE（Balance）: 1053
+- BLNCE（Balance）: 1084
 - BLACK（Black Knots）: 1000
 - CIRCS（2D verify）: 1329
-- ADVIS（O'Cult）: 326
+- ADVIS（O'Cult）: 329
 - BASIC（ML 19100）: 100
-- 合計: 5713
+- 合計: 5747
+- `icfp.exe` 再集計で CV weight 5747 / Full Administrator を確認。
+  - 入力: `ftd_icfp_all_5747_input.txt`
+  - 出力: `volume9_ftd_icfp_all_5747.txt`
+- 2026-05-01: ログ全体から出版 ID ごとの最高点を再集計し、75 出版で同じ合計 5747 を確認。
 
 ## 取得済み出版一覧
 - `INTRO.LOG=200@999999|35e6f52e9bc951917c73af391e35e1d`
@@ -660,6 +681,7 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - `ANTWO.003=30@999999|96bb4cc41239f750e0c7edcf901351d`
 - `ANTWO.004=30@999999|7378dae5a8b74ee98a68aa2aedfcdce`
 - `ANTWO.005=20@999999|57e6991848ec8ab05be0df53f3653ff`
+- `ANTWO.006=70@999999|bf9170fc018b77e956cb50371a58b3d`
 - `ANTWO.007=30@999999|73be091344104ac048550d8dcfd324c`
 - `ANTWO.008=60@999999|c2b0419d15ac802e56a39503d63505e`
 - `ANTWO.009=140@999999|56d399bb81e0750703291078a9f7ab9`
@@ -670,20 +692,20 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - `ANTWO.014=250@999999|50c0240cc0b510c16b29683e456d5c1`
 - `ANTWO.015=10@999999|a83ad4f50686c9eaad6ad0b406e3513`
 - `BLNCE.STP=10@999999|e1c3e7108c2a7697cc11151dc5649eb`
-- `BLNCE.ST1=5@999999|bb606534654eb4acf7663f72acac3ad`
-- `BLNCE.S27=13@999999|09371405f7a438a2adbfeb53d5d5317`
-- `BLNCE.S28=12@999999|39eabd9f583a28bad260f1981e745ac`
+- `BLNCE.ST1=10@999999|3417ffced484d8ab26e1062e7cd8feb`
+- `BLNCE.S27=20@999999|a7f8d6a06903f3a8956d0f958a50a33`
+- `BLNCE.S28=15@999999|cc21c682563623f9df8d1bba37e5ee6`
 - `BLNCE.AMM=40@999999|84308aed15537ecccb3e5a50612fb0b`
 - `BLNCE.AM2=50@999999|4e899f7c3686e982c62ea6e90eb8d8e`
 - `BLNCE.SWM=40@999999|b6cf8cf3f01593eb04f0b0436b1d3c9`
 - `BLNCE.SWR=50@999999|a656011e0672f5dc095ca3579fc6515`
 - `BLNCE.SR2=50@999999|af9ab43ee4454e275ff430ed2f629f0`
 - `BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223`
-- `BLNCE.CRE=171@999999|a617e59b999d049400d5f52fd93ab48`
+- `BLNCE.CRE=187@999999|b6a7e82ce7cb07c20a093c16a740925`
 - `BLNCE.MMM=187@999999|f455e0cfbb320c58ce7739e45ace884`
 - `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`
 - `BLNCE.CRR=97@999999|7a18c38d7690f1d74db0b2446b68837`
-- `ADVIS.ARH=166@999999|e6801a88b99cc7654daaede22416a05`
+- `ADVIS.ARH=169@999999|ac21e73f0f47d168d1c2ea1b62c31fa`
 - `ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2`
 - `BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930`
 - `CIRCS.MUL=30@999999|fe8a47581d2a95699b216c13fb250bd`
@@ -890,10 +912,12 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
   - `certify` 5 テスト通過率の概算は `p^5 ≈ 3.1868e-2`。
   - 再現ログ: `volume9_yang_certify_multmem_batch.txt`（入力: `yang_certify_multmem_batch_input.txt`、`certify multmem` を 200 回実行して 4 回通過）。
 - `clearreg` は認証済み（`volume9_yang_certify_clearreg.txt`）。
-- `copyreg` は `copyreg.bal` で認証を通過（`BLNCE.CRE=171@999999|a617e59b999d049400d5f52fd93ab48`）。
-  - 入力: `yang_certify_copyreg97_batch_input.txt`
-  - 出力: `volume9_yang_certify_copyreg97_batch.txt`（`certify copyreg` を 400 回実行し 5 回通過）
-  - `balance_solver.py` でのローカル全列挙では 255 ケース中 97 ケース成立（確率的通過）。
+- `copyreg` は 15 bytes の `copyreg.bal` で認証を通過（`BLNCE.CRE=187@999999|b6a7e82ce7cb07c20a093c16a740925`）。
+  - 入力: `yang_certify_copyreg15_best_batch_input.txt`
+  - 出力: `volume9_yang_certify_copyreg15_best_batch.txt`（`certify copyreg` を 10 回実行し 3 回通過）
+  - `balance_solver.py` でのローカル全列挙では 255 ケース中 195 ケース成立、halt は 254/255（非停止は `a=251`）。
+  - 中間候補: `copyreg30.bal`（`BLNCE.CRE=172`）、`copyreg29.bal`（`BLNCE.CRE=173`）、`copyreg28.bal`（`BLNCE.CRE=174`）、`copyreg26.bal`（`BLNCE.CRE=176`）、`copyreg25.bal`（`BLNCE.CRE=177`）、`copyreg23.bal`（`BLNCE.CRE=179`）、`copyreg22_best.bal`（`BLNCE.CRE=180`）、`copyreg21_best.bal`（`BLNCE.CRE=181`）、`copyreg20.bal`（`BLNCE.CRE=182`）、`copyreg19.bal`（`BLNCE.CRE=183`）、`copyreg18.bal`（`BLNCE.CRE=184`）、`copyreg17.bal`（`BLNCE.CRE=185`）、`copyreg16.bal`（`BLNCE.CRE=186`）。
+- 追加の短縮探索では、`multmem` 14 bytes 近傍、`copymem` 31 bytes 近傍、`clearreg` 8 bytes ring いずれも現行を超える有望候補なし。
 - `multmem` の探索履歴として `multmem_candidate.bal`（`78336a050b3c0d64423c415021077f00327e6a1c`）を保持。
   - ランダム 100,000 ケースで正解率 4.12%（4120/100000、常に halt）。
   - 評価補助として `multmem_bench.py` と `multmem_template_search.py`（制約付き探索）を追加。
@@ -978,11 +1002,15 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - `fillmem` の演繹設計（前処理ループ + 本体ループ）を完了。
   - loop1: `MATH d0,s3,s1` + `dR0++` マクロでゼロ埋めとカウンタ減算を同時実行。
   - loop2: 同じループ骨格を `pre->main` 再配置で再利用し、`[i,j)` を `a` で埋める。
-- `stop127`/`stop128` を短縮。
-  - `stop128`: `PHYSICS -16` を 16 回で `sR0=128` にし、`SCIENCE 0`。
-  - `stop127`: 上記状態から `PHYSICS -1; PHYSICS 1` で `sR0=127`。
-  - 出版: `BLNCE.S27=13@999999|09371405f7a438a2adbfeb53d5d5317`, `BLNCE.S28=12@999999|39eabd9f583a28bad260f1981e745ac`。
-  - ログ: `volume9_yang_certify_stop_short.txt`（入力: `yang_certify_stop_short_input.txt`）。
+- `stop1`/`stop127`/`stop128` を短縮。
+  - `stop1`: `PHYSICS 1; SCIENCE 0` の 2 bytes で `sR0=1` へ移してから停止。
+  - `stop128`: `PHYSICS -16; SCIENCE 0` の 2 bytes 周期で `sR0=128` に来た時だけ停止。
+  - `stop127`: `SCIENCE 0; PHYSICS 1` の 2 bytes 周期で `sR0=127` に来た時だけ停止。
+  - 出版: `BLNCE.ST1=10@999999|3417ffced484d8ab26e1062e7cd8feb`, `BLNCE.S27=20@999999|a7f8d6a06903f3a8956d0f958a50a33`, `BLNCE.S28=15@999999|cc21c682563623f9df8d1bba37e5ee6`。
+  - ログ: `volume9_yang_certify_stop1_loop.txt`, `volume9_yang_certify_stop_loop.txt`, `volume9_yang_certify_stop_loop2.txt`。
+  - さらに `copyreg` を 15 bytes 化し、`BLNCE.CRE=187@999999|b6a7e82ce7cb07c20a093c16a740925` を取得。
+  - 27 bytes 候補もローカルで 144/255 まで伸ばしたが、公式 `certify copyreg` の timeout-limited batch では出版行を取得できなかった。その後 25/23/22/21/20/19/18/17/16/15 bytes の確率通過型を順に認証した。
+  - `icfp.exe` 再集計ログ: `volume9_ftd_icfp_all_5747.txt`（入力: `ftd_icfp_all_5747_input.txt`）。
 
 ## Antomaton / 2026-04-29 再確認
 - ルール前提を README から再確認。

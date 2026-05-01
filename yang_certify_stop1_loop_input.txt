@@ -1,0 +1,7 @@
+yang
+U+262F
+run /bin/umodem stop1.bal EOF
+6100
+EOF
+certify stop1 stop1.bal
+logout

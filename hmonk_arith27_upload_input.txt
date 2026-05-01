@@ -1,0 +1,18 @@
+hmonk
+COMEFROM
+run /bin/umodem arith27.adv EOF
+Compute x => Eval x;
+
+Eval (Add x y) => AddF (Eval x) y;
+Eval (Mult x y) => MulF (Eval x) y;
+Eval v => v;
+
+AddF Z y => Eval y;
+AddF (S x) y => S (AddF x y);
+
+MulF Z y => Z;
+MulF (S x) y => AddF (Eval (Mult x y)) y;
+
+.
+EOF
+advise arith arith27.adv

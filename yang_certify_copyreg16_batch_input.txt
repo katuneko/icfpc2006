@@ -1,0 +1,26 @@
+yang
+U+262F
+run /bin/umodem copyreg16.bal EOF
+2829670b29006729266d036703671c22
+EOF
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+certify copyreg copyreg16.bal
+logout

@@ -1,0 +1,66 @@
+yang
+U+262F
+run /bin/umodem copyreg17.bal EOF
+2967030b7c3d6d0067266d036755287722
+EOF
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+certify copyreg copyreg17.bal
+logout

@@ -1,0 +1,66 @@
+yang
+U+262F
+run /bin/umodem copyreg25.bal EOF
+7915006f28327c076d1c0b2e0b7c26753f770e3b28262e342e
+EOF
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+certify copyreg copyreg25.bal
+logout

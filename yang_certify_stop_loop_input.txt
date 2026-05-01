@@ -1,0 +1,11 @@
+yang
+U+262F
+run /bin/umodem stop127_short.bal EOF
+707f6100
+EOF
+run /bin/umodem stop128_short.bal EOF
+7000
+EOF
+certify stop127 stop127_short.bal
+certify stop128 stop128_short.bal
+logout

@@ -1,0 +1,26 @@
+yang
+U+262F
+run /bin/umodem copyreg21_best.bal EOF
+2829670b3d6d2929006729266d0367035528297722
+EOF
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+certify copyreg copyreg21_best.bal
+logout
