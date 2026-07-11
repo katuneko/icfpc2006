@@ -4,19 +4,19 @@
 
 ## 現在の到達点
 
-現在の CV weight は 5747、権限は Full Administrator です。内訳は次の通りです。
+現在の CV weight は 5750、権限は Full Administrator です。内訳は次の通りです。
 
 | 分野 | 点 |
 | --- | ---: |
 | INTRO | 235 |
+| BASIC | 100 |
 | ADVTR | 810 |
 | ANTWO | 860 |
-| BLNCE | 1084 |
+| BLNCE | 1087 |
 | BLACK | 1000 |
 | CIRCS | 1329 |
 | ADVIS | 329 |
-| BASIC | 100 |
-| 合計 | 5747 |
+| 合計 | 5750 |
 
 このスコアは単なる「解けた問題数」ではなく、いくつかの分野ではプログラム長、面積、アドバイス規則数などの品質が直接点数に反映されます。特に CIRCS と ADVIS は、正解を出した後も表現を洗練する余地が大きい分野です。
 
@@ -120,7 +120,7 @@ Balance は hex bytecode の小さな機械語 puzzle です。ここで重要�
 
 `fillmem` では、最初に preloop でレジスタの意味を整え、main loop へ入ってから同じ骨格を使い回しました。loop1 は zero-fill と counter decrement を担当し、`MATH d0,s3,s1` と `dR0++` の組み合わせで範囲を進めます。loop2 は pre から main への register relocation 後に同じ構造を再利用し、`[i,j)` を `a` で埋めます。
 
-`copyreg` は既存の確率通過型 31 bytes 解から、30/29/28/26/25 bytes、さらに 16 bytes を経て 15 bytes 解へ短縮しました。15 bytes 版はローカル全列挙で 195/255 ケース成立し、254/255 ケースで halt します。公式 `certify copyreg` の反復実行で `BLNCE.CRE=187` を取得できました。`copymem`、`swapmem`、`swapreg`、`swapreg2`、`addmem`、`addmem2`、`clearreg` なども、最終的に命令列の個別発明ではなく、小さなデータ移動 idiom の組み合わせとして整理できました。
+`copyreg` は既存の確率通過型31 bytes解から段階的に短縮し、最終的に12 bytesの `copyreg12_candidate.bal` まで到達しました。採用版はローカル全列挙で196/255ケース成立し、255/255ケースでhaltします。公式 `certify copyreg` の反復実行で `BLNCE.CRE=190` を取得できました。11 bytes以下は未探索ですが、12 bytes近傍でも候補間の成功率差が大きく、今後も確率解探索として改善余地があります。`copymem`、`swapmem`、`swapreg`、`swapreg2`、`addmem`、`addmem2`、`clearreg` なども、最終的に命令列の個別発明ではなく、小さなデータ移動 idiom の組み合わせとして整理できました。
 
 ### 教訓
 
@@ -140,7 +140,7 @@ Balance の高得点化では、命令列を短くするより先に「どの状
 
 `raytrace` は最も大きな成果です。Python の least-fixed-point 参照実装を作り、2D 側では intensity の max/min、`F` table、Towards/Away、`awayv`、`away`、`update`、`rt` といった module に分割しました。各 module を参照実装と突き合わせ、全体として verifier を通した後、配置を詰め直して `raytrace_2_repack.2d` を作りました。
 
-この repack は意味を変えずに module 配置を整理するもので、公式 `verify raytrace` の Program area を 13340 まで下げ、提出コードを `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` に改善しました。さらに同じ module 群の再配置で `raytrace_2_repack2.2d` を作り、Program area は 13299 まで下がりました。続いて `A` module 内の `All` 出力を branch payload から再構成する `send[(Inr Inr W,E)]` に短縮し、`raytrace_2_repack3.2d` で Program area を 13206 まで下げました。ただし出版コードは `1264` のままで CV weight は増えませんでした。従来の `1261` から CIRCS が 3 点増え、その後 Antomaton P6/P7、Balance 短縮、ADVIS.ARH の短縮を反映した現在の CV weight は 5747 です。
+この repack は意味を変えずに module 配置を整理するもので、公式 `verify raytrace` の Program area を 13340 まで下げ、提出コードを `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` に改善しました。さらに同じ module 群の再配置で `raytrace_2_repack2.2d` を作り、Program area は 13299 まで下がりました。続いて `A` module 内の `All` 出力を branch payload から再構成する `send[(Inr Inr W,E)]` に短縮し、`raytrace_2_repack3.2d` で Program area を 13206 まで下げました。ただし出版コードは `1264` のままで CV weight は増えませんでした。後続の Balance 短縮まで反映した現在の CV weight は 5750 です。
 
 `ocult` については未完成ですが、重要な意味論は見えています。`verify ocult` が期待するのは生の次項ではなく、`Inl ()` で「適用なし」、`Inr <term>` で「一回 rewrite した項」を表す Option です。この理解がないと、内部の rewrite が正しくても verifier の型に合いません。
 

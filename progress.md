@@ -113,7 +113,7 @@
 - 既存の短ループ探索は不発のため戦略見直しが必要。
 - `balance_solver.py` に PHYSICS 初期配置探索用の `search_physics_sequence` を追加。
 - `copymem` は 32 バイトで解決・認証済み（`copymem.bal`、`BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223`）。
-- `copyreg` は `copyreg.bal`（`2829672e0b0029295528036759770a`）で 15 bytes 化し、認証行を取得（`BLNCE.CRE=187@999999|b6a7e82ce7cb07c20a093c16a740925`）。
+- `copyreg` は最終的に `copyreg12_candidate.bal`（`29770b00592255597405290a`）で12 bytes化し、認証行を取得（`BLNCE.CRE=190@999999|9516bf4d791092f4f30708648909941`）。
   - 再現ログ: `volume9_yang_certify_copyreg15_best_batch.txt`（入力: `yang_certify_copyreg15_best_batch_input.txt`）。
   - ローカル全探索では 255 ケース中 195 ケース成立、halt は 254/255（非停止は `a=251`）。`certify copyreg` の反復実行で 3 回通過。
   - 中間候補として `copyreg30.bal`（`BLNCE.CRE=172`）、`copyreg29.bal`（`BLNCE.CRE=173`）、`copyreg28.bal`（`BLNCE.CRE=174`）、`copyreg26.bal`（`BLNCE.CRE=176`）、`copyreg25.bal`（`BLNCE.CRE=177`）、`copyreg23.bal`（`BLNCE.CRE=179`）、`copyreg22_best.bal`（`BLNCE.CRE=180`）、`copyreg21_best.bal`（`BLNCE.CRE=181`）、`copyreg20.bal`（`BLNCE.CRE=182`）、`copyreg19.bal`（`BLNCE.CRE=183`）、`copyreg18.bal`（`BLNCE.CRE=184`）、`copyreg17.bal`（`BLNCE.CRE=185`）、`copyreg16.bal`（`BLNCE.CRE=186`）も認証済み。
@@ -316,6 +316,13 @@
   - 出版: `ANTWO.007=30@999999|73be091344104ac048550d8dcfd324c`。
 - `icfp.exe` に P6/P7 と `CIRCS.RAY=1264` を含む既知出版を投入し、CV weight 5713 / Full Administrator を確認。後続の Balance / ADVIS 短縮を反映した再集計で CV weight 5747 / Full Administrator を確認。
   - 入力/ログ: `ftd_icfp_all_final_input.txt` / `volume9_ftd_icfp_all_final.txt`。
+
+## 2026-07-11 Score Optimization
+- `copyreg12_candidate.bal`（12 bytes、196/255成功、全ケースhalt）を公式認証し、`BLNCE.CRE=190@999999|9516bf4d791092f4f30708648909941` を取得。従来の187点から+3。
+- `clearreg` は現方式の9 bytes最短性、`copymem` は現ループ本体の局所最短性を `balance_short_proofs.py` で確認。`multmem` 14 bytes再設計は公式通過率が非現実的で棄却。
+- `arith31.adv` はsize 78で公式テストを通ったが169点据置。XML size 206の `xml31_seed05.adv` は公式テストを通ったが160点据置。
+- raytrace は幅1列削減の短時間再配置探索で解なし。構造変更なしの追加packingは打ち切り。
+- `ftd_icfp_all_5750_input.txt` / `volume9_ftd_icfp_all_5750.txt` で CV weight 5750 / Full Administratorを確認。
 
 ## Accounts / Exploration
 - `knr / X3.159-1989` を取得（Machine Room M4 の note）。

@@ -1,0 +1,13 @@
+{ Arithmetic evaluator with eta-reduced AddF zero continuation. }
+
+Compute (Add x y) => AddF (Compute x) y;
+Compute (Mult x y) => MulF (Compute x) y;
+Compute v => v;
+
+AddF Z => Compute;
+AddF (S x) y => S (AddF x y);
+
+MulF Z y => Z;
+MulF (S x) y => AddF (Compute (Mult x y)) y;
+
+.
