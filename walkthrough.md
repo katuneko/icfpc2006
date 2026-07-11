@@ -42,7 +42,7 @@
 - stop127 — 解法: `stop127_short.bal`（BLNCE.S27=20@999999|a7f8d6a06903f3a8956d0f958a50a33）
 - stop128 — 解法: `stop128_short.bal`（BLNCE.S28=15@999999|cc21c682563623f9df8d1bba37e5ee6）
 - copymem — 解法: `copymem.bal`（BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223）
-- copyreg — 解法: `copyreg.bal`（BLNCE.CRE=187@999999|b6a7e82ce7cb07c20a093c16a740925）
+- copyreg — 解法: `copyreg12_candidate.bal`（BLNCE.CRE=190@999999|9516bf4d791092f4f30708648909941）
 - swapmem — 解法: `swapmem.bal`（BLNCE.SWM=40@999999|b6cf8cf3f01593eb04f0b0436b1d3c9）
 - swapreg — 解法: `swapreg.bal`（BLNCE.SWR=50@999999|a656011e0672f5dc095ca3579fc6515）
 - swapreg2 — 解法: `swapreg2.bal`（BLNCE.SR2=50@999999|af9ab43ee4454e275ff430ed2f629f0）
@@ -635,15 +635,15 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - INTRO（UMIX/Intro）: 235
 - ADVTR（Adventure）: 810
 - ANTWO（Smellular Antomata）: 860
-- BLNCE（Balance）: 1084
+- BLNCE（Balance）: 1087
 - BLACK（Black Knots）: 1000
 - CIRCS（2D verify）: 1329
 - ADVIS（O'Cult）: 329
 - BASIC（ML 19100）: 100
-- 合計: 5747
-- `icfp.exe` 再集計で CV weight 5747 / Full Administrator を確認。
-  - 入力: `ftd_icfp_all_5747_input.txt`
-  - 出力: `volume9_ftd_icfp_all_5747.txt`
+- 合計: 5750
+- `icfp.exe` 再集計で CV weight 5750 / Full Administrator を確認。
+  - 入力: `ftd_icfp_all_5750_input.txt`
+  - 出力: `volume9_ftd_icfp_all_5750.txt`
 - 2026-05-01: ログ全体から出版 ID ごとの最高点を再集計し、75 出版で同じ合計 5747 を確認。
 
 ## 取得済み出版一覧
@@ -701,7 +701,7 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - `BLNCE.SWR=50@999999|a656011e0672f5dc095ca3579fc6515`
 - `BLNCE.SR2=50@999999|af9ab43ee4454e275ff430ed2f629f0`
 - `BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223`
-- `BLNCE.CRE=187@999999|b6a7e82ce7cb07c20a093c16a740925`
+- `BLNCE.CRE=190@999999|9516bf4d791092f4f30708648909941`
 - `BLNCE.MMM=187@999999|f455e0cfbb320c58ce7739e45ace884`
 - `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`
 - `BLNCE.CRR=97@999999|7a18c38d7690f1d74db0b2446b68837`
@@ -1132,6 +1132,24 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
   - `BLACK.300=200@999999|ab4464b1cfdf9e33438689167ed8b8d`
   - `BLACK.400=200@999999|66129c05bbdca7b5aff4b33f1ab7526`
   - `BLACK.500=200@999999|4e8e2021d24489a4e1f65d3161c38f8`
+
+## 2026-07-11 追加得点探索
+- Balance `copyreg` を再探索し、13 bytes の `copyreg13_candidate.bal`（`2922650b002e2955036759770a`）を得た。
+  - ローカル全列挙: 199/255 ケース成功、255/255 ケース halt。公式5テスト通過率の推定は約28.9%。
+  - 公式認証: `BLNCE.CRE=189@999999|60d23cfc230c4ad0059277e027f94b7`。
+  - 入力/ログ: `yang_certify_copyreg13_batch_input.txt` / `volume9_yang_certify_copyreg13_batch.txt`。
+  - 14 bytes版 `copyreg14_candidate.bal` も `BLNCE.CRE=188` を取得したが、13 bytes版で更新した。
+  - 初期の12 bytes探索は最高9/255だったが、別構造の固定長探索で `copyreg12_candidate.bal`（`29770b00592255597405290a`）を発見。196/255ケース成功、255/255ケースhalt、最大4376 steps。
+  - 12 bytes版を公式認証し、`BLNCE.CRE=190@999999|9516bf4d791092f4f30708648909941` を取得。
+  - 入力/ログ: `yang_certify_copyreg12_best_batch_input.txt` / `volume9_yang_certify_copyreg12_best_batch.txt`。
+- `clearreg` は `balance_short_proofs.py` の双方向探索で、全レジスタをゼロ化するPHYSICS列が6手以下に存在しないことを確認。現行7 PHYSICS + memory write + halt の9 bytesは現方式で最短。
+- `copymem` は現行ループの8 PHYSICS変換に同値な7手以下の列がなく、31 bytes進化探索も最高17/255のため局所短縮を打ち切り。
+- `multmem` 14 bytesを全命令置換beamで再設計したが、最良でも898/20000（公式5テスト推定約1.8e-7）。`fillmem` / `copymem` も採用候補なし。
+- ADVIS Arithmetic は `arith31.adv` で `AddF Z => Compute` とeta短縮し、size 82 -> 78、公式内部テスト全通過。ただし `ADVIS.ARH=169` のままで得点増なし。
+- ADVIS XML は `xml31.adv` で size 210 -> 206。seed変種 `xml31_seed05.adv` は公式内部テストを通過したが、`ADVIS.XML=160` のままで得点増なし。別seedでは既存骨格の潜在的な非SNFケースも確認した。
+- raytrace の15モジュールは矩形面積12702に対し採点面積13206で、単純な空列はない。141x92への短時間再配置探索も解なしで、構造変更なしのpackingは費用対効果が低いと判断。
+- `icfp.exe` へ更新publicationを再投入し、CV weight 5750 / Full Administratorを確認。
+  - 入力/ログ: `ftd_icfp_all_5750_input.txt` / `volume9_ftd_icfp_all_5750.txt`。
 
 ## Antomaton ハック進捗
 - `um` に `-patch-array ID IDX VALUE` を追加し、任意配列の要素を書き換え可能にした。
