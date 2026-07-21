@@ -4,7 +4,7 @@
 
 ## 現在の到達点
 
-現在の CV weight は 5750、権限は Full Administrator です。内訳は次の通りです。
+現在の CV weight は 5759、権限は Full Administrator です。内訳は次の通りです。
 
 | 分野 | 点 |
 | --- | ---: |
@@ -12,11 +12,11 @@
 | BASIC | 100 |
 | ADVTR | 810 |
 | ANTWO | 860 |
-| BLNCE | 1087 |
+| BLNCE | 1093 |
 | BLACK | 1000 |
-| CIRCS | 1329 |
-| ADVIS | 329 |
-| 合計 | 5750 |
+| CIRCS | 1330 |
+| ADVIS | 331 |
+| 合計 | 5759 |
 
 このスコアは単なる「解けた問題数」ではなく、いくつかの分野ではプログラム長、面積、アドバイス規則数などの品質が直接点数に反映されます。特に CIRCS と ADVIS は、正解を出した後も表現を洗練する余地が大きい分野です。
 
@@ -120,7 +120,7 @@ Balance は hex bytecode の小さな機械語 puzzle です。ここで重要�
 
 `fillmem` では、最初に preloop でレジスタの意味を整え、main loop へ入ってから同じ骨格を使い回しました。loop1 は zero-fill と counter decrement を担当し、`MATH d0,s3,s1` と `dR0++` の組み合わせで範囲を進めます。loop2 は pre から main への register relocation 後に同じ構造を再利用し、`[i,j)` を `a` で埋めます。
 
-`copyreg` は既存の確率通過型31 bytes解から段階的に短縮し、最終的に12 bytesの `copyreg12_candidate.bal` まで到達しました。採用版はローカル全列挙で196/255ケース成立し、255/255ケースでhaltします。公式 `certify copyreg` の反復実行で `BLNCE.CRE=190` を取得できました。11 bytes以下は未探索ですが、12 bytes近傍でも候補間の成功率差が大きく、今後も確率解探索として改善余地があります。`copymem`、`swapmem`、`swapreg`、`swapreg2`、`addmem`、`addmem2`、`clearreg` なども、最終的に命令列の個別発明ではなく、小さなデータ移動 idiom の組み合わせとして整理できました。
+`copyreg` は既存の確率通過型31 bytes解から段階的に短縮し、最終的に6 bytesの `copyreg6_candidate.bal` まで到達しました。採用版はローカル全列挙で254/255ケース成立し、255/255ケースがhaltします。公式 `certify copyreg` は3回連続で通過し、`BLNCE.CRE=196` を取得しました。8 bytes版には255/255の完全解も保存しています。`copymem`、`swapmem`、`swapreg`、`swapreg2`、`addmem`、`addmem2`、`clearreg` なども、最終的に命令列の個別発明ではなく、小さなデータ移動 idiom の組み合わせとして整理できました。
 
 ### 教訓
 
@@ -140,7 +140,7 @@ Balance の高得点化では、命令列を短くするより先に「どの状
 
 `raytrace` は最も大きな成果です。Python の least-fixed-point 参照実装を作り、2D 側では intensity の max/min、`F` table、Towards/Away、`awayv`、`away`、`update`、`rt` といった module に分割しました。各 module を参照実装と突き合わせ、全体として verifier を通した後、配置を詰め直して `raytrace_2_repack.2d` を作りました。
 
-この repack は意味を変えずに module 配置を整理するもので、公式 `verify raytrace` の Program area を 13340 まで下げ、提出コードを `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd` に改善しました。さらに同じ module 群の再配置で `raytrace_2_repack2.2d` を作り、Program area は 13299 まで下がりました。続いて `A` module 内の `All` 出力を branch payload から再構成する `send[(Inr Inr W,E)]` に短縮し、`raytrace_2_repack3.2d` で Program area を 13206 まで下げました。ただし出版コードは `1264` のままで CV weight は増えませんでした。後続の Balance 短縮まで反映した現在の CV weight は 5750 です。
+この repack は意味を変えずに module 配置を整理するもので、公式 `verify raytrace` の Program area を 13340 まで下げ、提出コードを `CIRCS.RAY=1264` に改善しました。さらに同じ module 群の再配置と内部短縮で `raytrace_2_repack3.2d` を13206 areaまで縮め、最後に15 moduleを再配置した `raytrace_2_repack4.2d` で13064 areaへ到達しました。公式出版は `CIRCS.RAY=1265@999999|3797a6834d3980fa0a09d086bfc3239` です。
 
 `ocult` については未完成ですが、重要な意味論は見えています。`verify ocult` が期待するのは生の次項ではなく、`Inl ()` で「適用なし」、`Inr <term>` で「一回 rewrite した項」を表す Option です。この理解がないと、内部の rewrite が正しくても verifier の型に合いません。
 
@@ -158,9 +158,9 @@ Arithmetic では、個別の演算を展開しすぎるとサイズが増えま
 
 ### 解法
 
-Arithmetic は `arith28.adv` で、CPS の `Eval`/`Done` を捨てて `Compute` 自体を評価関数にし、`AddF`/`MulF` に左辺だけを正規化して渡す形へ短縮しました。rule 7、size 82 の形で `ADVIS.ARH=169@999999|ac21e73f0f47d168d1c2ea1b62c31fa` を得ました。
+Arithmetic は `arith35.adv` で中置operator自体を継続として使い、6 rules、size 64まで短縮しました。公式出版は `ADVIS.ARH=170@999999|a7ca0b6a15edcca925fd685f5f66188` です。
 
-XML は `xml28.adv` で、Seq recombination を global rule として分離した骨格を保ちつつ、`Tag q` を constructor continuation として `Ins` に渡す形へ短縮しました。`Eval (t d)` と `Ins t k (t d)` が効き、rule 13、size 210 の形で `ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2` を得ています。出版点は `xml17.adv` の size 214 と同じでした。
+XML は `xml32.adv` で最終継続 `Done` を `Eval` 自身で代用し、12 rules、size 200まで短縮しました。公式出版は `ADVIS.XML=161@999999|56d37c886e6e39046a88e1828083bdc` です。
 
 ### 教訓
 

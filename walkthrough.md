@@ -42,7 +42,7 @@
 - stop127 — 解法: `stop127_short.bal`（BLNCE.S27=20@999999|a7f8d6a06903f3a8956d0f958a50a33）
 - stop128 — 解法: `stop128_short.bal`（BLNCE.S28=15@999999|cc21c682563623f9df8d1bba37e5ee6）
 - copymem — 解法: `copymem.bal`（BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223）
-- copyreg — 解法: `copyreg12_candidate.bal`（BLNCE.CRE=190@999999|9516bf4d791092f4f30708648909941）
+- copyreg — 解法: `copyreg6_candidate.bal`（BLNCE.CRE=196@999999|0372e845bdfbdd29b9addf44c0813bc）
 - swapmem — 解法: `swapmem.bal`（BLNCE.SWM=40@999999|b6cf8cf3f01593eb04f0b0436b1d3c9）
 - swapreg — 解法: `swapreg.bal`（BLNCE.SWR=50@999999|a656011e0672f5dc095ca3579fc6515）
 - swapreg2 — 解法: `swapreg2.bal`（BLNCE.SR2=50@999999|af9ab43ee4454e275ff430ed2f629f0）
@@ -68,12 +68,12 @@
 ### 2D verify built-in tests
 - mult — 解法: `mult.2d`（CIRCS.MUL=30@999999|fe8a47581d2a95699b216c13fb250bd）
 - rev — 解法: `rev.2d`（CIRCS.REV=35@999999|d4481d7a04981746dc23d1c0b7c665e）
-- raytrace — 解法: `raytrace_2_repack3.2d`（CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd）
+- raytrace — 解法: `raytrace_2_repack4.2d`（CIRCS.RAY=1265@999999|3797a6834d3980fa0a09d086bfc3239）
 - ocult — 棚上げ（未解。仕様: `aspects.spec`、要求モジュール: `step`）
 
 ### O'Cult advise
-- arith — 解法: `arith28.adv` + `arith.tests`（ADVIS.ARH=169@999999|ac21e73f0f47d168d1c2ea1b62c31fa）
-- xml — 解法: `xml28.adv`（ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2）
+- arith — 解法: `arith35.adv` + `arith.tests`（ADVIS.ARH=170@999999|a7ca0b6a15edcca925fd685f5f66188）
+- xml — 解法: `xml32.adv`（ADVIS.XML=161@999999|56d37c886e6e39046a88e1828083bdc）
 
 ## howie のパスワード解析（QBasic）
 - `hack_fixed.bas` をアップロードし `qbasic` でコンパイル → 実行。
@@ -635,15 +635,15 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - INTRO（UMIX/Intro）: 235
 - ADVTR（Adventure）: 810
 - ANTWO（Smellular Antomata）: 860
-- BLNCE（Balance）: 1087
+- BLNCE（Balance）: 1093
 - BLACK（Black Knots）: 1000
-- CIRCS（2D verify）: 1329
-- ADVIS（O'Cult）: 329
+- CIRCS（2D verify）: 1330
+- ADVIS（O'Cult）: 331
 - BASIC（ML 19100）: 100
-- 合計: 5750
-- `icfp.exe` 再集計で CV weight 5750 / Full Administrator を確認。
-  - 入力: `ftd_icfp_all_5750_input.txt`
-  - 出力: `volume9_ftd_icfp_all_5750.txt`
+- 合計: 5759
+- `icfp.exe` 再集計で CV weight 5759 / Full Administrator を確認。
+  - 入力: `ftd_icfp_all_5759_input.txt`
+  - 出力: `volume9_ftd_icfp_all_5759.txt`
 - 2026-05-01: ログ全体から出版 ID ごとの最高点を再集計し、75 出版で同じ合計 5747 を確認。
 
 ## 取得済み出版一覧
@@ -701,16 +701,16 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - `BLNCE.SWR=50@999999|a656011e0672f5dc095ca3579fc6515`
 - `BLNCE.SR2=50@999999|af9ab43ee4454e275ff430ed2f629f0`
 - `BLNCE.CMM=170@999999|d97c4842a161a13c34e67ebeb23c223`
-- `BLNCE.CRE=190@999999|9516bf4d791092f4f30708648909941`
+- `BLNCE.CRE=196@999999|0372e845bdfbdd29b9addf44c0813bc`
 - `BLNCE.MMM=187@999999|f455e0cfbb320c58ce7739e45ace884`
 - `BLNCE.FMM=158@999999|3634cecf88ee8053817420613e9b4a7`
 - `BLNCE.CRR=97@999999|7a18c38d7690f1d74db0b2446b68837`
-- `ADVIS.ARH=169@999999|ac21e73f0f47d168d1c2ea1b62c31fa`
-- `ADVIS.XML=160@999999|1868d2782cd1eb75239c345b2bb93a2`
+- `ADVIS.ARH=170@999999|a7ca0b6a15edcca925fd685f5f66188`
+- `ADVIS.XML=161@999999|56d37c886e6e39046a88e1828083bdc`
 - `BASIC.MLC=100@999999|8f8f7b233a9deb154cbcd5314b8e930`
 - `CIRCS.MUL=30@999999|fe8a47581d2a95699b216c13fb250bd`
 - `CIRCS.REV=35@999999|d4481d7a04981746dc23d1c0b7c665e`
-- `CIRCS.RAY=1264@999999|6ef053487b3deb2307b0f34255390bd`
+- `CIRCS.RAY=1265@999999|3797a6834d3980fa0a09d086bfc3239`
 - `BLACK.000=10@999999|4566683b0cde7717794ff5fc1c298c8`
 - `BLACK.010=10@999999|436114654e7dfe3d819cdd1c53d0cb5`
 - `BLACK.020=10@999999|27521a7d58a613be1a0f1f6a753de85`
@@ -1150,6 +1150,10 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
 - raytrace の15モジュールは矩形面積12702に対し採点面積13206で、単純な空列はない。141x92への短時間再配置探索も解なしで、構造変更なしのpackingは費用対効果が低いと判断。
 - `icfp.exe` へ更新publicationを再投入し、CV weight 5750 / Full Administratorを確認。
   - 入力/ログ: `ftd_icfp_all_5750_input.txt` / `volume9_ftd_icfp_all_5750.txt`。
+- 続く自作探索で `copyreg9_candidate.bal` を発見。全255入力で完全解となり、公式 `BLNCE.CRE=193` を取得。
+- `raytrace_2_repack4.2d` を公式検証し、area 13064 / `CIRCS.RAY=1265` を取得。
+- `arith35.adv` と `xml32.adv` を公式検証し、`ADVIS.ARH=170` / `ADVIS.XML=161` を取得。
+- `ftd_icfp_all_5756_input.txt` / `volume9_ftd_icfp_all_5756.txt` で CV weight 5756 / Full Administratorを確認。
 
 ## Antomaton ハック進捗
 - `um` に `-patch-array ID IDX VALUE` を追加し、任意配列の要素を書き換え可能にした。

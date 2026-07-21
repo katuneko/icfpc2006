@@ -1,0 +1,12 @@
+{ Six-rule arithmetic evaluator with a shared operator continuation. }
+
+Compute (o x y) => F o (Compute x) y;
+Compute v => v;
+
+F Add Z => Compute;
+F Add (S x) y => S (F Add x y);
+
+F Mult Z y => Z;
+F Mult (S x) y => F Add (Compute (Mult x y)) y;
+
+.

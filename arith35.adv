@@ -1,0 +1,12 @@
+{ Six-rule arithmetic evaluator using infix operator continuations. }
+
+Compute (o x y) => (Compute x) o y;
+Compute v => v;
+
+Z Add => Compute;
+(S x) Add y => S (x Add y);
+
+Z Mult y => Z;
+(S x) Mult y => (Compute (Mult x y)) Add y;
+
+.

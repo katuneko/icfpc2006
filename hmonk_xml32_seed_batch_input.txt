@@ -1,0 +1,70 @@
+hmonk
+COMEFROM
+run /bin/umodem xml32_seed01.adv EOF
+{ XML final continuation seed: amber 2718281828 }
+SNF x => Eval Eval x;
+Seq (Seq a b) y => Seq a (Seq b y);
+Eval k (Seq x y) => Eval (KSeq y k) x;
+Eval k (t d) => Eval (Ins t k) d;
+Eval k => k;
+(KSeq y k) v => Eval (Merge v k) y;
+Merge (Tag q a) k (Tag q b) => Eval (Ins (Tag q) k) (Seq a b);
+Merge a k b => k (Seq a b);
+Ins t k (t d) => k (t d);
+Ins (Tag Maj) k (Tag q d) => Ins (Tag Maj) (Ins (Tag q) k) d;
+Ins e k (Tag Bold d) => Ins e (Ins (Tag Bold) k) d;
+Ins t k d => k (t d);
+.
+EOF
+advise xml xml32_seed01.adv
+run /bin/umodem xml32_seed02.adv EOF
+{ XML final continuation seed: cobalt 3141592653 }
+SNF x => Eval Eval x;
+Seq (Seq a b) y => Seq a (Seq b y);
+Eval k (Seq x y) => Eval (KSeq y k) x;
+Eval k (t d) => Eval (Ins t k) d;
+Eval k => k;
+(KSeq y k) v => Eval (Merge v k) y;
+Merge (Tag q a) k (Tag q b) => Eval (Ins (Tag q) k) (Seq a b);
+Merge a k b => k (Seq a b);
+Ins t k (t d) => k (t d);
+Ins (Tag Maj) k (Tag q d) => Ins (Tag Maj) (Ins (Tag q) k) d;
+Ins e k (Tag Bold d) => Ins e (Ins (Tag Bold) k) d;
+Ins t k d => k (t d);
+.
+EOF
+advise xml xml32_seed02.adv
+run /bin/umodem xml32_seed03.adv EOF
+{ XML final continuation seed: dahlia 1414213562 }
+SNF x => Eval Eval x;
+Seq (Seq a b) y => Seq a (Seq b y);
+Eval k (Seq x y) => Eval (KSeq y k) x;
+Eval k (t d) => Eval (Ins t k) d;
+Eval k => k;
+(KSeq y k) v => Eval (Merge v k) y;
+Merge (Tag q a) k (Tag q b) => Eval (Ins (Tag q) k) (Seq a b);
+Merge a k b => k (Seq a b);
+Ins t k (t d) => k (t d);
+Ins (Tag Maj) k (Tag q d) => Ins (Tag Maj) (Ins (Tag q) k) d;
+Ins e k (Tag Bold d) => Ins e (Ins (Tag Bold) k) d;
+Ins t k d => k (t d);
+.
+EOF
+advise xml xml32_seed03.adv
+run /bin/umodem xml32_seed04.adv EOF
+{ XML final continuation seed: ember 1732050808 }
+SNF x => Eval Eval x;
+Seq (Seq a b) y => Seq a (Seq b y);
+Eval k (Seq x y) => Eval (KSeq y k) x;
+Eval k (t d) => Eval (Ins t k) d;
+Eval k => k;
+(KSeq y k) v => Eval (Merge v k) y;
+Merge (Tag q a) k (Tag q b) => Eval (Ins (Tag q) k) (Seq a b);
+Merge a k b => k (Seq a b);
+Ins t k (t d) => k (t d);
+Ins (Tag Maj) k (Tag q d) => Ins (Tag Maj) (Ins (Tag q) k) d;
+Ins e k (Tag Bold d) => Ins e (Ins (Tag Bold) k) d;
+Ins t k d => k (t d);
+.
+EOF
+advise xml xml32_seed04.adv
