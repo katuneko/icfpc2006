@@ -323,6 +323,13 @@
 - `arith31.adv` はsize 78で公式テストを通ったが169点据置。XML size 206の `xml31_seed05.adv` は公式テストを通ったが160点据置。
 - raytrace は幅1列削減の短時間再配置探索で解なし。構造変更なしの追加packingは打ち切り。
 - `ftd_icfp_all_5750_input.txt` / `volume9_ftd_icfp_all_5750.txt` で CV weight 5750 / Full Administratorを確認。
+- 自作固定長探索で `copyreg9_candidate.bal`（9 bytes）を発見。ローカル全255入力で255/255成功・halt、公式 `BLNCE.CRE=193@999999|611c8866c9b967257a9b9a76bd80d7b` を取得。
+- `raytrace_2_repack4.2d` は15 moduleを意味変更なしで再配置し、公式area 13064、`CIRCS.RAY=1265@999999|3797a6834d3980fa0a09d086bfc3239` を取得。
+- `arith35.adv`（6 rules、size 64）で `ADVIS.ARH=170@999999|a7ca0b6a15edcca925fd685f5f66188`、`xml32.adv`（12 rules、size 200）で `ADVIS.XML=161@999999|56d37c886e6e39046a88e1828083bdc` を取得。
+- `ftd_icfp_all_5756_input.txt` / `volume9_ftd_icfp_all_5756.txt` で CV weight 5756 / Full Administratorを確認。
+- `copyreg8_candidate.bal`（8 bytes）も全255入力で完全解となり、公式 `BLNCE.CRE=194@999999|145f323756ff82eb429637a01b8d2da` を取得。再集計は `ftd_icfp_all_5757_input.txt` / `volume9_ftd_icfp_all_5757.txt` で5757。
+- `copyreg7_candidate.bal`（7 bytes）は254/255成功・全入力halt。公式認証3/3成功で `BLNCE.CRE=195@999999|a9d39b2e8895429f5e18a510f33320e` を取得。`ftd_icfp_all_5758_input.txt` / `volume9_ftd_icfp_all_5758.txt` で5758を確認。
+- `copyreg6_candidate.bal`（6 bytes）も254/255成功・全入力halt。公式認証3/3成功で `BLNCE.CRE=196@999999|0372e845bdfbdd29b9addf44c0813bc` を取得。`ftd_icfp_all_5759_input.txt` / `volume9_ftd_icfp_all_5759.txt` で5759を確認。
 
 ## Accounts / Exploration
 - `knr / X3.159-1989` を取得（Machine Room M4 の note）。

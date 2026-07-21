@@ -1,0 +1,7 @@
+yang
+U+262F
+run /bin/umodem copyreg8_candidate.bal EOF
+6405630f4500246d
+EOF
+certify copyreg copyreg8_candidate.bal
+logout

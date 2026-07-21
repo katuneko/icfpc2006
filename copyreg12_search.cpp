@@ -7,7 +7,10 @@
 #include <unordered_set>
 #include <vector>
 
-using Code = std::array<uint8_t, 12>;
+#ifndef CODE_LEN
+#define CODE_LEN 12
+#endif
+using Code = std::array<uint8_t, CODE_LEN>;
 
 struct Score { int ok, halt; long long steps; };
 
@@ -60,7 +63,7 @@ static Score evaluate(const Code &code, int max_steps = 1600) {
             }
             // The reference interpreter wraps the signed speed addition to
             // uint32 before reducing it modulo the program length.
-            ip = uint32_t(int64_t(ip) + speed) % 12;
+            ip = uint32_t(int64_t(ip) + speed) % CODE_LEN;
         }
         out.steps += step;
         if (!halted) continue;
@@ -84,17 +87,23 @@ int main(int argc, char **argv) {
     int seconds = argc > 1 ? std::atoi(argv[1]) : 300;
     unsigned seed = argc > 2 ? unsigned(std::strtoul(argv[2], nullptr, 10)) : 1;
     std::mt19937 rng(seed);
-    const std::array<uint8_t, 13> base = {0x29,0x22,0x65,0x0b,0x00,0x2e,0x29,0x55,0x03,0x67,0x59,0x77,0x0a};
+    const std::vector<uint8_t> base = {0x64,0x03,0x63,0x24,0x1b,0x00};
     struct Item { Code c; Score s; };
     std::vector<Item> pop;
     auto add = [&](Code c) { pop.push_back({c, evaluate(c)}); };
-    for (int drop = 0; drop < 13; ++drop) {
+    if (base.size() <= CODE_LEN) {
+        Code c{};
+        std::copy(base.begin(), base.end(), c.begin());
+        add(c);
+    }
+    for (int drop = 0; drop < int(base.size()); ++drop) {
         Code c{}; int j = 0;
-        for (int i = 0; i < 13; ++i) if (i != drop) c[j++] = base[i];
+        for (int i = 0; i < int(base.size()); ++i) if (i != drop && j < CODE_LEN) c[j++] = base[i];
+        while (j < CODE_LEN) c[j++] = uint8_t(rng()%128);
         add(c);
         for (int k = 0; k < 100; ++k) {
             Code d = c;
-            for (int m = 0, n = 1 + int(rng() % 3); m < n; ++m) d[rng()%12] = uint8_t(rng()%128);
+            for (int m = 0, n = 1 + int(rng() % 3); m < n; ++m) d[rng()%CODE_LEN] = uint8_t(rng()%128);
             add(d);
         }
     }
@@ -117,21 +126,21 @@ int main(int argc, char **argv) {
             unsigned mode=rng()%100;
             if (mode < 65) {
                 int n = 1 + (rng()%100 < 18) + (rng()%100 < 4);
-                while(n--) c[rng()%12]=uint8_t(rng()%128);
+                while(n--) c[rng()%CODE_LEN]=uint8_t(rng()%128);
             } else if (mode < 78) {
-                std::swap(c[rng()%12],c[rng()%12]);
+                std::swap(c[rng()%CODE_LEN],c[rng()%CODE_LEN]);
             } else if (mode < 90) {
-                int from=rng()%12,to=rng()%12; uint8_t v=c[from];
+                int from=rng()%CODE_LEN,to=rng()%CODE_LEN; uint8_t v=c[from];
                 if(from<to) for(int i=from;i<to;++i)c[i]=c[i+1];
                 else for(int i=from;i>to;--i)c[i]=c[i-1];
                 c[to]=v;
             } else {
                 const Code &d=pop[rng()%elite].c;
-                int lo=rng()%12, hi=lo+rng()%(13-lo);
+                int lo=rng()%CODE_LEN, hi=lo+rng()%(CODE_LEN+1-lo);
                 for(int i=lo;i<hi;++i)c[i]=d[i];
             }
             // A zero-speed SCIENCE instruction is necessary for a normal halt.
-            if (std::find(c.begin(),c.end(),uint8_t(0))==c.end()) c[rng()%12]=0;
+            if (std::find(c.begin(),c.end(),uint8_t(0))==c.end()) c[rng()%CODE_LEN]=0;
             next.push_back({c,evaluate(c)});
         }
         pop.swap(next);

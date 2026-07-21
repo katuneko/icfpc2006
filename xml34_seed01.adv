@@ -1,0 +1,14 @@
+{ XML global merge seed: cobalt 3141592653 }
+SNF => Eval Eval;
+Seq (Seq a b) y => Seq a (Seq b y);
+Seq (Tag q a) (Tag q b) => Tag q (Seq a b);
+Eval k (Seq x y) => Eval (KSeq y k) x;
+Eval k (t d) => Eval (Ins t k) d;
+Eval k => k;
+(KSeq y k) v => Eval (Merge v k) y;
+Merge a k b => k (Seq a b);
+Ins t k (t d) => k (t d);
+Ins (Tag Maj) k (Tag q d) => Ins (Tag Maj) (Ins (Tag q) k) d;
+Ins e k (Tag Bold d) => Ins e (Ins (Tag Bold) k) d;
+Ins t k d => k (t d);
+.

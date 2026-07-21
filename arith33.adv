@@ -1,0 +1,12 @@
+{ Arithmetic evaluator reusing Add and Mult as continuations. }
+
+Compute (o x y) => o (Compute x) y;
+Compute v => v;
+
+Add Z => Compute;
+Add (S x) y => S (Add x y);
+
+Mult Z y => Z;
+Mult (S x) y => Add (Mult x y) y;
+
+.

@@ -1,0 +1,18 @@
+hmonk
+COMEFROM
+run /bin/umodem arith32.adv EOF
+{ Arithmetic evaluator with direct MulF recursion. }
+
+Compute (Add x y) => AddF (Compute x) y;
+Compute (Mult x y) => MulF (Compute x) y;
+Compute v => v;
+
+AddF Z => Compute;
+AddF (S x) y => S (AddF x y);
+
+MulF Z y => Z;
+MulF (S x) y => AddF (MulF x y) y;
+
+.
+EOF
+advise arith arith32.adv
