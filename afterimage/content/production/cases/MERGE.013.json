@@ -1,0 +1,197 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.013",
+    "family": "MERGE",
+    "title": "Equivocation",
+    "points": 130,
+    "reference_scale": 950000,
+    "requires": {
+      "all": [
+        "case:MERGE.012",
+        "case:COVENANT.002"
+      ]
+    },
+    "projection": "merge.equivocation",
+    "validator_template": "merge-equivocation-certificate-claim/0.1",
+    "merge_contract": {
+      "task": "equivocation",
+      "operation_field": "operation",
+      "source_field": "witness",
+      "claim_field": "claim",
+      "minimum_distinct_claims": 2,
+      "maximum_equivocating_sources": 1
+    },
+    "author_answer": {
+      "accepted": [
+        {
+          "key": "H1",
+          "at": 10
+        },
+        {
+          "key": "H2",
+          "at": 11
+        }
+      ],
+      "rejected": [
+        {
+          "key": "E1",
+          "reason": "equivocation"
+        },
+        {
+          "key": "E2",
+          "reason": "equivocation"
+        }
+      ],
+      "certificate": []
+    },
+    "metric_bounds": {
+      "temporal_displacement": 8,
+      "certificate_units": 16
+    },
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {
+        "max_base_events": 8,
+        "max_derived_events": 4,
+        "max_bindings_tested": 64,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "label": "H1",
+      "body": {
+        "topic": "merge.record",
+        "at": 10,
+        "payload": {
+          "key": "H1",
+          "local_time": 10,
+          "offset_min": 0,
+          "offset_max": 0,
+          "source": "signed-scada",
+          "sequence": 1,
+          "weight": 3,
+          "operation": "CITY-19",
+          "witness": "signed-scada",
+          "claim": "surface-approved"
+        },
+        "parents": [],
+        "origin": {
+          "kind": "base",
+          "source": "signed-scada",
+          "sequence": 1
+        }
+      }
+    },
+    {
+      "label": "H2",
+      "body": {
+        "topic": "merge.record",
+        "at": 11,
+        "payload": {
+          "key": "H2",
+          "local_time": 11,
+          "offset_min": 0,
+          "offset_max": 0,
+          "source": "relay-audit",
+          "sequence": 1,
+          "weight": 3,
+          "operation": "CITY-19",
+          "witness": "relay-audit",
+          "claim": "surface-approved"
+        },
+        "parents": [],
+        "origin": {
+          "kind": "base",
+          "source": "relay-audit",
+          "sequence": 1
+        }
+      }
+    },
+    {
+      "label": "E1",
+      "body": {
+        "topic": "merge.record",
+        "at": 12,
+        "payload": {
+          "key": "E1",
+          "local_time": 12,
+          "offset_min": 0,
+          "offset_max": 0,
+          "source": "legacy-gateway",
+          "sequence": 17,
+          "weight": 3,
+          "operation": "CITY-19",
+          "witness": "legacy-7",
+          "claim": "surface-approved"
+        },
+        "parents": [],
+        "origin": {
+          "kind": "base",
+          "source": "legacy-gateway",
+          "sequence": 17
+        }
+      }
+    },
+    {
+      "label": "E2",
+      "body": {
+        "topic": "merge.record",
+        "at": 13,
+        "payload": {
+          "key": "E2",
+          "local_time": 13,
+          "offset_min": 0,
+          "offset_max": 0,
+          "source": "legacy-gateway",
+          "sequence": 18,
+          "weight": 3,
+          "operation": "CITY-19",
+          "witness": "legacy-7",
+          "claim": "underground-approved"
+        },
+        "parents": [],
+        "origin": {
+          "kind": "base",
+          "source": "legacy-gateway",
+          "sequence": 18
+        }
+      }
+    }
+  ],
+  "rules": [],
+  "projection": {
+    "id": "merge.equivocation",
+    "rows": []
+  },
+  "worked_value": {
+    "honest_claim": "surface-approved",
+    "equivocating_source": "legacy-7",
+    "rejected": [
+      "E1",
+      "E2"
+    ],
+    "note": "One matching statement from legacy-7 does not rehabilitate the source; both of its incompatible records form the equivocation."
+  },
+  "story": {
+    "premise": "After the city covenant takes effect, two independent sealed records approve the surface route. The legacy gateway then supplies two signed statements for the same operation: one agrees, one approves the underground ring. Treating the agreeing copy as honest would let a source choose which identity the hearing remembers.",
+    "submission": "Retain both honest records and reject every record from the one source that made incompatible claims for CITY-19. Submit no invented precedence edges.",
+    "diagnostics": "The verifier groups by operation and source, recomputes distinct claims, requires honest-source agreement, and rejects answers that discard only the visibly losing statement.",
+    "hints": [
+      "Equivocation is a property of a source within one operation.",
+      "The agreeing claim is still part of the double statement.",
+      "Do not turn a source-identity fault into a clock inconsistency."
+    ]
+  }
+}
+

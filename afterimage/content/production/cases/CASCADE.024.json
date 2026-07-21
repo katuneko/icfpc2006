@@ -1,0 +1,52 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.024", "family": "CASCADE", "title": "The Chosen Tomorrow", "points": 130,
+    "reference_scale": 1900000,
+    "requires": {"all": ["case:CASCADE.023"]},
+    "projection": "incident.chosen-tomorrow", "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1", "required": true,
+      "allowed_kinds": ["replace"], "max_operations": 1, "weights": {"replace": 1},
+      "topics": ["future.choice"], "pointers": ["/payload/route"],
+      "retime": {"minimum": 40, "maximum": 40}
+    },
+    "author_operation": {"kind": "replace", "target_topic": "future.choice", "pointer": "/payload/route", "value": "surface"},
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 32, "witness_units": 64},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 8, "max_derived_events": 12, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"label": "policy", "body": {"topic": "future.policy", "at": 40, "payload": {"hearing": "CITY-FINAL", "selector": "public-lexicographic", "canonical": "surface", "safe_alternatives": ["surface", "underground"], "public_notice": "continuity-certified"}, "parents": [], "origin": {"kind": "base", "source": "continuity-hearing", "sequence": 24}}},
+    {"label": "choice", "body": {"topic": "future.choice", "at": 40, "payload": {"hearing": "CITY-FINAL", "route": "sealed", "selector": "public-lexicographic"}, "parents": ["@policy"], "origin": {"kind": "base", "source": "continuity-selector", "sequence": 1}}}
+  ],
+  "rules": [{"stratum": 0, "rule": {
+    "id": "chosen-tomorrow.01-safety",
+    "positive": [
+      {"alias": "p", "topic": "future.policy", "where": ["const", true]},
+      {"alias": "c", "topic": "future.choice", "where": ["eq", ["get", "c", "/payload/hearing"], ["get", "p", "/payload/hearing"]]}
+    ],
+    "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true],
+    "emit": [{"topic": ["const", "continuity.safety"], "at": ["get", "c", "/at"], "payload": ["map",
+      "safe", ["or", ["eq", ["get", "c", "/payload/route"], ["get", "p", "/payload/safe_alternatives/0"]], ["eq", ["get", "c", "/payload/route"], ["get", "p", "/payload/safe_alternatives/1"]]],
+      "route", ["get", "c", "/payload/route"], "selector", ["get", "p", "/payload/selector"],
+      "canonical", ["get", "p", "/payload/canonical"], "notice", ["get", "p", "/payload/public_notice"], "alternatives", ["const", 2]
+    ], "parents": []}]
+  }}],
+  "projection": {"id": "incident.chosen-tomorrow", "rows": [{
+    "positive": [{"alias": "s", "topic": "continuity.safety", "where": ["const", true]}],
+    "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true],
+    "value": ["map", "safe", ["get", "s", "/payload/safe"], "notice", ["get", "s", "/payload/notice"], "alternatives", ["get", "s", "/payload/alternatives"]], "sort": []
+  }]},
+  "worked_value": {"root": "sealed", "selected": "surface", "preserved_alternative": "underground", "public_record": {"safe": true, "notice": "continuity-certified", "alternatives": 2}},
+  "story": {
+    "premise": "The hearing publishes a deterministic selector and retains two safe continuations. The selector output was never applied: the active route still says sealed. Repairing the output reveals that policy selected one tomorrow; it does not make the other unsafe or delete it.",
+    "submission": "Apply the published selector to choose surface with one base-event replacement. Preserve the policy event and both safe alternatives. The public notice intentionally reports safety and multiplicity, not the latent route.",
+    "diagnostics": "The replay derives safety from membership in the retained alternative set. Editing the public record, deleting the underground alternative, or leaving the stale selector output cannot satisfy the contract.",
+    "hints": ["Change the selector output, not its audit policy.", "The public record says there are two alternatives.", "You are choosing a history, not proving uniqueness."]
+  }
+}

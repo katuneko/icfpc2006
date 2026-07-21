@@ -1,0 +1,42 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.014", "family": "CASCADE", "title": "Shadow Bus", "points": 100, "reference_scale": 1100000,
+    "requires": {"all": ["case:CASCADE.013", "case:COVENANT.001"]},
+    "projection": "incident.shadow-bus", "validator_template": "cascade-multi-contract-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1", "required": true,
+      "allowed_kinds": ["replace"], "max_operations": 2, "weights": {"replace": 1},
+      "topics": ["evacuation.bus-commitment", "evacuation.train-commitment"], "pointers": ["/payload/commitment"],
+      "retime": {"minimum": 0, "maximum": 0}
+    },
+    "author_operations": [
+      {"kind": "replace", "target_topic": "evacuation.bus-commitment", "pointer": "/payload/commitment", "value": 18},
+      {"kind": "replace", "target_topic": "evacuation.train-commitment", "pointer": "/payload/commitment", "value": 52}
+    ],
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 96, "witness_units": 64},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 12, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"topic": "bus.capacity-envelope", "at": 0, "payload": {"vehicle": "SHADOW-7", "hidden_minimum": 18, "hidden_maximum": 22, "evidence": "axle-count-and-fuel-envelope"}, "parents": [], "origin": {"kind": "base", "source": "transit-audit", "sequence": 1}},
+    {"topic": "train.capacity-limit", "at": 0, "payload": {"service": "RING-RELIEF", "maximum": 52, "evidence": "platform-clearance"}, "parents": [], "origin": {"kind": "base", "source": "rail-control", "sequence": 1}},
+    {"topic": "evacuation.bus-commitment", "at": 7, "payload": {"incident": "RIVER-4", "evacuees": 70, "commitment": 20, "vehicle": "SHADOW-7", "status": "retained-draft"}, "parents": [], "origin": {"kind": "base", "source": "continuity-dispatch", "sequence": 1}},
+    {"topic": "evacuation.train-commitment", "at": 7, "payload": {"incident": "RIVER-4", "evacuees": 70, "commitment": 50, "service": "RING-RELIEF", "status": "retained-draft"}, "parents": [], "origin": {"kind": "base", "source": "continuity-dispatch", "sequence": 2}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "shadow-bus.01-contract", "positive": [
+      {"alias": "b", "topic": "bus.capacity-envelope", "where": ["const", true]},
+      {"alias": "t", "topic": "train.capacity-limit", "where": ["const", true]},
+      {"alias": "p", "topic": "evacuation.bus-commitment", "where": ["const", true]},
+      {"alias": "q", "topic": "evacuation.train-commitment", "where": ["eq", ["get", "q", "/payload/incident"], ["get", "p", "/payload/incident"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "p", "/at"], "payload": ["map",
+      "safe", ["and", ["eq", ["add", ["get", "p", "/payload/commitment"], ["get", "q", "/payload/commitment"]], ["get", "p", "/payload/evacuees"]], ["and", ["le", ["get", "p", "/payload/commitment"], ["get", "b", "/payload/hidden_minimum"]], ["le", ["get", "q", "/payload/commitment"], ["get", "t", "/payload/maximum"]]]],
+      "bus_commitment", ["get", "p", "/payload/commitment"], "train_commitment", ["get", "q", "/payload/commitment"], "evacuees", ["get", "p", "/payload/evacuees"], "hidden_bus_minimum", ["get", "b", "/payload/hidden_minimum"], "hidden_bus_maximum", ["get", "b", "/payload/hidden_maximum"], "train_maximum", ["get", "t", "/payload/maximum"], "shadow_bus_observed", ["const", false]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "shadow-bus.02-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map", "code", ["const", "nonrobust_allocation"]], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.shadow-bus", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"evacuees": 70, "bus_envelope": [18, 22], "train_limit": 52, "robust_allocation": {"bus": 18, "train": 52}, "note": "Any larger bus promise fails in the hidden low-capacity world; any smaller promise forces the train above its certified limit."},
+  "story": {"premise": "The dispatch covenant calls a relief vehicle absent from every public fleet list. Axle and fuel traces prove that SHADOW-7 can carry between eighteen and twenty-two people, but its exact fit remains hidden. Seventy evacuees must be split with a relief train certified for at most fifty-two.", "submission": "Replace both commitments with one allocation that carries everyone and remains feasible for every capacity allowed by the shadow bus envelope.", "diagnostics": "The replay exposes under-allocation, a promise that fails in the hidden low-capacity world, and train overbooking as the same public contract failure with separate retained evidence.", "hints": ["Plan against the bus envelope's lower endpoint.", "The two commitments must sum to exactly seventy.", "The train limit and the robust bus limit leave no slack."]}
+}

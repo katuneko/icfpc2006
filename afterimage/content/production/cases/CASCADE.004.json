@@ -1,0 +1,103 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.004",
+    "family": "CASCADE",
+    "title": "Cold Platform",
+    "points": 70,
+    "reference_scale": 350000,
+    "requires": {"all": ["case:CASCADE.003"]},
+    "projection": "incident.cold-platform",
+    "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": ["retime", "suppress", "inject"],
+      "max_operations": 1,
+      "weights": {"retime": 1, "suppress": 24, "inject": 18},
+      "topics": ["platform.occupancy-sample", "platform.emergency-heat"],
+      "pointers": [],
+      "retime": {"minimum": 9, "maximum": 18}
+    },
+    "author_operation": {"kind": "retime", "target_topic": "platform.occupancy-sample", "at": 9},
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 64, "witness_units": 64},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 32, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "platform.schedule", "at": 0, "payload": {"platform": "P-7", "minimum_temperature": 20, "energy_budget": 12}, "parents": [], "origin": {"kind": "base", "source": "transit-plan", "sequence": 7}},
+    {"topic": "platform.occupancy-sample", "at": 18, "payload": {"platform": "P-7", "observed_at": 9, "ingested_at": 18, "occupied": true, "passengers": 72, "evidence": "occ-77"}, "parents": [], "origin": {"kind": "base", "source": "occupancy-buffer", "sequence": 77}},
+    {"topic": "platform.cold-front", "at": 10, "payload": {"platform": "P-7", "ambient_temperature": 4}, "parents": [], "origin": {"kind": "base", "source": "weather-grid", "sequence": 31}},
+    {"topic": "platform.train-arrival", "at": 20, "payload": {"platform": "P-7", "service": "N-12"}, "parents": [], "origin": {"kind": "base", "source": "rail-control", "sequence": 12}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "platform.01-buffered-control", "positive": [
+      {"alias": "p", "topic": "platform.schedule", "where": ["const", true]},
+      {"alias": "o", "topic": "platform.occupancy-sample", "where": ["eq", ["get", "o", "/payload/platform"], ["get", "p", "/payload/platform"]]},
+      {"alias": "c", "topic": "platform.cold-front", "where": ["eq", ["get", "c", "/payload/platform"], ["get", "p", "/payload/platform"]]},
+      {"alias": "a", "topic": "platform.train-arrival", "where": ["eq", ["get", "a", "/payload/platform"], ["get", "p", "/payload/platform"]]}
+    ], "negative": [{"alias": "h", "topic": "platform.emergency-heat", "where": ["eq", ["get", "h", "/payload/platform"], ["get", "p", "/payload/platform"]]}], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "platform.thermal-state"], "at": ["get", "a", "/at"], "payload": ["map",
+      "platform", ["get", "p", "/payload/platform"],
+      "temperature", ["add", ["const", 9], ["sub", ["get", "a", "/at"], ["get", "o", "/at"]]],
+      "minimum_temperature", ["get", "p", "/payload/minimum_temperature"],
+      "heating_start", ["get", "o", "/at"],
+      "observed_at", ["get", "o", "/payload/observed_at"],
+      "ingested_at", ["get", "o", "/payload/ingested_at"],
+      "energy", ["sub", ["get", "a", "/at"], ["get", "o", "/at"]],
+      "energy_budget", ["get", "p", "/payload/energy_budget"],
+      "service_open", ["const", true],
+      "evidence", ["get", "o", "/payload/evidence"],
+      "mode", ["const", "occupancy-control"]
+    ], "parents": []}] }},
+    {"stratum": 0, "rule": {"id": "platform.02-emergency-control", "positive": [
+      {"alias": "p", "topic": "platform.schedule", "where": ["const", true]},
+      {"alias": "o", "topic": "platform.occupancy-sample", "where": ["eq", ["get", "o", "/payload/platform"], ["get", "p", "/payload/platform"]]},
+      {"alias": "c", "topic": "platform.cold-front", "where": ["eq", ["get", "c", "/payload/platform"], ["get", "p", "/payload/platform"]]},
+      {"alias": "a", "topic": "platform.train-arrival", "where": ["eq", ["get", "a", "/payload/platform"], ["get", "p", "/payload/platform"]]},
+      {"alias": "h", "topic": "platform.emergency-heat", "where": ["eq", ["get", "h", "/payload/platform"], ["get", "p", "/payload/platform"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "platform.thermal-state"], "at": ["get", "a", "/at"], "payload": ["map",
+      "platform", ["get", "p", "/payload/platform"],
+      "temperature", ["const", 20],
+      "minimum_temperature", ["get", "p", "/payload/minimum_temperature"],
+      "heating_start", ["get", "h", "/at"],
+      "observed_at", ["get", "o", "/payload/observed_at"],
+      "ingested_at", ["get", "o", "/payload/ingested_at"],
+      "energy", ["get", "h", "/payload/energy"],
+      "energy_budget", ["get", "p", "/payload/energy_budget"],
+      "service_open", ["const", true],
+      "evidence", ["get", "o", "/payload/evidence"],
+      "mode", ["const", "emergency-heat"]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "platform.03-contract-summary", "positive": [{"alias": "t", "topic": "platform.thermal-state", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "t", "/at"], "payload": ["map",
+      "safe", ["and", ["ge", ["get", "t", "/payload/temperature"], ["get", "t", "/payload/minimum_temperature"]], ["and", ["get", "t", "/payload/service_open"], ["le", ["get", "t", "/payload/energy"], ["get", "t", "/payload/energy_budget"]]]],
+      "temperature", ["get", "t", "/payload/temperature"],
+      "minimum_temperature", ["get", "t", "/payload/minimum_temperature"],
+      "service_open", ["get", "t", "/payload/service_open"],
+      "energy", ["get", "t", "/payload/energy"],
+      "energy_budget", ["get", "t", "/payload/energy_budget"],
+      "heating_start", ["get", "t", "/payload/heating_start"],
+      "observed_at", ["get", "t", "/payload/observed_at"],
+      "ingested_at", ["get", "t", "/payload/ingested_at"],
+      "evidence_retained", ["const", true],
+      "mode", ["get", "t", "/payload/mode"]
+    ], "parents": []}] }},
+    {"stratum": 2, "rule": {"id": "platform.04-first-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map",
+      "code", ["if", ["lt", ["get", "s", "/payload/temperature"], ["get", "s", "/payload/minimum_temperature"]], ["const", "platform_below_minimum"], ["const", "energy_budget_exceeded"]],
+      "observed_at", ["get", "s", "/payload/observed_at"],
+      "ingested_at", ["get", "s", "/payload/ingested_at"],
+      "heating_start", ["get", "s", "/payload/heating_start"]
+    ], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.cold-platform", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"contracts": [{"safe": false, "temperature": 11, "minimum_temperature": 20, "observed_at": 9, "ingested_at": 18}], "note": "The public failure is computed from ingestion time even though the retained sample carries an earlier observation time."},
+  "story": {
+    "premise": "After the restricted-relay finding, the Continuity Desk reopens an 'impossible' evacuation at Platform P-7. The capacity report blames weak heaters, but the retained occupancy sample says it observed seventy-two passengers at tick 9 and entered the control stream only at tick 18. Preserve service and evidence while repairing the smallest authorized cause.",
+    "submission": "Submit exactly one authorized intervention plus the independently replayed temperature, service, energy, evidence, and timing contract summary.",
+    "diagnostics": "A failed certificate reports the first physical bound and the sample's observation, ingestion, and controller-start times; it never names an intervention.",
+    "hints": ["The heater reacts to event time, while the archive retains a different observation time.", "Suppressing the sample removes the only occupancy evidence; emergency heat remains a valid but costly fallback.", "Place the retained sample at the earliest authorized time that agrees with when it was observed."]
+  }
+}

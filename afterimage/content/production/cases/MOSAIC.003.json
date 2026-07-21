@@ -1,0 +1,77 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MOSAIC.003",
+    "family": "MOSAIC",
+    "title": "Rotated Block",
+    "points": 90,
+    "reference_scale": 400000,
+    "requires": {"all": ["case:MOSAIC.002"]},
+    "projection": "mosaic.rotated-block",
+    "validator_template": "mosaic-graph-claim/0.1",
+    "author_answer": {
+      "global": {
+        "vertices": [
+          {"id": "v0", "x": 0, "y": 0}, {"id": "v1", "x": 1, "y": 0}, {"id": "v2", "x": 2, "y": 0},
+          {"id": "v3", "x": 0, "y": 1}, {"id": "v4", "x": 1, "y": 1}, {"id": "v5", "x": 2, "y": 1},
+          {"id": "v6", "x": 0, "y": 2}, {"id": "v7", "x": 1, "y": 2}, {"id": "v8", "x": 2, "y": 2}
+        ],
+        "edges": [
+          {"a": "v0", "b": "v1", "material": "amber", "level": "1"}, {"a": "v0", "b": "v3", "material": "blue", "level": "2"},
+          {"a": "v1", "b": "v2", "material": "copper", "level": "3"}, {"a": "v1", "b": "v4", "material": "dawn", "level": "1"},
+          {"a": "v2", "b": "v5", "material": "ember", "level": "2"}, {"a": "v3", "b": "v4", "material": "frost", "level": "3"},
+          {"a": "v3", "b": "v6", "material": "glass", "level": "1"}, {"a": "v4", "b": "v5", "material": "hazel", "level": "2"},
+          {"a": "v4", "b": "v7", "material": "iron", "level": "3"}, {"a": "v5", "b": "v8", "material": "jade", "level": "1"},
+          {"a": "v6", "b": "v7", "material": "kelp", "level": "2"}, {"a": "v7", "b": "v8", "material": "lime", "level": "3"}
+        ]
+      },
+      "used": [
+        {"fragment": "F-TURN", "transform": "r90", "mapping": [
+          {"local": "t00", "global": "v2"}, {"local": "t01", "global": "v1"}, {"local": "t02", "global": "v0"},
+          {"local": "t10", "global": "v5"}, {"local": "t11", "global": "v4"}, {"local": "t12", "global": "v3"}
+        ]},
+        {"fragment": "F-MIRROR", "transform": "mxr270", "mapping": [
+          {"local": "m00", "global": "v3"}, {"local": "m01", "global": "v4"}, {"local": "m02", "global": "v5"},
+          {"local": "m10", "global": "v6"}, {"local": "m11", "global": "v7"}, {"local": "m12", "global": "v8"}
+        ]}
+      ],
+      "unused": []
+    },
+    "mosaic_contract": {"width": 3, "height": 3},
+    "metric_bounds": {"graph_size": 64, "certificate_units": 64},
+    "limits": {
+      "max_witness_bytes": 262144,
+      "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 16},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "mosaic.fragment", "at": 1, "payload": {"id": "F-TURN", "weight": 8, "vertices": [
+      {"name": "t00", "x": 0, "y": 0}, {"name": "t01", "x": 0, "y": 1}, {"name": "t02", "x": 0, "y": 2},
+      {"name": "t10", "x": 1, "y": 0}, {"name": "t11", "x": 1, "y": 1}, {"name": "t12", "x": 1, "y": 2}
+    ], "edges": [
+      {"a": "t02", "b": "t01", "material": "amber", "level": "1"}, {"a": "t02", "b": "t12", "material": "blue", "level": "2"},
+      {"a": "t01", "b": "t00", "material": "copper", "level": "3"}, {"a": "t01", "b": "t11", "material": "dawn", "level": "1"},
+      {"a": "t00", "b": "t10", "material": "ember", "level": "2"}, {"a": "t12", "b": "t11", "material": "frost", "level": "3"},
+      {"a": "t11", "b": "t10", "material": "hazel", "level": "2"}
+    ]}, "parents": [], "origin": {"kind": "base", "source": "survey-turn", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 2, "payload": {"id": "F-MIRROR", "weight": 8, "vertices": [
+      {"name": "m00", "x": 0, "y": 0}, {"name": "m01", "x": 0, "y": 1}, {"name": "m02", "x": 0, "y": 2},
+      {"name": "m10", "x": 1, "y": 0}, {"name": "m11", "x": 1, "y": 1}, {"name": "m12", "x": 1, "y": 2}
+    ], "edges": [
+      {"a": "m00", "b": "m01", "material": "frost", "level": "3"}, {"a": "m00", "b": "m10", "material": "glass", "level": "1"},
+      {"a": "m01", "b": "m02", "material": "hazel", "level": "2"}, {"a": "m01", "b": "m11", "material": "iron", "level": "3"},
+      {"a": "m02", "b": "m12", "material": "jade", "level": "1"}, {"a": "m10", "b": "m11", "material": "kelp", "level": "2"},
+      {"a": "m11", "b": "m12", "material": "lime", "level": "3"}
+    ]}, "parents": [], "origin": {"kind": "base", "source": "survey-mirror", "sequence": 1}}
+  ],
+  "rules": [],
+  "projection": {"id": "mosaic.rotated-block", "rows": [{"positive": [{"alias": "f", "topic": "mosaic.fragment", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "f", "/payload"], "sort": [["get", "f", "/payload/id"]]}]},
+  "worked_value": {"canonical_prefix": [["v0", "v1", "amber", "1"], ["v0", "v3", "blue", "2"]], "note": "All eight D4 orientations describe the same block, but only the lexicographically least canonical edge encoding is accepted."},
+  "story": {
+    "premise": "Two crews surveyed the same utility block with a quarter-turn and a diagonal reflection. Continuity previously counted several rotated renderings as different candidate histories. Here that collapse is legitimate: produce one orientation-independent graph and the canonical representative used for stable comparison.",
+    "submission": "Submit the complete attributed 3×3 graph, both D4 transforms, and total local-to-global mappings. The global graph must be the canonical D4 representative, not merely an isomorphic rotation.",
+    "diagnostics": "Graph validity and D4 canonicality are checked before fragment placement. A rotated equivalent fails as noncanonical rather than masquerading as a different history.",
+    "hints": ["First find any complete assembly; orientation does not affect whether the fragments fit.", "Encode every transformed global edge as canonical endpoint IDs plus material and level.", "Compare all eight D4 encodings bytewise and choose the least one before reporting fragment mappings."]
+  }
+}

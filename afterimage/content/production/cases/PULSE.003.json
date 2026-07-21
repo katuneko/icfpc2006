@@ -1,0 +1,70 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.003",
+    "family": "PULSE",
+    "title": "Silent Timeout",
+    "points": 90,
+    "reference_scale": 300000,
+    "requires": {"all": ["case:PULSE.002"]},
+    "projection": "pulse.silent-timeout",
+    "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [],
+      "handlers": [
+        {
+          "id": "pulse.on-start",
+          "on": "watch.start",
+          "actions": [
+            {"op": "schedule", "key": "silence", "topic": "pulse.timer", "at": ["add", ["event", "at"], ["const", 3]], "payload": ["const", {"watch": "W-3"}]}
+          ]
+        },
+        {
+          "id": "pulse.on-cancel",
+          "on": "watch.cancel",
+          "actions": [{"op": "cancel", "key": "silence"}]
+        },
+        {
+          "id": "pulse.on-timeout",
+          "on": "pulse.timer",
+          "actions": [{"op": "emit", "topic": "watch.timed-out", "payload": ["event", "payload"]}]
+        }
+      ]
+    },
+    "author_invariant": "The static key names the only live watch. A start replaces its deadline, cancel removes the key without scheduling work, and a timer emits only if it remains the active generation after every same-tick external command.",
+    "pulse_contract": {
+      "task": "cancelable-timeout",
+      "input_topics": {"start": "watch.start", "cancel": "watch.cancel"},
+      "timer_topic": "pulse.timer",
+      "output_topic": "watch.timed-out",
+      "output_payload": {"watch": "W-3"},
+      "timeout_ticks": 3,
+      "horizon": 6,
+      "max_commands": 3,
+      "named_fixtures": [
+        [{"at": 0, "kind": "start"}],
+        [{"at": 0, "kind": "start"}, {"at": 3, "kind": "cancel"}],
+        [{"at": 0, "kind": "start"}, {"at": 2, "kind": "start"}],
+        [{"at": 0, "kind": "cancel"}, {"at": 1, "kind": "start"}]
+      ],
+      "limits": {"max_program_bytes": 8192, "max_state_cells": 8, "max_steps": 128, "max_queue": 16, "max_scheduled_events": 8}
+    },
+    "metric_bounds": {"worst_latency": 8, "live_state_cells": 8},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [],
+  "rules": [],
+  "projection": {"id": "pulse.silent-timeout", "rows": []},
+  "worked_value": {"input": [{"at": 0, "kind": "start"}, {"at": 3, "kind": "cancel"}], "outputs": [], "note": "External commands have phase 0, so cancellation exactly at the deadline wins over the phase-1 timer."},
+  "story": {
+    "premise": "A night watch opens when a patrol leaves and should alarm three ticks later unless the patrol checks in. A new departure replaces the deadline; a check-in exactly at the deadline still cancels it.",
+    "submission": "Submit a canonical PULSE 0.1 program and, optionally, a short invariant note.",
+    "diagnostics": "The verifier exhaustively checks 545 zero-to-three-command traces over six ticks, including repeated starts, stray cancels, and same-tick start/cancel order determined by source EventId.",
+    "hints": ["A timeout and a debounce are not the same: cancellation produces no replacement timer.", "Use one static timer key for the watch.", "Every external command at a tick runs before a timer due at that tick."]
+  }
+}

@@ -1,0 +1,641 @@
+{
+  "format": "afterimage-release/0.1",
+  "include": "vertical_slice.json",
+  "title": "Afterimage production release 2.1",
+  "total_cases": 75,
+  "total_nominal_points": 10000,
+  "source_roots": ["../content/vertical_slice/cases", "../content/production/cases"],
+  "cases": [
+    {
+      "id": "PULSE.002",
+      "family": "PULSE",
+      "title": "First Copy",
+      "points": 80,
+      "reference_scale": 500000,
+      "difficulty": 2,
+      "expected_minutes": 30,
+      "requires": {"all": ["case:PULSE.001", "case:ORIENT.003"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "Deterministic deduplication needs only the last admitted key, but the retained payload must come from the canonical first source event."
+    },
+    {
+      "id": "MERGE.002",
+      "family": "MERGE",
+      "title": "Duplicate Dispatch",
+      "points": 80,
+      "reference_scale": 20000,
+      "difficulty": 2,
+      "expected_minutes": 30,
+      "requires": {"all": ["case:MERGE.001"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "A duplicate can be temporally feasible; suppression is justified by a public identity/body contract and an explicit accepted survivor, not by calling the retry inconsistent."
+    },
+    {
+      "id": "PULSE.003",
+      "family": "PULSE",
+      "title": "Silent Timeout",
+      "points": 90,
+      "reference_scale": 300000,
+      "difficulty": 2,
+      "expected_minutes": 30,
+      "requires": {"all": ["case:PULSE.002"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "Cancellation is an absence-producing state transition, not another delayed event; external commands at the deadline invalidate the timer before phase-1 execution."
+    },
+    {
+      "id": "MOSAIC.002",
+      "family": "MOSAIC",
+      "title": "Shared Wall",
+      "points": 80,
+      "reference_scale": 300000,
+      "difficulty": 2,
+      "expected_minutes": 30,
+      "requires": {"all": ["case:MOSAIC.001", "case:ORIENT.004"]},
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "Union coverage proves that an edge appears somewhere; coverage multiplicity proves that distinct transformed surveys independently corroborate the shared boundary."
+    },
+    {
+      "id": "CASCADE.004",
+      "family": "CASCADE",
+      "title": "Cold Platform",
+      "points": 70,
+      "reference_scale": 350000,
+      "difficulty": 2,
+      "expected_minutes": 25,
+      "requires": {"all": ["case:CASCADE.003"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "The controller acted on ingestion time, but the retained sample's observation time is the authorized causal time; capacity is a tempting but expensive misdiagnosis."
+    },
+    {
+      "id": "CASCADE.005",
+      "family": "CASCADE",
+      "title": "Priority Queue",
+      "points": 70,
+      "reference_scale": 400000,
+      "difficulty": 2,
+      "expected_minutes": 30,
+      "requires": {"all": ["case:CASCADE.004"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "The public priority order is not the executor order: an earlier non-preemptive grant must move beyond the medical arrival, while an equal tick still preserves the inversion."
+    },
+    {
+      "id": "CASCADE.006",
+      "family": "CASCADE",
+      "title": "Black Ice",
+      "points": 80,
+      "reference_scale": 650000,
+      "difficulty": 2,
+      "expected_minutes": 35,
+      "requires": {"all": ["case:CASCADE.005"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "Treatment effectiveness and closure are not separate repairs: they must meet at the single tick after ambulance clearance and before the school bus arrives."
+    },
+    {
+      "id": "CASCADE.007",
+      "family": "CASCADE",
+      "title": "Borrowed Pressure",
+      "points": 80,
+      "reference_scale": 700000,
+      "difficulty": 2,
+      "expected_minutes": 35,
+      "requires": {"all": ["case:CASCADE.006"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "The fire pump is healthy; pressure is the observable result of two independently authorized loads overlapping on one feeder."
+    },
+    {
+      "id": "MERGE.003",
+      "family": "MERGE",
+      "title": "Lost Acknowledgment",
+      "points": 90,
+      "reference_scale": 30000,
+      "difficulty": 2,
+      "expected_minutes": 30,
+      "requires": {"all": ["case:MERGE.002"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "A gap in source sequence induces an order edge between the surviving records; it does not justify fabricating the missing acknowledgment."
+    },
+    {
+      "id": "MOSAIC.003",
+      "family": "MOSAIC",
+      "title": "Rotated Block",
+      "points": 90,
+      "reference_scale": 400000,
+      "difficulty": 2,
+      "expected_minutes": 35,
+      "requires": {"all": ["case:MOSAIC.002"]},
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "Eight D4-equivalent assemblies are one history; stable comparison requires the lexicographically least attributed-edge encoding."
+    },
+    {
+      "id": "PULSE.004",
+      "family": "PULSE",
+      "title": "Token Window",
+      "points": 100,
+      "reference_scale": 350000,
+      "difficulty": 2,
+      "expected_minutes": 40,
+      "requires": {"all": ["case:PULSE.003"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "A correct bucket refills and clamps before each canonical request, but only the admitted branch consumes a token; rejection is not a hidden debit."
+    },
+    {
+      "id": "CASCADE.008",
+      "family": "CASCADE",
+      "title": "Island Signal",
+      "points": 90,
+      "reference_scale": 850000,
+      "difficulty": 3,
+      "expected_minutes": 40,
+      "requires": {"all": ["case:CASCADE.007"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "Daily energy is irrelevant at the ambulance tick: the signal capacitor must finish before crossing service while the clinic retains its instantaneous minimum power."
+    },
+    {
+      "id": "MERGE.004",
+      "family": "MERGE",
+      "title": "Compensating Transfer",
+      "points": 90,
+      "reference_scale": 36000,
+      "difficulty": 2,
+      "expected_minutes": 35,
+      "requires": {"all": ["case:MERGE.003"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "A completed transfer remains in the archive; a later equal-and-opposite compensation fixes the balance, while causal intervals expose a claimed rollback as impossible."
+    },
+    {
+      "id": "CASCADE.009",
+      "family": "CASCADE",
+      "title": "Last Train Through",
+      "points": 90,
+      "reference_scale": 950000,
+      "difficulty": 3,
+      "expected_minutes": 45,
+      "requires": {"all": ["case:CASCADE.008"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "Boarding, signed ventilation, traction reserve, island capacity, travel time, and bridge closure collapse to one feasible rail departure boundary; a bus bridge is valid but cannot explain the rail history."
+    },
+    {
+      "id": "MERGE.005",
+      "family": "MERGE",
+      "title": "Split Brain",
+      "points": 100,
+      "reference_scale": 60000,
+      "difficulty": 3,
+      "expected_minutes": 40,
+      "requires": {"all": ["case:MERGE.004"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "A partitioned writer is an indivisible evidence branch: choose one complete journal, prove the combined source order impossible, and resist splicing a synthetic third history."
+    },
+    {
+      "id": "PULSE.005",
+      "family": "PULSE",
+      "title": "Two of Three",
+      "points": 100,
+      "reference_scale": 500000,
+      "difficulty": 2,
+      "expected_minutes": 35,
+      "requires": {"all": ["case:PULSE.004"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "Quorum counts distinct sources rather than messages; the one-shot output must retain the canonical payload of the event that supplies the second independent attestation."
+    },
+    {
+      "id": "CASCADE.010",
+      "family": "CASCADE",
+      "title": "Cooling Window",
+      "points": 100,
+      "reference_scale": 1000000,
+      "difficulty": 3,
+      "expected_minutes": 45,
+      "requires": {"all": ["case:CASCADE.009"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "Cooling flow is bounded from below by temperature and from above by grid draw; pipe saturation makes exactly one replacement value satisfy both contracts."
+    },
+    {
+      "id": "MERGE.006",
+      "family": "MERGE",
+      "title": "Quorum Ledger",
+      "points": 100,
+      "reference_scale": 70000,
+      "difficulty": 3,
+      "expected_minutes": 40,
+      "requires": {"all": ["case:MERGE.005", "case:PULSE.005", "case:CASCADE.010"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "A temporally feasible record can still lose under a public evidence contract: retain every vote for the unique three-replica claim and label the stale pair as minority, not inconsistent."
+    },
+    {
+      "id": "MOSAIC.004",
+      "family": "MOSAIC",
+      "title": "Missing Tile",
+      "points": 100,
+      "reference_scale": 500000,
+      "difficulty": 3,
+      "expected_minutes": 45,
+      "requires": {"all": ["case:MOSAIC.003", "case:CASCADE.010"]},
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "A bounded hole is not free invention: the missing interior vertex and exactly its incident edges must match observed coverage, and a public coordinate checksum fixes every inferred attribute."
+    },
+    {
+      "id": "CASCADE.011",
+      "family": "CASCADE",
+      "title": "The Open Bridge",
+      "points": 110,
+      "reference_scale": 1000000,
+      "difficulty": 3,
+      "expected_minutes": 45,
+      "requires": {"all": ["case:CASCADE.010"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "Wind safety gives a lower bound on opening while the ambulance gives an upper bound after accounting for mechanical duration; the bounds meet at exactly one command tick."
+    },
+    {
+      "id": "MERGE.007",
+      "family": "MERGE",
+      "title": "Clock Islands",
+      "points": 110,
+      "reference_scale": 5000,
+      "difficulty": 3,
+      "expected_minutes": 45,
+      "requires": {"all": ["case:MERGE.006", "case:CASCADE.011"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "Intervals belong to records, but offsets belong to clock domains: three records on one island must share one offset before cross-island messages can order the history."
+    },
+    {
+      "id": "MOSAIC.005",
+      "family": "MOSAIC",
+      "title": "Double Exposure",
+      "points": 100,
+      "reference_scale": 400000,
+      "difficulty": 3,
+      "expected_minutes": 40,
+      "requires": {"all": ["case:MOSAIC.004", "case:CASCADE.011", "case:MERGE.007"]},
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "Local names and orientation do not create independent evidence: a D4-normalized attributed fingerprint identifies one cached survey as a duplicate and binds it to one used survivor."
+    },
+    {
+      "id": "PULSE.006",
+      "family": "PULSE",
+      "title": "Barrier at Dawn",
+      "points": 110,
+      "reference_scale": 600000,
+      "difficulty": 3,
+      "expected_minutes": 40,
+      "requires": {"all": ["case:PULSE.005", "case:CASCADE.011", "case:MERGE.007", "case:MOSAIC.005"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "An all-topic barrier differs from quorum: duplicates and any two subsystems are insufficient, and the canonical event that completes all three must be the sole release payload."
+    },
+    {
+      "id": "CASCADE.012",
+      "family": "CASCADE",
+      "title": "Three Departments",
+      "points": 110,
+      "reference_scale": 1200000,
+      "difficulty": 3,
+      "expected_minutes": 45,
+      "requires": {"all": ["case:CASCADE.011", "case:PULSE.006"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "A wind floor and a public deadline squeeze three independent departmental clocks into one lawful handoff schedule; every retained log must move."
+    },
+    {
+      "id": "MERGE.008",
+      "family": "MERGE",
+      "title": "Conflict Component",
+      "points": 110,
+      "reference_scale": 12000,
+      "difficulty": 3,
+      "expected_minutes": 45,
+      "requires": {"all": ["case:MERGE.007", "case:CASCADE.012"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "A useful conflict certificate is inclusion-minimal: the pair is jointly impossible, but removing either member restores a feasible history."
+    },
+    {
+      "id": "MOSAIC.006",
+      "family": "MOSAIC",
+      "title": "False Landmark",
+      "points": 110,
+      "reference_scale": 500000,
+      "difficulty": 3,
+      "expected_minutes": 45,
+      "requires": {"all": ["case:MOSAIC.005", "case:MERGE.008"]},
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "A fragment can fit the attributed graph yet remain historically impossible because every geometric embedding violates its retained public landmark."
+    },
+    {
+      "id": "PULSE.007",
+      "family": "PULSE",
+      "title": "Backpressure",
+      "points": 110,
+      "reference_scale": 700000,
+      "difficulty": 3,
+      "expected_minutes": 45,
+      "requires": {"all": ["case:PULSE.006", "case:CASCADE.012", "case:MOSAIC.006"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "Queue depth changes only on admitted requests and effective drains; rejection is neither a hidden debit nor future capacity."
+    },
+    {
+      "id": "LENS.002",
+      "family": "LENS",
+      "title": "One Timetable",
+      "points": 500,
+      "reference_scale": 1800000,
+      "difficulty": 4,
+      "expected_minutes": 90,
+      "requires": {"all": ["case:LENS.001", "case:PULSE.005", "case:MOSAIC.005", "case:PULSE.007", "case:MOSAIC.006"]},
+      "metrics": ["program_nodes", "auxiliary_schema_cells", "worst_reductions"],
+      "aha": "A public UTC timetable collapses distinct operator services, so a lawful bidirectional update needs one identity complement plus every hidden operational fact."
+    },
+    {
+      "id": "CASCADE.013",
+      "family": "CASCADE",
+      "title": "Silent Gauge",
+      "points": 90,
+      "reference_scale": 900000,
+      "difficulty": 4,
+      "expected_minutes": 45,
+      "requires": {"all": ["case:CASCADE.012", "case:LENS.002"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "When the gauge is missing, the repair must satisfy the complete calibrated uncertainty envelope rather than one guessed hidden reading."
+    },
+    {
+      "id": "MERGE.009",
+      "family": "MERGE",
+      "title": "Minimal Cut",
+      "points": 120,
+      "reference_scale": 20000,
+      "difficulty": 3,
+      "expected_minutes": 50,
+      "requires": {"all": ["case:MERGE.008", "case:CASCADE.013"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "A minimum-weight hitting set can preserve more evidence than deleting one record from each conflict independently; the shared gateway cuts both."
+    },
+    {
+      "id": "MOSAIC.007",
+      "family": "MOSAIC",
+      "title": "Timestamp Gauge",
+      "points": 120,
+      "reference_scale": 650000,
+      "difficulty": 3,
+      "expected_minutes": 50,
+      "requires": {"all": ["case:MOSAIC.006", "case:MERGE.009"]},
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "Uniform topology leaves many embeddings, but per-vertex scan times minus a fragment offset recover the absolute row-major placement."
+    },
+    {
+      "id": "PULSE.008",
+      "family": "PULSE",
+      "title": "Warm Failover",
+      "points": 120,
+      "reference_scale": 800000,
+      "difficulty": 3,
+      "expected_minutes": 50,
+      "requires": {"all": ["case:PULSE.007", "case:CASCADE.013", "case:MOSAIC.007"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "Availability and standby readiness are different state: fail over only after a real warm signal and restore primary preference on recovery."
+    },
+    {
+      "id": "COVENANT.001",
+      "family": "COVENANT",
+      "title": "Dispatch Covenant",
+      "points": 450,
+      "reference_scale": 1400000,
+      "difficulty": 4,
+      "expected_minutes": 90,
+      "requires": {"all": ["case:CASCADE.013", "case:MERGE.009", "case:PULSE.008"]},
+      "metrics": ["policy_nodes", "worst_response_bound", "reachable_states"],
+      "aha": "Two local policies must preserve safety and bounded response under every fair asynchronous schedule without reading one another's hidden state."
+    },
+    {
+      "id": "CASCADE.014",
+      "family": "CASCADE",
+      "title": "Shadow Bus",
+      "points": 100,
+      "reference_scale": 1100000,
+      "difficulty": 4,
+      "expected_minutes": 50,
+      "requires": {"all": ["case:CASCADE.013", "case:COVENANT.001"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "A hidden capacity interval and a visible train limit force one robust two-vehicle allocation: promise only the bus minimum and put the exact remainder on rail."
+    },
+    {
+      "id": "MERGE.010",
+      "family": "MERGE",
+      "title": "Echoed Update",
+      "points": 120,
+      "reference_scale": 80000,
+      "difficulty": 4,
+      "expected_minutes": 50,
+      "requires": {"all": ["case:MERGE.009", "case:CASCADE.014"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "Transitive duplication is proved by a rooted direct-predecessor chain, not merely matching bodies or linking every echo straight to the original."
+    },
+    {
+      "id": "MOSAIC.008",
+      "family": "MOSAIC",
+      "title": "Broken Ring",
+      "points": 130,
+      "reference_scale": 750000,
+      "difficulty": 4,
+      "expected_minutes": 55,
+      "requires": {"all": ["case:MOSAIC.007", "case:MERGE.010"]},
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "A published simple-cycle contract licenses exactly one uncovered perimeter edge when all vertices are observed and the remaining cycle is one path."
+    },
+    {
+      "id": "PULSE.009",
+      "family": "PULSE",
+      "title": "Exactly Once",
+      "points": 120,
+      "reference_scale": 900000,
+      "difficulty": 4,
+      "expected_minutes": 55,
+      "requires": {"all": ["case:PULSE.008", "case:MERGE.010", "case:MOSAIC.008"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "Completion belongs to the logical operation rather than either route, so tombstones survive failover while availability only selects the first execution path."
+    },
+    {
+      "id": "LENS.003",
+      "family": "LENS",
+      "title": "Two Histories",
+      "points": 620,
+      "reference_scale": 2200000,
+      "difficulty": 5,
+      "expected_minutes": 100,
+      "requires": {"all": ["case:LENS.002", "case:CASCADE.014", "case:MERGE.010", "case:MOSAIC.008", "case:PULSE.009"]},
+      "metrics": ["program_nodes", "auxiliary_schema_cells", "worst_reductions"],
+      "aha": "Two distinct internal tips collapse to one public record; a lawful bidirectional correction needs one history discriminator while sealed deltas and audit lineage survive every edit."
+    },
+    {
+      "id": "CASCADE.015", "family": "CASCADE", "title": "Redacted Feeder", "points": 100,
+      "reference_scale": 1300000, "difficulty": 4, "expected_minutes": 50,
+      "requires": {"all": ["case:CASCADE.014", "case:LENS.003"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "A whole-event projection redaction hides an authorized feeder without deleting it from active state; a digest binds its restricted provenance without disclosure."
+    },
+    {
+      "id": "MERGE.011", "family": "MERGE", "title": "Evidence Weight", "points": 130,
+      "reference_scale": 110000, "difficulty": 4, "expected_minutes": 55,
+      "requires": {"all": ["case:MERGE.010", "case:CASCADE.015"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "Independent source weights, not record count, select the unique claim; all winning evidence survives and every losing source is explicitly outvoted."
+    },
+    {
+      "id": "MOSAIC.009", "family": "MOSAIC", "title": "Adversarial Survey", "points": 140,
+      "reference_scale": 850000, "difficulty": 4, "expected_minutes": 60,
+      "requires": {"all": ["case:MOSAIC.008", "case:MERGE.011"]},
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "An embeddable noisy survey is rejected only when correct used support outweighs it by the public margin on every conflicting mapped edge."
+    },
+    {
+      "id": "PULSE.010", "family": "PULSE", "title": "Shared Deadline", "points": 130,
+      "reference_scale": 950000, "difficulty": 4, "expected_minutes": 55,
+      "requires": {"all": ["case:PULSE.009", "case:MERGE.011", "case:MOSAIC.009"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "Signals with different allowances join one batch at the earliest absolute deadline; keyed replacement moves a live timer earlier without duplicate expiry."
+    },
+    {
+      "id": "CASCADE.016", "family": "CASCADE", "title": "Witness Gap", "points": 110,
+      "reference_scale": 1400000, "difficulty": 4, "expected_minutes": 60,
+      "requires": {"all": ["case:CASCADE.015", "case:MERGE.011", "case:MOSAIC.009", "case:PULSE.010"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "One bounded latent cause must explain three retained observations simultaneously; competing causes fail explicit exclusion evidence and no second invention is allowed."
+    },
+    {
+      "id": "CASCADE.017", "family": "CASCADE", "title": "Policy Blind Spot", "points": 110,
+      "reference_scale": 1500000, "difficulty": 5, "expected_minutes": 60,
+      "requires": {"all": ["case:CASCADE.016"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "A byte-identical public projection can cover both an unsafe and safe route; active sealed thermal state, not the display tile, determines policy safety."
+    },
+    {
+      "id": "MERGE.012", "family": "MERGE", "title": "Causal Compression", "points": 130,
+      "reference_scale": 120000, "difficulty": 5, "expected_minutes": 60,
+      "requires": {"all": ["case:MERGE.011", "case:CASCADE.017"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "Retain every fact but replace seven authentic precedence links with a four-edge transitive reduction whose every edge is necessary."
+    },
+    {
+      "id": "MOSAIC.010", "family": "MOSAIC", "title": "Underground Layer", "points": 150,
+      "reference_scale": 100000, "difficulty": 5, "expected_minutes": 65,
+      "requires": {"all": ["case:MOSAIC.009", "case:CASCADE.017"]},
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "Two connected edge layers meet at exactly the published shaft portals; flattening depth produces mixed junctions unsupported by portal material."
+    },
+    {
+      "id": "PULSE.011", "family": "PULSE", "title": "Burst Budget", "points": 130,
+      "reference_scale": 1700000, "difficulty": 5, "expected_minutes": 60,
+      "requires": {"all": ["case:PULSE.010", "case:CASCADE.017"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "A half-open sliding window remembers only admitted times, distinguishes simultaneous requests, and returns capacity exactly at the boundary."
+    },
+    {
+      "id": "COVENANT.002", "family": "COVENANT", "title": "City Covenant", "points": 550,
+      "reference_scale": 1800000, "difficulty": 5, "expected_minutes": 110,
+      "requires": {"all": ["case:COVENANT.001", "case:CASCADE.017", "case:MERGE.012", "case:MOSAIC.010", "case:PULSE.011"]},
+      "metrics": ["policy_nodes", "worst_response_bound", "reachable_states"],
+      "aha": "Dispatch cannot observe sealed heat directly; a local sensor must publish the distinguishing fact before a safe layer-specific route can be committed."
+    },
+    {
+      "id": "MERGE.013", "family": "MERGE", "title": "Equivocation", "points": 130,
+      "reference_scale": 950000, "difficulty": 5, "expected_minutes": 60,
+      "requires": {"all": ["case:MERGE.012", "case:COVENANT.002"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "Equivocation taints every record from the source-operation pair, including the statement that happens to agree with honest witnesses."
+    },
+    {
+      "id": "MOSAIC.011", "family": "MOSAIC", "title": "Whole City", "points": 150,
+      "reference_scale": 1100000, "difficulty": 5, "expected_minutes": 70,
+      "requires": {"all": ["case:MOSAIC.010", "case:COVENANT.002"]},
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "Three overlapping non-square strips establish both whole-city edge coverage and the exact connected boundary between surface and underground layers."
+    },
+    {
+      "id": "PULSE.012", "family": "PULSE", "title": "Reorder Buffer", "points": 140,
+      "reference_scale": 1900000, "difficulty": 5, "expected_minutes": 65,
+      "requires": {"all": ["case:PULSE.011", "case:COVENANT.002"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "A late lower index can release an entire buffered contiguous prefix; forwarding one arrival or draining one item is insufficient."
+    },
+    {
+      "id": "CASCADE.018", "family": "CASCADE", "title": "The Missing Cause", "points": 110,
+      "reference_scale": 1600000, "difficulty": 5, "expected_minutes": 65,
+      "requires": {"all": ["case:CASCADE.017", "case:MERGE.013", "case:MOSAIC.011", "case:PULSE.012"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "A two-event latent explanation is accepted only when the complete pair establishes safety and every proper subset fails under independent replay."
+    },
+    {
+      "id": "CASCADE.019", "family": "CASCADE", "title": "Correction Notice", "points": 90,
+      "reference_scale": 1200000, "difficulty": 5, "expected_minutes": 50,
+      "requires": {"all": ["case:CASCADE.018"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "A trustworthy correction preserves the false prior statement and publishes an explicit superseding edge to the evidence-backed counterfactual."
+    },
+    {
+      "id": "MERGE.014", "family": "MERGE", "title": "Two Consistent Archives", "points": 130,
+      "reference_scale": 1000000, "difficulty": 5, "expected_minutes": 60,
+      "requires": {"all": ["case:MERGE.013", "case:CASCADE.019"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "Two complete schedules can satisfy every retained interval and edge; canonical selection must not misclassify the alternative as inconsistent."
+    },
+    {
+      "id": "PULSE.013", "family": "PULSE", "title": "Circuit Breaker", "points": 150,
+      "reference_scale": 2100000, "difficulty": 5, "expected_minutes": 70,
+      "requires": {"all": ["case:PULSE.012", "case:CASCADE.019"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "Closed, open, and half-open are distinct states: after cooldown exactly one request probes until a real success or failure resolves it."
+    },
+    {
+      "id": "CASCADE.020", "family": "CASCADE", "title": "Competing Amendments", "points": 100,
+      "reference_scale": 1350000, "difficulty": 5, "expected_minutes": 50,
+      "requires": {"all": ["case:CASCADE.019", "case:MERGE.014"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "When two amendments are safe, a public canonical order selects one reproducibly while preserving the other as a valid alternative."
+    },
+    {
+      "id": "CASCADE.021", "family": "CASCADE", "title": "Audit Window", "points": 110,
+      "reference_scale": 1450000, "difficulty": 5, "expected_minutes": 55,
+      "requires": {"all": ["case:CASCADE.020", "case:PULSE.013"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "Operational cooldown does not extend legal time; the retained filing must move to the inclusive closing tick without changing its evidence."
+    },
+    {
+      "id": "CASCADE.022", "family": "CASCADE", "title": "Rule of Least Change", "points": 110,
+      "reference_scale": 1550000, "difficulty": 5, "expected_minutes": 60,
+      "requires": {"all": ["case:CASCADE.021"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "Global contract logic can make one physical correction cheaper than repairing every visible symptom independently."
+    },
+    {
+      "id": "MERGE.015", "family": "MERGE", "title": "The Reconstruction", "points": 140,
+      "reference_scale": 1250000, "difficulty": 5, "expected_minutes": 75,
+      "requires": {"all": ["case:MERGE.014", "case:CASCADE.022"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "A complete city archive is a canonical representative plus a minimal partial order: it preserves four feasible schedules and refuses to invent an order between independently established safe routes."
+    },
+    {
+      "id": "PULSE.014", "family": "PULSE", "title": "City Clock", "points": 170,
+      "reference_scale": 2400000, "difficulty": 5, "expected_minutes": 80,
+      "requires": {"all": ["case:PULSE.013", "case:CASCADE.022", "case:MERGE.015"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "A citywide barrier is cyclic: the completing source emits once and atomically clears the round, so a duplicate after completion belongs to the next epoch."
+    },
+    {
+      "id": "CASCADE.023", "family": "CASCADE", "title": "Continuity Hearing", "points": 120,
+      "reference_scale": 1750000, "difficulty": 5, "expected_minutes": 65,
+      "requires": {"all": ["case:CASCADE.022", "case:MERGE.015", "case:PULSE.014", "case:COVENANT.002"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "Independently valid evidence is not jointly valid until archive, controller, and policy are bound to one hearing epoch."
+    },
+    {
+      "id": "CASCADE.024", "family": "CASCADE", "title": "The Chosen Tomorrow", "points": 130,
+      "reference_scale": 1900000, "difficulty": 5, "expected_minutes": 70,
+      "requires": {"all": ["case:CASCADE.023"]},
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "Applying a public selector chooses one safe history without deleting the other, while the public projection preserves safety and multiplicity but hides route."
+    },
+    {
+      "id": "PARADOX.001", "family": "PARADOX", "title": "Two Tomorrows", "points": 300,
+      "reference_scale": 3000000, "difficulty": 5, "expected_minutes": 120,
+      "requires": {"all": ["case:COVENANT.002", "case:LENS.003", "case:CASCADE.024"]},
+      "metrics": ["paired_witness_units", "latent_difference_weight", "proof_steps"],
+      "aha": "Two policy-checked safe histories can have byte-identical public records; the final certificate binds both replays, both safety proofs, and a semantic latent-route difference."
+    }
+  ]
+}

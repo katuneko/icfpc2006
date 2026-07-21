@@ -1,0 +1,894 @@
+{
+  "CASCADE.004": {
+    "metrics": {
+      "causal_footprint": 6,
+      "effective_cost": 4623,
+      "intervention_weight": 1,
+      "witness_units": 7
+    },
+    "score": {
+      "completion": 46,
+      "nominal_max": 70,
+      "optimization": 23,
+      "total": 69
+    }
+  },
+  "CASCADE.005": {
+    "metrics": {
+      "causal_footprint": 6,
+      "effective_cost": 4623,
+      "intervention_weight": 1,
+      "witness_units": 7
+    },
+    "score": {
+      "completion": 46,
+      "nominal_max": 70,
+      "optimization": 23,
+      "total": 69
+    }
+  },
+  "CASCADE.006": {
+    "metrics": {
+      "causal_footprint": 8,
+      "effective_cost": 19603,
+      "intervention_weight": 2,
+      "witness_units": 8
+    },
+    "score": {
+      "completion": 52,
+      "nominal_max": 80,
+      "optimization": 27,
+      "total": 79
+    }
+  },
+  "CASCADE.007": {
+    "metrics": {
+      "causal_footprint": 6,
+      "effective_cost": 7056,
+      "intervention_weight": 1,
+      "witness_units": 8
+    },
+    "score": {
+      "completion": 52,
+      "nominal_max": 80,
+      "optimization": 27,
+      "total": 79
+    }
+  },
+  "CASCADE.008": {
+    "metrics": {
+      "causal_footprint": 6,
+      "effective_cost": 7056,
+      "intervention_weight": 1,
+      "witness_units": 8
+    },
+    "score": {
+      "completion": 59,
+      "nominal_max": 90,
+      "optimization": 30,
+      "total": 89
+    }
+  },
+  "CASCADE.009": {
+    "metrics": {
+      "causal_footprint": 8,
+      "effective_cost": 13779,
+      "intervention_weight": 2,
+      "witness_units": 8
+    },
+    "score": {
+      "completion": 59,
+      "nominal_max": 90,
+      "optimization": 30,
+      "total": 89
+    }
+  },
+  "CASCADE.010": {
+    "metrics": {
+      "causal_footprint": 6,
+      "effective_cost": 13616,
+      "intervention_weight": 2,
+      "witness_units": 7
+    },
+    "score": {
+      "completion": 65,
+      "nominal_max": 100,
+      "optimization": 34,
+      "total": 99
+    }
+  },
+  "CASCADE.011": {
+    "metrics": {
+      "causal_footprint": 6,
+      "effective_cost": 7054,
+      "intervention_weight": 1,
+      "witness_units": 6
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 37,
+      "total": 109
+    }
+  },
+  "CASCADE.012": {
+    "metrics": {
+      "causal_footprint": 8,
+      "effective_cost": 29010,
+      "intervention_weight": 3,
+      "witness_units": 6
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 37,
+      "total": 109
+    }
+  },
+  "CASCADE.013": {
+    "metrics": {
+      "causal_footprint": 4,
+      "effective_cost": 4491,
+      "intervention_weight": 1,
+      "witness_units": 5
+    },
+    "score": {
+      "completion": 59,
+      "nominal_max": 90,
+      "optimization": 30,
+      "total": 89
+    }
+  },
+  "CASCADE.014": {
+    "metrics": {
+      "causal_footprint": 6,
+      "effective_cost": 13007,
+      "intervention_weight": 2,
+      "witness_units": 6
+    },
+    "score": {
+      "completion": 65,
+      "nominal_max": 100,
+      "optimization": 34,
+      "total": 99
+    }
+  },
+  "CASCADE.015": {
+    "metrics": {
+      "causal_footprint": 0,
+      "effective_cost": 13,
+      "intervention_weight": 0,
+      "witness_units": 12
+    },
+    "score": {
+      "completion": 65,
+      "nominal_max": 100,
+      "optimization": 34,
+      "total": 99
+    }
+  },
+  "CASCADE.016": {
+    "metrics": {
+      "causal_footprint": 2,
+      "effective_cost": 4362,
+      "intervention_weight": 1,
+      "witness_units": 6
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 37,
+      "total": 109
+    }
+  },
+  "CASCADE.017": {
+    "metrics": {
+      "causal_footprint": 4,
+      "effective_cost": 3455,
+      "intervention_weight": 1,
+      "witness_units": 9
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 37,
+      "total": 109
+    }
+  },
+  "CASCADE.018": {
+    "metrics": {
+      "causal_footprint": 3,
+      "effective_cost": 8652,
+      "intervention_weight": 2,
+      "witness_units": 6
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 37,
+      "total": 109
+    }
+  },
+  "CASCADE.019": {
+    "metrics": {
+      "causal_footprint": 4,
+      "effective_cost": 1821,
+      "intervention_weight": 1,
+      "witness_units": 7
+    },
+    "score": {
+      "completion": 59,
+      "nominal_max": 90,
+      "optimization": 30,
+      "total": 89
+    }
+  },
+  "CASCADE.020": {
+    "metrics": {
+      "causal_footprint": 4,
+      "effective_cost": 1820,
+      "intervention_weight": 1,
+      "witness_units": 6
+    },
+    "score": {
+      "completion": 65,
+      "nominal_max": 100,
+      "optimization": 34,
+      "total": 99
+    }
+  },
+  "CASCADE.021": {
+    "metrics": {
+      "causal_footprint": 4,
+      "effective_cost": 1819,
+      "intervention_weight": 1,
+      "witness_units": 5
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 37,
+      "total": 109
+    }
+  },
+  "CASCADE.022": {
+    "metrics": {
+      "causal_footprint": 4,
+      "effective_cost": 3451,
+      "intervention_weight": 1,
+      "witness_units": 5
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 37,
+      "total": 109
+    }
+  },
+  "CASCADE.023": {
+    "metrics": {
+      "causal_footprint": 4,
+      "effective_cost": 5595,
+      "intervention_weight": 1,
+      "witness_units": 5
+    },
+    "score": {
+      "completion": 78,
+      "nominal_max": 120,
+      "optimization": 41,
+      "total": 119
+    }
+  },
+  "CASCADE.024": {
+    "metrics": {
+      "causal_footprint": 4,
+      "effective_cost": 2410,
+      "intervention_weight": 1,
+      "witness_units": 4
+    },
+    "score": {
+      "completion": 85,
+      "nominal_max": 130,
+      "optimization": 44,
+      "total": 129
+    }
+  },
+  "COVENANT.001": {
+    "metrics": {
+      "effective_cost": 37878,
+      "policy_nodes": 32,
+      "reachable_states": 80,
+      "worst_response_bound": 5
+    },
+    "score": {
+      "completion": 293,
+      "nominal_max": 450,
+      "optimization": 152,
+      "total": 445
+    }
+  },
+  "COVENANT.002": {
+    "metrics": {
+      "effective_cost": 282189,
+      "policy_nodes": 42,
+      "reachable_states": 38,
+      "worst_response_bound": 4
+    },
+    "score": {
+      "completion": 358,
+      "nominal_max": 550,
+      "optimization": 165,
+      "total": 523
+    }
+  },
+  "LENS.002": {
+    "metrics": {
+      "auxiliary_schema_cells": 4,
+      "effective_cost": 40047,
+      "program_nodes": 36,
+      "worst_reductions": 6
+    },
+    "score": {
+      "completion": 325,
+      "nominal_max": 500,
+      "optimization": 171,
+      "total": 496
+    }
+  },
+  "LENS.003": {
+    "metrics": {
+      "auxiliary_schema_cells": 3,
+      "effective_cost": 35562,
+      "program_nodes": 32,
+      "worst_reductions": 6
+    },
+    "score": {
+      "completion": 403,
+      "nominal_max": 620,
+      "optimization": 213,
+      "total": 616
+    }
+  },
+  "MERGE.002": {
+    "metrics": {
+      "certificate_units": 12,
+      "effective_cost": 302,
+      "rejected_weight": 1,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 52,
+      "nominal_max": 80,
+      "optimization": 27,
+      "total": 79
+    }
+  },
+  "MERGE.003": {
+    "metrics": {
+      "certificate_units": 12,
+      "effective_cost": 13,
+      "rejected_weight": 0,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 59,
+      "nominal_max": 90,
+      "optimization": 30,
+      "total": 89
+    }
+  },
+  "MERGE.004": {
+    "metrics": {
+      "certificate_units": 12,
+      "effective_cost": 374,
+      "rejected_weight": 1,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 59,
+      "nominal_max": 90,
+      "optimization": 30,
+      "total": 89
+    }
+  },
+  "MERGE.005": {
+    "metrics": {
+      "certificate_units": 6,
+      "effective_cost": 1057,
+      "rejected_weight": 2,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 65,
+      "nominal_max": 100,
+      "optimization": 34,
+      "total": 99
+    }
+  },
+  "MERGE.006": {
+    "metrics": {
+      "certificate_units": 6,
+      "effective_cost": 1057,
+      "rejected_weight": 2,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 65,
+      "nominal_max": 100,
+      "optimization": 34,
+      "total": 99
+    }
+  },
+  "MERGE.007": {
+    "metrics": {
+      "certificate_units": 26,
+      "effective_cost": 27,
+      "rejected_weight": 0,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 37,
+      "total": 109
+    }
+  },
+  "MERGE.008": {
+    "metrics": {
+      "certificate_units": 6,
+      "effective_cost": 1129,
+      "rejected_weight": 2,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 34,
+      "total": 106
+    }
+  },
+  "MERGE.009": {
+    "metrics": {
+      "certificate_units": 3,
+      "effective_cost": 1687,
+      "rejected_weight": 3,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 78,
+      "nominal_max": 120,
+      "optimization": 38,
+      "total": 116
+    }
+  },
+  "MERGE.010": {
+    "metrics": {
+      "certificate_units": 1,
+      "effective_cost": 1685,
+      "rejected_weight": 3,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 78,
+      "nominal_max": 120,
+      "optimization": 41,
+      "total": 119
+    }
+  },
+  "MERGE.011": {
+    "metrics": {
+      "certificate_units": 1,
+      "effective_cost": 1685,
+      "rejected_weight": 3,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 85,
+      "nominal_max": 130,
+      "optimization": 44,
+      "total": 129
+    }
+  },
+  "MERGE.012": {
+    "metrics": {
+      "certificate_units": 12,
+      "effective_cost": 13,
+      "rejected_weight": 0,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 85,
+      "nominal_max": 130,
+      "optimization": 44,
+      "total": 129
+    }
+  },
+  "MERGE.013": {
+    "metrics": {
+      "certificate_units": 1,
+      "effective_cost": 920,
+      "rejected_weight": 6,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 85,
+      "nominal_max": 130,
+      "optimization": 44,
+      "total": 129
+    }
+  },
+  "MERGE.014": {
+    "metrics": {
+      "certificate_units": 6,
+      "effective_cost": 7,
+      "rejected_weight": 0,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 85,
+      "nominal_max": 130,
+      "optimization": 44,
+      "total": 129
+    }
+  },
+  "MERGE.015": {
+    "metrics": {
+      "certificate_units": 18,
+      "effective_cost": 19,
+      "rejected_weight": 0,
+      "temporal_displacement": 0
+    },
+    "score": {
+      "completion": 91,
+      "nominal_max": 140,
+      "optimization": 48,
+      "total": 139
+    }
+  },
+  "MOSAIC.002": {
+    "metrics": {
+      "certificate_units": 8,
+      "effective_cost": 1374,
+      "graph_size": 21,
+      "unexplained_weight": 0
+    },
+    "score": {
+      "completion": 52,
+      "nominal_max": 80,
+      "optimization": 27,
+      "total": 79
+    }
+  },
+  "MOSAIC.003": {
+    "metrics": {
+      "certificate_units": 8,
+      "effective_cost": 1374,
+      "graph_size": 21,
+      "unexplained_weight": 0
+    },
+    "score": {
+      "completion": 59,
+      "nominal_max": 90,
+      "optimization": 30,
+      "total": 89
+    }
+  },
+  "MOSAIC.004": {
+    "metrics": {
+      "certificate_units": 10,
+      "effective_cost": 1376,
+      "graph_size": 21,
+      "unexplained_weight": 0
+    },
+    "score": {
+      "completion": 65,
+      "nominal_max": 100,
+      "optimization": 34,
+      "total": 99
+    }
+  },
+  "MOSAIC.005": {
+    "metrics": {
+      "certificate_units": 8,
+      "effective_cost": 5599,
+      "graph_size": 21,
+      "unexplained_weight": 1
+    },
+    "score": {
+      "completion": 65,
+      "nominal_max": 100,
+      "optimization": 34,
+      "total": 99
+    }
+  },
+  "MOSAIC.006": {
+    "metrics": {
+      "certificate_units": 8,
+      "effective_cost": 5599,
+      "graph_size": 21,
+      "unexplained_weight": 1
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 37,
+      "total": 109
+    }
+  },
+  "MOSAIC.007": {
+    "metrics": {
+      "certificate_units": 8,
+      "effective_cost": 1374,
+      "graph_size": 21,
+      "unexplained_weight": 0
+    },
+    "score": {
+      "completion": 78,
+      "nominal_max": 120,
+      "optimization": 41,
+      "total": 119
+    }
+  },
+  "MOSAIC.008": {
+    "metrics": {
+      "certificate_units": 8,
+      "effective_cost": 2046,
+      "graph_size": 21,
+      "unexplained_weight": 0
+    },
+    "score": {
+      "completion": 85,
+      "nominal_max": 130,
+      "optimization": 44,
+      "total": 129
+    }
+  },
+  "MOSAIC.009": {
+    "metrics": {
+      "certificate_units": 8,
+      "effective_cost": 14656,
+      "graph_size": 21,
+      "unexplained_weight": 2
+    },
+    "score": {
+      "completion": 91,
+      "nominal_max": 140,
+      "optimization": 48,
+      "total": 139
+    }
+  },
+  "MOSAIC.010": {
+    "metrics": {
+      "certificate_units": 8,
+      "effective_cost": 1374,
+      "graph_size": 21,
+      "unexplained_weight": 0
+    },
+    "score": {
+      "completion": 98,
+      "nominal_max": 150,
+      "optimization": 51,
+      "total": 149
+    }
+  },
+  "MOSAIC.011": {
+    "metrics": {
+      "certificate_units": 11,
+      "effective_cost": 2825,
+      "graph_size": 29,
+      "unexplained_weight": 0
+    },
+    "score": {
+      "completion": 98,
+      "nominal_max": 150,
+      "optimization": 51,
+      "total": 149
+    }
+  },
+  "PARADOX.001": {
+    "metrics": {
+      "effective_cost": 1284,
+      "latent_difference_weight": 10,
+      "paired_witness_units": 12,
+      "proof_steps": 5
+    },
+    "score": {
+      "completion": 195,
+      "nominal_max": 300,
+      "optimization": 104,
+      "total": 299
+    }
+  },
+  "PULSE.002": {
+    "metrics": {
+      "effective_cost": 31430,
+      "live_state_cells": 1,
+      "program_bytes": 388,
+      "worst_latency": 0
+    },
+    "score": {
+      "completion": 52,
+      "nominal_max": 80,
+      "optimization": 26,
+      "total": 78
+    }
+  },
+  "PULSE.003": {
+    "metrics": {
+      "effective_cost": 37288,
+      "live_state_cells": 0,
+      "program_bytes": 460,
+      "worst_latency": 3
+    },
+    "score": {
+      "completion": 59,
+      "nominal_max": 90,
+      "optimization": 27,
+      "total": 86
+    }
+  },
+  "PULSE.004": {
+    "metrics": {
+      "effective_cost": 51276,
+      "live_state_cells": 2,
+      "program_bytes": 633,
+      "worst_latency": 0
+    },
+    "score": {
+      "completion": 65,
+      "nominal_max": 100,
+      "optimization": 30,
+      "total": 95
+    }
+  },
+  "PULSE.005": {
+    "metrics": {
+      "effective_cost": 58190,
+      "live_state_cells": 4,
+      "program_bytes": 1293,
+      "worst_latency": 0
+    },
+    "score": {
+      "completion": 65,
+      "nominal_max": 100,
+      "optimization": 31,
+      "total": 96
+    }
+  },
+  "PULSE.006": {
+    "metrics": {
+      "effective_cost": 62015,
+      "live_state_cells": 4,
+      "program_bytes": 1378,
+      "worst_latency": 0
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 34,
+      "total": 106
+    }
+  },
+  "PULSE.007": {
+    "metrics": {
+      "effective_cost": 14377,
+      "live_state_cells": 1,
+      "program_bytes": 575,
+      "worst_latency": 0
+    },
+    "score": {
+      "completion": 72,
+      "nominal_max": 110,
+      "optimization": 37,
+      "total": 109
+    }
+  },
+  "PULSE.008": {
+    "metrics": {
+      "effective_cost": 23203,
+      "live_state_cells": 2,
+      "program_bytes": 928,
+      "worst_latency": 0
+    },
+    "score": {
+      "completion": 78,
+      "nominal_max": 120,
+      "optimization": 40,
+      "total": 118
+    }
+  },
+  "PULSE.009": {
+    "metrics": {
+      "effective_cost": 46834,
+      "live_state_cells": 3,
+      "program_bytes": 1338,
+      "worst_latency": 0
+    },
+    "score": {
+      "completion": 78,
+      "nominal_max": 120,
+      "optimization": 39,
+      "total": 117
+    }
+  },
+  "PULSE.010": {
+    "metrics": {
+      "effective_cost": 44618,
+      "live_state_cells": 2,
+      "program_bytes": 1784,
+      "worst_latency": 3
+    },
+    "score": {
+      "completion": 85,
+      "nominal_max": 130,
+      "optimization": 42,
+      "total": 127
+    }
+  },
+  "PULSE.011": {
+    "metrics": {
+      "effective_cost": 2393,
+      "live_state_cells": 2,
+      "program_bytes": 478,
+      "worst_latency": 0
+    },
+    "score": {
+      "completion": 85,
+      "nominal_max": 130,
+      "optimization": 44,
+      "total": 129
+    }
+  },
+  "PULSE.012": {
+    "metrics": {
+      "effective_cost": 135024,
+      "live_state_cells": 5,
+      "program_bytes": 5625,
+      "worst_latency": 3
+    },
+    "score": {
+      "completion": 91,
+      "nominal_max": 140,
+      "optimization": 45,
+      "total": 136
+    }
+  },
+  "PULSE.013": {
+    "metrics": {
+      "effective_cost": 19980,
+      "live_state_cells": 3,
+      "program_bytes": 1664,
+      "worst_latency": 2
+    },
+    "score": {
+      "completion": 98,
+      "nominal_max": 150,
+      "optimization": 51,
+      "total": 149
+    }
+  },
+  "PULSE.014": {
+    "metrics": {
+      "effective_cost": 7824,
+      "live_state_cells": 3,
+      "program_bytes": 1564,
+      "worst_latency": 0
+    },
+    "score": {
+      "completion": 111,
+      "nominal_max": 170,
+      "optimization": 58,
+      "total": 169
+    }
+  },
+  "archive_sha256": "4d2015a522281bddeaa3ec9fedda28715677663926bea924a05494ee78ca57af",
+  "bundle": "sha256:517038cdd97cb7d3687f53272e8964a11ffcc1cca82cc69a73668bf56aea0514",
+  "counts": {
+    "base_events": 224,
+    "cases": 75,
+    "files": 825,
+    "projections": 74,
+    "rules": 72,
+    "uncompressed_bytes": 550251
+  }
+}

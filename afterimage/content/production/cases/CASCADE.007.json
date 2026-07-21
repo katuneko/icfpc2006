@@ -1,0 +1,110 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.007",
+    "family": "CASCADE",
+    "title": "Borrowed Pressure",
+    "points": 80,
+    "reference_scale": 700000,
+    "requires": {"all": ["case:CASCADE.006"]},
+    "projection": "incident.borrowed-pressure",
+    "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": ["retime", "suppress", "inject"],
+      "max_operations": 1,
+      "weights": {"retime": 1, "suppress": 32, "inject": 24},
+      "topics": ["power.road-treatment-load", "power.backup-generator"],
+      "pointers": [],
+      "retime": {"minimum": 11, "maximum": 14}
+    },
+    "author_operation": {"kind": "retime", "target_topic": "power.road-treatment-load", "at": 11},
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 80, "witness_units": 80},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 32, "max_bindings_tested": 8192, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "power.feeder", "at": 0, "payload": {"feeder": "F-3", "capacity": 10}, "parents": [], "origin": {"kind": "base", "source": "grid-ledger", "sequence": 3}},
+    {"topic": "power.road-treatment-load", "at": 14, "payload": {"feeder": "F-3", "power": 4, "duration": 4, "authorized_at": 11, "service_deadline": 18, "authorization": "grid-window-31", "evidence": "brine-load-88"}, "parents": [], "origin": {"kind": "base", "source": "road-power", "sequence": 88}},
+    {"topic": "power.traffic-signal-load", "at": 14, "payload": {"feeder": "F-3", "power": 3, "duration": 4, "authorization": "traffic-priority-19", "evidence": "signal-load-52"}, "parents": [], "origin": {"kind": "base", "source": "traffic-power", "sequence": 52}},
+    {"topic": "water.fire-demand", "at": 15, "payload": {"feeder": "F-3", "hydrant": "H-4", "pump_power": 6, "base_pressure": 20, "pressure_per_power": 5, "minimum_pressure": 50}, "parents": [], "origin": {"kind": "base", "source": "water-dispatch", "sequence": 44}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "coupling.01-grid-only-state", "positive": [
+      {"alias": "f", "topic": "power.feeder", "where": ["const", true]},
+      {"alias": "r", "topic": "power.road-treatment-load", "where": ["eq", ["get", "r", "/payload/feeder"], ["get", "f", "/payload/feeder"]]},
+      {"alias": "t", "topic": "power.traffic-signal-load", "where": ["eq", ["get", "t", "/payload/feeder"], ["get", "f", "/payload/feeder"]]},
+      {"alias": "w", "topic": "water.fire-demand", "where": ["eq", ["get", "w", "/payload/feeder"], ["get", "f", "/payload/feeder"]]}
+    ], "negative": [{"alias": "g", "topic": "power.backup-generator", "where": ["eq", ["get", "g", "/payload/feeder"], ["get", "f", "/payload/feeder"]]}], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "coupling.infrastructure-state"], "at": ["get", "w", "/at"], "payload": ["map",
+      "feeder", ["get", "f", "/payload/feeder"],
+      "road_active", ["and", ["le", ["get", "r", "/at"], ["get", "w", "/at"]], ["lt", ["get", "w", "/at"], ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]]]],
+      "pump_power_received", ["min", ["get", "w", "/payload/pump_power"], ["sub", ["sub", ["get", "f", "/payload/capacity"], ["get", "t", "/payload/power"]], ["if", ["and", ["le", ["get", "r", "/at"], ["get", "w", "/at"]], ["lt", ["get", "w", "/at"], ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]]]], ["get", "r", "/payload/power"], ["const", 0]]]],
+      "pressure", ["add", ["get", "w", "/payload/base_pressure"], ["mul", ["get", "w", "/payload/pressure_per_power"], ["min", ["get", "w", "/payload/pump_power"], ["sub", ["sub", ["get", "f", "/payload/capacity"], ["get", "t", "/payload/power"]], ["if", ["and", ["le", ["get", "r", "/at"], ["get", "w", "/at"]], ["lt", ["get", "w", "/at"], ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]]]], ["get", "r", "/payload/power"], ["const", 0]]]]]],
+      "minimum_pressure", ["get", "w", "/payload/minimum_pressure"],
+      "total_load", ["add", ["add", ["get", "t", "/payload/power"], ["if", ["and", ["le", ["get", "r", "/at"], ["get", "w", "/at"]], ["lt", ["get", "w", "/at"], ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]]]], ["get", "r", "/payload/power"], ["const", 0]]], ["min", ["get", "w", "/payload/pump_power"], ["sub", ["sub", ["get", "f", "/payload/capacity"], ["get", "t", "/payload/power"]], ["if", ["and", ["le", ["get", "r", "/at"], ["get", "w", "/at"]], ["lt", ["get", "w", "/at"], ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]]]], ["get", "r", "/payload/power"], ["const", 0]]]]],
+      "total_supply", ["get", "f", "/payload/capacity"],
+      "road_complete_at", ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]],
+      "road_deadline", ["get", "r", "/payload/service_deadline"],
+      "road_authorization", ["get", "r", "/payload/authorization"],
+      "traffic_authorization", ["get", "t", "/payload/authorization"],
+      "evidence_retained", ["const", true],
+      "mode", ["const", "shared-feeder"]
+    ], "parents": []}] }},
+    {"stratum": 0, "rule": {"id": "coupling.02-generator-state", "positive": [
+      {"alias": "f", "topic": "power.feeder", "where": ["const", true]},
+      {"alias": "r", "topic": "power.road-treatment-load", "where": ["eq", ["get", "r", "/payload/feeder"], ["get", "f", "/payload/feeder"]]},
+      {"alias": "t", "topic": "power.traffic-signal-load", "where": ["eq", ["get", "t", "/payload/feeder"], ["get", "f", "/payload/feeder"]]},
+      {"alias": "w", "topic": "water.fire-demand", "where": ["eq", ["get", "w", "/payload/feeder"], ["get", "f", "/payload/feeder"]]},
+      {"alias": "g", "topic": "power.backup-generator", "where": ["eq", ["get", "g", "/payload/feeder"], ["get", "f", "/payload/feeder"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "coupling.infrastructure-state"], "at": ["max", ["get", "w", "/at"], ["get", "g", "/at"]], "payload": ["map",
+      "feeder", ["get", "f", "/payload/feeder"],
+      "road_active", ["and", ["le", ["get", "r", "/at"], ["get", "w", "/at"]], ["lt", ["get", "w", "/at"], ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]]]],
+      "pump_power_received", ["min", ["get", "w", "/payload/pump_power"], ["sub", ["sub", ["add", ["get", "f", "/payload/capacity"], ["get", "g", "/payload/power"]], ["get", "t", "/payload/power"]], ["if", ["and", ["le", ["get", "r", "/at"], ["get", "w", "/at"]], ["lt", ["get", "w", "/at"], ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]]]], ["get", "r", "/payload/power"], ["const", 0]]]],
+      "pressure", ["add", ["get", "w", "/payload/base_pressure"], ["mul", ["get", "w", "/payload/pressure_per_power"], ["min", ["get", "w", "/payload/pump_power"], ["sub", ["sub", ["add", ["get", "f", "/payload/capacity"], ["get", "g", "/payload/power"]], ["get", "t", "/payload/power"]], ["if", ["and", ["le", ["get", "r", "/at"], ["get", "w", "/at"]], ["lt", ["get", "w", "/at"], ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]]]], ["get", "r", "/payload/power"], ["const", 0]]]]]],
+      "minimum_pressure", ["get", "w", "/payload/minimum_pressure"],
+      "total_load", ["add", ["add", ["get", "t", "/payload/power"], ["if", ["and", ["le", ["get", "r", "/at"], ["get", "w", "/at"]], ["lt", ["get", "w", "/at"], ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]]]], ["get", "r", "/payload/power"], ["const", 0]]], ["get", "w", "/payload/pump_power"]],
+      "total_supply", ["add", ["get", "f", "/payload/capacity"], ["get", "g", "/payload/power"]],
+      "road_complete_at", ["add", ["get", "r", "/at"], ["get", "r", "/payload/duration"]],
+      "road_deadline", ["get", "r", "/payload/service_deadline"],
+      "road_authorization", ["get", "r", "/payload/authorization"],
+      "traffic_authorization", ["get", "t", "/payload/authorization"],
+      "evidence_retained", ["const", true],
+      "mode", ["const", "backup-generator"]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "coupling.03-contract-summary", "positive": [{"alias": "s", "topic": "coupling.infrastructure-state", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "s", "/at"], "payload": ["map",
+      "safe", ["and", ["ge", ["get", "s", "/payload/pressure"], ["get", "s", "/payload/minimum_pressure"]], ["and", ["le", ["get", "s", "/payload/total_load"], ["get", "s", "/payload/total_supply"]], ["le", ["get", "s", "/payload/road_complete_at"], ["get", "s", "/payload/road_deadline"]]]],
+      "pressure", ["get", "s", "/payload/pressure"],
+      "minimum_pressure", ["get", "s", "/payload/minimum_pressure"],
+      "pump_power_received", ["get", "s", "/payload/pump_power_received"],
+      "total_load", ["get", "s", "/payload/total_load"],
+      "total_supply", ["get", "s", "/payload/total_supply"],
+      "road_active", ["get", "s", "/payload/road_active"],
+      "road_complete_at", ["get", "s", "/payload/road_complete_at"],
+      "road_deadline", ["get", "s", "/payload/road_deadline"],
+      "road_authorization", ["get", "s", "/payload/road_authorization"],
+      "traffic_authorization", ["get", "s", "/payload/traffic_authorization"],
+      "evidence_retained", ["get", "s", "/payload/evidence_retained"],
+      "mode", ["get", "s", "/payload/mode"]
+    ], "parents": []}] }},
+    {"stratum": 2, "rule": {"id": "coupling.04-first-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map",
+      "code", ["if", ["lt", ["get", "s", "/payload/pressure"], ["get", "s", "/payload/minimum_pressure"]], ["const", "hydrant_pressure_low"], ["if", ["gt", ["get", "s", "/payload/total_load"], ["get", "s", "/payload/total_supply"]], ["const", "feeder_over_capacity"], ["const", "road_service_late"]]],
+      "pressure", ["get", "s", "/payload/pressure"],
+      "minimum_pressure", ["get", "s", "/payload/minimum_pressure"],
+      "road_authorization", ["get", "s", "/payload/road_authorization"],
+      "traffic_authorization", ["get", "s", "/payload/traffic_authorization"]
+    ], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.borrowed-pressure", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"contracts": [{"safe": false, "pressure": 35, "minimum_pressure": 50, "road_authorization": "grid-window-31", "traffic_authorization": "traffic-priority-19"}], "note": "The two opaque authorizations from Black Ice resolve to simultaneous loads on the same feeder."},
+  "story": {
+    "premise": "The two external authorization references retained in Black Ice now resolve. `grid-window-31` reserved feeder F-3 for road treatment while `traffic-priority-19` reserved the same feeder for signal priority. A fire pump on that feeder then produced only 35 units of pressure. Preserve all three services and repair the smallest shared cause.",
+    "submission": "Submit exactly one authorized intervention plus the replayed water pressure, received pump power, feeder load/supply, road deadline, both authorization references, branch, and projection digest.",
+    "diagnostics": "The first failed cross-system bound is reported with both public authorization references. No private event from the road or traffic offices is disclosed.",
+    "hints": ["The pump is not broken; it receives whatever capacity remains after active feeder reservations.", "A backup generator is valid but expensive. Suppressing a reservation destroys one of the services the report must preserve.", "The road load lasts four ticks. Return it to the authorization time so it releases the feeder before the fire demand."]
+  }
+}

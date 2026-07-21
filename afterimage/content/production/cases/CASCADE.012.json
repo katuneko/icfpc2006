@@ -1,0 +1,48 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.012", "family": "CASCADE", "title": "Three Departments", "points": 110, "reference_scale": 1200000,
+    "requires": {"all": ["case:CASCADE.011", "case:PULSE.006"]},
+    "projection": "incident.three-departments", "validator_template": "cascade-multi-contract-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1", "required": true,
+      "allowed_kinds": ["retime"], "max_operations": 3, "weights": {"retime": 1},
+      "topics": ["agency.bridge-command", "agency.traffic-release", "agency.hospital-departure"], "pointers": [],
+      "retime": {"minimum": 6, "maximum": 11}
+    },
+    "author_operations": [
+      {"kind": "retime", "target_topic": "agency.bridge-command", "at": 8},
+      {"kind": "retime", "target_topic": "agency.traffic-release", "at": 10},
+      {"kind": "retime", "target_topic": "agency.hospital-departure", "at": 11}
+    ],
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 96, "witness_units": 96},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 16, "max_derived_events": 16, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"topic": "agency.wind-boundary", "at": 8, "payload": {"bridge": "B-17", "safe_from": 8, "evidence": "anemometer-08"}, "parents": [], "origin": {"kind": "base", "source": "bridge-safety", "sequence": 1}},
+    {"topic": "agency.public-deadline", "at": 11, "payload": {"bridge": "B-17", "depart_by": 11, "evidence": "published-timetable"}, "parents": [], "origin": {"kind": "base", "source": "continuity-office", "sequence": 1}},
+    {"topic": "agency.bridge-command", "at": 6, "payload": {"bridge": "B-17", "duration": 2, "evidence": "bridge-command-log"}, "parents": [], "origin": {"kind": "base", "source": "bridge-control", "sequence": 2}},
+    {"topic": "agency.traffic-release", "at": 9, "payload": {"bridge": "B-17", "evidence": "traffic-release-log"}, "parents": [], "origin": {"kind": "base", "source": "traffic-control", "sequence": 2}},
+    {"topic": "agency.hospital-departure", "at": 10, "payload": {"bridge": "B-17", "evidence": "hospital-departure-log"}, "parents": [], "origin": {"kind": "base", "source": "hospital-dispatch", "sequence": 2}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "departments.01-summary", "positive": [
+      {"alias": "w", "topic": "agency.wind-boundary", "where": ["const", true]},
+      {"alias": "d", "topic": "agency.public-deadline", "where": ["eq", ["get", "d", "/payload/bridge"], ["get", "w", "/payload/bridge"]]},
+      {"alias": "b", "topic": "agency.bridge-command", "where": ["eq", ["get", "b", "/payload/bridge"], ["get", "w", "/payload/bridge"]]},
+      {"alias": "t", "topic": "agency.traffic-release", "where": ["eq", ["get", "t", "/payload/bridge"], ["get", "w", "/payload/bridge"]]},
+      {"alias": "h", "topic": "agency.hospital-departure", "where": ["eq", ["get", "h", "/payload/bridge"], ["get", "w", "/payload/bridge"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["max", ["get", "d", "/at"], ["max", ["get", "h", "/at"], ["max", ["get", "t", "/at"], ["get", "b", "/at"]]]], "payload": ["map",
+      "safe", ["and", ["ge", ["get", "b", "/at"], ["get", "w", "/payload/safe_from"]], ["and", ["le", ["add", ["get", "b", "/at"], ["get", "b", "/payload/duration"]], ["get", "t", "/at"]], ["and", ["le", ["add", ["get", "t", "/at"], ["const", 1]], ["get", "h", "/at"]], ["le", ["get", "h", "/at"], ["get", "d", "/payload/depart_by"]]]]],
+      "command_at", ["get", "b", "/at"], "wind_safe_from", ["get", "w", "/payload/safe_from"],
+      "bridge_ready_at", ["add", ["get", "b", "/at"], ["get", "b", "/payload/duration"]],
+      "traffic_release_at", ["get", "t", "/at"], "hospital_departure_at", ["get", "h", "/at"],
+      "deadline", ["get", "d", "/payload/depart_by"], "evidence_retained", ["const", true]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "departments.02-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map", "code", ["const", "handoff_order"], "command_at", ["get", "s", "/payload/command_at"], "traffic_release_at", ["get", "s", "/payload/traffic_release_at"], "hospital_departure_at", ["get", "s", "/payload/hospital_departure_at"]], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.three-departments", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"command_at": 8, "bridge_ready_at": 10, "traffic_release_at": 10, "hospital_departure_at": 11, "note": "The wind floor and public deadline squeeze three independently retained clocks into the single schedule 8, 10, 11."},
+  "story": {"premise": "The bridge incident is no longer one controller's problem. Bridge Control may act only after the measured wind boundary, Traffic may release the route only after the two-tick opening completes, and Hospital Dispatch must depart one tick after that release but no later than the published timetable. All three retained logs are early.", "submission": "Submit exactly the authorized retimes needed to make the independent contract summary safe without replacing any department's evidence.", "diagnostics": "Wind floor, mechanical readiness, interdepartmental handoff, and public departure deadline are checked independently.", "hints": ["Start from the hospital deadline and reason backward.", "Traffic must be at least one tick before departure.", "Bridge Control must be at least two ticks before Traffic and no earlier than tick 8."]}
+}

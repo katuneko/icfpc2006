@@ -1,0 +1,77 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.005",
+    "family": "PULSE",
+    "title": "Two of Three",
+    "points": 100,
+    "reference_scale": 500000,
+    "requires": {"all": ["case:PULSE.004"]},
+    "projection": "pulse.two-of-three",
+    "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [
+        {"name": "seen_a", "type": "bool", "initial": false},
+        {"name": "seen_b", "type": "bool", "initial": false},
+        {"name": "seen_c", "type": "bool", "initial": false},
+        {"name": "fired", "type": "bool", "initial": false}
+      ],
+      "handlers": [
+        {"id": "quorum.on-a", "on": "evac.vote-station", "actions": [
+          {"op": "set", "cell": "seen_a", "value": ["const", true]},
+          {"op": "when", "condition": ["and", ["not", ["cell", "fired"]], ["or", ["cell", "seen_b"], ["cell", "seen_c"]]], "actions": [
+            {"op": "emit", "topic": "evac.quorum-release", "payload": ["event", "payload"]},
+            {"op": "set", "cell": "fired", "value": ["const", true]}
+          ]}
+        ]},
+        {"id": "quorum.on-b", "on": "evac.vote-traffic", "actions": [
+          {"op": "set", "cell": "seen_b", "value": ["const", true]},
+          {"op": "when", "condition": ["and", ["not", ["cell", "fired"]], ["or", ["cell", "seen_a"], ["cell", "seen_c"]]], "actions": [
+            {"op": "emit", "topic": "evac.quorum-release", "payload": ["event", "payload"]},
+            {"op": "set", "cell": "fired", "value": ["const", true]}
+          ]}
+        ]},
+        {"id": "quorum.on-c", "on": "evac.vote-clinic", "actions": [
+          {"op": "set", "cell": "seen_c", "value": ["const", true]},
+          {"op": "when", "condition": ["and", ["not", ["cell", "fired"]], ["or", ["cell", "seen_a"], ["cell", "seen_b"]]], "actions": [
+            {"op": "emit", "topic": "evac.quorum-release", "payload": ["event", "payload"]},
+            {"op": "set", "cell": "fired", "value": ["const", true]}
+          ]}
+        ]}
+      ]
+    },
+    "author_invariant": "Each source owns one monotone seen bit. The first event whose arrival makes two distinct bits true emits its own canonical payload and seals the one-shot fired bit; retries from one source never create a second vote.",
+    "pulse_contract": {
+      "task": "two-of-three",
+      "input_topics": {"A": "evac.vote-station", "B": "evac.vote-traffic", "C": "evac.vote-clinic"},
+      "timer_topic": "pulse.timer",
+      "output_topic": "evac.quorum-release",
+      "horizon": 4,
+      "max_votes": 4,
+      "named_fixtures": [
+        [{"at": 0, "source": "A"}, {"at": 0, "source": "A"}],
+        [{"at": 0, "source": "A"}, {"at": 0, "source": "B"}],
+        [{"at": 0, "source": "C"}, {"at": 1, "source": "C"}, {"at": 1, "source": "B"}],
+        [{"at": 0, "source": "A"}, {"at": 0, "source": "B"}, {"at": 0, "source": "C"}, {"at": 1, "source": "A"}]
+      ],
+      "limits": {"max_program_bytes": 8192, "max_state_cells": 8, "max_steps": 128, "max_queue": 16, "max_scheduled_events": 8}
+    },
+    "metric_bounds": {"worst_latency": 4, "live_state_cells": 8},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [],
+  "rules": [],
+  "projection": {"id": "pulse.two-of-three", "rows": []},
+  "worked_value": {"input": [{"at": 0, "source": "C"}, {"at": 1, "source": "C"}, {"at": 1, "source": "B"}], "output": {"at": 1, "source": "B"}, "note": "The retry from C is still one attestation. B is the second distinct source, so its canonical input payload is the sole release evidence."},
+  "story": {
+    "premise": "The evacuation controller will no longer obey one writer merely because it repeats itself. Station operations, traffic control, and the clinic each send an attestation for the last-train release. Trigger once, immediately after any two distinct sources have spoken, and retain the exact payload of the attestation that completed the quorum.",
+    "submission": "Submit a canonical PULSE 0.1 program and, optionally, a short invariant. The release is one-shot, has zero added latency, and must carry the canonical payload of the second distinct source event.",
+    "diagnostics": "The verifier exhausts all 3,478 source-tagged streams of up to four votes over four ticks. It distinguishes duplicate votes, delayed two-source agreement, all-three same-tick EventId order, wrong decisive payloads, and repeated release.",
+    "hints": ["Three monotone seen bits are enough; a retry sets an already-true bit.", "After marking the current source, ask whether either other source has already appeared.", "Seal the controller when it emits. The third source is evidence, not a second command."]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.010",
+    "family": "CASCADE",
+    "title": "Cooling Window",
+    "points": 100,
+    "reference_scale": 1000000,
+    "requires": {"all": ["case:CASCADE.009"]},
+    "projection": "incident.cooling-window",
+    "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": ["replace", "inject"],
+      "max_operations": 1,
+      "weights": {"replace": 2, "inject": 35},
+      "topics": ["hospital.cooling-command", "hospital.portable-chiller"],
+      "pointers": ["/payload/flow"],
+      "retime": {"minimum": 0, "maximum": 0}
+    },
+    "author_operation": {"kind": "replace", "target_topic": "hospital.cooling-command", "pointer": "/payload/flow", "value": 5},
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 80, "witness_units": 80},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 32, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "hospital.island-grid", "at": 0, "payload": {"grid": "H-MG", "capacity": 9}, "parents": [], "origin": {"kind": "base", "source": "hospital-grid", "sequence": 1}},
+    {"topic": "hospital.essential-load", "at": 18, "payload": {"grid": "H-MG", "power": 2, "evidence": "essential-ward-load"}, "parents": [], "origin": {"kind": "base", "source": "hospital-grid", "sequence": 2}},
+    {"topic": "hospital.cooling-window", "at": 18, "payload": {"ward": "surgery", "initial_temperature": 18, "maximum_temperature": 8, "ends_at": 20}, "parents": [], "origin": {"kind": "base", "source": "surgery-control", "sequence": 4}},
+    {"topic": "hospital.cooling-pipe", "at": 0, "payload": {"ward": "surgery", "maximum_flow": 5, "cooling_per_flow": 2}, "parents": [], "origin": {"kind": "base", "source": "facilities-blueprint", "sequence": 4}},
+    {"topic": "hospital.cooling-command", "at": 18, "payload": {"ward": "surgery", "grid": "H-MG", "flow": 3, "pump_base_power": 2, "evidence": "quorum-command-5"}, "parents": [], "origin": {"kind": "base", "source": "cooling-controller", "sequence": 5}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "cooling.01-fixed-state", "positive": [
+      {"alias": "g", "topic": "hospital.island-grid", "where": ["const", true]},
+      {"alias": "e", "topic": "hospital.essential-load", "where": ["eq", ["get", "e", "/payload/grid"], ["get", "g", "/payload/grid"]]},
+      {"alias": "w", "topic": "hospital.cooling-window", "where": ["const", true]},
+      {"alias": "p", "topic": "hospital.cooling-pipe", "where": ["eq", ["get", "p", "/payload/ward"], ["get", "w", "/payload/ward"]]},
+      {"alias": "c", "topic": "hospital.cooling-command", "where": ["and", ["eq", ["get", "c", "/payload/ward"], ["get", "w", "/payload/ward"]], ["eq", ["get", "c", "/payload/grid"], ["get", "g", "/payload/grid"]]]}
+    ], "negative": [{"alias": "x", "topic": "hospital.portable-chiller", "where": ["eq", ["get", "x", "/payload/ward"], ["get", "w", "/payload/ward"]]}], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "hospital.cooling-state"], "at": ["get", "w", "/at"], "payload": ["map",
+      "mode", ["const", "fixed-loop"],
+      "window_start", ["get", "w", "/at"],
+      "window_end", ["get", "w", "/payload/ends_at"],
+      "flow", ["get", "c", "/payload/flow"],
+      "effective_flow", ["min", ["get", "c", "/payload/flow"], ["get", "p", "/payload/maximum_flow"]],
+      "temperature", ["sub", ["get", "w", "/payload/initial_temperature"], ["mul", ["min", ["get", "c", "/payload/flow"], ["get", "p", "/payload/maximum_flow"]], ["get", "p", "/payload/cooling_per_flow"]]],
+      "maximum_temperature", ["get", "w", "/payload/maximum_temperature"],
+      "active_load", ["add", ["get", "e", "/payload/power"], ["add", ["get", "c", "/payload/pump_base_power"], ["get", "c", "/payload/flow"]]],
+      "capacity", ["get", "g", "/payload/capacity"],
+      "command_at", ["get", "c", "/at"],
+      "evidence_retained", ["const", true]
+    ], "parents": []}] }},
+    {"stratum": 0, "rule": {"id": "cooling.02-portable-state", "positive": [
+      {"alias": "g", "topic": "hospital.island-grid", "where": ["const", true]},
+      {"alias": "e", "topic": "hospital.essential-load", "where": ["eq", ["get", "e", "/payload/grid"], ["get", "g", "/payload/grid"]]},
+      {"alias": "w", "topic": "hospital.cooling-window", "where": ["const", true]},
+      {"alias": "x", "topic": "hospital.portable-chiller", "where": ["eq", ["get", "x", "/payload/ward"], ["get", "w", "/payload/ward"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "hospital.cooling-state"], "at": ["max", ["get", "w", "/at"], ["get", "x", "/at"]], "payload": ["map",
+      "mode", ["const", "portable"],
+      "window_start", ["get", "w", "/at"],
+      "window_end", ["get", "w", "/payload/ends_at"],
+      "flow", ["const", 0],
+      "effective_flow", ["const", 0],
+      "temperature", ["add", ["get", "w", "/payload/maximum_temperature"], ["mul", ["sub", ["get", "x", "/at"], ["get", "w", "/at"]], ["const", 2]]],
+      "maximum_temperature", ["get", "w", "/payload/maximum_temperature"],
+      "active_load", ["get", "e", "/payload/power"],
+      "capacity", ["get", "g", "/payload/capacity"],
+      "command_at", ["get", "x", "/at"],
+      "evidence_retained", ["const", true]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "cooling.03-contract-summary", "positive": [{"alias": "s", "topic": "hospital.cooling-state", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "s", "/at"], "payload": ["map",
+      "safe", ["if", ["eq", ["get", "s", "/payload/mode"], ["const", "portable"]],
+        ["and", ["ge", ["get", "s", "/payload/command_at"], ["get", "s", "/payload/window_start"]], ["and", ["le", ["get", "s", "/payload/command_at"], ["get", "s", "/payload/window_end"]], ["and", ["le", ["get", "s", "/payload/temperature"], ["get", "s", "/payload/maximum_temperature"]], ["le", ["get", "s", "/payload/active_load"], ["get", "s", "/payload/capacity"]]]]],
+        ["and", ["ge", ["get", "s", "/payload/flow"], ["const", 0]], ["and", ["le", ["get", "s", "/payload/command_at"], ["get", "s", "/payload/window_start"]], ["and", ["le", ["get", "s", "/payload/temperature"], ["get", "s", "/payload/maximum_temperature"]], ["le", ["get", "s", "/payload/active_load"], ["get", "s", "/payload/capacity"]]]]]],
+      "mode", ["get", "s", "/payload/mode"],
+      "window_start", ["get", "s", "/payload/window_start"],
+      "window_end", ["get", "s", "/payload/window_end"],
+      "flow", ["get", "s", "/payload/flow"],
+      "effective_flow", ["get", "s", "/payload/effective_flow"],
+      "temperature", ["get", "s", "/payload/temperature"],
+      "maximum_temperature", ["get", "s", "/payload/maximum_temperature"],
+      "active_load", ["get", "s", "/payload/active_load"],
+      "capacity", ["get", "s", "/payload/capacity"],
+      "command_at", ["get", "s", "/payload/command_at"],
+      "evidence_retained", ["get", "s", "/payload/evidence_retained"]
+    ], "parents": []}] }},
+    {"stratum": 2, "rule": {"id": "cooling.04-first-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map",
+      "code", ["if", ["gt", ["get", "s", "/payload/temperature"], ["get", "s", "/payload/maximum_temperature"]], ["const", "temperature_high"], ["if", ["gt", ["get", "s", "/payload/active_load"], ["get", "s", "/payload/capacity"]], ["const", "grid_overload"], ["const", "outside_window"]]],
+      "flow", ["get", "s", "/payload/flow"],
+      "temperature", ["get", "s", "/payload/temperature"],
+      "maximum_temperature", ["get", "s", "/payload/maximum_temperature"],
+      "active_load", ["get", "s", "/payload/active_load"],
+      "capacity", ["get", "s", "/payload/capacity"]
+    ], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.cooling-window", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"contracts": [{"safe": false, "flow": 3, "effective_flow": 3, "temperature": 12, "maximum_temperature": 8, "active_load": 7, "capacity": 9}], "note": "Flow below five misses the thermal bound. Flow above five cannot improve the capped pipe but still consumes pump power, so it overloads the island grid."},
+  "story": {
+    "premise": "The last train releases traction reserve to the hospital island, but the surgery ward still warms to twelve degrees. The fixed cooling pipe removes two degrees per unit of flow and saturates at five. Pump draw is base two plus commanded flow, alongside two units of essential load on a nine-unit grid. Correct the retained command without fabricating unlimited power or coolant.",
+    "submission": "Submit exactly one authorized replacement or portable-chiller intervention plus flow, effective flow, final temperature, load/capacity, timing, evidence retention, branch, and projection digest.",
+    "diagnostics": "Thermal failure, grid overload, and window timing are reported independently. Values above pipe saturation remain electrically expensive even when they do not improve cooling.",
+    "hints": ["Solve the temperature lower bound on flow first.", "Then solve the grid upper bound on the commanded flow; pipe saturation does not cap pump demand.", "A self-powered portable chiller works only if deployed at the opening tick, but it is a costly explanation."]
+  }
+}

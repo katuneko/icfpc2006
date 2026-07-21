@@ -1,0 +1,213 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "ORIENT.003",
+    "family": "ORIENT",
+    "title": "What the Camera Saw",
+    "points": 60,
+    "reference_scale": 24,
+    "requires": {"all": ["case:ORIENT.001"]},
+    "projection": "desk.camera-report",
+    "validator_template": "orient-observation-claim/0.1",
+    "hidden_event_topic": "camera.alert",
+    "limits": {
+      "max_witness_bytes": 65536,
+      "replay": {
+        "max_base_events": 32,
+        "max_derived_events": 64,
+        "max_bindings_tested": 8192,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 32
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 64,
+        "max_bindings_tested": 8192,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "topic": "camera.calibration",
+      "at": 20,
+      "payload": {"camera": "C7", "public_threshold": 70},
+      "parents": [],
+      "origin": {"kind": "base", "source": "camera-config", "sequence": 0}
+    },
+    {
+      "topic": "camera.privacy-zone",
+      "at": 20,
+      "payload": {"camera": "C7", "zone": "service"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "camera-config", "sequence": 1}
+    },
+    {
+      "topic": "camera.raw-frame",
+      "at": 21,
+      "payload": {"camera": "C7", "frame": "F-101", "zone": "plaza", "confidence": 85, "subject": "courier"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "camera-C7", "sequence": 101}
+    },
+    {
+      "topic": "camera.raw-frame",
+      "at": 22,
+      "payload": {"camera": "C7", "frame": "F-102", "zone": "service", "confidence": 99, "subject": "council-car"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "camera-C7", "sequence": 102}
+    },
+    {
+      "topic": "camera.raw-frame",
+      "at": 23,
+      "payload": {"camera": "C7", "frame": "F-103", "zone": "plaza", "confidence": 60, "subject": "stray"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "camera-C7", "sequence": 103}
+    },
+    {
+      "topic": "camera.raw-frame",
+      "at": 24,
+      "payload": {"camera": "C7", "frame": "F-104", "zone": "plaza", "confidence": 92, "subject": "unknown"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "camera-C7", "sequence": 104}
+    }
+  ],
+  "rules": [
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "camera.01-detect",
+        "positive": [
+          {"alias": "f", "topic": "camera.raw-frame", "where": ["const", true]}
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "camera.detection"],
+            "at": ["get", "f", "/at"],
+            "payload": [
+              "map",
+              "camera", ["get", "f", "/payload/camera"],
+              "frame", ["get", "f", "/payload/frame"],
+              "zone", ["get", "f", "/payload/zone"],
+              "confidence", ["get", "f", "/payload/confidence"],
+              "subject", ["get", "f", "/payload/subject"]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    },
+    {
+      "stratum": 1,
+      "rule": {
+        "id": "camera.02-publish",
+        "positive": [
+          {"alias": "d", "topic": "camera.detection", "where": ["const", true]},
+          {
+            "alias": "c",
+            "topic": "camera.calibration",
+            "where": ["eq", ["get", "c", "/payload/camera"], ["get", "d", "/payload/camera"]]
+          }
+        ],
+        "negative": [
+          {
+            "alias": "p",
+            "topic": "camera.privacy-zone",
+            "where": [
+              "and",
+              ["eq", ["get", "p", "/payload/camera"], ["get", "d", "/payload/camera"]],
+              ["eq", ["get", "p", "/payload/zone"], ["get", "d", "/payload/zone"]]
+            ]
+          }
+        ],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["ge", ["get", "d", "/payload/confidence"], ["get", "c", "/payload/public_threshold"]],
+        "emit": [
+          {
+            "topic": ["const", "camera.public-sighting"],
+            "at": ["get", "d", "/at"],
+            "payload": [
+              "map",
+              "frame", ["get", "d", "/payload/frame"],
+              "zone", ["get", "d", "/payload/zone"],
+              "confidence", ["get", "d", "/payload/confidence"],
+              "subject", ["get", "d", "/payload/subject"]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    },
+    {
+      "stratum": 2,
+      "rule": {
+        "id": "camera.03-alert",
+        "positive": [
+          {
+            "alias": "s",
+            "topic": "camera.public-sighting",
+            "where": ["eq", ["get", "s", "/payload/subject"], ["const", "unknown"]]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "camera.alert"],
+            "at": ["get", "s", "/at"],
+            "payload": [
+              "map",
+              "frame", ["get", "s", "/payload/frame"],
+              "classification", ["const", "manual-review"]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "id": "desk.camera-report",
+    "rows": [
+      {
+        "positive": [
+          {"alias": "s", "topic": "camera.public-sighting", "where": ["const", true]}
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "value": [
+          "map",
+          "frame", ["get", "s", "/payload/frame"],
+          "at", ["get", "s", "/at"],
+          "subject", ["get", "s", "/payload/subject"],
+          "confidence", ["get", "s", "/payload/confidence"]
+        ],
+        "sort": [["get", "s", "/at"], ["get", "s", "/payload/frame"]]
+      }
+    ]
+  },
+  "worked_value": {
+    "active_event_count": 3,
+    "projected_records": [],
+    "note": "shape example only; values are unrelated to the case"
+  },
+  "story": {
+    "premise": "A camera keeps raw frames, calibrated detections, public sightings, and an internal alert in one active fixed point. The Continuity Desk exposes only its privacy-filtered public report.",
+    "submission": "Submit the total active-event count, the projected report records and digest, and the EventId of the active alert that the report itself omits.",
+    "diagnostics": "A mismatch names the observation class but does not reveal the hidden alert or the expected report.",
+    "hints": [
+      "A projection emits values; it does not delete active events.",
+      "The service-zone frame is active even though privacy excludes its sighting.",
+      "The internal alert is derived after the public sighting and is not a projection row."
+    ]
+  }
+}

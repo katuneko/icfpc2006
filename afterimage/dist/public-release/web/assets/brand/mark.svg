@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Afterimage mark</title>
+  <desc id="desc">Two causal paths converge into one public record.</desc>
+  <rect width="256" height="256" rx="52" fill="#08131f"/>
+  <path d="M34 75h42c34 0 30 43 64 43h18" fill="none" stroke="#63c7d8" stroke-width="14" stroke-linecap="round"/>
+  <path d="M34 181h42c34 0 30-43 64-43h18" fill="none" stroke="#e87855" stroke-width="14" stroke-linecap="round"/>
+  <path d="M158 128h30" fill="none" stroke="#e8e3d5" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="202" cy="128" r="22" fill="none" stroke="#f0ad4e" stroke-width="12"/>
+  <circle cx="202" cy="128" r="5" fill="#e8e3d5"/>
+</svg>

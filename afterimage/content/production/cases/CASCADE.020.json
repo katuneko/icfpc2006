@@ -1,0 +1,250 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.020",
+    "family": "CASCADE",
+    "title": "Competing Amendments",
+    "points": 100,
+    "reference_scale": 1350000,
+    "requires": {
+      "all": [
+        "case:CASCADE.019",
+        "case:MERGE.014"
+      ]
+    },
+    "projection": "incident.competing-amendments",
+    "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": [
+        "replace"
+      ],
+      "max_operations": 1,
+      "weights": {
+        "replace": 1
+      },
+      "topics": [
+        "amendment.selection"
+      ],
+      "pointers": [
+        "/payload/chosen"
+      ],
+      "retime": {
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    "author_operation": {
+      "kind": "replace",
+      "target_topic": "amendment.selection",
+      "pointer": "/payload/chosen",
+      "value": "audit-first"
+    },
+    "diagnostic_topics": [
+      "contract.violation"
+    ],
+    "metric_bounds": {
+      "causal_footprint": 32,
+      "witness_units": 48
+    },
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {
+        "max_base_events": 8,
+        "max_derived_events": 12,
+        "max_bindings_tested": 256,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "topic": "amendment.ballot",
+      "at": 24,
+      "payload": {
+        "incident": "CITY-19",
+        "safe_options": [
+          "audit-first",
+          "evidence-first"
+        ],
+        "canonical_order": "utf8"
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "hearing-rules",
+        "sequence": 1
+      }
+    },
+    {
+      "topic": "amendment.selection",
+      "at": 25,
+      "payload": {
+        "incident": "CITY-19",
+        "chosen": "continuity-first",
+        "draft": "N-20"
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "continuity-office",
+        "sequence": 20
+      }
+    }
+  ],
+  "rules": [
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "competing-amendments.01-canonical",
+        "positive": [
+          {
+            "alias": "b",
+            "topic": "amendment.ballot",
+            "where": [
+              "const",
+              true
+            ]
+          },
+          {
+            "alias": "s",
+            "topic": "amendment.selection",
+            "where": [
+              "eq",
+              [
+                "get",
+                "s",
+                "/payload/incident"
+              ],
+              [
+                "get",
+                "b",
+                "/payload/incident"
+              ]
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": [
+          "const",
+          true
+        ],
+        "emit": [
+          {
+            "topic": [
+              "const",
+              "contract.summary"
+            ],
+            "at": [
+              "get",
+              "s",
+              "/at"
+            ],
+            "payload": [
+              "map",
+              "safe",
+              [
+                "eq",
+                [
+                  "get",
+                  "s",
+                  "/payload/chosen"
+                ],
+                [
+                  "get",
+                  "b",
+                  "/payload/safe_options/0"
+                ]
+              ],
+              "incident",
+              [
+                "get",
+                "b",
+                "/payload/incident"
+              ],
+              "chosen",
+              [
+                "get",
+                "s",
+                "/payload/chosen"
+              ],
+              "canonical",
+              [
+                "get",
+                "b",
+                "/payload/safe_options/0"
+              ],
+              "alternatives_preserved",
+              [
+                "get",
+                "b",
+                "/payload/safe_options"
+              ]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "id": "incident.competing-amendments",
+    "rows": [
+      {
+        "positive": [
+          {
+            "alias": "s",
+            "topic": "contract.summary",
+            "where": [
+              "const",
+              true
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": [
+          "const",
+          true
+        ],
+        "value": [
+          "get",
+          "s",
+          "/payload"
+        ],
+        "sort": []
+      }
+    ]
+  },
+  "worked_value": {
+    "safe_options": [
+      "audit-first",
+      "evidence-first"
+    ],
+    "canonical": "audit-first",
+    "note": "Both amendments remain in the ballot record; UTF-8 order selects one reproducibly without claiming the other is unsafe."
+  },
+  "story": {
+    "premise": "Two amendments survive the non-unique archive: audit-first and evidence-first. Both are substantively safe, so choosing whichever arrives first would make replay order into policy. The hearing rules publish UTF-8 order as the deterministic tie-break.",
+    "submission": "Replace only the draft choice with the first member of the preserved safe-option list. Do not erase or relabel the losing safe amendment.",
+    "diagnostics": "The replay binds the chosen value to the public canonical order and keeps the complete alternative list in the contract.",
+    "hints": [
+      "Safety does not always imply uniqueness.",
+      "The tie-break is part of policy, not chronology.",
+      "Preserve the unchosen amendment as a valid alternative."
+    ]
+  }
+}
+

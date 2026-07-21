@@ -1,0 +1,426 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.018",
+    "family": "CASCADE",
+    "title": "The Missing Cause",
+    "points": 110,
+    "reference_scale": 1600000,
+    "requires": {
+      "all": [
+        "case:CASCADE.017",
+        "case:MERGE.013",
+        "case:MOSAIC.011",
+        "case:PULSE.012"
+      ]
+    },
+    "projection": "incident.missing-cause",
+    "validator_template": "cascade-minimal-explanation-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": [
+        "inject"
+      ],
+      "max_operations": 2,
+      "weights": {
+        "inject": 1
+      },
+      "topics": [
+        "continuity.sensor-report",
+        "continuity.route-commit"
+      ],
+      "pointers": [],
+      "retime": {
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    "author_operations": [
+      {
+        "kind": "inject",
+        "topic": "continuity.sensor-report",
+        "at": 20,
+        "payload": {
+          "incident": "CITY-19",
+          "heat": "hot",
+          "source": "field-sensor"
+        },
+        "parents": []
+      },
+      {
+        "kind": "inject",
+        "topic": "continuity.route-commit",
+        "at": 21,
+        "payload": {
+          "incident": "CITY-19",
+          "route": "surface",
+          "basis": "sensor-report"
+        },
+        "parents": []
+      }
+    ],
+    "minimal_contract": {
+      "contract_topic": "contract.summary",
+      "operation_count": 2
+    },
+    "diagnostic_topics": [
+      "contract.violation"
+    ],
+    "metric_bounds": {
+      "causal_footprint": 64,
+      "witness_units": 64
+    },
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {
+        "max_base_events": 12,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "topic": "continuity.audit-gap",
+      "at": 18,
+      "payload": {
+        "incident": "CITY-19",
+        "required": [
+          "sensor-report",
+          "route-commit"
+        ],
+        "maximum_missing_events": 2
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "hearing-protocol",
+        "sequence": 1
+      }
+    },
+    {
+      "topic": "continuity.sealed-heat",
+      "at": 19,
+      "payload": {
+        "incident": "CITY-19",
+        "heat": "hot",
+        "evidence": [
+          "MERGE.013",
+          "MOSAIC.011"
+        ]
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "sealed-city-audit",
+        "sequence": 2
+      }
+    },
+    {
+      "topic": "continuity.ordered-release",
+      "at": 19,
+      "payload": {
+        "incident": "CITY-19",
+        "complete": true,
+        "evidence": "PULSE.012"
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "correction-buffer",
+        "sequence": 3
+      }
+    }
+  ],
+  "rules": [
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "missing-cause.01-minimal-pair",
+        "positive": [
+          {
+            "alias": "g",
+            "topic": "continuity.audit-gap",
+            "where": [
+              "const",
+              true
+            ]
+          },
+          {
+            "alias": "h",
+            "topic": "continuity.sealed-heat",
+            "where": [
+              "eq",
+              [
+                "get",
+                "h",
+                "/payload/incident"
+              ],
+              [
+                "get",
+                "g",
+                "/payload/incident"
+              ]
+            ]
+          },
+          {
+            "alias": "o",
+            "topic": "continuity.ordered-release",
+            "where": [
+              "eq",
+              [
+                "get",
+                "o",
+                "/payload/incident"
+              ],
+              [
+                "get",
+                "g",
+                "/payload/incident"
+              ]
+            ]
+          },
+          {
+            "alias": "s",
+            "topic": "continuity.sensor-report",
+            "where": [
+              "and",
+              [
+                "eq",
+                [
+                  "get",
+                  "s",
+                  "/payload/incident"
+                ],
+                [
+                  "get",
+                  "g",
+                  "/payload/incident"
+                ]
+              ],
+              [
+                "and",
+                [
+                  "eq",
+                  [
+                    "get",
+                    "s",
+                    "/payload/heat"
+                  ],
+                  [
+                    "const",
+                    "hot"
+                  ]
+                ],
+                [
+                  "eq",
+                  [
+                    "get",
+                    "s",
+                    "/payload/source"
+                  ],
+                  [
+                    "const",
+                    "field-sensor"
+                  ]
+                ]
+              ]
+            ]
+          },
+          {
+            "alias": "r",
+            "topic": "continuity.route-commit",
+            "where": [
+              "and",
+              [
+                "eq",
+                [
+                  "get",
+                  "r",
+                  "/payload/incident"
+                ],
+                [
+                  "get",
+                  "g",
+                  "/payload/incident"
+                ]
+              ],
+              [
+                "and",
+                [
+                  "eq",
+                  [
+                    "get",
+                    "r",
+                    "/payload/route"
+                  ],
+                  [
+                    "const",
+                    "surface"
+                  ]
+                ],
+                [
+                  "eq",
+                  [
+                    "get",
+                    "r",
+                    "/payload/basis"
+                  ],
+                  [
+                    "const",
+                    "sensor-report"
+                  ]
+                ]
+              ]
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": [
+          "and",
+          [
+            "eq",
+            [
+              "get",
+              "h",
+              "/payload/heat"
+            ],
+            [
+              "get",
+              "s",
+              "/payload/heat"
+            ]
+          ],
+          [
+            "get",
+            "o",
+            "/payload/complete"
+          ]
+        ],
+        "emit": [
+          {
+            "topic": [
+              "const",
+              "contract.summary"
+            ],
+            "at": [
+              "get",
+              "r",
+              "/at"
+            ],
+            "payload": [
+              "map",
+              "safe",
+              [
+                "const",
+                true
+              ],
+              "incident",
+              [
+                "get",
+                "g",
+                "/payload/incident"
+              ],
+              "missing_events",
+              [
+                "const",
+                2
+              ],
+              "maximum_missing_events",
+              [
+                "get",
+                "g",
+                "/payload/maximum_missing_events"
+              ],
+              "minimal",
+              [
+                "const",
+                true
+              ],
+              "heat",
+              [
+                "get",
+                "s",
+                "/payload/heat"
+              ],
+              "route",
+              [
+                "get",
+                "r",
+                "/payload/route"
+              ],
+              "basis",
+              [
+                "get",
+                "r",
+                "/payload/basis"
+              ]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "id": "incident.missing-cause",
+    "rows": [
+      {
+        "positive": [
+          {
+            "alias": "s",
+            "topic": "contract.summary",
+            "where": [
+              "const",
+              true
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": [
+          "const",
+          true
+        ],
+        "value": [
+          "get",
+          "s",
+          "/payload"
+        ],
+        "sort": []
+      }
+    ]
+  },
+  "worked_value": {
+    "latent_events": [
+      "sensor-report",
+      "route-commit"
+    ],
+    "proper_subsets_tested": 3,
+    "note": "Neither the hot report without a decision nor the surface decision without its cited report closes the audit gap; the pair does."
+  },
+  "story": {
+    "premise": "The equivocation is isolated, the whole-city geometry is restored, and the correction fragments are ordered. Yet the retained archive jumps directly from sealed heat to a public route outcome. The hearing permits at most two latent events, but an explanation is acceptable only if every proper subset fails.",
+    "submission": "Inject exactly the field sensor report and the surface route commitment it caused. Bind the resulting safe contract; the verifier independently replays the empty explanation and both one-event explanations.",
+    "diagnostics": "A self-justifying route, an uncited sensor report, extra inventions, or either event alone fails the minimality contract even if the full branch looks plausible.",
+    "hints": [
+      "One event establishes the physical fact.",
+      "The other records the policy consequence.",
+      "Minimal means testing what remains after each event is removed."
+    ]
+  }
+}
+

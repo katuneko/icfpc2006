@@ -1,0 +1,25 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.015", "family": "CASCADE", "title": "Redacted Feeder", "points": 100, "reference_scale": 1300000,
+    "requires": {"all": ["case:CASCADE.014", "case:LENS.003"]},
+    "projection": "incident.redacted-feeder", "validator_template": "cascade-proof-claim/0.1",
+    "intervention_policy": {"format": "afterimage-intervention-policy/0.1", "required": false, "allowed_kinds": ["inject"], "max_operations": 1, "weights": {"inject": 15}, "topics": ["audit.capability", "grid.public-release"], "pointers": [], "retime": {"minimum": 0, "maximum": 0}},
+    "author_relay_topic": "grid.feeder-provenance",
+    "diagnostic_topics": [],
+    "metric_bounds": {"causal_footprint": 64, "witness_units": 128},
+    "proof_contract": {"relay_topic": "grid.feeder-provenance", "ready_topic": "grid.feeder-accounted", "policy_label": "continuity.redacted-v2", "relay_id": "FEEDER-9", "capability_scope": "CASCADE.015", "reroute_id": "public-feeder-bypass"},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 16, "max_derived_events": 32, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"topic": "grid.feeder-status", "at": 9, "payload": {"feeder": "FEEDER-9", "energized": true, "capacity": 52}, "parents": [], "origin": {"kind": "base", "source": "grid-control", "sequence": 4}},
+    {"topic": "grid.feeder-provenance", "at": 10, "payload": {"relay_id": "FEEDER-9", "authorized": true, "provenance": {"public": ["LENS.003", "CASCADE.014"], "restricted": {"internal_tip": "dispatch-77/U0", "fleet_record": "SHADOW-7", "operator_token": "sealed-grid-19"}}}, "parents": [], "origin": {"kind": "base", "source": "continuity-sealed-archive", "sequence": 19}},
+    {"topic": "grid.dispatch-demand", "at": 11, "payload": {"feeder": "FEEDER-9", "required": 18, "deadline": 13}, "parents": [], "origin": {"kind": "base", "source": "ring-relief", "sequence": 2}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "redacted-feeder.01-accounted", "positive": [{"alias": "s", "topic": "grid.feeder-status", "where": ["const", true]}, {"alias": "p", "topic": "grid.feeder-provenance", "where": ["eq", ["get", "p", "/payload/relay_id"], ["get", "s", "/payload/feeder"]]}, {"alias": "d", "topic": "grid.dispatch-demand", "where": ["eq", ["get", "d", "/payload/feeder"], ["get", "s", "/payload/feeder"]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["and", ["get", "s", "/payload/energized"], ["and", ["get", "p", "/payload/authorized"], ["le", ["get", "d", "/payload/required"], ["get", "s", "/payload/capacity"]]]], "emit": [{"topic": ["const", "grid.feeder-accounted"], "at": ["get", "d", "/at"], "payload": ["map", "safe", ["const", true], "feeder", ["get", "s", "/payload/feeder"], "capacity", ["get", "s", "/payload/capacity"], "required", ["get", "d", "/payload/required"], "provenance_state", ["const", "active-but-redacted"], "projection_cause", ["const", "whole_event_suppressed"]], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.redacted-feeder", "rows": [{"positive": [{"alias": "p", "topic": "grid.feeder-provenance", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map", "edge", ["get", "p", "/payload/relay_id"], "status", ["const", "unavailable"], "policy", ["const", "continuity.redacted-v2"]], "sort": []}]},
+  "worked_value": {"public": {"edge": "FEEDER-9", "status": "unavailable"}, "active": {"topic": "grid.feeder-provenance", "authorized": true}, "note": "The answer binds a provenance digest, never the restricted internal tip, fleet record, or operator token."},
+  "story": {"premise": "Two Histories shows why FEEDER-9 vanished: its provenance links the original dispatch tip to SHADOW-7, so Continuity suppressed the whole record rather than redact individual fields. The energized feeder and its authorization remain active and sufficient for the ring demand.", "submission": "Prove the active feeder authorization with its EventId and provenance digest, bind the exact redacted public row, and disclose none of the restricted provenance object.", "diagnostics": "The checker independently replays active state, the public projection, and the provenance digest while reporting only which proof field failed.", "hints": ["Unavailable in the projection does not mean absent from active state.", "Bind the whole provenance by digest.", "Never copy restricted members into the answer."]}
+}

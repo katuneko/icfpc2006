@@ -1,0 +1,95 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.011",
+    "family": "CASCADE",
+    "title": "The Open Bridge",
+    "points": 110,
+    "reference_scale": 1000000,
+    "requires": {"all": ["case:CASCADE.010"]},
+    "projection": "incident.open-bridge",
+    "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": ["retime", "inject"],
+      "max_operations": 1,
+      "weights": {"retime": 1, "inject": 30},
+      "topics": ["bridge.open-command", "bridge.emergency-ferry"],
+      "pointers": [],
+      "retime": {"minimum": 6, "maximum": 9}
+    },
+    "author_operation": {"kind": "retime", "target_topic": "bridge.open-command", "at": 8},
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 80, "witness_units": 80},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 32, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "bridge.wind-limit", "at": 0, "payload": {"bridge": "B-17", "maximum_wind": 20}, "parents": [], "origin": {"kind": "base", "source": "bridge-safety", "sequence": 1}},
+    {"topic": "bridge.wind-observation", "at": 8, "payload": {"bridge": "B-17", "wind": 20, "evidence": "anemometer-08"}, "parents": [], "origin": {"kind": "base", "source": "north-anemometer", "sequence": 4}},
+    {"topic": "bridge.emergency-window", "at": 10, "payload": {"bridge": "B-17", "ambulance_at": 10, "clear_at": 12, "destination": "surgery-ward"}, "parents": [], "origin": {"kind": "base", "source": "hospital-dispatch", "sequence": 6}},
+    {"topic": "bridge.open-command", "at": 6, "payload": {"bridge": "B-17", "open_duration": 2, "evidence": "north-clock-command"}, "parents": [], "origin": {"kind": "base", "source": "bridge-controller", "sequence": 7}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "bridge.01-fixed-state", "positive": [
+      {"alias": "l", "topic": "bridge.wind-limit", "where": ["const", true]},
+      {"alias": "w", "topic": "bridge.wind-observation", "where": ["eq", ["get", "w", "/payload/bridge"], ["get", "l", "/payload/bridge"]]},
+      {"alias": "a", "topic": "bridge.emergency-window", "where": ["eq", ["get", "a", "/payload/bridge"], ["get", "l", "/payload/bridge"]]},
+      {"alias": "c", "topic": "bridge.open-command", "where": ["eq", ["get", "c", "/payload/bridge"], ["get", "l", "/payload/bridge"]]}
+    ], "negative": [{"alias": "f", "topic": "bridge.emergency-ferry", "where": ["eq", ["get", "f", "/payload/bridge"], ["get", "l", "/payload/bridge"]]}], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "bridge.access-state"], "at": ["max", ["get", "a", "/at"], ["max", ["get", "c", "/at"], ["get", "w", "/at"]]], "payload": ["map",
+      "mode", ["const", "drawbridge"],
+      "command_at", ["get", "c", "/at"],
+      "wind_safe_from", ["get", "w", "/at"],
+      "wind", ["get", "w", "/payload/wind"],
+      "maximum_wind", ["get", "l", "/payload/maximum_wind"],
+      "ready_at", ["add", ["get", "c", "/at"], ["get", "c", "/payload/open_duration"]],
+      "ambulance_at", ["get", "a", "/payload/ambulance_at"],
+      "clear_at", ["get", "a", "/payload/clear_at"],
+      "evidence_retained", ["const", true]
+    ], "parents": []}] }},
+    {"stratum": 0, "rule": {"id": "bridge.02-ferry-state", "positive": [
+      {"alias": "a", "topic": "bridge.emergency-window", "where": ["const", true]},
+      {"alias": "f", "topic": "bridge.emergency-ferry", "where": ["eq", ["get", "f", "/payload/bridge"], ["get", "a", "/payload/bridge"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "bridge.access-state"], "at": ["max", ["get", "a", "/at"], ["get", "f", "/at"]], "payload": ["map",
+      "mode", ["const", "emergency-ferry"],
+      "command_at", ["get", "f", "/at"],
+      "wind_safe_from", ["const", 0],
+      "wind", ["const", 0],
+      "maximum_wind", ["const", 0],
+      "ready_at", ["get", "f", "/at"],
+      "ambulance_at", ["get", "a", "/payload/ambulance_at"],
+      "clear_at", ["get", "a", "/payload/clear_at"],
+      "evidence_retained", ["const", true]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "bridge.03-contract-summary", "positive": [{"alias": "s", "topic": "bridge.access-state", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "s", "/at"], "payload": ["map",
+      "safe", ["if", ["eq", ["get", "s", "/payload/mode"], ["const", "emergency-ferry"]],
+        ["eq", ["get", "s", "/payload/ready_at"], ["get", "s", "/payload/ambulance_at"]],
+        ["and", ["ge", ["get", "s", "/payload/command_at"], ["get", "s", "/payload/wind_safe_from"]], ["and", ["le", ["get", "s", "/payload/wind"], ["get", "s", "/payload/maximum_wind"]], ["le", ["get", "s", "/payload/ready_at"], ["get", "s", "/payload/ambulance_at"]]]]],
+      "mode", ["get", "s", "/payload/mode"],
+      "command_at", ["get", "s", "/payload/command_at"],
+      "wind_safe_from", ["get", "s", "/payload/wind_safe_from"],
+      "wind", ["get", "s", "/payload/wind"],
+      "maximum_wind", ["get", "s", "/payload/maximum_wind"],
+      "ready_at", ["get", "s", "/payload/ready_at"],
+      "ambulance_at", ["get", "s", "/payload/ambulance_at"],
+      "clear_at", ["get", "s", "/payload/clear_at"],
+      "evidence_retained", ["get", "s", "/payload/evidence_retained"]
+    ], "parents": []}] }},
+    {"stratum": 2, "rule": {"id": "bridge.04-first-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map",
+      "code", ["if", ["lt", ["get", "s", "/payload/command_at"], ["get", "s", "/payload/wind_safe_from"]], ["const", "opened_in_wind"], ["const", "access_late"]],
+      "command_at", ["get", "s", "/payload/command_at"], "ready_at", ["get", "s", "/payload/ready_at"], "ambulance_at", ["get", "s", "/payload/ambulance_at"]
+    ], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.open-bridge", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"root_command_at": 6, "wind_safe_from": 8, "open_duration": 2, "ambulance_at": 10, "unique_retime": 8, "note": "Ticks 6 and 7 begin opening before the measured wind boundary; tick 9 finishes after the ambulance arrives. Only tick 8 satisfies both sides."},
+  "story": {
+    "premise": "The repaired cooling loop keeps surgery viable, but its ambulance is stranded behind drawbridge B-17. The retained controller command begins opening at tick 6, two ticks before the north anemometer reaches the published wind limit. Opening takes two ticks and the ambulance reaches the bridge at tick 10. Preserve both the wind evidence and emergency access without pretending the bridge moves instantly.",
+    "submission": "Submit one authorized retime or emergency-ferry intervention plus the independent safety summary, branch, and projection digest.",
+    "diagnostics": "Opening before the observed wind boundary and completing after ambulance arrival are distinct failures. The ferry is valid only at the ambulance tick and is deliberately expensive.",
+    "hints": ["The command cannot precede tick 8.", "The bridge must be fully open by tick 10, and opening consumes two ticks.", "Check every authorized retime from 6 through 9; the two inequalities meet at one tick."]
+  }
+}

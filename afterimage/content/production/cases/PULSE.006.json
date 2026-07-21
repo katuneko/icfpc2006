@@ -1,0 +1,24 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.006", "family": "PULSE", "title": "Barrier at Dawn", "points": 110, "reference_scale": 600000,
+    "requires": {"all": ["case:PULSE.005", "case:CASCADE.011", "case:MERGE.007", "case:MOSAIC.005"]},
+    "projection": "pulse.barrier-at-dawn", "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [{"name": "seen_wind", "type": "bool", "initial": false}, {"name": "seen_bridge", "type": "bool", "initial": false}, {"name": "seen_hospital", "type": "bool", "initial": false}, {"name": "fired", "type": "bool", "initial": false}],
+      "handlers": [
+        {"id": "barrier.on-wind", "on": "dawn.wind-ready", "actions": [{"op": "set", "cell": "seen_wind", "value": ["const", true]}, {"op": "when", "condition": ["and", ["not", ["cell", "fired"]], ["and", ["cell", "seen_bridge"], ["cell", "seen_hospital"]]], "actions": [{"op": "emit", "topic": "dawn.barrier-release", "payload": ["event", "payload"]}, {"op": "set", "cell": "fired", "value": ["const", true]}]}]},
+        {"id": "barrier.on-bridge", "on": "dawn.bridge-ready", "actions": [{"op": "set", "cell": "seen_bridge", "value": ["const", true]}, {"op": "when", "condition": ["and", ["not", ["cell", "fired"]], ["and", ["cell", "seen_wind"], ["cell", "seen_hospital"]]], "actions": [{"op": "emit", "topic": "dawn.barrier-release", "payload": ["event", "payload"]}, {"op": "set", "cell": "fired", "value": ["const", true]}]}]},
+        {"id": "barrier.on-hospital", "on": "dawn.hospital-ready", "actions": [{"op": "set", "cell": "seen_hospital", "value": ["const", true]}, {"op": "when", "condition": ["and", ["not", ["cell", "fired"]], ["and", ["cell", "seen_wind"], ["cell", "seen_bridge"]]], "actions": [{"op": "emit", "topic": "dawn.barrier-release", "payload": ["event", "payload"]}, {"op": "set", "cell": "fired", "value": ["const", true]}]}]}
+      ]
+    },
+    "author_invariant": "Each readiness topic owns one monotone bit. The event that makes all three bits true is the only release payload; duplicates cannot replace a missing topic, and the fired bit makes the barrier one-shot.",
+    "pulse_contract": {"task": "multi-topic-barrier", "input_topics": {"wind": "dawn.wind-ready", "bridge": "dawn.bridge-ready", "hospital": "dawn.hospital-ready"}, "timer_topic": "pulse.timer", "output_topic": "dawn.barrier-release", "horizon": 4, "max_signals": 4, "named_fixtures": [[{"at": 0, "source": "wind"}, {"at": 0, "source": "wind"}, {"at": 1, "source": "bridge"}], [{"at": 0, "source": "wind"}, {"at": 0, "source": "bridge"}, {"at": 0, "source": "hospital"}], [{"at": 0, "source": "hospital"}, {"at": 1, "source": "wind"}, {"at": 2, "source": "bridge"}], [{"at": 0, "source": "wind"}, {"at": 0, "source": "bridge"}, {"at": 0, "source": "hospital"}, {"at": 1, "source": "wind"}]], "limits": {"max_program_bytes": 8192, "max_state_cells": 8, "max_steps": 128, "max_queue": 16, "max_scheduled_events": 8}},
+    "metric_bounds": {"worst_latency": 4, "live_state_cells": 8},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [], "rules": [], "projection": {"id": "pulse.barrier-at-dawn", "rows": []},
+  "worked_value": {"input": [{"at": 0, "source": "hospital"}, {"at": 1, "source": "wind"}, {"at": 2, "source": "bridge"}], "output": {"at": 2, "source": "bridge"}, "note": "The first two topics are necessary but insufficient. The bridge event completes the all-topic barrier and its canonical payload is retained."},
+  "story": {"premise": "At dawn, three facts must coexist before emergency traffic is released: the wind boundary is observed, the reconstructed bridge clock says the span is ready, and the hospital confirms the route. Repetition from any one subsystem is not progress, and two-of-three is no longer safe.", "submission": "Submit a PULSE program that emits once, with zero added latency, on the event that first completes all three distinct readiness topics. Preserve that decisive event's canonical payload.", "diagnostics": "The verifier exhausts every source-tagged stream of up to four signals over four ticks and distinguishes duplicate counting, two-of-three release, delayed all-topic completion, wrong payload, and refiring.", "hints": ["This is an all-three barrier, not the previous quorum.", "Set the current topic's bit before checking the other two.", "Seal the barrier after its first release."]}
+}

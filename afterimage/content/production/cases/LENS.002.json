@@ -1,0 +1,34 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "LENS.002", "family": "LENS", "title": "One Timetable", "points": 500, "reference_scale": 1800000,
+    "requires": {"all": ["case:LENS.001", "case:PULSE.005", "case:MOSAIC.005", "case:PULSE.007", "case:MOSAIC.006"]},
+    "projection": "lens.one-timetable", "validator_template": "lens-law-claim/0.1",
+    "author_program": {
+      "format": "afterimage-lens/0.1",
+      "complement_schema": [{"name": "platform", "type": "text"}, {"name": "calendar", "type": "text-list"}, {"name": "schedule_provenance", "type": "text-list"}, {"name": "service_key", "type": "text"}],
+      "get": [{"op": "forward_schedule", "table": "schedules"}, {"op": "encode_gate", "table": "gates"}],
+      "put": [{"op": "reverse_schedule", "table": "schedules", "disambiguation": "service_key"}, {"op": "decode_gate", "table": "gates"}, {"op": "restore_schedule", "fields": ["platform", "calendar", "schedule_provenance"]}]
+    },
+    "lens_contract": {
+      "task": "timetable",
+      "schedules": [
+        {"service_key": "north-am", "line": "North Department", "local_departure": 480, "route_id": "R-DAWN", "utc_departure": 420},
+        {"service_key": "south-am", "line": "South Department", "local_departure": 360, "route_id": "R-DAWN", "utc_departure": 420},
+        {"service_key": "bridge-relief", "line": "Bridge Relief", "local_departure": 510, "route_id": "R-BRIDGE", "utc_departure": 450},
+        {"service_key": "hospital-link", "line": "Hospital Link", "local_departure": 540, "route_id": "R-HOSP", "utc_departure": 480}
+      ],
+      "gates": [{"source": "north", "target": "N"}, {"source": "south", "target": "S"}],
+      "platforms": ["1", "2"],
+      "calendars": [["weekday"], ["weekday", "emergency"]],
+      "provenance": [["operator"], ["operator", "bridge-audit"]],
+      "invalid_targets": [{"route_id": "NOPE", "utc_departure": 0, "gate_code": null}, {"route_id": "R-DAWN", "utc_departure": 999, "gate_code": null}, {"route_id": "R-DAWN", "utc_departure": 420, "gate_code": "X"}],
+      "limits": {"max_program_bytes": 8192, "max_nodes": 256, "max_auxiliary_cells": 16, "max_reductions": 64}
+    },
+    "metric_bounds": {"auxiliary_schema_cells": 16, "worst_reductions": 64},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [], "rules": [], "projection": {"id": "lens.one-timetable", "rows": []},
+  "worked_value": {"source": {"service_key": "south-am", "line": "South Department", "local_departure": 360, "platform": "2", "calendar": ["weekday", "emergency"]}, "view": {"route_id": "R-DAWN", "utc_departure": 420}, "note": "The public UTC row deliberately merges North 08:00 and South 06:00. service_key restores that lost distinction while operational fields survive every lawful public edit."},
+  "story": {"premise": "The repaired bridge finally lets Continuity publish one public UTC timetable from incompatible departmental clocks. Two genuinely different operator services collapse to the same public dawn route, while platform, service calendar, and audit provenance must survive lawful edits that the public view cannot carry.", "submission": "Submit a typed bidirectional timetable program with an explicit complement. It must satisfy GetPut, PutGet, Stability, operational Provenance, totality, and invalid-edit atomicity over the complete bounded domain.", "diagnostics": "Counterexamples identify the first exact source and public edit that loses service identity, platform, calendar, provenance, gate mapping, stability, totality, or atomicity.", "hints": ["The public route and UTC departure do not identify the original service.", "Keep operational facts that the public timetable omits.", "When a lawful edit selects another route, choose its canonical service but retain the old platform, calendar, and provenance."]}
+}

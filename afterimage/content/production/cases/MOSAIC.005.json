@@ -1,0 +1,39 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MOSAIC.005", "family": "MOSAIC", "title": "Double Exposure", "points": 100, "reference_scale": 400000,
+    "requires": {"all": ["case:MOSAIC.004", "case:CASCADE.011", "case:MERGE.007"]},
+    "projection": "mosaic.double-exposure", "validator_template": "mosaic-graph-claim/0.1",
+    "author_answer": {
+      "global": {"vertices": [
+        {"id": "v0", "x": 0, "y": 0}, {"id": "v1", "x": 1, "y": 0}, {"id": "v2", "x": 2, "y": 0},
+        {"id": "v3", "x": 0, "y": 1}, {"id": "v4", "x": 1, "y": 1}, {"id": "v5", "x": 2, "y": 1},
+        {"id": "v6", "x": 0, "y": 2}, {"id": "v7", "x": 1, "y": 2}, {"id": "v8", "x": 2, "y": 2}
+      ], "edges": [
+        {"a": "v0", "b": "v1", "material": "brass", "level": "A"}, {"a": "v0", "b": "v3", "material": "copper", "level": "A"},
+        {"a": "v1", "b": "v2", "material": "copper", "level": "B"}, {"a": "v1", "b": "v4", "material": "steel", "level": "A"},
+        {"a": "v2", "b": "v5", "material": "brass", "level": "B"}, {"a": "v3", "b": "v4", "material": "copper", "level": "B"},
+        {"a": "v3", "b": "v6", "material": "steel", "level": "B"}, {"a": "v4", "b": "v5", "material": "brass", "level": "C"},
+        {"a": "v4", "b": "v7", "material": "copper", "level": "C"}, {"a": "v5", "b": "v8", "material": "steel", "level": "C"},
+        {"a": "v6", "b": "v7", "material": "steel", "level": "A"}, {"a": "v7", "b": "v8", "material": "copper", "level": "A"}
+      ]},
+      "used": [
+        {"fragment": "F-BRIDGE-NORTH", "transform": "r0", "mapping": [{"local": "n00", "global": "v0"}, {"local": "n10", "global": "v1"}, {"local": "n20", "global": "v2"}, {"local": "n01", "global": "v3"}, {"local": "n11", "global": "v4"}, {"local": "n21", "global": "v5"}]},
+        {"fragment": "F-BRIDGE-SOUTH", "transform": "r180", "mapping": [{"local": "s00", "global": "v8"}, {"local": "s10", "global": "v7"}, {"local": "s20", "global": "v6"}, {"local": "s01", "global": "v5"}, {"local": "s11", "global": "v4"}, {"local": "s21", "global": "v3"}]}
+      ],
+      "unused": [{"fragment": "F-BRIDGE-NORTH-CACHE", "reason": "duplicate", "duplicate_of": "F-BRIDGE-NORTH"}]
+    },
+    "mosaic_contract": {"width": 3, "height": 3, "duplicates": {"fingerprint": "d4-attributed-v1"}},
+    "metric_bounds": {"graph_size": 64, "certificate_units": 64},
+    "limits": {"max_witness_bytes": 262144, "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 16}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 8}}
+  },
+  "events": [
+    {"topic": "mosaic.fragment", "at": 1, "payload": {"id": "F-BRIDGE-NORTH", "weight": 8, "vertices": [{"name": "n00", "x": 0, "y": 0}, {"name": "n10", "x": 1, "y": 0}, {"name": "n20", "x": 2, "y": 0}, {"name": "n01", "x": 0, "y": 1}, {"name": "n11", "x": 1, "y": 1}, {"name": "n21", "x": 2, "y": 1}], "edges": [{"a": "n00", "b": "n10", "material": "brass", "level": "A"}, {"a": "n10", "b": "n20", "material": "copper", "level": "B"}, {"a": "n01", "b": "n11", "material": "copper", "level": "B"}, {"a": "n11", "b": "n21", "material": "brass", "level": "C"}, {"a": "n00", "b": "n01", "material": "copper", "level": "A"}, {"a": "n10", "b": "n11", "material": "steel", "level": "A"}, {"a": "n20", "b": "n21", "material": "brass", "level": "B"}]}, "parents": [], "origin": {"kind": "base", "source": "bridge-survey-north", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 2, "payload": {"id": "F-BRIDGE-SOUTH", "weight": 8, "vertices": [{"name": "s00", "x": 0, "y": 0}, {"name": "s10", "x": 1, "y": 0}, {"name": "s20", "x": 2, "y": 0}, {"name": "s01", "x": 0, "y": 1}, {"name": "s11", "x": 1, "y": 1}, {"name": "s21", "x": 2, "y": 1}], "edges": [{"a": "s00", "b": "s10", "material": "copper", "level": "A"}, {"a": "s10", "b": "s20", "material": "steel", "level": "A"}, {"a": "s01", "b": "s11", "material": "brass", "level": "C"}, {"a": "s11", "b": "s21", "material": "copper", "level": "B"}, {"a": "s00", "b": "s01", "material": "steel", "level": "C"}, {"a": "s10", "b": "s11", "material": "copper", "level": "C"}, {"a": "s20", "b": "s21", "material": "steel", "level": "B"}]}, "parents": [], "origin": {"kind": "base", "source": "bridge-survey-south", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 3, "payload": {"id": "F-BRIDGE-NORTH-CACHE", "weight": 1, "vertices": [{"name": "d00", "x": 0, "y": 0}, {"name": "d10", "x": 1, "y": 0}, {"name": "d20", "x": 2, "y": 0}, {"name": "d01", "x": 0, "y": 1}, {"name": "d11", "x": 1, "y": 1}, {"name": "d21", "x": 2, "y": 1}], "edges": [{"a": "d20", "b": "d10", "material": "copper", "level": "B"}, {"a": "d10", "b": "d00", "material": "brass", "level": "C"}, {"a": "d21", "b": "d11", "material": "brass", "level": "A"}, {"a": "d11", "b": "d01", "material": "copper", "level": "B"}, {"a": "d20", "b": "d21", "material": "copper", "level": "A"}, {"a": "d10", "b": "d11", "material": "steel", "level": "A"}, {"a": "d00", "b": "d01", "material": "brass", "level": "B"}]}, "parents": [], "origin": {"kind": "base", "source": "continuity-cache", "sequence": 14}}
+  ],
+  "rules": [],
+  "projection": {"id": "mosaic.double-exposure", "rows": [{"positive": [{"alias": "f", "topic": "mosaic.fragment", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "f", "/payload"], "sort": [["get", "f", "/payload/id"]]}]},
+  "worked_value": {"duplicate": "F-BRIDGE-NORTH-CACHE", "survivor": "F-BRIDGE-NORTH", "fingerprint": "d4-attributed-v1", "note": "The cached fragment is the same attributed survey after a half-turn and local renaming. It may not count as a second independent observation."},
+  "story": {"premise": "Three bridge surveys seem to corroborate the north span twice. The third is actually a cached half-turned copy of the first: local names and orientation changed, but every attributed edge did not. Reconstruct the bridge and identify the copy before Continuity treats one observation as two witnesses.", "submission": "Submit the canonical graph, mappings for one survivor from each physical survey, and a duplicate rejection naming its equivalent used survivor.", "diagnostics": "D4 embedding, complete coverage, attributed duplicate fingerprint, survivor linkage, and one-survivor-per-duplicate-group fail independently.", "hints": ["Ignore local vertex names when comparing fragments.", "Normalize translation and all eight D4 orientations, but retain edge material and level.", "Keeping the low-weight cache is valid but discarding the evidence-rich original costs more score."]}
+}

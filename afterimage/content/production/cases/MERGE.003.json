@@ -1,0 +1,63 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.003",
+    "family": "MERGE",
+    "title": "Lost Acknowledgment",
+    "points": 90,
+    "reference_scale": 30000,
+    "requires": {"all": ["case:MERGE.002"]},
+    "projection": "merge.lost-acknowledgment",
+    "validator_template": "merge-certificate-claim/0.1",
+    "author_answer": {
+      "accepted": [
+        {"key": "I1", "at": 5},
+        {"key": "G1", "at": 8},
+        {"key": "G3", "at": 12},
+        {"key": "W1", "at": 14},
+        {"key": "C1", "at": 18}
+      ],
+      "rejected": [],
+      "certificate": [
+        {"before": "I1", "after": "G1", "minimum_gap": 1},
+        {"before": "G1", "after": "G3", "minimum_gap": 1},
+        {"before": "G3", "after": "W1", "minimum_gap": 1},
+        {"before": "W1", "after": "C1", "minimum_gap": 1}
+      ]
+    },
+    "metric_bounds": {"temporal_displacement": 16, "certificate_units": 16},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"label": "I1", "body": {"topic": "merge.record", "at": 5, "payload": {"key": "I1", "local_time": 105, "offset_min": 99, "offset_max": 101, "source": "intake", "sequence": 1, "weight": 5, "operation": "grid-window-31", "kind": "reservation-request"}, "parents": [], "origin": {"kind": "base", "source": "power-intake", "sequence": 1}}},
+    {"label": "G1", "body": {"topic": "merge.record", "at": 8, "payload": {"key": "G1", "local_time": 208, "offset_min": 199, "offset_max": 201, "source": "utility-gateway", "sequence": 1, "weight": 5, "operation": "grid-window-31", "kind": "reservation-sent"}, "parents": ["@I1"], "origin": {"kind": "base", "source": "utility-gateway", "sequence": 1}}},
+    {"label": "G3", "body": {"topic": "merge.record", "at": 12, "payload": {"key": "G3", "local_time": -38, "offset_min": -51, "offset_max": -49, "source": "utility-gateway", "sequence": 3, "weight": 5, "operation": "grid-window-31", "kind": "release-queued"}, "parents": [], "origin": {"kind": "base", "source": "utility-gateway", "sequence": 3}}},
+    {"label": "W1", "body": {"topic": "merge.record", "at": 14, "payload": {"key": "W1", "local_time": 14, "offset_min": -1, "offset_max": 1, "source": "road-crew", "sequence": 1, "weight": 5, "operation": "grid-window-31", "kind": "load-complete"}, "parents": ["@G3"], "origin": {"kind": "base", "source": "road-crew", "sequence": 1}}},
+    {"label": "C1", "body": {"topic": "merge.record", "at": 18, "payload": {"key": "C1", "local_time": 318, "offset_min": 299, "offset_max": 301, "source": "grid-control", "sequence": 1, "weight": 5, "operation": "grid-window-31", "kind": "reservation-closed"}, "parents": ["@W1"], "origin": {"kind": "base", "source": "grid-control", "sequence": 1}}}
+  ],
+  "rules": [],
+  "projection": {"id": "merge.lost-acknowledgment", "rows": [{"positive": [{"alias": "r", "topic": "merge.record", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map",
+    "event", ["get", "r", "/id"],
+    "key", ["get", "r", "/payload/key"],
+    "source", ["get", "r", "/payload/source"],
+    "sequence", ["get", "r", "/payload/sequence"],
+    "local_time", ["get", "r", "/payload/local_time"],
+    "offset_min", ["get", "r", "/payload/offset_min"],
+    "offset_max", ["get", "r", "/payload/offset_max"],
+    "weight", ["get", "r", "/payload/weight"],
+    "operation", ["get", "r", "/payload/operation"],
+    "kind", ["get", "r", "/payload/kind"],
+    "parents", ["get", "r", "/parents"]
+  ], "sort": [["get", "r", "/at"], ["get", "r", "/payload/key"]]}]},
+  "worked_value": {"missing_sequence": 2, "required_edge": ["G1", "G3"], "note": "A missing acknowledgment does not authorize a fabricated event; the public source sequence induces the bridge edge."},
+  "story": {
+    "premise": "The utility gateway log for `grid-window-31` contains sequence 1 (`reservation-sent`) and sequence 3 (`release-queued`), but its acknowledgment at sequence 2 is gone. Downstream road and grid records remain intact. Reconstruct the strongest causal archive without inventing the missing record.",
+    "submission": "Classify every extant record, choose an in-range global time for each, and submit the exact parent/source-order certificate. Certificates may connect extant records but may not name phantom events.",
+    "diagnostics": "Intervals, explicit parents, and source sequence are checked independently. The verifier reports a missing or extra certificate edge without disclosing an expected synthetic acknowledgment.",
+    "hints": ["A gap in source sequence is evidence of omission, not permission to add a record.", "Successive extant records from one source still have a strict order even when their sequence numbers are not consecutive.", "The gateway edge bridges sequence 1 directly to sequence 3; then minimize displacement inside every clock interval."]
+  }
+}

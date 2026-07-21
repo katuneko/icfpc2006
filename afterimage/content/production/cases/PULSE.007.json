@@ -1,0 +1,23 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.007", "family": "PULSE", "title": "Backpressure", "points": 110, "reference_scale": 700000,
+    "requires": {"all": ["case:PULSE.006", "case:CASCADE.012", "case:MOSAIC.006"]},
+    "projection": "pulse.backpressure", "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [{"name": "depth", "type": "int", "initial": 0}],
+      "handlers": [
+        {"id": "queue.on-request", "on": "queue.request", "actions": [{"op": "when", "condition": ["lt", ["cell", "depth"], ["const", 2]], "actions": [{"op": "emit", "topic": "queue.admitted", "payload": ["event", "payload"]}, {"op": "set", "cell": "depth", "value": ["add", ["cell", "depth"], ["const", 1]]}]}]},
+        {"id": "queue.on-drain", "on": "queue.drain", "actions": [{"op": "when", "condition": ["lt", ["const", 0], ["cell", "depth"]], "actions": [{"op": "set", "cell": "depth", "value": ["sub", ["cell", "depth"], ["const", 1]]}]}]}
+      ]
+    },
+    "author_invariant": "depth is exactly admitted requests minus effective drains, clamped to [0,2]. A full queue rejects without debit; a drain at zero is a no-op; every admission retains the canonical request payload.",
+    "pulse_contract": {"task": "backpressure", "input_topics": {"request": "queue.request", "drain": "queue.drain"}, "timer_topic": "pulse.timer", "output_topic": "queue.admitted", "capacity": 2, "initial_depth": 0, "horizon": 4, "max_commands": 5, "named_fixtures": [[{"at": 0, "source": "request"}, {"at": 1, "source": "request"}, {"at": 2, "source": "request"}], [{"at": 0, "source": "request"}, {"at": 1, "source": "request"}, {"at": 2, "source": "drain"}, {"at": 3, "source": "request"}], [{"at": 0, "source": "drain"}, {"at": 1, "source": "request"}], [{"at": 0, "source": "request"}, {"at": 0, "source": "request"}, {"at": 0, "source": "drain"}, {"at": 0, "source": "request"}]], "limits": {"max_program_bytes": 8192, "max_state_cells": 4, "max_steps": 192, "max_queue": 16, "max_scheduled_events": 8}},
+    "metric_bounds": {"worst_latency": 4, "live_state_cells": 4},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [], "rules": [], "projection": {"id": "pulse.backpressure", "rows": []},
+  "worked_value": {"input": ["request", "request", "request", "drain", "request"], "admitted": [1, 2, 5], "note": "The third request is rejected at depth two. The drain releases one slot, so the fifth command is admitted."},
+  "story": {"premise": "Once the bridge schedule is published, every department begins sending work into one two-slot handoff queue. A rejected request was never queued, and a drain from an empty queue cannot create future capacity. The controller must exert real backpressure while preserving each admitted command's public identity.", "submission": "Submit a bounded PULSE controller that admits exactly when current depth is below two, decrements only effective drains, and emits with zero added latency.", "diagnostics": "The exhaustive domain distinguishes over-admission, phantom debit on rejection, underflow on empty drain, ignored drain, delayed output, and payload substitution.", "hints": ["One bounded integer is sufficient.", "Test capacity before changing state.", "A drain changes depth only when depth is positive."]}
+}

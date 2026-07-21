@@ -1,0 +1,62 @@
+{
+  "format": "afterimage-scope/0.1",
+  "title": "Afterimage: The Counterfactual City",
+  "total_cases": 75,
+  "total_nominal_points": 10000,
+  "completion_percent": 65,
+  "families": [
+    {
+      "id": "ORIENT",
+      "cases": 5,
+      "nominal_points": 300,
+      "role": "onboarding and engine semantics"
+    },
+    {
+      "id": "CASCADE",
+      "cases": 24,
+      "nominal_points": 2400,
+      "role": "interactive counterfactual incident planning"
+    },
+    {
+      "id": "MERGE",
+      "cases": 15,
+      "nominal_points": 1700,
+      "role": "causal reconstruction from inconsistent logs"
+    },
+    {
+      "id": "PULSE",
+      "cases": 14,
+      "nominal_points": 1700,
+      "role": "minimal deterministic stream transducers"
+    },
+    {
+      "id": "MOSAIC",
+      "cases": 11,
+      "nominal_points": 1300,
+      "role": "topology reconstruction from partial transformed fragments"
+    },
+    {
+      "id": "LENS",
+      "cases": 3,
+      "nominal_points": 1300,
+      "role": "large bidirectional synchronization programs"
+    },
+    {
+      "id": "COVENANT",
+      "cases": 2,
+      "nominal_points": 1000,
+      "role": "asynchronous local-policy synthesis"
+    },
+    {
+      "id": "PARADOX",
+      "cases": 1,
+      "nominal_points": 300,
+      "role": "final non-uniqueness countermodel"
+    }
+  ],
+  "vertical_slice": {
+    "manifest": "vertical_slice.json",
+    "cases": 12,
+    "nominal_points": 1200
+  }
+}

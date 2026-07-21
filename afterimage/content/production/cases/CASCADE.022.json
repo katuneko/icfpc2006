@@ -1,0 +1,327 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.022",
+    "family": "CASCADE",
+    "title": "Rule of Least Change",
+    "points": 110,
+    "reference_scale": 1550000,
+    "requires": {
+      "all": [
+        "case:CASCADE.021"
+      ]
+    },
+    "projection": "incident.rule-of-least-change",
+    "validator_template": "cascade-multi-contract-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": [
+        "replace",
+        "retime"
+      ],
+      "max_operations": 2,
+      "weights": {
+        "replace": 1,
+        "retime": 3
+      },
+      "topics": [
+        "hearing.policy",
+        "hearing.disclosure",
+        "hearing.audit-time"
+      ],
+      "pointers": [
+        "/payload/route",
+        "/payload/disclosure"
+      ],
+      "retime": {
+        "minimum": 21,
+        "maximum": 23
+      }
+    },
+    "author_operations": [
+      {
+        "kind": "replace",
+        "target_topic": "hearing.policy",
+        "pointer": "/payload/route",
+        "value": "surface"
+      }
+    ],
+    "diagnostic_topics": [
+      "contract.violation"
+    ],
+    "metric_bounds": {
+      "causal_footprint": 48,
+      "witness_units": 64
+    },
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {
+        "max_base_events": 8,
+        "max_derived_events": 12,
+        "max_bindings_tested": 256,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "topic": "hearing.constraints",
+      "at": 21,
+      "payload": {
+        "incident": "CITY-19",
+        "hot": true,
+        "public_deadline": 22
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "hearing-rules",
+        "sequence": 2
+      }
+    },
+    {
+      "topic": "hearing.policy",
+      "at": 23,
+      "payload": {
+        "incident": "CITY-19",
+        "route": "underground"
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "continuity-office",
+        "sequence": 22
+      }
+    },
+    {
+      "topic": "hearing.disclosure",
+      "at": 23,
+      "payload": {"incident": "CITY-19", "disclosure": "sealed"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "public-ledger", "sequence": 22}
+    },
+    {
+      "topic": "hearing.audit-time",
+      "at": 23,
+      "payload": {"incident": "CITY-19", "filing": "N-22"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "audit-clock", "sequence": 22}
+    }
+  ],
+  "rules": [
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "least-change.01-contract",
+        "positive": [
+          {
+            "alias": "c",
+            "topic": "hearing.constraints",
+            "where": [
+              "const",
+              true
+            ]
+          },
+          {
+            "alias": "p",
+            "topic": "hearing.policy",
+            "where": [
+              "eq",
+              [
+                "get",
+                "p",
+                "/payload/incident"
+              ],
+              [
+                "get",
+                "c",
+                "/payload/incident"
+              ]
+            ]
+          },
+          {
+            "alias": "d",
+            "topic": "hearing.disclosure",
+            "where": ["eq", ["get", "d", "/payload/incident"], ["get", "c", "/payload/incident"]]
+          },
+          {
+            "alias": "a",
+            "topic": "hearing.audit-time",
+            "where": ["eq", ["get", "a", "/payload/incident"], ["get", "c", "/payload/incident"]]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": [
+          "const",
+          true
+        ],
+        "emit": [
+          {
+            "topic": [
+              "const",
+              "contract.summary"
+            ],
+            "at": [
+              "get",
+              "p",
+              "/at"
+            ],
+            "payload": [
+              "map",
+              "safe",
+              [
+                "or",
+                [
+                  "eq",
+                  [
+                    "get",
+                    "p",
+                    "/payload/route"
+                  ],
+                  [
+                    "const",
+                    "surface"
+                  ]
+                ],
+                [
+                  "and",
+                  [
+                    "eq",
+                    [
+                      "get",
+                      "d",
+                      "/payload/disclosure"
+                    ],
+                    [
+                      "const",
+                      "public"
+                    ]
+                  ],
+                  [
+                    "le",
+                    [
+                      "get",
+                      "a",
+                      "/at"
+                    ],
+                    [
+                      "get",
+                      "c",
+                      "/payload/public_deadline"
+                    ]
+                  ]
+                ]
+              ],
+              "incident",
+              [
+                "get",
+                "c",
+                "/payload/incident"
+              ],
+              "route",
+              [
+                "get",
+                "p",
+                "/payload/route"
+              ],
+              "disclosure",
+              [
+                "get",
+                "d",
+                "/payload/disclosure"
+              ],
+              "policy_at",
+              [
+                "get",
+                "a",
+                "/at"
+              ],
+              "hot",
+              [
+                "get",
+                "c",
+                "/payload/hot"
+              ]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "id": "incident.rule-of-least-change",
+    "rows": [
+      {
+        "positive": [
+          {
+            "alias": "s",
+            "topic": "contract.summary",
+            "where": [
+              "const",
+              true
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": [
+          "const",
+          true
+        ],
+        "value": [
+          "get",
+          "s",
+          "/payload"
+        ],
+        "sort": []
+      }
+    ]
+  },
+  "worked_value": {
+    "optimal": [
+      {
+        "kind": "replace",
+        "field": "route",
+        "value": "surface",
+        "weight": 1
+      }
+    ],
+    "valid_but_costly": [
+      {
+        "kind": "replace",
+        "field": "disclosure",
+        "value": "public",
+        "weight": 1
+      },
+      {
+        "kind": "retime",
+        "at": 22,
+        "weight": 3
+      }
+    ],
+    "note": "One physical-route correction satisfies the contract; repairing disclosure and time separately is valid but globally worse."
+  },
+  "story": {
+    "premise": "The hearing now sees three apparent defects: an underground route, sealed disclosure, and a late policy tick. A local checklist would repair all three. The public contract, however, is disjunctive: changing the physical route alone removes the hazard; the disclosure path needs both publication and retiming.",
+    "submission": "Find the globally least-weight safe intervention, not one repair per symptom. Preserve fields that no longer need modification.",
+    "diagnostics": "The score composes intervention weights before causal footprint and witness size. The two-operation disclosure repair remains valid but cannot beat the one-field route repair.",
+    "hints": [
+      "Read the contract as logic, not prose.",
+      "A safe disjunct can make other edits unnecessary.",
+      "Least change is measured over the whole branch."
+    ]
+  }
+}

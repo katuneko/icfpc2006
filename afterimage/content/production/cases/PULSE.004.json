@@ -1,0 +1,64 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.004",
+    "family": "PULSE",
+    "title": "Token Window",
+    "points": 100,
+    "reference_scale": 350000,
+    "requires": {"all": ["case:PULSE.003"]},
+    "projection": "pulse.token-window",
+    "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [
+        {"name": "tokens", "type": "int", "initial": 2},
+        {"name": "last_at", "type": "int", "initial": 0}
+      ],
+      "handlers": [
+        {
+          "id": "pulse.on-request",
+          "on": "feeder.raw-request",
+          "actions": [
+            {"op": "set", "cell": "tokens", "value": ["min", ["const", 2], ["add", ["cell", "tokens"], ["mul", ["sub", ["event", "at"], ["cell", "last_at"]], ["const", 1]]]]},
+            {"op": "set", "cell": "last_at", "value": ["event", "at"]},
+            {"op": "when", "condition": ["le", ["const", 1], ["cell", "tokens"]], "actions": [
+              {"op": "emit", "topic": "feeder.admitted-request", "payload": ["event", "payload"]},
+              {"op": "set", "cell": "tokens", "value": ["sub", ["cell", "tokens"], ["const", 1]]}
+            ]}
+          ]
+        }
+      ]
+    },
+    "author_invariant": "Before each canonically ordered request, tokens equal the previous remainder plus elapsed refill, clamped to two. Admission is the only transition that decrements tokens, so rejected work cannot create a ghost debit.",
+    "pulse_contract": {
+      "task": "token-bucket",
+      "input_topic": "feeder.raw-request",
+      "timer_topic": "pulse.timer",
+      "output_topic": "feeder.admitted-request",
+      "capacity": 2,
+      "initial_tokens": 2,
+      "refill_per_tick": 1,
+      "horizon": 6,
+      "max_requests": 6,
+      "named_fixtures": [[0, 0, 0], [0, 0, 0, 1], [0, 0, 3, 3, 3], [0, 1, 1, 1, 2, 2]],
+      "limits": {"max_program_bytes": 8192, "max_state_cells": 8, "max_steps": 128, "max_queue": 16, "max_scheduled_events": 8}
+    },
+    "metric_bounds": {"worst_latency": 8, "live_state_cells": 8},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [],
+  "rules": [],
+  "projection": {"id": "pulse.token-window", "rows": []},
+  "worked_value": {"input": [0, 0, 0, 1], "admitted_sequences": [0, 2, 3], "note": "Source EventId order admits sequences 0 and 2 at tick zero; the rejected copy consumes no credit, so sequence 3 is admitted after one refill."},
+  "story": {
+    "premise": "After Borrowed Pressure, the feeder office replaces ad-hoc reservations with a two-token admission window that refills one token per tick. Every accepted request must retain its canonical source payload. Bursts beyond capacity are rejected, and rejected work must not consume future credit.",
+    "submission": "Submit a canonical PULSE 0.1 program and, optionally, a short invariant note. Admission is immediate and must preserve the original request payload.",
+    "diagnostics": "The verifier exhaustively checks all 924 nondecreasing zero-to-six-request streams over six ticks, including same-tick bursts, idle refill with capacity clamping, and admission immediately after rejection.",
+    "hints": ["Refill before deciding the current request, then update the last-seen tick.", "Clamp after an idle gap; accumulated credit can never exceed two.", "Only the admitted branch decrements the bucket. A rejected request changes time but not tokens."]
+  }
+}

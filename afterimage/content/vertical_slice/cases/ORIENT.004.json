@@ -1,0 +1,173 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "ORIENT.004",
+    "family": "ORIENT",
+    "title": "The Road Not Taken",
+    "points": 70,
+    "reference_scale": 32,
+    "requires": {"any": ["case:ORIENT.002", "case:ORIENT.003"]},
+    "projection": "desk.maintenance-impact",
+    "validator_template": "orient-branch-claim/0.1",
+    "retime_topic": "rail.maintenance-notice",
+    "retime_at": 12,
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {
+        "max_base_events": 16,
+        "max_derived_events": 32,
+        "max_bindings_tested": 4096,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 16
+      },
+      "validator": {
+        "max_base_events": 64,
+        "max_derived_events": 32,
+        "max_bindings_tested": 4096,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "label": "maintenance-notice",
+      "body": {
+        "topic": "rail.maintenance-notice",
+        "at": 10,
+        "payload": {"route": "M-4", "work": "switch-inspection"},
+        "parents": [],
+        "origin": {"kind": "base", "source": "maintenance-desk", "sequence": 7}
+      }
+    },
+    {
+      "label": "dispatch-snapshot",
+      "body": {
+        "topic": "rail.dispatch-snapshot",
+        "at": 11,
+        "payload": {"route": "M-4", "closure_cutoff": 11, "service_day": "tomorrow"},
+        "parents": [],
+        "origin": {"kind": "base", "source": "dispatch-plan", "sequence": 0}
+      }
+    }
+  ],
+  "rules": [
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "maintenance.01-close-before-cutoff",
+        "positive": [
+          {"alias": "n", "topic": "rail.maintenance-notice", "where": ["const", true]},
+          {
+            "alias": "s",
+            "topic": "rail.dispatch-snapshot",
+            "where": ["eq", ["get", "s", "/payload/route"], ["get", "n", "/payload/route"]]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["le", ["get", "n", "/at"], ["get", "s", "/payload/closure_cutoff"]],
+        "emit": [
+          {
+            "topic": ["const", "rail.maintenance-closure"],
+            "at": ["get", "s", "/payload/closure_cutoff"],
+            "payload": ["map", "route", ["get", "s", "/payload/route"], "reason", ["get", "n", "/payload/work"]],
+            "parents": []
+          }
+        ]
+      }
+    },
+    {
+      "stratum": 1,
+      "rule": {
+        "id": "maintenance.02-block-line",
+        "positive": [
+          {"alias": "c", "topic": "rail.maintenance-closure", "where": ["const", true]}
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "rail.line-blocked"],
+            "at": ["get", "c", "/at"],
+            "payload": ["map", "route", ["get", "c", "/payload/route"], "scope", ["const", "full-line"]],
+            "parents": []
+          }
+        ]
+      }
+    },
+    {
+      "stratum": 2,
+      "rule": {
+        "id": "maintenance.03-cancel-departures",
+        "positive": [
+          {"alias": "b", "topic": "rail.line-blocked", "where": ["const", true]}
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "rail.service-cancelled"],
+            "at": ["get", "b", "/at"],
+            "payload": ["map", "trip", ["const", "M4-17"], "reason", ["const", "line-blocked"]],
+            "parents": []
+          },
+          {
+            "topic": ["const", "rail.service-cancelled"],
+            "at": ["get", "b", "/at"],
+            "payload": ["map", "trip", ["const", "M4-18"], "reason", ["const", "line-blocked"]],
+            "parents": []
+          },
+          {
+            "topic": ["const", "rail.service-cancelled"],
+            "at": ["get", "b", "/at"],
+            "payload": ["map", "trip", ["const", "M4-19"], "reason", ["const", "line-blocked"]],
+            "parents": []
+          }
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "id": "desk.maintenance-impact",
+    "rows": [
+      {
+        "positive": [
+          {"alias": "c", "topic": "rail.service-cancelled", "where": ["const", true]}
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "value": [
+          "map",
+          "trip", ["get", "c", "/payload/trip"],
+          "at", ["get", "c", "/at"],
+          "reason", ["get", "c", "/payload/reason"]
+        ],
+        "sort": [["get", "c", "/payload/trip"]]
+      }
+    ]
+  },
+  "worked_value": {
+    "kind": "retime",
+    "event": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "at": 99,
+    "note": "shape example only"
+  },
+  "story": {
+    "premise": "A maintenance notice admitted before the dispatch cutoff closes line M-4 and cancels three departures. Move that base notice two ticks later and recompute the city instead of editing any consequence.",
+    "submission": "Submit the canonical retime intervention, resulting branch ID, root and candidate impact records, exact changed EventId set, and candidate projection digest.",
+    "diagnostics": "A direct operation on a derived closure or cancellation is rejected with its nearest active base ancestors; answer mismatches never reveal the expected branch.",
+    "hints": [
+      "The maintenance notice, not the closure, is the intervenable cause.",
+      "A retime suppresses the original base event and injects a player-origin replacement.",
+      "Discard all derived events in both worlds before taking the symmetric difference."
+    ]
+  }
+}

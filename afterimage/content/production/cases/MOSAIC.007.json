@@ -1,0 +1,38 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MOSAIC.007", "family": "MOSAIC", "title": "Timestamp Gauge", "points": 120, "reference_scale": 650000,
+    "requires": {"all": ["case:MOSAIC.006", "case:MERGE.009"]},
+    "projection": "mosaic.timestamp-gauge", "validator_template": "mosaic-graph-claim/0.1",
+    "author_answer": {
+      "global": {"vertices": [
+        {"id": "v0", "x": 0, "y": 0}, {"id": "v1", "x": 1, "y": 0}, {"id": "v2", "x": 2, "y": 0},
+        {"id": "v3", "x": 0, "y": 1}, {"id": "v4", "x": 1, "y": 1}, {"id": "v5", "x": 2, "y": 1},
+        {"id": "v6", "x": 0, "y": 2}, {"id": "v7", "x": 1, "y": 2}, {"id": "v8", "x": 2, "y": 2}
+      ], "edges": [
+        {"a": "v0", "b": "v1", "material": "conduit", "level": "T"}, {"a": "v0", "b": "v3", "material": "conduit", "level": "T"},
+        {"a": "v1", "b": "v2", "material": "conduit", "level": "T"}, {"a": "v1", "b": "v4", "material": "conduit", "level": "T"},
+        {"a": "v2", "b": "v5", "material": "conduit", "level": "T"}, {"a": "v3", "b": "v4", "material": "conduit", "level": "T"},
+        {"a": "v3", "b": "v6", "material": "conduit", "level": "T"}, {"a": "v4", "b": "v5", "material": "conduit", "level": "T"},
+        {"a": "v4", "b": "v7", "material": "conduit", "level": "T"}, {"a": "v5", "b": "v8", "material": "conduit", "level": "T"},
+        {"a": "v6", "b": "v7", "material": "conduit", "level": "T"}, {"a": "v7", "b": "v8", "material": "conduit", "level": "T"}
+      ]},
+      "used": [
+        {"fragment": "F-SCAN-WEST", "transform": "r0", "mapping": [{"local": "w00", "global": "v0"}, {"local": "w10", "global": "v1"}, {"local": "w01", "global": "v3"}, {"local": "w11", "global": "v4"}, {"local": "w02", "global": "v6"}, {"local": "w12", "global": "v7"}]},
+        {"fragment": "F-SCAN-EAST", "transform": "r0", "mapping": [{"local": "e00", "global": "v1"}, {"local": "e10", "global": "v2"}, {"local": "e01", "global": "v4"}, {"local": "e11", "global": "v5"}, {"local": "e02", "global": "v7"}, {"local": "e12", "global": "v8"}]}
+      ],
+      "unused": []
+    },
+    "mosaic_contract": {"width": 3, "height": 3, "timestamp_gauge": {"formula": "row-major-v1"}},
+    "metric_bounds": {"graph_size": 64, "certificate_units": 64},
+    "limits": {"max_witness_bytes": 262144, "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 16}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 8}}
+  },
+  "events": [
+    {"topic": "mosaic.fragment", "at": 1, "payload": {"id": "F-SCAN-WEST", "weight": 8, "time_offset": 100, "vertices": [{"name": "w00", "x": 0, "y": 0, "observed_at": 100}, {"name": "w10", "x": 1, "y": 0, "observed_at": 101}, {"name": "w01", "x": 0, "y": 1, "observed_at": 103}, {"name": "w11", "x": 1, "y": 1, "observed_at": 104}, {"name": "w02", "x": 0, "y": 2, "observed_at": 106}, {"name": "w12", "x": 1, "y": 2, "observed_at": 107}], "edges": [{"a": "w00", "b": "w10", "material": "conduit", "level": "T"}, {"a": "w00", "b": "w01", "material": "conduit", "level": "T"}, {"a": "w10", "b": "w11", "material": "conduit", "level": "T"}, {"a": "w01", "b": "w11", "material": "conduit", "level": "T"}, {"a": "w01", "b": "w02", "material": "conduit", "level": "T"}, {"a": "w11", "b": "w12", "material": "conduit", "level": "T"}, {"a": "w02", "b": "w12", "material": "conduit", "level": "T"}]}, "parents": [], "origin": {"kind": "base", "source": "west-scan", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 2, "payload": {"id": "F-SCAN-EAST", "weight": 8, "time_offset": 200, "vertices": [{"name": "e00", "x": 0, "y": 0, "observed_at": 201}, {"name": "e10", "x": 1, "y": 0, "observed_at": 202}, {"name": "e01", "x": 0, "y": 1, "observed_at": 204}, {"name": "e11", "x": 1, "y": 1, "observed_at": 205}, {"name": "e02", "x": 0, "y": 2, "observed_at": 207}, {"name": "e12", "x": 1, "y": 2, "observed_at": 208}], "edges": [{"a": "e00", "b": "e10", "material": "conduit", "level": "T"}, {"a": "e00", "b": "e01", "material": "conduit", "level": "T"}, {"a": "e10", "b": "e11", "material": "conduit", "level": "T"}, {"a": "e01", "b": "e11", "material": "conduit", "level": "T"}, {"a": "e01", "b": "e02", "material": "conduit", "level": "T"}, {"a": "e11", "b": "e12", "material": "conduit", "level": "T"}, {"a": "e02", "b": "e12", "material": "conduit", "level": "T"}]}, "parents": [], "origin": {"kind": "base", "source": "east-scan", "sequence": 1}}
+  ],
+  "rules": [],
+  "projection": {"id": "mosaic.timestamp-gauge", "rows": [{"positive": [{"alias": "f", "topic": "mosaic.fragment", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "f", "/payload"], "sort": [["get", "f", "/payload/id"]]}]},
+  "worked_value": {"formula": "observed_at = time_offset + y*3 + x", "west_origin": 100, "east_origin": 201, "note": "Uniform conduit topology cannot distinguish translations. The row-major scan clocks place the west and east strips absolutely and make their shared column agree."},
+  "story": {"premise": "The flood conduits are visually uniform, so topology alone allows each two-column scan to slide or turn across the square. Every sampled junction also retained its scanner tick. After subtracting the fragment clock offset, those ticks must equal the row-major global gauge index.", "submission": "Submit the canonical conduit graph and fragment mappings that satisfy both attributed topology and every public scanner timestamp.", "diagnostics": "The verifier distinguishes a geometric mismatch from a geometrically valid placement that violates the timestamp gauge.", "hints": ["First enumerate ordinary D4 embeddings.", "For each mapped vertex compute y*3+x.", "The two scans must agree on the middle column despite different clock offsets."]}
+}

@@ -1,0 +1,406 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "ORIENT.002",
+    "family": "ORIENT",
+    "title": "No Effect Before Cause",
+    "points": 50,
+    "reference_scale": 24,
+    "requires": {"all": ["case:ORIENT.001"]},
+    "projection": "desk.replay-audit",
+    "validator_template": "orient-replay-claim/0.1",
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {
+        "max_base_events": 64,
+        "max_derived_events": 128,
+        "max_bindings_tested": 32768,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 64
+      },
+      "validator": {
+        "max_base_events": 256,
+        "max_derived_events": 64,
+        "max_bindings_tested": 16384,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "label": "record-a",
+      "body": {
+        "topic": "platform.record",
+        "at": 100,
+        "payload": {"key": "A", "kind": "inspection", "node": "NORTH"},
+        "parents": [],
+        "origin": {"kind": "base", "source": "city-ledger", "sequence": 0}
+      }
+    },
+    {
+      "label": "record-b",
+      "body": {
+        "topic": "platform.record",
+        "at": 100,
+        "payload": {"key": "B", "kind": "edge", "from": "NORTH", "to": "NORTH-2"},
+        "parents": ["@record-a"],
+        "origin": {"kind": "base", "source": "city-ledger", "sequence": 1}
+      }
+    },
+    {
+      "label": "record-c",
+      "body": {
+        "topic": "platform.record",
+        "at": 101,
+        "payload": {"key": "C", "kind": "arrival", "node": "NORTH-2"},
+        "parents": ["@record-b"],
+        "origin": {"kind": "base", "source": "city-ledger", "sequence": 2}
+      }
+    },
+    {
+      "label": "record-d",
+      "body": {
+        "topic": "platform.record",
+        "at": 100,
+        "payload": {"key": "D", "kind": "inspection", "node": "SOUTH"},
+        "parents": [],
+        "origin": {"kind": "base", "source": "city-ledger", "sequence": 3}
+      }
+    },
+    {
+      "label": "record-e",
+      "body": {
+        "topic": "platform.record",
+        "at": 101,
+        "payload": {"key": "E", "kind": "edge", "from": "SOUTH", "to": "SOUTH-2"},
+        "parents": ["@record-d"],
+        "origin": {"kind": "base", "source": "city-ledger", "sequence": 4}
+      }
+    },
+    {
+      "label": "record-f",
+      "body": {
+        "topic": "platform.record",
+        "at": 102,
+        "payload": {"key": "F", "kind": "arrival", "node": "SOUTH-2"},
+        "parents": ["@record-e"],
+        "origin": {"kind": "base", "source": "city-ledger", "sequence": 5}
+      }
+    },
+    {
+      "topic": "audit.proposal",
+      "at": 200,
+      "payload": {"proposal": "effect-first", "kind": "parent-order", "expected_index": 0},
+      "parents": [],
+      "origin": {"kind": "base", "source": "audit-desk", "sequence": 0}
+    },
+    {
+      "topic": "audit.step",
+      "at": 200,
+      "payload": {"proposal": "effect-first", "index": 0, "kind": "event", "event": "@record-c"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "audit-desk", "sequence": 1}
+    },
+    {
+      "topic": "audit.step",
+      "at": 200,
+      "payload": {"proposal": "effect-first", "index": 1, "kind": "event", "event": "@record-b"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "audit-desk", "sequence": 2}
+    },
+    {
+      "topic": "audit.proposal",
+      "at": 201,
+      "payload": {"proposal": "unstable-tie", "kind": "tie-break", "expected_index": 0},
+      "parents": [],
+      "origin": {"kind": "base", "source": "audit-desk", "sequence": 3}
+    },
+    {
+      "topic": "audit.step",
+      "at": 201,
+      "payload": {"proposal": "unstable-tie", "index": 0, "kind": "event", "event": "@record-a"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "audit-desk", "sequence": 4}
+    },
+    {
+      "topic": "audit.step",
+      "at": 201,
+      "payload": {"proposal": "unstable-tie", "index": 1, "kind": "event", "event": "@record-d"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "audit-desk", "sequence": 5}
+    },
+    {
+      "topic": "audit.proposal",
+      "at": 202,
+      "payload": {"proposal": "one-pass", "kind": "fixed-point", "terminal": "SOUTH-2", "expected_index": 1},
+      "parents": [],
+      "origin": {"kind": "base", "source": "audit-desk", "sequence": 6}
+    },
+    {
+      "topic": "audit.step",
+      "at": 202,
+      "payload": {"proposal": "one-pass", "index": 0, "kind": "fact", "fact": "reachable:SOUTH"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "audit-desk", "sequence": 7}
+    }
+  ],
+  "rules": [
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "platform.01-inspection-justifies",
+        "positive": [
+          {
+            "alias": "r",
+            "topic": "platform.record",
+            "where": ["eq", ["get", "r", "/payload/kind"], ["const", "inspection"]]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "platform.justified"],
+            "at": ["get", "r", "/at"],
+            "payload": ["map", "node", ["get", "r", "/payload/node"]],
+            "parents": []
+          }
+        ]
+      }
+    },
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "audit.01-parent-not-active",
+        "positive": [
+          {"alias": "s1", "topic": "audit.step", "where": ["eq", ["get", "s1", "/payload/kind"], ["const", "event"]]},
+          {
+            "alias": "s2",
+            "topic": "audit.step",
+            "where": [
+              "and",
+              ["eq", ["get", "s2", "/payload/proposal"], ["get", "s1", "/payload/proposal"]],
+              ["lt", ["get", "s1", "/payload/index"], ["get", "s2", "/payload/index"]]
+            ]
+          },
+          {"alias": "child", "topic": "platform.record", "where": ["eq", ["get", "child", "/id"], ["get", "s1", "/payload/event"]]},
+          {
+            "alias": "parent",
+            "topic": "platform.record",
+            "where": [
+              "and",
+              ["eq", ["get", "parent", "/id"], ["get", "s2", "/payload/event"]],
+              ["contains", ["get", "child", "/parents"], ["get", "parent", "/id"]]
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [["s1", "s2"], ["child", "parent"]],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "audit.replay-error"],
+            "at": ["max", ["get", "s1", "/at"], ["get", "s2", "/at"]],
+            "payload": [
+              "map",
+              "proposal", ["get", "s1", "/payload/proposal"],
+              "index", ["get", "s1", "/payload/index"],
+              "code", ["const", "parent_not_active"],
+              "pair", ["list", ["get", "child", "/payload/key"], ["get", "parent", "/payload/key"]]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    },
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "audit.02-wrong-tie-break",
+        "positive": [
+          {"alias": "s1", "topic": "audit.step", "where": ["eq", ["get", "s1", "/payload/kind"], ["const", "event"]]},
+          {
+            "alias": "s2",
+            "topic": "audit.step",
+            "where": [
+              "and",
+              ["eq", ["get", "s2", "/payload/proposal"], ["get", "s1", "/payload/proposal"]],
+              ["eq", ["get", "s2", "/payload/index"], ["add", ["get", "s1", "/payload/index"], ["const", 1]]]
+            ]
+          },
+          {"alias": "left", "topic": "platform.record", "where": ["eq", ["get", "left", "/id"], ["get", "s1", "/payload/event"]]},
+          {
+            "alias": "right",
+            "topic": "platform.record",
+            "where": [
+              "and",
+              ["eq", ["get", "right", "/id"], ["get", "s2", "/payload/event"]],
+              ["eq", ["get", "left", "/at"], ["get", "right", "/at"]],
+              ["gt", ["get", "left", "/id"], ["get", "right", "/id"]],
+              ["not", ["contains", ["get", "left", "/parents"], ["get", "right", "/id"]]],
+              ["not", ["contains", ["get", "right", "/parents"], ["get", "left", "/id"]]]
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [["s1", "s2"], ["left", "right"]],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "audit.replay-error"],
+            "at": ["max", ["get", "s1", "/at"], ["get", "s2", "/at"]],
+            "payload": [
+              "map",
+              "proposal", ["get", "s1", "/payload/proposal"],
+              "index", ["get", "s1", "/payload/index"],
+              "code", ["const", "wrong_tie_break"],
+              "pair", ["list", ["get", "left", "/payload/key"], ["get", "right", "/payload/key"]]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    },
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "audit.03-fixed-point-incomplete",
+        "positive": [
+          {"alias": "p", "topic": "audit.proposal", "where": ["eq", ["get", "p", "/payload/kind"], ["const", "fixed-point"]]}
+        ],
+        "negative": [
+          {
+            "alias": "s",
+            "topic": "audit.step",
+            "where": [
+              "and",
+              ["eq", ["get", "s", "/payload/proposal"], ["get", "p", "/payload/proposal"]],
+              ["eq", ["get", "s", "/payload/kind"], ["const", "fact"]],
+              ["eq", ["get", "s", "/payload/fact"], ["concat", ["const", "reachable:"], ["get", "p", "/payload/terminal"]]]
+            ]
+          }
+        ],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "audit.replay-error"],
+            "at": ["get", "p", "/at"],
+            "payload": [
+              "map",
+              "proposal", ["get", "p", "/payload/proposal"],
+              "index", ["get", "p", "/payload/expected_index"],
+              "code", ["const", "fixed_point_incomplete"],
+              "pair", ["list", ["get", "p", "/payload/terminal"]]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    },
+    {
+      "stratum": 1,
+      "rule": {
+        "id": "platform.02-justified-is-reachable",
+        "positive": [
+          {"alias": "j", "topic": "platform.justified", "where": ["const", true]}
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "platform.reachable"],
+            "at": ["get", "j", "/at"],
+            "payload": ["map", "node", ["get", "j", "/payload/node"]],
+            "parents": []
+          }
+        ]
+      }
+    },
+    {
+      "stratum": 1,
+      "rule": {
+        "id": "platform.03-propagate-reachability",
+        "positive": [
+          {"alias": "r", "topic": "platform.reachable", "where": ["const", true]},
+          {
+            "alias": "e",
+            "topic": "platform.record",
+            "where": [
+              "and",
+              ["eq", ["get", "e", "/payload/kind"], ["const", "edge"]],
+              ["eq", ["get", "e", "/payload/from"], ["get", "r", "/payload/node"]]
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "platform.reachable"],
+            "at": ["max", ["get", "r", "/at"], ["get", "e", "/at"]],
+            "payload": ["map", "node", ["get", "e", "/payload/to"]],
+            "parents": []
+          }
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "id": "desk.replay-audit",
+    "rows": [
+      {
+        "positive": [
+          {"alias": "e", "topic": "audit.replay-error", "where": ["const", true]}
+        ],
+        "negative": [],
+        "aggregate": [
+          {
+            "name": "first",
+            "op": "min",
+            "alias": "other",
+            "topic": "audit.replay-error",
+            "where": ["eq", ["get", "other", "/payload/proposal"], ["get", "e", "/payload/proposal"]],
+            "value": ["get", "other", "/payload/index"]
+          }
+        ],
+        "distinct": [],
+        "guard": ["eq", ["get", "e", "/payload/index"], ["aggregate", "first"]],
+        "value": [
+          "map",
+          "proposal", ["get", "e", "/payload/proposal"],
+          "index", ["get", "e", "/payload/index"],
+          "code", ["get", "e", "/payload/code"],
+          "pair", ["get", "e", "/payload/pair"]
+        ],
+        "sort": [["get", "e", "/payload/proposal"]]
+      }
+    ]
+  },
+  "worked_value": {
+    "proposal": "example-only",
+    "index": 7,
+    "code": "not_a_real_diagnostic",
+    "pair": []
+  },
+  "story": {
+    "premise": "Three operators propose replay orders for six platform records. Audit each proposal against causal parents, the canonical same-time tie-break, and the least fixed point of reachability.",
+    "submission": "Submit the complete canonical replay trace EventId sequence, the three first-error records exposed by the desk projection, and that projection's digest.",
+    "diagnostics": "The verifier distinguishes schema, trace, record, and digest failures without revealing the expected replay.",
+    "hints": [
+      "An equal logical time does not make a child independent of its parent.",
+      "Independent equal-time events are ordered by raw EventId bytes.",
+      "Positive recursion runs until no new reachable fact can be derived."
+    ]
+  }
+}

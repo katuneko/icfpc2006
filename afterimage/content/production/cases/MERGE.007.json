@@ -1,0 +1,34 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.007", "family": "MERGE", "title": "Clock Islands", "points": 110, "reference_scale": 5000,
+    "requires": {"all": ["case:MERGE.006", "case:CASCADE.011"]},
+    "projection": "merge.clock-islands", "validator_template": "merge-offset-certificate-claim/0.1",
+    "merge_contract": {"task": "offset-domains", "domain_field": "clock_domain", "minimum_domains": 2, "minimum_records_per_domain": 3},
+    "author_answer": {
+      "accepted": [{"key": "N1", "at": 4}, {"key": "S1", "at": 5}, {"key": "N2", "at": 7}, {"key": "S2", "at": 8}, {"key": "N3", "at": 10}, {"key": "S3", "at": 11}],
+      "rejected": [],
+      "certificate": [
+        {"before": "N1", "after": "S1", "minimum_gap": 1}, {"before": "S1", "after": "N2", "minimum_gap": 1},
+        {"before": "N2", "after": "S2", "minimum_gap": 1}, {"before": "S2", "after": "N3", "minimum_gap": 1},
+        {"before": "N3", "after": "S3", "minimum_gap": 1}, {"before": "N1", "after": "N2", "minimum_gap": 1},
+        {"before": "N2", "after": "N3", "minimum_gap": 1}, {"before": "S1", "after": "S2", "minimum_gap": 1},
+        {"before": "S2", "after": "S3", "minimum_gap": 1}
+      ]
+    },
+    "metric_bounds": {"temporal_displacement": 24, "certificate_units": 64},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"label": "N1", "body": {"topic": "merge.record", "at": 4, "payload": {"key": "N1", "local_time": 104, "offset_min": 99, "offset_max": 101, "source": "north-bridge", "sequence": 1, "weight": 6, "clock_domain": "north", "kind": "wind-sample"}, "parents": [], "origin": {"kind": "base", "source": "north-bridge", "sequence": 1}}},
+    {"label": "S1", "body": {"topic": "merge.record", "at": 5, "payload": {"key": "S1", "local_time": -45, "offset_min": -51, "offset_max": -49, "source": "hospital-route", "sequence": 1, "weight": 6, "clock_domain": "south", "kind": "dispatch"}, "parents": ["@N1"], "origin": {"kind": "base", "source": "hospital-route", "sequence": 1}}},
+    {"label": "N2", "body": {"topic": "merge.record", "at": 7, "payload": {"key": "N2", "local_time": 107, "offset_min": 99, "offset_max": 101, "source": "north-bridge", "sequence": 2, "weight": 7, "clock_domain": "north", "kind": "wind-clearing"}, "parents": ["@S1"], "origin": {"kind": "base", "source": "north-bridge", "sequence": 2}}},
+    {"label": "S2", "body": {"topic": "merge.record", "at": 8, "payload": {"key": "S2", "local_time": -42, "offset_min": -51, "offset_max": -49, "source": "hospital-route", "sequence": 2, "weight": 7, "clock_domain": "south", "kind": "open-authorized"}, "parents": ["@N2"], "origin": {"kind": "base", "source": "hospital-route", "sequence": 2}}},
+    {"label": "N3", "body": {"topic": "merge.record", "at": 10, "payload": {"key": "N3", "local_time": 110, "offset_min": 99, "offset_max": 101, "source": "north-bridge", "sequence": 3, "weight": 8, "clock_domain": "north", "kind": "bridge-ready"}, "parents": ["@S2"], "origin": {"kind": "base", "source": "north-bridge", "sequence": 3}}},
+    {"label": "S3", "body": {"topic": "merge.record", "at": 11, "payload": {"key": "S3", "local_time": -39, "offset_min": -51, "offset_max": -49, "source": "hospital-route", "sequence": 3, "weight": 8, "clock_domain": "south", "kind": "ambulance-crossed"}, "parents": ["@N3"], "origin": {"kind": "base", "source": "hospital-route", "sequence": 3}}}
+  ],
+  "rules": [],
+  "projection": {"id": "merge.clock-islands", "rows": [{"positive": [{"alias": "r", "topic": "merge.record", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map", "event", ["get", "r", "/id"], "key", ["get", "r", "/payload/key"], "source", ["get", "r", "/payload/source"], "sequence", ["get", "r", "/payload/sequence"], "local_time", ["get", "r", "/payload/local_time"], "offset_min", ["get", "r", "/payload/offset_min"], "offset_max", ["get", "r", "/payload/offset_max"], "weight", ["get", "r", "/payload/weight"], "clock_domain", ["get", "r", "/payload/clock_domain"], "kind", ["get", "r", "/payload/kind"], "parents", ["get", "r", "/parents"]], "sort": [["get", "r", "/payload/clock_domain"], ["get", "r", "/payload/sequence"]]}]},
+  "worked_value": {"offsets": {"north": 100, "south": -50}, "times": {"N1": 4, "S1": 5, "N2": 7, "S2": 8, "N3": 10, "S3": 11}, "note": "Each individual interval permits local drift, but all three records on one clock island must share one offset. The alternating messages then bind the two islands into one causal history."},
+  "story": {"premise": "The bridge report appears to contain six clocks. It actually contains two: the north controller is about one hundred ticks fast and the hospital route clock about fifty ticks slow. Records on one clock island must use one common offset, while the alternating messages cross between islands. Reconstruct the bridge opening without tuning every record independently.", "submission": "Retain all six records, assign an in-range global time to each, and submit the exact parent/source certificate. Every record in one named clock domain must imply the same offset.", "diagnostics": "Interval bounds, ordinary causal order, exact certificate coverage, domain cardinality, and within-domain offset agreement fail independently.", "hints": ["Compute local_time minus assigned global time.", "That value may not drift between records in the same clock domain.", "The midpoint offsets 100 and -50 also minimize temporal displacement."]}
+}

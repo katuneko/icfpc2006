@@ -1,0 +1,266 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.021",
+    "family": "CASCADE",
+    "title": "Audit Window",
+    "points": 110,
+    "reference_scale": 1450000,
+    "requires": {
+      "all": [
+        "case:CASCADE.020",
+        "case:PULSE.013"
+      ]
+    },
+    "projection": "incident.audit-window",
+    "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": [
+        "retime"
+      ],
+      "max_operations": 1,
+      "weights": {
+        "retime": 1
+      },
+      "topics": [
+        "audit.filing"
+      ],
+      "pointers": [],
+      "retime": {
+        "minimum": 20,
+        "maximum": 23
+      }
+    },
+    "author_operation": {
+      "kind": "retime",
+      "target_topic": "audit.filing",
+      "at": 22
+    },
+    "diagnostic_topics": [
+      "contract.violation"
+    ],
+    "metric_bounds": {
+      "causal_footprint": 32,
+      "witness_units": 48
+    },
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {
+        "max_base_events": 8,
+        "max_derived_events": 12,
+        "max_bindings_tested": 256,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "topic": "audit.window",
+      "at": 20,
+      "payload": {
+        "incident": "CITY-19",
+        "opens_at": 20,
+        "closes_at": 22,
+        "basis": "correction-notice"
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "public-auditor",
+        "sequence": 1
+      }
+    },
+    {
+      "topic": "audit.filing",
+      "at": 23,
+      "payload": {
+        "incident": "CITY-19",
+        "amendment": "audit-first",
+        "digest": "filing-19"
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "hearing-clerk",
+        "sequence": 21
+      }
+    }
+  ],
+  "rules": [
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "audit-window.01-contract",
+        "positive": [
+          {
+            "alias": "w",
+            "topic": "audit.window",
+            "where": [
+              "const",
+              true
+            ]
+          },
+          {
+            "alias": "f",
+            "topic": "audit.filing",
+            "where": [
+              "eq",
+              [
+                "get",
+                "f",
+                "/payload/incident"
+              ],
+              [
+                "get",
+                "w",
+                "/payload/incident"
+              ]
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": [
+          "const",
+          true
+        ],
+        "emit": [
+          {
+            "topic": [
+              "const",
+              "contract.summary"
+            ],
+            "at": [
+              "get",
+              "f",
+              "/at"
+            ],
+            "payload": [
+              "map",
+              "safe",
+              [
+                "and",
+                [
+                  "le",
+                  [
+                    "get",
+                    "w",
+                    "/payload/opens_at"
+                  ],
+                  [
+                    "get",
+                    "f",
+                    "/at"
+                  ]
+                ],
+                [
+                  "le",
+                  [
+                    "get",
+                    "f",
+                    "/at"
+                  ],
+                  [
+                    "get",
+                    "w",
+                    "/payload/closes_at"
+                  ]
+                ]
+              ],
+              "incident",
+              [
+                "get",
+                "w",
+                "/payload/incident"
+              ],
+              "filed_at",
+              [
+                "get",
+                "f",
+                "/at"
+              ],
+              "opens_at",
+              [
+                "get",
+                "w",
+                "/payload/opens_at"
+              ],
+              "closes_at",
+              [
+                "get",
+                "w",
+                "/payload/closes_at"
+              ],
+              "digest",
+              [
+                "get",
+                "f",
+                "/payload/digest"
+              ]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "id": "incident.audit-window",
+    "rows": [
+      {
+        "positive": [
+          {
+            "alias": "s",
+            "topic": "contract.summary",
+            "where": [
+              "const",
+              true
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": [
+          "const",
+          true
+        ],
+        "value": [
+          "get",
+          "s",
+          "/payload"
+        ],
+        "sort": []
+      }
+    ]
+  },
+  "worked_value": {
+    "opens_at": 20,
+    "closes_at": 22,
+    "root_filing": 23,
+    "repaired_filing": 22,
+    "note": "The closing tick is inclusive. Moving earlier than evidence availability is invalid; tick 22 is the least displacement."
+  },
+  "story": {
+    "premise": "The canonical amendment is correct, but its retained filing tick falls one step after the statutory audit window. The circuit breaker explains delayed service, not an extension of law. The filing digest existed when the window was open.",
+    "submission": "Retime the filing into the inclusive interval [20,22] with the least displacement while preserving its payload.",
+    "diagnostics": "The checker rejects tick 23, a pre-window filing, payload edits, and treating cooldown as authority to extend the deadline.",
+    "hints": [
+      "Operational delay and legal time are separate clocks.",
+      "The closing boundary is allowed.",
+      "Move the evidence, not the window."
+    ]
+  }
+}
+

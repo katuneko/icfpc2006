@@ -1,0 +1,185 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.014",
+    "family": "MERGE",
+    "title": "Two Consistent Archives",
+    "points": 130,
+    "reference_scale": 1000000,
+    "requires": {
+      "all": [
+        "case:MERGE.013",
+        "case:CASCADE.019"
+      ]
+    },
+    "projection": "merge.two-consistent-archives",
+    "validator_template": "merge-non-unique-certificate-claim/0.1",
+    "merge_contract": {
+      "task": "non-unique-archives",
+      "minimum_solutions": 2,
+      "maximum_domain": 2,
+      "selection": "lexicographic"
+    },
+    "author_answer": {
+      "accepted": [
+        {
+          "key": "A",
+          "at": 10
+        },
+        {
+          "key": "B",
+          "at": 11
+        },
+        {
+          "key": "C",
+          "at": 13
+        }
+      ],
+      "rejected": [],
+      "certificate": [
+        {
+          "before": "A",
+          "after": "B",
+          "minimum_gap": 1
+        },
+        {
+          "before": "B",
+          "after": "C",
+          "minimum_gap": 1
+        }
+      ]
+    },
+    "metric_bounds": {
+      "temporal_displacement": 8,
+      "certificate_units": 16
+    },
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {
+        "max_base_events": 8,
+        "max_derived_events": 4,
+        "max_bindings_tested": 64,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "label": "A",
+      "body": {
+        "topic": "merge.record",
+        "at": 10,
+        "payload": {
+          "key": "A",
+          "local_time": 10,
+          "offset_min": 0,
+          "offset_max": 0,
+          "source": "public-ledger",
+          "sequence": 1,
+          "weight": 3,
+          "fact": "prior-notice"
+        },
+        "parents": [],
+        "origin": {
+          "kind": "base",
+          "source": "public-ledger",
+          "sequence": 1
+        }
+      }
+    },
+    {
+      "label": "B",
+      "body": {
+        "topic": "merge.record",
+        "at": 12,
+        "payload": {
+          "key": "B",
+          "local_time": 12,
+          "offset_min": 0,
+          "offset_max": 1,
+          "source": "hearing-clock",
+          "sequence": 1,
+          "weight": 3,
+          "fact": "amendment-received"
+        },
+        "parents": [
+          "@A"
+        ],
+        "origin": {
+          "kind": "base",
+          "source": "hearing-clock",
+          "sequence": 1
+        }
+      }
+    },
+    {
+      "label": "C",
+      "body": {
+        "topic": "merge.record",
+        "at": 13,
+        "payload": {
+          "key": "C",
+          "local_time": 13,
+          "offset_min": 0,
+          "offset_max": 0,
+          "source": "publication-clock",
+          "sequence": 1,
+          "weight": 3,
+          "fact": "correction-published"
+        },
+        "parents": [
+          "@B"
+        ],
+        "origin": {
+          "kind": "base",
+          "source": "publication-clock",
+          "sequence": 1
+        }
+      }
+    }
+  ],
+  "rules": [],
+  "projection": {
+    "id": "merge.two-consistent-archives",
+    "rows": []
+  },
+  "worked_value": {
+    "solutions": [
+      {
+        "A": 10,
+        "B": 11,
+        "C": 13
+      },
+      {
+        "A": 10,
+        "B": 12,
+        "C": 13
+      }
+    ],
+    "canonical": {
+      "A": 10,
+      "B": 11,
+      "C": 13
+    },
+    "note": "Both archives preserve every record and edge. The submission selects one canonically without pretending the other is inconsistent."
+  },
+  "story": {
+    "premise": "The correction is append-only, but the hearing clock was synchronized only to a one-tick interval. The amendment may therefore precede publication by one or two ticks. Both histories satisfy every retained edge, and neither may be erased as contradictory.",
+    "submission": "Retain all three records, prove both order edges, acknowledge at least two feasible archives, and submit the lexicographically earliest complete schedule as the canonical representative.",
+    "diagnostics": "The verifier enumerates the bounded interval product, rejects claims of uniqueness, and rejects choosing the later schedule while preserving it as a valid alternative.",
+    "hints": [
+      "Uncertainty is not inconsistency.",
+      "Only the middle record can move.",
+      "Canonical selection does not delete the other solution."
+    ]
+  }
+}
+

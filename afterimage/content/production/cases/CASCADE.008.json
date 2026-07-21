@@ -1,0 +1,110 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.008",
+    "family": "CASCADE",
+    "title": "Island Signal",
+    "points": 90,
+    "reference_scale": 850000,
+    "requires": {"all": ["case:CASCADE.007"]},
+    "projection": "incident.island-signal",
+    "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": ["retime", "suppress", "inject"],
+      "max_operations": 1,
+      "weights": {"retime": 1, "suppress": 36, "inject": 22},
+      "topics": ["traffic.signal-charge", "traffic.mobile-signal"],
+      "pointers": [],
+      "retime": {"minimum": 11, "maximum": 14}
+    },
+    "author_operation": {"kind": "retime", "target_topic": "traffic.signal-charge", "at": 11},
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 80, "witness_units": 80},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 32, "max_bindings_tested": 8192, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "microgrid.island", "at": 0, "payload": {"grid": "MG-2", "intersection": "I-12", "capacity": 6}, "parents": [], "origin": {"kind": "base", "source": "microgrid-control", "sequence": 2}},
+    {"topic": "traffic.signal-charge", "at": 14, "payload": {"grid": "MG-2", "intersection": "I-12", "power": 4, "duration": 3, "authorized_at": 11, "evidence": "charge-41"}, "parents": [], "origin": {"kind": "base", "source": "traffic-power", "sequence": 41}},
+    {"topic": "clinic.refrigeration-load", "at": 13, "payload": {"grid": "MG-2", "power": 3, "minimum_power": 3, "duration": 4, "evidence": "clinic-9"}, "parents": [], "origin": {"kind": "base", "source": "clinic-control", "sequence": 9}},
+    {"topic": "traffic.emergency-crossing", "at": 14, "payload": {"intersection": "I-12", "clear_duration": 2, "deadline": 16, "unit": "A-8"}, "parents": [], "origin": {"kind": "base", "source": "medical-dispatch", "sequence": 8}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "island.01-capacitor-state", "positive": [
+      {"alias": "g", "topic": "microgrid.island", "where": ["const", true]},
+      {"alias": "s", "topic": "traffic.signal-charge", "where": ["eq", ["get", "s", "/payload/grid"], ["get", "g", "/payload/grid"]]},
+      {"alias": "c", "topic": "clinic.refrigeration-load", "where": ["eq", ["get", "c", "/payload/grid"], ["get", "g", "/payload/grid"]]},
+      {"alias": "x", "topic": "traffic.emergency-crossing", "where": ["eq", ["get", "x", "/payload/intersection"], ["get", "g", "/payload/intersection"]]}
+    ], "negative": [{"alias": "m", "topic": "traffic.mobile-signal", "where": ["eq", ["get", "m", "/payload/intersection"], ["get", "g", "/payload/intersection"]]}], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "island.service-state"], "at": ["get", "x", "/at"], "payload": ["map",
+      "grid", ["get", "g", "/payload/grid"],
+      "signal_ready_at", ["add", ["get", "s", "/at"], ["get", "s", "/payload/duration"]],
+      "crossing_at", ["get", "x", "/at"],
+      "crossing_clear_at", ["add", ["get", "x", "/at"], ["get", "x", "/payload/clear_duration"]],
+      "crossing_deadline", ["get", "x", "/payload/deadline"],
+      "signal_charge_active", ["and", ["le", ["get", "s", "/at"], ["get", "x", "/at"]], ["lt", ["get", "x", "/at"], ["add", ["get", "s", "/at"], ["get", "s", "/payload/duration"]]]],
+      "clinic_power_received", ["min", ["get", "c", "/payload/power"], ["sub", ["get", "g", "/payload/capacity"], ["if", ["and", ["le", ["get", "s", "/at"], ["get", "x", "/at"]], ["lt", ["get", "x", "/at"], ["add", ["get", "s", "/at"], ["get", "s", "/payload/duration"]]]], ["get", "s", "/payload/power"], ["const", 0]]]],
+      "clinic_minimum_power", ["get", "c", "/payload/minimum_power"],
+      "active_load", ["add", ["if", ["and", ["le", ["get", "s", "/at"], ["get", "x", "/at"]], ["lt", ["get", "x", "/at"], ["add", ["get", "s", "/at"], ["get", "s", "/payload/duration"]]]], ["get", "s", "/payload/power"], ["const", 0]], ["min", ["get", "c", "/payload/power"], ["sub", ["get", "g", "/payload/capacity"], ["if", ["and", ["le", ["get", "s", "/at"], ["get", "x", "/at"]], ["lt", ["get", "x", "/at"], ["add", ["get", "s", "/at"], ["get", "s", "/payload/duration"]]]], ["get", "s", "/payload/power"], ["const", 0]]]]],
+      "capacity", ["get", "g", "/payload/capacity"],
+      "signal_evidence_retained", ["const", true],
+      "clinic_evidence_retained", ["const", true],
+      "mode", ["const", "island-capacitor"]
+    ], "parents": []}] }},
+    {"stratum": 0, "rule": {"id": "island.02-mobile-signal-state", "positive": [
+      {"alias": "g", "topic": "microgrid.island", "where": ["const", true]},
+      {"alias": "s", "topic": "traffic.signal-charge", "where": ["eq", ["get", "s", "/payload/grid"], ["get", "g", "/payload/grid"]]},
+      {"alias": "c", "topic": "clinic.refrigeration-load", "where": ["eq", ["get", "c", "/payload/grid"], ["get", "g", "/payload/grid"]]},
+      {"alias": "x", "topic": "traffic.emergency-crossing", "where": ["eq", ["get", "x", "/payload/intersection"], ["get", "g", "/payload/intersection"]]},
+      {"alias": "m", "topic": "traffic.mobile-signal", "where": ["eq", ["get", "m", "/payload/intersection"], ["get", "g", "/payload/intersection"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "island.service-state"], "at": ["max", ["get", "x", "/at"], ["get", "m", "/at"]], "payload": ["map",
+      "grid", ["get", "g", "/payload/grid"],
+      "signal_ready_at", ["get", "m", "/at"],
+      "crossing_at", ["get", "x", "/at"],
+      "crossing_clear_at", ["add", ["get", "x", "/at"], ["get", "x", "/payload/clear_duration"]],
+      "crossing_deadline", ["get", "x", "/payload/deadline"],
+      "signal_charge_active", ["const", false],
+      "clinic_power_received", ["get", "c", "/payload/power"],
+      "clinic_minimum_power", ["get", "c", "/payload/minimum_power"],
+      "active_load", ["get", "c", "/payload/power"],
+      "capacity", ["get", "g", "/payload/capacity"],
+      "signal_evidence_retained", ["const", true],
+      "clinic_evidence_retained", ["const", true],
+      "mode", ["const", "mobile-signal"]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "island.03-contract-summary", "positive": [{"alias": "s", "topic": "island.service-state", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "s", "/at"], "payload": ["map",
+      "safe", ["and", ["le", ["get", "s", "/payload/signal_ready_at"], ["get", "s", "/payload/crossing_at"]], ["and", ["ge", ["get", "s", "/payload/clinic_power_received"], ["get", "s", "/payload/clinic_minimum_power"]], ["and", ["le", ["get", "s", "/payload/active_load"], ["get", "s", "/payload/capacity"]], ["le", ["get", "s", "/payload/crossing_clear_at"], ["get", "s", "/payload/crossing_deadline"]]]]],
+      "signal_ready_at", ["get", "s", "/payload/signal_ready_at"],
+      "crossing_at", ["get", "s", "/payload/crossing_at"],
+      "crossing_clear_at", ["get", "s", "/payload/crossing_clear_at"],
+      "crossing_deadline", ["get", "s", "/payload/crossing_deadline"],
+      "signal_charge_active", ["get", "s", "/payload/signal_charge_active"],
+      "clinic_power_received", ["get", "s", "/payload/clinic_power_received"],
+      "clinic_minimum_power", ["get", "s", "/payload/clinic_minimum_power"],
+      "active_load", ["get", "s", "/payload/active_load"],
+      "capacity", ["get", "s", "/payload/capacity"],
+      "signal_evidence_retained", ["get", "s", "/payload/signal_evidence_retained"],
+      "clinic_evidence_retained", ["get", "s", "/payload/clinic_evidence_retained"],
+      "mode", ["get", "s", "/payload/mode"]
+    ], "parents": []}] }},
+    {"stratum": 2, "rule": {"id": "island.04-first-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map",
+      "code", ["if", ["gt", ["get", "s", "/payload/signal_ready_at"], ["get", "s", "/payload/crossing_at"]], ["const", "signal_not_ready"], ["if", ["lt", ["get", "s", "/payload/clinic_power_received"], ["get", "s", "/payload/clinic_minimum_power"]], ["const", "clinic_power_curtailed"], ["const", "crossing_deadline_missed"]]],
+      "signal_ready_at", ["get", "s", "/payload/signal_ready_at"],
+      "crossing_at", ["get", "s", "/payload/crossing_at"],
+      "clinic_power_received", ["get", "s", "/payload/clinic_power_received"],
+      "clinic_minimum_power", ["get", "s", "/payload/clinic_minimum_power"]
+    ], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.island-signal", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"contracts": [{"safe": false, "signal_ready_at": 17, "crossing_at": 14, "clinic_power_received": 2, "clinic_minimum_power": 3}], "note": "Daily energy is sufficient; the failure is an instantaneous-capacity overlap while the signal capacitor is still charging."},
+  "story": {
+    "premise": "Feeder F-3 is no longer the only shared boundary. During an outage, Intersection I-12 islands onto microgrid MG-2 with a clinic refrigerator. The dashboard reports sufficient daily energy, yet a late signal-capacitor charge overlaps the clinic load exactly when an ambulance needs the crossing. Preserve both services and the evidence.",
+    "submission": "Submit exactly one authorized intervention plus signal readiness, clinic power, instantaneous load/capacity, crossing deadline, evidence-retention flags, branch, and projection digest.",
+    "diagnostics": "The first failed bound distinguishes readiness from clinic curtailment and reports instantaneous values; aggregate daily energy is never accepted as a substitute.",
+    "hints": ["The relevant resource is capacity at the crossing tick, not total energy over the outage.", "A self-powered mobile signal is valid but expensive. Suppression removes required traffic evidence.", "The capacitor needs three ticks. Return its charge to the authorized tick so it completes exactly when the crossing begins."]
+  }
+}

@@ -1173,3 +1173,324 @@ Balance は「16 進数 2 桁の列（空白なし）」がプログラム。認
   - 基本チェイン: `0x40343 -> 0x34f639`, `0x34f63c -> 0x1f65`, `0x34f6a3 -> 0x52f06`, `0x34f6a7 -> 0x52f0a`, `0x3f3b0 -> 0x5590b`, `0x351199 -> 0x55909`。
   - 追加の `0x3c1c9f -> 0x4ea33` や `0x3c1cab/0x3c1cad` テーブル差し替えも試したが、いまのところ visible output は `wrong size` のまま。
 - Puzzle 15: `-output-on-substr "ANTWO."` 実行が 120s でタイムアウト、再実行/短絡化が必要。
+
+## Afterimage 本制作 / 2026-07-16
+
+- AI proxy の合格判定を受け、Phase E の本制作へ移行。
+- `afterimage/manifests/production_catalog.json` を追加し、75問・10,000点の
+  全ID、題名、章、核となる仕掛け、依存関係、制作 wave、状態を固定。
+  `build_catalog.py --check` と `check_design.py` がファミリー別件数・配点、
+  連番、依存の到達可能性、slice/release との一致を検査する。
+- 最初の新規問題 `PULSE.002 First Copy` を実装。PULSE verifier を task
+  選択式へ一般化し、従来の 3,304 debounce 列を保ったまま、重複を含む
+  1,287 非減少入力列で EventId 順の最初の payload だけを通す仕様を追加。
+- `production_release.json` の include/source-root 合成により、既存12問を
+  複製せず13問の製品 bundle を構築可能にした。全13 private baseline が
+  root から再検証され、PULSE.002 は 78/80。
+- production golden: archive
+  `d7680ecf5451689290da20908552d93d4d7cc2b897058334d327d61527285ce7`,
+  bundle `sha256:a0ce3781cc8bb0d99eba84b8b262e4aa706cd21818eae35771548384dcd6dd51`。
+- 第2トランシェ `MERGE.002 Duplicate Dispatch` を実装。公開された
+  `dedup_key` / `body_key` 契約に従い、重複棄却が採用済みsurvivorを明示的に
+  指すよう検証する。別操作への偽リンク、同一操作の二重採用を拒否し、
+  弱いretryを残す代替解は有効だが低得点になる。
+- production release 0.3 は14問・1,360点。golden archive は
+  `173233f0d85804828a77de6c51677fc7fe55c4cdc0989af9dedc4b0b64f2e457`,
+  bundle は `sha256:85ead5a3eba4346a01797e25766d278ed7a67bdcf192a3639454366eb99af862`。
+- 第3トランシェ `PULSE.003 Silent Timeout` を実装。複数入力topicと
+  replacementを伴わないtimer `cancel` actionを追加し、deadline同tickの
+  cancel優先、再start、stray cancelを含む545列を全探索。author programは
+  0 state cellsで86/90点。
+- production release 0.4 は15問・1,450点。golden archive は
+  `9566c4a41237616161b26e0d0ff18aba7f3d17bb37afb9a73dd9dd32229ca64d`,
+  bundle は `sha256:229fc679a421ba25469f26317f3efa996e65257b03b4d3047ea01cf61baacada`。
+- 第4トランシェ `MOSAIC.002 Shared Wall` を実装。2つの逆向きsurveyの
+  union coverageに加え、中央2辺が別fragmentから二重支持されることを
+  coverage multiplicity契約で要求。共有辺の片方だけを落とすとunionは
+  完全なまま`mosaic_overlap`で拒否される。author scoreは79/80。
+- production release 0.5 は16問・1,530点。golden archive は
+  `09f726228058a9a9a7d101f69e0fb9e7c8f9e29c6d9767371e5fdfe5480b34d3`,
+  bundle は `sha256:9e325fdf621b8597cf75ac2e85a0903c66a9057bae9025deb0a17298341d3244`。
+- 第5トランシェ `CASCADE.004 Cold Platform` を実装。CASCADE.003 の
+  restricted-relay発見を受けた再調査として、tick 9に観測されtick 18に
+  ingestされた乗客サンプルを扱う。汎用の一操作 `cascade-safe-claim`
+  テンプレートを追加し、本命のretimeは69/70点。一刻遅いretimeは20度契約を
+  満たさず、緊急加熱は有効だが高コストになることを独立再生で確認。
+- production release 0.6 は17問・1,600点。golden archive は
+  `bb21b2f13587a44072c2eb5b327f036fa9c9abc545049fe8ee3f436dff6ec9ce`,
+  bundle は `sha256:95b2351bb2750bc6bd688ea2844a06cb071615e3d5e3283c1071be533f2be220`。
+- 第6トランシェでCASCADE Act 1を完結。`CASCADE.005 Priority Queue` は
+  公開priority順とnon-preemptive実行順を分離し、同tickでは既存grantが残る
+  境界を検証。本命retimeは69/70点、priority boostは有効だが高コスト。
+- `CASCADE.006 Black Ice` はtreatment有効化・ambulance通過・closure・school
+  bus到着を一つの時間境界へ統合。許可された25組のretimeを全探索し、
+  `(11, 15)`だけが有効。mobile barrierもtick 15だけ有効な79/80点の本命に
+  対する高コスト代替として検証した。残る2つのexternal authorizationを
+  Act 2のcoupled infrastructureへの物語フックにした。
+- production release 0.7 は19問・1,750点。golden archive は
+  `5a004a0a7bd269c73e5900d79828ec85bfb3e56c70966f1f5fcddb0f13f49c70`,
+  bundle は `sha256:f87e5cd6fcc3f0a4b885e43db63c309e6a4a9d1118ce899ed357c0ac263be7f3`。
+- 第7トランシェで3問を追加。`CASCADE.007 Borrowed Pressure` はBlack Iceに
+  残した `grid-window-31` / `traffic-priority-19` を同じfeederの負荷として
+  回収し、正常なfire pumpの圧力低下を水・電力結合として提示。許可retime
+  11–14を全検査し11だけが有効、3-unit backup generatorを高コスト代替として
+  検証。author scoreは79/80。
+- `MERGE.003 Lost Acknowledgment` は欠落sequence 2を捏造せず、現存する
+  gateway sequence 1→3をsource-order edgeで直接結ぶ。bridge欠落とphantom
+  edgeを拒否し、別のin-range時刻は有効だがraw costが悪化。89/90点。
+- `MOSAIC.003 Rotated Block` はquarter-turnとdiagonal reflectionから3×3
+  attributed graphを構成し、8つのD4同値表現の最小canonical encodingだけを
+  許可。identity以外7方向を全て`mosaic_noncanonical`で拒否し、誤ったlocal
+  transformとは診断を分離。座標上の無害な複数性と実質的な別履歴を区別する
+  物語上の反証点にした。89/90点。
+- production release 0.8 は22問・2,010点。golden archive は
+  `44cbe58d5b26ee1d86ede2a87ecb848de18a2ff3bcbacaa2051f6c6b2ee99072`,
+  bundle は `sha256:a5dcf7fc66fe084a8bd79ea75ebfc16cc1b9e93aef66e8b862e224dfe01c0da2`。
+- 第8トランシェ `PULSE.004 Token Window` を実装。PULSE式へ型付き`mul`と
+  `min`を追加し、capacity 2 / refill 1 per tickのtoken bucketを公開契約化。
+  同tickを含む0–6要求×6tickの924列を全検査する独立oracleを追加した。
+- author programは2 cells / 633 bytes / latency 0で95/100点。過剰admit、
+  idle後のclamp欠落、reject時のghost debit、`min`の型違反を独立した安定反例で
+  拒否。`[0,0,0,1]`ではEventId順のsequence 0/2と、reject後にrefillされた
+  sequence 3だけを通す。
+- production release 0.9 は23問・2,110点。golden archive は
+  `feb45ea226f40c3ffa5d1dacb67677d08cffe02006c61e261d25f1f6ed5ccdd4`,
+  bundle は `sha256:79f0117a573d2a303df2714602310e1a7044e6bc01b76d7509beed66bbd4cfbd`。
+- 第9トランシェでCASCADE Act 2とMERGEの監査テーマを接続。
+  `CASCADE.008 Island Signal` は日量energyではなくambulance通過tickの
+  microgrid瞬時容量を問う。rootではsignal capacitorがtick 17まで充電中で、
+  clinicは必要3に対して2 unitしか受電できない。許可retime 11–14を全検査し
+  11だけが有効。self-powered mobile signalは有効だがweight 22の代替で、
+  author repairは89/90点。
+- `MERGE.004 Compensating Transfer` は同じincidentの7-credit送金を監査層へ
+  運び、成立済みtransferを消すrollbackと、後続のequal-and-opposite
+  compensationを区別する。rollback claimはapplied-transfer parentより前の
+  tick 9にしか置けず因果順違反。rollback採用、original transfer削除、
+  compensation削除を個別に拒否し、補償をtick 14へずらした別解は有効だが
+  raw costが悪化することを確認。author certificateは89/90点。
+- production release 1.0 は25問・2,290点。golden archive は
+  `02cb9a1c05491ab32e3ae0654b296c1e851e0269df6670dd5bf3d14defa8bc5e`,
+  bundle は `sha256:2a536f43bbae7a56617885faab63ee9400b27a403703c93d4bb8376e80441c83`。
+- 第10トランシェはLast Train incidentを物理・監査・制御の3層へ展開。
+  `CASCADE.009 Last Train Through` はboarding、signed ventilation、traction
+  reserve、clinic負荷、travel time、bridge closureを一つの契約へ統合した。
+  retime 12–19の64組を全検査し、`(ventilation 13, departure 17)`だけが有効。
+  片方だけのretimeはどちらも失敗し、self-powered bus bridgeはtick 17だけ
+  有効だがweight 40。rail author repairは89/90点。
+- `MERGE.005 Split Brain` はpartition後のeast/west journalを不可分なwriter
+  branchとして扱うhost契約を追加。source sequenceを合わせると合併archiveは
+  時刻矛盾するため片方をconflict componentとして棄却する。east全体は99/100、
+  west全体も93/100で有効だが、writer混成・reason偽装・branch末尾切捨ては
+  `merge_split`で拒否。後半の「複数の整合履歴」を先取りしつつ証拠品質を残す。
+- `PULSE.005 Two of Three` は三つの入力topicから異なる二送信元を数える
+  one-shot quorum契約を追加。4 cells / 1,293 bytes / latency 0で、二者目の
+  canonical payloadを保持する。最大4票×4tickの3,478列を全検査し、単一送信元
+  の反復を票数として数える実装、三者待ち、再発火、wrong payloadを個別拒否。
+  author scoreは96/100。
+- production release 1.1 は28問・2,580点。golden archive は
+  `4ed36fbe5b0bf1594139074fd632aefd17755d21834c0baceb190f2c87413f03`,
+  bundle は `sha256:a60543b9dbcbacaabcdfc2dc399a2b558ad2928ea7aeb5400511ed4a60ba435e`。
+- 第11トランシェは病院冷却incidentを物理・監査・空間の3層で描く。
+  `CASCADE.010 Cooling Window` は本番で初めて`replace`操作を使い、
+  flow 0–10を全検査して安全な値が5だけと証明。portable chillerは
+  tick 18だけ有効だがweight 35の代替で、author repairは99/100点。
+- `MERGE.006 Quorum Ledger` はflow 5の3票とflow 3の2票から公開
+  3-of-5 quorumを復元。少数派は時間的に整合しており、`inconsistent`では
+  なく`minority`として棄却する。mixed claim、2票側の採用、quorum票の脱落、
+  reason偽装をすべて拒否し、author certificateは99/100点。
+- `MOSAIC.004 Missing Tile` は2つのsurveyが3×3 blueprintの外周を覆い、
+  中央vertexとその4 incident edgesだけが欠けた状態から、公開座標
+  checksumで一意の有界completionを復元。誤ったedge labelと外周の追加欠落を
+  独立に拒否し、author certificateは99/100点。
+- production release 1.2 は31問・2,880点。golden archive は
+  `81b48fbb156ec664317a38f721d125453a56c13b4c8e91606a4063efdf672cd3`,
+  bundle は `sha256:12f51eb02b216099a991c6d1b97d0cf13d5d8e8a25ffe8dbf6c7e2c2b0cafe1e`。
+- 第12トランシェは病院と北側市街を結ぶdrawbridge B-17の一事件を、
+  物理・時刻復元・測量証拠・制御の4層で展開した。
+- `CASCADE.011 The Open Bridge` は風が安全になるtick 8を下限、2tickの
+  開閉時間とambulance到着tick 10を上限とし、retime 6–9のうち8だけを
+  安全と証明。emergency ferryはtick 10だけ有効だがweight 30で、authorは109/110点。
+- `MERGE.007 Clock Islands` は6レコードを独立に時刻調整させず、north 3件は
+  offset 100、south 3件はoffset -50をそれぞれ共有させる。交互のcross-domain
+  messageが両島を一つの因果履歴に縛る。1件だけのclock driftやdomain memberの
+  脱落は`merge_domain`で拒否し、共通offset全体をずらす代替解は有効だが低得点。
+  authorは109/110点。
+- `MOSAIC.005 Double Exposure` は見かけの3番目のsurveyが、北側surveyを半回転し
+  local nameを付け替えたcacheと見抜く。D4・平行移動不変でedge attributeを保存する
+  fingerprintを追加し、二重利用と偽survivor linkを拒否。証拠の薄いcacheを残す
+  代替解は有効だが低得点で、authorは99/100点。
+- `PULSE.006 Barrier at Dawn` はwind / bridge / hospitalの全3topicを必須とする。
+  4 cells / 1,378 bytes / latency 0で、3,478入力列を全検査。duplicateの数え上げ、
+  2-of-3での早期解放、再発火、完了event以外のpayloadを独立に拒否し、authorは106/110点。
+- production release 1.3 は35問・3,310点。golden archive は
+  `e207b97c6f7f50f169148d5cd15ffe58736ffdfae0739a4705ebc20abcfec79c`,
+  bundle は `sha256:78eb58d008b8904661324abdad3693f7a72995fda6a05e4876bf35b27810152f`。
+- 第13トランシェはdrawbridge事件を、部署間調整から公開時刻表まで一続きにした。
+- `CASCADE.012 Three Departments` はwind floor、2tickのbridge opening、traffic
+  release、hospital departure、public deadlineを三部署の独立ログへ分離し、
+  6–11の216通りを全検査して `(8,10,11)` だけが安全。3ログ全てのretimeが必要で
+  authorは109/110点。
+- `MERGE.008 Conflict Component` は逆転したsuspect terminalの2レコードを、
+  jointly infeasibleかつ片方ずつ外せばfeasibleなinclusion-minimal conflictとして
+  証明させる。過剰削除を`merge_minimal`で拒否し、authorは106/110点。
+- `MOSAIC.006 False Landmark` は属性付き幾何だけならnorth-westへ埋め込めるfragmentを、
+  公開landmark `d00=v8` と両立するembeddingがないため棄却する。単なるdecoy宣言を許さず、
+  anchorを正しい`v0`へ変えると棄却証明が失敗することも確認。authorは109/110点。
+- `PULSE.007 Backpressure` はcapacity 2のqueueを1 integer cellで制御し、admit時だけ増加、
+  effective drain時だけ減少、full rejectは状態不変とする。最大5 command×4tickの2,561列を
+  全検査し、over-admit、ignored drain、rejected requestのghost debitを独立拒否。109/110点。
+- `LENS.002 One Timetable` はNorth 08:00とSouth 06:00を同じpublic UTC rowへ写す
+  本物のschedule変換へLENSを拡張。96 source×9 lawful targetを全検査し、service identity、
+  platform、calendar、audit provenanceをexplicit complementで保存、invalid editのatomicityも
+  確認。authorは496/500点。
+- production release 1.4 は40問・4,250点。golden archive は
+  `c2572f2e31226f5b9dc17bba1f5566418b82a1c28e9c425103f18c7daffc80a8`,
+  bundle は `sha256:4c911fa25a1e2fa0e3d707189fa677516d1b972c7a2ca8fbd2c0354e305668b8`。
+- 第14トランシェは公開時刻表の運用直後にRIVER-4 gaugeが沈黙する事件を、
+  robust repairから初のCOVENANT方策合成まで5層で通した。
+- `CASCADE.013 Silent Gauge` はunseen demandの校正区間3–4とfeeder上限4から、
+  replacement 0–6のうち4だけが全可能値に安全と証明。authorは89/90点。
+- `MERGE.009 Minimal Cut` は公開conflict `{G1,G2}` / `{G2,G3}` に対する
+  exact weighted hitting setを検証器へ追加。weight 3の共有gateway G2が唯一の最小cutで、
+  outer probes G1+G3のweight 4削除と未被覆cutを`merge_cut`で拒否。116/120点。
+- `MOSAIC.007 Timestamp Gauge` はuniform conduitの幾何的な平行移動・回転曖昧性を、
+  `observed_at = time_offset + y*width+x` のvertex時刻で解消。幾何的には有効な
+  shifted mappingと1 tickの偽造を`mosaic_timestamp`で拒否。119/120点。
+- `PULSE.008 Warm Failover` はprimary availabilityとsecondary readinessを2 boolで分離。
+  最大4 command×4tick・4種入力の10,417列を全検査し、cold takeover、failure/recovery
+  無視、二重routingを拒否。2 cells / 928 bytes / latency 0、118/120点。
+- `COVENANT.001 Dispatch Covenant` はprimary up/downの2初期状態、環境のalarm/fail/
+  recover、局所観測だけを持つdispatch/responseを公平非同期scheduler下で全探索。
+  80 reachable states、worst response 5、policy 32 nodesで、omniscient policy、永続wait、
+  false boundを独立拒否。authorは445/450点。
+- production release 1.5 は45問・5,150点。golden archive は
+  `6f9e178750d0cdb2edcb4b0dfdea15d6438936b1d196c04f33ef577662f847da`,
+  bundle は `sha256:daae3cc69fc63b5d8319b7972bc4f42e146b3c2adef7a3d6f8cc2f2419d1d146`。
+- 第15トランシェはDispatch Covenantの最初の実運用が、公開fleetに存在しない
+  SHADOW-7と二重実行済みの内部史を露出する一事件を5層で描いた。
+- `CASCADE.014 Shadow Bus` はbus capacityの非観測区間18–22、train上限52、
+  evacuees 70を二つの独立commitmentへ分ける。整数70配分を全検査し
+  `(bus 18, train 52)`だけが全hidden worldで安全。authorは99/100点。
+- `MERGE.010 Echoed Update` はoriginal→bridge cache→radio repeater→bus consoleの
+  直接`echo_of`鎖を検証する。payload一致だけでなくunique root、direct predecessor、
+  transitive reachability、acyclicityを要求し、rootへのshortcut証明を`merge_echo`で拒否。
+  authorは119/120点。
+- `MOSAIC.008 Broken Ring` は全vertexと11/12 edgesが観測された3×3 rail gridで、
+  公開8-junction perimeterがsimple cycleという契約から`v7-v8`だけを復元する。
+  coverageと異なるgap、ring外gap、複数gap、欠落vertexを拒否。authorは129/130点。
+- `PULSE.009 Exactly Once` はA/Bそれぞれのlogical-operation tombstoneをroute stateから
+  分離し、fail/recoverを跨ぐ10,417入力列を全検査。route-local memoryとA/B conflationを
+  安定反例で拒否。3 cells / 1,338 bytes / latency 0、117/120点。
+- `LENS.003 Two Histories` はoriginal tipとconsole-echo tipが同じpublic EVAC-17 rowへ
+  collapseする変換を追加。48 sources×9 lawful editsを全検査し、history identity、
+  private delta、audit chainの独立したcomplement必要性とinvalid-edit atomicityを証明。
+  authorは616/620点。
+- production release 1.6 は50問・6,240点。golden archive は
+  `3842f5b2b3705f617d70bae45ecb45b19858cd518e26fa5179e455395a0ff95c`,
+  bundle は `sha256:e7c85489ee375d00745b393b20682e0931b5f7a6948198065b72436b6ccd7501`。
+- 第16トランシェはTwo Historiesのsealed deltaから、公開面では存在しない
+  feeder tripの原因を復元する一事件を5層で通した。
+- `CASCADE.015 Redacted Feeder` はactiveなrestricted provenance event全体が
+  public projectionから消える一方、private answerのdigestだけで存在と内容を拘束する。
+  payload secretのbundle漏洩と偽digestを拒否し、zero interventionで99/100点。
+- `MERGE.011 Evidence Weight` はthermal-tripを支持する独立source weight 5+4と、
+  manual-openを支持する1+2を比較する。単純件数は2対2でもweight margin 6で前者だけを
+  採用し、source重複・equivocation・margin不足を拒否。authorは129/130点。
+- `MOSAIC.009 Adversarial Survey` はanonymous scanがanchor付き幾何へ埋め込めても、
+  conflict edgeごとにsigned survey supportが5以上上回るため`outvoted`とする。
+  別embeddingへの逃げと`invariant_conflict`への誤分類を塞ぎ、authorは139/140点。
+- `PULSE.010 Shared Deadline` はAのallowance 3、Bのallowance 2からbatch deadlineを
+  各eventのabsolute deadlineの最小値として保持する。deadline tickのexternal優先、
+  earlier replacement、発火後reopenを含む1,471入力列を全検査。2 cells / 1,784 bytes /
+  latency 3、authorは127/130点。
+- `CASCADE.016 Witness Gap` はbreaker-fault / manual-open / thermal-overloadの
+  単一latent cause注入を全てreplayし、normal upstream、thermal trace、relay open、
+  manual token不在を同時説明するthermal-overloadだけを残す。authorは109/110点。
+- production release 1.7 は55問・6,850点。golden archive は
+  `1f702b23b420f1c307508a606af79b94309d3a0e92295427ccd0def0fab38219`,
+  bundle は `sha256:f2dc884f67ab51422bf9d2af0fff4cd2a926d6ce0a9a18b3cdc93b343ef11332`。
+- 第17トランシェはlatent thermal causeを、公開表示だけで判断したContinuity policyの
+  欠陥へ接続し、証拠・地図・controllerを初のCity Covenantへ合流させた。
+- `CASCADE.017 Policy Blind Spot` はrootのunderground-ringと修復後のsurface-bypassで
+  public FEEDER-9 rowがbyte-identicalであることを要求する専用host検証を追加。sealed
+  thermal riskを含むactive contractだけがfalse→trueになり、authorは109/110点。
+- `MERGE.012 Causal Compression` は5記録と7本のauthentic precedenceを全て保持しつつ、
+  transitive closureが全制約を含む4-edge chainへ証明だけを圧縮する。edge追加はredundant、
+  edge削除はinsufficientとして拒否し、authorは129/130点。
+- `MOSAIC.010 Underground Layer` は3×3 gridの5 surface edgesと7 underground edgesを
+  それぞれconnectedにし、両layerが交わるvertex集合をshaft-backed portal
+  `{v3,v4,v5}`と完全一致させる。偽portal materialとportal漏れを拒否し149/150点。
+- `PULSE.011 Burst Budget` はcapacity 2、half-open window `(t-3,t]` を2 timestamp cellで
+  実装。same-tick EventId order、tick 3のexpiry boundary、rejected requestのnon-debitを
+  792入力列で全検査し、478 bytes / latency 0、authorは129/130点。
+- `COVENANT.002 City Covenant` はheat clear/hotの2 hidden worldで、Sensorだけがheatを、
+  Dispatchだけがalarm/reportを観測する。Sensorがclear/hotをpublishしてから対応layerを
+  選ぶlocal policyを38 reachable statesで全探索し、exact worst response 4、42 policy nodes、
+  authorは523/550点。Dispatchのdirect heat参照は`covenant_locality`で拒否する。
+- production release 1.8 は60問・7,920点。golden archive は
+  `68f098ebe5b33a93e5db7e363460a5b7c901cd7e55a7329e22ca9465551f81e5`,
+  bundle は `sha256:0de54e858963c90e501bf801ab2d152855109cc4ec43f87fe7b092b63610565a`。
+- 第18トランシェはCity Covenant後の訂正事件を、記録攻撃、全市地図、順序回復、
+  最小原因説明、公開訂正の5段で通した。
+- `MERGE.013 Equivocation` は同一operationで互いに矛盾する2 claimを出したsourceの
+  全記録を拒否する。honest 2 sourceの一致を要求し、一見正しい方だけを採用する変異を
+  `merge_equivocation`で拒否。authorは129/130点。
+- `MOSAIC.011 Whole City` は3つの2×3 stripを4×3非正方gridへ接合し、17 edgesの全coverage、
+  4本の独立重複、surface/underground各connected、shaft-backed portal
+  `{v4,v5,v6,v7}`の完全一致を同時検証。29 graph units、authorは149/150点。
+- `PULSE.012 Reorder Buffer` は`next`と4 tombstone cellでindex 0..3をbufferし、gapを閉じた
+  arrival tickでcontiguous prefixを全排出する。1,457入力列でarrival-order転送と1件だけの
+  drainを拒否。5 cells / 5,625 bytes / latency 3、authorは136/140点。
+- `CASCADE.018 The Missing Cause` はsensor reportとそれを根拠にしたroute commitの2注入を
+  要求し、完全ペアだけでなく空集合と両singletonをhost側で独立replayする専用minimality
+  契約を追加。片側だけの説明を`cascade_minimality`で拒否し109/110点。
+- `CASCADE.019 Correction Notice` は誤ったN-18を削除せず、N-19が明示的にsupersedeして
+  underground→surfaceを公開する。prior statementと証拠参照を保持し89/90点。
+- production release 1.9 は65問・8,540点。golden archive は
+  `d4e67ac88beeae76efd6af88b528cdd180d1e1964b39ee61659af4f3c4cf32f9`,
+  bundle は `sha256:a5ad89d6a7823a46f7aafa3c0d35f344d40c65017bc9b0cf1a58e9df69671407`。
+- 第19トランシェは公開訂正を、非一意史、遮断器、競合する安全案、法定期限、
+  全体最小変更へ進めた。
+- `MERGE.014 Two Consistent Archives` は中間記録のtick 11/12を両方とも全制約に整合する
+  解として列挙し、後者をinconsistent扱いせずlexicographic代表を要求。authorは129/130点。
+- `PULSE.013 Circuit Breaker` はclosed/open/half-openを3 cellsで実装し、連続2 failure、
+  cooldown 2、single probe、probe成否を3,478列で全検査。1,664 bytes、authorは149/150点。
+- `CASCADE.020 Competing Amendments` は2つのsafe amendmentを保持したまま公開UTF-8順で
+  audit-firstを選び99/100点。`CASCADE.021 Audit Window` は運用cooldownと法定時刻を分離し、
+  inclusive close tick 22への最小retimeで109/110点。
+- `CASCADE.022 Rule of Least Change` はroute一項目の置換と、disclosure公開+audit retimeの
+  有効な二操作案を同じcontractで比較し、raw effective costで前者を優先。109/110点。
+- production release 2.0 は70問・9,140点。golden archive は
+  `1a406dd0add41d8049df03d8cf0fa25afc234f7affb2687edb96fbe566c121cb`,
+  bundle は `sha256:b6922abdfd00528c79d63ea8b1a5fc46ae06fc16b44a8907797c81286680a94a`。
+- 第20トランシェで残り5問を一つの終幕として完成。`MERGE.015 The Reconstruction` は
+  surface/undergroundを比較不能のまま保持する4通りの全市scheduleと6-edge部分順序を検証し
+  139/140点。`PULSE.014 City Clock` は3 sourceのcyclic barrierを3 cellsで実装し、同tick、
+  duplicate、2 roundを含む27,064列を全検査、1,564 bytes / latency 0で169/170点。
+- `CASCADE.023 Continuity Hearing` はarchive/controller/policyをepoch 7へ共同束縛し、staleな
+  policy epochだけを修復して119/120点。`CASCADE.024 The Chosen Tomorrow` は公開selectorを
+  surfaceへ適用しつつundergroundを安全な別履歴として保持、129/130点。
+- `PARADOX.001 Two Tomorrows` はCASCADE.024のsurface/underground二履歴を同じworldから再生し、
+  同一公開record、両側の独立safety、`/payload/route`の意味的差を証明して299/300点。
+  provenanceだけを変えた同値履歴は`paradox_no_difference`で拒否する。
+- production release 2.1 は設計どおり75問・10,000点を完遂。golden archive は
+  `4d2015a522281bddeaa3ec9fedda28715677663926bea924a05494ee78ca57af`,
+  bundle は `sha256:517038cdd97cb7d3687f53272e8964a11ffcc1cca82cc69a73668bf56aea0514`。
+- ローカライズは問題バンドルを複製せず、`en` / `ja` / `zh-Hans` / `de` の外部packを
+  同じBundleIdへ結び付ける方式にした。75問のtitle/premise/submission/diagnosticsと
+  225段階ヒントを各言語で揃え、数字・CaseId・公開参照・JSON pointer・enum値を
+  protected tokenとして原文のまま保持する。
+- `player.py --locale LOCALE` と `AFTERIMAGE_LOCALE` は表示だけを切り替える。
+  answer schema、replay、score、unlock、telemetry、canonical receiptは変更しない。
+  production archive SHA-256とBundleIdを固定したまま、同一ORIENT.001 witnessが4言語で
+  byte-identical receiptを返すことを自動テストに追加した。
+- 問題公開用アセットは`afterimage/public/`をsource of truthとして整備した。二つの安全な
+  因果経路が一つの公開記録へ収束するmark、横長/縦長key art、4言語のOG・square・story
+  cards、4言語静的landing page、A4 one-sheet、brand guide、告知文、fact sheet、FAQ、alt
+  text、spoiler guide、provenance、公開前checklistを同梱する。画像由来と生成promptも記録した。
+- `build_public_assets.sh` はImageMagick/Chromium/Noto Sansで全派生画像、4言語browser preview、
+  one-sheet PDF、canonical asset manifestを再生成する。`build_public_release.py` はverified
+  production archiveをbyte-for-byte保持したplayer/engine/mediaの3 ZIPとdeploy可能web treeを
+  reproducibly生成し、author witness、baseline、case source、private golden、authoring toolを
+  path/manifest gateで拒否する。二回のbuildがbyte-identicalであることと、空PATHでfull playerを
+  初期化して日本語ORIENT.001を表示できることを`test_public_release.py`へ固定した。

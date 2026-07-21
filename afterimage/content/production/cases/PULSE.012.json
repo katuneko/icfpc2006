@@ -1,0 +1,1043 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.012",
+    "family": "PULSE",
+    "title": "Reorder Buffer",
+    "points": 140,
+    "reference_scale": 1900000,
+    "requires": {
+      "all": [
+        "case:PULSE.011",
+        "case:COVENANT.002"
+      ]
+    },
+    "projection": "pulse.reorder-buffer",
+    "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [
+        {
+          "name": "next",
+          "type": "int",
+          "initial": 0
+        },
+        {
+          "name": "seen0",
+          "type": "bool",
+          "initial": false
+        },
+        {
+          "name": "seen1",
+          "type": "bool",
+          "initial": false
+        },
+        {
+          "name": "seen2",
+          "type": "bool",
+          "initial": false
+        },
+        {
+          "name": "seen3",
+          "type": "bool",
+          "initial": false
+        }
+      ],
+      "handlers": [
+        {
+          "id": "reorder.0",
+          "on": "correction.fragment.0",
+          "actions": [
+            {
+              "op": "set",
+              "cell": "seen0",
+              "value": [
+                "const",
+                true
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    0
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen0"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen0",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    1
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen1"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen1",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    2
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen2"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen2",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    3
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen3"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen3",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    4
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reorder.1",
+          "on": "correction.fragment.1",
+          "actions": [
+            {
+              "op": "set",
+              "cell": "seen1",
+              "value": [
+                "const",
+                true
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    0
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen0"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen0",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    1
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen1"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen1",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    2
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen2"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen2",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    3
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen3"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen3",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    4
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reorder.2",
+          "on": "correction.fragment.2",
+          "actions": [
+            {
+              "op": "set",
+              "cell": "seen2",
+              "value": [
+                "const",
+                true
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    0
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen0"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen0",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    1
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen1"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen1",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    2
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen2"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen2",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    3
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen3"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen3",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    4
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reorder.3",
+          "on": "correction.fragment.3",
+          "actions": [
+            {
+              "op": "set",
+              "cell": "seen3",
+              "value": [
+                "const",
+                true
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    0
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen0"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen0",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    1
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen1"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen1",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    2
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen2"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen2",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "next"
+                  ],
+                  [
+                    "const",
+                    3
+                  ]
+                ],
+                [
+                  "cell",
+                  "seen3"
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "correction.ordered",
+                  "payload": [
+                    "const",
+                    {
+                      "stream": "city-correction",
+                      "kind": "release"
+                    }
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "seen3",
+                  "value": [
+                    "const",
+                    false
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "next",
+                  "value": [
+                    "const",
+                    4
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "author_invariant": "next is the least unreleased index and seen0..seen3 are bounded tombstones for arrived but unreleased fragments. Each arrival is recorded before four monotone guards drain the entire newly contiguous prefix at the decisive arrival tick.",
+    "pulse_contract": {
+      "task": "reorder-buffer",
+      "input_topics": {
+        "0": "correction.fragment.0",
+        "1": "correction.fragment.1",
+        "2": "correction.fragment.2",
+        "3": "correction.fragment.3"
+      },
+      "timer_topic": "pulse.timer",
+      "output_topic": "correction.ordered",
+      "output_payload": {
+        "stream": "city-correction",
+        "kind": "release"
+      },
+      "max_index": 3,
+      "horizon": 4,
+      "max_events": 4,
+      "named_fixtures": [
+        [
+          {
+            "at": 0,
+            "index": 2
+          },
+          {
+            "at": 1,
+            "index": 0
+          },
+          {
+            "at": 2,
+            "index": 1
+          }
+        ],
+        [
+          {
+            "at": 0,
+            "index": 3
+          },
+          {
+            "at": 0,
+            "index": 1
+          },
+          {
+            "at": 1,
+            "index": 0
+          },
+          {
+            "at": 3,
+            "index": 2
+          }
+        ],
+        [
+          {
+            "at": 0,
+            "index": 0
+          },
+          {
+            "at": 1,
+            "index": 1
+          },
+          {
+            "at": 2,
+            "index": 2
+          },
+          {
+            "at": 3,
+            "index": 3
+          }
+        ]
+      ],
+      "limits": {
+        "max_program_bytes": 16384,
+        "max_state_cells": 5,
+        "max_steps": 128,
+        "max_queue": 16,
+        "max_scheduled_events": 4
+      }
+    },
+    "metric_bounds": {
+      "worst_latency": 3,
+      "live_state_cells": 5
+    },
+    "limits": {
+      "max_witness_bytes": 196608,
+      "replay": {
+        "max_base_events": 4,
+        "max_derived_events": 4,
+        "max_bindings_tested": 64,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [],
+  "rules": [],
+  "projection": {
+    "id": "pulse.reorder-buffer",
+    "rows": []
+  },
+  "worked_value": {
+    "input": [
+      {
+        "at": 0,
+        "index": 2
+      },
+      {
+        "at": 1,
+        "index": 0
+      },
+      {
+        "at": 2,
+        "index": 1
+      }
+    ],
+    "release_counts_by_tick": {
+      "1": 1,
+      "2": 2
+    },
+    "note": "Index 2 waits. Arrival 0 releases only 0; arrival 1 then releases 1 and the buffered 2 in the same tick."
+  },
+  "story": {
+    "premise": "The correction archive reaches the hearing out of order. A later fragment may be authentic and early, but publishing it before every lower index would turn absence into narrative choice. The bounded stream contains each index at most once; silence is not permission to skip.",
+    "submission": "Submit a five-cell controller that buffers indices 0–3 and emits one canonical release token for every newly contiguous index, draining the full prefix at the arrival tick that closes the gap.",
+    "diagnostics": "The exhaustive oracle covers 1,457 unique bounded streams, including same-tick canonical ordering, empty prefixes, late zero, and multi-item drains. It rejects arrival-order forwarding and one-item-only drains.",
+    "hints": [
+      "Track arrival separately from release.",
+      "The next expected index only moves forward.",
+      "One event can legitimately cause several outputs."
+    ]
+  }
+}
+

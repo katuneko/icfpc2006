@@ -1,0 +1,23 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.012", "family": "MERGE", "title": "Causal Compression", "points": 130, "reference_scale": 120000,
+    "requires": {"all": ["case:MERGE.011", "case:CASCADE.017"]}, "projection": "merge.causal-compression", "validator_template": "merge-causal-compression-certificate-claim/0.1",
+    "merge_contract": {"task": "causal-compression", "maximum_certificate_edges": 4},
+    "author_answer": {"accepted": [{"key": "A", "at": 1}, {"key": "B", "at": 2}, {"key": "C", "at": 3}, {"key": "D", "at": 4}, {"key": "E", "at": 5}], "rejected": [], "certificate": [
+      {"before": "A", "after": "B", "minimum_gap": 1}, {"before": "B", "after": "C", "minimum_gap": 1}, {"before": "C", "after": "D", "minimum_gap": 1}, {"before": "D", "after": "E", "minimum_gap": 1}
+    ]},
+    "metric_bounds": {"temporal_displacement": 16, "certificate_units": 32},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 12, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"label": "A", "body": {"topic": "merge.record", "at": 1, "payload": {"key": "A", "local_time": 1, "offset_min": 0, "offset_max": 0, "source": "sealed-relay", "sequence": 1, "weight": 3, "fact": "thermal-risk"}, "parents": [], "origin": {"kind": "base", "source": "sealed-relay", "sequence": 1}}},
+    {"label": "B", "body": {"topic": "merge.record", "at": 2, "payload": {"key": "B", "local_time": 2, "offset_min": 0, "offset_max": 0, "source": "continuity-audit", "sequence": 1, "weight": 3, "fact": "blind-policy"}, "parents": ["@A"], "origin": {"kind": "base", "source": "continuity-audit", "sequence": 1}}},
+    {"label": "C", "body": {"topic": "merge.record", "at": 3, "payload": {"key": "C", "local_time": 3, "offset_min": 0, "offset_max": 0, "source": "route-control", "sequence": 1, "weight": 3, "fact": "surface-bypass"}, "parents": ["@A", "@B"], "origin": {"kind": "base", "source": "route-control", "sequence": 1}}},
+    {"label": "D", "body": {"topic": "merge.record", "at": 4, "payload": {"key": "D", "local_time": 4, "offset_min": 0, "offset_max": 0, "source": "grid-isolation", "sequence": 1, "weight": 3, "fact": "underground-held"}, "parents": ["@A", "@C"], "origin": {"kind": "base", "source": "grid-isolation", "sequence": 1}}},
+    {"label": "E", "body": {"topic": "merge.record", "at": 5, "payload": {"key": "E", "local_time": 5, "offset_min": 0, "offset_max": 0, "source": "public-notice", "sequence": 1, "weight": 3, "fact": "continuity-maintained"}, "parents": ["@B", "@D"], "origin": {"kind": "base", "source": "public-notice", "sequence": 1}}}
+  ],
+  "rules": [], "projection": {"id": "merge.causal-compression", "rows": []},
+  "worked_value": {"direct_constraints": 7, "sufficient_edges": 4, "chain": ["A", "B", "C", "D", "E"], "note": "A→C, A→D, and B→E are authentic but transitively implied; deleting facts is forbidden, deleting redundant certificate edges is required."},
+  "story": {"premise": "The blind-spot investigation produces five retained records and seven authentic precedence links. Three links merely repeat reachability already proved by the others. The hearing needs the smallest sufficient causal skeleton, not a screenshot of every arrow and not a deletion of evidence.", "submission": "Keep every record, assign its exact feasible time, and submit no more than four authentic edges whose transitive closure proves all seven active constraints. Every submitted edge must itself be necessary.", "diagnostics": "The verifier rejects discarded records, invented edges, insufficient reachability, excessive certificates, and a certificate that remains sufficient after one submitted edge is removed.", "hints": ["Compression applies to the proof graph, not the archive.", "Look for one chain spanning all five facts.", "Test necessity by removing each certificate edge in turn."]}
+}

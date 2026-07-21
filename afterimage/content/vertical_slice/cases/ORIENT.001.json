@@ -1,0 +1,138 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "ORIENT.001",
+    "family": "ORIENT",
+    "title": "The First Bell",
+    "points": 40,
+    "reference_scale": 16,
+    "requires": {"all": []},
+    "projection": "desk.first-bell",
+    "validator_template": "orient-event-claim/0.1",
+    "answer_event_topic": "alarm.test",
+    "limits": {
+      "max_witness_bytes": 65536,
+      "replay": {
+        "max_base_events": 64,
+        "max_derived_events": 64,
+        "max_bindings_tested": 4096,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 64
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 64,
+        "max_bindings_tested": 8192,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "topic": "rail.test-window",
+      "at": 10,
+      "payload": {"line": "M-4", "signal": "bell-17", "closes_at": 20},
+      "parents": [],
+      "origin": {"kind": "base", "source": "dispatch-plan", "sequence": 0}
+    },
+    {
+      "topic": "rail.bell-pulse",
+      "at": 12,
+      "payload": {"signal": "bell-17", "kind": "scheduled-test"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "telemetry-primary", "sequence": 17}
+    },
+    {
+      "topic": "rail.bell-pulse",
+      "at": 12,
+      "payload": {"signal": "bell-17", "kind": "scheduled-test"},
+      "parents": [],
+      "origin": {"kind": "base", "source": "telemetry-mirror", "sequence": 4}
+    }
+  ],
+  "rules": [
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "rail.first-bell",
+        "positive": [
+          {"alias": "w", "topic": "rail.test-window", "where": ["const", true]},
+          {
+            "alias": "p",
+            "topic": "rail.bell-pulse",
+            "where": [
+              "and",
+              ["eq", ["get", "p", "/payload/signal"], ["get", "w", "/payload/signal"]],
+              ["ge", ["get", "p", "/at"], ["get", "w", "/at"]],
+              ["le", ["get", "p", "/at"], ["get", "w", "/payload/closes_at"]]
+            ]
+          },
+          {
+            "alias": "q",
+            "topic": "rail.bell-pulse",
+            "where": [
+              "and",
+              ["eq", ["get", "q", "/payload"], ["get", "p", "/payload"]],
+              ["lt", ["get", "p", "/id"], ["get", "q", "/id"]]
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [["p", "q"]],
+        "guard": ["const", true],
+        "emit": [
+          {
+            "topic": ["const", "alarm.test"],
+            "at": ["max", ["get", "p", "/at"], ["get", "q", "/at"]],
+            "payload": [
+              "map",
+              "signal", ["get", "p", "/payload/signal"],
+              "classification", ["const", "scheduled-test"],
+              "corroborating_records", ["const", 2]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "id": "desk.first-bell",
+    "rows": [
+      {
+        "positive": [
+          {"alias": "a", "topic": "alarm.test", "where": ["const", true]}
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "value": [
+          "map",
+          "event", ["get", "a", "/id"],
+          "topic", ["get", "a", "/topic"],
+          "at", ["get", "a", "/at"],
+          "signal", ["get", "a", "/payload/signal"]
+        ],
+        "sort": [["get", "a", "/id"]]
+      }
+    ]
+  },
+  "worked_value": {
+    "topic": "example.not-the-answer",
+    "at": 3,
+    "payload": {"purpose": "canonical encoding practice", "safe_to_copy": false}
+  },
+  "story": {
+    "premise": "A platform bell appears twice in the transport transcript but should enter the alarm ledger once. Recompute the admitted alarm without trusting arrival order.",
+    "submission": "Submit the derived event ID, topic, logical time, and public projection digest.",
+    "diagnostics": "A mismatch identifies the submitted field class but never prints the expected event ID.",
+    "hints": [
+      "Event order is not an event-body field.",
+      "Parent IDs are sorted by raw digest bytes.",
+      "Derived provenance includes rule, binding, and emission ordinal."
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MOSAIC.010", "family": "MOSAIC", "title": "Underground Layer", "points": 150, "reference_scale": 100000,
+    "requires": {"all": ["case:MOSAIC.009", "case:CASCADE.017"]}, "projection": "mosaic.underground-layer", "validator_template": "mosaic-graph-claim/0.1",
+    "mosaic_contract": {"width": 3, "height": 3, "layers": {"values": ["surface", "underground"], "portals": ["v3", "v4", "v5"], "minimum_edges_per_layer": 5, "portal_material": "shaft"}},
+    "author_answer": {
+      "global": {
+        "vertices": [{"id":"v0","x":0,"y":0},{"id":"v1","x":1,"y":0},{"id":"v2","x":2,"y":0},{"id":"v3","x":0,"y":1},{"id":"v4","x":1,"y":1},{"id":"v5","x":2,"y":1},{"id":"v6","x":0,"y":2},{"id":"v7","x":1,"y":2},{"id":"v8","x":2,"y":2}],
+        "edges": [
+          {"a":"v0","b":"v1","material":"a-feeder","level":"surface"},{"a":"v0","b":"v3","material":"shaft","level":"surface"},{"a":"v1","b":"v2","material":"surface-rail","level":"surface"},{"a":"v1","b":"v4","material":"shaft","level":"surface"},{"a":"v2","b":"v5","material":"shaft","level":"surface"},
+          {"a":"v3","b":"v4","material":"sealed-duct","level":"underground"},{"a":"v3","b":"v6","material":"deep-rail","level":"underground"},{"a":"v4","b":"v5","material":"sealed-duct","level":"underground"},{"a":"v4","b":"v7","material":"deep-rail","level":"underground"},{"a":"v5","b":"v8","material":"deep-rail","level":"underground"},{"a":"v6","b":"v7","material":"deep-rail","level":"underground"},{"a":"v7","b":"v8","material":"deep-rail","level":"underground"}
+        ]
+      },
+      "used": [
+        {"fragment":"LAYER-NORTH","transform":"r0","mapping":[{"local":"n0","global":"v0"},{"local":"n1","global":"v1"},{"local":"n2","global":"v2"},{"local":"n3","global":"v3"},{"local":"n4","global":"v4"},{"local":"n5","global":"v5"}]},
+        {"fragment":"LAYER-SOUTH","transform":"r0","mapping":[{"local":"s0","global":"v3"},{"local":"s1","global":"v4"},{"local":"s2","global":"v5"},{"local":"s3","global":"v6"},{"local":"s4","global":"v7"},{"local":"s5","global":"v8"}]}
+      ], "unused": []
+    },
+    "metric_bounds": {"graph_size": 40, "certificate_units": 64},
+    "limits": {"max_witness_bytes": 196608, "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"topic":"mosaic.fragment","at":1,"payload":{"id":"LAYER-NORTH","weight":6,"vertices":[{"name":"n0","x":0,"y":0},{"name":"n1","x":1,"y":0},{"name":"n2","x":2,"y":0},{"name":"n3","x":0,"y":1},{"name":"n4","x":1,"y":1},{"name":"n5","x":2,"y":1}],"edges":[
+      {"a":"n0","b":"n1","material":"a-feeder","level":"surface"},{"a":"n0","b":"n3","material":"shaft","level":"surface"},{"a":"n1","b":"n2","material":"surface-rail","level":"surface"},{"a":"n1","b":"n4","material":"shaft","level":"surface"},{"a":"n2","b":"n5","material":"shaft","level":"surface"},{"a":"n3","b":"n4","material":"sealed-duct","level":"underground"},{"a":"n4","b":"n5","material":"sealed-duct","level":"underground"}
+    ]},"parents":[],"origin":{"kind":"base","source":"shaft-survey","sequence":1}},
+    {"topic":"mosaic.fragment","at":2,"payload":{"id":"LAYER-SOUTH","weight":7,"vertices":[{"name":"s0","x":0,"y":0},{"name":"s1","x":1,"y":0},{"name":"s2","x":2,"y":0},{"name":"s3","x":0,"y":1},{"name":"s4","x":1,"y":1},{"name":"s5","x":2,"y":1}],"edges":[
+      {"a":"s0","b":"s1","material":"sealed-duct","level":"underground"},{"a":"s0","b":"s3","material":"deep-rail","level":"underground"},{"a":"s1","b":"s2","material":"sealed-duct","level":"underground"},{"a":"s1","b":"s4","material":"deep-rail","level":"underground"},{"a":"s2","b":"s5","material":"deep-rail","level":"underground"},{"a":"s3","b":"s4","material":"deep-rail","level":"underground"},{"a":"s4","b":"s5","material":"deep-rail","level":"underground"}
+    ]},"parents":[],"origin":{"kind":"base","source":"underground-survey","sequence":1}}
+  ],
+  "rules": [], "projection": {"id":"mosaic.underground-layer","rows":[]},
+  "worked_value": {"surface_edges":5,"underground_edges":7,"portals":["v3","v4","v5"],"note":"The three shaft mouths are exactly the vertices incident to both connected layers; treating level as decoration creates an impossible single-plane route."},
+  "story": {"premise":"The surface bypass is real, but the survey archive had flattened shaft mouths and sealed ducts into one map. Two signed fragments overlap along the underground duct while three shafts connect the surface feeder to the deeper ring. The reconstruction must preserve depth as topology, not merely as a drawing label.","submission":"Reconstruct the canonical attributed grid, use both surveys, and prove exactly two connected layers with the three published cross-layer portals. Every portal must be backed by shaft material.","diagnostics":"The checker rejects undeclared levels, disconnected layers, a mixed-layer junction outside the portal list, a listed portal that does not mix layers, and a portal unsupported by shaft material.","hints":["Classify edges before thinking about the picture.","A portal is determined by incident layers, not by its name.","Both layer subgraphs must remain connected on their own."]}
+}

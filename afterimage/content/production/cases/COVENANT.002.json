@@ -1,0 +1,53 @@
+{
+  "format":"afterimage-case-source/0.1",
+  "case": {
+    "id":"COVENANT.002","family":"COVENANT","title":"City Covenant","points":550,"reference_scale":1800000,
+    "requires":{"all":["case:COVENANT.001","case:CASCADE.017","case:MERGE.012","case:MOSAIC.010","case:PULSE.011"]},"projection":"covenant.city","validator_template":"covenant-policy-claim/0.1",
+    "author_policy":{"format":"afterimage-covenant-policy/0.1","agents":[
+      {"agent":"dispatch","rules":[
+        {"when":["and",["get","alarm"],["and",["eq",["get","report"],["const","clear"]],["eq",["get","route"],["const","none"]]]],"action":"dispatch.route-underground"},
+        {"when":["and",["get","alarm"],["and",["eq",["get","report"],["const","hot"]],["eq",["get","route"],["const","none"]]]],"action":"dispatch.route-surface"}
+      ],"default":"dispatch.wait"},
+      {"agent":"sensor","rules":[
+        {"when":["and",["eq",["get","report"],["const","unknown"]],["not",["get","heat"]]],"action":"sensor.report-clear"},
+        {"when":["and",["eq",["get","report"],["const","unknown"]],["get","heat"]],"action":"sensor.report-hot"}
+      ],"default":"sensor.wait"}
+    ]},
+    "author_response_bound":4,
+    "covenant_contract": {
+      "format":"afterimage-covenant-contract/0.1",
+      "domains":{"alarm":[false,true],"heat":[false,true],"report":["unknown","clear","hot"],"route":["none","surface","underground"]},
+      "initial":[
+        {"alarm":false,"heat":false,"report":"unknown","route":"none"},
+        {"alarm":false,"heat":true,"report":"unknown","route":"none"}
+      ],
+      "actors":[
+        {"id":"dispatch","kind":"agent","observes":["alarm","report","route"],"actions":["dispatch.route-surface","dispatch.route-underground","dispatch.wait"]},
+        {"id":"environment","kind":"environment","observes":[],"actions":["env.raise"]},
+        {"id":"sensor","kind":"agent","observes":["heat","report"],"actions":["sensor.report-clear","sensor.report-hot","sensor.wait"]}
+      ],
+      "actions":[
+        {"id":"dispatch.route-surface","actor":"dispatch","guard":["and",["get","alarm"],["and",["eq",["get","report"],["const","hot"]],["eq",["get","route"],["const","none"]]]],"updates":{"route":["const","surface"]}},
+        {"id":"dispatch.route-underground","actor":"dispatch","guard":["and",["get","alarm"],["and",["eq",["get","report"],["const","clear"]],["eq",["get","route"],["const","none"]]]],"updates":{"route":["const","underground"]}},
+        {"id":"dispatch.wait","actor":"dispatch","guard":["const",true],"updates":{}},
+        {"id":"env.raise","actor":"environment","guard":["not",["get","alarm"]],"updates":{"alarm":["const",true]}},
+        {"id":"sensor.report-clear","actor":"sensor","guard":["and",["eq",["get","report"],["const","unknown"]],["not",["get","heat"]]],"updates":{"report":["const","clear"]}},
+        {"id":"sensor.report-hot","actor":"sensor","guard":["and",["eq",["get","report"],["const","unknown"]],["get","heat"]],"updates":{"report":["const","hot"]}},
+        {"id":"sensor.wait","actor":"sensor","guard":["const",true],"updates":{}}
+      ],
+      "scheduler":{"fairness_window":2},
+      "safety":[
+        {"id":"no-route-before-alarm","predicate":["or",["get","alarm"],["eq",["get","route"],["const","none"]]]},
+        {"id":"surface-only-when-hot","predicate":["or",["ne",["get","route"],["const","surface"]],["get","heat"]]},
+        {"id":"underground-only-when-clear","predicate":["or",["ne",["get","route"],["const","underground"]],["not",["get","heat"]]]}
+      ],
+      "liveness":[{"id":"alarm-eventually-routed","trigger":["get","alarm"],"goal":["ne",["get","route"],["const","none"]],"bound":12}],
+      "limits":{"max_reachable_states":5000,"max_transitions":50000,"max_expression_nodes":3000}
+    },
+    "metric_bounds":{"worst_response_bound":12,"reachable_states":512},
+    "limits":{"max_witness_bytes":262144,"replay":{"max_base_events":4,"max_derived_events":4,"max_bindings_tested":64,"max_value_bytes":1048576,"max_projection_records":8},"validator":{"max_base_events":128,"max_derived_events":16,"max_bindings_tested":1024,"max_value_bytes":1048576,"max_projection_records":8}}
+  },
+  "events":[],"rules":[],"projection":{"id":"covenant.city","rows":[]},
+  "worked_value":{"hidden_worlds":["underground-clear","underground-hot"],"information_flow":["sensor reads sealed heat","sensor publishes clear/hot report","dispatch commits the matching layer"],"note":"Dispatch never observes heat. A local sensor must turn the hidden fact into an explicit report before either route is enabled."},
+  "story":{"premise":"The city now has a two-layer map, a compressed causal archive, a surface bypass, and a bounded switching budget. But the decisive heat bit remains sealed from Dispatch. A field sensor can see heat but not the alarm; Dispatch can see alarm and the sensor's report but not heat. The city covenant must commit a route in both hidden worlds under every fair asynchronous schedule.","submission":"Submit one local policy per agent and the exact worst response bound. The policy must communicate the sealed observation through the declared report state, choosing underground only when clear and surface only when hot.","diagnostics":"The model checker returns shortest counterexamples for direct hidden-state observation, guessing before a report, choosing one universal route, disabled actions, safety failure, or bounded liveness expiry.","hints":["Locality is part of the proof, not a coding restriction.","The sensor must publish before Dispatch can distinguish the two initial worlds.","A route that is always safe in one hidden world is unsafe in the other."]}
+}

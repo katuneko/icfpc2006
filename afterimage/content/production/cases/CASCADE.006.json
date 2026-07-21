@@ -1,0 +1,110 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.006",
+    "family": "CASCADE",
+    "title": "Black Ice",
+    "points": 80,
+    "reference_scale": 650000,
+    "requires": {"all": ["case:CASCADE.005"]},
+    "projection": "incident.black-ice",
+    "validator_template": "cascade-multi-contract-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": ["retime", "suppress", "inject"],
+      "max_operations": 2,
+      "weights": {"retime": 1, "suppress": 28, "inject": 30},
+      "topics": ["road.treatment", "road.closure", "road.mobile-barrier"],
+      "pointers": [],
+      "retime": {"minimum": 11, "maximum": 15}
+    },
+    "author_operations": [
+      {"kind": "retime", "target_topic": "road.treatment", "at": 11},
+      {"kind": "retime", "target_topic": "road.closure", "at": 15}
+    ],
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 96, "witness_units": 96},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 32, "max_bindings_tested": 8192, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "road.policy", "at": 0, "payload": {"road": "R-6", "treatment_delay": 4, "surface": "north-ramp"}, "parents": [], "origin": {"kind": "base", "source": "winter-plan", "sequence": 6}},
+    {"topic": "road.treatment", "at": 14, "payload": {"road": "R-6", "planned_at": 11, "chemical": "brine-4", "evidence": "treatment-88", "external_authorization": "grid-window-31"}, "parents": [], "origin": {"kind": "base", "source": "road-crew", "sequence": 88}},
+    {"topic": "road.closure", "at": 13, "payload": {"road": "R-6", "reason": "black-ice", "evidence": "closure-52", "external_authorization": "traffic-priority-19"}, "parents": [], "origin": {"kind": "base", "source": "traffic-desk", "sequence": 52}},
+    {"topic": "road.ambulance-clear", "at": 15, "payload": {"road": "R-6", "unit": "A-3"}, "parents": [], "origin": {"kind": "base", "source": "medical-dispatch", "sequence": 3}},
+    {"topic": "road.school-bus-arrival", "at": 16, "payload": {"road": "R-6", "route": "S-8"}, "parents": [], "origin": {"kind": "base", "source": "school-transit", "sequence": 8}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "road.01-record-timing", "positive": [
+      {"alias": "p", "topic": "road.policy", "where": ["const", true]},
+      {"alias": "t", "topic": "road.treatment", "where": ["eq", ["get", "t", "/payload/road"], ["get", "p", "/payload/road"]]},
+      {"alias": "c", "topic": "road.closure", "where": ["eq", ["get", "c", "/payload/road"], ["get", "p", "/payload/road"]]},
+      {"alias": "a", "topic": "road.ambulance-clear", "where": ["eq", ["get", "a", "/payload/road"], ["get", "p", "/payload/road"]]},
+      {"alias": "b", "topic": "road.school-bus-arrival", "where": ["eq", ["get", "b", "/payload/road"], ["get", "p", "/payload/road"]]}
+    ], "negative": [{"alias": "m", "topic": "road.mobile-barrier", "where": ["eq", ["get", "m", "/payload/road"], ["get", "p", "/payload/road"]]}], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "road.timing-state"], "at": ["max", ["max", ["get", "t", "/at"], ["get", "c", "/at"]], ["max", ["get", "a", "/at"], ["get", "b", "/at"]]], "payload": ["map",
+      "road", ["get", "p", "/payload/road"],
+      "treatment_at", ["get", "t", "/at"],
+      "treatment_effective_at", ["add", ["get", "t", "/at"], ["get", "p", "/payload/treatment_delay"]],
+      "closure_at", ["get", "c", "/at"],
+      "ambulance_clear_at", ["get", "a", "/at"],
+      "school_bus_arrival_at", ["get", "b", "/at"],
+      "treatment_evidence", ["get", "t", "/payload/evidence"],
+      "closure_evidence", ["get", "c", "/payload/evidence"],
+      "treatment_authorization", ["get", "t", "/payload/external_authorization"],
+      "closure_authorization", ["get", "c", "/payload/external_authorization"],
+      "mode", ["const", "archived-timing"]
+    ], "parents": []}] }},
+    {"stratum": 0, "rule": {"id": "road.02-mobile-barrier-timing", "positive": [
+      {"alias": "p", "topic": "road.policy", "where": ["const", true]},
+      {"alias": "t", "topic": "road.treatment", "where": ["eq", ["get", "t", "/payload/road"], ["get", "p", "/payload/road"]]},
+      {"alias": "c", "topic": "road.closure", "where": ["eq", ["get", "c", "/payload/road"], ["get", "p", "/payload/road"]]},
+      {"alias": "a", "topic": "road.ambulance-clear", "where": ["eq", ["get", "a", "/payload/road"], ["get", "p", "/payload/road"]]},
+      {"alias": "b", "topic": "road.school-bus-arrival", "where": ["eq", ["get", "b", "/payload/road"], ["get", "p", "/payload/road"]]},
+      {"alias": "m", "topic": "road.mobile-barrier", "where": ["eq", ["get", "m", "/payload/road"], ["get", "p", "/payload/road"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "road.timing-state"], "at": ["max", ["max", ["get", "t", "/at"], ["get", "c", "/at"]], ["max", ["get", "m", "/at"], ["max", ["get", "a", "/at"], ["get", "b", "/at"]]]], "payload": ["map",
+      "road", ["get", "p", "/payload/road"],
+      "treatment_at", ["get", "t", "/at"],
+      "treatment_effective_at", ["get", "m", "/at"],
+      "closure_at", ["get", "m", "/at"],
+      "ambulance_clear_at", ["get", "a", "/at"],
+      "school_bus_arrival_at", ["get", "b", "/at"],
+      "treatment_evidence", ["get", "t", "/payload/evidence"],
+      "closure_evidence", ["get", "c", "/payload/evidence"],
+      "treatment_authorization", ["get", "t", "/payload/external_authorization"],
+      "closure_authorization", ["get", "c", "/payload/external_authorization"],
+      "mode", ["const", "mobile-barrier"]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "road.03-contract-summary", "positive": [{"alias": "s", "topic": "road.timing-state", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "s", "/at"], "payload": ["map",
+      "safe", ["and", ["le", ["get", "s", "/payload/treatment_effective_at"], ["get", "s", "/payload/closure_at"]], ["and", ["le", ["get", "s", "/payload/ambulance_clear_at"], ["get", "s", "/payload/closure_at"]], ["le", ["get", "s", "/payload/closure_at"], ["get", "s", "/payload/school_bus_arrival_at"]]]],
+      "treatment_at", ["get", "s", "/payload/treatment_at"],
+      "treatment_effective_at", ["get", "s", "/payload/treatment_effective_at"],
+      "closure_at", ["get", "s", "/payload/closure_at"],
+      "ambulance_clear_at", ["get", "s", "/payload/ambulance_clear_at"],
+      "school_bus_arrival_at", ["get", "s", "/payload/school_bus_arrival_at"],
+      "treatment_evidence_retained", ["const", true],
+      "closure_evidence_retained", ["const", true],
+      "treatment_authorization", ["get", "s", "/payload/treatment_authorization"],
+      "closure_authorization", ["get", "s", "/payload/closure_authorization"],
+      "mode", ["get", "s", "/payload/mode"]
+    ], "parents": []}] }},
+    {"stratum": 2, "rule": {"id": "road.04-first-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map",
+      "code", ["if", ["gt", ["get", "s", "/payload/treatment_effective_at"], ["get", "s", "/payload/closure_at"]], ["const", "treatment_not_effective"], ["if", ["gt", ["get", "s", "/payload/ambulance_clear_at"], ["get", "s", "/payload/closure_at"]], ["const", "closure_blocks_ambulance"], ["const", "closure_misses_bus"]]],
+      "treatment_effective_at", ["get", "s", "/payload/treatment_effective_at"],
+      "closure_at", ["get", "s", "/payload/closure_at"],
+      "ambulance_clear_at", ["get", "s", "/payload/ambulance_clear_at"],
+      "school_bus_arrival_at", ["get", "s", "/payload/school_bus_arrival_at"]
+    ], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.black-ice", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"contracts": [{"safe": false, "treatment_effective_at": 18, "closure_at": 13, "ambulance_clear_at": 15, "school_bus_arrival_at": 16}], "note": "The road must stay open through the ambulance, close before the bus, and be safe for the closure crew at that same boundary."},
+  "story": {
+    "premise": "Once the Priority Queue report is accepted, the Desk admits that Road R-6 was handled as two unrelated alerts: brine planned for tick 11 entered the record at 14, while a closure was advanced to 13. The official summary blames a sudden freeze. Preserve both records and place treatment, ambulance access, closure crew safety, and the school-bus diversion in one consistent local timeline.",
+    "submission": "Submit at most two authorized interventions plus the replayed treatment-effective, ambulance-clear, closure, and bus-arrival bounds with both evidence and external-authorization references retained.",
+    "diagnostics": "The earliest failed boundary is named with all four public times; external authorization identifiers remain visible, but their private upstream events do not appear in this local case.",
+    "hints": ["The closure time is constrained from below twice and from above once.", "Repairing only the treatment or only the closure leaves a different contract broken; a mobile barrier is a valid but costly replacement for both timings.", "The planned treatment needs four ticks to become effective. Align that result with the first tick after the ambulance clears and before the bus arrives."]
+  }
+}

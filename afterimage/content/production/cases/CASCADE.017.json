@@ -1,0 +1,31 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.017", "family": "CASCADE", "title": "Policy Blind Spot", "points": 110, "reference_scale": 1500000,
+    "requires": {"all": ["case:CASCADE.016"]}, "projection": "incident.policy-blind-spot", "validator_template": "cascade-projection-safe-claim/0.1",
+    "intervention_policy": {"format": "afterimage-intervention-policy/0.1", "required": true, "allowed_kinds": ["replace"], "max_operations": 1, "weights": {"replace": 1}, "topics": ["continuity.route-directive"], "pointers": ["/payload/route"], "retime": {"minimum": 0, "maximum": 0}},
+    "author_operation": {"kind": "replace", "target_topic": "continuity.route-directive", "pointer": "/payload/route", "value": "surface-bypass"},
+    "projection_contract": {"contract_topic": "contract.summary", "require_unchanged": true},
+    "diagnostic_topics": ["contract.violation"], "metric_bounds": {"causal_footprint": 48, "witness_units": 64},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 8, "max_derived_events": 16, "max_bindings_tested": 512, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"topic": "continuity.public-feeder", "at": 10, "payload": {"feeder": "FEEDER-9", "display": "available", "service": "continuity"}, "parents": [], "origin": {"kind": "base", "source": "public-console", "sequence": 8}},
+    {"topic": "continuity.hidden-thermal-risk", "at": 10, "payload": {"feeder": "FEEDER-9", "layer": "underground", "above_trip_curve": true, "evidence": "CASCADE.016"}, "parents": [], "origin": {"kind": "base", "source": "sealed-relay", "sequence": 9}},
+    {"topic": "continuity.route-directive", "at": 11, "payload": {"feeder": "FEEDER-9", "route": "underground-ring", "policy": "continuity.public-only-v1"}, "parents": [], "origin": {"kind": "base", "source": "continuity-policy", "sequence": 10}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "policy-blind.01-contract", "positive": [
+      {"alias": "p", "topic": "continuity.public-feeder", "where": ["const", true]},
+      {"alias": "h", "topic": "continuity.hidden-thermal-risk", "where": ["eq", ["get", "h", "/payload/feeder"], ["get", "p", "/payload/feeder"]]},
+      {"alias": "d", "topic": "continuity.route-directive", "where": ["eq", ["get", "d", "/payload/feeder"], ["get", "p", "/payload/feeder"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "d", "/at"], "payload": ["map",
+      "safe", ["or", ["not", ["get", "h", "/payload/above_trip_curve"]], ["eq", ["get", "d", "/payload/route"], ["const", "surface-bypass"]]],
+      "feeder", ["get", "p", "/payload/feeder"], "public_display", ["get", "p", "/payload/display"], "hidden_layer", ["get", "h", "/payload/layer"], "thermal_risk", ["get", "h", "/payload/above_trip_curve"], "route", ["get", "d", "/payload/route"], "projection_unchanged", ["const", true]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "policy-blind.02-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map", "code", ["const", "hidden-layer-exposure"], "public_display", ["get", "s", "/payload/public_display"]], "parents": []}]}}
+  ],
+  "projection": {"id": "incident.policy-blind-spot", "rows": [{"positive": [{"alias": "p", "topic": "continuity.public-feeder", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map", "feeder", ["get", "p", "/payload/feeder"], "display", ["get", "p", "/payload/display"], "service", ["get", "p", "/payload/service"]], "sort": []}]},
+  "worked_value": {"public_row": {"feeder": "FEEDER-9", "display": "available", "service": "continuity"}, "root_route": "underground-ring", "safe_route": "surface-bypass", "note": "The public row is byte-identical before and after repair; only active sealed evidence makes the root directive unsafe."},
+  "story": {"premise": "The thermal cause is now proved, yet Continuity still routes through the underground ring because its policy reads only the public FEEDER-9 tile marked available. The sealed relay says the underground layer remains above the trip curve. A route can therefore be publicly indistinguishable and physically unsafe.", "submission": "Change exactly one retained route field so the candidate is safe under the active hidden risk while binding the unchanged public projection.", "diagnostics": "The checker independently replays both active histories and rejects a policy that treats public availability as complete state.", "hints": ["Do not try to make the public tile disclose the sealed relay.", "Compare the active thermal fact with the chosen layer.", "A safe repair may leave every public byte unchanged."]}
+}

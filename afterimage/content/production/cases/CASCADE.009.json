@@ -1,0 +1,121 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.009",
+    "family": "CASCADE",
+    "title": "Last Train Through",
+    "points": 90,
+    "reference_scale": 950000,
+    "requires": {"all": ["case:CASCADE.008"]},
+    "projection": "incident.last-train-through",
+    "validator_template": "cascade-multi-contract-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": ["retime", "inject"],
+      "max_operations": 2,
+      "weights": {"retime": 1, "inject": 40},
+      "topics": ["tunnel.ventilation", "transit.last-train", "transit.bus-bridge"],
+      "pointers": [],
+      "retime": {"minimum": 12, "maximum": 19}
+    },
+    "author_operations": [
+      {"kind": "retime", "target_topic": "tunnel.ventilation", "at": 13},
+      {"kind": "retime", "target_topic": "transit.last-train", "at": 17}
+    ],
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 80, "witness_units": 80},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 24, "max_derived_events": 48, "max_bindings_tested": 8192, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "microgrid.recovery", "at": 0, "payload": {"grid": "MG-2", "capacity": 7}, "parents": [], "origin": {"kind": "base", "source": "microgrid-control", "sequence": 3}},
+    {"topic": "clinic.recovery-load", "at": 14, "payload": {"grid": "MG-2", "power": 3, "duration": 3, "evidence": "clinic-recovery-9"}, "parents": [], "origin": {"kind": "base", "source": "clinic-control", "sequence": 10}},
+    {"topic": "station.boarding-complete", "at": 17, "payload": {"station": "Harbor-4", "passengers": 180, "evidence": "platform-count-180"}, "parents": [], "origin": {"kind": "base", "source": "station-operations", "sequence": 18}},
+    {"topic": "tunnel.ventilation", "at": 15, "payload": {"tunnel": "T-4", "grid": "MG-2", "duration": 4, "power": 2, "authorized_at": 13, "evidence": "vent-order-13"}, "parents": [], "origin": {"kind": "base", "source": "tunnel-control", "sequence": 4}},
+    {"topic": "rail.traction-reserve", "at": 0, "payload": {"line": "Harbor", "grid": "MG-2", "expires_at": 17, "train_power": 5, "travel_duration": 2, "evidence": "reserve-window-17"}, "parents": [], "origin": {"kind": "base", "source": "rail-power", "sequence": 12}},
+    {"topic": "transit.last-train", "at": 19, "payload": {"line": "Harbor", "station": "Harbor-4", "tunnel": "T-4", "evidence": "train-HT12"}, "parents": [], "origin": {"kind": "base", "source": "rail-dispatch", "sequence": 12}},
+    {"topic": "bridge.service-close", "at": 20, "payload": {"line": "Harbor", "deadline": 20, "evidence": "bridge-close-20"}, "parents": [], "origin": {"kind": "base", "source": "bridge-control", "sequence": 6}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "last-train.01-rail-state", "positive": [
+      {"alias": "g", "topic": "microgrid.recovery", "where": ["const", true]},
+      {"alias": "c", "topic": "clinic.recovery-load", "where": ["eq", ["get", "c", "/payload/grid"], ["get", "g", "/payload/grid"]]},
+      {"alias": "b", "topic": "station.boarding-complete", "where": ["const", true]},
+      {"alias": "v", "topic": "tunnel.ventilation", "where": ["eq", ["get", "v", "/payload/grid"], ["get", "g", "/payload/grid"]]},
+      {"alias": "r", "topic": "rail.traction-reserve", "where": ["eq", ["get", "r", "/payload/grid"], ["get", "g", "/payload/grid"]]},
+      {"alias": "t", "topic": "transit.last-train", "where": ["eq", ["get", "t", "/payload/line"], ["get", "r", "/payload/line"]]},
+      {"alias": "d", "topic": "bridge.service-close", "where": ["eq", ["get", "d", "/payload/line"], ["get", "t", "/payload/line"]]}
+    ], "negative": [{"alias": "x", "topic": "transit.bus-bridge", "where": ["eq", ["get", "x", "/payload/station"], ["get", "t", "/payload/station"]]}], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "transit.evacuation-state"], "at": ["get", "d", "/at"], "payload": ["map",
+      "mode", ["const", "last-train"],
+      "boarding_complete_at", ["get", "b", "/at"],
+      "departure_at", ["get", "t", "/at"],
+      "ventilation_start_at", ["get", "v", "/at"],
+      "ventilation_authorized_at", ["get", "v", "/payload/authorized_at"],
+      "ventilation_ready_at", ["add", ["get", "v", "/at"], ["get", "v", "/payload/duration"]],
+      "traction_expires_at", ["get", "r", "/payload/expires_at"],
+      "arrival_at", ["add", ["get", "t", "/at"], ["get", "r", "/payload/travel_duration"]],
+      "bridge_deadline", ["get", "d", "/payload/deadline"],
+      "active_load", ["add", ["get", "r", "/payload/train_power"], ["add",
+        ["if", ["and", ["le", ["get", "c", "/at"], ["get", "t", "/at"]], ["lt", ["get", "t", "/at"], ["add", ["get", "c", "/at"], ["get", "c", "/payload/duration"]]]], ["get", "c", "/payload/power"], ["const", 0]],
+        ["if", ["and", ["le", ["get", "v", "/at"], ["get", "t", "/at"]], ["lt", ["get", "t", "/at"], ["add", ["get", "v", "/at"], ["get", "v", "/payload/duration"]]]], ["get", "v", "/payload/power"], ["const", 0]]
+      ]],
+      "capacity", ["get", "g", "/payload/capacity"],
+      "evidence_retained", ["const", true]
+    ], "parents": []}] }},
+    {"stratum": 0, "rule": {"id": "last-train.02-bus-state", "positive": [
+      {"alias": "b", "topic": "station.boarding-complete", "where": ["const", true]},
+      {"alias": "d", "topic": "bridge.service-close", "where": ["const", true]},
+      {"alias": "x", "topic": "transit.bus-bridge", "where": ["eq", ["get", "x", "/payload/station"], ["get", "b", "/payload/station"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "transit.evacuation-state"], "at": ["get", "d", "/at"], "payload": ["map",
+      "mode", ["const", "bus-bridge"],
+      "boarding_complete_at", ["get", "b", "/at"],
+      "departure_at", ["get", "x", "/at"],
+      "ventilation_start_at", ["const", 0],
+      "ventilation_authorized_at", ["const", 0],
+      "ventilation_ready_at", ["get", "x", "/at"],
+      "traction_expires_at", ["get", "d", "/payload/deadline"],
+      "arrival_at", ["add", ["get", "x", "/at"], ["const", 3]],
+      "bridge_deadline", ["get", "d", "/payload/deadline"],
+      "active_load", ["const", 0],
+      "capacity", ["const", 0],
+      "evidence_retained", ["const", true]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "last-train.03-contract-summary", "positive": [{"alias": "s", "topic": "transit.evacuation-state", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "s", "/at"], "payload": ["map",
+      "safe", ["if", ["eq", ["get", "s", "/payload/mode"], ["const", "bus-bridge"]],
+        ["and", ["le", ["get", "s", "/payload/boarding_complete_at"], ["get", "s", "/payload/departure_at"]], ["le", ["get", "s", "/payload/arrival_at"], ["get", "s", "/payload/bridge_deadline"]]],
+        ["and", ["ge", ["get", "s", "/payload/ventilation_start_at"], ["get", "s", "/payload/ventilation_authorized_at"]], ["and", ["le", ["get", "s", "/payload/ventilation_ready_at"], ["get", "s", "/payload/departure_at"]], ["and", ["le", ["get", "s", "/payload/boarding_complete_at"], ["get", "s", "/payload/departure_at"]], ["and", ["le", ["get", "s", "/payload/departure_at"], ["get", "s", "/payload/traction_expires_at"]], ["and", ["le", ["get", "s", "/payload/arrival_at"], ["get", "s", "/payload/bridge_deadline"]], ["le", ["get", "s", "/payload/active_load"], ["get", "s", "/payload/capacity"]]]]]]]],
+      "mode", ["get", "s", "/payload/mode"],
+      "boarding_complete_at", ["get", "s", "/payload/boarding_complete_at"],
+      "departure_at", ["get", "s", "/payload/departure_at"],
+      "ventilation_start_at", ["get", "s", "/payload/ventilation_start_at"],
+      "ventilation_authorized_at", ["get", "s", "/payload/ventilation_authorized_at"],
+      "ventilation_ready_at", ["get", "s", "/payload/ventilation_ready_at"],
+      "traction_expires_at", ["get", "s", "/payload/traction_expires_at"],
+      "arrival_at", ["get", "s", "/payload/arrival_at"],
+      "bridge_deadline", ["get", "s", "/payload/bridge_deadline"],
+      "active_load", ["get", "s", "/payload/active_load"],
+      "capacity", ["get", "s", "/payload/capacity"],
+      "evidence_retained", ["get", "s", "/payload/evidence_retained"]
+    ], "parents": []}] }},
+    {"stratum": 2, "rule": {"id": "last-train.04-first-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map",
+      "code", ["if", ["lt", ["get", "s", "/payload/departure_at"], ["get", "s", "/payload/boarding_complete_at"]], ["const", "boarding_incomplete"], ["if", ["gt", ["get", "s", "/payload/ventilation_ready_at"], ["get", "s", "/payload/departure_at"]], ["const", "tunnel_not_ready"], ["if", ["gt", ["get", "s", "/payload/departure_at"], ["get", "s", "/payload/traction_expires_at"]], ["const", "traction_expired"], ["const", "arrival_window_missed"]]]],
+      "departure_at", ["get", "s", "/payload/departure_at"],
+      "ventilation_ready_at", ["get", "s", "/payload/ventilation_ready_at"],
+      "traction_expires_at", ["get", "s", "/payload/traction_expires_at"],
+      "arrival_at", ["get", "s", "/payload/arrival_at"],
+      "bridge_deadline", ["get", "s", "/payload/bridge_deadline"]
+    ], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.last-train-through", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"contracts": [{"safe": false, "boarding_complete_at": 17, "departure_at": 19, "ventilation_ready_at": 19, "traction_expires_at": 17, "arrival_at": 21, "bridge_deadline": 20}], "note": "The train appears operational, but its predicted departure is outside both the traction and bridge windows. Ventilation and departure must meet at the single authorized boundary tick."},
+  "story": {
+    "premise": "The repaired island signal delivers 180 evacuees to Harbor-4, where Continuity's record says the last train departs after traction reserve expires and reaches the bridge after service closes. Sending it earlier is not enough: tunnel ventilation cannot begin before its signed order, boarding must finish, and the clinic and ventilation loads must have released the islanded grid.",
+    "submission": "Submit up to two authorized interventions plus the full evacuation contract: boarding, ventilation authorization/readiness, departure, traction expiry, arrival, bridge deadline, instantaneous load, evidence retention, branch, and projection digest.",
+    "diagnostics": "The first failed temporal or capacity bound is reported with public times. A feasible departure that precedes boarding, uses unauthorized ventilation, or misses the far bridge is not accepted as a partial rescue.",
+    "hints": ["The train has exactly one departure tick between completed boarding and expired traction reserve.", "Ventilation takes four ticks and may not start before its signed authorization.", "A self-powered bus bridge can meet the same passenger deadline in one expensive operation; it does not improve the rail explanation."]
+  }
+}

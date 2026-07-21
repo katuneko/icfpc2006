@@ -1,0 +1,214 @@
+{
+  "format": "afterimage-slice-golden/0.1",
+  "archive_sha256": "b161b9b7fed632a519f9b2099e7f17803b5fab8b2f042c8e19664d5192d4ec98",
+  "bundle": "sha256:6180c2ae6e0e2e6d024a5713fcf43e7c2f34ef40280dfb56515675cfecc4b11b",
+  "counts": {"cases": 12, "base_events": 54, "rules": 23, "projections": 12, "files": 137},
+  "ORIENT.001": {
+    "answer": {
+      "event_id": "sha256:24d604b5c229f8f6c5637124bf68fbded43f799cd0e812eb1c0a92ca0e74385b",
+      "topic": "alarm.test",
+      "at": 12,
+      "projection": "sha256:a2b40558770c31592d47a83cf6020a9c80bf4816137bde3c716a156f22d7b55a"
+    },
+    "branch": "sha256:6e0ef6417d9989523235a58d2014ad2ecb4c60d0367d54621d9823c9348a24ce",
+    "trace": "sha256:b7289679360e28111a3cbb24124971ecd4baf1d652633b607f92d2620f016226",
+    "score": {"completion": 26, "optimization": 9, "total": 35, "nominal_max": 40}
+  },
+  "ORIENT.002": {
+    "projection": "sha256:ae87ba4f2d3953048fb5f8481fbd967c66982ac679649a70057a87b48600c0bd",
+    "records": [
+      {"proposal": "effect-first", "index": 0, "code": "parent_not_active", "pair": ["C", "B"]},
+      {"proposal": "one-pass", "index": 1, "code": "fixed_point_incomplete", "pair": ["SOUTH-2"]},
+      {"proposal": "unstable-tie", "index": 0, "code": "wrong_tie_break", "pair": ["A", "D"]}
+    ],
+    "branch": "sha256:6e0ef6417d9989523235a58d2014ad2ecb4c60d0367d54621d9823c9348a24ce",
+    "trace": "sha256:b5e6960fa383f462fcf07178d8bf8f1871ec086edcbb7b3fbfaa35a14805fb05",
+    "trace_event_count": 23,
+    "score": {"completion": 33, "optimization": 4, "total": 37, "nominal_max": 50}
+  },
+  "ORIENT.003": {
+    "answer": {
+      "active_event_count": 13,
+      "projected_records": [
+        {"frame": "F-101", "at": 21, "subject": "courier", "confidence": 85},
+        {"frame": "F-104", "at": 24, "subject": "unknown", "confidence": 92}
+      ],
+      "projection": "sha256:f1cd37349d13ab800ad8b8bdca0ee3bf3e237f33f7b75ce8b0689262f632d9bd",
+      "hidden_event": "sha256:627e93207bdd5e94f73551503c93c7df77b514401b55e9f34da542a87b7563fe"
+    },
+    "branch": "sha256:6e0ef6417d9989523235a58d2014ad2ecb4c60d0367d54621d9823c9348a24ce",
+    "trace": "sha256:91ec38f1571d00c8612da2995e5afb20baee081fa982911178272127f4945345",
+    "score": {"completion": 39, "optimization": 13, "total": 52, "nominal_max": 60}
+  },
+  "ORIENT.004": {
+    "answer": {
+      "branch": "sha256:78fc37441c20b40c584d39a0881cb7415090ff67dffa54b9e9c1bfd8168fa43f",
+      "baseline_records": [
+        {"trip": "M4-17", "at": 11, "reason": "line-blocked"},
+        {"trip": "M4-18", "at": 11, "reason": "line-blocked"},
+        {"trip": "M4-19", "at": 11, "reason": "line-blocked"}
+      ],
+      "candidate_records": [],
+      "changed_event_ids": [
+        "sha256:14ab3d7240424cfe5cfd80af504c0e6c20a45aad1e19d3e8e1bf2d37237277b7",
+        "sha256:242fb721e710dac3a8fdf197943af3cee7e8ea3c2d8992568d21610abd66f43c",
+        "sha256:3e27b04b73f79afd363baec2870dcd2057599854b8dcaa1e43f12eb55b2c8edd",
+        "sha256:791741c501792bd67c3539679ce9471b9d3f3a2788c8cc554b127e4bd68eec67",
+        "sha256:cd55c877f37b3e277f7be135779e31ce9b05ece02cdfa8651fbd038ea0dcf66e",
+        "sha256:edf4503f011b858d3976032acad3e431a1807f7883794b51e38613807104b58d",
+        "sha256:f3a7604046af465226b8d427b70d0a1a07cc98bbbce5e2bf0afd1e538ebe215d"
+      ],
+      "projection": "sha256:b30906960adfa0ab296a345b849992b3adba7474b50b21c3da1042a15fb912ba"
+    },
+    "trace": "sha256:511d8f392359f991f5ceba054526bec6c52a6d4e3ccd2f9523633fcc61ad4669",
+    "score": {"completion": 46, "optimization": 12, "total": 58, "nominal_max": 70}
+  },
+  "ORIENT.005": {
+    "export_case": "ORIENT.004",
+    "embedded_witness": "sha256:78c8a634058e4653e5bafd9d388f28ae4a0b3a7b6a4164b6fff3415b7939d735",
+    "branch": "sha256:6e0ef6417d9989523235a58d2014ad2ecb4c60d0367d54621d9823c9348a24ce",
+    "projection": "sha256:d2596fb20f16f66a17561b7dd5ead96f45053537faf178fd74e02956d139097c",
+    "trace": "sha256:e738cc484ebf6f8d76322616fa23ae42c9a8bf4e4a0ec3e131e96875fb4fc2d7",
+    "score": {"completion": 52, "optimization": 10, "total": 62, "nominal_max": 80},
+    "unlocks": ["case:ORIENT.005", "cap:audit.export"]
+  },
+  "CASCADE.001": {
+    "answer": {
+      "contracts": [{"safe": true, "ambulance_clear_at": 18, "ambulance_deadline": 18, "pedestrian_wait": 0, "pedestrian_max_wait": 6}],
+      "branch": "sha256:8339f2d31f51cc49788d1cb7225bed76e916dd9fd3c78d9e7da411c86b94b3b9",
+      "projection": "sha256:aa5e304003de1db561f180cc50730094e23376355cb2a70ffecfbd6d52b6764b"
+    },
+    "trace": "sha256:9d60493a228714f494d34b283e0f4b2c2e2fab26ee5f73569da41fbe35d160f0",
+    "metrics": {"intervention_weight": 1, "causal_footprint": 6, "witness_units": 5, "effective_cost": 4621},
+    "score": {"completion": 52, "optimization": 27, "total": 79, "nominal_max": 80},
+    "unlocks": ["case:CASCADE.001"]
+  },
+  "MERGE.001": {
+    "answer": {
+      "accepted": [
+        {"at": 10, "event": "sha256:9943a5202b61a236cd20abe4ec4016491e8cce2978e21586c3ce74d5af2acded"},
+        {"at": 11, "event": "sha256:7e86858138facea6afe584d62a2fb30cbe75b5648bbdf1841465b41be4bafc7b"},
+        {"at": 12, "event": "sha256:0910cc5f603c91ac0d9cae03586f6e0ff5576b923f43edad07411cb9de841640"},
+        {"at": 14, "event": "sha256:dd37e158e53264093c7d7f1820a68c5843fa508d032125b92f834711d89658ef"},
+        {"at": 15, "event": "sha256:7fe80dd7c3fe8891dce743636b9e54e6a5014fbae04f32b72b8fd43b0306a4e1"},
+        {"at": 18, "event": "sha256:07153f70be21589f7d271dc6958e4571f3f7dc9ca47dcc8faf7835a06fb46465"},
+        {"at": 19, "event": "sha256:a4e16225c112b053f03ff320bc6aeef9225df8bbcc59e06ec76409eef7951d7d"},
+        {"at": 20, "event": "sha256:300eba6ed135f2a494a558518e42be42123288a1a1a7dd651ea59c9bc147cb1b"}
+      ],
+      "certificate": [
+        {"after": "sha256:7e86858138facea6afe584d62a2fb30cbe75b5648bbdf1841465b41be4bafc7b", "before": "sha256:9943a5202b61a236cd20abe4ec4016491e8cce2978e21586c3ce74d5af2acded", "minimum_gap": 1},
+        {"after": "sha256:0910cc5f603c91ac0d9cae03586f6e0ff5576b923f43edad07411cb9de841640", "before": "sha256:7e86858138facea6afe584d62a2fb30cbe75b5648bbdf1841465b41be4bafc7b", "minimum_gap": 1},
+        {"after": "sha256:dd37e158e53264093c7d7f1820a68c5843fa508d032125b92f834711d89658ef", "before": "sha256:0910cc5f603c91ac0d9cae03586f6e0ff5576b923f43edad07411cb9de841640", "minimum_gap": 1},
+        {"after": "sha256:7fe80dd7c3fe8891dce743636b9e54e6a5014fbae04f32b72b8fd43b0306a4e1", "before": "sha256:dd37e158e53264093c7d7f1820a68c5843fa508d032125b92f834711d89658ef", "minimum_gap": 1},
+        {"after": "sha256:07153f70be21589f7d271dc6958e4571f3f7dc9ca47dcc8faf7835a06fb46465", "before": "sha256:7fe80dd7c3fe8891dce743636b9e54e6a5014fbae04f32b72b8fd43b0306a4e1", "minimum_gap": 1},
+        {"after": "sha256:a4e16225c112b053f03ff320bc6aeef9225df8bbcc59e06ec76409eef7951d7d", "before": "sha256:07153f70be21589f7d271dc6958e4571f3f7dc9ca47dcc8faf7835a06fb46465", "minimum_gap": 1},
+        {"after": "sha256:300eba6ed135f2a494a558518e42be42123288a1a1a7dd651ea59c9bc147cb1b", "before": "sha256:a4e16225c112b053f03ff320bc6aeef9225df8bbcc59e06ec76409eef7951d7d", "minimum_gap": 1},
+        {"after": "sha256:dd37e158e53264093c7d7f1820a68c5843fa508d032125b92f834711d89658ef", "before": "sha256:9943a5202b61a236cd20abe4ec4016491e8cce2978e21586c3ce74d5af2acded", "minimum_gap": 1},
+        {"after": "sha256:07153f70be21589f7d271dc6958e4571f3f7dc9ca47dcc8faf7835a06fb46465", "before": "sha256:dd37e158e53264093c7d7f1820a68c5843fa508d032125b92f834711d89658ef", "minimum_gap": 1},
+        {"after": "sha256:7fe80dd7c3fe8891dce743636b9e54e6a5014fbae04f32b72b8fd43b0306a4e1", "before": "sha256:7e86858138facea6afe584d62a2fb30cbe75b5648bbdf1841465b41be4bafc7b", "minimum_gap": 1},
+        {"after": "sha256:a4e16225c112b053f03ff320bc6aeef9225df8bbcc59e06ec76409eef7951d7d", "before": "sha256:7fe80dd7c3fe8891dce743636b9e54e6a5014fbae04f32b72b8fd43b0306a4e1", "minimum_gap": 1},
+        {"after": "sha256:300eba6ed135f2a494a558518e42be42123288a1a1a7dd651ea59c9bc147cb1b", "before": "sha256:0910cc5f603c91ac0d9cae03586f6e0ff5576b923f43edad07411cb9de841640", "minimum_gap": 1}
+      ],
+      "rejected": [{"event": "sha256:c3f3267a9c34d3c79926db6a923b27789ea12538aa0a6efdf03b9f3713a4fd7b", "reason": "inconsistent"}]
+    },
+    "branch": "sha256:6e0ef6417d9989523235a58d2014ad2ecb4c60d0367d54621d9823c9348a24ce",
+    "projection": "sha256:e7d19844bd056ecf8bedba0bbfcde545a970761b4d2c3592c88fc5e72bac65a8",
+    "trace": "sha256:614b7e39810eda15c5cb7862b93e8c499c9bc95dbb77a16ccd5c972af4bbfd58",
+    "metrics": {"rejected_weight": 1, "temporal_displacement": 0, "certificate_units": 35, "effective_cost": 8421},
+    "score": {"completion": 78, "optimization": 41, "total": 119, "nominal_max": 120},
+    "unlocks": ["case:MERGE.001"]
+  },
+  "PULSE.001": {
+    "answer": {
+      "invariant": "stable-bell names one replaceable timer; deadline is always the latest pulse time plus five, so only the final timer of each maximal cluster can fire.",
+      "program": {
+        "cells": [{"initial": -1, "name": "deadline", "type": "int"}],
+        "format": "afterimage-pulse/0.1",
+        "handlers": [
+          {
+            "actions": [
+              {"cell": "deadline", "op": "set", "value": ["add", ["event", "at"], ["const", 5]]},
+              {"at": ["cell", "deadline"], "key": "stable-bell", "op": "schedule", "payload": ["const", {"platform": "P-7"}], "topic": "pulse.timer"}
+            ],
+            "id": "pulse.on-input",
+            "on": "rail.bell-pulse"
+          },
+          {
+            "actions": [{"op": "emit", "payload": ["event", "payload"], "topic": "rail.stable-bell"}],
+            "id": "pulse.on-timer",
+            "on": "pulse.timer"
+          }
+        ]
+      }
+    },
+    "branch": "sha256:6e0ef6417d9989523235a58d2014ad2ecb4c60d0367d54621d9823c9348a24ce",
+    "projection": "sha256:b30906960adfa0ab296a345b849992b3adba7474b50b21c3da1042a15fb912ba",
+    "trace": "sha256:85e9de941be5ba58ab5a1560941a0d29ea4caf6aeb611c08266800019c419c1d",
+    "metrics": {"program_bytes": 485, "worst_latency": 5, "live_state_cells": 1, "effective_cost": 272172},
+    "score": {"completion": 98, "optimization": 37, "total": 135, "nominal_max": 150},
+    "unlocks": ["case:PULSE.001"]
+  },
+  "CASCADE.002": {
+    "answer": {
+      "branch": "sha256:a08ccc181a381cb3b51a2c574deb8ddbe2714fe028cc02621a65d5c34699e138",
+      "contracts": [{"energy_budget": 40, "evidence_retained": true, "flow": 30, "ingestion_at": 15, "maintenance_complete": 16, "maintenance_window_end": 20, "minimum_pressure": 50, "pipe_capacity": 60, "pressure": 55, "pump_energy": 0, "route_available": true, "safe": true, "source_at": 8}],
+      "projection": "sha256:46caff54d845030ebace730219204aa52427585e18d54aa0dde5d06ab0add72b"
+    },
+    "trace": "sha256:d4c72f6055ccf96bd43d3abec5fe5f91d9198ebdf9f92b854960d370714f8650",
+    "metrics": {"intervention_weight": 2, "causal_footprint": 8, "witness_units": 7, "effective_cost": 34322},
+    "score": {"completion": 65, "optimization": 34, "total": 99, "nominal_max": 100},
+    "unlocks": ["case:CASCADE.002"]
+  },
+  "MOSAIC.001": {
+    "branch": "sha256:6e0ef6417d9989523235a58d2014ad2ecb4c60d0367d54621d9823c9348a24ce",
+    "projection": "sha256:105d3997534d114f8b1b6a0be60bef8a705c32c342af98f4d9b7bafa19b080fc",
+    "trace": "sha256:1ed71874d51de792d5c3c03837ddd2a75313f48c703d75603aa622df0ec0e86a",
+    "metrics": {"unexplained_weight": 1, "graph_size": 21, "certificate_units": 11, "effective_cost": 11106},
+    "score": {"completion": 85, "optimization": 44, "total": 129, "nominal_max": 130},
+    "unlocks": ["case:MOSAIC.001"]
+  },
+  "LENS.001": {
+    "answer": {"program": {
+      "complement_schema": [{"name": "unit", "type": "option-text"}, {"name": "provenance", "type": "text-list"}, {"name": "boundary_street", "type": "text"}],
+      "format": "afterimage-lens/0.1",
+      "get": [{"op": "forward_address", "table": "addresses"}, {"op": "encode_entrance", "table": "entrances"}],
+      "put": [{"disambiguation": "boundary_street", "op": "reverse_address", "table": "addresses"}, {"op": "decode_entrance", "table": "entrances"}, {"fields": ["unit", "provenance"], "op": "restore"}]
+    }},
+    "branch": "sha256:6e0ef6417d9989523235a58d2014ad2ecb4c60d0367d54621d9823c9348a24ce",
+    "projection": "sha256:b30906960adfa0ab296a345b849992b3adba7474b50b21c3da1042a15fb912ba",
+    "trace": "sha256:85e9de941be5ba58ab5a1560941a0d29ea4caf6aeb611c08266800019c419c1d",
+    "metrics": {"program_nodes": 32, "auxiliary_schema_cells": 3, "worst_reductions": 8, "effective_cost": 35564},
+    "score": {"completion": 117, "optimization": 60, "total": 177, "nominal_max": 180},
+    "unlocks": ["case:LENS.001"]
+  },
+  "CASCADE.003": {
+    "answer": {
+      "branch": "sha256:6e0ef6417d9989523235a58d2014ad2ecb4c60d0367d54621d9823c9348a24ce",
+      "contract": {
+        "arrival": 19,
+        "authorizations": 3,
+        "deadline": 20,
+        "projection_cause": "whole_event_suppressed",
+        "route": ["hospital-grid", "v4-v7", "emergency-route"],
+        "safe": true
+      },
+      "projection": "sha256:f2b711c58f3bbbe784339c8f05cb9ffb5785e161d7ce8b9800a85109efe254a2",
+      "public_rows": [
+        {"edge": "emergency-route", "status": "verified"},
+        {"edge": "hospital-grid", "status": "verified"},
+        {"edge": "v4-v7", "policy": "housing.restricted", "status": "unavailable"}
+      ],
+      "relay": {
+        "event": "sha256:826b20d81eacdbb60a85b58d26712b7338f332d6c93d34082b94fd71fb09a2df",
+        "policy_label": "housing.restricted",
+        "projection_difference": "whole_event_suppressed",
+        "provenance_digest": "sha256:d220fe4dda467675ae099f551b88df45cb08a6194e10a3e702bf16488990af2c",
+        "relay_id": "v4-v7"
+      }
+    },
+    "trace": "sha256:15387105a110d5c52395e1abccf24181dacc1e106c847f0afb968badb471680b",
+    "metrics": {"intervention_weight": 0, "causal_footprint": 0, "witness_units": 13, "effective_cost": 14},
+    "score": {"completion": 91, "optimization": 48, "total": 139, "nominal_max": 140},
+    "unlocks": ["case:CASCADE.003"]
+  }
+}

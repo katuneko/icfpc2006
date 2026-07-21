@@ -1,0 +1,65 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.006",
+    "family": "MERGE",
+    "title": "Quorum Ledger",
+    "points": 100,
+    "reference_scale": 70000,
+    "requires": {"all": ["case:MERGE.005", "case:PULSE.005", "case:CASCADE.010"]},
+    "projection": "merge.quorum-ledger",
+    "validator_template": "merge-quorum-certificate-claim/0.1",
+    "merge_contract": {"task": "quorum-ledger", "operation_field": "operation", "claim_field": "claim", "replica_field": "replica", "quorum": 3},
+    "author_answer": {
+      "accepted": [
+        {"key": "Q1", "at": 5},
+        {"key": "Q2", "at": 7},
+        {"key": "Q3", "at": 9}
+      ],
+      "rejected": [
+        {"key": "N1", "reason": "minority"},
+        {"key": "N2", "reason": "minority"}
+      ],
+      "certificate": [
+        {"before": "Q1", "after": "Q2", "minimum_gap": 1},
+        {"before": "Q2", "after": "Q3", "minimum_gap": 1}
+      ]
+    },
+    "metric_bounds": {"temporal_displacement": 24, "certificate_units": 20},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"label": "Q1", "body": {"topic": "merge.record", "at": 5, "payload": {"key": "Q1", "local_time": 105, "offset_min": 99, "offset_max": 101, "source": "station-ledger", "sequence": 1, "weight": 8, "operation": "hospital-cooling-5", "claim": "flow-5", "replica": "station", "kind": "attestation"}, "parents": [], "origin": {"kind": "base", "source": "station-ledger", "sequence": 1}}},
+    {"label": "Q2", "body": {"topic": "merge.record", "at": 7, "payload": {"key": "Q2", "local_time": 207, "offset_min": 199, "offset_max": 201, "source": "traffic-ledger", "sequence": 1, "weight": 7, "operation": "hospital-cooling-5", "claim": "flow-5", "replica": "traffic", "kind": "attestation"}, "parents": ["@Q1"], "origin": {"kind": "base", "source": "traffic-ledger", "sequence": 1}}},
+    {"label": "Q3", "body": {"topic": "merge.record", "at": 9, "payload": {"key": "Q3", "local_time": 9, "offset_min": -1, "offset_max": 1, "source": "clinic-ledger", "sequence": 1, "weight": 9, "operation": "hospital-cooling-5", "claim": "flow-5", "replica": "clinic", "kind": "attestation"}, "parents": ["@Q2"], "origin": {"kind": "base", "source": "clinic-ledger", "sequence": 1}}},
+    {"label": "N1", "body": {"topic": "merge.record", "at": 6, "payload": {"key": "N1", "local_time": 306, "offset_min": 299, "offset_max": 301, "source": "west-cache", "sequence": 1, "weight": 1, "operation": "hospital-cooling-5", "claim": "flow-3", "replica": "west-cache", "kind": "attestation"}, "parents": [], "origin": {"kind": "base", "source": "west-cache", "sequence": 1}}},
+    {"label": "N2", "body": {"topic": "merge.record", "at": 8, "payload": {"key": "N2", "local_time": -42, "offset_min": -51, "offset_max": -49, "source": "operator-cache", "sequence": 1, "weight": 1, "operation": "hospital-cooling-5", "claim": "flow-3", "replica": "operator-cache", "kind": "attestation"}, "parents": [], "origin": {"kind": "base", "source": "operator-cache", "sequence": 1}}}
+  ],
+  "rules": [],
+  "projection": {"id": "merge.quorum-ledger", "rows": [{"positive": [{"alias": "r", "topic": "merge.record", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map",
+    "event", ["get", "r", "/id"],
+    "key", ["get", "r", "/payload/key"],
+    "source", ["get", "r", "/payload/source"],
+    "sequence", ["get", "r", "/payload/sequence"],
+    "local_time", ["get", "r", "/payload/local_time"],
+    "offset_min", ["get", "r", "/payload/offset_min"],
+    "offset_max", ["get", "r", "/payload/offset_max"],
+    "weight", ["get", "r", "/payload/weight"],
+    "operation", ["get", "r", "/payload/operation"],
+    "claim", ["get", "r", "/payload/claim"],
+    "replica", ["get", "r", "/payload/replica"],
+    "kind", ["get", "r", "/payload/kind"],
+    "parents", ["get", "r", "/parents"]
+  ], "sort": [["get", "r", "/payload/claim"], ["get", "r", "/payload/replica"]]}]},
+  "worked_value": {"operation": "hospital-cooling-5", "quorum": 3, "selected_claim": "flow-5", "support": {"flow-5": 3, "flow-3": 2}, "note": "The two stale flow-3 records are temporally feasible. They are rejected by the public 3-of-5 evidence contract, not mislabeled as inconsistent clocks."},
+  "story": {
+    "premise": "The cooling repair produced five retained attestations. Station, traffic, and clinic ledgers record flow 5; two partition-era caches still record flow 3. Unlike the split-brain archive, every timestamp can coexist. Reconstruct the causal majority and classify the stale claim under the published three-replica quorum instead of inventing a clock fault.",
+    "submission": "Accept every attestation for the uniquely qualified claim, reject every competing attestation as `minority`, assign in-range times, and submit the exact active parent/source certificate.",
+    "diagnostics": "Clock feasibility, replica uniqueness, quorum support, claim selection, rejection reason, and exact certificate coverage are checked independently. `inconsistent` is not a synonym for losing a vote.",
+    "hints": ["Count distinct replica names per claim; records are not votes if one replica appears twice.", "Only one claim reaches the public threshold of three.", "The minority records fit their clocks. Their rejection is semantic evidence policy, not temporal contradiction."]
+  }
+}

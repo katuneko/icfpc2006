@@ -1,0 +1,1124 @@
+{
+  "bundles": [
+    "sha256:517038cdd97cb7d3687f53272e8964a11ffcc1cca82cc69a73668bf56aea0514",
+    "sha256:6180c2ae6e0e2e6d024a5713fcf43e7c2f34ef40280dfb56515675cfecc4b11b"
+  ],
+  "cases": {
+    "CASCADE.001": {
+      "diagnostics": "Der früheste gescheiterte Vertrag wird gemeldet, ohne dass eine Operation vorgeschlagen wird.",
+      "hints": [
+        "Der Überlappungsalarm wird abgeleitet.",
+        "Verschieben Sie die Anfrage auf den frühestmöglichen Zeitpunkt.",
+        "Eine Umleitung ist gültig, aber absichtlich teuer."
+      ],
+      "premise": "Eine verspätete Fußgängeranforderung überschneidet den Krankenwagenkorridor. Ändern Sie eine autorisierte Ursache und behalten Sie dabei beide Dienste bei.",
+      "protected": [],
+      "submission": "Reichen Sie eine Intervention plus die unabhängig wiedergegebene Vertragszusammenfassung Branch und Projektion Digest ein.",
+      "title": "Verspätetes Grünsignal"
+    },
+    "CASCADE.002": {
+      "diagnostics": "Die erste fehlgeschlagene Grenze umfasst den verantwortlichen Pfad vom Reservoir zum Hydranten sowie Zeitstempel für Quelle und Aufnahme.",
+      "hints": [
+        "Vergleichen Sie die Quellzeit mit der Aufnahmezeit.",
+        "Der niedrige Messwert kann den Druck vor der Wartung und nicht danach beschreiben.",
+        "Bewahren Sie die Beweise auf und reparieren Sie ihre kausal-Platzierung, bevor Sie Nachschub hinzufügen."
+      ],
+      "premise": "Unmittelbar vor einem Feuerruf erscheint eine gepufferte Druckprobe. Das Schließen des vorgeschalteten Ventils sieht lokal sicher aus, entfernt aber die einzige nutzbare Hydrantenroute.",
+      "protected": [],
+      "submission": "Reichen Sie bis zu zwei autorisierte Eingriffe sowie den unabhängig wiederholten Druck-, Weg-, Kapazitäts-, Nachweis-, Wartungs- und Energieausweis ein.",
+      "title": "Trockener Hydrant"
+    },
+    "CASCADE.003": {
+      "diagnostics": "Ein undichtes oder falsches Relay-Proof meldet nur sein Proof-Feld; Eine unvollständige Route meldet die fehlende aktive Autorisierung, ohne private Provenienz preiszugeben.",
+      "hints": [
+        "Vergleichen Sie öffentliche Zeilen mit rohen aktiven Themen.",
+        "Als zentraler MOSAIC-Korridor erschien der Relaisname v4-v7.",
+        "Hashen Sie den Provenienz; reproduzieren Sie nicht sein eingeschränktes Mitglied."
+      ],
+      "premise": "Das Desk hält eine Krankenhausevakuierung für unmöglich, da es in seiner öffentlichen Meinung keine verifizierte Weiterleitung gibt. Der Rohzustand „Aktiv“ enthält bereits einen autorisierten v4-v7-Korridor, dessen privater Provenienz die Unterdrückung des gesamten Ereignisses verursacht hat.",
+      "protected": [
+        "v4-v7"
+      ],
+      "submission": "Senden Sie einen optionalen bereichsbezogenen Eingriff, die nicht offenlegende Relay-EventId/Provenienz Digest, die genauen öffentlichen Zeilen und den Active-Route-Vertrag.",
+      "title": "Morgen, geschwärzt"
+    },
+    "CASCADE.004": {
+      "diagnostics": "Ein fehlgeschlagenes Zertifikat meldet die erste physische Grenze sowie die Beobachtungs-, Aufnahme- und Controller-Startzeiten der Probe; es nennt niemals einen Eingriff.",
+      "hints": [
+        "Die Heizung reagiert auf die Ereigniszeit, während das Archiv eine andere Beobachtungszeit speichert.",
+        "Durch die Unterdrückung der Stichprobe wird der einzige Belegungsnachweis entfernt; Notwärme bleibt ein gültiger, aber kostspieliger Ausweg.",
+        "Platzieren Sie die Rückstellprobe zum frühestmöglichen Zeitpunkt, der mit dem Zeitpunkt der Beobachtung übereinstimmt."
+      ],
+      "premise": "Nach der Feststellung der eingeschränkten Weiterleitung leitet das Continuity Desk erneut eine „unmögliche“ Evakuierung am Bahnsteig P-7 ein. Im Kapazitätsbericht werden schwache Heizungen dafür verantwortlich gemacht, aber die zurückgehaltene Belegungsstichprobe besagt, dass sie 72 Passagiere bei Tick 9 beobachtet hat und erst bei Tick 18 in den Kontrollstrom eingetreten ist. Bewahren Sie Service und Beweise, während Sie die kleinste autorisierte Ursache beheben.",
+      "protected": [
+        "9",
+        "P-7"
+      ],
+      "submission": "Reichen Sie genau einen autorisierten Eingriff sowie die unabhängig wiederholte Vertragszusammenfassung zu Temperatur, Service, Energie, Beweisen und Zeitplan ein.",
+      "title": "Kalter Bahnsteig"
+    },
+    "CASCADE.005": {
+      "diagnostics": "Eine Ablehnung identifiziert den ersten versäumten Diensttermin und meldet sowohl öffentliche als auch Laufzeit-Erstaufträge, ohne einen Warteschlangenvorgang zu empfehlen.",
+      "hints": [
+        "Die deklarierte Priorität wirkt sich auf das Dashboard aus; Der Aufzug selbst unterliegt der Gewährungszeit.",
+        "Durch das Löschen der Wartung wird ein erforderlicher Servicedatensatz zerstört, während eine explizite Prioritätserhöhung gültig, aber teuer ist.",
+        "Verschieben Sie den Zuschuss mit niedriger Priorität direkt hinter die medizinische Ankunft; ein gleicher Tick verlässt immer noch zuerst den bestehenden Zuschuss."
+      ],
+      "premise": "Die Korrektur aus „Cold Platform“ deckt eine zweite Abweichung im selben Betriebsraum auf. In der öffentlichen Warteschlange steht ein medizinischer Aufzug mit Priorität 9 vor der Lampenwartung mit Priorität 1; die Ausführung beachtet jedoch eine zwei Ticks früher erteilte non-preemptive (nicht verdrängbare) Freigabe. Die Kapazität reicht aus, und beide Aufträge müssen im Datensatz bleiben. Beheben Sie die kleinste autorisierte Ursache.",
+      "protected": [
+        "1",
+        "9",
+        "non-preemptive"
+      ],
+      "submission": "Senden Sie genau einen autorisierten Eingriff plus die wiederholte öffentliche/Laufzeitanweisung, beide Abschlussfristen, das Flag zur Beweissicherung, Branch und Projektion Digest.",
+      "title": "Prioritätswarteschlange"
+    },
+    "CASCADE.006": {
+      "diagnostics": "Die früheste fehlgeschlagene Grenze wird mit allen vier öffentlichen Zeiten benannt; Externe Berechtigungskennungen bleiben sichtbar, aber ihre privaten Upstream-Ereignisse werden in diesem lokalen Fall nicht angezeigt.",
+      "hints": [
+        "Die Schließzeit wird von unten zweimal und von oben einmal begrenzt.",
+        "Die Reparatur nur der Behandlung oder nur der Schließung führt dazu, dass ein anderer Vertrag ungültig wird; Eine mobile Schranke ist ein sinnvoller, aber kostspieliger Ersatz für beide Zeitpunkte.",
+        "Die geplante Behandlung benötigt vier Ticks, um wirksam zu werden. Gleichen Sie dieses Ergebnis mit dem ersten Tick nach der Abfahrt des Krankenwagens und vor der Ankunft des Busses ab."
+      ],
+      "premise": "Sobald der Prioritätswarteschlangenbericht akzeptiert wurde, räumt das Büro ein, dass Straße R-6 als zwei voneinander unabhängige Warnungen behandelt wurde: Die für Tick 11 geplante Sole wurde bei 14 in den Datensatz aufgenommen, während eine Sperrung auf 13 vorgezogen wurde. Die offizielle Zusammenfassung macht einen plötzlichen Stillstand dafür verantwortlich. Bewahren Sie sowohl die Aufzeichnungen als auch die Ortsbehandlung, den Zugang zum Krankenwagen, die Sicherheit des Sperrpersonals und die Umleitung von Schulbussen in einer einheitlichen lokalen Zeitleiste auf.",
+      "protected": [
+        "11",
+        "14",
+        "6",
+        "R-6"
+      ],
+      "submission": "Reichen Sie höchstens zwei genehmigte Eingriffe sowie die wiederholten Angaben zu Behandlungswirksamkeit, Rettungswagenfreigabe, Sperrung und Busankunftsgrenzen ein, wobei sowohl Belege als auch Referenzen zu externen Genehmigungen aufbewahrt werden.",
+      "title": "Schwarzes Eis"
+    },
+    "CASCADE.007": {
+      "diagnostics": "Die erste fehlgeschlagene systemübergreifende Bindung wird mit beiden öffentlichen Autorisierungsreferenzen gemeldet. Es wird keine private Veranstaltung der Straßen- oder Verkehrsämter bekannt gegeben.",
+      "hints": [
+        "Die Pumpe ist nicht kaputt; Es erhält die verbleibende Kapazität nach aktiven Zuleitung-Reservierungen.",
+        "Ein Backup-Generator ist sinnvoll, aber teuer. Durch das Unterdrücken einer Reservierung wird einer der Dienste zerstört, die der Bericht beibehalten muss.",
+        "Die Straßenlast beträgt vier Ticks. Setzen Sie es auf die Autorisierungszeit zurück, damit das Zuleitung vor der Feueranforderung freigegeben wird."
+      ],
+      "premise": "Die beiden in „Black Ice“ gespeicherten externen Autorisierungsreferenzen werden nun aufgelöst. `grid-window-31` reservierte die Zuleitung F-3 für die Straßenbehandlung, während `traffic-priority-19` dieselbe Zuleitung für die Signalpriorität reservierte. Eine Feuerlöschpumpe an dieser Zuleitung erzeugte daraufhin nur 35 Druckeinheiten. Erhalten Sie alle drei Dienste und beheben Sie die kleinste gemeinsame Ursache.",
+      "protected": [
+        "19",
+        "3",
+        "31",
+        "35",
+        "F-3",
+        "grid-window-31",
+        "traffic-priority-19"
+      ],
+      "submission": "Senden Sie genau einen autorisierten Eingriff sowie den wiedergegebenen Wasserdruck, die empfangene Pumpenleistung, die Last/Versorgung Zuleitung, die Straßenfrist, beide Autorisierungsreferenzen Branch und Projektion Digest.",
+      "title": "Geliehener Druck"
+    },
+    "CASCADE.008": {
+      "diagnostics": "Die erste fehlgeschlagene Grenze unterscheidet zwischen Bereitschaft und Klinikkürzung und meldet Momentanwerte. Die gesamte Tagesenergie wird niemals als Ersatz akzeptiert.",
+      "hints": [
+        "Die relevante Ressource ist die Kapazität an der Kreuzung Tick, nicht die Gesamtenergie während des Ausfalls.",
+        "Ein autarkes Mobilfunksignal ist gültig, aber teuer. Durch die Unterdrückung werden erforderliche Verkehrsnachweise entfernt.",
+        "Der Kondensator benötigt drei Ticks. Geben Sie die Ladung an den autorisierten Tick zurück, damit die Überfahrt genau dann abgeschlossen ist, wenn die Überfahrt beginnt."
+      ],
+      "premise": "Zuleitung F-3 ist nicht mehr die einzige gemeinsame Grenze. Während eines Ausfalls wird Intersection I-12 mit einem Klinikkühlschrank ins Mikronetz MG-2 eingebunden. Das Armaturenbrett meldet ausreichend Tagesenergie, doch eine verspätete Ladung des Signalkondensators überlagert die Belastung der Klinik genau dann, wenn ein Krankenwagen die Überfahrt benötigt. Bewahren Sie sowohl die Dienste als auch die Beweise auf.",
+      "protected": [
+        "12",
+        "2",
+        "3",
+        "I-12",
+        "MG-2"
+      ],
+      "submission": "Senden Sie genau einen autorisierten Eingriff plus Signalbereitschaft, Klinikleistung, momentane Last/Kapazität, Fristüberschreitung, Flags zur Beweissicherung, Verzweigung und Projektionsübersicht.",
+      "title": "Inselsignal"
+    },
+    "CASCADE.009": {
+      "diagnostics": "Die erste fehlgeschlagene Zeit- oder Kapazitätsgrenze wird mit öffentlichen Zeiten gemeldet. Ein möglicher Abflug, der vor dem Einsteigen erfolgt, eine unbefugte Belüftung nutzt oder die gegenüberliegende Brücke verfehlt, wird nicht als Teilrettung akzeptiert.",
+      "hints": [
+        "Der Zug hat genau eine Abfahrt Tick zwischen abgeschlossenem Einstieg und abgelaufener Traktionsreserve.",
+        "Die Beatmung dauert vier Ticks und darf nicht vor der unterschriebenen Genehmigung beginnen.",
+        "Eine selbstangetriebene Busbrücke kann die gleiche Fahrgastfrist in einem teuren Arbeitsgang einhalten; es verbessert nicht die Schienenerklärung."
+      ],
+      "premise": "Das reparierte Inselsignal bringt 180-Evakuierte nach Harbor-4, wo laut Continuity-Daten der letzte Zug nach Ablauf der Traktionsreserve abfährt und die Brücke nach Betriebsschluss erreicht. Eine frühere Übermittlung reicht nicht aus: Die Belüftung des Tunnels kann nicht vor der unterschriebenen Anordnung beginnen, das Boarding muss abgeschlossen sein und die Klinik- und Belüftungslasten müssen das Inselnetz freigegeben haben.",
+      "protected": [
+        "180",
+        "4",
+        "Harbor",
+        "Harbor-4"
+      ],
+      "submission": "Reichen Sie bis zu zwei autorisierte Eingriffe sowie den vollständigen Evakuierungsvertrag ein: Einsteigen, Belüftungsgenehmigung/Bereitschaft, Abflug, Ablauf der Traktion, Ankunft, Brückenfrist, momentane Belastung, Beweissicherung, Verzweigung und Projektionsübersicht.",
+      "title": "Der letzte Zug"
+    },
+    "CASCADE.010": {
+      "diagnostics": "Thermische Ausfälle, Netzüberlastung und Fensterzeit werden unabhängig voneinander gemeldet. Werte oberhalb der Rohrsättigung bleiben elektrisch teuer, auch wenn sie die Kühlung nicht verbessern.",
+      "hints": [
+        "Lösen Sie zuerst die untere Temperaturgrenze für den Durchfluss.",
+        "Lösen Sie dann die obere Gittergrenze für den befohlenen Fluss. Die Rohrsättigung begrenzt den Pumpenbedarf nicht.",
+        "Ein tragbarer Kühler mit eigener Stromversorgung funktioniert nur, wenn er bei der Eröffnung Tick eingesetzt wird, aber das ist eine kostspielige Erklärung."
+      ],
+      "premise": "Der letzte Zug gibt Traktionsreserven zur Krankenhausinsel frei, doch die Operationsstation erwärmt sich immer noch auf zwölf Grad. Das feste Kühlrohr entfernt zwei Grad pro Durchflusseinheit und ist bei fünf Grad gesättigt. Die Pumpenentnahme erfolgt auf der Basis von zwei plus dem befohlenen Durchfluss, zusammen mit zwei Einheiten der Grundlast in einem Raster mit neun Einheiten. Korrigieren Sie den beibehaltenen Befehl, ohne unbegrenzt Strom oder Kühlmittel zu erzeugen.",
+      "protected": [],
+      "submission": "Reichen Sie genau einen autorisierten Ersatz- oder tragbaren Kühlereingriff plus Durchfluss, effektiven Durchfluss, Endtemperatur, Last/Kapazität, Zeitpunkt, Beweissicherung, Branch und Projektion Digest ein.",
+      "title": "Kühlfenster"
+    },
+    "CASCADE.011": {
+      "diagnostics": "Das Öffnen vor der beobachteten Windgrenze und der Abschluss nach Eintreffen des Krankenwagens sind eindeutige Fehler. Die Fähre gilt nur am Krankenwagen Tick und ist bewusst teuer.",
+      "hints": [
+        "Der Befehl darf nicht vor Tick 8 stehen.",
+        "Die Brücke muss um Tick 10 vollständig geöffnet sein, und das Öffnen verbraucht zwei Ticks.",
+        "Überprüfen Sie jede autorisierte Neuzeit von 6 bis 9; die beiden Ungleichungen treffen sich bei eins Tick."
+      ],
+      "premise": "Der reparierte Kühlkreislauf sorgt dafür, dass die Operation durchführbar bleibt, aber der Krankenwagen sitzt hinter der Zugbrücke B-17 fest. Der beibehaltene Controller-Befehl beginnt bei Tick 6 zu öffnen, zwei Ticks bevor der Nordanemometer die veröffentlichte Windgrenze erreicht. Die Eröffnung dauert zwei Ticks und der Krankenwagen erreicht die Brücke bei Tick 10. Sichern Sie sowohl den Wind als auch den Notzugang, ohne so zu tun, als würde sich die Brücke sofort bewegen.",
+      "protected": [
+        "10",
+        "6",
+        "9",
+        "B-17",
+        "emergency-ferry"
+      ],
+      "submission": "Reichen Sie einen autorisierten Retime- oder emergency-ferry-Eingriff sowie die unabhängige Sicherheitszusammenfassung Branch und Projektion Digest ein.",
+      "title": "Die offene Brücke"
+    },
+    "CASCADE.012": {
+      "diagnostics": "Windstärke, mechanische Bereitschaft, abteilungsübergreifende Übergabe und öffentliche Abfahrtsfrist werden unabhängig voneinander überprüft.",
+      "hints": [
+        "Beginnen Sie mit der Krankenhausfrist und denken Sie rückwärts.",
+        "Der Verkehr muss vor der Abfahrt mindestens eine Tick betragen.",
+        "Bridge Control muss mindestens zwei Ticks vor Traffic und nicht früher als Tick 8 sein."
+      ],
+      "premise": "Der Brückenvorfall ist nicht länger das Problem eines einzelnen Fluglotsen. Die Brückenkontrolle darf erst nach der gemessenen Windgrenze tätig werden, der Verkehr darf die Route erst freigeben, nachdem die Zwei-Tick-Öffnung abgeschlossen ist, und die Krankenhausleitstelle muss eine Tick nach dieser Freigabe, spätestens jedoch nach dem veröffentlichten Zeitplan, verlassen. Alle drei aufbewahrten Protokolle sind früh.",
+      "protected": [],
+      "submission": "Reichen Sie genau die autorisierten Nachfristen ein, die erforderlich sind, um die unabhängige Vertragszusammenfassung sicher zu machen, ohne die Beweise einer Abteilung zu ersetzen.",
+      "title": "Drei Abteilungen"
+    },
+    "CASCADE.013": {
+      "diagnostics": "Verifizierer trennt eine Einstellung, die nur unter dem optimistischen versteckten Wert sicher ist, von einer Einstellung, die Zuleitung überlastet.",
+      "hints": [
+        "Erraten Sie nicht den fehlenden Messwert.",
+        "Die Sicherheit muss am oberen Ende des Kalibrierbereichs liegen.",
+        "Der Zuleitung bietet keinen Spielraum über vier."
+      ],
+      "premise": "Stunden nachdem der öffentliche Fahrplan in Betrieb genommen wurde, stellt der Flusspegelmesser RIVER-4 die Übertragung ein. Sein letztes Bankzertifikat begrenzt den ungesehenen Bedarf auf drei bis vier Reserveeinheiten; das gemeinsame Zuleitung kann höchstens vier versorgen. Kontinuität muss eine beibehaltene Reglereinstellung wählen, bevor der tatsächliche Füllstand beobachtet werden kann.",
+      "protected": [
+        "4",
+        "RIVER-4"
+      ],
+      "submission": "Ersetzen Sie nur das Reservefeld durch einen sicheren Wert für jeden Gauge-Wert im öffentlichen Kalibrierungsbereich und innerhalb des Zuleitung-Grenzwerts.",
+      "title": "Stilles Messgerät"
+    },
+    "CASCADE.014": {
+      "diagnostics": "Die Wiederholung entlarvt eine Unterzuteilung, ein Versprechen, das in der verborgenen Welt mit geringer Kapazität scheitert, und die Überbuchung von Zügen als dasselbe Scheitern öffentlicher Verträge mit gesondert aufbewahrten Beweisen.",
+      "hints": [
+        "Planen Sie gegen den unteren Endpunkt der Bushülle.",
+        "Die Summe der beiden Verpflichtungen muss genau siebzig betragen.",
+        "Die Zugbegrenzung und die robuste Busbegrenzung lassen keine Lücke."
+      ],
+      "premise": "Der Versandvertrag sieht vor, dass ein Hilfsfahrzeug nicht auf jeder öffentlichen Flottenliste steht. Achs- und Kraftstoffspuren belegen, dass der SHADOW-7 zwischen achtzehn und zweiundzwanzig Personen befördern kann, seine genaue Passform bleibt jedoch verborgen. Siebzig Evakuierte müssen mit einem für höchstens zweiundfünfzig zertifizierten Hilfszug aufgeteilt werden.",
+      "protected": [
+        "7",
+        "SHADOW-7"
+      ],
+      "submission": "Ersetzen Sie beide Zusagen durch eine Zuteilung, die alle trägt und für jede im Schattenbus-Umschlag zulässige Kapazität machbar bleibt.",
+      "title": "Schattenbus"
+    },
+    "CASCADE.015": {
+      "diagnostics": "Der Prüfer gibt den aktiven Status, das öffentliche Projektion und das Provenienz Digest unabhängig wieder und meldet dabei nur, welches Proof-Feld fehlgeschlagen ist.",
+      "hints": [
+        "Nicht verfügbar im Projektion bedeutet nicht, dass der Status nicht aktiv ist.",
+        "Binden Sie das gesamte Provenienz mit Digest.",
+        "Kopieren Sie niemals eingeschränkte Mitglieder in die Antwort."
+      ],
+      "premise": "Zwei Historien zeigen, warum FEEDER-9 verschwunden ist: Sein Provenienz verknüpft den ursprünglichen Versandhinweis mit SHADOW-7, sodass Continuity den gesamten Datensatz unterdrückte, anstatt einzelne Felder zu schwärzen. Der unter Spannung stehende Zuleitung und seine Autorisierung bleiben aktiv und ausreichend für den Ringbedarf.",
+      "protected": [
+        "7",
+        "9",
+        "FEEDER-9",
+        "SHADOW-7"
+      ],
+      "submission": "Beweisen Sie die aktive Zuleitung-Autorisierung mit ihrer EventId und Provenienz Digest, binden Sie die genaue redigierte öffentliche Zeile und geben Sie keines der eingeschränkten Provenienz-Objekte offen.",
+      "title": "Geschwärzte Zuleitung"
+    },
+    "CASCADE.016": {
+      "diagnostics": "Bei einem falschen Kandidaten, einem fehlerhaften Zeugen, einer zusätzlichen Ursache oder einer nicht unterstützten Nutzlast fehlt die Erklärung Projektion, anstatt eine Vermutung als Beweis zu behandeln.",
+      "hints": [
+        "Verwenden Sie jede gespeicherte Beobachtung als Ausschlusstest.",
+        "Für das manuelle Öffnen ist der fehlende manuelle Token erforderlich.",
+        "Eine thermische Ursache erklärt alle drei Beobachtungen ohne eine weitere Erfindung."
+      ],
+      "premise": "Evidence Weight und die kontradiktorische Untersuchung identifizieren einen thermischen Trip, aber im kausal-Archiv fehlt immer noch das Trip-Ereignis selbst. Das begrenzte Prüfprotokoll erlaubt genau eine latente Ursache, die aus drei öffentlichen Kandidaten ausgewählt werden kann. Es muss die normale Vorspannung, die vorzeichenbehaftete thermische Spur und ein offenes Relais ohne manuelles Token erklären.",
+      "protected": [],
+      "submission": "Fügen Sie eine explizite Hypothese der latenten Ursache ein, deren unabhängige Wiederholung den vollständigen Erklärungsvertrag ergibt. Es ist kein zweites fehlendes Ereignis zulässig.",
+      "title": "Beweislücke"
+    },
+    "CASCADE.017": {
+      "diagnostics": "Der Prüfer spielt beide aktiven Historien unabhängig voneinander ab und lehnt eine Richtlinie ab, die die öffentliche Verfügbarkeit als vollständigen Zustand behandelt.",
+      "hints": [
+        "Versuchen Sie nicht, die Öffentlichkeit dazu zu bringen, das versiegelte Relais preiszugeben.",
+        "Vergleichen Sie die aktive thermische Tatsache mit der gewählten Schicht.",
+        "Bei einer sicheren Reparatur bleibt möglicherweise jedes öffentliche Byte unverändert."
+      ],
+      "premise": "Die thermische Ursache ist nun bewiesen, doch Continuity leitet weiterhin über den Untergrund (underground)-Ring, da seine Richtlinie nur die als verfügbar markierte öffentliche FEEDER-9-Kachel liest. Das versiegelte Relais besagt, dass die Untergrund (underground)-Schicht über der Auslösekurve bleibt. Eine Route kann daher öffentlich nicht erkennbar und physisch unsicher sein.",
+      "protected": [
+        "9",
+        "FEEDER-9",
+        "underground"
+      ],
+      "submission": "Ändern Sie genau ein beibehaltenes Routenfeld, damit der Kandidat vor dem aktiven versteckten Risiko sicher ist und gleichzeitig das unveränderte öffentliche Projektion bindet.",
+      "title": "Blinder Fleck der Politik"
+    },
+    "CASCADE.018": {
+      "diagnostics": "Eine sich selbst rechtfertigende Route, ein nicht zitierter Sensorbericht, zusätzliche Erfindungen oder eines der beiden Ereignisse allein scheitern am Minimalitätsvertrag, selbst wenn die vollständige Branch plausibel erscheint.",
+      "hints": [
+        "Ein Ereignis begründet die physikalische Tatsache.",
+        "Der andere zeichnet die politischen Konsequenzen auf.",
+        "Minimal bedeutet, zu testen, was nach der Entfernung jedes Ereignisses übrig bleibt."
+      ],
+      "premise": "Die Äquivokation wird isoliert, die Gesamtstadtgeometrie wird wiederhergestellt und die Korrekturfragmente werden geordnet. Doch das aufbewahrte Archiv springt direkt von der versiegelten Hitze zu einem öffentlichen Ergebnis. Die Anhörung lässt höchstens zwei latente Ereignisse zu, eine Erklärung ist jedoch nur dann akzeptabel, wenn jede richtige Teilmenge fehlschlägt.",
+      "protected": [
+        "surface"
+      ],
+      "submission": "Fügen Sie genau den Feldsensorbericht und die dadurch verursachte Oberfläche (surface)-Routenverpflichtung ein. Binden Sie den resultierenden sicheren Vertrag; Verifizierer spielt unabhängig voneinander die leere Erklärung und beide Ein-Ereignis-Erklärungen ab.",
+      "title": "Die fehlende Ursache"
+    },
+    "CASCADE.019": {
+      "diagnostics": "Der Prüfer lehnt eine Löschung, einen neuen Hinweis, der seinen Vorgänger nicht nennt, eine gegenüber dem falschen Datensatz unveränderte Route und eine vom CASCADE.018-Beweis losgelöste Korrektur ab.",
+      "hints": [
+        "Ändern Sie die neue Erklärung, nicht die alte.",
+        "Die Ersetzung ist ein Vorteil in der öffentlichen Aufzeichnung.",
+        "Eine Korrektur muss sowohl das Vorher als auch das Nachher offenlegen."
+      ],
+      "premise": "Die minimal fehlende Ursache ist nun bewiesen. Das öffentliche Register sagt immer noch Untergrund (underground), und der Korrekturentwurf wiederholt es stillschweigend. Die Stadt muss bewahren, was sie zuvor veröffentlicht hat, und gleichzeitig den kontrafaktischen Weg darlegen, der sich aus den nun zugelassenen Beweisen ergeben hätte.",
+      "protected": [
+        "18",
+        "CASCADE",
+        "CASCADE.018",
+        "N-18",
+        "surface",
+        "thermal-evidence",
+        "underground"
+      ],
+      "submission": "Ändern Sie nur die Entwurfsroute in Oberfläche (surface). Veröffentlichen Sie einen sicheren Korrekturvertrag, der N-18 als ersetzt nennt, den thermal-evidence-Grund beibehält und die vorherige Mitteilung im Protokoll hinterlässt.",
+      "title": "Korrekturhinweis"
+    },
+    "CASCADE.020": {
+      "diagnostics": "Das Replay bindet den gewählten Wert an die öffentliche kanonisch-Bestellung und behält die vollständige Alternativliste im Vertrag.",
+      "hints": [
+        "Sicherheit bedeutet nicht immer Einzigartigkeit.",
+        "Der Tie-Break ist Teil der Strategie, nicht der Chronologie.",
+        "Behalten Sie die nicht gewählte Änderung als gültige Alternative bei."
+      ],
+      "premise": "Zwei Änderungen überdauern das nicht eindeutige Archiv: audit-first und evidence-first. Beide sind im Wesentlichen sicher. Wenn Sie also wählen, was zuerst eintrifft, wird die Reihenfolge der Wiedergabe zur Richtlinie. Die Anhörungsregeln veröffentlichen die Reihenfolge UTF-8 als deterministischen Tie-Break.",
+      "protected": [
+        "8",
+        "audit-first",
+        "evidence-first"
+      ],
+      "submission": "Ersetzen Sie nur die Entwurfsauswahl durch das erste Mitglied der beibehaltenen Liste sicherer Optionen. Löschen Sie die verlorene Safe-Ergänzung nicht und kennzeichnen Sie sie nicht neu.",
+      "title": "Konkurrierende Änderungen"
+    },
+    "CASCADE.021": {
+      "diagnostics": "Der Prüfer lehnt Tick 23, eine Pre-Window-Einreichung, Nutzlastbearbeitungen und die Behandlung der Abklingzeit als Berechtigung zur Fristverlängerung ab.",
+      "hints": [
+        "Betriebsverzögerung und gesetzliche Zeit sind getrennte Uhren.",
+        "Die schließende Grenze ist zulässig.",
+        "Bewegen Sie die Beweise, nicht das Fenster."
+      ],
+      "premise": "Die kanonisch-Änderung ist korrekt, aber ihre beibehaltene Einreichung Tick fällt einen Schritt nach dem gesetzlichen Prüfungsfenster. Der Leistungsschalter erklärt eine verzögerte Wartung, keine Erweiterung des Gesetzes. Die Ablage Digest existierte, als das Fenster geöffnet war.",
+      "protected": [
+        "20",
+        "22",
+        "23"
+      ],
+      "submission": "Retimen der Ablage in das inklusive Intervall [20,22] mit der geringsten Verschiebung unter Beibehaltung der Nutzlast.",
+      "title": "Audit-Fenster"
+    },
+    "CASCADE.022": {
+      "diagnostics": "Der Score setzt sich aus Interventionsgewichtungen vor kausal Footprint und Zeugengröße zusammen. Die Offenlegungsreparatur mit zwei Vorgängen bleibt gültig, kann jedoch die Routenreparatur mit einem Feld nicht übertreffen.",
+      "hints": [
+        "Lesen Sie den Vertrag als Logik, nicht als Prosa.",
+        "Eine sichere Trennung kann andere Bearbeitungen überflüssig machen.",
+        "Die geringste Änderung wird über den gesamten Branch gemessen."
+      ],
+      "premise": "In der Anhörung werden nun drei offensichtliche Mängel festgestellt: ein Untergrund (underground)-Weg, eine versiegelte Offenlegung und eine verspätete Richtlinie Tick. Eine lokale Checkliste würde alle drei reparieren. Der öffentliche Auftrag ist jedoch disjunktiv: Allein die Änderung der physischen Route beseitigt die Gefahr; Der Offenlegungspfad erfordert sowohl eine Veröffentlichung als auch eine Neuplanung.",
+      "protected": [
+        "underground"
+      ],
+      "submission": "Finden Sie den weltweit am wenigsten belastenden und sicheren Eingriff, nicht eine Reparatur pro Symptom. Behalten Sie Felder bei, die nicht mehr geändert werden müssen.",
+      "title": "Regel der geringsten Änderung"
+    },
+    "CASCADE.023": {
+      "diagnostics": "Der Vertrag verbindet Beweise durch Anhörung der Identität und verlangt, dass jede Epoche der Umschlagepoche entspricht, während jede familienspezifische Aussage beibehalten wird.",
+      "hints": [
+        "Individuell gültig ist schwächer als gemeinsam gleichzeitig.",
+        "Das Archiv und die Uhr gehören bereits zur Epoche 7.",
+        "Reparieren Sie die veraltete Bindung, nicht den Beweisinhalt."
+      ],
+      "premise": "Die letzte Anhörung erhält ein verifiziertes partial-order-Archiv, eine geschlossene City-Clock-Runde und eine Sicherheitsentscheidung des City Covenant. Der Versicherungsbeleg ist echt, gehört aber zur Epoche 6; Wenn man es mit der Epoche 7 vermischt, würde man eine Geschichte bescheinigen, die nie existiert hat.",
+      "protected": [
+        "6",
+        "7",
+        "partial-order"
+      ],
+      "submission": "Binden Sie alle drei Beweisfamilien an eine Anhörung, eine Bündelepoche und den inklusiven Abschluss Tick. Korrigieren Sie nur das veraltete Epochenfeld. Ersetzen Sie nicht die zugrunde liegende Police und duplizieren Sie nicht eine andere Familie als Beweismittel.",
+      "title": "Kontinuitätsanhörung"
+    },
+    "CASCADE.024": {
+      "diagnostics": "Die Sicherheit der Wiederholung ergibt sich aus der Mitgliedschaft im beibehaltenen Alternativsatz. Das Bearbeiten des öffentlichen Datensatzes, das Löschen der Untergrund (underground)-Alternative oder das Belassen der veralteten Selektorausgabe kann den Vertrag nicht erfüllen.",
+      "hints": [
+        "Ändern Sie die Ausgabe des Selektors, nicht seine Überwachungsrichtlinie.",
+        "Den öffentlichen Aufzeichnungen zufolge gibt es zwei Alternativen.",
+        "Sie wählen eine Geschichte und beweisen nicht die Einzigartigkeit."
+      ],
+      "premise": "Die Anhörung veröffentlicht einen deterministischen Selektor und behält zwei sichere Fortsetzungen bei. Die Ausgabe des Selektors wurde nie angewendet: Die aktive Route sagt immer noch „versiegelt“. Die Reparatur der Ausgabe zeigt, dass die Politik morgen eine ausgewählt hat; es macht den anderen nicht unsicher oder löscht ihn.",
+      "protected": [
+        "surface",
+        "underground"
+      ],
+      "submission": "Wenden Sie den veröffentlichten Selektor an, um Oberfläche (surface) mit einem Basisereignisersatz auszuwählen. Behalten Sie das politische Ereignis und beide sicheren Alternativen bei. Die öffentliche Bekanntmachung berichtet bewusst über Sicherheit und Vielfältigkeit, nicht über den latenten Weg.",
+      "title": "Der gewählte Morgen"
+    },
+    "COVENANT.001": {
+      "diagnostics": "Der Prüfer gibt den kürzesten Gegenbeispiel für versteckte Zustandsbeobachtungen, deaktivierte lokale Aktionen, Sicherheitsfehler, Ablauf der Lebensdauer, Escape in endlichen Domänen oder eine falsch beanspruchte Antwortgrenze zurück.",
+      "hints": [
+        "Schreiben Sie keinen zentralen, allwissenden Controller.",
+        "Dispatch kann eine Route aus seinen eigenen sichtbaren Feldern auswählen.",
+        "Die Antwort muss nur auf eine nicht leere Zuweisung reagieren."
+      ],
+      "premise": "Die Messgerätereparatur, der Archivschnitt, die zeitgestempelte Leitungskarte und der Warm-Standby existieren nun als separate Fakten. Kontinuität muss sie in einen Versandvertrag verwandeln. Die Umgebung kann den Alarm auslösen und die primäre Verfügbarkeit umschalten; Dispatch sieht nur Alarm, Zuweisung und Verfügbarkeit, während Response nur Zuweisung und Sendestatus sieht. Jeder faire asynchrone Zeitplan muss sicher bleiben und schließlich gesendet werden.",
+      "protected": [],
+      "submission": "Übermitteln Sie für jeden Agenten eine lokale Richtlinie und die genaue Antwort mit der schlechtesten Grenze, die durch umfassende Modellprüfungen nachgewiesen wurde.",
+      "title": "Dispatch-Pakt"
+    },
+    "COVENANT.002": {
+      "diagnostics": "Der Modellprüfer gibt das kürzeste Gegenbeispiele für die direkte Beobachtung verborgener Zustände, das Raten vor einem Bericht, die Auswahl einer universellen Route, deaktivierte Aktionen, Sicherheitsfehler oder einen begrenzten Ablauf der Lebendigkeit zurück.",
+      "hints": [
+        "Die Lokalität ist Teil des Beweises, keine Kodierungsbeschränkung.",
+        "Der Sensor muss veröffentlichen, bevor Dispatch die beiden ursprünglichen Welten unterscheiden kann.",
+        "Eine Route, die in einer verborgenen Welt immer sicher ist, ist in der anderen unsicher."
+      ],
+      "premise": "Die Stadt verfügt nun über eine zweischichtige Karte, ein komprimiertes Kausalarchiv, eine Umgehung an der Oberfläche (surface) und ein begrenztes Umschaltbudget. Das entscheidende Hitze-Bit bleibt jedoch vor Dispatch verborgen. Ein Feldsensor kann die Hitze, aber nicht den Alarm sehen; Dispatch sieht den Alarm und den Sensorbericht, aber nicht die Hitze. Der Stadtpakt muss unter jedem fairen asynchronen Ablauf in beiden verborgenen Welten eine Route festlegen.",
+      "protected": [
+        "clear",
+        "hot",
+        "surface",
+        "underground"
+      ],
+      "submission": "Senden Sie eine lokale Richtlinie pro Agent und die exakte schlechteste Antwortgrenze. Die Richtlinie muss die versiegelte Beobachtung über den deklarierten Berichtsstatus kommunizieren und dabei Untergrund (underground) nur wählen, wenn frei (clear) und Oberfläche (surface) nur, wenn heiß (hot).",
+      "title": "Stadtpakt"
+    },
+    "LENS.001": {
+      "diagnostics": "Der Verifizierer meldet die erste kanonisch begrenzte Quell-/Bearbeitungskombination und den ersten Verstoß gegen PutGet, GetPut, Stabilität, Provenienz, Totalität oder die Atomarität ungültiger Bearbeitungen.",
+      "hints": [
+        "Listen Sie Informationen auf, die in der Routenansicht fehlen.",
+        "Behalten Sie Einheit und Provenienz im Komplement bei.",
+        "Die gemeinsame Q-BOUND/0-Route benötigt eine normalisierte Grenzstraßenzelle."
+      ],
+      "premise": "Das Bürgerregister und der Notrufrouter benennen dieselben Gebäude mit inkompatiblen Schemata. Routenadressen dürfen keine Einheit, Provenienz oder eine Grenzunterscheidung enthalten.",
+      "protected": [
+        "0",
+        "0.1",
+        "LENS",
+        "Q-BOUND"
+      ],
+      "submission": "Senden Sie eine typisierte LENS 0.1 Get/Put-Pipeline mit einem expliziten Komplement-Schema.",
+      "title": "Zwei Adressen"
+    },
+    "LENS.002": {
+      "diagnostics": "Gegenbeispiele identifiziert die erste exakte Quelle und öffentliche Bearbeitung, die Dienstidentität, Bahnsteig, Kalender, Provenienz, Gate-Mapping, Stabilität, Gesamtheit oder Atomizität verliert.",
+      "hints": [
+        "Die öffentliche Route und die UTC-Abfahrt geben keinen Aufschluss über den ursprünglichen Dienst.",
+        "Behalten Sie betriebliche Fakten bei, die im öffentlichen Fahrplan nicht aufgeführt sind.",
+        "Wenn eine rechtmäßige Bearbeitung eine andere Route auswählt, wählen Sie ihren kanonisch-Dienst aus, behalten Sie jedoch den alten Bahnsteig, Kalender und Provenienz bei."
+      ],
+      "premise": "Die reparierte Brücke ermöglicht es Continuity endlich, einen öffentlichen UTC-Zeitplan von inkompatiblen Abteilungsuhren zu veröffentlichen. Zwei wirklich unterschiedliche Betreiberdienste vereinen sich auf denselben öffentlichen Dienstplan, während Bahnsteig, Dienstkalender und Audit Provenienz rechtlichen Änderungen standhalten müssen, die die öffentliche Meinung nicht tragen kann.",
+      "protected": [],
+      "submission": "Senden Sie ein typisiertes bidirektionales Stundenplanprogramm mit einem expliziten Komplement. Es muss GetPut, PutGet, Stabilität, operatives Provenienz, Gesamtheit und Invalid-Edit-Atomizität über die gesamte begrenzte Domäne erfüllen.",
+      "title": "Ein Zeitplan"
+    },
+    "LENS.003": {
+      "diagnostics": "Gegenbeispiele identifizieren die erste Verlaufskollision, rechtmäßige öffentliche Bearbeitung, verlorenes privates Delta, verlorene Prüfkette, instabile Aktualisierung oder nicht-atomare ungültige Korrektur.",
+      "hints": [
+        "Die öffentliche EVAC-17-Zeile identifiziert ihren internen Tipp nicht.",
+        "Behalten Sie genau einen privaten Identitätsdiskriminator bei.",
+        "Betriebsbeweise müssen auch dann bestehen bleiben, wenn eine öffentliche Bearbeitung einen anderen kanonisch-Verlauf auswählt."
+      ],
+      "premise": "Die Exactly-once-Steuerung stoppt zukünftige Duplizierungen, aber das Archiv enthält bereits zwei interne Historien: eine endet beim ursprünglichen Versand und eine endet beim Konsolenecho. Beide wurden als dieselbe sichere EVAC-17-Zeile veröffentlicht. Öffentliche Korrekturen können rechtmäßig einen anderen Datensatz auswählen, ohne das versiegelte private Delta oder seine Prüfkette zu löschen.",
+      "protected": [
+        "17",
+        "EVAC-17"
+      ],
+      "submission": "Senden Sie einen typisierten bidirektionalen Verlaufssynchronisierer mit dem kleinsten expliziten Komplement, der alle Gesetze über die gesamten begrenzten Quell- und Bearbeitungsdomänen erfüllt.",
+      "title": "Zwei Geschichten"
+    },
+    "MERGE.001": {
+      "diagnostics": "Der Verifizierer prüft die Intervallzugehörigkeit, die Nachrichtenreihenfolge, die Quellreihenfolge, die genaue Zertifikatsabdeckung und ob jede Ablehnung tatsächlich durch den übermittelten Zeitplan erzwungen wird.",
+      "hints": [
+        "Eine lokale Ablesung t mit Offset in [a, b] ergibt die globale Zeit in [t-b, t-a].",
+        "Akzeptierte Nachrichten und Kanten mit derselben Quelle erfordern eine Lücke von mindestens eins.",
+        "Bevor Sie einen Datensatz ablehnen, geben Sie die Unter- und Obergrenzen seiner akzeptierten Nachbarn weiter."
+      ],
+      "premise": "Drei unabhängige Uhren protokollierten ein Nachrichtenrelais. Ihre Offset-Intervalle stimmen größtenteils überein, aber ein Datensatz mit geringer Konfidenz kann nicht gleichzeitig mit den Relay- und Source-Ordnungen existieren.",
+      "protected": [],
+      "submission": "Klassifizieren Sie jeden Datensatz, weisen Sie jedem akzeptierten Datensatz eine ganzzahlige globale Zeit zu und stellen Sie das genaue Zertifikat der aktiven Bestellung bereit.",
+      "title": "Drei Uhren"
+    },
+    "MERGE.002": {
+      "diagnostics": "Der Verifizierer prüft die Taktintervalle und die Reihenfolge und gruppiert die Datensätze dann nach den Feldern „öffentliche Deduplizierungsidentität“ und „Körper“. Jede wiederholte Identität muss genau einen akzeptierten Überlebenden haben und jede abgelehnte Kopie muss darauf verweisen.",
+      "hints": [
+        "Ein Duplikat ist zeitlich machbar; deshalb ist „inconsistent“ der falsche Grund.",
+        "Der Dedup-Schlüssel beweist eine logische Operation, während der Body-Schlüssel das Zusammenführen verschiedener Nutzlasten verhindert.",
+        "Beide Kopien können die Überlebenden sein, aber aufgrund der zurückgewiesenen Gewichtung ist der besser unterstützten Aufzeichnung der Vorzug zu geben."
+      ],
+      "premise": "Ein Dispatch-Gateway versuchte es erneut, nachdem es seine Antwort verloren hatte, und schrieb die gleiche Engine-Zuweisung zweimal über unabhängige Uhren. Rekonstruieren Sie ein kausal-Archiv, ohne eine fiktive zweite Engine zu senden.",
+      "protected": [
+        "inconsistent"
+      ],
+      "submission": "Klassifizieren Sie jeden Datensatz, weisen Sie akzeptierte globale Zeiten zu, verknüpfen Sie jede doppelte Ablehnung mit ihrem akzeptierten Überlebenden und stellen Sie das genaue Zertifikat der aktiven Bestellung bereit.",
+      "title": "Doppelter Versand"
+    },
+    "MERGE.003": {
+      "diagnostics": "Intervalle, explizite Eltern und Quellsequenz werden unabhängig voneinander überprüft. Verifizierer meldet einen fehlenden oder zusätzlichen Zertifikatsrand, ohne eine erwartete synthetische Bestätigung offenzulegen.",
+      "hints": [
+        "Eine Lücke in der Quellsequenz ist ein Beweis für eine Auslassung und nicht für die Erlaubnis, einen Datensatz hinzuzufügen.",
+        "Aufeinanderfolgende vorhandene Datensätze aus einer Quelle haben auch dann eine strenge Reihenfolge, wenn ihre Sequenznummern nicht fortlaufend sind.",
+        "Die Gateway-Edge-Bridges sequenzieren 1 direkt zur Sequenz 3; Minimieren Sie dann die Verschiebung innerhalb jedes Taktintervalls."
+      ],
+      "premise": "Das Utility-Gateway-Protokoll für „grid-window-31“ enthält die Sequenz 1 („reservation-sent“) und die Sequenz 3 („release-queued“), aber die Bestätigung bei Sequenz 2 ist weg. Die Aufzeichnungen der nachgelagerten Straßen und Netze bleiben erhalten. Rekonstruieren Sie das stärkste kausal-Archiv, ohne den fehlenden Datensatz zu erfinden.",
+      "protected": [
+        "1",
+        "2",
+        "3",
+        "31",
+        "grid-window-31",
+        "release-queued",
+        "reservation-sent"
+      ],
+      "submission": "Klassifizieren Sie jeden vorhandenen Datensatz, wählen Sie für jeden eine gültige globale Zeit aus und übermitteln Sie das genaue übergeordnete/Quellenreihenfolge-Zertifikat. Zertifikate können vorhandene Datensätze verknüpfen, jedoch keine Phantomereignisse benennen.",
+      "title": "Verlorene Bestätigung"
+    },
+    "MERGE.004": {
+      "diagnostics": "Taktintervalle, explizite Eltern, Quellreihenfolge und Ablehnungsbegründung werden separat überprüft. Ein Rollback-Anspruch, dessen einzig möglicher Zeitpunkt vor dem übergeordneten Antrag mit beantragter Übertragung liegt, ist selbst dann inkonsistent, wenn sein Betrag den Register ausgleichen würde.",
+      "hints": [
+        "Die Netzarithmetik kann Rollback nicht von Kompensation unterscheiden; kausal Bestellung kann.",
+        "Der empfangende Register macht die ursprüngliche Übertragung zu einem Teil der öffentlichen Geschichte.",
+        "Behalten Sie die festgelegte und angewendete Übertragung bei, behalten Sie die gleiche und entgegengesetzte Kompensation bei und lehnen Sie den Konsolenanspruch ab, dessen Taktintervall seinem übergeordneten Taktintervall nicht folgen kann."
+      ],
+      "premise": "Das Insel-Mikronetz gewährte dem Verkehrsleiter sieben Notstromgutschriften, und die Klinik forderte den gleichen Betrag zurück, nachdem der Netzbetrieb wiederhergestellt war. Auf einer Bedienerkonsole heißt es, dass die ursprüngliche Übertragung rückgängig gemacht wurde. Der Empfänger Register gibt an, dass die Überweisung bereits durchgeführt wurde. Bewahren Sie eine überprüfbare Historie, die den Null-Nettosaldo erklärt, ohne die Vergangenheit neu zu schreiben.",
+      "protected": [],
+      "submission": "Klassifizieren Sie jeden Datensatz, wählen Sie für jeden akzeptierten Datensatz eine innerhalb des Bereichs liegende globale Zeit und reichen Sie das genaue kausal-Zertifikat ein. Ein Nullsaldo reicht nicht aus: Das Archiv muss eine gelöschte Übertragung von einer späteren Entschädigung unterscheiden.",
+      "title": "Ausgleichsübertragung"
+    },
+    "MERGE.005": {
+      "diagnostics": "Der Verifizierer prüft separat die Atomizität von Branch, die Intervall- und Quellreihenfolge, die genaue Zertifikatsabdeckung und ob der abgelehnte Writer die kombinierte Komponente wirklich unzulässig macht. Ein unvollständiger Autor wird niemals als synthetische dritte Geschichte akzeptiert.",
+      "hints": [
+        "Innerhalb einer nominalen Quelle benötigt die Sequenzreihenfolge mindestens ein globales Tick, auch über Replikate hinweg.",
+        "Vergleichen Sie die Westsequenz 2 mit den Ostsequenzen 1 und 3, bevor Sie sich den späteren Beleg ansehen.",
+        "Beide ganzen Branches sind einzeln rekonstruierbar. Das Aufbewahren des Stationsbelegs kostet weniger Beweise als das Wegwerfen bei der Ost-Branch."
+      ],
+      "premise": "Als der letzte Zug abgefertigt wurde, wurde der partitionierte Dispatch-Cluster wieder mit zwei intern kohärenten Journalen verbunden. Osten verzeichnet eine Bahnfreigabe und Bahnhofsfreigabe. West verzeichnet eine Zugstornierung und Busfreigabe. Beide Anspruchspositionen im selben evacuation-order-Stream, die zusammengeführten Taktintervalle können sie jedoch nicht serialisieren. Wählen Sie einen vollständigen Autor aus Branch; Verbinden Sie keine geeigneten Leitungen von beiden.",
+      "protected": [
+        "1",
+        "2",
+        "3",
+        "evacuation-order"
+      ],
+      "submission": "Klassifizieren Sie jeden Datensatz, weisen Sie Zeiten einem vollständigen Autor Branch zu, lehnen Sie jeden Datensatz des verlierenden Autors als eine Konfliktkomponente ab und reichen Sie das genaue aktive kausal-Zertifikat ein.",
+      "title": "Gespaltenes Gehirn"
+    },
+    "MERGE.006": {
+      "diagnostics": "Taktdurchführbarkeit, Replika-Einzigartigkeit, Quorum-Unterstützung, Anspruchsauswahl, Ablehnungsgrund und genaue Zertifikatabdeckung werden unabhängig voneinander überprüft. „inconsistent“ ist kein Synonym für den Verlust einer Stimme.",
+      "hints": [
+        "Zählen Sie unterschiedliche Replikatnamen pro Anspruch. Datensätze sind keine Stimmen, wenn eine Replik zweimal erscheint.",
+        "Nur eine Klage erreicht die öffentliche Schwelle von drei.",
+        "Die minority-Datensätze passen zu ihren Uhren. Ihre Ablehnung ist eine Politik der semantischen Evidenz, kein zeitlicher Widerspruch."
+      ],
+      "premise": "Die Kühlungsreparatur brachte fünf erhaltene Bescheinigungen hervor. Stations-, Verkehrs- und Klinikbücher erfassen den Fluss 5; Zwei Caches aus der Partitionsära zeichnen immer noch Fluss 3 auf. Im Gegensatz zum Split-Brain-Archiv kann jeder Zeitstempel nebeneinander existieren. Rekonstruieren Sie die kausal-Mehrheit und klassifizieren Sie den veralteten Anspruch unter dem veröffentlichten Drei-Replika-Quorum, anstatt einen Uhrfehler zu erfinden.",
+      "protected": [
+        "5",
+        "inconsistent",
+        "minority"
+      ],
+      "submission": "Akzeptieren Sie jede Bescheinigung für den eindeutig qualifizierten Anspruch, lehnen Sie jede konkurrierende Bescheinigung als „minority“ ab, weisen Sie innerhalb des Bereichs liegende Zeiten zu und reichen Sie das genaue aktive Eltern-/Quellenzertifikat ein.",
+      "title": "Quorumregister"
+    },
+    "MERGE.007": {
+      "diagnostics": "Intervallgrenzen, normale kausal-Reihenfolge, genaue Zertifikatsabdeckung, Domänenkardinalität und Offsetvereinbarung innerhalb der Domäne schlagen unabhängig voneinander fehl.",
+      "hints": [
+        "Berechnen Sie local_time minus der zugewiesenen globalen Zeit.",
+        "Dieser Wert darf nicht zwischen Datensätzen in derselben Taktdomäne schwanken.",
+        "Die Mittelpunktversätze 100 und -50 minimieren auch die zeitliche Verschiebung."
+      ],
+      "premise": "Der Brückenbericht scheint sechs Uhren zu enthalten. Es enthält tatsächlich zwei: Der Nordcontroller ist etwa einhundert Ticks schnell und der Krankenhausroutentakt ist etwa fünfzig Ticks langsam. Datensätze auf einer Taktinsel müssen einen gemeinsamen Offset verwenden, während die abwechselnden Nachrichten zwischen den Inseln wechseln. Rekonstruieren Sie die Stegöffnung, ohne jede Schallplatte einzeln zu stimmen.",
+      "protected": [
+        "100",
+        "50",
+        "local_time"
+      ],
+      "submission": "Behalten Sie alle sechs Datensätze bei, weisen Sie jedem eine gültige globale Zeit zu und übermitteln Sie das genaue übergeordnete/Quellzertifikat. Jeder Datensatz in einer benannten Uhrendomäne muss denselben Offset implizieren.",
+      "title": "Uhreninseln"
+    },
+    "MERGE.008": {
+      "diagnostics": "Das Verifizierer unterscheidet zwischen Undurchführbarkeit, öffentlichen Größengrenzen, Einschlussminimalität, Ablehnungsgrund und exakter Zertifikatsabdeckung.",
+      "hints": [
+        "Lehnen Sie einen Datensatz nicht ab, nur weil er sich in der Nähe der Anomalie befindet.",
+        "Testen Sie das verdächtige Paar gemeinsam.",
+        "Stellen Sie dann jedes Mitglied einzeln wieder her. Beide Singleton-Verläufe müssen machbar sein."
+      ],
+      "premise": "Die synchronisierte Abteilungsprüfung ist konsistent, aber ein Terminal steuert zwei Zeilen bei, deren Quellsequenz in der globalen Zeit rückwärts läuft. Kontinuität erfordert die kleinste eigenständige Erklärung des Fehlers, nicht eine umfassende Löschung aller in der Nähe befindlichen Datensätze.",
+      "protected": [],
+      "submission": "Behalten Sie die öffentliche Prüfung bei und lehnen Sie genau eine Komponente mit minimalem Inklusionskonflikt mit dem genauen Active-Order-Zertifikat ab.",
+      "title": "Konfliktkomponente"
+    },
+    "MERGE.009": {
+      "diagnostics": "Das Verifizierer berechnet alle Schnitte innerhalb der öffentlichen Aufzeichnungsgrenze umfassend neu und unterscheidet einen aufgedeckten Konflikt, einen nicht unterstützten Schnittgrund und jede schwerwiegendere Löschung.",
+      "hints": [
+        "Behandeln Sie jeden veröffentlichten Konflikt als eine Menge, die getroffen werden muss.",
+        "Ein Datensatz gehört zu beiden Sätzen.",
+        "Vergleichen Sie sein Gewicht mit der Summe der beiden äußeren Datensätze."
+      ],
+      "premise": "Das Archiv des Silent Gauge enthält zwei inkompatible Pfadvergleiche. Beide durchlaufen einen Legacy-Gateway-Datensatz. Durch das Löschen einer der äußeren Sonden wird nur ein Konflikt gelöst. Das Löschen beider löst beide Probleme auf, zerstört aber mehr vertrauenswürdige Beweise als das Durchtrennen des gemeinsamen Gateways.",
+      "protected": [],
+      "submission": "Klassifizieren Sie jeden Datensatz und übermitteln Sie einen Ablehnungsschnitt mit minimalem Gesamtgewicht, der jeden veröffentlichten Konflikt überschneidet, sowie das genaue verbleibende zeitliche Zertifikat.",
+      "title": "Minimaler Schnitt"
+    },
+    "MERGE.010": {
+      "diagnostics": "Das Verifizierer beweist eine eindeutige Wurzel, überprüft jede direkte Kante, folgt jedem Datensatz bis zu dieser Wurzel und lehnt Zyklen, getrennte Referenzen, zusätzliche Überlebende und Verknüpfungen ab.",
+      "hints": [
+        "Folgen Sie echo_of Kante für Kante.",
+        "Eine Downstream-Kopie ist immer noch ein logisches Update.",
+        "Das Zertifikat ist die Kette, nicht nur ein gemeinsamer Nutzlast-Hash."
+      ],
+      "premise": "SHADOW-7 erhält dispatch-77 viermal. Der Bridge-Cache leitete das Original weiter, der Funk-Repeater leitete diesen Cache-Eintrag weiter und die Buskonsole gab den Repeater wieder. Übereinstimmende Payloads allein können nicht zeigen, ob die Konsole einen unabhängigen Befehl gesehen hat; Das beibehaltene Echo von Links kann.",
+      "protected": [
+        "7",
+        "77",
+        "dispatch-77",
+        "echo_of"
+      ],
+      "submission": "Behalten Sie die eine ursprüngliche Aktualisierung bei und klassifizieren Sie jeden späteren Datensatz als Echo, indem Sie seinen direkten Vorgänger benennen, anstatt die transitive Kette abzukürzen.",
+      "title": "Echo-Aktualisierung"
+    },
+    "MERGE.011": {
+      "diagnostics": "Das Verifizierer erkennt Quellmehrdeutigkeiten, doppelte Abstimmungen, Fehler bei der arithmetischen Gewichtung, einen unzureichenden Spielraum, ein teilweise gewinnendes Archiv und umetikettierte verlorene Beweise.",
+      "hints": [
+        "Summengewichte nach Anspruch, nicht nach Datensatzanzahl.",
+        "Ein obsiegender Anspruch behält alle seine Quellen.",
+        "Die zeitliche Machbarkeit macht schwache Beweise nicht zu starken Beweisen."
+      ],
+      "premise": "Sobald Zuleitung-9 im aktiven Zustand sichtbar ist, gibt es für seine Öffnung zwei Erklärungen. Signiertes SCADA und ein Relais-Oszillograph melden eine thermische Auslösung; Eine ältere Konsole und ihr öffentlicher Spiegel melden ein manuelles Öffnen. Die Anzahl der Datensätze stimmt mit zwei zu zwei überein, die veröffentlichten Beweisgewichte jedoch nicht.",
+      "protected": [
+        "9"
+      ],
+      "submission": "Behalten Sie jede unabhängige Quelle für den Anspruch mit der eindeutig höchsten Gewichtung bei und lehnen Sie jede Quelle für den unterlegenen Anspruch als überstimmt ab, sofern die öffentliche Marge eingehalten wird.",
+      "title": "Beweisgewicht"
+    },
+    "MERGE.012": {
+      "diagnostics": "Verifizierer lehnt verworfene Datensätze, erfundene Kanten, unzureichende Erreichbarkeit, übermäßig viele Zertifikate und ein Zertifikat ab, das nach dem Entfernen einer eingereichten Kante noch ausreichend ist.",
+      "hints": [
+        "Die Komprimierung gilt für das Beweisdiagramm, nicht für das Archiv.",
+        "Suchen Sie nach einer Kette, die alle fünf Fakten umfasst.",
+        "Testen Sie die Notwendigkeit, indem Sie nacheinander jede Zertifikatskante entfernen."
+      ],
+      "premise": "Die Blind-Winkel-Untersuchung ergibt fünf aufbewahrte Aufzeichnungen und sieben authentische Präzedenzverknüpfungen. Drei Links wiederholen lediglich die bereits von den anderen nachgewiesene Erreichbarkeit. Die Anhörung erfordert das kleinste ausreichende kausal-Skelett, keinen Screenshot von jedem Pfeil und keine Löschung von Beweismitteln.",
+      "protected": [],
+      "submission": "Bewahren Sie jede Aufzeichnung auf, weisen Sie deren genaue zulässige Zeit zu und reichen Sie nicht mehr als vier authentische Kanten ein, deren transitiver Abschluss alle sieben aktiven Einschränkungen beweist. Jede eingereichte Kante muss selbst notwendig sein.",
+      "title": "Kausale Kompression"
+    },
+    "MERGE.013": {
+      "diagnostics": "Das Verifizierer gruppiert nach Operation und Quelle, berechnet unterschiedliche Behauptungen neu, erfordert eine ehrliche Quellenvereinbarung und lehnt Antworten ab, die nur die offensichtlich verlorene Aussage verwerfen.",
+      "hints": [
+        "Äquivokation ist eine Eigenschaft einer Quelle innerhalb einer Operation.",
+        "Der übereinstimmende Anspruch ist weiterhin Teil der Doppelaussage.",
+        "Verwandeln Sie einen Quellenidentitätsfehler nicht in eine Taktinkonsistenz."
+      ],
+      "premise": "Nachdem der Stadtvertrag in Kraft getreten ist, genehmigen zwei unabhängige, versiegelte Aufzeichnungen die Landroute. Das Legacy-Gateway liefert dann zwei signierte Erklärungen für denselben Vorgang: Eine stimmt zu, eine genehmigt den Untergrundring. Würde man die zustimmende Kopie als ehrlich behandeln, könnte eine Quelle entscheiden, an welche Identität sich die Anhörung erinnert.",
+      "protected": [
+        "CITY-19"
+      ],
+      "submission": "Bewahren Sie beide ehrlichen Aufzeichnungen auf und lehnen Sie alle Aufzeichnungen von der einen Quelle ab, die inkompatible Ansprüche für CITY-19 aufgestellt haben. Reichen Sie keine erfundenen Vorrangkanten ein.",
+      "title": "Doppelspiel"
+    },
+    "MERGE.014": {
+      "diagnostics": "Das Verifizierer zählt das Produkt mit begrenzten Intervallen auf, weist Eindeutigkeitsansprüche zurück und lehnt die Wahl des späteren Zeitplans ab, behält ihn aber als gültige Alternative bei.",
+      "hints": [
+        "Unsicherheit ist keine Inkonsistenz.",
+        "Nur der mittlere Datensatz kann verschoben werden.",
+        "Durch die Auswahl von kanonisch wird die andere Lösung nicht gelöscht."
+      ],
+      "premise": "Die Korrektur erfolgt nur durch Anhängen, die Höruhr wurde jedoch nur auf ein Intervall von einem Tick synchronisiert. Die Änderung kann daher der Veröffentlichung um ein oder zwei Ticks vorausgehen. Beide Geschichten genügen allen verbliebenen Grenzen, und keine von beiden kann als widersprüchlich gelöscht werden.",
+      "protected": [],
+      "submission": "Bewahren Sie alle drei Datensätze auf, beweisen Sie beide Bestellkanten, erkennen Sie mindestens zwei mögliche Archive an und reichen Sie als kanonisch-Vertreter den lexikografisch frühesten vollständigen Zeitplan ein.",
+      "title": "Zwei konsistente Archive"
+    },
+    "MERGE.015": {
+      "diagnostics": "Der Verifizierer zählt das vollständige begrenzte Zeitplanprodukt auf, überprüft den kanonisch-Repräsentanten, beweist jede aktive Kante durch transitiven Abschluss, lehnt redundante Kanten ab und weist einen Fall ohne echte Unvergleichbarkeit zurück.",
+      "hints": [
+        "Eine Rekonstruktion kann vollständig sein, ohne dass sie vollständig geordnet ist.",
+        "Die beiden Routenbücher treffen sich erst beim Controller-Audit.",
+        "Komprimieren Sie die Erreichbarkeit, nicht die Unsicherheit."
+      ],
+      "premise": "Jeder Bezirk hat endlich seine aufbewahrten Beweise übermittelt. Die Oberflächen- und Untergrundsicherheit wurde unabhängig voneinander in überlappenden Taktintervallen ermittelt; Keine der beiden Tatsachen verursachte die andere. Das Archiv muss sich ihnen anschließen, ohne dass die Dateireihenfolge zur Geschichte wird.",
+      "protected": [],
+      "submission": "Bewahren Sie alle sechs Datensätze auf, wählen Sie den kanonisch-Vertreter der vier möglichen Zeitpläne aus und reichen Sie das kleinste authentische Teilauftragszertifikat ein. Behalten Sie das Paar Oberfläche/Untergrund als unvergleichbar bei.",
+      "title": "Die Rekonstruktion"
+    },
+    "MOSAIC.001": {
+      "diagnostics": "Verifizierer meldet die erste ungültige Transformation, Kantenkorrespondenz, nicht abgedeckte Gitterkante, nichtkanonische Ausrichtung oder Fragment, das noch eingebettet ist.",
+      "hints": [
+        "Ignorieren Sie lokale Namen und fahren Sie zuerst nach Norden.",
+        "Passen Sie den Grad und das Material/Niveau-Paar an jeder Kante an.",
+        "Nur ein Fragment enthält ein Invariante-Attribut, das in der globalen Vier-Zyklen-Struktur fehlt."
+      ],
+      "premise": "Vier Inspektionsteams kartierten überlappende Ecken eines Versorgungsnetzes mit neun Knotenpunkten unter Verwendung ihrer eigenen Nord- und lokalen Beschriftungen. Ein fünftes leichtes Fragment ist ein Lockvogel.",
+      "protected": [
+        "3"
+      ],
+      "submission": "Senden Sie den mit kanonisch 3-by-3 attributierten Graphen, eine D4-Transformation und eine vollständige Scheitelpunktzuordnung für jedes verwendete Fragment sowie unterstützte nicht verwendete Klassifizierungen.",
+      "title": "Vier Ecken"
+    },
+    "MOSAIC.002": {
+      "diagnostics": "Verifizierer meldet ungültige Einbettungen, unvollständige Union-Abdeckung und unzureichende unabhängig gemeinsam genutzte Kanten separat mit beobachteten und erforderlichen Zählungen.",
+      "hints": [
+        "Rekonstruieren Sie zunächst jeden Streifen mit sechs Anschlüssen einzeln.",
+        "Die beiden Streifen überlappen entlang eines Korridors mit zwei Kanten, nicht nur an den Eckpunkten.",
+        "Gewerkschaftsberichterstattung beweist Existenz; Die Unterstützungsvielfalt beweist die Bestätigung."
+      ],
+      "premise": "Versorgungsteams im Norden und Süden untersuchten sich überschneidende Sechs-Kreuzungs-Bezirke mit dem gegenüberliegenden örtlichen Norden. Die Stadt akzeptiert den Wiederaufbau nur, wenn die gemeinsame Grenze unabhängig bestätigt wird und nicht nur in der Union vorhanden ist.",
+      "protected": [],
+      "submission": "Senden Sie das mit kanonisch versehene Diagramm und beide vollständigen D4-Zuordnungen. Mindestens zwei globale Kanten müssen von zwei unterschiedlich verwendeten Fragmenten unterstützt werden.",
+      "title": "Geteilte Wand"
+    },
+    "MOSAIC.003": {
+      "diagnostics": "Die Gültigkeit des Diagramms und die D4-Kanonizität werden vor der Fragmentplatzierung überprüft. Ein rotiertes Äquivalent schlägt als nichtkanonisch fehl, anstatt sich als eine andere Geschichte auszugeben.",
+      "hints": [
+        "Suchen Sie zunächst nach einer vollständigen Baugruppe. Die Ausrichtung hat keinen Einfluss darauf, ob die Fragmente passen.",
+        "Kodieren Sie jede transformierte globale Kante als kanonisch Endpunkt-IDs plus Material und Ebene.",
+        "Vergleichen Sie alle acht D4-Kodierungen byteweise und wählen Sie die kleinste aus, bevor Sie Fragmentzuordnungen melden."
+      ],
+      "premise": "Zwei Teams untersuchten denselben Versorgungsblock mit einer Vierteldrehung und einer diagonalen Spiegelung. Continuity zählte zuvor mehrere gedrehte Renderings als unterschiedliche Kandidatenverläufe. Hier ist dieser Zusammenbruch legitim: Erstellen Sie einen orientierungsunabhängigen Graphen und verwenden Sie den kanonisch-Repräsentanten für einen stabilen Vergleich.",
+      "protected": [
+        "3"
+      ],
+      "submission": "Senden Sie das vollständige attributierte 3×3-Diagramm, beide D4-Transformationen und die gesamten Lokal-zu-Global-Zuordnungen. Der globale Graph muss der kanonisch D4-Repräsentant sein und nicht nur eine isomorphe Rotation.",
+      "title": "Gedrehter Block"
+    },
+    "MOSAIC.004": {
+      "diagnostics": "Diagrammform, D4-Kanonizität, Koordinatenprüfsumme, Fragmenteinbettungen und Lochabdeckung schlagen unabhängig voneinander fehl. Eine plausible, aber nicht unterstützte Kantenbeschriftung wird abgelehnt, bevor das Unterlassungszertifikat berücksichtigt wird.",
+      "hints": [
+        "Fügen Sie die beiden Erhebungen zu einem Umfang zusammen, bevor Sie die Mitte füllen.",
+        "Das einzige zulässige Loch ist ein innerer Scheitelpunkt; Alle und nur ihre einfallenden Kanten können abgeleitet werden.",
+        "Berechnen Sie die vier fehlenden Kantenattribute anhand ihrer kanonisch-Endpunktindizes und vergleichen Sie dann alle D4-Kodierungen wie zuvor."
+      ],
+      "premise": "Der Kühlplan des Krankenhauses besteht aus zwei überlappenden Ringvermessungen, die zentrale Verteilerkachel wurde jedoch nie gescannt. Jede aufgezeichnete Leitung trägt die Prüfsumme der öffentlichen Koordinaten der Einrichtung: Material ist „axis-minIndex-maxIndex“, und Ebene ist die Endpunkt-Index-Summe Modulo drei. Rekonstruieren Sie das kanonisch-Raster und geben Sie genau an, welche inneren Beweise abgeleitet und nicht beobachtet werden.",
+      "protected": [
+        "axis-minIndex-maxIndex"
+      ],
+      "submission": "Reichen Sie das vollständige kanonisch-attributierte Diagramm, beide D4-Zuordnungen und ein kanonisch-Zertifikat über fehlende Kacheln ein, in dem der eine nicht abgedeckte Scheitelpunkt und jede nicht abgedeckte Vorfallkante benannt ist. Keine beobachtete Umfangskante darf als fehlend bezeichnet werden.",
+      "title": "Fehlendes Teilstück"
+    },
+    "MOSAIC.005": {
+      "diagnostics": "D4-Einbettung, vollständige Abdeckung, zugeordneter doppelter Fingerabdruck, Überlebensverknüpfung und ein Überlebender pro Duplikatgruppe schlagen unabhängig voneinander fehl.",
+      "hints": [
+        "Ignorieren Sie beim Vergleich von Fragmenten lokale Scheitelpunktnamen.",
+        "Normalisieren Sie die Übersetzung und alle acht D4-Ausrichtungen, behalten Sie jedoch Kantenmaterial und -ebene bei.",
+        "Das Beibehalten des Caches mit geringer Gewichtung ist gültig, aber das Verwerfen des evidenzreichen Originals kostet mehr Punkte."
+      ],
+      "premise": "Drei Brückenuntersuchungen scheinen die Nordspanne zweimal zu bestätigen. Die dritte ist tatsächlich eine zwischengespeicherte, halb gedrehte Kopie der ersten: Lokale Namen und Ausrichtung haben sich geändert, nicht jedoch alle zugeordneten Kanten. Rekonstruieren Sie die Brücke und identifizieren Sie die Kopie, bevor Continuity eine Beobachtung als zwei Zeugen behandelt.",
+      "protected": [],
+      "submission": "Senden Sie das kanonisch-Diagramm, Zuordnungen für einen Überlebenden aus jeder physischen Untersuchung und eine doppelte Ablehnung unter Nennung des entsprechenden verwendeten Überlebenden.",
+      "title": "Doppelbelichtung"
+    },
+    "MOSAIC.006": {
+      "diagnostics": "Reine D4-Geometrie, Orientierungspunkt-Zufriedenheit für verwendete Fragmente, geometrische Unterstützung für die Zurückweisung und das Fehlen jeglicher Orientierungspunkt-konsistenter Einbettung schlagen unabhängig voneinander fehl.",
+      "hints": [
+        "Ignorieren Sie zunächst den Orientierungspunkt und finden Sie alle geometrischen Einbettungen.",
+        "Suchen Sie dann d00 in jeder Einbettung.",
+        "Ein Fragment kann geometrisch gültig, aber historisch unmöglich sein."
+      ],
+      "premise": "Ein Import einer alten Vermessung scheint perfekt zur rekonstruierten Brücke zu passen, sodass die Geometrie allein dies als Bestätigung werten würde. Sein erhaltener Feldmarkstein identifiziert jedoch das lokale d00 als südöstliche Ecke. Die zugeordneten Kanten platzieren denselben Scheitelpunkt an der nordwestlichen Ecke.",
+      "protected": [
+        "d00"
+      ],
+      "submission": "Rekonstruieren Sie die Brücke und lehnen Sie das verlockende Fragment nur mit einem öffentlichen Wahrzeichen-Konflikt-Zertifikat ab.",
+      "title": "Falsches Wahrzeichen"
+    },
+    "MOSAIC.007": {
+      "diagnostics": "Der Verifizierer unterscheidet eine geometrische Nichtübereinstimmung von einer geometrisch gültigen Platzierung, die gegen die Zeitstempelanzeige verstößt.",
+      "hints": [
+        "Zählen Sie zunächst gewöhnliche D4-Einbettungen auf.",
+        "Berechnen Sie für jeden zugeordneten Scheitelpunkt y*3+x.",
+        "Die beiden Scans müssen trotz unterschiedlicher Taktversätze in der mittleren Spalte übereinstimmen."
+      ],
+      "premise": "Die Flutkanäle sind optisch einheitlich, so dass allein die Topologie es jedem Zwei-Säulen-Scan ermöglicht, über das Quadrat zu gleiten oder sich zu drehen. Jeder untersuchte Knotenpunkt behielt auch seinen Scanner Tick. Nach Abzug des Fragment-Takt-Offsets müssen diese Ticks dem zeilenmajoren globalen Gauge-Index entsprechen.",
+      "protected": [
+        "3"
+      ],
+      "submission": "Senden Sie das kanonisch-Conduit-Diagramm und die Fragmentzuordnungen, die sowohl die attributierte Topologie als auch jeden öffentlichen Scanner-Zeitstempel erfüllen.",
+      "title": "Zeitstempelanzeige"
+    },
+    "MOSAIC.008": {
+      "diagnostics": "Der Prüfer lehnt erfundene Scheitelpunkte, Auslassungen außerhalb des Rings, mehrere Lücken, ein Zertifikat, das nicht mit der Fragmentabdeckung übereinstimmt, und einen Rest ab, der kein Pfad mit zwei Endpunkten ist.",
+      "hints": [
+        "Berechnen Sie die Abdeckung, bevor Sie das Ringversprechen verwenden.",
+        "Nur zwei Umfangsscheitelpunkte haben den Grad eins.",
+        "Kein Innensegment ableiten."
+      ],
+      "premise": "Die Echokette identifiziert die Konsole von SHADOW-7 an der Südseite des Reliefrings, bei ihrem Scan fehlt jedoch ein Schienensegment. Das Stadtrecht legt den Umfang der acht Knotenpunkte als einfachen Ring fest. Alle Eckpunkte und jedes andere Segment werden unabhängig voneinander beobachtet.",
+      "protected": [
+        "7"
+      ],
+      "submission": "Stellen Sie das kanonisch-Gitter zusammen, deklarieren Sie die eine unbedeckte Kante und beweisen Sie, dass sie allein den veröffentlichten Umfangspfad zu einem Ring schließt.",
+      "title": "Unterbrochener Ring"
+    },
+    "MOSAIC.009": {
+      "diagnostics": "Der Prüfer trennt die geometrische Unmöglichkeit von einem einbettbaren Attributkonflikt und berechnet die Stützergewichtung für jede in Konflikt stehende zugeordnete Kante neu.",
+      "hints": [
+        "Platzieren Sie zunächst das anonyme Fragment, ohne Beschriftungen zu berücksichtigen.",
+        "Vergleichen Sie Gewichte nur an Kanten, deren Beschriftungen nicht übereinstimmen.",
+        "Jede Meinungsverschiedenheit muss die Marge unabhängig erfüllen."
+      ],
+      "premise": "Das gewichtete Archiv deutet auf eine Thermikauslösung auf Zuleitung-9 hin. Zwei unterzeichnete Umfragen decken das Raster ab; Ein anonymer Scan hat dieselbe Nordgeometrie, beschriftet die Zuleitung-Kante jedoch als Geisterlinie. Die Geometrie allein kann es nicht ablehnen.",
+      "protected": [],
+      "submission": "Stellen Sie das kanonisch-Diagramm zusammen, verwenden Sie jedes konsistente signierte Fragment und klassifizieren Sie das anonyme Fragment nur dann als überstimmt, wenn die korrekte Unterstützung ihr Gewicht an jeder widersprüchlichen Kante um den öffentlichen Rand übersteigt.",
+      "title": "Adversariale Vermessung"
+    },
+    "MOSAIC.010": {
+      "diagnostics": "Der Prüfer lehnt nicht deklarierte Ebenen, nicht verbundene Ebenen, eine Verbindung mit gemischten Ebenen außerhalb der Portalliste, ein aufgelistetes Portal, das keine Ebenen vermischt, und ein Portal ab, das nicht durch Schachtmaterial unterstützt wird.",
+      "hints": [
+        "Klassifizieren Sie Kanten, bevor Sie über das Bild nachdenken.",
+        "Ein Portal wird durch Vorfallebenen bestimmt, nicht durch seinen Namen.",
+        "Beide Layer-Untergraphen müssen für sich allein verbunden bleiben."
+      ],
+      "premise": "Die Oberfläche (surface)-Umgehungsstraße ist real, aber das Vermessungsarchiv hatte abgeflachte Schachtmündungen und versiegelte Kanäle in einer Karte. Zwei markierte Fragmente überlappen sich entlang des Untergrund (underground)-Kanals, während drei Schächte den Oberfläche (surface) Zuleitung mit dem tieferen Ring verbinden. Bei der Rekonstruktion muss die Tiefe als Topologie und nicht nur als Zeichnungsbezeichnung erhalten bleiben.",
+      "protected": [
+        "surface",
+        "underground"
+      ],
+      "submission": "Rekonstruieren Sie das zugeordnete kanonisch-Gitter, verwenden Sie beide Umfragen und weisen Sie genau zwei verbundene Schichten mit den drei veröffentlichten schichtübergreifenden Portalen nach. Jedes Portal muss mit Schachtmaterial hinterlegt sein.",
+      "title": "Unterirdische Schicht"
+    },
+    "MOSAIC.011": {
+      "diagnostics": "Der Prüfer lehnt eine rein quadratische Kanonisierung, unbedeckte Nähte, dekorative Ebenenbeschriftungen, getrennte Schichten, falsche Portale und einen in einer reflektierten Ausrichtung platzierten Streifen ab.",
+      "hints": [
+        "Platzieren Sie die drei Zwei-Säulen-Streifen von links nach rechts.",
+        "Zählen Sie wiederholte Kanten an beiden Überlappungen.",
+        "Die mittlere Reihe gehört zum Untergrund (underground)-Diagramm, bezieht sich jedoch auf die Oberfläche (surface)-Wellen."
+      ],
+      "premise": "Die Vereinbarung hielt die Dienste am Leben, aber für die Korrekturanhörung ist ein Stadtplan anstelle von drei Abteilungsstreifen erforderlich. West-, Mittel- und Ostvermessungen überlappen sich um eine ganze Spalte. Ihre Zeichnungen sind nur dann lokal plausibel, wenn die vier Schachtmündungen die genaue Grenze zwischen den verbundenen Ringen Oberfläche (surface) Zuleitung und Untergrund (underground) bilden.",
+      "protected": [
+        "3",
+        "4",
+        "surface",
+        "underground"
+      ],
+      "submission": "Stellen Sie den attributierten Graphen kanonisch 4×3 zusammen, verwenden Sie alle drei Vermessungen, beweisen Sie mindestens vier unabhängig wiederholte Kanten und bewahren Sie beide verbundenen Schichten mit genau vier schachtgestützten Portalen auf.",
+      "title": "Ganze Stadt"
+    },
+    "ORIENT.001": {
+      "diagnostics": "Eine Nichtübereinstimmung identifiziert die übermittelte Feldklasse, gibt jedoch nie das erwartete Ereignis-ID aus.",
+      "hints": [
+        "Die Ereignisreihenfolge ist kein Ereigniskörperfeld.",
+        "Übergeordnete IDs werden nach rohen Digest Bytes sortiert.",
+        "Abgeleitetes Provenienz umfasst Regel, Bindung und Emissionsordnungszahl."
+      ],
+      "premise": "Eine Bahnsteigglocke erscheint zweimal im Transportprotokoll, darf aber nur einmal in das Alarmregister eingehen. Berechnen Sie den zugelassenen Alarm neu, ohne der Ankunftsreihenfolge zu vertrauen.",
+      "protected": [],
+      "submission": "Übermitteln Sie die abgeleitete Ereignis-ID, das Thema, die logische Zeit und den Digest der öffentlichen Projektion.",
+      "title": "Die erste Glocke"
+    },
+    "ORIENT.002": {
+      "diagnostics": "Der Verifizierer unterscheidet Schema-, Trace-, Datensatz- und Digest-Fehler, ohne die erwartete Wiederholung preiszugeben.",
+      "hints": [
+        "Ein gleicher Wert logische Zeit macht ein untergeordnetes Element nicht unabhängig von seinem übergeordneten Element.",
+        "Unabhängige zeitgleiche Ereignisse werden nach rohen EventId-Bytes sortiert.",
+        "Die positive Rekursion läuft so lange, bis keine neue erreichbare Tatsache mehr abgeleitet werden kann."
+      ],
+      "premise": "Drei Betreiber schlagen Wiederholungsaufträge für sechs Plattformdatensätze vor. Prüfen Sie jeden Vorschlag im Hinblick auf kausale Eltern, die kanonische Gleichzeitigkeit tie-break und den am wenigsten festen Punkt der Erreichbarkeit.",
+      "protected": [
+        "tie-break"
+      ],
+      "submission": "Senden Sie die vollständige kanonisch-Replay-Trace-EventId-Sequenz, die drei vom Desk Projektion bereitgestellten Erstfehlerdatensätze und das Projektion Digest.",
+      "title": "Keine Wirkung vor der Ursache"
+    },
+    "ORIENT.003": {
+      "diagnostics": "Bei einer Nichtübereinstimmung wird die Beobachtungsklasse benannt, die versteckte Warnung oder der erwartete Bericht wird jedoch nicht angezeigt.",
+      "hints": [
+        "Ein Projektion gibt Werte aus; Aktive Ereignisse werden nicht gelöscht.",
+        "Der Servicezonenrahmen ist aktiv, auch wenn die Privatsphäre seine Sichtbarkeit ausschließt.",
+        "Die interne Warnung wird nach der öffentlichen Sichtung abgeleitet und ist keine Projektion-Zeile."
+      ],
+      "premise": "Eine Kamera speichert Rohbilder, kalibrierte Erkennungen, öffentliche Sichtungen und eine interne Warnung an einem aktiven festen Punkt. Der Continuity Desk veröffentlicht nur seinen datenschutzgefilterten öffentlichen Bericht.",
+      "protected": [],
+      "submission": "Übermitteln Sie die Gesamtzahl der aktiven Ereignisse, die prognostizierten Berichtsdatensätze und Digest sowie die EventId der aktiven Warnung, die im Bericht selbst weggelassen wird.",
+      "title": "Was die Kamera sah"
+    },
+    "ORIENT.004": {
+      "diagnostics": "Eine direkte Operation an einer abgeleiteten Schließung oder Stornierung wird mit ihren nächsten aktiven Basisvorfahren abgelehnt; Nicht übereinstimmende Antworten offenbaren niemals das erwartete Branch.",
+      "hints": [
+        "Der eingreifende Grund ist die Wartungsanzeige, nicht die Schließung.",
+        "Eine Neuzeit unterdrückt das ursprüngliche Basisereignis und fügt einen vom Spieler stammenden Ersatz ein.",
+        "Verwerfen Sie alle abgeleiteten Ereignisse in beiden Welten, bevor Sie die symmetrische Differenz bilden."
+      ],
+      "premise": "Eine Wartungsmitteilung, die vor dem Versandschluss eingeht, schließt die Linie M-4 und storniert drei Abfahrten. Verschieben Sie diesen Basishinweis zwei Ticks später und berechnen Sie die Stadt neu, anstatt irgendwelche Konsequenzen zu bearbeiten.",
+      "protected": [
+        "4",
+        "M-4"
+      ],
+      "submission": "Senden Sie den kanonisch-Retime-Eingriff, die resultierende Branch-ID, Root- und Kandidaten-Auswirkungsdatensätze, den genau geänderten EventId-Satz und den Kandidaten Projektion Digest.",
+      "title": "Der nicht eingeschlagene Weg"
+    },
+    "ORIENT.005": {
+      "diagnostics": "Hüllenschichten versagen in einer stabilen Reihenfolge. Bei einem eingebetteten Fehler werden nur der Fehlercode und der Fehlerfall angezeigt, niemals die erwartete Antwort oder Digest.",
+      "hints": [
+        "Das übergeordnete Element Branch ist eine Eingabe; beansprucht.Branch ist das Wiederholungsergebnis.",
+        "Platzieren Sie die Intervention neben der Antwort, die sie hervorgebracht hat.",
+        "Metadaten sind optional, aber jeder beanspruchte Digest, den Sie einschließen, muss genau neu berechnet werden."
+      ],
+      "premise": "Der Continuity Desk akzeptiert ein früheres Audit nur, wenn ein anderes Verifizierer es allein aus dem Bündel, dem Fall, dem übergeordneten Branch, der Intervention, der Antwort und dem beanspruchten Digests reproduzieren kann.",
+      "protected": [
+        "ORIENT",
+        "ORIENT.002",
+        "ORIENT.003",
+        "ORIENT.004"
+      ],
+      "submission": "Betten Sie einen gültigen kanonisch-Zeugen für ein entsperrtes ORIENT.002-, ORIENT.003- oder ORIENT.004-Ergebnis als Exportfeld der Antwort dieses Falls ein.",
+      "title": "Eine reproduzierbare Behauptung"
+    },
+    "PARADOX.001": {
+      "diagnostics": "Der maßgebliche Verifizierer gibt beide Historien wieder, erzwingt den festen Ursprung der Historie und die Interventionsrichtlinie, vergleicht öffentliche Aufzeichnungen genau, prüft die Sicherheit unabhängig und vergleicht die vertraglich vereinbarten latenten Routenwerte, sodass eine ausschließliche Provenienz-EventId-Abwanderung kein Paradoxon vortäuschen kann.",
+      "hints": [
+        "Ein Paradoxon braucht zwei Geschichten, nicht zwei Behauptungen über ein und dasselbe Branch.",
+        "In der öffentlichen Bekanntmachung wird die Route absichtlich weggelassen.",
+        "Die Differenz wird bei /payload/route gemessen, nicht anhand von Provenienz allein."
+      ],
+      "premise": "Das Archiv ist vollständig, die Uhr geschlossen, die Vereinbarung erfüllt und die Anhörung hat sich für Oberfläche (surface) entschieden. Doch auch die beibehaltene Untergrund (underground)-Fortsetzung erfüllt alle veröffentlichten Sicherheitsanforderungen und erzeugt die gleiche öffentliche Bekanntmachung. Das letzte Problem besteht darin, nicht das richtige Morgen auszuwählen. Es soll beweisen, dass aus den öffentlichen Aufzeichnungen nicht hervorgeht, welcher sichere Morgen stattgefunden hat.",
+      "protected": [
+        "/payload/route",
+        "CASCADE.024",
+        "surface",
+        "underground"
+      ],
+      "submission": "Reichen Sie zwei vollständige CASCADE.024-Branch-Verläufe mit derselben Wurzel ein: einen an der Oberfläche (surface) und einen im Untergrund (underground). Ordnen Sie alle öffentlichen Datensätze anhand ihres Digest einander zu, führen Sie die exakten Sicherheitsnachweise beider Seiten auf und bescheinigen Sie den vollständigen materiellen latenten Unterschied.",
+      "title": "Zwei Morgen"
+    },
+    "PULSE.001": {
+      "diagnostics": "Der Verifizierer überprüft umfassend jede Null- bis Sieben-Puls-Teilmenge eines Zwölf-Tick-Horizonts plus Duplikat- und Grenzbefestigungen und gibt den ersten Gegenbeispiel zurück.",
+      "hints": [
+        "Merken Sie sich den aktuellen Termin, nicht den Pulsverlauf.",
+        "Durch die Planung derselben Timer-Taste wird der ältere ausstehende Timer ersetzt.",
+        "Ein Impuls und ein Timer im selben Tick verarbeiten zunächst den externen Impuls."
+      ],
+      "premise": "Ein Vibrationssensor am Bahnsteig flattert. Erzeugen Sie für jeden maximalen Impulscluster genau eine stabile Glocke, und zwar fünf ruhige Ticks nach dessen letztem Impuls.",
+      "protected": [
+        "0.1",
+        "PULSE"
+      ],
+      "submission": "Reichen Sie ein kanonisches PULSE-0.1-Programm und optional eine kurze Invariantennotiz ein.",
+      "title": "Eine Glocke"
+    },
+    "PULSE.002": {
+      "diagnostics": "Der Verifizierer überprüft umfassend jeden nicht abnehmenden Null-bis-Fünf-Ticket-Stream über acht Ticks, einschließlich aller wiederholten Tick-Multiplizitäten, und gibt den ersten Gegenbeispiel zurück.",
+      "hints": [
+        "Der Stream wird nach logischem Tick und dann nach Quell-EventId sortiert.",
+        "Sie müssen keine Kopien zählen.",
+        "Behalten Sie die Nutzlast des kanonisch ersten Eintreffens bei, nicht den letzten Wiederholungsversuch."
+      ],
+      "premise": "Ein erneut versuchendes Versand-Gateway stempelt jede Kopie eines physischen Tickets mit demselben logischen Tick. Leiten Sie die erste Ankunft von kanonisch an jedem Tick sofort weiter, behalten Sie dabei die Nutzlast bei und unterdrücken Sie alle späteren Kopien.",
+      "protected": [
+        "0.1",
+        "PULSE"
+      ],
+      "submission": "Senden Sie ein kanonisch PULSE 0.1 Programm und optional eine kurze Invariante Notiz.",
+      "title": "Erstes Exemplar"
+    },
+    "PULSE.003": {
+      "diagnostics": "Der Verifizierer prüft die 545 Null-bis-Drei-Befehlsverfolgungen über sechs Ticks umfassend, einschließlich wiederholter Starts, unregelmäßiger Abbrüche und der Start-/Abbruchreihenfolge gleicher Tick, die durch die Quell-EventId bestimmt wird.",
+      "hints": [
+        "Ein Timeout und ein Debounce sind nicht dasselbe: Bei einem Abbruch wird kein Ersatz-Timer erzeugt.",
+        "Verwenden Sie einen statischen Timerschlüssel für die Uhr.",
+        "Jeder externe Befehl an einem Tick wird vor einem an diesem Tick fälligen Timer ausgeführt."
+      ],
+      "premise": "Eine Nachtwache beginnt, wenn eine Patrouille abreist und sollte drei Ticks später alarmieren, es sei denn, die Patrouille meldet sich an. Eine neue Abfahrt ersetzt die Frist; Ein Check-in genau zum Stichtag führt dennoch zu einer Stornierung.",
+      "protected": [
+        "0.1",
+        "545",
+        "PULSE"
+      ],
+      "submission": "Senden Sie ein kanonisch PULSE 0.1 Programm und optional eine kurze Invariante Notiz.",
+      "title": "Stille Auszeit"
+    },
+    "PULSE.004": {
+      "diagnostics": "Der Verifizierer prüft umfassend alle 924 nicht abnehmenden Null-bis-sechs-Anforderungsströme über sechs Ticks, einschließlich gleicher Tick-Bursts, Leerlaufauffüllung mit Kapazitätsbegrenzung und Zulassung unmittelbar nach der Ablehnung.",
+      "hints": [
+        "Füllen Sie vor der Entscheidung über die aktuelle Anfrage nach und aktualisieren Sie dann die zuletzt gesehene Tick.",
+        "Klemme nach einer Leerlauflücke; Das angesammelte Guthaben darf nie mehr als zwei betragen.",
+        "Nur der zugelassene Branch dekrementiert den Bucket. Eine abgelehnte Anfrage ändert die Zeit, nicht jedoch die Token."
+      ],
+      "premise": "Nach Borrowed Pressure ersetzt das Zuleitung-Büro Ad-hoc-Reservierungen durch ein Zwei-Token-Zulassungsfenster, das einen Token pro Tick auffüllt. Jede akzeptierte Anfrage muss ihre kanonisch-Quellnutzlast behalten. Bursts, die über die Kapazität hinausgehen, werden abgelehnt, und abgelehnte Arbeiten dürfen kein zukünftiges Guthaben aufbrauchen.",
+      "protected": [
+        "0.1",
+        "924",
+        "PULSE"
+      ],
+      "submission": "Senden Sie ein kanonisch PULSE 0.1 Programm und optional eine kurze Invariante Notiz. Die Zulassung erfolgt sofort und die ursprüngliche Nutzlast der Anfrage muss erhalten bleiben.",
+      "title": "Token-Fenster"
+    },
+    "PULSE.005": {
+      "diagnostics": "Der Verifizierer erschöpft alle 3,478 quellengetaggten Streams mit bis zu vier Stimmen über vier Ticks. Es unterscheidet doppelte Abstimmungen, verzögerte Zwei-Quellen-Vereinbarung, alle drei gleiche Tick EventId-Reihenfolge, falsche entscheidende Payloads und wiederholte Freigabe.",
+      "hints": [
+        "Drei monotone Bildausschnitte genügen; Bei einem erneuten Versuch wird ein bereits wahres Bit gesetzt.",
+        "Fragen Sie nach dem Markieren der aktuellen Quelle, ob eine andere Quelle bereits erschienen ist.",
+        "Versiegeln Sie den Controller, wenn er emittiert. Die dritte Quelle ist ein Beweis, kein zweiter Befehl."
+      ],
+      "premise": "Der Evakuierungskontrolleur gehorcht nicht länger einem Schreiber, nur weil er sich wiederholt. Der Bahnhofsbetrieb, die Verkehrsleitung und das Klinikum übersenden jeweils eine Bescheinigung über die Freigabe des letzten Zuges. Lösen Sie den Vorgang einmal aus, unmittelbar nachdem zwei beliebige unterschiedliche Quellen gesprochen haben, und behalten Sie die genaue Nutzlast der Bescheinigung bei, die das Quorum vervollständigt hat.",
+      "protected": [
+        "0.1",
+        "3",
+        "478",
+        "PULSE"
+      ],
+      "submission": "Senden Sie ein kanonisch PULSE 0.1-Programm und optional ein kurzes Invariante. Die Veröffentlichung erfolgt einmalig, hat keine zusätzliche Latenz und muss die kanonisch-Nutzlast des zweiten eindeutigen Quellereignisses enthalten.",
+      "title": "Zwei von drei"
+    },
+    "PULSE.006": {
+      "diagnostics": "Der Verifizierer erschöpft jeden quellengetaggten Stream von bis zu vier Signalen über vier Ticks und unterscheidet zwischen Duplikatzählung, Zwei-von-Drei-Freigabe, verzögerter All-Topic-Vervollständigung, falscher Nutzlast und erneuter Auslösung.",
+      "hints": [
+        "Dies ist eine Barriere, die alle drei umfasst, nicht das vorherige Quorum.",
+        "Legen Sie das Bit des aktuellen Themas fest, bevor Sie die anderen beiden überprüfen.",
+        "Versiegeln Sie die Barriere nach der ersten Freigabe."
+      ],
+      "premise": "Im Morgengrauen müssen drei Tatsachen gleichzeitig vorliegen, bevor der Notverkehr freigegeben wird: Die Windgrenze wird eingehalten, die rekonstruierte Brückenuhr zeigt an, dass die Brücke fertig ist, und das Krankenhaus bestätigt die Route. Die Wiederholung eines Subsystems ist kein Fortschritt, und zwei von drei sind nicht länger sicher.",
+      "protected": [
+        "PULSE"
+      ],
+      "submission": "Senden Sie ein PULSE-Programm, das einmalig und ohne zusätzliche Latenz bei dem Ereignis ausgibt, das zuerst alle drei unterschiedlichen Bereitschaftsthemen abschließt. Bewahren Sie die kanonisch-Nutzlast dieses entscheidenden Ereignisses.",
+      "title": "Barriere im Morgengrauen"
+    },
+    "PULSE.007": {
+      "diagnostics": "Der erschöpfende Bereich unterscheidet zwischen Überaufnahme, Phantomlastschrift bei Ablehnung, Unterlauf bei leerem Abfluss, ignoriertem Abfluss, verzögerter Ausgabe und Nutzlastsubstitution.",
+      "hints": [
+        "Eine begrenzte ganze Zahl ist ausreichend.",
+        "Testen Sie die Kapazität, bevor Sie den Status ändern.",
+        "Ein Abfluss ändert die Tiefe nur, wenn die Tiefe positiv ist."
+      ],
+      "premise": "Sobald der Bridge-Zeitplan veröffentlicht ist, beginnt jede Abteilung damit, Arbeit an eine Übergabewarteschlange mit zwei Slots zu senden. Eine abgelehnte Anfrage wurde nie in die Warteschlange gestellt und ein Entleeren aus einer leeren Warteschlange kann keine zukünftige Kapazität schaffen. Der Controller muss echten Gegendruck ausüben und gleichzeitig die öffentliche Identität jedes zugelassenen Befehls wahren.",
+      "protected": [
+        "PULSE"
+      ],
+      "submission": "Senden Sie einen begrenzten PULSE-Controller, der genau zulässt, wenn die aktuelle Tiefe unter zwei liegt, nur effektive Drains dekrementiert und ohne zusätzliche Latenz ausgibt.",
+      "title": "Gegendruck"
+    },
+    "PULSE.008": {
+      "diagnostics": "Das umfassende Orakel trennt kalte Übernahme, verlorenen warmen Zustand, ignorierten Fehler, ignorierte Wiederherstellung, doppeltes Routing, veraltete sekundäre Präferenz und Nutzlastsubstitution.",
+      "hints": [
+        "Verfolgen Sie Verfügbarkeit und Bereitschaft separat.",
+        "Die Wärme bleibt bestehen; Die primäre Verfügbarkeit kann umschalten.",
+        "Verwenden Sie die sich gegenseitig ausschließende Anfrage Branches."
+      ],
+      "premise": "Der stille Messgerät-Vorfall erreicht den Versanddienst selbst. Seine primäre Route kann jederzeit ausfallen; Tick; Die Sekundärseite akzeptiert möglicherweise erst nach einem echten Warm-Complete-Signal Datenverkehr. Eine wiederhergestellte primäre Route wird wieder bevorzugt, es darf jedoch keine Anfrage auf beiden Routen dupliziert werden.",
+      "protected": [
+        "PULSE"
+      ],
+      "submission": "Senden Sie einen begrenzten PULSE-Controller, der jede Anfrage an den primären Controller weiterleitet, wenn dieser aktiv ist, andernfalls an einen aufgewärmten sekundären Controller und nirgendwo, wenn beide Optionen unsicher sind.",
+      "title": "Warmer Failover"
+    },
+    "PULSE.009": {
+      "diagnostics": "Das umfassende Orakel unterscheidet zwischen doppelter Ausführung, routenlokalem Speicher, vergessenem Fehler, vergessener Wiederherstellung, operationsübergreifender Zusammenführung und Ersetzung der ersten Nutzlast.",
+      "hints": [
+        "Denken Sie an logische Operationen, nicht an Transportwege.",
+        "Verfügbarkeitsänderungen; Fertigstellungsgrabsteine ​​tun dies nicht.",
+        "A und B erfordern einen unabhängigen Zustand."
+      ],
+      "premise": "Der reparierte Ring nimmt Anfragen über beide Versandwege entgegen. Wiederholungsversuche der logischen Operationen A und B können einen primären Fehler und eine Wiederherstellung überbrücken und das Echomuster reproduzieren, das SHADOW-7 erreicht hat. Eine routenlokale Deduplizierung würde dieselbe Rettung zweimal durchführen.",
+      "protected": [],
+      "submission": "Senden Sie einen begrenzten Controller, der das erste Vorkommen von A und B auf der Route zu diesem Zeitpunkt live ausgibt und jedes spätere Vorkommen über alle Failover-Übergänge hinweg unterdrückt.",
+      "title": "Genau einmal"
+    },
+    "PULSE.010": {
+      "diagnostics": "Das umfassende Orakel erfasst Fristen des letzten Autors, relative versus absolute Verwirrung, veraltete Timer, doppelte Abläufe, verpasste Stapel nach dem Ablauf und Fehler bei der gleichen Tick-Phase.",
+      "hints": [
+        "Vergleichen Sie absolute Zeiten, nicht Kanalbezeichnungen.",
+        "Ein Timer mit Schlüssel kann durch Austausch früher eingestellt werden.",
+        "Externe Signale bei Ablauf Tick werden vor dem Timer verarbeitet."
+      ],
+      "premise": "Signierte Zuleitung-Beweise und räumliche Rekonstruktion kommen über zwei Kanäle mit unterschiedlichen Reaktionsmöglichkeiten an. Kanal A gewährt drei Ticks; Kanal B gewährt zwei. Jedes Signal schließt sich dem aktuellen Batch an, dessen öffentliche Verpflichtung der früheste absolute Termin ist.",
+      "protected": [],
+      "submission": "Senden Sie einen begrenzten Controller, der die minimale Live-Frist einhält, spätere Timer ersetzt, einmal ausgelöst wird und erst nach Ablauf einen neuen Batch startet.",
+      "title": "Gemeinsame Frist"
+    },
+    "PULSE.011": {
+      "diagnostics": "Das umfassende Orakel deckt 792-begrenzte Streams ab und isoliert Fixed-Bucket-Resets, Inclusive-Boundary-Fehler, Same-Tick-Zusammenbruch und Ghost-Debits aus abgelehnten Anfragen.",
+      "hints": [
+        "Denken Sie an die Einlasszeiten, nicht an die Ankunftszeiten.",
+        "Bei Tick t+3 ist eine Zulassung von Tick t abgelaufen.",
+        "Eine abgelehnte Anfrage darf keinen der gespeicherten Zeitstempel verschieben."
+      ],
+      "premise": "Der Oberflächenbypass ist sicher, aber seine thermische Hülle von drei Tick lässt höchstens zwei zugelassene Schaltanforderungen zu. Dies ist kein nachfüllbarer Token-Bucket: Das Budget wird nur zurückgegeben, wenn eine tatsächlich zugelassene Anfrage das bewegliche Fenster verlässt. Gleichzeitige Anforderungen belegen unterschiedliche Slots in der Reihenfolge der EventIds.",
+      "protected": [
+        "3",
+        "792"
+      ],
+      "submission": "Senden Sie einen begrenzten Controller für das genaue halboffene Fenster (t-3,t], Kapazität zwei, wobei jede zugelassene Anforderungsnutzlast erhalten bleibt und abgelehnte Arbeit niemals berechnet wird.",
+      "title": "Burst-Budget"
+    },
+    "PULSE.012": {
+      "diagnostics": "Das umfassende Orakel deckt die eindeutigen begrenzten Streams 1,457 ab, einschließlich gleicher Tick kanonisch-Reihenfolge, leerer Präfixe, später Null und Multi-Item-Drains. Es lehnt die Weiterleitung von Ankunftsaufträgen und Entleerungen nur für einen Artikel ab.",
+      "hints": [
+        "Verfolgen Sie die Ankunft getrennt von der Freigabe.",
+        "Der nächste erwartete Index bewegt sich nur vorwärts.",
+        "Ein Ereignis kann durchaus mehrere Ausgaben verursachen."
+      ],
+      "premise": "Das Korrekturarchiv erreicht die Anhörung außer Betrieb. Ein späteres Fragment mag authentisch und früh sein, aber die Veröffentlichung vor jedem niedrigeren Index würde das Fehlen in eine erzählerische Wahl verwandeln. Der begrenzte Stream enthält jeden Index höchstens einmal; Schweigen ist keine Erlaubnis zum Überspringen.",
+      "protected": [
+        "0",
+        "1",
+        "3",
+        "457"
+      ],
+      "submission": "Senden Sie einen Fünf-Zellen-Controller, der die Indizes 0–3 puffert und ein kanonisch-Freigabetoken für jeden neu zusammenhängenden Index ausgibt, wobei das vollständige Präfix beim Eintreffen Tick entleert wird, das die Lücke schließt.",
+      "title": "Reihenfolgepuffer"
+    },
+    "PULSE.013": {
+      "diagnostics": "Das umfassende Orakel deckt 3,478 begrenzte Befehlsströme ab und trennt fortlaufende Fehlerstreifen, Abklingzeitgrenzen, halboffene Singleton-Prüfungen, Prüffehler und Wiederherstellung.",
+      "hints": [
+        "Die Öffnungszeit ist nur dann wichtig, wenn sie geöffnet ist.",
+        "Eine Untersuchung ist ein Zustandsübergang, keine gewöhnliche Aufnahme.",
+        "Erfolg, bevor eine Sonde eine geschlossene Fehlerserie zurücksetzt, einen bereits offenen Stromkreis jedoch nicht schließen kann."
+      ],
+      "premise": "Die Veröffentlichung der Korrektur löst eine Welle von Anhörungsanfragen gegen einen instabilen Archivdienst aus. Zwei aufeinanderfolgende Fehler müssen den Stromkreis öffnen. Stille während der Abklingzeit ist beabsichtigt; Nach genau zwei Ticks darf nur eine Anfrage das Archiv durchsuchen, bis das Problem durch einen tatsächlichen Erfolg oder Misserfolg behoben wird.",
+      "protected": [
+        "3",
+        "478"
+      ],
+      "submission": "Senden Sie einen geschlossenen/offenen/halboffenen Controller mit drei Zellen. Behalten Sie zugelassene Anforderungsnutzlasten bei, setzen Sie Fehlerstreifen im geschlossenen Zustand bei Erfolg zurück und lassen Sie niemals eine zweite halboffene Anforderung zu.",
+      "title": "Leistungsschalter"
+    },
+    "PULSE.014": {
+      "diagnostics": "Der Prüfer erschöpft jeden kanonisch-Strom von bis zu sechs Signalen über drei Ticks, einschließlich gleicher Tick-Permutationen, Duplikate, unvollständige Runden und zwei vollständige Runden.",
+      "hints": [
+        "Dies ist eine Barriere mit Erinnerung an Epochen, kein einmaliges Quorum.",
+        "Wird erst zurückgesetzt, nachdem die Ausgabe ausgegeben wurde.",
+        "Ein Duplikat nach Fertigstellung gehört in die nächste Runde."
+      ],
+      "premise": "Der Wiederaufbau, die Kontrolle und die öffentliche Ordnung schreiten jeweils auf eigene Faust voran. Eine Stadt Tick existiert erst, wenn alle drei die gleiche logische Grenze überschritten haben. Die Uhr muss so weitermachen: Eine einmalige Barriere würde den ersten Morgen für immer einfrieren.",
+      "protected": [],
+      "submission": "Bauen Sie eine deterministische zyklische Barriere auf. Führen Sie doppelte Quellen innerhalb einer Runde zusammen, senden Sie genau einmal aus, wenn die dritte eindeutige Quelle eintrifft, und setzen Sie sie dann atomar zurück, sodass das nächste Signal eine neue Runde beginnt.",
+      "title": "Stadtuhr"
+    }
+  },
+  "format": "afterimage-locale-pack/0.1",
+  "locale": "de",
+  "ui": {
+    "answer_schema": "Antwortschema:",
+    "branch": "Branch={branch} Projektion={projection} Trace={trace}",
+    "canonicalized": "Kanonisches JSON: {bytes} Bytes, sha256={sha256}",
+    "case_score": "  {case}: {score}/{nominal}  Metriken={metrics}",
+    "diagnostics_heading": "Diagnose",
+    "hint": "{case} Hinweis {level}: {hint}",
+    "hints_heading": "Hinweise",
+    "invalid": "UNGÜLTIG {case}  {code}: {message}",
+    "none": "keine",
+    "points": "{points} Punkte",
+    "score": "Punktzahl {total} (Nennwert gelöst {nominal_solved}/{nominal_total})",
+    "solved": "Gelöst {solved}/{total}: {cases}",
+    "submission_heading": "Einreichung",
+    "valid": "GÜLTIG {case}  Punktzahl={score}/{nominal}",
+    "visible": "Sichtbar: {cases}"
+  }
+}

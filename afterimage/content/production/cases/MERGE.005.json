@@ -1,0 +1,65 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.005",
+    "family": "MERGE",
+    "title": "Split Brain",
+    "points": 100,
+    "reference_scale": 60000,
+    "requires": {"all": ["case:MERGE.004"]},
+    "projection": "merge.split-brain",
+    "validator_template": "merge-split-certificate-claim/0.1",
+    "merge_contract": {"task": "split-brain", "component_field": "component", "writer_field": "writer"},
+    "author_answer": {
+      "accepted": [
+        {"key": "E1", "at": 5},
+        {"key": "E2", "at": 7},
+        {"key": "E3", "at": 11}
+      ],
+      "rejected": [
+        {"key": "W1", "reason": "conflict_set"},
+        {"key": "W2", "reason": "conflict_set"}
+      ],
+      "certificate": [
+        {"before": "E1", "after": "E2", "minimum_gap": 1},
+        {"before": "E2", "after": "E3", "minimum_gap": 1}
+      ]
+    },
+    "metric_bounds": {"temporal_displacement": 24, "certificate_units": 20},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"label": "E1", "body": {"topic": "merge.record", "at": 5, "payload": {"key": "E1", "local_time": 105, "offset_min": 99, "offset_max": 101, "source": "evacuation-order", "sequence": 1, "weight": 8, "component": "last-train-12", "writer": "east", "kind": "platform-reserved", "decision": "rail"}, "parents": [], "origin": {"kind": "base", "source": "dispatch-east", "sequence": 1}}},
+    {"label": "E2", "body": {"topic": "merge.record", "at": 7, "payload": {"key": "E2", "local_time": 207, "offset_min": 199, "offset_max": 201, "source": "evacuation-order", "sequence": 3, "weight": 8, "component": "last-train-12", "writer": "east", "kind": "last-train-released", "decision": "rail"}, "parents": ["@E1"], "origin": {"kind": "base", "source": "dispatch-east", "sequence": 2}}},
+    {"label": "E3", "body": {"topic": "merge.record", "at": 11, "payload": {"key": "E3", "local_time": 11, "offset_min": -1, "offset_max": 1, "source": "station-audit", "sequence": 1, "weight": 9, "component": "last-train-12", "writer": "east", "kind": "train-cleared", "decision": "rail"}, "parents": ["@E2"], "origin": {"kind": "base", "source": "station-audit", "sequence": 1}}},
+    {"label": "W1", "body": {"topic": "merge.record", "at": 8, "payload": {"key": "W1", "local_time": 308, "offset_min": 299, "offset_max": 301, "source": "evacuation-order", "sequence": 2, "weight": 1, "component": "last-train-12", "writer": "west", "kind": "rail-cancelled", "decision": "bus"}, "parents": [], "origin": {"kind": "base", "source": "dispatch-west", "sequence": 1}}},
+    {"label": "W2", "body": {"topic": "merge.record", "at": 10, "payload": {"key": "W2", "local_time": -40, "offset_min": -51, "offset_max": -49, "source": "evacuation-order", "sequence": 4, "weight": 1, "component": "last-train-12", "writer": "west", "kind": "bus-bridge-released", "decision": "bus"}, "parents": ["@W1"], "origin": {"kind": "base", "source": "dispatch-west", "sequence": 2}}}
+  ],
+  "rules": [],
+  "projection": {"id": "merge.split-brain", "rows": [{"positive": [{"alias": "r", "topic": "merge.record", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map",
+    "event", ["get", "r", "/id"],
+    "key", ["get", "r", "/payload/key"],
+    "source", ["get", "r", "/payload/source"],
+    "sequence", ["get", "r", "/payload/sequence"],
+    "local_time", ["get", "r", "/payload/local_time"],
+    "offset_min", ["get", "r", "/payload/offset_min"],
+    "offset_max", ["get", "r", "/payload/offset_max"],
+    "weight", ["get", "r", "/payload/weight"],
+    "component", ["get", "r", "/payload/component"],
+    "writer", ["get", "r", "/payload/writer"],
+    "kind", ["get", "r", "/payload/kind"],
+    "decision", ["get", "r", "/payload/decision"],
+    "parents", ["get", "r", "/parents"]
+  ], "sort": [["get", "r", "/payload/source"], ["get", "r", "/payload/sequence"], ["get", "r", "/payload/key"]]}]},
+  "worked_value": {"selected_writer": "east", "rejected_writer": "west", "critical_order": ["E1", "W1", "E2"], "note": "The nominal source sequence requires E1 < W1 < E2, but W1's entire clock interval begins after E2's. A writer branch is indivisible evidence, so the lower-confidence west branch is rejected as one conflict component."},
+  "story": {
+    "premise": "When the last train cleared, the partitioned dispatch cluster reconnected with two internally coherent journals. East records a rail release and station clearance. West records a rail cancellation and bus release. Both claim positions in the same evacuation-order stream, but the merged clock intervals cannot serialize them. Select one complete writer branch; do not splice convenient lines from both.",
+    "submission": "Classify every record, assign times to one complete writer branch, reject every record of the losing writer as one conflict component, and submit the exact active causal certificate.",
+    "diagnostics": "The verifier separately checks branch atomicity, interval and source order, exact certificate coverage, and whether the rejected writer really makes the combined component infeasible. A partial writer is never accepted as a synthetic third history.",
+    "hints": ["Within one nominal source, sequence order needs at least one global tick even across replicas.", "Compare west sequence 2 with east sequences 1 and 3 before looking at the later receipt.", "Both whole branches are reconstructible alone. Retaining the station receipt costs less evidence than discarding it with the east branch."]
+  }
+}

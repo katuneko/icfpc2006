@@ -1,0 +1,91 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.002",
+    "family": "CASCADE",
+    "title": "Dry Hydrant",
+    "points": 100,
+    "reference_scale": 1200000,
+    "requires": {"all": ["case:CASCADE.001"], "at_least": {"count": 1, "of": ["case:MERGE.001", "case:PULSE.001"]}},
+    "projection": "incident.dry-hydrant",
+    "validator_template": "cascade-multi-contract-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": ["retime", "suppress", "inject"],
+      "max_operations": 2,
+      "weights": {"retime": 1, "suppress": 50, "inject": 20},
+      "topics": ["water.pressure-sample", "water.maintenance", "water.pump-dispatch", "water.valve-close"],
+      "pointers": [],
+      "retime": {"minimum": 8, "maximum": 15}
+    },
+    "author_operations": [
+      {"kind": "retime", "target_topic": "water.pressure-sample", "at": 10},
+      {"kind": "retime", "target_topic": "water.maintenance", "at": 11}
+    ],
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 128, "witness_units": 128},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 64, "max_bindings_tested": 8192, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 32, "max_bindings_tested": 8192, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "water.network", "at": 0, "payload": {"reservoir": "R-2", "pump": "P-4", "trunk": "T-1", "branch": "B-7", "hydrant": "H-9"}, "parents": [], "origin": {"kind": "base", "source": "water-map", "sequence": 1}},
+    {"topic": "water.pressure-sample", "at": 15, "payload": {"hydrant": "H-9", "pressure": 35, "recovered_pressure": 55, "source_at": 8, "ingestion_at": 15, "calibration_min": 8, "calibration_max": 15, "evidence": "sample-441"}, "parents": [], "origin": {"kind": "base", "source": "pressure-buffer", "sequence": 441}},
+    {"topic": "water.maintenance", "at": 12, "payload": {"trunk": "T-1", "duration": 5, "window_end": 20}, "parents": [], "origin": {"kind": "base", "source": "maintenance-board", "sequence": 18}},
+    {"topic": "water.fire-demand", "at": 16, "payload": {"hydrant": "H-9", "minimum_pressure": 50, "flow": 30, "pipe_capacity": 60, "energy_budget": 40}, "parents": [], "origin": {"kind": "base", "source": "dispatch", "sequence": 27}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "water.01-unassisted-state", "positive": [
+      {"alias": "n", "topic": "water.network", "where": ["const", true]},
+      {"alias": "s", "topic": "water.pressure-sample", "where": ["eq", ["get", "s", "/payload/hydrant"], ["get", "n", "/payload/hydrant"]]},
+      {"alias": "m", "topic": "water.maintenance", "where": ["eq", ["get", "m", "/payload/trunk"], ["get", "n", "/payload/trunk"]]},
+      {"alias": "d", "topic": "water.fire-demand", "where": ["eq", ["get", "d", "/payload/hydrant"], ["get", "n", "/payload/hydrant"]]}
+    ], "negative": [
+      {"alias": "p", "topic": "water.pump-dispatch", "where": ["const", true]},
+      {"alias": "v", "topic": "water.valve-close", "where": ["const", true]}
+    ], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "water.flow-state"], "at": ["get", "d", "/at"], "payload": ["map",
+      "pressure", ["if", ["lt", ["get", "s", "/at"], ["get", "m", "/at"]], ["get", "s", "/payload/recovered_pressure"], ["get", "s", "/payload/pressure"]],
+      "route_available", ["le", ["add", ["get", "m", "/at"], ["get", "m", "/payload/duration"]], ["get", "d", "/at"]],
+      "flow", ["get", "d", "/payload/flow"], "pump_energy", ["const", 0],
+      "maintenance_complete", ["add", ["get", "m", "/at"], ["get", "m", "/payload/duration"]], "maintenance_window_end", ["get", "m", "/payload/window_end"],
+      "source_at", ["get", "s", "/payload/source_at"], "ingestion_at", ["get", "s", "/payload/ingestion_at"], "evidence", ["get", "s", "/payload/evidence"]
+    ], "parents": []}] }},
+    {"stratum": 0, "rule": {"id": "water.02-assisted-state", "positive": [
+      {"alias": "n", "topic": "water.network", "where": ["const", true]},
+      {"alias": "s", "topic": "water.pressure-sample", "where": ["eq", ["get", "s", "/payload/hydrant"], ["get", "n", "/payload/hydrant"]]},
+      {"alias": "m", "topic": "water.maintenance", "where": ["eq", ["get", "m", "/payload/trunk"], ["get", "n", "/payload/trunk"]]},
+      {"alias": "d", "topic": "water.fire-demand", "where": ["eq", ["get", "d", "/payload/hydrant"], ["get", "n", "/payload/hydrant"]]},
+      {"alias": "p", "topic": "water.pump-dispatch", "where": ["const", true]}
+    ], "negative": [{"alias": "v", "topic": "water.valve-close", "where": ["const", true]}], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "water.flow-state"], "at": ["get", "d", "/at"], "payload": ["map",
+      "pressure", ["add", ["if", ["lt", ["get", "s", "/at"], ["get", "m", "/at"]], ["get", "s", "/payload/recovered_pressure"], ["get", "s", "/payload/pressure"]], ["get", "p", "/payload/boost"]],
+      "route_available", ["const", true], "flow", ["add", ["get", "d", "/payload/flow"], ["get", "p", "/payload/boost"]], "pump_energy", ["get", "p", "/payload/energy"],
+      "maintenance_complete", ["add", ["get", "m", "/at"], ["get", "m", "/payload/duration"]], "maintenance_window_end", ["get", "m", "/payload/window_end"],
+      "source_at", ["get", "s", "/payload/source_at"], "ingestion_at", ["get", "s", "/payload/ingestion_at"], "evidence", ["get", "s", "/payload/evidence"]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "water.03-contract-summary", "positive": [
+      {"alias": "f", "topic": "water.flow-state", "where": ["const", true]},
+      {"alias": "d", "topic": "water.fire-demand", "where": ["const", true]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "d", "/at"], "payload": ["map",
+      "safe", ["and", ["ge", ["get", "f", "/payload/pressure"], ["get", "d", "/payload/minimum_pressure"]], ["and", ["get", "f", "/payload/route_available"], ["and", ["le", ["get", "f", "/payload/flow"], ["get", "d", "/payload/pipe_capacity"]], ["and", ["le", ["get", "f", "/payload/maintenance_complete"], ["get", "f", "/payload/maintenance_window_end"]], ["le", ["get", "f", "/payload/pump_energy"], ["get", "d", "/payload/energy_budget"]]]]]],
+      "pressure", ["get", "f", "/payload/pressure"], "minimum_pressure", ["get", "d", "/payload/minimum_pressure"],
+      "route_available", ["get", "f", "/payload/route_available"], "flow", ["get", "f", "/payload/flow"], "pipe_capacity", ["get", "d", "/payload/pipe_capacity"],
+      "evidence_retained", ["const", true], "maintenance_complete", ["get", "f", "/payload/maintenance_complete"], "maintenance_window_end", ["get", "f", "/payload/maintenance_window_end"],
+      "pump_energy", ["get", "f", "/payload/pump_energy"], "energy_budget", ["get", "d", "/payload/energy_budget"], "source_at", ["get", "f", "/payload/source_at"], "ingestion_at", ["get", "f", "/payload/ingestion_at"]
+    ], "parents": []}] }},
+    {"stratum": 2, "rule": {"id": "water.04-first-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map",
+      "code", ["if", ["lt", ["get", "s", "/payload/pressure"], ["get", "s", "/payload/minimum_pressure"]], ["const", "pressure_below_minimum"], ["const", "route_unavailable"]],
+      "path", ["list", ["const", "R-2"], ["const", "P-4"], ["const", "T-1"], ["const", "B-7"], ["const", "H-9"]], "source_at", ["get", "s", "/payload/source_at"], "ingestion_at", ["get", "s", "/payload/ingestion_at"]
+    ], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.dry-hydrant", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"contracts": [{"safe": false, "pressure": 35, "minimum_pressure": 50}], "note": "shape example only"},
+  "story": {
+    "premise": "A buffered pressure sample appears immediately before a fire call. Closing the upstream valve looks locally safe, but it removes the only usable hydrant route.",
+    "submission": "Submit up to two authorized interventions plus the independently replayed pressure, route, capacity, evidence, maintenance, and energy certificate.",
+    "diagnostics": "The first failed bound includes the responsible reservoir-to-hydrant path and both source and ingestion timestamps.",
+    "hints": ["Compare source time with ingestion time.", "The low reading can describe pressure before maintenance rather than after it.", "Preserve the evidence and repair its causal placement before adding supply."]
+  }
+}
