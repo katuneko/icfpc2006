@@ -1,0 +1,82 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MOSAIC.004",
+    "family": "MOSAIC",
+    "title": "Missing Tile",
+    "points": 100,
+    "reference_scale": 500000,
+    "requires": {"all": ["case:MOSAIC.003", "case:CASCADE.010"]},
+    "projection": "mosaic.missing-tile",
+    "validator_template": "mosaic-graph-claim/0.1",
+    "author_answer": {
+      "global": {
+        "vertices": [
+          {"id": "v0", "x": 0, "y": 0}, {"id": "v1", "x": 1, "y": 0}, {"id": "v2", "x": 2, "y": 0},
+          {"id": "v3", "x": 0, "y": 1}, {"id": "v4", "x": 1, "y": 1}, {"id": "v5", "x": 2, "y": 1},
+          {"id": "v6", "x": 0, "y": 2}, {"id": "v7", "x": 1, "y": 2}, {"id": "v8", "x": 2, "y": 2}
+        ],
+        "edges": [
+          {"a": "v0", "b": "v1", "material": "h-00-01", "level": "1"}, {"a": "v0", "b": "v3", "material": "v-00-03", "level": "0"},
+          {"a": "v1", "b": "v2", "material": "h-01-02", "level": "0"}, {"a": "v1", "b": "v4", "material": "v-01-04", "level": "2"},
+          {"a": "v2", "b": "v5", "material": "v-02-05", "level": "1"}, {"a": "v3", "b": "v4", "material": "h-03-04", "level": "1"},
+          {"a": "v3", "b": "v6", "material": "v-03-06", "level": "0"}, {"a": "v4", "b": "v5", "material": "h-04-05", "level": "0"},
+          {"a": "v4", "b": "v7", "material": "v-04-07", "level": "2"}, {"a": "v5", "b": "v8", "material": "v-05-08", "level": "1"},
+          {"a": "v6", "b": "v7", "material": "h-06-07", "level": "1"}, {"a": "v7", "b": "v8", "material": "h-07-08", "level": "0"}
+        ]
+      },
+      "used": [
+        {"fragment": "F-RING-A", "transform": "r0", "mapping": [
+          {"local": "a0", "global": "v0"}, {"local": "a1", "global": "v1"}, {"local": "a2", "global": "v2"},
+          {"local": "a3", "global": "v3"}, {"local": "a6", "global": "v6"}, {"local": "a7", "global": "v7"}
+        ]},
+        {"fragment": "F-RING-B", "transform": "r180", "mapping": [
+          {"local": "b1", "global": "v1"}, {"local": "b2", "global": "v2"}, {"local": "b5", "global": "v5"},
+          {"local": "b6", "global": "v6"}, {"local": "b7", "global": "v7"}, {"local": "b8", "global": "v8"}
+        ]}
+      ],
+      "unused": [],
+      "missing": {
+        "vertices": ["v4"],
+        "edges": [
+          {"a": "v1", "b": "v4"}, {"a": "v3", "b": "v4"},
+          {"a": "v4", "b": "v5"}, {"a": "v4", "b": "v7"}
+        ]
+      }
+    },
+    "mosaic_contract": {"width": 3, "height": 3, "completion": {"max_missing_vertices": 1, "max_missing_edges": 4, "edge_checksum": "coordinate-v1"}},
+    "metric_bounds": {"graph_size": 64, "certificate_units": 64},
+    "limits": {
+      "max_witness_bytes": 262144,
+      "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 16},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "mosaic.fragment", "at": 1, "payload": {"id": "F-RING-A", "weight": 9, "vertices": [
+      {"name": "a0", "x": 0, "y": 0}, {"name": "a1", "x": 1, "y": 0}, {"name": "a2", "x": 2, "y": 0},
+      {"name": "a3", "x": 0, "y": 1}, {"name": "a6", "x": 0, "y": 2}, {"name": "a7", "x": 1, "y": 2}
+    ], "edges": [
+      {"a": "a0", "b": "a1", "material": "h-00-01", "level": "1"}, {"a": "a1", "b": "a2", "material": "h-01-02", "level": "0"},
+      {"a": "a0", "b": "a3", "material": "v-00-03", "level": "0"}, {"a": "a3", "b": "a6", "material": "v-03-06", "level": "0"},
+      {"a": "a6", "b": "a7", "material": "h-06-07", "level": "1"}
+    ]}, "parents": [], "origin": {"kind": "base", "source": "hospital-survey-a", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 2, "payload": {"id": "F-RING-B", "weight": 9, "vertices": [
+      {"name": "b1", "x": 1, "y": 2}, {"name": "b2", "x": 0, "y": 2}, {"name": "b5", "x": 0, "y": 1},
+      {"name": "b6", "x": 2, "y": 0}, {"name": "b7", "x": 1, "y": 0}, {"name": "b8", "x": 0, "y": 0}
+    ], "edges": [
+      {"a": "b1", "b": "b2", "material": "h-01-02", "level": "0"}, {"a": "b2", "b": "b5", "material": "v-02-05", "level": "1"},
+      {"a": "b5", "b": "b8", "material": "v-05-08", "level": "1"}, {"a": "b6", "b": "b7", "material": "h-06-07", "level": "1"},
+      {"a": "b7", "b": "b8", "material": "h-07-08", "level": "0"}
+    ]}, "parents": [], "origin": {"kind": "base", "source": "hospital-survey-b", "sequence": 1}}
+  ],
+  "rules": [],
+  "projection": {"id": "mosaic.missing-tile", "rows": [{"positive": [{"alias": "f", "topic": "mosaic.fragment", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "f", "/payload"], "sort": [["get", "f", "/payload/id"]]}]},
+  "worked_value": {"missing_vertex": "v4", "missing_edges": [["v1", "v4"], ["v3", "v4"], ["v4", "v5"], ["v4", "v7"]], "checksum": "material = axis-minIndex-maxIndex; level = (minIndex + maxIndex) mod 3", "note": "The two ring surveys cover every perimeter conduit. Only the interior junction and its four incident conduits may be inferred, and their attributes are fixed by the published coordinate checksum."},
+  "story": {
+    "premise": "The hospital's cooling blueprint arrives as two overlapping ring surveys, but the central manifold tile was never scanned. Every recorded conduit carries the facility's public coordinate checksum: material is `axis-minIndex-maxIndex`, and level is the endpoint-index sum modulo three. Reconstruct the canonical grid and state exactly which interior evidence is inferred rather than observed.",
+    "submission": "Submit the complete canonical attributed graph, both D4 mappings, and a canonical missing-tile certificate naming the one uncovered vertex and every uncovered incident edge. No observed perimeter edge may be called missing.",
+    "diagnostics": "Graph shape, D4 canonicality, coordinate checksum, fragment embeddings, and hole coverage fail independently. A plausible but unsupported edge label is rejected before the omission certificate is considered.",
+    "hints": ["Assemble the two surveys into one perimeter before filling the center.", "The only legal hole is an interior vertex; all and only its incident edges may be inferred.", "Compute the four missing edge attributes from their canonical endpoint indices, then compare all D4 encodings as before."]
+  }
+}

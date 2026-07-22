@@ -1,0 +1,53 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.015", "family": "MERGE", "title": "The Reconstruction", "points": 140,
+    "reference_scale": 1250000,
+    "requires": {"all": ["case:MERGE.014", "case:CASCADE.022"]},
+    "projection": "merge.the-reconstruction",
+    "validator_template": "merge-partial-order-certificate-claim/0.1",
+    "merge_contract": {"task": "partial-order-archive", "maximum_certificate_edges": 6, "minimum_solutions": 4, "maximum_domain": 4, "selection": "lexicographic"},
+    "author_answer": {
+      "accepted": [
+        {"key": "A", "at": 10}, {"key": "B", "at": 11}, {"key": "C", "at": 11},
+        {"key": "D", "at": 13}, {"key": "E", "at": 14}, {"key": "F", "at": 15}
+      ],
+      "rejected": [],
+      "certificate": [
+        {"before": "A", "after": "B", "minimum_gap": 1},
+        {"before": "A", "after": "C", "minimum_gap": 1},
+        {"before": "B", "after": "D", "minimum_gap": 1},
+        {"before": "C", "after": "D", "minimum_gap": 1},
+        {"before": "D", "after": "E", "minimum_gap": 1},
+        {"before": "E", "after": "F", "minimum_gap": 1}
+      ]
+    },
+    "metric_bounds": {"temporal_displacement": 24, "certificate_units": 48},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 12, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"label": "A", "body": {"topic": "merge.record", "at": 10, "payload": {"key": "A", "local_time": 10, "offset_min": 0, "offset_max": 0, "source": "archive-root", "sequence": 1, "weight": 5, "fact": "continuity-opened"}, "parents": [], "origin": {"kind": "base", "source": "archive-root", "sequence": 1}}},
+    {"label": "B", "body": {"topic": "merge.record", "at": 12, "payload": {"key": "B", "local_time": 12, "offset_min": 0, "offset_max": 1, "source": "surface-ledger", "sequence": 1, "weight": 4, "fact": "surface-safe"}, "parents": ["@A"], "origin": {"kind": "base", "source": "surface-ledger", "sequence": 1}}},
+    {"label": "C", "body": {"topic": "merge.record", "at": 12, "payload": {"key": "C", "local_time": 12, "offset_min": 0, "offset_max": 1, "source": "underground-ledger", "sequence": 1, "weight": 4, "fact": "underground-safe"}, "parents": ["@A"], "origin": {"kind": "base", "source": "underground-ledger", "sequence": 1}}},
+    {"label": "D", "body": {"topic": "merge.record", "at": 13, "payload": {"key": "D", "local_time": 13, "offset_min": 0, "offset_max": 0, "source": "controller-audit", "sequence": 1, "weight": 5, "fact": "two-routes-retained"}, "parents": ["@B", "@A", "@C"], "origin": {"kind": "base", "source": "controller-audit", "sequence": 1}}},
+    {"label": "E", "body": {"topic": "merge.record", "at": 14, "payload": {"key": "E", "local_time": 14, "offset_min": 0, "offset_max": 0, "source": "hearing-clock", "sequence": 1, "weight": 5, "fact": "evidence-joined"}, "parents": ["@B", "@D", "@C"], "origin": {"kind": "base", "source": "hearing-clock", "sequence": 1}}},
+    {"label": "F", "body": {"topic": "merge.record", "at": 15, "payload": {"key": "F", "local_time": 15, "offset_min": 0, "offset_max": 0, "source": "public-archive", "sequence": 1, "weight": 5, "fact": "reconstruction-sealed"}, "parents": ["@A", "@D", "@E"], "origin": {"kind": "base", "source": "public-archive", "sequence": 1}}}
+  ],
+  "rules": [],
+  "projection": {"id": "merge.the-reconstruction", "rows": []},
+  "worked_value": {
+    "solutions": 4, "incomparable": [["B", "C"]],
+    "canonical": {"A": 10, "B": 11, "C": 11, "D": 13, "E": 14, "F": 15},
+    "note": "The citywide archive preserves four feasible schedules and one genuine B/C incomparability; six necessary edges prove every authentic parent relation without inventing an order between the routes."
+  },
+  "story": {
+    "premise": "Every district has finally sent its retained evidence. Surface and underground safety were established independently inside overlapping clock intervals; neither fact caused the other. The archive must join them without turning file order into history.",
+    "submission": "Retain all six records, choose the canonical representative of the four feasible schedules, and submit the smallest authentic partial-order certificate. Preserve the surface/underground pair as incomparable.",
+    "diagnostics": "The verifier enumerates the complete bounded schedule product, checks the canonical representative, proves every active edge by transitive closure, rejects redundant edges, and rejects a case with no genuine incomparability.",
+    "hints": ["A reconstruction can be complete without being totally ordered.", "The two route ledgers meet only at the controller audit.", "Compress reachability, not uncertainty."]
+  }
+}

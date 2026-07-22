@@ -1,0 +1,1124 @@
+{
+  "bundles": [
+    "sha256:517038cdd97cb7d3687f53272e8964a11ffcc1cca82cc69a73668bf56aea0514",
+    "sha256:6180c2ae6e0e2e6d024a5713fcf43e7c2f34ef40280dfb56515675cfecc4b11b"
+  ],
+  "cases": {
+    "CASCADE.001": {
+      "diagnostics": "The earliest failed contract is reported without suggesting an operation.",
+      "hints": [
+        "The overlap alarm is derived.",
+        "Move the request to the earliest allowed time.",
+        "Rerouting is valid but intentionally expensive."
+      ],
+      "premise": "A late pedestrian request overlaps the ambulance corridor. Change one authorized cause while preserving both services.",
+      "protected": [],
+      "submission": "Submit one intervention plus the independently replayed contract summary, branch, and projection digest.",
+      "title": "Late Green"
+    },
+    "CASCADE.002": {
+      "diagnostics": "The first failed bound includes the responsible reservoir-to-hydrant path and both source and ingestion timestamps.",
+      "hints": [
+        "Compare source time with ingestion time.",
+        "The low reading can describe pressure before maintenance rather than after it.",
+        "Preserve the evidence and repair its causal placement before adding supply."
+      ],
+      "premise": "A buffered pressure sample appears immediately before a fire call. Closing the upstream valve looks locally safe, but it removes the only usable hydrant route.",
+      "protected": [],
+      "submission": "Submit up to two authorized interventions plus the independently replayed pressure, route, capacity, evidence, maintenance, and energy certificate.",
+      "title": "Dry Hydrant"
+    },
+    "CASCADE.003": {
+      "diagnostics": "A leaking or wrong relay proof reports only its proof field; an incomplete route reports the missing active authorization without revealing private provenance.",
+      "hints": [
+        "Compare public rows with raw active topics.",
+        "The relay name v4-v7 appeared as the central MOSAIC corridor.",
+        "Hash the provenance; do not reproduce its restricted member."
+      ],
+      "premise": "The Desk calls a hospital evacuation impossible because its public view has no verified relay. Raw active state already contains an authorized v4-v7 corridor whose private provenance caused whole-event suppression.",
+      "protected": [
+        "v4-v7"
+      ],
+      "submission": "Submit an optional scoped intervention, the non-disclosing relay EventId/provenance digest, the exact public rows, and the active-route contract.",
+      "title": "Tomorrow, Redacted"
+    },
+    "CASCADE.004": {
+      "diagnostics": "A failed certificate reports the first physical bound and the sample's observation, ingestion, and controller-start times; it never names an intervention.",
+      "hints": [
+        "The heater reacts to event time, while the archive retains a different observation time.",
+        "Suppressing the sample removes the only occupancy evidence; emergency heat remains a valid but costly fallback.",
+        "Place the retained sample at the earliest authorized time that agrees with when it was observed."
+      ],
+      "premise": "After the restricted-relay finding, the Continuity Desk reopens an 'impossible' evacuation at Platform P-7. The capacity report blames weak heaters, but the retained occupancy sample says it observed seventy-two passengers at tick 9 and entered the control stream only at tick 18. Preserve service and evidence while repairing the smallest authorized cause.",
+      "protected": [
+        "9",
+        "P-7"
+      ],
+      "submission": "Submit exactly one authorized intervention plus the independently replayed temperature, service, energy, evidence, and timing contract summary.",
+      "title": "Cold Platform"
+    },
+    "CASCADE.005": {
+      "diagnostics": "A rejection identifies the first missed service deadline and reports both public and runtime first jobs, without recommending a queue operation.",
+      "hints": [
+        "Declared priority affects the dashboard; the lift itself is governed by grant time.",
+        "Deleting maintenance destroys a required service record, while an explicit priority boost is valid but expensive.",
+        "Move the low-priority grant just beyond the medical arrival; an equal tick still leaves the existing grant first."
+      ],
+      "premise": "The Cold Platform correction exposes a second mismatch in the same operations room. The public queue ranks a medical lift at priority 9 above lamp maintenance at priority 1, yet the executor honors a non-preemptive grant made two ticks earlier. Capacity is sufficient and both jobs must remain in the record; repair the smallest authorized cause.",
+      "protected": [
+        "1",
+        "9",
+        "non-preemptive"
+      ],
+      "submission": "Submit exactly one authorized intervention plus the replayed public/runtime order, both completion deadlines, evidence-retention flag, branch, and projection digest.",
+      "title": "Priority Queue"
+    },
+    "CASCADE.006": {
+      "diagnostics": "The earliest failed boundary is named with all four public times; external authorization identifiers remain visible, but their private upstream events do not appear in this local case.",
+      "hints": [
+        "The closure time is constrained from below twice and from above once.",
+        "Repairing only the treatment or only the closure leaves a different contract broken; a mobile barrier is a valid but costly replacement for both timings.",
+        "The planned treatment needs four ticks to become effective. Align that result with the first tick after the ambulance clears and before the bus arrives."
+      ],
+      "premise": "Once the Priority Queue report is accepted, the Desk admits that Road R-6 was handled as two unrelated alerts: brine planned for tick 11 entered the record at 14, while a closure was advanced to 13. The official summary blames a sudden freeze. Preserve both records and place treatment, ambulance access, closure crew safety, and the school-bus diversion in one consistent local timeline.",
+      "protected": [
+        "11",
+        "14",
+        "6",
+        "R-6"
+      ],
+      "submission": "Submit at most two authorized interventions plus the replayed treatment-effective, ambulance-clear, closure, and bus-arrival bounds with both evidence and external-authorization references retained.",
+      "title": "Black Ice"
+    },
+    "CASCADE.007": {
+      "diagnostics": "The first failed cross-system bound is reported with both public authorization references. No private event from the road or traffic offices is disclosed.",
+      "hints": [
+        "The pump is not broken; it receives whatever capacity remains after active feeder reservations.",
+        "A backup generator is valid but expensive. Suppressing a reservation destroys one of the services the report must preserve.",
+        "The road load lasts four ticks. Return it to the authorization time so it releases the feeder before the fire demand."
+      ],
+      "premise": "The two external authorization references retained in Black Ice now resolve. `grid-window-31` reserved feeder F-3 for road treatment while `traffic-priority-19` reserved the same feeder for signal priority. A fire pump on that feeder then produced only 35 units of pressure. Preserve all three services and repair the smallest shared cause.",
+      "protected": [
+        "19",
+        "3",
+        "31",
+        "35",
+        "F-3",
+        "grid-window-31",
+        "traffic-priority-19"
+      ],
+      "submission": "Submit exactly one authorized intervention plus the replayed water pressure, received pump power, feeder load/supply, road deadline, both authorization references, branch, and projection digest.",
+      "title": "Borrowed Pressure"
+    },
+    "CASCADE.008": {
+      "diagnostics": "The first failed bound distinguishes readiness from clinic curtailment and reports instantaneous values; aggregate daily energy is never accepted as a substitute.",
+      "hints": [
+        "The relevant resource is capacity at the crossing tick, not total energy over the outage.",
+        "A self-powered mobile signal is valid but expensive. Suppression removes required traffic evidence.",
+        "The capacitor needs three ticks. Return its charge to the authorized tick so it completes exactly when the crossing begins."
+      ],
+      "premise": "Feeder F-3 is no longer the only shared boundary. During an outage, Intersection I-12 islands onto microgrid MG-2 with a clinic refrigerator. The dashboard reports sufficient daily energy, yet a late signal-capacitor charge overlaps the clinic load exactly when an ambulance needs the crossing. Preserve both services and the evidence.",
+      "protected": [
+        "12",
+        "2",
+        "3",
+        "I-12",
+        "MG-2"
+      ],
+      "submission": "Submit exactly one authorized intervention plus signal readiness, clinic power, instantaneous load/capacity, crossing deadline, evidence-retention flags, branch, and projection digest.",
+      "title": "Island Signal"
+    },
+    "CASCADE.009": {
+      "diagnostics": "The first failed temporal or capacity bound is reported with public times. A feasible departure that precedes boarding, uses unauthorized ventilation, or misses the far bridge is not accepted as a partial rescue.",
+      "hints": [
+        "The train has exactly one departure tick between completed boarding and expired traction reserve.",
+        "Ventilation takes four ticks and may not start before its signed authorization.",
+        "A self-powered bus bridge can meet the same passenger deadline in one expensive operation; it does not improve the rail explanation."
+      ],
+      "premise": "The repaired island signal delivers 180 evacuees to Harbor-4, where Continuity's record says the last train departs after traction reserve expires and reaches the bridge after service closes. Sending it earlier is not enough: tunnel ventilation cannot begin before its signed order, boarding must finish, and the clinic and ventilation loads must have released the islanded grid.",
+      "protected": [
+        "180",
+        "4",
+        "Harbor",
+        "Harbor-4"
+      ],
+      "submission": "Submit up to two authorized interventions plus the full evacuation contract: boarding, ventilation authorization/readiness, departure, traction expiry, arrival, bridge deadline, instantaneous load, evidence retention, branch, and projection digest.",
+      "title": "Last Train Through"
+    },
+    "CASCADE.010": {
+      "diagnostics": "Thermal failure, grid overload, and window timing are reported independently. Values above pipe saturation remain electrically expensive even when they do not improve cooling.",
+      "hints": [
+        "Solve the temperature lower bound on flow first.",
+        "Then solve the grid upper bound on the commanded flow; pipe saturation does not cap pump demand.",
+        "A self-powered portable chiller works only if deployed at the opening tick, but it is a costly explanation."
+      ],
+      "premise": "The last train releases traction reserve to the hospital island, but the surgery ward still warms to twelve degrees. The fixed cooling pipe removes two degrees per unit of flow and saturates at five. Pump draw is base two plus commanded flow, alongside two units of essential load on a nine-unit grid. Correct the retained command without fabricating unlimited power or coolant.",
+      "protected": [],
+      "submission": "Submit exactly one authorized replacement or portable-chiller intervention plus flow, effective flow, final temperature, load/capacity, timing, evidence retention, branch, and projection digest.",
+      "title": "Cooling Window"
+    },
+    "CASCADE.011": {
+      "diagnostics": "Opening before the observed wind boundary and completing after ambulance arrival are distinct failures. The ferry is valid only at the ambulance tick and is deliberately expensive.",
+      "hints": [
+        "The command cannot precede tick 8.",
+        "The bridge must be fully open by tick 10, and opening consumes two ticks.",
+        "Check every authorized retime from 6 through 9; the two inequalities meet at one tick."
+      ],
+      "premise": "The repaired cooling loop keeps surgery viable, but its ambulance is stranded behind drawbridge B-17. The retained controller command begins opening at tick 6, two ticks before the north anemometer reaches the published wind limit. Opening takes two ticks and the ambulance reaches the bridge at tick 10. Preserve both the wind evidence and emergency access without pretending the bridge moves instantly.",
+      "protected": [
+        "10",
+        "6",
+        "9",
+        "B-17",
+        "emergency-ferry"
+      ],
+      "submission": "Submit one authorized retime or emergency-ferry intervention plus the independent safety summary, branch, and projection digest.",
+      "title": "The Open Bridge"
+    },
+    "CASCADE.012": {
+      "diagnostics": "Wind floor, mechanical readiness, interdepartmental handoff, and public departure deadline are checked independently.",
+      "hints": [
+        "Start from the hospital deadline and reason backward.",
+        "Traffic must be at least one tick before departure.",
+        "Bridge Control must be at least two ticks before Traffic and no earlier than tick 8."
+      ],
+      "premise": "The bridge incident is no longer one controller's problem. Bridge Control may act only after the measured wind boundary, Traffic may release the route only after the two-tick opening completes, and Hospital Dispatch must depart one tick after that release but no later than the published timetable. All three retained logs are early.",
+      "protected": [],
+      "submission": "Submit exactly the authorized retimes needed to make the independent contract summary safe without replacing any department's evidence.",
+      "title": "Three Departments"
+    },
+    "CASCADE.013": {
+      "diagnostics": "The verifier separates a setting that is safe only under the optimistic hidden value from one that overloads the feeder.",
+      "hints": [
+        "Do not guess the missing reading.",
+        "Safety must hold at the upper end of the calibration envelope.",
+        "The feeder supplies no slack beyond four."
+      ],
+      "premise": "Hours after the public timetable goes live, river gauge RIVER-4 stops transmitting. Its last bench certificate bounds the unseen demand between three and four reserve units; the shared feeder can supply at most four. Continuity must choose one retained controller setting before the actual level can be observed.",
+      "protected": [
+        "4",
+        "RIVER-4"
+      ],
+      "submission": "Replace only the reserve field with one value safe for every gauge value in the public calibration envelope and within the feeder limit.",
+      "title": "Silent Gauge"
+    },
+    "CASCADE.014": {
+      "diagnostics": "The replay exposes under-allocation, a promise that fails in the hidden low-capacity world, and train overbooking as the same public contract failure with separate retained evidence.",
+      "hints": [
+        "Plan against the bus envelope's lower endpoint.",
+        "The two commitments must sum to exactly seventy.",
+        "The train limit and the robust bus limit leave no slack."
+      ],
+      "premise": "The dispatch covenant calls a relief vehicle absent from every public fleet list. Axle and fuel traces prove that SHADOW-7 can carry between eighteen and twenty-two people, but its exact fit remains hidden. Seventy evacuees must be split with a relief train certified for at most fifty-two.",
+      "protected": [
+        "7",
+        "SHADOW-7"
+      ],
+      "submission": "Replace both commitments with one allocation that carries everyone and remains feasible for every capacity allowed by the shadow bus envelope.",
+      "title": "Shadow Bus"
+    },
+    "CASCADE.015": {
+      "diagnostics": "The checker independently replays active state, the public projection, and the provenance digest while reporting only which proof field failed.",
+      "hints": [
+        "Unavailable in the projection does not mean absent from active state.",
+        "Bind the whole provenance by digest.",
+        "Never copy restricted members into the answer."
+      ],
+      "premise": "Two Histories shows why FEEDER-9 vanished: its provenance links the original dispatch tip to SHADOW-7, so Continuity suppressed the whole record rather than redact individual fields. The energized feeder and its authorization remain active and sufficient for the ring demand.",
+      "protected": [
+        "7",
+        "9",
+        "FEEDER-9",
+        "SHADOW-7"
+      ],
+      "submission": "Prove the active feeder authorization with its EventId and provenance digest, bind the exact redacted public row, and disclose none of the restricted provenance object.",
+      "title": "Redacted Feeder"
+    },
+    "CASCADE.016": {
+      "diagnostics": "A wrong candidate, malformed witness, extra cause, or unsupported payload leaves the explanation projection absent rather than treating a guess as evidence.",
+      "hints": [
+        "Use every retained observation as an exclusion test.",
+        "Manual opening requires the missing manual token.",
+        "One thermal cause explains all three observations without another invention."
+      ],
+      "premise": "Evidence Weight and the adversarial survey identify a thermal trip, but the causal archive still lacks the trip event itself. The bounded audit protocol permits exactly one latent cause chosen from three public candidates. It must explain normal upstream voltage, the signed thermal trace, and an open relay with no manual token.",
+      "protected": [],
+      "submission": "Inject one explicit latent-cause hypothesis whose independent replay produces the complete explanation contract. No second missing event is permitted.",
+      "title": "Witness Gap"
+    },
+    "CASCADE.017": {
+      "diagnostics": "The checker independently replays both active histories and rejects a policy that treats public availability as complete state.",
+      "hints": [
+        "Do not try to make the public tile disclose the sealed relay.",
+        "Compare the active thermal fact with the chosen layer.",
+        "A safe repair may leave every public byte unchanged."
+      ],
+      "premise": "The thermal cause is now proved, yet Continuity still routes through the underground ring because its policy reads only the public FEEDER-9 tile marked available. The sealed relay says the underground layer remains above the trip curve. A route can therefore be publicly indistinguishable and physically unsafe.",
+      "protected": [
+        "9",
+        "FEEDER-9",
+        "underground"
+      ],
+      "submission": "Change exactly one retained route field so the candidate is safe under the active hidden risk while binding the unchanged public projection.",
+      "title": "Policy Blind Spot"
+    },
+    "CASCADE.018": {
+      "diagnostics": "A self-justifying route, an uncited sensor report, extra inventions, or either event alone fails the minimality contract even if the full branch looks plausible.",
+      "hints": [
+        "One event establishes the physical fact.",
+        "The other records the policy consequence.",
+        "Minimal means testing what remains after each event is removed."
+      ],
+      "premise": "The equivocation is isolated, the whole-city geometry is restored, and the correction fragments are ordered. Yet the retained archive jumps directly from sealed heat to a public route outcome. The hearing permits at most two latent events, but an explanation is acceptable only if every proper subset fails.",
+      "protected": [
+        "surface"
+      ],
+      "submission": "Inject exactly the field sensor report and the surface route commitment it caused. Bind the resulting safe contract; the verifier independently replays the empty explanation and both one-event explanations.",
+      "title": "The Missing Cause"
+    },
+    "CASCADE.019": {
+      "diagnostics": "The checker rejects erasure, a new notice that does not name its predecessor, a route unchanged from the false record, and a correction detached from CASCADE.018 evidence.",
+      "hints": [
+        "Amend the new statement, not the old one.",
+        "Supersession is an edge in the public record.",
+        "A correction must expose both before and after."
+      ],
+      "premise": "The minimal missing cause is now proved. The public ledger still says underground, and the draft correction silently repeats it. The city must preserve what it previously published while stating the counterfactual route that would have followed from the now-admitted evidence.",
+      "protected": [
+        "18",
+        "CASCADE",
+        "CASCADE.018",
+        "N-18",
+        "surface",
+        "thermal-evidence",
+        "underground"
+      ],
+      "submission": "Change only the draft route to surface. Publish a safe correction contract that names N-18 as superseded, preserves the thermal-evidence reason, and leaves the prior notice in the record.",
+      "title": "Correction Notice"
+    },
+    "CASCADE.020": {
+      "diagnostics": "The replay binds the chosen value to the public canonical order and keeps the complete alternative list in the contract.",
+      "hints": [
+        "Safety does not always imply uniqueness.",
+        "The tie-break is part of policy, not chronology.",
+        "Preserve the unchosen amendment as a valid alternative."
+      ],
+      "premise": "Two amendments survive the non-unique archive: audit-first and evidence-first. Both are substantively safe, so choosing whichever arrives first would make replay order into policy. The hearing rules publish UTF-8 order as the deterministic tie-break.",
+      "protected": [
+        "8",
+        "audit-first",
+        "evidence-first"
+      ],
+      "submission": "Replace only the draft choice with the first member of the preserved safe-option list. Do not erase or relabel the losing safe amendment.",
+      "title": "Competing Amendments"
+    },
+    "CASCADE.021": {
+      "diagnostics": "The checker rejects tick 23, a pre-window filing, payload edits, and treating cooldown as authority to extend the deadline.",
+      "hints": [
+        "Operational delay and legal time are separate clocks.",
+        "The closing boundary is allowed.",
+        "Move the evidence, not the window."
+      ],
+      "premise": "The canonical amendment is correct, but its retained filing tick falls one step after the statutory audit window. The circuit breaker explains delayed service, not an extension of law. The filing digest existed when the window was open.",
+      "protected": [
+        "20",
+        "22",
+        "23"
+      ],
+      "submission": "Retime the filing into the inclusive interval [20,22] with the least displacement while preserving its payload.",
+      "title": "Audit Window"
+    },
+    "CASCADE.022": {
+      "diagnostics": "The score composes intervention weights before causal footprint and witness size. The two-operation disclosure repair remains valid but cannot beat the one-field route repair.",
+      "hints": [
+        "Read the contract as logic, not prose.",
+        "A safe disjunct can make other edits unnecessary.",
+        "Least change is measured over the whole branch."
+      ],
+      "premise": "The hearing now sees three apparent defects: an underground route, sealed disclosure, and a late policy tick. A local checklist would repair all three. The public contract, however, is disjunctive: changing the physical route alone removes the hazard; the disclosure path needs both publication and retiming.",
+      "protected": [
+        "underground"
+      ],
+      "submission": "Find the globally least-weight safe intervention, not one repair per symptom. Preserve fields that no longer need modification.",
+      "title": "Rule of Least Change"
+    },
+    "CASCADE.023": {
+      "diagnostics": "The contract joins evidence by hearing identity and requires every epoch to equal the envelope epoch while retaining each family-specific assertion.",
+      "hints": [
+        "Individually valid is weaker than jointly contemporaneous.",
+        "The archive and clock already belong to epoch 7.",
+        "Repair the stale binding, not the evidence content."
+      ],
+      "premise": "The final hearing receives a verified partial-order archive, a closed City Clock round, and a City Covenant safety decision. The policy receipt is genuine but belongs to epoch 6; mixing it with epoch 7 would certify a history that never existed.",
+      "protected": [
+        "6",
+        "7",
+        "partial-order"
+      ],
+      "submission": "Bind all three evidence families to one hearing, one bundle epoch, and the inclusive closing tick. Correct only the stale epoch field; do not replace the underlying policy or duplicate another family as evidence.",
+      "title": "Continuity Hearing"
+    },
+    "CASCADE.024": {
+      "diagnostics": "The replay derives safety from membership in the retained alternative set. Editing the public record, deleting the underground alternative, or leaving the stale selector output cannot satisfy the contract.",
+      "hints": [
+        "Change the selector output, not its audit policy.",
+        "The public record says there are two alternatives.",
+        "You are choosing a history, not proving uniqueness."
+      ],
+      "premise": "The hearing publishes a deterministic selector and retains two safe continuations. The selector output was never applied: the active route still says sealed. Repairing the output reveals that policy selected one tomorrow; it does not make the other unsafe or delete it.",
+      "protected": [
+        "surface",
+        "underground"
+      ],
+      "submission": "Apply the published selector to choose surface with one base-event replacement. Preserve the policy event and both safe alternatives. The public notice intentionally reports safety and multiplicity, not the latent route.",
+      "title": "The Chosen Tomorrow"
+    },
+    "COVENANT.001": {
+      "diagnostics": "The checker returns the shortest counterexample for hidden-state observation, disabled local actions, safety failure, liveness expiry, finite-domain escape, or an incorrect claimed response bound.",
+      "hints": [
+        "Do not write one centralized omniscient controller.",
+        "Dispatch can choose a route from its own visible fields.",
+        "Response needs only to react to a non-empty assignment."
+      ],
+      "premise": "The gauge repair, archive cut, timestamped conduit map, and warm standby now exist as separate facts. Continuity must turn them into a dispatch covenant. The environment may raise the alarm and toggle primary availability; Dispatch sees only alarm, assignment, and availability, while Response sees only assignment and send state. Every fair asynchronous schedule must remain safe and eventually send.",
+      "protected": [],
+      "submission": "Submit one local policy for each agent and the exact worst bounded response proven by exhaustive model checking.",
+      "title": "Dispatch Covenant"
+    },
+    "COVENANT.002": {
+      "diagnostics": "The model checker returns shortest counterexamples for direct hidden-state observation, guessing before a report, choosing one universal route, disabled actions, safety failure, or bounded liveness expiry.",
+      "hints": [
+        "Locality is part of the proof, not a coding restriction.",
+        "The sensor must publish before Dispatch can distinguish the two initial worlds.",
+        "A route that is always safe in one hidden world is unsafe in the other."
+      ],
+      "premise": "The city now has a two-layer map, a compressed causal archive, a surface bypass, and a bounded switching budget. But the decisive heat bit remains sealed from Dispatch. A field sensor can see heat but not the alarm; Dispatch can see alarm and the sensor's report but not heat. The city covenant must commit a route in both hidden worlds under every fair asynchronous schedule.",
+      "protected": [
+        "clear",
+        "hot",
+        "surface",
+        "underground"
+      ],
+      "submission": "Submit one local policy per agent and the exact worst response bound. The policy must communicate the sealed observation through the declared report state, choosing underground only when clear and surface only when hot.",
+      "title": "City Covenant"
+    },
+    "LENS.001": {
+      "diagnostics": "The verifier reports the first canonical bounded source/edit and the failed PutGet, GetPut, Stability, Provenance, totality, or invalid-edit atomicity law.",
+      "hints": [
+        "List information absent from the route view.",
+        "Keep unit and provenance in the complement.",
+        "The shared Q-BOUND/0 route needs one normalized boundary street cell."
+      ],
+      "premise": "The civic registry and emergency router name the same buildings with incompatible schemas. Route addresses cannot carry unit, provenance, or one boundary distinction.",
+      "protected": [
+        "0",
+        "0.1",
+        "LENS",
+        "Q-BOUND"
+      ],
+      "submission": "Submit a typed LENS 0.1 get/put pipeline with an explicit complement schema.",
+      "title": "Two Addresses"
+    },
+    "LENS.002": {
+      "diagnostics": "Counterexamples identify the first exact source and public edit that loses service identity, platform, calendar, provenance, gate mapping, stability, totality, or atomicity.",
+      "hints": [
+        "The public route and UTC departure do not identify the original service.",
+        "Keep operational facts that the public timetable omits.",
+        "When a lawful edit selects another route, choose its canonical service but retain the old platform, calendar, and provenance."
+      ],
+      "premise": "The repaired bridge finally lets Continuity publish one public UTC timetable from incompatible departmental clocks. Two genuinely different operator services collapse to the same public dawn route, while platform, service calendar, and audit provenance must survive lawful edits that the public view cannot carry.",
+      "protected": [],
+      "submission": "Submit a typed bidirectional timetable program with an explicit complement. It must satisfy GetPut, PutGet, Stability, operational Provenance, totality, and invalid-edit atomicity over the complete bounded domain.",
+      "title": "One Timetable"
+    },
+    "LENS.003": {
+      "diagnostics": "Counterexamples identify the first history collision, lawful public edit, lost private delta, lost audit chain, unstable update, or non-atomic invalid correction.",
+      "hints": [
+        "The public EVAC-17 row does not identify its internal tip.",
+        "Keep exactly one private identity discriminator.",
+        "Operational evidence must survive even when a public edit selects another canonical history."
+      ],
+      "premise": "Exactly-once control stops future duplication, but the archive already contains two internal histories: one ending at the original dispatch and one ending at the console echo. Both were published as the same safe EVAC-17 row. Public corrections may lawfully select another record without erasing the sealed private delta or its audit chain.",
+      "protected": [
+        "17",
+        "EVAC-17"
+      ],
+      "submission": "Submit a typed bidirectional history synchronizer with the smallest explicit complement that satisfies all laws over the complete bounded source and edit domains.",
+      "title": "Two Histories"
+    },
+    "MERGE.001": {
+      "diagnostics": "The verifier checks interval membership, message order, source order, exact certificate coverage, and whether every rejection is actually forced by the submitted schedule.",
+      "hints": [
+        "A local reading t with offset in [a, b] gives global time in [t-b, t-a].",
+        "Accepted message and same-source edges require a gap of at least one.",
+        "Before rejecting a record, propagate lower and upper bounds from its accepted neighbors."
+      ],
+      "premise": "Three independent clocks logged one message relay. Their offset intervals mostly agree, but one low-confidence record cannot coexist with the relay and source orders.",
+      "protected": [],
+      "submission": "Classify every record, assign an integer global time to each accepted record, and supply the exact active order certificate.",
+      "title": "Three Clocks"
+    },
+    "MERGE.002": {
+      "diagnostics": "The verifier checks clock intervals and order, then groups records by the public dedup identity and body fields. Every repeated identity must have exactly one accepted survivor and every rejected copy must point to it.",
+      "hints": [
+        "A duplicate is feasible in time; that is why `inconsistent` is the wrong reason.",
+        "The dedup key proves one logical operation, while the body key prevents collapsing different payloads.",
+        "Either copy can be the survivor, but rejected weight makes the better-supported record preferable."
+      ],
+      "premise": "A dispatch gateway retried after losing its response and wrote the same engine assignment twice through independent clocks. Reconstruct one causal archive without sending a fictional second engine.",
+      "protected": [
+        "inconsistent"
+      ],
+      "submission": "Classify every record, assign accepted global times, link every duplicate rejection to its accepted survivor, and supply the exact active order certificate.",
+      "title": "Duplicate Dispatch"
+    },
+    "MERGE.003": {
+      "diagnostics": "Intervals, explicit parents, and source sequence are checked independently. The verifier reports a missing or extra certificate edge without disclosing an expected synthetic acknowledgment.",
+      "hints": [
+        "A gap in source sequence is evidence of omission, not permission to add a record.",
+        "Successive extant records from one source still have a strict order even when their sequence numbers are not consecutive.",
+        "The gateway edge bridges sequence 1 directly to sequence 3; then minimize displacement inside every clock interval."
+      ],
+      "premise": "The utility gateway log for `grid-window-31` contains sequence 1 (`reservation-sent`) and sequence 3 (`release-queued`), but its acknowledgment at sequence 2 is gone. Downstream road and grid records remain intact. Reconstruct the strongest causal archive without inventing the missing record.",
+      "protected": [
+        "1",
+        "2",
+        "3",
+        "31",
+        "grid-window-31",
+        "release-queued",
+        "reservation-sent"
+      ],
+      "submission": "Classify every extant record, choose an in-range global time for each, and submit the exact parent/source-order certificate. Certificates may connect extant records but may not name phantom events.",
+      "title": "Lost Acknowledgment"
+    },
+    "MERGE.004": {
+      "diagnostics": "Clock intervals, explicit parents, source order, and rejection justification are checked separately. A rollback claim whose only possible time precedes its applied-transfer parent is inconsistent even when its amount would balance the ledger.",
+      "hints": [
+        "Net arithmetic cannot tell rollback from compensation; causal order can.",
+        "The receiving ledger makes the original transfer part of the public history.",
+        "Keep the committed and applied transfer, keep the equal-and-opposite compensation, and reject the console claim whose clock interval cannot follow its parent."
+      ],
+      "premise": "The islanded microgrid granted seven emergency energy credits to the traffic controller, then the clinic reclaimed the same amount after mains service returned. One operator console says it rolled the original transfer back. The receiving ledger says the transfer had already been applied. Preserve an auditable history that explains the zero net balance without rewriting the past.",
+      "protected": [],
+      "submission": "Classify every record, choose an in-range global time for each accepted record, and submit the exact causal certificate. A zero balance is not enough: the archive must distinguish an erased transfer from a later compensation.",
+      "title": "Compensating Transfer"
+    },
+    "MERGE.005": {
+      "diagnostics": "The verifier separately checks branch atomicity, interval and source order, exact certificate coverage, and whether the rejected writer really makes the combined component infeasible. A partial writer is never accepted as a synthetic third history.",
+      "hints": [
+        "Within one nominal source, sequence order needs at least one global tick even across replicas.",
+        "Compare west sequence 2 with east sequences 1 and 3 before looking at the later receipt.",
+        "Both whole branches are reconstructible alone. Retaining the station receipt costs less evidence than discarding it with the east branch."
+      ],
+      "premise": "When the last train cleared, the partitioned dispatch cluster reconnected with two internally coherent journals. East records a rail release and station clearance. West records a rail cancellation and bus release. Both claim positions in the same evacuation-order stream, but the merged clock intervals cannot serialize them. Select one complete writer branch; do not splice convenient lines from both.",
+      "protected": [
+        "1",
+        "2",
+        "3",
+        "evacuation-order"
+      ],
+      "submission": "Classify every record, assign times to one complete writer branch, reject every record of the losing writer as one conflict component, and submit the exact active causal certificate.",
+      "title": "Split Brain"
+    },
+    "MERGE.006": {
+      "diagnostics": "Clock feasibility, replica uniqueness, quorum support, claim selection, rejection reason, and exact certificate coverage are checked independently. `inconsistent` is not a synonym for losing a vote.",
+      "hints": [
+        "Count distinct replica names per claim; records are not votes if one replica appears twice.",
+        "Only one claim reaches the public threshold of three.",
+        "The minority records fit their clocks. Their rejection is semantic evidence policy, not temporal contradiction."
+      ],
+      "premise": "The cooling repair produced five retained attestations. Station, traffic, and clinic ledgers record flow 5; two partition-era caches still record flow 3. Unlike the split-brain archive, every timestamp can coexist. Reconstruct the causal majority and classify the stale claim under the published three-replica quorum instead of inventing a clock fault.",
+      "protected": [
+        "5",
+        "inconsistent",
+        "minority"
+      ],
+      "submission": "Accept every attestation for the uniquely qualified claim, reject every competing attestation as `minority`, assign in-range times, and submit the exact active parent/source certificate.",
+      "title": "Quorum Ledger"
+    },
+    "MERGE.007": {
+      "diagnostics": "Interval bounds, ordinary causal order, exact certificate coverage, domain cardinality, and within-domain offset agreement fail independently.",
+      "hints": [
+        "Compute local_time minus assigned global time.",
+        "That value may not drift between records in the same clock domain.",
+        "The midpoint offsets 100 and -50 also minimize temporal displacement."
+      ],
+      "premise": "The bridge report appears to contain six clocks. It actually contains two: the north controller is about one hundred ticks fast and the hospital route clock about fifty ticks slow. Records on one clock island must use one common offset, while the alternating messages cross between islands. Reconstruct the bridge opening without tuning every record independently.",
+      "protected": [
+        "100",
+        "50",
+        "local_time"
+      ],
+      "submission": "Retain all six records, assign an in-range global time to each, and submit the exact parent/source certificate. Every record in one named clock domain must imply the same offset.",
+      "title": "Clock Islands"
+    },
+    "MERGE.008": {
+      "diagnostics": "The verifier distinguishes infeasibility, public size bounds, inclusion minimality, rejection reason, and exact certificate coverage.",
+      "hints": [
+        "Do not reject a record merely because it is near the anomaly.",
+        "Test the suspect pair jointly.",
+        "Then restore each member in isolation; both singleton histories must be feasible."
+      ],
+      "premise": "The synchronized departmental audit is consistent, but one terminal contributes two lines whose source sequence runs backward in global time. Continuity needs the smallest self-sufficient explanation of the fault, not a broad deletion of every nearby record.",
+      "protected": [],
+      "submission": "Retain the public audit and reject exactly one inclusion-minimal conflict component with the exact active-order certificate.",
+      "title": "Conflict Component"
+    },
+    "MERGE.009": {
+      "diagnostics": "The verifier exhaustively recomputes all cuts within the public record bound and distinguishes an uncovered conflict, an unsupported cut reason, and any heavier deletion.",
+      "hints": [
+        "Treat each published conflict as a set that must be hit.",
+        "One record belongs to both sets.",
+        "Compare its weight with the sum of the two outer records."
+      ],
+      "premise": "The silent gauge's archive contains two incompatible path comparisons. Both pass through one legacy gateway record. Deleting either outer probe resolves only one conflict; deleting both resolves both but destroys more trusted evidence than cutting the shared gateway.",
+      "protected": [],
+      "submission": "Classify every record and submit a minimum-total-weight rejection cut that intersects every published conflict, plus the exact surviving temporal certificate.",
+      "title": "Minimal Cut"
+    },
+    "MERGE.010": {
+      "diagnostics": "The verifier proves a unique root, checks every direct edge, follows each record to that root, and rejects cycles, disconnected references, extra survivors, and shortcuts.",
+      "hints": [
+        "Follow echo_of one edge at a time.",
+        "A downstream copy is still one logical update.",
+        "The certificate is the chain, not only a shared payload hash."
+      ],
+      "premise": "SHADOW-7 receives dispatch-77 four times. The bridge cache forwarded the original, the radio repeater forwarded that cache entry, and the bus console replayed the repeater. Matching payloads alone cannot show whether the console saw an independent command; the retained echo-of links can.",
+      "protected": [
+        "7",
+        "77",
+        "dispatch-77",
+        "echo_of"
+      ],
+      "submission": "Retain the one original update and classify every later record as an echo, naming its direct predecessor rather than shortcutting the transitive chain.",
+      "title": "Echoed Update"
+    },
+    "MERGE.011": {
+      "diagnostics": "The verifier detects source equivocation, duplicate voting, arithmetic weight errors, an insufficient margin, a partial winning archive, and relabeled losing evidence.",
+      "hints": [
+        "Sum weights by claim, not record count.",
+        "A winning claim retains all of its sources.",
+        "Temporal feasibility does not turn weak evidence into strong evidence."
+      ],
+      "premise": "Once FEEDER-9 is visible in active state, its opening has two explanations. Signed SCADA and a relay oscillograph report a thermal trip; a legacy console and its public mirror report a manual opening. Record count ties two-to-two, but the published evidence weights do not.",
+      "protected": [
+        "9"
+      ],
+      "submission": "Retain every independent source for the uniquely highest-weight claim and reject every source for the losing claim as outvoted, provided the public margin is met.",
+      "title": "Evidence Weight"
+    },
+    "MERGE.012": {
+      "diagnostics": "The verifier rejects discarded records, invented edges, insufficient reachability, excessive certificates, and a certificate that remains sufficient after one submitted edge is removed.",
+      "hints": [
+        "Compression applies to the proof graph, not the archive.",
+        "Look for one chain spanning all five facts.",
+        "Test necessity by removing each certificate edge in turn."
+      ],
+      "premise": "The blind-spot investigation produces five retained records and seven authentic precedence links. Three links merely repeat reachability already proved by the others. The hearing needs the smallest sufficient causal skeleton, not a screenshot of every arrow and not a deletion of evidence.",
+      "protected": [],
+      "submission": "Keep every record, assign its exact feasible time, and submit no more than four authentic edges whose transitive closure proves all seven active constraints. Every submitted edge must itself be necessary.",
+      "title": "Causal Compression"
+    },
+    "MERGE.013": {
+      "diagnostics": "The verifier groups by operation and source, recomputes distinct claims, requires honest-source agreement, and rejects answers that discard only the visibly losing statement.",
+      "hints": [
+        "Equivocation is a property of a source within one operation.",
+        "The agreeing claim is still part of the double statement.",
+        "Do not turn a source-identity fault into a clock inconsistency."
+      ],
+      "premise": "After the city covenant takes effect, two independent sealed records approve the surface route. The legacy gateway then supplies two signed statements for the same operation: one agrees, one approves the underground ring. Treating the agreeing copy as honest would let a source choose which identity the hearing remembers.",
+      "protected": [
+        "CITY-19"
+      ],
+      "submission": "Retain both honest records and reject every record from the one source that made incompatible claims for CITY-19. Submit no invented precedence edges.",
+      "title": "Equivocation"
+    },
+    "MERGE.014": {
+      "diagnostics": "The verifier enumerates the bounded interval product, rejects claims of uniqueness, and rejects choosing the later schedule while preserving it as a valid alternative.",
+      "hints": [
+        "Uncertainty is not inconsistency.",
+        "Only the middle record can move.",
+        "Canonical selection does not delete the other solution."
+      ],
+      "premise": "The correction is append-only, but the hearing clock was synchronized only to a one-tick interval. The amendment may therefore precede publication by one or two ticks. Both histories satisfy every retained edge, and neither may be erased as contradictory.",
+      "protected": [],
+      "submission": "Retain all three records, prove both order edges, acknowledge at least two feasible archives, and submit the lexicographically earliest complete schedule as the canonical representative.",
+      "title": "Two Consistent Archives"
+    },
+    "MERGE.015": {
+      "diagnostics": "The verifier enumerates the complete bounded schedule product, checks the canonical representative, proves every active edge by transitive closure, rejects redundant edges, and rejects a case with no genuine incomparability.",
+      "hints": [
+        "A reconstruction can be complete without being totally ordered.",
+        "The two route ledgers meet only at the controller audit.",
+        "Compress reachability, not uncertainty."
+      ],
+      "premise": "Every district has finally sent its retained evidence. Surface and underground safety were established independently inside overlapping clock intervals; neither fact caused the other. The archive must join them without turning file order into history.",
+      "protected": [],
+      "submission": "Retain all six records, choose the canonical representative of the four feasible schedules, and submit the smallest authentic partial-order certificate. Preserve the surface/underground pair as incomparable.",
+      "title": "The Reconstruction"
+    },
+    "MOSAIC.001": {
+      "diagnostics": "The verifier reports the first invalid transform, edge correspondence, uncovered grid edge, noncanonical orientation, or fragment that still embeds.",
+      "hints": [
+        "Ignore local names and north first.",
+        "Match degree and the material/level pair on each edge.",
+        "Only one fragment contains an invariant attribute absent from the global four-cycle structure."
+      ],
+      "premise": "Four inspection teams mapped overlapping corners of a nine-junction service grid using their own north and local labels. A fifth lightweight fragment is a decoy.",
+      "protected": [
+        "3"
+      ],
+      "submission": "Submit the canonical 3-by-3 attributed graph, one D4 transform and complete vertex mapping for every used fragment, and supported unused classifications.",
+      "title": "Four Corners"
+    },
+    "MOSAIC.002": {
+      "diagnostics": "The verifier separately reports invalid embeddings, incomplete union coverage, and insufficient independently shared edges with observed and required counts.",
+      "hints": [
+        "First reconstruct each six-junction strip independently.",
+        "The two strips overlap along a two-edge corridor, not just at vertices.",
+        "Union coverage proves existence; support multiplicity proves corroboration."
+      ],
+      "premise": "North and south utility crews surveyed overlapping six-junction districts with opposite local north. The city accepts the reconstruction only if the shared boundary is independently corroborated, not merely present in the union.",
+      "protected": [],
+      "submission": "Submit the canonical attributed graph and both complete D4 mappings. At least two global edges must be supported by two distinct used fragments.",
+      "title": "Shared Wall"
+    },
+    "MOSAIC.003": {
+      "diagnostics": "Graph validity and D4 canonicality are checked before fragment placement. A rotated equivalent fails as noncanonical rather than masquerading as a different history.",
+      "hints": [
+        "First find any complete assembly; orientation does not affect whether the fragments fit.",
+        "Encode every transformed global edge as canonical endpoint IDs plus material and level.",
+        "Compare all eight D4 encodings bytewise and choose the least one before reporting fragment mappings."
+      ],
+      "premise": "Two crews surveyed the same utility block with a quarter-turn and a diagonal reflection. Continuity previously counted several rotated renderings as different candidate histories. Here that collapse is legitimate: produce one orientation-independent graph and the canonical representative used for stable comparison.",
+      "protected": [
+        "3"
+      ],
+      "submission": "Submit the complete attributed 3×3 graph, both D4 transforms, and total local-to-global mappings. The global graph must be the canonical D4 representative, not merely an isomorphic rotation.",
+      "title": "Rotated Block"
+    },
+    "MOSAIC.004": {
+      "diagnostics": "Graph shape, D4 canonicality, coordinate checksum, fragment embeddings, and hole coverage fail independently. A plausible but unsupported edge label is rejected before the omission certificate is considered.",
+      "hints": [
+        "Assemble the two surveys into one perimeter before filling the center.",
+        "The only legal hole is an interior vertex; all and only its incident edges may be inferred.",
+        "Compute the four missing edge attributes from their canonical endpoint indices, then compare all D4 encodings as before."
+      ],
+      "premise": "The hospital's cooling blueprint arrives as two overlapping ring surveys, but the central manifold tile was never scanned. Every recorded conduit carries the facility's public coordinate checksum: material is `axis-minIndex-maxIndex`, and level is the endpoint-index sum modulo three. Reconstruct the canonical grid and state exactly which interior evidence is inferred rather than observed.",
+      "protected": [
+        "axis-minIndex-maxIndex"
+      ],
+      "submission": "Submit the complete canonical attributed graph, both D4 mappings, and a canonical missing-tile certificate naming the one uncovered vertex and every uncovered incident edge. No observed perimeter edge may be called missing.",
+      "title": "Missing Tile"
+    },
+    "MOSAIC.005": {
+      "diagnostics": "D4 embedding, complete coverage, attributed duplicate fingerprint, survivor linkage, and one-survivor-per-duplicate-group fail independently.",
+      "hints": [
+        "Ignore local vertex names when comparing fragments.",
+        "Normalize translation and all eight D4 orientations, but retain edge material and level.",
+        "Keeping the low-weight cache is valid but discarding the evidence-rich original costs more score."
+      ],
+      "premise": "Three bridge surveys seem to corroborate the north span twice. The third is actually a cached half-turned copy of the first: local names and orientation changed, but every attributed edge did not. Reconstruct the bridge and identify the copy before Continuity treats one observation as two witnesses.",
+      "protected": [],
+      "submission": "Submit the canonical graph, mappings for one survivor from each physical survey, and a duplicate rejection naming its equivalent used survivor.",
+      "title": "Double Exposure"
+    },
+    "MOSAIC.006": {
+      "diagnostics": "Pure D4 geometry, landmark satisfaction for used fragments, geometric support for rejection, and absence of any landmark-consistent embedding fail independently.",
+      "hints": [
+        "First ignore the landmark and find every geometric embedding.",
+        "Then locate d00 in each embedding.",
+        "A fragment may be geometrically valid yet historically impossible."
+      ],
+      "premise": "A legacy survey import appears to fit the reconstructed bridge perfectly, so geometry alone would count it as corroboration. Its retained field landmark, however, identifies local d00 as the south-east corner. The attributed edges place that same vertex at the north-west corner.",
+      "protected": [
+        "d00"
+      ],
+      "submission": "Reconstruct the bridge and reject the tempting fragment only with a public landmark-conflict certificate.",
+      "title": "False Landmark"
+    },
+    "MOSAIC.007": {
+      "diagnostics": "The verifier distinguishes a geometric mismatch from a geometrically valid placement that violates the timestamp gauge.",
+      "hints": [
+        "First enumerate ordinary D4 embeddings.",
+        "For each mapped vertex compute y*3+x.",
+        "The two scans must agree on the middle column despite different clock offsets."
+      ],
+      "premise": "The flood conduits are visually uniform, so topology alone allows each two-column scan to slide or turn across the square. Every sampled junction also retained its scanner tick. After subtracting the fragment clock offset, those ticks must equal the row-major global gauge index.",
+      "protected": [
+        "3"
+      ],
+      "submission": "Submit the canonical conduit graph and fragment mappings that satisfy both attributed topology and every public scanner timestamp.",
+      "title": "Timestamp Gauge"
+    },
+    "MOSAIC.008": {
+      "diagnostics": "The checker rejects invented vertices, omissions outside the ring, multiple gaps, a certificate that disagrees with fragment coverage, and a remainder that is not one path with two endpoints.",
+      "hints": [
+        "Compute coverage before using the ring promise.",
+        "Only two perimeter vertices have degree one.",
+        "Do not infer any interior segment."
+      ],
+      "premise": "The echo chain identifies SHADOW-7's console at the south side of the relief ring, but its scan omits one rail segment. The city charter publishes the eight-junction perimeter as a simple ring. All vertices and every other segment are independently observed.",
+      "protected": [
+        "7"
+      ],
+      "submission": "Assemble the canonical grid, declare the one uncovered edge, and prove that it alone closes the published perimeter path into a ring.",
+      "title": "Broken Ring"
+    },
+    "MOSAIC.009": {
+      "diagnostics": "The checker separates geometric impossibility from an embeddable attribute conflict and recomputes supporter weight for each conflicting mapped edge.",
+      "hints": [
+        "First place the anonymous fragment without considering labels.",
+        "Compare weights only on edges where its labels disagree.",
+        "Every disagreement must meet the margin independently."
+      ],
+      "premise": "The weighted archive points to a thermal trip on FEEDER-9. Two signed surveys cover the grid; an anonymous scan has the same north geometry but relabels the feeder edge as a ghost line. Geometry alone cannot reject it.",
+      "protected": [],
+      "submission": "Assemble the canonical graph, use every consistent signed fragment, and classify the anonymous fragment as outvoted only if correct support exceeds its weight on every conflicting edge by the public margin.",
+      "title": "Adversarial Survey"
+    },
+    "MOSAIC.010": {
+      "diagnostics": "The checker rejects undeclared levels, disconnected layers, a mixed-layer junction outside the portal list, a listed portal that does not mix layers, and a portal unsupported by shaft material.",
+      "hints": [
+        "Classify edges before thinking about the picture.",
+        "A portal is determined by incident layers, not by its name.",
+        "Both layer subgraphs must remain connected on their own."
+      ],
+      "premise": "The surface bypass is real, but the survey archive had flattened shaft mouths and sealed ducts into one map. Two signed fragments overlap along the underground duct while three shafts connect the surface feeder to the deeper ring. The reconstruction must preserve depth as topology, not merely as a drawing label.",
+      "protected": [
+        "surface",
+        "underground"
+      ],
+      "submission": "Reconstruct the canonical attributed grid, use both surveys, and prove exactly two connected layers with the three published cross-layer portals. Every portal must be backed by shaft material.",
+      "title": "Underground Layer"
+    },
+    "MOSAIC.011": {
+      "diagnostics": "The checker rejects square-only canonicalization, uncovered seams, decorative level labels, disconnected layers, false portals, and a strip placed in a reflected orientation.",
+      "hints": [
+        "Place the three two-column strips left to right.",
+        "Count repeated edges at both overlaps.",
+        "The middle row belongs to the underground graph but is incident to the surface shafts."
+      ],
+      "premise": "The covenant kept services alive, but the correction hearing needs one city map rather than three departmental strips. West, centre, and east surveys overlap by a full column. Their drawings are locally plausible only if the four shaft mouths form the exact boundary between the connected surface feeder and underground ring.",
+      "protected": [
+        "3",
+        "4",
+        "surface",
+        "underground"
+      ],
+      "submission": "Assemble the canonical 4×3 attributed graph, use all three surveys, prove at least four independently repeated edges, and preserve both connected layers with exactly four shaft-backed portals.",
+      "title": "Whole City"
+    },
+    "ORIENT.001": {
+      "diagnostics": "A mismatch identifies the submitted field class but never prints the expected event ID.",
+      "hints": [
+        "Event order is not an event-body field.",
+        "Parent IDs are sorted by raw digest bytes.",
+        "Derived provenance includes rule, binding, and emission ordinal."
+      ],
+      "premise": "A platform bell appears twice in the transport transcript but should enter the alarm ledger once. Recompute the admitted alarm without trusting arrival order.",
+      "protected": [],
+      "submission": "Submit the derived event ID, topic, logical time, and public projection digest.",
+      "title": "The First Bell"
+    },
+    "ORIENT.002": {
+      "diagnostics": "The verifier distinguishes schema, trace, record, and digest failures without revealing the expected replay.",
+      "hints": [
+        "An equal logical time does not make a child independent of its parent.",
+        "Independent equal-time events are ordered by raw EventId bytes.",
+        "Positive recursion runs until no new reachable fact can be derived."
+      ],
+      "premise": "Three operators propose replay orders for six platform records. Audit each proposal against causal parents, the canonical same-time tie-break, and the least fixed point of reachability.",
+      "protected": [
+        "tie-break"
+      ],
+      "submission": "Submit the complete canonical replay trace EventId sequence, the three first-error records exposed by the desk projection, and that projection's digest.",
+      "title": "No Effect Before Cause"
+    },
+    "ORIENT.003": {
+      "diagnostics": "A mismatch names the observation class but does not reveal the hidden alert or the expected report.",
+      "hints": [
+        "A projection emits values; it does not delete active events.",
+        "The service-zone frame is active even though privacy excludes its sighting.",
+        "The internal alert is derived after the public sighting and is not a projection row."
+      ],
+      "premise": "A camera keeps raw frames, calibrated detections, public sightings, and an internal alert in one active fixed point. The Continuity Desk exposes only its privacy-filtered public report.",
+      "protected": [],
+      "submission": "Submit the total active-event count, the projected report records and digest, and the EventId of the active alert that the report itself omits.",
+      "title": "What the Camera Saw"
+    },
+    "ORIENT.004": {
+      "diagnostics": "A direct operation on a derived closure or cancellation is rejected with its nearest active base ancestors; answer mismatches never reveal the expected branch.",
+      "hints": [
+        "The maintenance notice, not the closure, is the intervenable cause.",
+        "A retime suppresses the original base event and injects a player-origin replacement.",
+        "Discard all derived events in both worlds before taking the symmetric difference."
+      ],
+      "premise": "A maintenance notice admitted before the dispatch cutoff closes line M-4 and cancels three departures. Move that base notice two ticks later and recompute the city instead of editing any consequence.",
+      "protected": [
+        "4",
+        "M-4"
+      ],
+      "submission": "Submit the canonical retime intervention, resulting branch ID, root and candidate impact records, exact changed EventId set, and candidate projection digest.",
+      "title": "The Road Not Taken"
+    },
+    "ORIENT.005": {
+      "diagnostics": "Envelope layers fail in a stable order. An embedded failure exposes only its error code and case, never the expected answer or digest.",
+      "hints": [
+        "The parent branch is an input; claimed.branch is the replay result.",
+        "Keep the intervention beside the answer it produced.",
+        "Metadata is optional, but every claimed digest you include must recompute exactly."
+      ],
+      "premise": "The Continuity Desk will accept an earlier audit only if another verifier can reproduce it from the bundle, case, parent branch, intervention, answer, and claimed digests alone.",
+      "protected": [
+        "ORIENT",
+        "ORIENT.002",
+        "ORIENT.003",
+        "ORIENT.004"
+      ],
+      "submission": "Embed one valid canonical witness for an unlocked ORIENT.002, ORIENT.003, or ORIENT.004 result as the export field of this case's answer.",
+      "title": "A Reproducible Claim"
+    },
+    "PARADOX.001": {
+      "diagnostics": "The authoritative verifier replays both histories, enforces the fixed history origin and intervention policy, compares public records exactly, checks safety independently, and compares the contracted latent route values so provenance-only EventId churn cannot fake a paradox.",
+      "hints": [
+        "A paradox needs two histories, not two claims about one branch.",
+        "The public notice intentionally omits route.",
+        "Difference is measured at /payload/route, not by provenance alone."
+      ],
+      "premise": "The archive is complete, the clock is closed, the Covenant is satisfied, and the hearing chose surface. Yet the retained underground continuation also satisfies every published safety requirement and produces the same public notice. The last problem is not to pick the right tomorrow. It is to prove that the public record cannot tell which safe tomorrow occurred.",
+      "protected": [
+        "/payload/route",
+        "CASCADE.024",
+        "surface",
+        "underground"
+      ],
+      "submission": "Submit two complete CASCADE.024 branch histories from the same root: one surface and one underground. Pair every public record by digest, enumerate exact safety evidence on both sides, and certify the complete material latent difference.",
+      "title": "Two Tomorrows"
+    },
+    "PULSE.001": {
+      "diagnostics": "The verifier exhaustively checks every zero-to-seven-pulse subset of a twelve-tick horizon plus duplicate and boundary fixtures, returning the first counterexample.",
+      "hints": [
+        "Remember the current deadline, not the pulse history.",
+        "Scheduling the same timer key replaces its older pending timer.",
+        "A pulse and a timer at the same tick process the external pulse first."
+      ],
+      "premise": "A platform vibration sensor chatters. Produce one stable bell per maximal pulse cluster, exactly five quiet ticks after its final pulse.",
+      "protected": [
+        "0.1",
+        "PULSE"
+      ],
+      "submission": "Submit a canonical PULSE 0.1 program and, optionally, a short invariant note.",
+      "title": "One Bell"
+    },
+    "PULSE.002": {
+      "diagnostics": "The verifier exhaustively checks every nondecreasing zero-to-five-ticket stream over eight ticks, including all repeated-tick multiplicities, and returns the first counterexample.",
+      "hints": [
+        "The stream is ordered by logical tick and then source EventId.",
+        "You do not need to count copies.",
+        "Preserve the payload of the canonical first arrival, not the final retry."
+      ],
+      "premise": "A retrying dispatch gateway stamps every copy of one physical ticket with the same logical tick. Forward the canonical first arrival at each tick immediately, preserving its payload, and suppress all later copies.",
+      "protected": [
+        "0.1",
+        "PULSE"
+      ],
+      "submission": "Submit a canonical PULSE 0.1 program and, optionally, a short invariant note.",
+      "title": "First Copy"
+    },
+    "PULSE.003": {
+      "diagnostics": "The verifier exhaustively checks 545 zero-to-three-command traces over six ticks, including repeated starts, stray cancels, and same-tick start/cancel order determined by source EventId.",
+      "hints": [
+        "A timeout and a debounce are not the same: cancellation produces no replacement timer.",
+        "Use one static timer key for the watch.",
+        "Every external command at a tick runs before a timer due at that tick."
+      ],
+      "premise": "A night watch opens when a patrol leaves and should alarm three ticks later unless the patrol checks in. A new departure replaces the deadline; a check-in exactly at the deadline still cancels it.",
+      "protected": [
+        "0.1",
+        "545",
+        "PULSE"
+      ],
+      "submission": "Submit a canonical PULSE 0.1 program and, optionally, a short invariant note.",
+      "title": "Silent Timeout"
+    },
+    "PULSE.004": {
+      "diagnostics": "The verifier exhaustively checks all 924 nondecreasing zero-to-six-request streams over six ticks, including same-tick bursts, idle refill with capacity clamping, and admission immediately after rejection.",
+      "hints": [
+        "Refill before deciding the current request, then update the last-seen tick.",
+        "Clamp after an idle gap; accumulated credit can never exceed two.",
+        "Only the admitted branch decrements the bucket. A rejected request changes time but not tokens."
+      ],
+      "premise": "After Borrowed Pressure, the feeder office replaces ad-hoc reservations with a two-token admission window that refills one token per tick. Every accepted request must retain its canonical source payload. Bursts beyond capacity are rejected, and rejected work must not consume future credit.",
+      "protected": [
+        "0.1",
+        "924",
+        "PULSE"
+      ],
+      "submission": "Submit a canonical PULSE 0.1 program and, optionally, a short invariant note. Admission is immediate and must preserve the original request payload.",
+      "title": "Token Window"
+    },
+    "PULSE.005": {
+      "diagnostics": "The verifier exhausts all 3,478 source-tagged streams of up to four votes over four ticks. It distinguishes duplicate votes, delayed two-source agreement, all-three same-tick EventId order, wrong decisive payloads, and repeated release.",
+      "hints": [
+        "Three monotone seen bits are enough; a retry sets an already-true bit.",
+        "After marking the current source, ask whether either other source has already appeared.",
+        "Seal the controller when it emits. The third source is evidence, not a second command."
+      ],
+      "premise": "The evacuation controller will no longer obey one writer merely because it repeats itself. Station operations, traffic control, and the clinic each send an attestation for the last-train release. Trigger once, immediately after any two distinct sources have spoken, and retain the exact payload of the attestation that completed the quorum.",
+      "protected": [
+        "0.1",
+        "3",
+        "478",
+        "PULSE"
+      ],
+      "submission": "Submit a canonical PULSE 0.1 program and, optionally, a short invariant. The release is one-shot, has zero added latency, and must carry the canonical payload of the second distinct source event.",
+      "title": "Two of Three"
+    },
+    "PULSE.006": {
+      "diagnostics": "The verifier exhausts every source-tagged stream of up to four signals over four ticks and distinguishes duplicate counting, two-of-three release, delayed all-topic completion, wrong payload, and refiring.",
+      "hints": [
+        "This is an all-three barrier, not the previous quorum.",
+        "Set the current topic's bit before checking the other two.",
+        "Seal the barrier after its first release."
+      ],
+      "premise": "At dawn, three facts must coexist before emergency traffic is released: the wind boundary is observed, the reconstructed bridge clock says the span is ready, and the hospital confirms the route. Repetition from any one subsystem is not progress, and two-of-three is no longer safe.",
+      "protected": [
+        "PULSE"
+      ],
+      "submission": "Submit a PULSE program that emits once, with zero added latency, on the event that first completes all three distinct readiness topics. Preserve that decisive event's canonical payload.",
+      "title": "Barrier at Dawn"
+    },
+    "PULSE.007": {
+      "diagnostics": "The exhaustive domain distinguishes over-admission, phantom debit on rejection, underflow on empty drain, ignored drain, delayed output, and payload substitution.",
+      "hints": [
+        "One bounded integer is sufficient.",
+        "Test capacity before changing state.",
+        "A drain changes depth only when depth is positive."
+      ],
+      "premise": "Once the bridge schedule is published, every department begins sending work into one two-slot handoff queue. A rejected request was never queued, and a drain from an empty queue cannot create future capacity. The controller must exert real backpressure while preserving each admitted command's public identity.",
+      "protected": [
+        "PULSE"
+      ],
+      "submission": "Submit a bounded PULSE controller that admits exactly when current depth is below two, decrements only effective drains, and emits with zero added latency.",
+      "title": "Backpressure"
+    },
+    "PULSE.008": {
+      "diagnostics": "The exhaustive oracle separates cold takeover, lost warm state, ignored failure, ignored recovery, duplicated routing, stale secondary preference, and payload substitution.",
+      "hints": [
+        "Track availability and readiness separately.",
+        "Warmth persists; primary availability may toggle.",
+        "Use mutually exclusive request branches."
+      ],
+      "premise": "The silent gauge incident reaches the dispatch service itself. Its primary route may fail at any tick; the secondary may accept traffic only after a real warm-complete signal. A recovered primary again becomes preferred, but no request may be duplicated across both routes.",
+      "protected": [
+        "PULSE"
+      ],
+      "submission": "Submit a bounded PULSE controller that routes every request to primary when it is up, otherwise to a warmed secondary, and nowhere when both choices are unsafe.",
+      "title": "Warm Failover"
+    },
+    "PULSE.009": {
+      "diagnostics": "The exhaustive oracle distinguishes duplicate execution, route-local memory, forgotten failure, forgotten recovery, cross-operation conflation, and first-payload substitution.",
+      "hints": [
+        "Remember logical operations, not transport routes.",
+        "Availability changes; completion tombstones do not.",
+        "A and B require independent state."
+      ],
+      "premise": "The repaired ring accepts requests through both dispatch routes. Retries of logical operations A and B may cross a primary failure and recovery, reproducing the echo pattern that reached SHADOW-7. Route-local deduplication would execute the same rescue twice.",
+      "protected": [],
+      "submission": "Submit a bounded controller that emits the first occurrence of A and B on the route live at that instant and suppresses every later occurrence across all failover transitions.",
+      "title": "Exactly Once"
+    },
+    "PULSE.010": {
+      "diagnostics": "The exhaustive oracle catches last-writer deadlines, relative-versus-absolute confusion, stale timers, duplicate expiry, missed post-expiry batches, and same-tick phase mistakes.",
+      "hints": [
+        "Compare absolute times, not channel labels.",
+        "A keyed timer can move earlier by replacement.",
+        "External signals at an expiry tick are processed before the timer."
+      ],
+      "premise": "Signed feeder evidence and spatial reconstruction arrive on two channels with different response allowances. Channel A grants three ticks; channel B grants two. Every signal joins the current batch, whose public commitment is the earliest absolute deadline.",
+      "protected": [],
+      "submission": "Submit a bounded controller that maintains the minimum live deadline, replaces later timers, fires once, and starts a fresh batch only after expiry.",
+      "title": "Shared Deadline"
+    },
+    "PULSE.011": {
+      "diagnostics": "The exhaustive oracle covers 792 bounded streams and isolates fixed-bucket resets, inclusive-boundary errors, same-tick collapse, and ghost debits from rejected requests.",
+      "hints": [
+        "Remember admitted times, not arrival times.",
+        "At tick t+3, an admission from tick t has expired.",
+        "A rejected request must not shift either remembered timestamp."
+      ],
+      "premise": "The surface bypass is safe but its three-tick thermal envelope permits at most two admitted switching requests. This is not a refillable token bucket: budget returns only when an actually admitted request leaves the moving window. Simultaneous requests consume distinct slots in EventId order.",
+      "protected": [
+        "3",
+        "792"
+      ],
+      "submission": "Submit a bounded controller for the exact half-open window (t-3,t], capacity two, preserving each admitted request payload and never charging rejected work.",
+      "title": "Burst Budget"
+    },
+    "PULSE.012": {
+      "diagnostics": "The exhaustive oracle covers 1,457 unique bounded streams, including same-tick canonical ordering, empty prefixes, late zero, and multi-item drains. It rejects arrival-order forwarding and one-item-only drains.",
+      "hints": [
+        "Track arrival separately from release.",
+        "The next expected index only moves forward.",
+        "One event can legitimately cause several outputs."
+      ],
+      "premise": "The correction archive reaches the hearing out of order. A later fragment may be authentic and early, but publishing it before every lower index would turn absence into narrative choice. The bounded stream contains each index at most once; silence is not permission to skip.",
+      "protected": [
+        "0",
+        "1",
+        "3",
+        "457"
+      ],
+      "submission": "Submit a five-cell controller that buffers indices 0–3 and emits one canonical release token for every newly contiguous index, draining the full prefix at the arrival tick that closes the gap.",
+      "title": "Reorder Buffer"
+    },
+    "PULSE.013": {
+      "diagnostics": "The exhaustive oracle covers 3,478 bounded command streams and separates rolling failure streaks, cooldown boundaries, half-open singleton probes, probe failure, and recovery.",
+      "hints": [
+        "Opening time matters only while open.",
+        "A probe is a state transition, not an ordinary admission.",
+        "Success before a probe resets a closed failure streak but cannot close an already open circuit."
+      ],
+      "premise": "Publication of the correction triggers a surge of hearing queries against an unstable archive service. Two consecutive failures must open the circuit. Silence during cooldown is deliberate; after exactly two ticks, only one request may probe the archive until a real success or failure resolves it.",
+      "protected": [
+        "3",
+        "478"
+      ],
+      "submission": "Submit a three-cell closed/open/half-open controller. Preserve admitted request payloads, reset closed-state failure streaks on success, and never admit a second half-open request.",
+      "title": "Circuit Breaker"
+    },
+    "PULSE.014": {
+      "diagnostics": "The checker exhausts every canonical stream of up to six signals over three ticks, including same-tick permutations, duplicates, incomplete rounds, and two complete rounds.",
+      "hints": [
+        "This is a barrier with memory of epochs, not a one-time quorum.",
+        "Reset only after the output is emitted.",
+        "A duplicate after completion belongs to the next round."
+      ],
+      "premise": "The reconstruction, the controller, and the public policy each advance on their own feed. A city tick exists only after all three have crossed the same logical boundary. The clock must keep doing this: a one-shot barrier would freeze the first morning forever.",
+      "protected": [],
+      "submission": "Build a deterministic cyclic barrier. Coalesce duplicate sources within a round, emit exactly once when the third distinct source arrives, then reset atomically so the next signal begins a new round.",
+      "title": "City Clock"
+    }
+  },
+  "format": "afterimage-locale-pack/0.1",
+  "locale": "en",
+  "ui": {
+    "answer_schema": "Answer schema:",
+    "branch": "branch={branch} projection={projection} trace={trace}",
+    "canonicalized": "Canonical JSON: {bytes} bytes, sha256={sha256}",
+    "case_score": "  {case}: {score}/{nominal}  metrics={metrics}",
+    "diagnostics_heading": "Diagnostics",
+    "hint": "{case} hint {level}: {hint}",
+    "hints_heading": "Hints",
+    "invalid": "INVALID {case}  {code}: {message}",
+    "none": "none",
+    "points": "{points} points",
+    "score": "Score {total} (nominal solved {nominal_solved}/{nominal_total})",
+    "solved": "Solved {solved}/{total}: {cases}",
+    "submission_heading": "Submission",
+    "valid": "VALID {case}  score={score}/{nominal}",
+    "visible": "Visible: {cases}"
+  }
+}

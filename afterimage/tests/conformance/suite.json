@@ -1,0 +1,576 @@
+{
+  "format": "afterimage-conformance/0.1",
+  "canonical_vectors": [
+    {"name": "null", "value": null},
+    {"name": "booleans", "value": [false, true]},
+    {"name": "integers", "value": [-17, 0, 42]},
+    {"name": "i64-boundaries", "value": [-9223372036854775808, 9223372036854775807]},
+    {"name": "escapes", "value": "quote:\" slash:\\ line:\n tab:\t ctrl:\u0001"},
+    {"name": "nfc", "value": "e\u0301"},
+    {"name": "map-order", "value": {"z": 1, "a": {"y": 2, "x": 3}}},
+    {"name": "bytes-empty", "value": {"$bytes": ""}},
+    {"name": "bytes-binary", "value": {"$bytes": "AP-Afw"}}
+  ],
+  "cases": [
+    {
+      "name": "positive-recursion",
+      "bundle_digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+      "base_events": [
+        {
+          "label": "seed",
+          "body": {
+            "topic": "graph.seed",
+            "at": 1,
+            "payload": {"node": "A"},
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 0}
+          }
+        },
+        {
+          "label": "edge-ab",
+          "body": {
+            "topic": "graph.edge",
+            "at": 2,
+            "payload": {"from": "A", "to": "B"},
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 1}
+          }
+        },
+        {
+          "label": "edge-bc",
+          "body": {
+            "topic": "graph.edge",
+            "at": 3,
+            "payload": {"from": "B", "to": "C"},
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 2}
+          }
+        }
+      ],
+      "program": {
+        "semantics": "cre/0.1",
+        "strata": [
+          {
+            "index": 0,
+            "rules": [
+              {
+                "id": "graph.01-seed",
+                "positive": [
+                  {"alias": "s", "topic": "graph.seed", "where": ["const", true]}
+                ],
+                "negative": [],
+                "aggregate": [],
+                "distinct": [],
+                "guard": ["const", true],
+                "emit": [
+                  {
+                    "topic": ["const", "graph.reachable"],
+                    "at": ["get", "s", "/at"],
+                    "payload": ["map", "node", ["get", "s", "/payload/node"]],
+                    "parents": []
+                  }
+                ]
+              },
+              {
+                "id": "graph.02-propagate",
+                "positive": [
+                  {"alias": "r", "topic": "graph.reachable", "where": ["const", true]},
+                  {
+                    "alias": "e",
+                    "topic": "graph.edge",
+                    "where": ["eq", ["get", "r", "/payload/node"], ["get", "e", "/payload/from"]]
+                  }
+                ],
+                "negative": [],
+                "aggregate": [],
+                "distinct": [["r", "e"]],
+                "guard": ["const", true],
+                "emit": [
+                  {
+                    "topic": ["const", "graph.reachable"],
+                    "at": ["max", ["get", "r", "/at"], ["get", "e", "/at"]],
+                    "payload": ["map", "node", ["get", "e", "/payload/to"]],
+                    "parents": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "projection": {
+        "id": "graph.nodes",
+        "rows": [
+          {
+            "positive": [
+              {"alias": "r", "topic": "graph.reachable", "where": ["const", true]}
+            ],
+            "negative": [],
+            "aggregate": [],
+            "distinct": [],
+            "guard": ["const", true],
+            "value": ["get", "r", "/payload/node"],
+            "sort": [["get", "r", "/payload/node"]]
+          }
+        ]
+      }
+    },
+    {
+      "name": "negative-and-aggregates",
+      "bundle_digest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "base_events": [
+        {
+          "label": "window",
+          "body": {
+            "topic": "sensor.window",
+            "at": 10,
+            "payload": {"id": "west"},
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 0}
+          }
+        },
+        {
+          "body": {
+            "topic": "sensor.reading",
+            "at": 4,
+            "payload": {"value": 2},
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 1}
+          }
+        },
+        {
+          "body": {
+            "topic": "sensor.reading",
+            "at": 5,
+            "payload": {"value": 3},
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 2}
+          }
+        },
+        {
+          "body": {
+            "topic": "sensor.reading",
+            "at": 6,
+            "payload": {"value": 5},
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 3}
+          }
+        }
+      ],
+      "program": {
+        "semantics": "cre/0.1",
+        "strata": [
+          {
+            "index": 0,
+            "rules": [
+              {
+                "id": "sensor.summary",
+                "positive": [
+                  {"alias": "w", "topic": "sensor.window", "where": ["const", true]}
+                ],
+                "negative": [
+                  {"alias": "d", "topic": "sensor.disabled", "where": ["const", true]}
+                ],
+                "aggregate": [
+                  {
+                    "name": "count",
+                    "op": "count",
+                    "alias": "r1",
+                    "topic": "sensor.reading",
+                    "where": ["const", true]
+                  },
+                  {
+                    "name": "sum",
+                    "op": "sum",
+                    "alias": "r2",
+                    "topic": "sensor.reading",
+                    "where": ["const", true],
+                    "value": ["get", "r2", "/payload/value"]
+                  },
+                  {
+                    "name": "minimum",
+                    "op": "min",
+                    "alias": "r3",
+                    "topic": "sensor.reading",
+                    "where": ["const", true],
+                    "value": ["get", "r3", "/payload/value"]
+                  },
+                  {
+                    "name": "maximum",
+                    "op": "max",
+                    "alias": "r4",
+                    "topic": "sensor.reading",
+                    "where": ["const", true],
+                    "value": ["get", "r4", "/payload/value"]
+                  },
+                  {
+                    "name": "empty_sum",
+                    "op": "sum",
+                    "alias": "z",
+                    "topic": "sensor.missing",
+                    "where": ["const", true],
+                    "value": ["get", "z", "/payload/value"]
+                  }
+                ],
+                "distinct": [],
+                "guard": ["const", true],
+                "emit": [
+                  {
+                    "topic": ["const", "sensor.summary"],
+                    "at": ["get", "w", "/at"],
+                    "payload": [
+                      "map",
+                      "count", ["aggregate", "count"],
+                      "sum", ["aggregate", "sum"],
+                      "min", ["aggregate", "minimum"],
+                      "max", ["aggregate", "maximum"],
+                      "empty_sum", ["aggregate", "empty_sum"]
+                    ],
+                    "parents": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "projection": {
+        "id": "sensor.public-summary",
+        "rows": [
+          {
+            "positive": [
+              {"alias": "s", "topic": "sensor.summary", "where": ["const", true]}
+            ],
+            "negative": [],
+            "aggregate": [],
+            "distinct": [],
+            "guard": ["const", true],
+            "value": ["get", "s", "/payload"],
+            "sort": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "branch-retime",
+      "bundle_digest": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "base_events": [
+        {
+          "label": "request",
+          "body": {
+            "topic": "job.request",
+            "at": 10,
+            "payload": {"name": "alpha"},
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 0}
+          }
+        }
+      ],
+      "operations": [
+        {"kind": "retime", "event": "@request", "at": 7}
+      ],
+      "program": {
+        "semantics": "cre/0.1",
+        "strata": [
+          {
+            "index": 0,
+            "rules": [
+              {
+                "id": "job.deadline",
+                "positive": [
+                  {"alias": "r", "topic": "job.request", "where": ["const", true]}
+                ],
+                "negative": [],
+                "aggregate": [],
+                "distinct": [],
+                "guard": ["const", true],
+                "emit": [
+                  {
+                    "topic": ["const", "job.deadline"],
+                    "at": ["add", ["get", "r", "/at"], ["const", 5]],
+                    "payload": ["map", "name", ["get", "r", "/payload/name"]],
+                    "parents": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "projection": {
+        "id": "job.deadlines",
+        "rows": [
+          {
+            "positive": [
+              {"alias": "d", "topic": "job.deadline", "where": ["const", true]}
+            ],
+            "negative": [],
+            "aggregate": [],
+            "distinct": [],
+            "guard": ["const", true],
+            "value": ["map", "at", ["get", "d", "/at"], "name", ["get", "d", "/payload/name"]],
+            "sort": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "branch-replace-and-inject-order",
+      "bundle_digest": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+      "base_events": [
+        {
+          "label": "config",
+          "body": {
+            "topic": "config.value",
+            "at": 0,
+            "payload": {"name": "alpha", "value": 1},
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 0}
+          }
+        }
+      ],
+      "operations": [
+        {"kind": "inject", "topic": "config.value", "at": 0, "payload": {"name": "beta", "value": 3}, "parents": []},
+        {"kind": "replace", "event": "@config", "pointer": "/payload/value", "value": 2}
+      ],
+      "program": {"semantics": "cre/0.1", "strata": []},
+      "projection": {
+        "id": "config.values",
+        "rows": [
+          {
+            "positive": [
+              {"alias": "c", "topic": "config.value", "where": ["const", true]}
+            ],
+            "negative": [],
+            "aggregate": [],
+            "distinct": [],
+            "guard": ["const", true],
+            "value": ["get", "c", "/payload"],
+            "sort": [["get", "c", "/payload/name"]]
+          }
+        ]
+      }
+    },
+    {
+      "name": "branch-suppression-closure",
+      "bundle_digest": "sha256:6666666666666666666666666666666666666666666666666666666666666666",
+      "base_events": [
+        {
+          "label": "parent",
+          "body": {
+            "topic": "chain.parent",
+            "at": 0,
+            "payload": null,
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 0}
+          }
+        },
+        {
+          "label": "child",
+          "body": {
+            "topic": "chain.child",
+            "at": 0,
+            "payload": null,
+            "parents": ["@parent"],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 1}
+          }
+        }
+      ],
+      "operations": [
+        {"kind": "suppress", "event": "@parent"}
+      ],
+      "program": {"semantics": "cre/0.1", "strata": []},
+      "projection": {
+        "id": "chain.children",
+        "rows": [
+          {
+            "positive": [
+              {"alias": "c", "topic": "chain.child", "where": ["const", true]}
+            ],
+            "negative": [],
+            "aggregate": [],
+            "distinct": [],
+            "guard": ["const", true],
+            "value": ["get", "c", "/id"],
+            "sort": []
+          }
+        ]
+      }
+    },
+    {
+      "name": "arithmetic-overflow",
+      "bundle_digest": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+      "base_events": [
+        {
+          "body": {
+            "topic": "math.start",
+            "at": 0,
+            "payload": null,
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 0}
+          }
+        }
+      ],
+      "program": {
+        "semantics": "cre/0.1",
+        "strata": [
+          {
+            "index": 0,
+            "rules": [
+              {
+                "id": "math.overflow",
+                "positive": [
+                  {"alias": "s", "topic": "math.start", "where": ["const", true]}
+                ],
+                "negative": [],
+                "aggregate": [],
+                "distinct": [],
+                "guard": ["const", true],
+                "emit": [
+                  {
+                    "topic": ["const", "math.result"],
+                    "at": ["const", 0],
+                    "payload": ["mul", ["const", 3037000500], ["const", 3037000500]],
+                    "parents": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "expression-type-error",
+      "bundle_digest": "sha256:7777777777777777777777777777777777777777777777777777777777777777",
+      "base_events": [
+        {
+          "body": {
+            "topic": "type.start",
+            "at": 0,
+            "payload": null,
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 0}
+          }
+        }
+      ],
+      "program": {
+        "semantics": "cre/0.1",
+        "strata": [
+          {
+            "index": 0,
+            "rules": [
+              {
+                "id": "type.invalid-add",
+                "positive": [
+                  {"alias": "s", "topic": "type.start", "where": ["const", true]}
+                ],
+                "negative": [],
+                "aggregate": [],
+                "distinct": [],
+                "guard": ["const", true],
+                "emit": [
+                  {
+                    "topic": ["const", "type.result"],
+                    "at": ["const", 0],
+                    "payload": ["add", ["const", "one"], ["const", 1]],
+                    "parents": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "empty-minimum-error",
+      "bundle_digest": "sha256:8888888888888888888888888888888888888888888888888888888888888888",
+      "base_events": [
+        {
+          "body": {
+            "topic": "aggregate.start",
+            "at": 0,
+            "payload": null,
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 0}
+          }
+        }
+      ],
+      "program": {
+        "semantics": "cre/0.1",
+        "strata": [
+          {
+            "index": 0,
+            "rules": [
+              {
+                "id": "aggregate.empty-min",
+                "positive": [
+                  {"alias": "s", "topic": "aggregate.start", "where": ["const", true]}
+                ],
+                "negative": [],
+                "aggregate": [
+                  {
+                    "name": "minimum",
+                    "op": "min",
+                    "alias": "x",
+                    "topic": "aggregate.absent",
+                    "where": ["const", true],
+                    "value": ["get", "x", "/payload"]
+                  }
+                ],
+                "distinct": [],
+                "guard": ["const", true],
+                "emit": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "derived-resource-limit",
+      "bundle_digest": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+      "limits": {"max_derived_events": 0},
+      "base_events": [
+        {
+          "body": {
+            "topic": "limit.start",
+            "at": 0,
+            "payload": null,
+            "parents": [],
+            "origin": {"kind": "base", "source": "fixture", "sequence": 0}
+          }
+        }
+      ],
+      "program": {
+        "semantics": "cre/0.1",
+        "strata": [
+          {
+            "index": 0,
+            "rules": [
+              {
+                "id": "limit.emit",
+                "positive": [
+                  {"alias": "s", "topic": "limit.start", "where": ["const", true]}
+                ],
+                "negative": [],
+                "aggregate": [],
+                "distinct": [],
+                "guard": ["const", true],
+                "emit": [
+                  {
+                    "topic": ["const", "limit.result"],
+                    "at": ["const", 0],
+                    "payload": ["const", true],
+                    "parents": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.005",
+    "family": "CASCADE",
+    "title": "Priority Queue",
+    "points": 70,
+    "reference_scale": 400000,
+    "requires": {"all": ["case:CASCADE.004"]},
+    "projection": "incident.priority-queue",
+    "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": ["retime", "suppress", "inject"],
+      "max_operations": 1,
+      "weights": {"retime": 1, "suppress": 25, "inject": 16},
+      "topics": ["queue.maintenance-grant", "queue.priority-boost"],
+      "pointers": [],
+      "retime": {"minimum": 8, "maximum": 10}
+    },
+    "author_operation": {"kind": "retime", "target_topic": "queue.maintenance-grant", "at": 9},
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 64, "witness_units": 64},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 12, "max_derived_events": 32, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "queue.policy", "at": 0, "payload": {"queue": "Q-4", "resource": "lift-L2", "rule": "non-preemptive-grant"}, "parents": [], "origin": {"kind": "base", "source": "dispatch-policy", "sequence": 4}},
+    {"topic": "queue.maintenance-grant", "at": 6, "payload": {"queue": "Q-4", "job": "lamp-bank", "declared_priority": 1, "duration": 8, "deadline": 19, "evidence": "grant-204"}, "parents": [], "origin": {"kind": "base", "source": "works-dispatch", "sequence": 204}},
+    {"topic": "queue.medical-transfer", "at": 8, "payload": {"queue": "Q-4", "job": "stretcher-17", "declared_priority": 9, "duration": 3, "deadline": 11, "evidence": "transfer-17"}, "parents": [], "origin": {"kind": "base", "source": "medical-dispatch", "sequence": 17}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "queue.01-non-preemptive-state", "positive": [
+      {"alias": "p", "topic": "queue.policy", "where": ["const", true]},
+      {"alias": "m", "topic": "queue.maintenance-grant", "where": ["eq", ["get", "m", "/payload/queue"], ["get", "p", "/payload/queue"]]},
+      {"alias": "e", "topic": "queue.medical-transfer", "where": ["eq", ["get", "e", "/payload/queue"], ["get", "p", "/payload/queue"]]}
+    ], "negative": [{"alias": "b", "topic": "queue.priority-boost", "where": ["eq", ["get", "b", "/payload/queue"], ["get", "p", "/payload/queue"]]}], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "queue.service-state"], "at": ["max", ["get", "m", "/at"], ["get", "e", "/at"]], "payload": ["map",
+      "queue", ["get", "p", "/payload/queue"],
+      "runtime_first", ["if", ["le", ["get", "m", "/at"], ["get", "e", "/at"]], ["const", "maintenance"], ["const", "medical"]],
+      "public_first", ["const", "medical"],
+      "medical_start", ["if", ["le", ["get", "m", "/at"], ["get", "e", "/at"]], ["add", ["get", "m", "/at"], ["get", "m", "/payload/duration"]], ["get", "e", "/at"]],
+      "medical_complete", ["add", ["if", ["le", ["get", "m", "/at"], ["get", "e", "/at"]], ["add", ["get", "m", "/at"], ["get", "m", "/payload/duration"]], ["get", "e", "/at"]], ["get", "e", "/payload/duration"]],
+      "medical_deadline", ["get", "e", "/payload/deadline"],
+      "maintenance_complete", ["if", ["le", ["get", "m", "/at"], ["get", "e", "/at"]], ["add", ["get", "m", "/at"], ["get", "m", "/payload/duration"]], ["add", ["max", ["get", "m", "/at"], ["add", ["get", "e", "/at"], ["get", "e", "/payload/duration"]]], ["get", "m", "/payload/duration"]]],
+      "maintenance_deadline", ["get", "m", "/payload/deadline"],
+      "evidence_retained", ["const", true],
+      "mode", ["const", "non-preemptive"]
+    ], "parents": []}] }},
+    {"stratum": 0, "rule": {"id": "queue.02-boosted-state", "positive": [
+      {"alias": "p", "topic": "queue.policy", "where": ["const", true]},
+      {"alias": "m", "topic": "queue.maintenance-grant", "where": ["eq", ["get", "m", "/payload/queue"], ["get", "p", "/payload/queue"]]},
+      {"alias": "e", "topic": "queue.medical-transfer", "where": ["eq", ["get", "e", "/payload/queue"], ["get", "p", "/payload/queue"]]},
+      {"alias": "b", "topic": "queue.priority-boost", "where": ["eq", ["get", "b", "/payload/queue"], ["get", "p", "/payload/queue"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "queue.service-state"], "at": ["max", ["get", "m", "/at"], ["get", "e", "/at"]], "payload": ["map",
+      "queue", ["get", "p", "/payload/queue"],
+      "runtime_first", ["const", "medical"],
+      "public_first", ["const", "medical"],
+      "medical_start", ["get", "e", "/at"],
+      "medical_complete", ["add", ["get", "e", "/at"], ["get", "e", "/payload/duration"]],
+      "medical_deadline", ["get", "e", "/payload/deadline"],
+      "maintenance_complete", ["add", ["max", ["get", "m", "/at"], ["add", ["get", "e", "/at"], ["get", "e", "/payload/duration"]]], ["get", "m", "/payload/duration"]],
+      "maintenance_deadline", ["get", "m", "/payload/deadline"],
+      "evidence_retained", ["const", true],
+      "mode", ["const", "priority-boost"]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "queue.03-contract-summary", "positive": [{"alias": "s", "topic": "queue.service-state", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "s", "/at"], "payload": ["map",
+      "safe", ["and", ["le", ["get", "s", "/payload/medical_complete"], ["get", "s", "/payload/medical_deadline"]], ["le", ["get", "s", "/payload/maintenance_complete"], ["get", "s", "/payload/maintenance_deadline"]]],
+      "runtime_first", ["get", "s", "/payload/runtime_first"],
+      "public_first", ["get", "s", "/payload/public_first"],
+      "medical_start", ["get", "s", "/payload/medical_start"],
+      "medical_complete", ["get", "s", "/payload/medical_complete"],
+      "medical_deadline", ["get", "s", "/payload/medical_deadline"],
+      "maintenance_complete", ["get", "s", "/payload/maintenance_complete"],
+      "maintenance_deadline", ["get", "s", "/payload/maintenance_deadline"],
+      "evidence_retained", ["get", "s", "/payload/evidence_retained"],
+      "mode", ["get", "s", "/payload/mode"]
+    ], "parents": []}] }},
+    {"stratum": 2, "rule": {"id": "queue.04-first-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map",
+      "code", ["if", ["gt", ["get", "s", "/payload/medical_complete"], ["get", "s", "/payload/medical_deadline"]], ["const", "medical_deadline_missed"], ["const", "maintenance_deadline_missed"]],
+      "runtime_first", ["get", "s", "/payload/runtime_first"],
+      "public_first", ["get", "s", "/payload/public_first"],
+      "medical_complete", ["get", "s", "/payload/medical_complete"],
+      "medical_deadline", ["get", "s", "/payload/medical_deadline"]
+    ], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.priority-queue", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"contracts": [{"safe": false, "public_first": "medical", "runtime_first": "maintenance", "medical_complete": 17, "medical_deadline": 11}], "note": "The priority dashboard is truthful about labels but not about the non-preemptive grant already held by maintenance."},
+  "story": {
+    "premise": "The Cold Platform correction exposes a second mismatch in the same operations room. The public queue ranks a medical lift at priority 9 above lamp maintenance at priority 1, yet the executor honors a non-preemptive grant made two ticks earlier. Capacity is sufficient and both jobs must remain in the record; repair the smallest authorized cause.",
+    "submission": "Submit exactly one authorized intervention plus the replayed public/runtime order, both completion deadlines, evidence-retention flag, branch, and projection digest.",
+    "diagnostics": "A rejection identifies the first missed service deadline and reports both public and runtime first jobs, without recommending a queue operation.",
+    "hints": ["Declared priority affects the dashboard; the lift itself is governed by grant time.", "Deleting maintenance destroys a required service record, while an explicit priority boost is valid but expensive.", "Move the low-priority grant just beyond the medical arrival; an equal tick still leaves the existing grant first."]
+  }
+}

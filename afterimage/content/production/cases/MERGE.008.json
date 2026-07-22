@@ -1,0 +1,27 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.008", "family": "MERGE", "title": "Conflict Component", "points": 110, "reference_scale": 12000,
+    "requires": {"all": ["case:MERGE.007", "case:CASCADE.012"]},
+    "projection": "merge.conflict-component", "validator_template": "merge-minimal-conflict-certificate-claim/0.1",
+    "merge_contract": {"task": "minimal-conflict", "minimum_size": 2, "maximum_size": 2},
+    "author_answer": {
+      "accepted": [{"key": "A1", "at": 5}, {"key": "A2", "at": 10}, {"key": "A3", "at": 15}],
+      "rejected": [{"key": "X1", "reason": "conflict_set"}, {"key": "X2", "reason": "conflict_set"}],
+      "certificate": [{"before": "A1", "after": "A2", "minimum_gap": 1}, {"before": "A2", "after": "A3", "minimum_gap": 1}]
+    },
+    "metric_bounds": {"temporal_displacement": 16, "certificate_units": 32},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"label": "A1", "body": {"topic": "merge.record", "at": 5, "payload": {"key": "A1", "local_time": 5, "offset_min": 0, "offset_max": 0, "source": "public-audit", "sequence": 1, "weight": 8, "kind": "bridge-command"}, "parents": [], "origin": {"kind": "base", "source": "public-audit", "sequence": 1}}},
+    {"label": "A2", "body": {"topic": "merge.record", "at": 10, "payload": {"key": "A2", "local_time": 10, "offset_min": 0, "offset_max": 0, "source": "public-audit", "sequence": 2, "weight": 8, "kind": "traffic-release"}, "parents": [], "origin": {"kind": "base", "source": "public-audit", "sequence": 2}}},
+    {"label": "A3", "body": {"topic": "merge.record", "at": 15, "payload": {"key": "A3", "local_time": 15, "offset_min": 0, "offset_max": 0, "source": "public-audit", "sequence": 3, "weight": 8, "kind": "hospital-arrival"}, "parents": [], "origin": {"kind": "base", "source": "public-audit", "sequence": 3}}},
+    {"label": "X1", "body": {"topic": "merge.record", "at": 8, "payload": {"key": "X1", "local_time": 8, "offset_min": 0, "offset_max": 0, "source": "suspect-terminal", "sequence": 1, "weight": 1, "kind": "sent"}, "parents": [], "origin": {"kind": "base", "source": "suspect-terminal", "sequence": 1}}},
+    {"label": "X2", "body": {"topic": "merge.record", "at": 7, "payload": {"key": "X2", "local_time": 7, "offset_min": 0, "offset_max": 0, "source": "suspect-terminal", "sequence": 2, "weight": 1, "kind": "acknowledged"}, "parents": [], "origin": {"kind": "base", "source": "suspect-terminal", "sequence": 2}}}
+  ],
+  "rules": [],
+  "projection": {"id": "merge.conflict-component", "rows": [{"positive": [{"alias": "r", "topic": "merge.record", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map", "event", ["get", "r", "/id"], "key", ["get", "r", "/payload/key"], "source", ["get", "r", "/payload/source"], "sequence", ["get", "r", "/payload/sequence"], "local_time", ["get", "r", "/payload/local_time"], "offset_min", ["get", "r", "/payload/offset_min"], "offset_max", ["get", "r", "/payload/offset_max"], "weight", ["get", "r", "/payload/weight"], "kind", ["get", "r", "/payload/kind"], "parents", ["get", "r", "/parents"]], "sort": [["get", "r", "/payload/source"], ["get", "r", "/payload/sequence"]]}]},
+  "worked_value": {"conflict": ["X1@8", "X2@7"], "note": "Source order requires X1 + 1 <= X2. Together the pair is impossible; remove either member and the remaining singleton is feasible."},
+  "story": {"premise": "The synchronized departmental audit is consistent, but one terminal contributes two lines whose source sequence runs backward in global time. Continuity needs the smallest self-sufficient explanation of the fault, not a broad deletion of every nearby record.", "submission": "Retain the public audit and reject exactly one inclusion-minimal conflict component with the exact active-order certificate.", "diagnostics": "The verifier distinguishes infeasibility, public size bounds, inclusion minimality, rejection reason, and exact certificate coverage.", "hints": ["Do not reject a record merely because it is near the anomaly.", "Test the suspect pair jointly.", "Then restore each member in isolation; both singleton histories must be feasible."]}
+}

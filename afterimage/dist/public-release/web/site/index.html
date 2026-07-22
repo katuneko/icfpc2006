@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-locale="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08131f">
+  <meta name="description" content="Build a causal evaluator. Debug tomorrow. Afterimage is a 75-case offline programming-puzzle world.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Afterimage: The Counterfactual City">
+  <meta property="og:description" content="Build a causal evaluator. Debug tomorrow.">
+  <meta property="og:image" content="../assets/social/afterimage-og-en.png">
+  <title>Afterimage: The Counterfactual City</title>
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="Afterimage home">
+      <img src="../assets/brand/wordmark-light.svg" width="520" height="120" alt="Afterimage: The Counterfactual City">
+    </a>
+    <nav class="locale-switcher" aria-label="Language">
+      <button type="button" data-locale-button="en" aria-pressed="true">EN</button>
+      <button type="button" data-locale-button="ja" aria-pressed="false">日本語</button>
+      <button type="button" data-locale-button="zh-Hans" aria-pressed="false">简体</button>
+      <button type="button" data-locale-button="de" aria-pressed="false">DE</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-art" role="img" aria-label="A midnight coastal city crossed by two causal routes."></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-copy">
+        <p class="kicker" data-copy="kicker">A programming puzzle world in 75 cases</p>
+        <h1 id="hero-title" data-copy="headline">Build a causal evaluator.<br>Debug tomorrow.</h1>
+        <p class="lead" data-copy="lead">At midnight, a city receives a complete record of tomorrow's disasters. Build the engine that opens it, repair the smallest causes, and discover who decided that tomorrow was allowed to have only one history.</p>
+        <div class="actions">
+          <a class="button button-primary" href="../downloads/afterimage-player-kit-2.1.zip" data-copy="primaryCta">Download the public kit</a>
+          <a class="button button-secondary" href="../release/PLAYER_QUICKSTART.md" data-copy="secondaryCta">Read the quickstart</a>
+        </div>
+        <p class="integrity"><span></span><code>BundleId sha256:517038cd…0514</code></p>
+      </div>
+    </section>
+
+    <section class="intro section-grid" aria-labelledby="world-title">
+      <div class="section-index" aria-hidden="true">00:00</div>
+      <div>
+        <p class="eyebrow">CONTINUITY DESK / INTAKE</p>
+        <h2 id="world-title" data-copy="sectionWorld">The record arrives at midnight</h2>
+        <p class="section-lead" data-copy="sectionWorldBody">You join the municipal Continuity Desk. Every incident is an immutable causal record; every proposed repair creates a replayable branch. Correctness opens the city. Better explanations improve your score.</p>
+      </div>
+      <div class="record-card" aria-label="Public record summary">
+        <div class="record-row"><span>ARCHIVE</span><strong>2.1 / VERIFIED</strong></div>
+        <div class="record-row"><span>CASES</span><strong>75</strong></div>
+        <div class="record-row"><span>POINTS</span><strong>10,000</strong></div>
+        <div class="record-row"><span>HISTORIES</span><strong class="dual">MORE THAN ONE</strong></div>
+        <div class="record-tracks" aria-hidden="true"><i></i><i></i><b></b></div>
+      </div>
+    </section>
+
+    <section class="families" aria-labelledby="families-title">
+      <div class="section-heading">
+        <p class="eyebrow">CASE CATALOG / PUBLIC</p>
+        <h2 id="families-title" data-copy="sectionFamilies">One city, eight ways to reason</h2>
+      </div>
+      <div class="family-grid" id="family-grid">
+        <article><span>01</span><h3>ORIENT</h3><p>Learn the record and witness loop</p><b>5</b></article>
+        <article><span>02</span><h3>CASCADE</h3><p>Change the smallest cause</p><b>24</b></article>
+        <article><span>03</span><h3>MERGE</h3><p>Reconstruct conflicting histories</p><b>15</b></article>
+        <article><span>04</span><h3>PULSE</h3><p>Program bounded event streams</p><b>14</b></article>
+        <article><span>05</span><h3>MOSAIC</h3><p>Rebuild supported topology</p><b>11</b></article>
+        <article><span>06</span><h3>LENS</h3><p>Synchronize without forgetting</p><b>3</b></article>
+        <article><span>07</span><h3>COVENANT</h3><p>Prove local policies globally</p><b>2</b></article>
+        <article><span>08</span><h3>PARADOX</h3><p>Audit uniqueness</p><b>1</b></article>
+      </div>
+    </section>
+
+    <section class="loop section-grid" aria-labelledby="loop-title">
+      <div class="section-index" aria-hidden="true">REPLAY</div>
+      <div>
+        <p class="eyebrow">PARTICIPANT LOOP / DETERMINISTIC</p>
+        <h2 id="loop-title" data-copy="sectionLoop">Build. Replay. Prove.</h2>
+        <p class="section-lead" data-copy="loopBody">Implement the Causal Reduction Engine, inspect the public record, construct bounded programs or certificates, and submit canonical witnesses to a deterministic offline verifier.</p>
+      </div>
+      <pre class="terminal" aria-label="Example Afterimage commands"><code><span>$</span> player.py inspect desk ORIENT.001
+<em>case visible / task letter loaded</em>
+<span>$</span> player.py verify desk witness.json
+<strong>valid / receipt retained / unlock granted</strong>
+<span>$</span> player.py replay desk
+<strong>byte-for-byte receipt reproduced</strong></code></pre>
+    </section>
+
+    <section class="facts" aria-labelledby="facts-title">
+      <div class="facts-art" role="img" aria-label="A portrait view of the city emerging from municipal maps."></div>
+      <div class="facts-copy">
+        <p class="eyebrow">RELEASE / 2.1</p>
+        <h2 id="facts-title" data-copy="sectionFacts">Public release facts</h2>
+        <ul id="fact-list">
+          <li>75 scored cases</li>
+          <li>10,000 nominal points</li>
+          <li>8 problem families</li>
+          <li>English, Japanese, Simplified Chinese, German</li>
+          <li>Python 3.11+, no third-party packages</li>
+          <li>Offline, deterministic verification</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-title">
+      <img src="../assets/brand/mark-mono-light.svg" width="88" height="88" alt="">
+      <p class="eyebrow">THE RECORD IS READY</p>
+      <h2 id="final-title" data-copy="headline">Build a causal evaluator. Debug tomorrow.</h2>
+      <a class="button button-primary" href="../downloads/afterimage-player-kit-2.1.zip" data-copy="downloadLabel">Afterimage public player kit 2.1</a>
+    </section>
+  </main>
+
+  <footer>
+    <p data-copy="footer">One immutable puzzle world. Four presentation languages. Every receipt remains canonical.</p>
+    <p><a href="../press/FAQ.md">FAQ</a> · <a href="../press/SPOILER_GUIDE.md">Spoiler guide</a> · <a href="../press/FACT_SHEET.md">Fact sheet</a></p>
+  </footer>
+  <p class="load-status" id="load-status" role="status" aria-live="polite"></p>
+</body>
+</html>

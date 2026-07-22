@@ -1,0 +1,453 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.013",
+    "family": "PULSE",
+    "title": "Circuit Breaker",
+    "points": 150,
+    "reference_scale": 2100000,
+    "requires": {
+      "all": [
+        "case:PULSE.012",
+        "case:CASCADE.019"
+      ]
+    },
+    "projection": "pulse.circuit-breaker",
+    "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [
+        {
+          "name": "mode",
+          "type": "int",
+          "initial": 0
+        },
+        {
+          "name": "failures",
+          "type": "int",
+          "initial": 0
+        },
+        {
+          "name": "opened_at",
+          "type": "int",
+          "initial": -2
+        }
+      ],
+      "handlers": [
+        {
+          "id": "circuit.request",
+          "on": "hearing.request",
+          "actions": [
+            {
+              "op": "when",
+              "condition": [
+                "eq",
+                [
+                  "cell",
+                  "mode"
+                ],
+                [
+                  "const",
+                  0
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "hearing.admit",
+                  "payload": [
+                    "event",
+                    "payload"
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "mode"
+                  ],
+                  [
+                    "const",
+                    1
+                  ]
+                ],
+                [
+                  "le",
+                  [
+                    "cell",
+                    "opened_at"
+                  ],
+                  [
+                    "sub",
+                    [
+                      "event",
+                      "at"
+                    ],
+                    [
+                      "const",
+                      2
+                    ]
+                  ]
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "emit",
+                  "topic": "hearing.probe",
+                  "payload": [
+                    "event",
+                    "payload"
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "mode",
+                  "value": [
+                    "const",
+                    2
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "circuit.failure",
+          "on": "hearing.failure",
+          "actions": [
+            {
+              "op": "when",
+              "condition": [
+                "eq",
+                [
+                  "cell",
+                  "mode"
+                ],
+                [
+                  "const",
+                  2
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "set",
+                  "cell": "mode",
+                  "value": [
+                    "const",
+                    1
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "opened_at",
+                  "value": [
+                    "event",
+                    "at"
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "eq",
+                [
+                  "cell",
+                  "mode"
+                ],
+                [
+                  "const",
+                  0
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "set",
+                  "cell": "failures",
+                  "value": [
+                    "add",
+                    [
+                      "cell",
+                      "failures"
+                    ],
+                    [
+                      "const",
+                      1
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "and",
+                [
+                  "eq",
+                  [
+                    "cell",
+                    "mode"
+                  ],
+                  [
+                    "const",
+                    0
+                  ]
+                ],
+                [
+                  "le",
+                  [
+                    "const",
+                    2
+                  ],
+                  [
+                    "cell",
+                    "failures"
+                  ]
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "set",
+                  "cell": "mode",
+                  "value": [
+                    "const",
+                    1
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "failures",
+                  "value": [
+                    "const",
+                    0
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "opened_at",
+                  "value": [
+                    "event",
+                    "at"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "circuit.success",
+          "on": "hearing.success",
+          "actions": [
+            {
+              "op": "when",
+              "condition": [
+                "eq",
+                [
+                  "cell",
+                  "mode"
+                ],
+                [
+                  "const",
+                  2
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "set",
+                  "cell": "mode",
+                  "value": [
+                    "const",
+                    0
+                  ]
+                },
+                {
+                  "op": "set",
+                  "cell": "failures",
+                  "value": [
+                    "const",
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "when",
+              "condition": [
+                "eq",
+                [
+                  "cell",
+                  "mode"
+                ],
+                [
+                  "const",
+                  0
+                ]
+              ],
+              "actions": [
+                {
+                  "op": "set",
+                  "cell": "failures",
+                  "value": [
+                    "const",
+                    0
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "author_invariant": "mode 0/1/2 means closed/open/half-open. failures counts only consecutive closed-state failures; opened_at anchors a two-tick cooldown. The first eligible request is the sole probe, whose success closes and whose failure reopens the circuit.",
+    "pulse_contract": {
+      "task": "circuit-breaker",
+      "input_topics": {
+        "request": "hearing.request",
+        "failure": "hearing.failure",
+        "success": "hearing.success"
+      },
+      "timer_topic": "pulse.timer",
+      "output_topics": {
+        "admit": "hearing.admit",
+        "probe": "hearing.probe"
+      },
+      "failure_threshold": 2,
+      "cooldown_ticks": 2,
+      "horizon": 4,
+      "max_commands": 4,
+      "named_fixtures": [
+        [
+          {
+            "at": 0,
+            "source": "failure"
+          },
+          {
+            "at": 1,
+            "source": "failure"
+          },
+          {
+            "at": 2,
+            "source": "request"
+          },
+          {
+            "at": 3,
+            "source": "request"
+          }
+        ],
+        [
+          {
+            "at": 0,
+            "source": "failure"
+          },
+          {
+            "at": 0,
+            "source": "success"
+          },
+          {
+            "at": 1,
+            "source": "failure"
+          },
+        {
+          "at": 1,
+          "source": "failure"
+        }
+        ],
+        [
+          {
+            "at": 0,
+            "source": "failure"
+          },
+          {
+            "at": 1,
+            "source": "failure"
+          },
+          {
+            "at": 3,
+            "source": "request"
+          },
+          {
+            "at": 3,
+            "source": "success"
+          }
+        ]
+      ],
+      "limits": {
+        "max_program_bytes": 8192,
+        "max_state_cells": 3,
+        "max_steps": 128,
+        "max_queue": 16,
+        "max_scheduled_events": 4
+      }
+    },
+    "metric_bounds": {
+      "worst_latency": 2,
+      "live_state_cells": 3
+    },
+    "limits": {
+      "max_witness_bytes": 196608,
+      "replay": {
+        "max_base_events": 4,
+        "max_derived_events": 4,
+        "max_bindings_tested": 64,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [],
+  "rules": [],
+  "projection": {
+    "id": "pulse.circuit-breaker",
+    "rows": []
+  },
+  "worked_value": {
+    "input": [
+      {
+        "at": 0,
+        "source": "failure"
+      },
+      {
+        "at": 1,
+        "source": "failure"
+      },
+      {
+        "at": 2,
+        "source": "request"
+      },
+      {
+        "at": 3,
+        "source": "request"
+      }
+    ],
+    "outputs": [
+      {
+        "at": 3,
+        "route": "probe"
+      }
+    ],
+    "note": "The request one tick after opening is blocked; the request at the two-tick boundary becomes the one half-open probe."
+  },
+  "story": {
+    "premise": "Publication of the correction triggers a surge of hearing queries against an unstable archive service. Two consecutive failures must open the circuit. Silence during cooldown is deliberate; after exactly two ticks, only one request may probe the archive until a real success or failure resolves it.",
+    "submission": "Submit a three-cell closed/open/half-open controller. Preserve admitted request payloads, reset closed-state failure streaks on success, and never admit a second half-open request.",
+    "diagnostics": "The exhaustive oracle covers 3,478 bounded command streams and separates rolling failure streaks, cooldown boundaries, half-open singleton probes, probe failure, and recovery.",
+    "hints": [
+      "Opening time matters only while open.",
+      "A probe is a state transition, not an ordinary admission.",
+      "Success before a probe resets a closed failure streak but cannot close an already open circuit."
+    ]
+  }
+}

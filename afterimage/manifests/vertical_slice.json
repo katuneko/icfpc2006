@@ -1,0 +1,184 @@
+{
+  "format": "afterimage-slice/0.1",
+  "title": "Afterimage vertical slice",
+  "total_cases": 12,
+  "total_nominal_points": 1200,
+  "critical_path_target_minutes": 180,
+  "full_slice_target_minutes": 360,
+  "cases": [
+    {
+      "id": "ORIENT.001",
+      "family": "ORIENT",
+      "title": "The First Bell",
+      "points": 40,
+      "reference_scale": 16,
+      "difficulty": 1,
+      "expected_minutes": 15,
+      "requires": {"all": []},
+      "metrics": ["wrong_or_redundant_claims", "witness_units"],
+      "aha": "A derived alarm is identified by its content and provenance, not by processing order."
+    },
+    {
+      "id": "ORIENT.002",
+      "family": "ORIENT",
+      "title": "No Effect Before Cause",
+      "points": 50,
+      "reference_scale": 24,
+      "difficulty": 1,
+      "expected_minutes": 20,
+      "requires": {"all": ["case:ORIENT.001"]},
+      "metrics": ["wrong_or_redundant_claims", "witness_units"],
+      "aha": "Logical time does not replace the causal parent relation; same-time events still have a partial order."
+    },
+    {
+      "id": "ORIENT.003",
+      "family": "ORIENT",
+      "title": "What the Camera Saw",
+      "points": 60,
+      "reference_scale": 24,
+      "difficulty": 1,
+      "expected_minutes": 15,
+      "requires": {"all": ["case:ORIENT.001"]},
+      "metrics": ["wrong_or_redundant_claims", "witness_units"],
+      "aha": "The projected report is a programmatically selected view, not the full active state."
+    },
+    {
+      "id": "ORIENT.004",
+      "family": "ORIENT",
+      "title": "The Road Not Taken",
+      "points": 70,
+      "reference_scale": 32,
+      "difficulty": 2,
+      "expected_minutes": 25,
+      "requires": {"any": ["case:ORIENT.002", "case:ORIENT.003"]},
+      "metrics": ["wrong_or_redundant_claims", "witness_units"],
+      "aha": "A counterfactual changes base causes and recomputes all consequences; derived events are never edited directly."
+    },
+    {
+      "id": "ORIENT.005",
+      "family": "ORIENT",
+      "title": "A Reproducible Claim",
+      "points": 80,
+      "reference_scale": 40,
+      "difficulty": 2,
+      "expected_minutes": 25,
+      "requires": {
+        "at_least": {
+          "count": 2,
+          "of": ["case:ORIENT.002", "case:ORIENT.003", "case:ORIENT.004"]
+        }
+      },
+      "metrics": ["wrong_or_redundant_claims", "witness_units"],
+      "aha": "A claim is portable only when it binds the bundle, parent branch, intervention, and recomputed digests."
+    },
+    {
+      "id": "CASCADE.001",
+      "family": "CASCADE",
+      "title": "Late Green",
+      "points": 80,
+      "reference_scale": 400000,
+      "difficulty": 1,
+      "expected_minutes": 20,
+      "requires": {
+        "all": ["case:ORIENT.001"],
+        "at_least": {
+          "count": 1,
+          "of": ["case:ORIENT.002", "case:ORIENT.003", "case:ORIENT.004", "case:ORIENT.005"]
+        }
+      },
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "The smallest safe change is to move one cause inside a phase window, not to override the downstream alarm."
+    },
+    {
+      "id": "MERGE.001",
+      "family": "MERGE",
+      "title": "Three Clocks",
+      "points": 120,
+      "reference_scale": 900000,
+      "difficulty": 2,
+      "expected_minutes": 30,
+      "requires": {"all": ["case:ORIENT.002"]},
+      "metrics": ["rejected_weight", "temporal_displacement", "certificate_units"],
+      "aha": "Clock readings define intervals, while message edges define order; solve the difference constraints before choosing rejections."
+    },
+    {
+      "id": "PULSE.001",
+      "family": "PULSE",
+      "title": "One Bell",
+      "points": 150,
+      "reference_scale": 700000,
+      "difficulty": 2,
+      "expected_minutes": 35,
+      "requires": {"all": ["case:ORIENT.002"]},
+      "metrics": ["program_bytes", "worst_latency", "live_state_cells"],
+      "aha": "Debounce is a temporal state invariant; one remembered deadline can replace a history of seen pulses."
+    },
+    {
+      "id": "CASCADE.002",
+      "family": "CASCADE",
+      "title": "Dry Hydrant",
+      "points": 100,
+      "reference_scale": 1200000,
+      "difficulty": 2,
+      "expected_minutes": 30,
+      "requires": {
+        "all": ["case:CASCADE.001"],
+        "at_least": {
+          "count": 1,
+          "of": ["case:MERGE.001", "case:PULSE.001"]
+        }
+      },
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "A contradictory pressure reading is evidence about sensor latency; deleting it hides the constraint instead of repairing the water path."
+    },
+    {
+      "id": "MOSAIC.001",
+      "family": "MOSAIC",
+      "title": "Four Corners",
+      "points": 130,
+      "reference_scale": 850000,
+      "difficulty": 2,
+      "expected_minutes": 35,
+      "requires": {
+        "all": ["case:ORIENT.003"],
+        "at_least": {
+          "count": 1,
+          "of": ["case:MERGE.001", "case:PULSE.001"]
+        }
+      },
+      "metrics": ["unexplained_weight", "graph_size", "certificate_units"],
+      "aha": "Overlap labels are only locally meaningful; invariant adjacency signatures reveal the shared global junctions."
+    },
+    {
+      "id": "LENS.001",
+      "family": "LENS",
+      "title": "Two Addresses",
+      "points": 180,
+      "reference_scale": 1000000,
+      "difficulty": 3,
+      "expected_minutes": 50,
+      "requires": {"all": ["case:CASCADE.002", "case:ORIENT.003"]},
+      "metrics": ["program_nodes", "auxiliary_schema_cells", "worst_reductions"],
+      "aha": "A lawful round trip needs explicit complement data for apartment and provenance fields the route-code view cannot represent."
+    },
+    {
+      "id": "CASCADE.003",
+      "family": "CASCADE",
+      "title": "Tomorrow, Redacted",
+      "points": 140,
+      "reference_scale": 1800000,
+      "difficulty": 3,
+      "expected_minutes": 40,
+      "requires": {
+        "all": ["case:CASCADE.002", "case:ORIENT.003"],
+        "at_least": {
+          "count": 1,
+          "of": ["case:MERGE.001", "case:PULSE.001", "case:MOSAIC.001", "case:LENS.001"]
+        }
+      },
+      "metrics": ["intervention_weight", "causal_footprint", "witness_units"],
+      "aha": "The apparently impossible evacuation is caused by a projection rule that suppresses a valid relay event, not by a missing physical route."
+    }
+  ],
+  "narrative_reveal_case": "CASCADE.003"
+}

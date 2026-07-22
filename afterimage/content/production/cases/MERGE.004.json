@@ -1,0 +1,68 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.004",
+    "family": "MERGE",
+    "title": "Compensating Transfer",
+    "points": 90,
+    "reference_scale": 36000,
+    "requires": {"all": ["case:MERGE.003"]},
+    "projection": "merge.compensating-transfer",
+    "validator_template": "merge-certificate-claim/0.1",
+    "author_answer": {
+      "accepted": [
+        {"key": "I1", "at": 5},
+        {"key": "T1", "at": 8},
+        {"key": "R1", "at": 10},
+        {"key": "C1", "at": 13},
+        {"key": "S1", "at": 16}
+      ],
+      "rejected": [
+        {"key": "B1", "reason": "inconsistent"}
+      ],
+      "certificate": [
+        {"before": "I1", "after": "T1", "minimum_gap": 1},
+        {"before": "T1", "after": "R1", "minimum_gap": 1},
+        {"before": "R1", "after": "C1", "minimum_gap": 1},
+        {"before": "C1", "after": "S1", "minimum_gap": 1}
+      ]
+    },
+    "metric_bounds": {"temporal_displacement": 18, "certificate_units": 18},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"label": "I1", "body": {"topic": "merge.record", "at": 5, "payload": {"key": "I1", "local_time": 105, "offset_min": 99, "offset_max": 101, "source": "clinic-ledger", "sequence": 1, "weight": 7, "transaction": "energy-credit-12", "kind": "transfer-authorized", "amount": 7, "compensates": null}, "parents": [], "origin": {"kind": "base", "source": "clinic-ledger", "sequence": 1}}},
+    {"label": "T1", "body": {"topic": "merge.record", "at": 8, "payload": {"key": "T1", "local_time": 208, "offset_min": 199, "offset_max": 201, "source": "microgrid-ledger", "sequence": 1, "weight": 7, "transaction": "energy-credit-12", "kind": "transfer-committed", "amount": 7, "compensates": null}, "parents": ["@I1"], "origin": {"kind": "base", "source": "microgrid-ledger", "sequence": 1}}},
+    {"label": "R1", "body": {"topic": "merge.record", "at": 10, "payload": {"key": "R1", "local_time": 10, "offset_min": -1, "offset_max": 1, "source": "traffic-ledger", "sequence": 1, "weight": 8, "transaction": "energy-credit-12", "kind": "transfer-applied", "amount": 7, "compensates": null}, "parents": ["@T1"], "origin": {"kind": "base", "source": "traffic-ledger", "sequence": 1}}},
+    {"label": "B1", "body": {"topic": "merge.record", "at": 11, "payload": {"key": "B1", "local_time": 109, "offset_min": 100, "offset_max": 100, "source": "operator-console", "sequence": 1, "weight": 1, "transaction": "energy-credit-12", "kind": "rollback-claimed", "amount": -7, "compensates": null}, "parents": ["@R1"], "origin": {"kind": "base", "source": "operator-console", "sequence": 1}}},
+    {"label": "C1", "body": {"topic": "merge.record", "at": 13, "payload": {"key": "C1", "local_time": 313, "offset_min": 299, "offset_max": 301, "source": "settlement-ledger", "sequence": 1, "weight": 8, "transaction": "energy-credit-12", "kind": "compensation-committed", "amount": -7, "compensates": "T1"}, "parents": ["@R1"], "origin": {"kind": "base", "source": "settlement-ledger", "sequence": 1}}},
+    {"label": "S1", "body": {"topic": "merge.record", "at": 16, "payload": {"key": "S1", "local_time": 16, "offset_min": -1, "offset_max": 1, "source": "audit-ledger", "sequence": 1, "weight": 7, "transaction": "energy-credit-12", "kind": "compensation-settled", "amount": 0, "compensates": null}, "parents": ["@C1"], "origin": {"kind": "base", "source": "audit-ledger", "sequence": 1}}}
+  ],
+  "rules": [],
+  "projection": {"id": "merge.compensating-transfer", "rows": [{"positive": [{"alias": "r", "topic": "merge.record", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map",
+    "event", ["get", "r", "/id"],
+    "key", ["get", "r", "/payload/key"],
+    "source", ["get", "r", "/payload/source"],
+    "sequence", ["get", "r", "/payload/sequence"],
+    "local_time", ["get", "r", "/payload/local_time"],
+    "offset_min", ["get", "r", "/payload/offset_min"],
+    "offset_max", ["get", "r", "/payload/offset_max"],
+    "weight", ["get", "r", "/payload/weight"],
+    "transaction", ["get", "r", "/payload/transaction"],
+    "kind", ["get", "r", "/payload/kind"],
+    "amount", ["get", "r", "/payload/amount"],
+    "compensates", ["get", "r", "/payload/compensates"],
+    "parents", ["get", "r", "/parents"]
+  ], "sort": [["get", "r", "/at"], ["get", "r", "/payload/key"]]}]},
+  "worked_value": {"accepted_history": ["I1", "T1", "R1", "C1", "S1"], "rejected_claim": "B1", "net_amount": 0, "note": "The applied transfer remains in history. Its correction is a later equal-and-opposite compensation; the claimed rollback cannot occur after a parent whose clock interval begins later."},
+  "story": {
+    "premise": "The islanded microgrid granted seven emergency energy credits to the traffic controller, then the clinic reclaimed the same amount after mains service returned. One operator console says it rolled the original transfer back. The receiving ledger says the transfer had already been applied. Preserve an auditable history that explains the zero net balance without rewriting the past.",
+    "submission": "Classify every record, choose an in-range global time for each accepted record, and submit the exact causal certificate. A zero balance is not enough: the archive must distinguish an erased transfer from a later compensation.",
+    "diagnostics": "Clock intervals, explicit parents, source order, and rejection justification are checked separately. A rollback claim whose only possible time precedes its applied-transfer parent is inconsistent even when its amount would balance the ledger.",
+    "hints": ["Net arithmetic cannot tell rollback from compensation; causal order can.", "The receiving ledger makes the original transfer part of the public history.", "Keep the committed and applied transfer, keep the equal-and-opposite compensation, and reject the console claim whose clock interval cannot follow its parent."]
+  }
+}

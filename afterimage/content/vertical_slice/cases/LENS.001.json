@@ -1,0 +1,65 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "LENS.001",
+    "family": "LENS",
+    "title": "Two Addresses",
+    "points": 180,
+    "reference_scale": 1000000,
+    "requires": {"all": ["case:CASCADE.002", "case:ORIENT.003"]},
+    "projection": "lens.two-addresses",
+    "validator_template": "lens-law-claim/0.1",
+    "author_program": {
+      "format": "afterimage-lens/0.1",
+      "complement_schema": [
+        {"name": "unit", "type": "option-text"},
+        {"name": "provenance", "type": "text-list"},
+        {"name": "boundary_street", "type": "text"}
+      ],
+      "get": [
+        {"op": "forward_address", "table": "addresses"},
+        {"op": "encode_entrance", "table": "entrances"}
+      ],
+      "put": [
+        {"op": "reverse_address", "table": "addresses", "disambiguation": "boundary_street"},
+        {"op": "decode_entrance", "table": "entrances"},
+        {"op": "restore", "fields": ["unit", "provenance"]}
+      ]
+    },
+    "lens_contract": {
+      "addresses": [
+        {"street": "Oak Avenue", "number": 10, "segment_id": "S-OAK", "offset": 10},
+        {"street": "Oak Avenue", "number": 20, "segment_id": "S-OAK", "offset": 20},
+        {"street": "Elm Street", "number": 5, "segment_id": "S-ELM", "offset": 5},
+        {"street": "Pine Road", "number": 7, "segment_id": "S-PINE", "offset": 7},
+        {"street": "North Quay", "number": 50, "segment_id": "Q-BOUND", "offset": 0},
+        {"street": "South Quay", "number": 1, "segment_id": "Q-BOUND", "offset": 0}
+      ],
+      "entrances": [{"source": "front", "target": "F"}, {"source": "rear", "target": "R"}],
+      "units": [null, "2A"],
+      "provenance": [["registry"], ["registry", "inspection"]],
+      "invalid_targets": [
+        {"segment_id": "NOPE", "offset": 0, "entrance_code": null},
+        {"segment_id": "S-OAK", "offset": 999, "entrance_code": null},
+        {"segment_id": "S-OAK", "offset": 10, "entrance_code": "X"}
+      ],
+      "limits": {"max_program_bytes": 8192, "max_nodes": 256, "max_auxiliary_cells": 16, "max_reductions": 64}
+    },
+    "metric_bounds": {"auxiliary_schema_cells": 16, "worst_reductions": 64},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [],
+  "rules": [],
+  "projection": {"id": "lens.two-addresses", "rows": []},
+  "worked_value": {"source": {"number": 50, "street_name": "North Quay", "unit": "2A"}, "target": {"segment_id": "Q-BOUND", "offset": 0}, "note": "boundary_street preserves which quay the target cannot distinguish"},
+  "story": {
+    "premise": "The civic registry and emergency router name the same buildings with incompatible schemas. Route addresses cannot carry unit, provenance, or one boundary distinction.",
+    "submission": "Submit a typed LENS 0.1 get/put pipeline with an explicit complement schema.",
+    "diagnostics": "The verifier reports the first canonical bounded source/edit and the failed PutGet, GetPut, Stability, Provenance, totality, or invalid-edit atomicity law.",
+    "hints": ["List information absent from the route view.", "Keep unit and provenance in the complement.", "The shared Q-BOUND/0 route needs one normalized boundary street cell."]
+  }
+}

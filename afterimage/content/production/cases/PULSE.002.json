@@ -1,0 +1,60 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.002",
+    "family": "PULSE",
+    "title": "First Copy",
+    "points": 80,
+    "reference_scale": 500000,
+    "requires": {"all": ["case:PULSE.001", "case:ORIENT.003"]},
+    "projection": "pulse.first-copy",
+    "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [{"name": "last_tick", "type": "int", "initial": -1}],
+      "handlers": [
+        {
+          "id": "pulse.on-ticket",
+          "on": "dispatch.raw-ticket",
+          "actions": [
+            {
+              "op": "when",
+              "condition": ["not", ["eq", ["event", "at"], ["cell", "last_tick"]]],
+              "actions": [
+                {"op": "emit", "topic": "dispatch.unique-ticket", "payload": ["event", "payload"]},
+                {"op": "set", "cell": "last_tick", "value": ["event", "at"]}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "author_invariant": "Inputs are ordered by logical tick and then source EventId. last_tick names the most recently admitted tick, so the canonical first ticket at a tick is emitted immediately and every later copy at that tick is suppressed.",
+    "pulse_contract": {
+      "task": "deduplicate-ticks",
+      "input_topic": "dispatch.raw-ticket",
+      "timer_topic": "pulse.timer",
+      "output_topic": "dispatch.unique-ticket",
+      "horizon": 8,
+      "max_pulses": 5,
+      "named_fixtures": [[0, 0], [0, 0, 0], [1, 1, 3, 3, 3], [7, 7]],
+      "limits": {"max_program_bytes": 8192, "max_state_cells": 8, "max_steps": 128, "max_queue": 16, "max_scheduled_events": 8}
+    },
+    "metric_bounds": {"worst_latency": 8, "live_state_cells": 8},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [],
+  "rules": [],
+  "projection": {"id": "pulse.first-copy", "rows": []},
+  "worked_value": {"input": [1, 1, 3, 3, 3], "note": "Keep the source-EventId-first arrival at each tick, including its original sequence payload."},
+  "story": {
+    "premise": "A retrying dispatch gateway stamps every copy of one physical ticket with the same logical tick. Forward the canonical first arrival at each tick immediately, preserving its payload, and suppress all later copies.",
+    "submission": "Submit a canonical PULSE 0.1 program and, optionally, a short invariant note.",
+    "diagnostics": "The verifier exhaustively checks every nondecreasing zero-to-five-ticket stream over eight ticks, including all repeated-tick multiplicities, and returns the first counterexample.",
+    "hints": ["The stream is ordered by logical tick and then source EventId.", "You do not need to count copies.", "Preserve the payload of the canonical first arrival, not the final retry."]
+  }
+}

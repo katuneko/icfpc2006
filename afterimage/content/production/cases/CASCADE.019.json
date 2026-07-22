@@ -1,0 +1,313 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.019",
+    "family": "CASCADE",
+    "title": "Correction Notice",
+    "points": 90,
+    "reference_scale": 1200000,
+    "requires": {
+      "all": [
+        "case:CASCADE.018"
+      ]
+    },
+    "projection": "incident.correction-notice",
+    "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1",
+      "required": true,
+      "allowed_kinds": [
+        "replace"
+      ],
+      "max_operations": 1,
+      "weights": {
+        "replace": 1
+      },
+      "topics": [
+        "notice.amendment"
+      ],
+      "pointers": [
+        "/payload/route"
+      ],
+      "retime": {
+        "minimum": 0,
+        "maximum": 0
+      }
+    },
+    "author_operation": {
+      "kind": "replace",
+      "target_topic": "notice.amendment",
+      "pointer": "/payload/route",
+      "value": "surface"
+    },
+    "diagnostic_topics": [
+      "contract.violation"
+    ],
+    "metric_bounds": {
+      "causal_footprint": 32,
+      "witness_units": 48
+    },
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {
+        "max_base_events": 8,
+        "max_derived_events": 12,
+        "max_bindings_tested": 256,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "topic": "notice.prior",
+      "at": 22,
+      "payload": {
+        "notice": "N-18",
+        "incident": "CITY-19",
+        "route": "underground",
+        "status": "published"
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "public-ledger",
+        "sequence": 18
+      }
+    },
+    {
+      "topic": "notice.amendment",
+      "at": 23,
+      "payload": {
+        "notice": "N-19",
+        "incident": "CITY-19",
+        "route": "underground",
+        "supersedes": "N-18",
+        "reason": "thermal-evidence",
+        "evidence": [
+          "CASCADE.018"
+        ],
+        "status": "draft"
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "hearing-clerk",
+        "sequence": 19
+      }
+    }
+  ],
+  "rules": [
+    {
+      "stratum": 0,
+      "rule": {
+        "id": "correction-notice.01-contract",
+        "positive": [
+          {
+            "alias": "p",
+            "topic": "notice.prior",
+            "where": [
+              "const",
+              true
+            ]
+          },
+          {
+            "alias": "a",
+            "topic": "notice.amendment",
+            "where": [
+              "and",
+              [
+                "eq",
+                [
+                  "get",
+                  "a",
+                  "/payload/incident"
+                ],
+                [
+                  "get",
+                  "p",
+                  "/payload/incident"
+                ]
+              ],
+              [
+                "eq",
+                [
+                  "get",
+                  "a",
+                  "/payload/supersedes"
+                ],
+                [
+                  "get",
+                  "p",
+                  "/payload/notice"
+                ]
+              ]
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": [
+          "const",
+          true
+        ],
+        "emit": [
+          {
+            "topic": [
+              "const",
+              "contract.summary"
+            ],
+            "at": [
+              "get",
+              "a",
+              "/at"
+            ],
+            "payload": [
+              "map",
+              "safe",
+              [
+                "and",
+                [
+                  "eq",
+                  [
+                    "get",
+                    "p",
+                    "/payload/route"
+                  ],
+                  [
+                    "const",
+                    "underground"
+                  ]
+                ],
+                [
+                  "eq",
+                  [
+                    "get",
+                    "a",
+                    "/payload/route"
+                  ],
+                  [
+                    "const",
+                    "surface"
+                  ]
+                ]
+              ],
+              "incident",
+              [
+                "get",
+                "p",
+                "/payload/incident"
+              ],
+              "prior_notice",
+              [
+                "get",
+                "p",
+                "/payload/notice"
+              ],
+              "correction_notice",
+              [
+                "get",
+                "a",
+                "/payload/notice"
+              ],
+              "prior_route",
+              [
+                "get",
+                "p",
+                "/payload/route"
+              ],
+              "new_route",
+              [
+                "get",
+                "a",
+                "/payload/route"
+              ],
+              "supersedes",
+              [
+                "get",
+                "a",
+                "/payload/supersedes"
+              ],
+              "reason",
+              [
+                "get",
+                "a",
+                "/payload/reason"
+              ],
+              "evidence_preserved",
+              [
+                "eq",
+                [
+                  "get",
+                  "a",
+                  "/payload/evidence/0"
+                ],
+                [
+                  "const",
+                  "CASCADE.018"
+                ]
+              ]
+            ],
+            "parents": []
+          }
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "id": "incident.correction-notice",
+    "rows": [
+      {
+        "positive": [
+          {
+            "alias": "s",
+            "topic": "contract.summary",
+            "where": [
+              "const",
+              true
+            ]
+          }
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": [
+          "const",
+          true
+        ],
+        "value": [
+          "get",
+          "s",
+          "/payload"
+        ],
+        "sort": []
+      }
+    ]
+  },
+  "worked_value": {
+    "prior_notice": "N-18",
+    "correction_notice": "N-19",
+    "prior_route": "underground",
+    "new_route": "surface",
+    "note": "The public record retains the false prior route and adds an explicit superseding statement; correction is not deletion."
+  },
+  "story": {
+    "premise": "The minimal missing cause is now proved. The public ledger still says underground, and the draft correction silently repeats it. The city must preserve what it previously published while stating the counterfactual route that would have followed from the now-admitted evidence.",
+    "submission": "Change only the draft route to surface. Publish a safe correction contract that names N-18 as superseded, preserves the thermal-evidence reason, and leaves the prior notice in the record.",
+    "diagnostics": "The checker rejects erasure, a new notice that does not name its predecessor, a route unchanged from the false record, and a correction detached from CASCADE.018 evidence.",
+    "hints": [
+      "Amend the new statement, not the old one.",
+      "Supersession is an edge in the public record.",
+      "A correction must expose both before and after."
+    ]
+  }
+}
+

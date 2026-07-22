@@ -1,0 +1,27 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.009", "family": "MERGE", "title": "Minimal Cut", "points": 120, "reference_scale": 20000,
+    "requires": {"all": ["case:MERGE.008", "case:CASCADE.013"]},
+    "projection": "merge.minimal-cut", "validator_template": "merge-weighted-cut-certificate-claim/0.1",
+    "merge_contract": {"task": "weighted-cut", "conflicts": [["G1", "G2"], ["G2", "G3"]], "maximum_records": 8},
+    "author_answer": {
+      "accepted": [{"key": "A1", "at": 4}, {"key": "A2", "at": 12}, {"key": "G1", "at": 6}, {"key": "G3", "at": 10}],
+      "rejected": [{"key": "G2", "reason": "cut"}],
+      "certificate": [{"before": "A1", "after": "A2", "minimum_gap": 1}]
+    },
+    "metric_bounds": {"temporal_displacement": 16, "certificate_units": 32},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"label": "A1", "body": {"topic": "merge.record", "at": 4, "payload": {"key": "A1", "local_time": 4, "offset_min": 0, "offset_max": 0, "source": "calibration-audit", "sequence": 1, "weight": 9, "kind": "envelope-certified"}, "parents": [], "origin": {"kind": "base", "source": "calibration-audit", "sequence": 1}}},
+    {"label": "A2", "body": {"topic": "merge.record", "at": 12, "payload": {"key": "A2", "local_time": 12, "offset_min": 0, "offset_max": 0, "source": "calibration-audit", "sequence": 2, "weight": 9, "kind": "reserve-confirmed"}, "parents": [], "origin": {"kind": "base", "source": "calibration-audit", "sequence": 2}}},
+    {"label": "G1", "body": {"topic": "merge.record", "at": 6, "payload": {"key": "G1", "local_time": 6, "offset_min": 0, "offset_max": 0, "source": "north-probe", "sequence": 1, "weight": 2, "kind": "north-path"}, "parents": [], "origin": {"kind": "base", "source": "north-probe", "sequence": 1}}},
+    {"label": "G2", "body": {"topic": "merge.record", "at": 8, "payload": {"key": "G2", "local_time": 8, "offset_min": 0, "offset_max": 0, "source": "legacy-gateway", "sequence": 1, "weight": 3, "kind": "shared-gateway"}, "parents": [], "origin": {"kind": "base", "source": "legacy-gateway", "sequence": 1}}},
+    {"label": "G3", "body": {"topic": "merge.record", "at": 10, "payload": {"key": "G3", "local_time": 10, "offset_min": 0, "offset_max": 0, "source": "south-probe", "sequence": 1, "weight": 2, "kind": "south-path"}, "parents": [], "origin": {"kind": "base", "source": "south-probe", "sequence": 1}}}
+  ],
+  "rules": [],
+  "projection": {"id": "merge.minimal-cut", "rows": [{"positive": [{"alias": "r", "topic": "merge.record", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map", "event", ["get", "r", "/id"], "key", ["get", "r", "/payload/key"], "source", ["get", "r", "/payload/source"], "sequence", ["get", "r", "/payload/sequence"], "local_time", ["get", "r", "/payload/local_time"], "offset_min", ["get", "r", "/payload/offset_min"], "offset_max", ["get", "r", "/payload/offset_max"], "weight", ["get", "r", "/payload/weight"], "kind", ["get", "r", "/payload/kind"], "parents", ["get", "r", "/parents"]], "sort": [["get", "r", "/payload/key"]]}]},
+  "worked_value": {"conflicts": [["G1", "G2"], ["G2", "G3"]], "weights": {"G1": 2, "G2": 3, "G3": 2}, "minimum_cut": ["G2"], "note": "Removing the shared gateway costs three and hits both conflicts; removing both outer probes costs four."},
+  "story": {"premise": "The silent gauge's archive contains two incompatible path comparisons. Both pass through one legacy gateway record. Deleting either outer probe resolves only one conflict; deleting both resolves both but destroys more trusted evidence than cutting the shared gateway.", "submission": "Classify every record and submit a minimum-total-weight rejection cut that intersects every published conflict, plus the exact surviving temporal certificate.", "diagnostics": "The verifier exhaustively recomputes all cuts within the public record bound and distinguishes an uncovered conflict, an unsupported cut reason, and any heavier deletion.", "hints": ["Treat each published conflict as a set that must be hit.", "One record belongs to both sets.", "Compare its weight with the sum of the two outer records."]}
+}

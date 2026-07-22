@@ -1,0 +1,30 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.010", "family": "MERGE", "title": "Echoed Update", "points": 120, "reference_scale": 80000,
+    "requires": {"all": ["case:MERGE.009", "case:CASCADE.014"]},
+    "projection": "merge.echoed-update", "validator_template": "merge-echo-certificate-claim/0.1",
+    "merge_contract": {"task": "echo-chain", "update_field": "update_id", "echo_field": "echo_of"},
+    "author_answer": {
+      "accepted": [{"key": "U0", "at": 4}],
+      "rejected": [
+        {"key": "E1", "reason": "echo", "duplicate_of": "U0"},
+        {"key": "E2", "reason": "echo", "duplicate_of": "E1"},
+        {"key": "E3", "reason": "echo", "duplicate_of": "E2"}
+      ],
+      "certificate": []
+    },
+    "metric_bounds": {"temporal_displacement": 16, "certificate_units": 32},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"label": "U0", "body": {"topic": "merge.record", "at": 4, "payload": {"key": "U0", "local_time": 4, "offset_min": 0, "offset_max": 0, "source": "continuity-dispatch", "sequence": 1, "weight": 9, "update_id": "dispatch-77", "echo_of": null, "kind": "original-assignment"}, "parents": [], "origin": {"kind": "base", "source": "continuity-dispatch", "sequence": 1}}},
+    {"label": "E1", "body": {"topic": "merge.record", "at": 6, "payload": {"key": "E1", "local_time": 6, "offset_min": 0, "offset_max": 0, "source": "bridge-cache", "sequence": 1, "weight": 1, "update_id": "dispatch-77", "echo_of": "U0", "kind": "cache-forward"}, "parents": [], "origin": {"kind": "base", "source": "bridge-cache", "sequence": 1}}},
+    {"label": "E2", "body": {"topic": "merge.record", "at": 8, "payload": {"key": "E2", "local_time": 8, "offset_min": 0, "offset_max": 0, "source": "radio-repeater", "sequence": 1, "weight": 1, "update_id": "dispatch-77", "echo_of": "E1", "kind": "radio-forward"}, "parents": [], "origin": {"kind": "base", "source": "radio-repeater", "sequence": 1}}},
+    {"label": "E3", "body": {"topic": "merge.record", "at": 10, "payload": {"key": "E3", "local_time": 10, "offset_min": 0, "offset_max": 0, "source": "shadow-bus-console", "sequence": 1, "weight": 1, "update_id": "dispatch-77", "echo_of": "E2", "kind": "console-replay"}, "parents": [], "origin": {"kind": "base", "source": "shadow-bus-console", "sequence": 1}}}
+  ],
+  "rules": [],
+  "projection": {"id": "merge.echoed-update", "rows": [{"positive": [{"alias": "r", "topic": "merge.record", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map", "event", ["get", "r", "/id"], "key", ["get", "r", "/payload/key"], "source", ["get", "r", "/payload/source"], "sequence", ["get", "r", "/payload/sequence"], "local_time", ["get", "r", "/payload/local_time"], "offset_min", ["get", "r", "/payload/offset_min"], "offset_max", ["get", "r", "/payload/offset_max"], "weight", ["get", "r", "/payload/weight"], "update_id", ["get", "r", "/payload/update_id"], "echo_of", ["get", "r", "/payload/echo_of"], "kind", ["get", "r", "/payload/kind"], "parents", ["get", "r", "/parents"]], "sort": [["get", "r", "/payload/key"]]}]},
+  "worked_value": {"chain": ["U0", "E1", "E2", "E3"], "survivor": "U0", "note": "Each rejection names its immediate predecessor. E3 is not independent evidence merely because it never contacted the original source."},
+  "story": {"premise": "SHADOW-7 receives dispatch-77 four times. The bridge cache forwarded the original, the radio repeater forwarded that cache entry, and the bus console replayed the repeater. Matching payloads alone cannot show whether the console saw an independent command; the retained echo-of links can.", "submission": "Retain the one original update and classify every later record as an echo, naming its direct predecessor rather than shortcutting the transitive chain.", "diagnostics": "The verifier proves a unique root, checks every direct edge, follows each record to that root, and rejects cycles, disconnected references, extra survivors, and shortcuts.", "hints": ["Follow echo_of one edge at a time.", "A downstream copy is still one logical update.", "The certificate is the chain, not only a shared payload hash."]}
+}

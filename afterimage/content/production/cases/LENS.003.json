@@ -1,0 +1,33 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "LENS.003", "family": "LENS", "title": "Two Histories", "points": 620, "reference_scale": 2200000,
+    "requires": {"all": ["case:LENS.002", "case:CASCADE.014", "case:MERGE.010", "case:MOSAIC.008", "case:PULSE.009"]},
+    "projection": "lens.two-histories", "validator_template": "lens-law-claim/0.1",
+    "author_program": {
+      "format": "afterimage-lens/0.1",
+      "complement_schema": [{"name": "history_key", "type": "text"}, {"name": "private_delta", "type": "text-list"}, {"name": "audit_chain", "type": "text-list"}],
+      "get": [{"op": "forward_history", "table": "histories"}, {"op": "encode_channel", "table": "channels"}],
+      "put": [{"op": "reverse_history", "table": "histories", "disambiguation": "history_key"}, {"op": "decode_channel", "table": "channels"}, {"op": "restore_history", "fields": ["private_delta", "audit_chain"]}]
+    },
+    "lens_contract": {
+      "task": "history",
+      "histories": [
+        {"history_key": "internal-direct", "internal_tip": "dispatch-77/U0", "record_id": "EVAC-17", "public_tip": "published-safe-v1"},
+        {"history_key": "internal-echo", "internal_tip": "dispatch-77/E3", "record_id": "EVAC-17", "public_tip": "published-safe-v1"},
+        {"history_key": "ring-repaired", "internal_tip": "ring/v7-v8", "record_id": "EVAC-18", "public_tip": "published-ring-v2"},
+        {"history_key": "medical-hold", "internal_tip": "clinic/hold-4", "record_id": "MED-4", "public_tip": "published-hold-v1"}
+      ],
+      "channels": [{"source": "internal", "target": "I"}, {"source": "public", "target": "P"}],
+      "private_deltas": [["shadow-bus-capacity"], ["echo-chain", "exactly-once"]],
+      "audit_chains": [["dispatch-covenant"], ["dispatch-covenant", "ring-survey"]],
+      "invalid_targets": [{"record_id": "NOPE", "public_tip": "none", "channel_code": null}, {"record_id": "EVAC-17", "public_tip": "published-ring-v2", "channel_code": null}, {"record_id": "EVAC-17", "public_tip": "published-safe-v1", "channel_code": "X"}],
+      "limits": {"max_program_bytes": 8192, "max_nodes": 256, "max_auxiliary_cells": 16, "max_reductions": 64}
+    },
+    "metric_bounds": {"auxiliary_schema_cells": 16, "worst_reductions": 64},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [], "rules": [], "projection": {"id": "lens.two-histories", "rows": []},
+  "worked_value": {"private_sources": ["dispatch-77/U0", "dispatch-77/E3"], "public_view": {"record_id": "EVAC-17", "public_tip": "published-safe-v1"}, "note": "The public row deliberately collapses the direct and echoed internal tips. history_key restores the exact source; private delta and audit chain survive lawful edits to another public record."},
+  "story": {"premise": "Exactly-once control stops future duplication, but the archive already contains two internal histories: one ending at the original dispatch and one ending at the console echo. Both were published as the same safe EVAC-17 row. Public corrections may lawfully select another record without erasing the sealed private delta or its audit chain.", "submission": "Submit a typed bidirectional history synchronizer with the smallest explicit complement that satisfies all laws over the complete bounded source and edit domains.", "diagnostics": "Counterexamples identify the first history collision, lawful public edit, lost private delta, lost audit chain, unstable update, or non-atomic invalid correction.", "hints": ["The public EVAC-17 row does not identify its internal tip.", "Keep exactly one private identity discriminator.", "Operational evidence must survive even when a public edit selects another canonical history."]}
+}

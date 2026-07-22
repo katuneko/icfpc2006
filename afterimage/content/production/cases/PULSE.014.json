@@ -1,0 +1,76 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.014", "family": "PULSE", "title": "City Clock", "points": 170,
+    "reference_scale": 2400000,
+    "requires": {"all": ["case:PULSE.013", "case:CASCADE.022", "case:MERGE.015"]},
+    "projection": "pulse.city-clock", "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [
+        {"name": "archive", "type": "bool", "initial": false},
+        {"name": "controller", "type": "bool", "initial": false},
+        {"name": "policy", "type": "bool", "initial": false}
+      ],
+      "handlers": [
+        {"id": "clock.archive", "on": "clock.archive", "actions": [
+          {"op": "set", "cell": "archive", "value": ["const", true]},
+          {"op": "when", "condition": ["and", ["cell", "archive"], ["and", ["cell", "controller"], ["cell", "policy"]]], "actions": [
+            {"op": "emit", "topic": "clock.tick", "payload": ["event", "payload"]},
+            {"op": "set", "cell": "archive", "value": ["const", false]},
+            {"op": "set", "cell": "controller", "value": ["const", false]},
+            {"op": "set", "cell": "policy", "value": ["const", false]}
+          ]}
+        ]},
+        {"id": "clock.controller", "on": "clock.controller", "actions": [
+          {"op": "set", "cell": "controller", "value": ["const", true]},
+          {"op": "when", "condition": ["and", ["cell", "archive"], ["and", ["cell", "controller"], ["cell", "policy"]]], "actions": [
+            {"op": "emit", "topic": "clock.tick", "payload": ["event", "payload"]},
+            {"op": "set", "cell": "archive", "value": ["const", false]},
+            {"op": "set", "cell": "controller", "value": ["const", false]},
+            {"op": "set", "cell": "policy", "value": ["const", false]}
+          ]}
+        ]},
+        {"id": "clock.policy", "on": "clock.policy", "actions": [
+          {"op": "set", "cell": "policy", "value": ["const", true]},
+          {"op": "when", "condition": ["and", ["cell", "archive"], ["and", ["cell", "controller"], ["cell", "policy"]]], "actions": [
+            {"op": "emit", "topic": "clock.tick", "payload": ["event", "payload"]},
+            {"op": "set", "cell": "archive", "value": ["const", false]},
+            {"op": "set", "cell": "controller", "value": ["const", false]},
+            {"op": "set", "cell": "policy", "value": ["const", false]}
+          ]}
+        ]}
+      ]
+    },
+    "author_invariant": "Within each round a source contributes at most one remembered signal; the completing source emits exactly one tick and atomically clears all three bits, so later signals belong to the next round.",
+    "pulse_contract": {
+      "task": "city-clock",
+      "input_topics": {"archive": "clock.archive", "controller": "clock.controller", "policy": "clock.policy"},
+      "timer_topic": "clock.timer", "output_topic": "clock.tick",
+      "horizon": 3, "max_signals": 6,
+      "named_fixtures": [
+        [{"at": 0, "source": "archive"}, {"at": 0, "source": "controller"}, {"at": 0, "source": "policy"}, {"at": 1, "source": "policy"}, {"at": 2, "source": "archive"}, {"at": 2, "source": "controller"}],
+        [{"at": 0, "source": "archive"}, {"at": 0, "source": "archive"}, {"at": 1, "source": "policy"}, {"at": 2, "source": "controller"}]
+      ],
+      "limits": {"max_program_bytes": 4096, "max_state_cells": 4, "max_steps": 256, "max_queue": 16, "max_scheduled_events": 8}
+    },
+    "metric_bounds": {"worst_latency": 0, "live_state_cells": 4},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 4, "max_derived_events": 4, "max_bindings_tested": 64, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [], "rules": [],
+  "projection": {"id": "pulse.city-clock", "rows": []},
+  "worked_value": {
+    "state_cells": ["archive", "controller", "policy"], "rounds": "unbounded in the runtime, exhaustively checked through two complete rounds",
+    "note": "Duplicates coalesce only inside the current round. The event that supplies the missing third source owns the tick payload; clearing all bits starts the next epoch immediately."
+  },
+  "story": {
+    "premise": "The reconstruction, the controller, and the public policy each advance on their own feed. A city tick exists only after all three have crossed the same logical boundary. The clock must keep doing this: a one-shot barrier would freeze the first morning forever.",
+    "submission": "Build a deterministic cyclic barrier. Coalesce duplicate sources within a round, emit exactly once when the third distinct source arrives, then reset atomically so the next signal begins a new round.",
+    "diagnostics": "The checker exhausts every canonical stream of up to six signals over three ticks, including same-tick permutations, duplicates, incomplete rounds, and two complete rounds.",
+    "hints": ["This is a barrier with memory of epochs, not a one-time quorum.", "Reset only after the output is emitted.", "A duplicate after completion belongs to the next round."]
+  }
+}

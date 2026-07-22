@@ -1,0 +1,1315 @@
+{
+  "cases": [
+    {
+      "act": "vertical slice",
+      "band": 1,
+      "family": "CASCADE",
+      "id": "CASCADE.001",
+      "mechanic": "The smallest safe change is to move one cause inside a phase window, not to override the downstream alarm.",
+      "points": 80,
+      "requires": {
+        "all": [
+          "case:ORIENT.001"
+        ],
+        "at_least": {
+          "count": 1,
+          "of": [
+            "case:ORIENT.002",
+            "case:ORIENT.003",
+            "case:ORIENT.004",
+            "case:ORIENT.005"
+          ]
+        }
+      },
+      "status": "golden",
+      "title": "Late Green",
+      "wave": "slice"
+    },
+    {
+      "act": "vertical slice",
+      "band": 2,
+      "family": "CASCADE",
+      "id": "CASCADE.002",
+      "mechanic": "A contradictory pressure reading is evidence about sensor latency; deleting it hides the constraint instead of repairing the water path.",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:CASCADE.001"
+        ],
+        "at_least": {
+          "count": 1,
+          "of": [
+            "case:MERGE.001",
+            "case:PULSE.001"
+          ]
+        }
+      },
+      "status": "golden",
+      "title": "Dry Hydrant",
+      "wave": "slice"
+    },
+    {
+      "act": "vertical slice",
+      "band": 3,
+      "family": "CASCADE",
+      "id": "CASCADE.003",
+      "mechanic": "The apparently impossible evacuation is caused by a projection rule that suppresses a valid relay event, not by a missing physical route.",
+      "points": 140,
+      "requires": {
+        "all": [
+          "case:CASCADE.002",
+          "case:ORIENT.003"
+        ],
+        "at_least": {
+          "count": 1,
+          "of": [
+            "case:MERGE.001",
+            "case:PULSE.001",
+            "case:MOSAIC.001",
+            "case:LENS.001"
+          ]
+        }
+      },
+      "status": "golden",
+      "title": "Tomorrow, Redacted",
+      "wave": "slice"
+    },
+    {
+      "act": "local failures",
+      "band": 1,
+      "family": "CASCADE",
+      "id": "CASCADE.004",
+      "mechanic": "delayed occupancy evidence",
+      "points": 70,
+      "requires": {
+        "all": [
+          "case:CASCADE.003"
+        ]
+      },
+      "status": "authored",
+      "title": "Cold Platform",
+      "wave": "production-05"
+    },
+    {
+      "act": "local failures",
+      "band": 2,
+      "family": "CASCADE",
+      "id": "CASCADE.005",
+      "mechanic": "priority inversion intervention",
+      "points": 70,
+      "requires": {
+        "all": [
+          "case:CASCADE.004"
+        ]
+      },
+      "status": "authored",
+      "title": "Priority Queue",
+      "wave": "production-06"
+    },
+    {
+      "act": "local failures",
+      "band": 2,
+      "family": "CASCADE",
+      "id": "CASCADE.006",
+      "mechanic": "treatment timing and road closure",
+      "points": 80,
+      "requires": {
+        "all": [
+          "case:CASCADE.005"
+        ]
+      },
+      "status": "authored",
+      "title": "Black Ice",
+      "wave": "production-06"
+    },
+    {
+      "act": "coupled infrastructure",
+      "band": 2,
+      "family": "CASCADE",
+      "id": "CASCADE.007",
+      "mechanic": "water and power coupling",
+      "points": 80,
+      "requires": {
+        "all": [
+          "case:CASCADE.006"
+        ]
+      },
+      "status": "authored",
+      "title": "Borrowed Pressure",
+      "wave": "production-07"
+    },
+    {
+      "act": "coupled infrastructure",
+      "band": 2,
+      "family": "CASCADE",
+      "id": "CASCADE.008",
+      "mechanic": "microgrid and traffic coupling",
+      "points": 90,
+      "requires": {
+        "all": [
+          "case:CASCADE.007"
+        ]
+      },
+      "status": "authored",
+      "title": "Island Signal",
+      "wave": "production-09"
+    },
+    {
+      "act": "coupled infrastructure",
+      "band": 3,
+      "family": "CASCADE",
+      "id": "CASCADE.009",
+      "mechanic": "transit evacuation window",
+      "points": 90,
+      "requires": {
+        "all": [
+          "case:CASCADE.008"
+        ]
+      },
+      "status": "authored",
+      "title": "Last Train Through",
+      "wave": "production-10"
+    },
+    {
+      "act": "coupled infrastructure",
+      "band": 3,
+      "family": "CASCADE",
+      "id": "CASCADE.010",
+      "mechanic": "hospital cooling dependencies",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:CASCADE.009"
+        ]
+      },
+      "status": "authored",
+      "title": "Cooling Window",
+      "wave": "production-11"
+    },
+    {
+      "act": "coupled infrastructure",
+      "band": 3,
+      "family": "CASCADE",
+      "id": "CASCADE.011",
+      "mechanic": "wind, bridge, and emergency access",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:CASCADE.010"
+        ]
+      },
+      "status": "authored",
+      "title": "The Open Bridge",
+      "wave": "production-12"
+    },
+    {
+      "act": "coupled infrastructure",
+      "band": 3,
+      "family": "CASCADE",
+      "id": "CASCADE.012",
+      "mechanic": "multi-agency contract repair",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:CASCADE.011",
+          "case:PULSE.006"
+        ]
+      },
+      "status": "authored",
+      "title": "Three Departments",
+      "wave": "production-13"
+    },
+    {
+      "act": "missing observations",
+      "band": 4,
+      "family": "CASCADE",
+      "id": "CASCADE.013",
+      "mechanic": "safe repair under a hidden gauge",
+      "points": 90,
+      "requires": {
+        "all": [
+          "case:CASCADE.012",
+          "case:LENS.002"
+        ]
+      },
+      "status": "authored",
+      "title": "Silent Gauge",
+      "wave": "production-14"
+    },
+    {
+      "act": "missing observations",
+      "band": 4,
+      "family": "CASCADE",
+      "id": "CASCADE.014",
+      "mechanic": "latent transit capacity",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:CASCADE.013",
+          "case:COVENANT.001"
+        ]
+      },
+      "status": "authored",
+      "title": "Shadow Bus",
+      "wave": "production-15"
+    },
+    {
+      "act": "missing observations",
+      "band": 4,
+      "family": "CASCADE",
+      "id": "CASCADE.015",
+      "mechanic": "suppressed grid provenance",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:CASCADE.014",
+          "case:LENS.003"
+        ]
+      },
+      "status": "authored",
+      "title": "Redacted Feeder",
+      "wave": "production-16"
+    },
+    {
+      "act": "missing observations",
+      "band": 4,
+      "family": "CASCADE",
+      "id": "CASCADE.016",
+      "mechanic": "bounded missing-cause proof",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:CASCADE.015",
+          "case:MERGE.011",
+          "case:MOSAIC.009",
+          "case:PULSE.010"
+        ]
+      },
+      "status": "authored",
+      "title": "Witness Gap",
+      "wave": "production-16"
+    },
+    {
+      "act": "missing observations",
+      "band": 5,
+      "family": "CASCADE",
+      "id": "CASCADE.017",
+      "mechanic": "projection-sensitive safety",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:CASCADE.016"
+        ]
+      },
+      "status": "authored",
+      "title": "Policy Blind Spot",
+      "wave": "production-17"
+    },
+    {
+      "act": "missing observations",
+      "band": 5,
+      "family": "CASCADE",
+      "id": "CASCADE.018",
+      "mechanic": "minimal latent explanation",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:CASCADE.017",
+          "case:MERGE.013",
+          "case:MOSAIC.011",
+          "case:PULSE.012"
+        ]
+      },
+      "status": "authored",
+      "title": "The Missing Cause",
+      "wave": "production-18"
+    },
+    {
+      "act": "public record",
+      "band": 5,
+      "family": "CASCADE",
+      "id": "CASCADE.019",
+      "mechanic": "publishable counterfactual correction",
+      "points": 90,
+      "requires": {
+        "all": [
+          "case:CASCADE.018"
+        ]
+      },
+      "status": "authored",
+      "title": "Correction Notice",
+      "wave": "production-18"
+    },
+    {
+      "act": "public record",
+      "band": 5,
+      "family": "CASCADE",
+      "id": "CASCADE.020",
+      "mechanic": "lexicographic policy choice",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:CASCADE.019",
+          "case:MERGE.014"
+        ]
+      },
+      "status": "authored",
+      "title": "Competing Amendments",
+      "wave": "production-19"
+    },
+    {
+      "act": "public record",
+      "band": 5,
+      "family": "CASCADE",
+      "id": "CASCADE.021",
+      "mechanic": "time-bounded public evidence",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:CASCADE.020",
+          "case:PULSE.013"
+        ]
+      },
+      "status": "authored",
+      "title": "Audit Window",
+      "wave": "production-19"
+    },
+    {
+      "act": "public record",
+      "band": 5,
+      "family": "CASCADE",
+      "id": "CASCADE.022",
+      "mechanic": "global minimal intervention",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:CASCADE.021"
+        ]
+      },
+      "status": "authored",
+      "title": "Rule of Least Change",
+      "wave": "production-19"
+    },
+    {
+      "act": "public record",
+      "band": 5,
+      "family": "CASCADE",
+      "id": "CASCADE.023",
+      "mechanic": "cross-family evidence envelope",
+      "points": 120,
+      "requires": {
+        "all": [
+          "case:CASCADE.022",
+          "case:MERGE.015",
+          "case:PULSE.014",
+          "case:COVENANT.002"
+        ]
+      },
+      "status": "authored",
+      "title": "Continuity Hearing",
+      "wave": "production-20"
+    },
+    {
+      "act": "public record",
+      "band": 5,
+      "family": "CASCADE",
+      "id": "CASCADE.024",
+      "mechanic": "expose the policy-selected history",
+      "points": 130,
+      "requires": {
+        "all": [
+          "case:CASCADE.023"
+        ]
+      },
+      "status": "authored",
+      "title": "The Chosen Tomorrow",
+      "wave": "production-20"
+    },
+    {
+      "act": "emergency dispatch",
+      "band": 1,
+      "family": "COVENANT",
+      "id": "COVENANT.001",
+      "mechanic": "local policy under fair schedules",
+      "points": 450,
+      "requires": {
+        "all": [
+          "case:CASCADE.013",
+          "case:MERGE.009",
+          "case:PULSE.008"
+        ]
+      },
+      "status": "authored",
+      "title": "Dispatch Covenant",
+      "wave": "production-14"
+    },
+    {
+      "act": "citywide",
+      "band": 1,
+      "family": "COVENANT",
+      "id": "COVENANT.002",
+      "mechanic": "hidden-observation policy synthesis",
+      "points": 550,
+      "requires": {
+        "all": [
+          "case:COVENANT.001",
+          "case:CASCADE.017",
+          "case:MERGE.012",
+          "case:MOSAIC.010",
+          "case:PULSE.011"
+        ]
+      },
+      "status": "authored",
+      "title": "City Covenant",
+      "wave": "production-17"
+    },
+    {
+      "act": "vertical slice",
+      "band": 3,
+      "family": "LENS",
+      "id": "LENS.001",
+      "mechanic": "A lawful round trip needs explicit complement data for apartment and provenance fields the route-code view cannot represent.",
+      "points": 180,
+      "requires": {
+        "all": [
+          "case:CASCADE.002",
+          "case:ORIENT.003"
+        ]
+      },
+      "status": "golden",
+      "title": "Two Addresses",
+      "wave": "slice"
+    },
+    {
+      "act": "transit",
+      "band": 1,
+      "family": "LENS",
+      "id": "LENS.002",
+      "mechanic": "schedule complement and lawful updates",
+      "points": 500,
+      "requires": {
+        "all": [
+          "case:LENS.001",
+          "case:PULSE.005",
+          "case:MOSAIC.005",
+          "case:PULSE.007",
+          "case:MOSAIC.006"
+        ]
+      },
+      "status": "authored",
+      "title": "One Timetable",
+      "wave": "production-13"
+    },
+    {
+      "act": "history",
+      "band": 1,
+      "family": "LENS",
+      "id": "LENS.003",
+      "mechanic": "bidirectional divergent-history synchronization",
+      "points": 620,
+      "requires": {
+        "all": [
+          "case:LENS.002",
+          "case:CASCADE.014",
+          "case:MERGE.010",
+          "case:MOSAIC.008",
+          "case:PULSE.009"
+        ]
+      },
+      "status": "authored",
+      "title": "Two Histories",
+      "wave": "production-15"
+    },
+    {
+      "act": "vertical slice",
+      "band": 2,
+      "family": "MERGE",
+      "id": "MERGE.001",
+      "mechanic": "Clock readings define intervals, while message edges define order; solve the difference constraints before choosing rejections.",
+      "points": 120,
+      "requires": {
+        "all": [
+          "case:ORIENT.002"
+        ]
+      },
+      "status": "golden",
+      "title": "Three Clocks",
+      "wave": "slice"
+    },
+    {
+      "act": "record faults",
+      "band": 1,
+      "family": "MERGE",
+      "id": "MERGE.002",
+      "mechanic": "duplicate suppression certificate",
+      "points": 80,
+      "requires": {
+        "all": [
+          "case:MERGE.001"
+        ]
+      },
+      "status": "authored",
+      "title": "Duplicate Dispatch",
+      "wave": "production-02"
+    },
+    {
+      "act": "record faults",
+      "band": 1,
+      "family": "MERGE",
+      "id": "MERGE.003",
+      "mechanic": "missing edge reconstruction",
+      "points": 90,
+      "requires": {
+        "all": [
+          "case:MERGE.002"
+        ]
+      },
+      "status": "authored",
+      "title": "Lost Acknowledgment",
+      "wave": "production-07"
+    },
+    {
+      "act": "record faults",
+      "band": 1,
+      "family": "MERGE",
+      "id": "MERGE.004",
+      "mechanic": "compensation versus rollback",
+      "points": 90,
+      "requires": {
+        "all": [
+          "case:MERGE.003"
+        ]
+      },
+      "status": "authored",
+      "title": "Compensating Transfer",
+      "wave": "production-09"
+    },
+    {
+      "act": "conflicts",
+      "band": 2,
+      "family": "MERGE",
+      "id": "MERGE.005",
+      "mechanic": "two-writer conflict component",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:MERGE.004"
+        ]
+      },
+      "status": "authored",
+      "title": "Split Brain",
+      "wave": "production-10"
+    },
+    {
+      "act": "conflicts",
+      "band": 2,
+      "family": "MERGE",
+      "id": "MERGE.006",
+      "mechanic": "quorum-supported acceptance",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:MERGE.005",
+          "case:PULSE.005",
+          "case:CASCADE.010"
+        ]
+      },
+      "status": "authored",
+      "title": "Quorum Ledger",
+      "wave": "production-11"
+    },
+    {
+      "act": "conflicts",
+      "band": 2,
+      "family": "MERGE",
+      "id": "MERGE.007",
+      "mechanic": "multiple offset domains",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:MERGE.006",
+          "case:CASCADE.011"
+        ]
+      },
+      "status": "authored",
+      "title": "Clock Islands",
+      "wave": "production-12"
+    },
+    {
+      "act": "certificates",
+      "band": 2,
+      "family": "MERGE",
+      "id": "MERGE.008",
+      "mechanic": "minimal inconsistent subset",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:MERGE.007",
+          "case:CASCADE.012"
+        ]
+      },
+      "status": "authored",
+      "title": "Conflict Component",
+      "wave": "production-13"
+    },
+    {
+      "act": "certificates",
+      "band": 3,
+      "family": "MERGE",
+      "id": "MERGE.009",
+      "mechanic": "weighted rejection cut",
+      "points": 120,
+      "requires": {
+        "all": [
+          "case:MERGE.008",
+          "case:CASCADE.013"
+        ]
+      },
+      "status": "authored",
+      "title": "Minimal Cut",
+      "wave": "production-14"
+    },
+    {
+      "act": "certificates",
+      "band": 3,
+      "family": "MERGE",
+      "id": "MERGE.010",
+      "mechanic": "transitive duplication evidence",
+      "points": 120,
+      "requires": {
+        "all": [
+          "case:MERGE.009",
+          "case:CASCADE.014"
+        ]
+      },
+      "status": "authored",
+      "title": "Echoed Update",
+      "wave": "production-15"
+    },
+    {
+      "act": "adversarial logs",
+      "band": 3,
+      "family": "MERGE",
+      "id": "MERGE.011",
+      "mechanic": "source-weighted reconstruction",
+      "points": 130,
+      "requires": {
+        "all": [
+          "case:MERGE.010",
+          "case:CASCADE.015"
+        ]
+      },
+      "status": "authored",
+      "title": "Evidence Weight",
+      "wave": "production-16"
+    },
+    {
+      "act": "adversarial logs",
+      "band": 3,
+      "family": "MERGE",
+      "id": "MERGE.012",
+      "mechanic": "small sufficient certificate",
+      "points": 130,
+      "requires": {
+        "all": [
+          "case:MERGE.011",
+          "case:CASCADE.017"
+        ]
+      },
+      "status": "authored",
+      "title": "Causal Compression",
+      "wave": "production-17"
+    },
+    {
+      "act": "adversarial logs",
+      "band": 4,
+      "family": "MERGE",
+      "id": "MERGE.013",
+      "mechanic": "one source, incompatible claims",
+      "points": 130,
+      "requires": {
+        "all": [
+          "case:MERGE.012",
+          "case:COVENANT.002"
+        ]
+      },
+      "status": "authored",
+      "title": "Equivocation",
+      "wave": "production-18"
+    },
+    {
+      "act": "adversarial logs",
+      "band": 4,
+      "family": "MERGE",
+      "id": "MERGE.014",
+      "mechanic": "non-unique reconstruction",
+      "points": 130,
+      "requires": {
+        "all": [
+          "case:MERGE.013",
+          "case:CASCADE.019"
+        ]
+      },
+      "status": "authored",
+      "title": "Two Consistent Archives",
+      "wave": "production-19"
+    },
+    {
+      "act": "adversarial logs",
+      "band": 4,
+      "family": "MERGE",
+      "id": "MERGE.015",
+      "mechanic": "citywide causal archive",
+      "points": 140,
+      "requires": {
+        "all": [
+          "case:MERGE.014",
+          "case:CASCADE.022"
+        ]
+      },
+      "status": "authored",
+      "title": "The Reconstruction",
+      "wave": "production-20"
+    },
+    {
+      "act": "vertical slice",
+      "band": 2,
+      "family": "MOSAIC",
+      "id": "MOSAIC.001",
+      "mechanic": "Overlap labels are only locally meaningful; invariant adjacency signatures reveal the shared global junctions.",
+      "points": 130,
+      "requires": {
+        "all": [
+          "case:ORIENT.003"
+        ],
+        "at_least": {
+          "count": 1,
+          "of": [
+            "case:MERGE.001",
+            "case:PULSE.001"
+          ]
+        }
+      },
+      "status": "golden",
+      "title": "Four Corners",
+      "wave": "slice"
+    },
+    {
+      "act": "clean fragments",
+      "band": 1,
+      "family": "MOSAIC",
+      "id": "MOSAIC.002",
+      "mechanic": "edge overlap assembly",
+      "points": 80,
+      "requires": {
+        "all": [
+          "case:MOSAIC.001",
+          "case:ORIENT.004"
+        ]
+      },
+      "status": "authored",
+      "title": "Shared Wall",
+      "wave": "production-04"
+    },
+    {
+      "act": "clean fragments",
+      "band": 1,
+      "family": "MOSAIC",
+      "id": "MOSAIC.003",
+      "mechanic": "D4-normalized placement",
+      "points": 90,
+      "requires": {
+        "all": [
+          "case:MOSAIC.002"
+        ]
+      },
+      "status": "authored",
+      "title": "Rotated Block",
+      "wave": "production-07"
+    },
+    {
+      "act": "omissions",
+      "band": 1,
+      "family": "MOSAIC",
+      "id": "MOSAIC.004",
+      "mechanic": "hole-bounded completion",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:MOSAIC.003",
+          "case:CASCADE.010"
+        ]
+      },
+      "status": "authored",
+      "title": "Missing Tile",
+      "wave": "production-11"
+    },
+    {
+      "act": "duplicates",
+      "band": 2,
+      "family": "MOSAIC",
+      "id": "MOSAIC.005",
+      "mechanic": "duplicate fragment attribution",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:MOSAIC.004",
+          "case:CASCADE.011",
+          "case:MERGE.007"
+        ]
+      },
+      "status": "authored",
+      "title": "Double Exposure",
+      "wave": "production-12"
+    },
+    {
+      "act": "decoys",
+      "band": 2,
+      "family": "MOSAIC",
+      "id": "MOSAIC.006",
+      "mechanic": "supported decoy rejection",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:MOSAIC.005",
+          "case:MERGE.008"
+        ]
+      },
+      "status": "authored",
+      "title": "False Landmark",
+      "wave": "production-13"
+    },
+    {
+      "act": "mixed evidence",
+      "band": 2,
+      "family": "MOSAIC",
+      "id": "MOSAIC.007",
+      "mechanic": "topology plus temporal labels",
+      "points": 120,
+      "requires": {
+        "all": [
+          "case:MOSAIC.006",
+          "case:MERGE.009"
+        ]
+      },
+      "status": "authored",
+      "title": "Timestamp Gauge",
+      "wave": "production-14"
+    },
+    {
+      "act": "mixed evidence",
+      "band": 2,
+      "family": "MOSAIC",
+      "id": "MOSAIC.008",
+      "mechanic": "cycle recovery with one omission",
+      "points": 130,
+      "requires": {
+        "all": [
+          "case:MOSAIC.007",
+          "case:MERGE.010"
+        ]
+      },
+      "status": "authored",
+      "title": "Broken Ring",
+      "wave": "production-15"
+    },
+    {
+      "act": "adversarial",
+      "band": 3,
+      "family": "MOSAIC",
+      "id": "MOSAIC.009",
+      "mechanic": "weighted noisy embeddings",
+      "points": 140,
+      "requires": {
+        "all": [
+          "case:MOSAIC.008",
+          "case:MERGE.011"
+        ]
+      },
+      "status": "authored",
+      "title": "Adversarial Survey",
+      "wave": "production-16"
+    },
+    {
+      "act": "adversarial",
+      "band": 3,
+      "family": "MOSAIC",
+      "id": "MOSAIC.010",
+      "mechanic": "two-layer topology",
+      "points": 150,
+      "requires": {
+        "all": [
+          "case:MOSAIC.009",
+          "case:CASCADE.017"
+        ]
+      },
+      "status": "authored",
+      "title": "Underground Layer",
+      "wave": "production-17"
+    },
+    {
+      "act": "synthesis",
+      "band": 3,
+      "family": "MOSAIC",
+      "id": "MOSAIC.011",
+      "mechanic": "global attributed reconstruction",
+      "points": 150,
+      "requires": {
+        "all": [
+          "case:MOSAIC.010",
+          "case:COVENANT.002"
+        ]
+      },
+      "status": "authored",
+      "title": "Whole City",
+      "wave": "production-18"
+    },
+    {
+      "act": "vertical slice",
+      "band": 1,
+      "family": "ORIENT",
+      "id": "ORIENT.001",
+      "mechanic": "A derived alarm is identified by its content and provenance, not by processing order.",
+      "points": 40,
+      "requires": {
+        "all": []
+      },
+      "status": "golden",
+      "title": "The First Bell",
+      "wave": "slice"
+    },
+    {
+      "act": "vertical slice",
+      "band": 1,
+      "family": "ORIENT",
+      "id": "ORIENT.002",
+      "mechanic": "Logical time does not replace the causal parent relation; same-time events still have a partial order.",
+      "points": 50,
+      "requires": {
+        "all": [
+          "case:ORIENT.001"
+        ]
+      },
+      "status": "golden",
+      "title": "No Effect Before Cause",
+      "wave": "slice"
+    },
+    {
+      "act": "vertical slice",
+      "band": 1,
+      "family": "ORIENT",
+      "id": "ORIENT.003",
+      "mechanic": "The projected report is a programmatically selected view, not the full active state.",
+      "points": 60,
+      "requires": {
+        "all": [
+          "case:ORIENT.001"
+        ]
+      },
+      "status": "golden",
+      "title": "What the Camera Saw",
+      "wave": "slice"
+    },
+    {
+      "act": "vertical slice",
+      "band": 2,
+      "family": "ORIENT",
+      "id": "ORIENT.004",
+      "mechanic": "A counterfactual changes base causes and recomputes all consequences; derived events are never edited directly.",
+      "points": 70,
+      "requires": {
+        "any": [
+          "case:ORIENT.002",
+          "case:ORIENT.003"
+        ]
+      },
+      "status": "golden",
+      "title": "The Road Not Taken",
+      "wave": "slice"
+    },
+    {
+      "act": "vertical slice",
+      "band": 2,
+      "family": "ORIENT",
+      "id": "ORIENT.005",
+      "mechanic": "A claim is portable only when it binds the bundle, parent branch, intervention, and recomputed digests.",
+      "points": 80,
+      "requires": {
+        "at_least": {
+          "count": 2,
+          "of": [
+            "case:ORIENT.002",
+            "case:ORIENT.003",
+            "case:ORIENT.004"
+          ]
+        }
+      },
+      "status": "golden",
+      "title": "A Reproducible Claim",
+      "wave": "slice"
+    },
+    {
+      "act": "finale",
+      "band": 1,
+      "family": "PARADOX",
+      "id": "PARADOX.001",
+      "mechanic": "paired safe histories with one public record",
+      "points": 300,
+      "requires": {
+        "all": [
+          "case:COVENANT.002",
+          "case:LENS.003",
+          "case:CASCADE.024"
+        ]
+      },
+      "status": "authored",
+      "title": "Two Tomorrows",
+      "wave": "production-20"
+    },
+    {
+      "act": "vertical slice",
+      "band": 2,
+      "family": "PULSE",
+      "id": "PULSE.001",
+      "mechanic": "Debounce is a temporal state invariant; one remembered deadline can replace a history of seen pulses.",
+      "points": 150,
+      "requires": {
+        "all": [
+          "case:ORIENT.002"
+        ]
+      },
+      "status": "golden",
+      "title": "One Bell",
+      "wave": "slice"
+    },
+    {
+      "act": "stream hygiene",
+      "band": 1,
+      "family": "PULSE",
+      "id": "PULSE.002",
+      "mechanic": "canonical first-event deduplication",
+      "points": 80,
+      "requires": {
+        "all": [
+          "case:PULSE.001",
+          "case:ORIENT.003"
+        ]
+      },
+      "status": "authored",
+      "title": "First Copy",
+      "wave": "production-01"
+    },
+    {
+      "act": "stream hygiene",
+      "band": 1,
+      "family": "PULSE",
+      "id": "PULSE.003",
+      "mechanic": "timeout with cancellation",
+      "points": 90,
+      "requires": {
+        "all": [
+          "case:PULSE.002"
+        ]
+      },
+      "status": "authored",
+      "title": "Silent Timeout",
+      "wave": "production-03"
+    },
+    {
+      "act": "flow control",
+      "band": 1,
+      "family": "PULSE",
+      "id": "PULSE.004",
+      "mechanic": "bounded token-bucket admission",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:PULSE.003"
+        ]
+      },
+      "status": "authored",
+      "title": "Token Window",
+      "wave": "production-08"
+    },
+    {
+      "act": "coordination",
+      "band": 2,
+      "family": "PULSE",
+      "id": "PULSE.005",
+      "mechanic": "quorum trigger",
+      "points": 100,
+      "requires": {
+        "all": [
+          "case:PULSE.004"
+        ]
+      },
+      "status": "authored",
+      "title": "Two of Three",
+      "wave": "production-10"
+    },
+    {
+      "act": "coordination",
+      "band": 2,
+      "family": "PULSE",
+      "id": "PULSE.006",
+      "mechanic": "multi-topic barrier",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:PULSE.005",
+          "case:CASCADE.011",
+          "case:MERGE.007",
+          "case:MOSAIC.005"
+        ]
+      },
+      "status": "authored",
+      "title": "Barrier at Dawn",
+      "wave": "production-12"
+    },
+    {
+      "act": "flow control",
+      "band": 2,
+      "family": "PULSE",
+      "id": "PULSE.007",
+      "mechanic": "bounded queue feedback",
+      "points": 110,
+      "requires": {
+        "all": [
+          "case:PULSE.006",
+          "case:CASCADE.012",
+          "case:MOSAIC.006"
+        ]
+      },
+      "status": "authored",
+      "title": "Backpressure",
+      "wave": "production-13"
+    },
+    {
+      "act": "resilience",
+      "band": 2,
+      "family": "PULSE",
+      "id": "PULSE.008",
+      "mechanic": "primary-to-secondary handoff",
+      "points": 120,
+      "requires": {
+        "all": [
+          "case:PULSE.007",
+          "case:CASCADE.013",
+          "case:MOSAIC.007"
+        ]
+      },
+      "status": "authored",
+      "title": "Warm Failover",
+      "wave": "production-14"
+    },
+    {
+      "act": "resilience",
+      "band": 3,
+      "family": "PULSE",
+      "id": "PULSE.009",
+      "mechanic": "deduplication across failover",
+      "points": 120,
+      "requires": {
+        "all": [
+          "case:PULSE.008",
+          "case:MERGE.010",
+          "case:MOSAIC.008"
+        ]
+      },
+      "status": "authored",
+      "title": "Exactly Once",
+      "wave": "production-15"
+    },
+    {
+      "act": "coordination",
+      "band": 3,
+      "family": "PULSE",
+      "id": "PULSE.010",
+      "mechanic": "deadline aggregation",
+      "points": 130,
+      "requires": {
+        "all": [
+          "case:PULSE.009",
+          "case:MERGE.011",
+          "case:MOSAIC.009"
+        ]
+      },
+      "status": "authored",
+      "title": "Shared Deadline",
+      "wave": "production-16"
+    },
+    {
+      "act": "flow control",
+      "band": 3,
+      "family": "PULSE",
+      "id": "PULSE.011",
+      "mechanic": "sliding-window rate limit",
+      "points": 130,
+      "requires": {
+        "all": [
+          "case:PULSE.010",
+          "case:CASCADE.017"
+        ]
+      },
+      "status": "authored",
+      "title": "Burst Budget",
+      "wave": "production-17"
+    },
+    {
+      "act": "resilience",
+      "band": 3,
+      "family": "PULSE",
+      "id": "PULSE.012",
+      "mechanic": "bounded out-of-order release",
+      "points": 140,
+      "requires": {
+        "all": [
+          "case:PULSE.011",
+          "case:COVENANT.002"
+        ]
+      },
+      "status": "authored",
+      "title": "Reorder Buffer",
+      "wave": "production-18"
+    },
+    {
+      "act": "resilience",
+      "band": 4,
+      "family": "PULSE",
+      "id": "PULSE.013",
+      "mechanic": "failure-window state machine",
+      "points": 150,
+      "requires": {
+        "all": [
+          "case:PULSE.012",
+          "case:CASCADE.019"
+        ]
+      },
+      "status": "authored",
+      "title": "Circuit Breaker",
+      "wave": "production-19"
+    },
+    {
+      "act": "synthesis",
+      "band": 4,
+      "family": "PULSE",
+      "id": "PULSE.014",
+      "mechanic": "composed deterministic controller",
+      "points": 170,
+      "requires": {
+        "all": [
+          "case:PULSE.013",
+          "case:CASCADE.022",
+          "case:MERGE.015"
+        ]
+      },
+      "status": "authored",
+      "title": "City Clock",
+      "wave": "production-20"
+    }
+  ],
+  "format": "afterimage-production-catalog/0.1",
+  "title": "Afterimage complete production catalog",
+  "total_cases": 75,
+  "total_nominal_points": 10000
+}

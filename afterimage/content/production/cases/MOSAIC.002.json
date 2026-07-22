@@ -1,0 +1,77 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MOSAIC.002",
+    "family": "MOSAIC",
+    "title": "Shared Wall",
+    "points": 80,
+    "reference_scale": 300000,
+    "requires": {"all": ["case:MOSAIC.001", "case:ORIENT.004"]},
+    "projection": "mosaic.shared-wall",
+    "validator_template": "mosaic-graph-claim/0.1",
+    "author_answer": {
+      "global": {
+        "vertices": [
+          {"id": "v0", "x": 0, "y": 0}, {"id": "v1", "x": 1, "y": 0}, {"id": "v2", "x": 2, "y": 0},
+          {"id": "v3", "x": 0, "y": 1}, {"id": "v4", "x": 1, "y": 1}, {"id": "v5", "x": 2, "y": 1},
+          {"id": "v6", "x": 0, "y": 2}, {"id": "v7", "x": 1, "y": 2}, {"id": "v8", "x": 2, "y": 2}
+        ],
+        "edges": [
+          {"a": "v0", "b": "v1", "material": "brass", "level": "A"}, {"a": "v0", "b": "v3", "material": "copper", "level": "A"},
+          {"a": "v1", "b": "v2", "material": "copper", "level": "B"}, {"a": "v1", "b": "v4", "material": "steel", "level": "A"},
+          {"a": "v2", "b": "v5", "material": "brass", "level": "B"}, {"a": "v3", "b": "v4", "material": "copper", "level": "B"},
+          {"a": "v3", "b": "v6", "material": "steel", "level": "B"}, {"a": "v4", "b": "v5", "material": "brass", "level": "C"},
+          {"a": "v4", "b": "v7", "material": "copper", "level": "C"}, {"a": "v5", "b": "v8", "material": "steel", "level": "C"},
+          {"a": "v6", "b": "v7", "material": "steel", "level": "A"}, {"a": "v7", "b": "v8", "material": "copper", "level": "A"}
+        ]
+      },
+      "used": [
+        {"fragment": "F-NORTH", "transform": "r0", "mapping": [
+          {"local": "n00", "global": "v0"}, {"local": "n10", "global": "v1"}, {"local": "n20", "global": "v2"},
+          {"local": "n01", "global": "v3"}, {"local": "n11", "global": "v4"}, {"local": "n21", "global": "v5"}
+        ]},
+        {"fragment": "F-SOUTH", "transform": "r180", "mapping": [
+          {"local": "s00", "global": "v8"}, {"local": "s10", "global": "v7"}, {"local": "s20", "global": "v6"},
+          {"local": "s01", "global": "v5"}, {"local": "s11", "global": "v4"}, {"local": "s21", "global": "v3"}
+        ]}
+      ],
+      "unused": []
+    },
+    "mosaic_contract": {"width": 3, "height": 3, "coverage": {"minimum_shared_edges": 2, "shared_edge_multiplicity": 2}},
+    "metric_bounds": {"graph_size": 64, "certificate_units": 64},
+    "limits": {
+      "max_witness_bytes": 262144,
+      "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 16},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "mosaic.fragment", "at": 1, "payload": {"id": "F-NORTH", "weight": 7, "vertices": [
+      {"name": "n00", "x": 0, "y": 0}, {"name": "n10", "x": 1, "y": 0}, {"name": "n20", "x": 2, "y": 0},
+      {"name": "n01", "x": 0, "y": 1}, {"name": "n11", "x": 1, "y": 1}, {"name": "n21", "x": 2, "y": 1}
+    ], "edges": [
+      {"a": "n00", "b": "n10", "material": "brass", "level": "A"}, {"a": "n10", "b": "n20", "material": "copper", "level": "B"},
+      {"a": "n01", "b": "n11", "material": "copper", "level": "B"}, {"a": "n11", "b": "n21", "material": "brass", "level": "C"},
+      {"a": "n00", "b": "n01", "material": "copper", "level": "A"}, {"a": "n10", "b": "n11", "material": "steel", "level": "A"},
+      {"a": "n20", "b": "n21", "material": "brass", "level": "B"}
+    ]}, "parents": [], "origin": {"kind": "base", "source": "survey-north", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 2, "payload": {"id": "F-SOUTH", "weight": 7, "vertices": [
+      {"name": "s00", "x": 0, "y": 0}, {"name": "s10", "x": 1, "y": 0}, {"name": "s20", "x": 2, "y": 0},
+      {"name": "s01", "x": 0, "y": 1}, {"name": "s11", "x": 1, "y": 1}, {"name": "s21", "x": 2, "y": 1}
+    ], "edges": [
+      {"a": "s00", "b": "s10", "material": "copper", "level": "A"}, {"a": "s10", "b": "s20", "material": "steel", "level": "A"},
+      {"a": "s01", "b": "s11", "material": "brass", "level": "C"}, {"a": "s11", "b": "s21", "material": "copper", "level": "B"},
+      {"a": "s00", "b": "s01", "material": "steel", "level": "C"}, {"a": "s10", "b": "s11", "material": "copper", "level": "C"},
+      {"a": "s20", "b": "s21", "material": "steel", "level": "B"}
+    ]}, "parents": [], "origin": {"kind": "base", "source": "survey-south", "sequence": 1}}
+  ],
+  "rules": [],
+  "projection": {"id": "mosaic.shared-wall", "rows": [{"positive": [{"alias": "f", "topic": "mosaic.fragment", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "f", "/payload"], "sort": [["get", "f", "/payload/id"]]}]},
+  "worked_value": {"shared_edges": [["v3", "v4"], ["v4", "v5"]], "multiplicity": 2, "note": "The middle corridor is independently present in both transformed surveys."},
+  "story": {
+    "premise": "North and south utility crews surveyed overlapping six-junction districts with opposite local north. The city accepts the reconstruction only if the shared boundary is independently corroborated, not merely present in the union.",
+    "submission": "Submit the canonical attributed graph and both complete D4 mappings. At least two global edges must be supported by two distinct used fragments.",
+    "diagnostics": "The verifier separately reports invalid embeddings, incomplete union coverage, and insufficient independently shared edges with observed and required counts.",
+    "hints": ["First reconstruct each six-junction strip independently.", "The two strips overlap along a two-edge corridor, not just at vertices.", "Union coverage proves existence; support multiplicity proves corroboration."]
+  }
+}

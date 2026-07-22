@@ -1,0 +1,77 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.001",
+    "family": "MERGE",
+    "title": "Three Clocks",
+    "points": 120,
+    "reference_scale": 900000,
+    "requires": {"all": ["case:ORIENT.002"]},
+    "projection": "merge.three-clocks",
+    "validator_template": "merge-certificate-claim/0.1",
+    "author_answer": {
+      "accepted": [
+        {"key": "A1", "at": 10},
+        {"key": "B1", "at": 11},
+        {"key": "C1", "at": 12},
+        {"key": "A2", "at": 14},
+        {"key": "B2", "at": 15},
+        {"key": "A3", "at": 18},
+        {"key": "B3", "at": 19},
+        {"key": "C3", "at": 20}
+      ],
+      "rejected": [{"key": "C2", "reason": "inconsistent"}],
+      "certificate": [
+        {"before": "A1", "after": "B1", "minimum_gap": 1},
+        {"before": "B1", "after": "C1", "minimum_gap": 1},
+        {"before": "C1", "after": "A2", "minimum_gap": 1},
+        {"before": "A2", "after": "B2", "minimum_gap": 1},
+        {"before": "B2", "after": "A3", "minimum_gap": 1},
+        {"before": "A3", "after": "B3", "minimum_gap": 1},
+        {"before": "B3", "after": "C3", "minimum_gap": 1},
+        {"before": "A1", "after": "A2", "minimum_gap": 1},
+        {"before": "A2", "after": "A3", "minimum_gap": 1},
+        {"before": "B1", "after": "B2", "minimum_gap": 1},
+        {"before": "B2", "after": "B3", "minimum_gap": 1},
+        {"before": "C1", "after": "C3", "minimum_gap": 1}
+      ]
+    },
+    "metric_bounds": {"temporal_displacement": 128, "certificate_units": 64},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 32, "max_derived_events": 8, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 32},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"label": "A1", "body": {"topic": "merge.record", "at": 10, "payload": {"key": "A1", "local_time": 110, "offset_min": 99, "offset_max": 101, "source": "A", "sequence": 1, "weight": 5}, "parents": [], "origin": {"kind": "base", "source": "clock-A", "sequence": 1}}},
+    {"label": "B1", "body": {"topic": "merge.record", "at": 11, "payload": {"key": "B1", "local_time": -39, "offset_min": -51, "offset_max": -49, "source": "B", "sequence": 1, "weight": 5}, "parents": ["@A1"], "origin": {"kind": "base", "source": "clock-B", "sequence": 1}}},
+    {"label": "C1", "body": {"topic": "merge.record", "at": 12, "payload": {"key": "C1", "local_time": 19, "offset_min": 6, "offset_max": 8, "source": "C", "sequence": 1, "weight": 5}, "parents": ["@B1"], "origin": {"kind": "base", "source": "clock-C", "sequence": 1}}},
+    {"label": "A2", "body": {"topic": "merge.record", "at": 14, "payload": {"key": "A2", "local_time": 114, "offset_min": 99, "offset_max": 101, "source": "A", "sequence": 2, "weight": 5}, "parents": ["@C1"], "origin": {"kind": "base", "source": "clock-A", "sequence": 2}}},
+    {"label": "B2", "body": {"topic": "merge.record", "at": 15, "payload": {"key": "B2", "local_time": -35, "offset_min": -51, "offset_max": -49, "source": "B", "sequence": 2, "weight": 5}, "parents": ["@A2"], "origin": {"kind": "base", "source": "clock-B", "sequence": 2}}},
+    {"label": "C2", "body": {"topic": "merge.record", "at": 33, "payload": {"key": "C2", "local_time": 40, "offset_min": 6, "offset_max": 8, "source": "C", "sequence": 2, "weight": 1}, "parents": ["@B2"], "origin": {"kind": "base", "source": "clock-C", "sequence": 2}}},
+    {"label": "A3", "body": {"topic": "merge.record", "at": 18, "payload": {"key": "A3", "local_time": 118, "offset_min": 99, "offset_max": 101, "source": "A", "sequence": 3, "weight": 5}, "parents": ["@B2"], "origin": {"kind": "base", "source": "clock-A", "sequence": 3}}},
+    {"label": "B3", "body": {"topic": "merge.record", "at": 19, "payload": {"key": "B3", "local_time": -31, "offset_min": -51, "offset_max": -49, "source": "B", "sequence": 3, "weight": 5}, "parents": ["@A3"], "origin": {"kind": "base", "source": "clock-B", "sequence": 3}}},
+    {"label": "C3", "body": {"topic": "merge.record", "at": 20, "payload": {"key": "C3", "local_time": 27, "offset_min": 6, "offset_max": 8, "source": "C", "sequence": 3, "weight": 5}, "parents": ["@B3"], "origin": {"kind": "base", "source": "clock-C", "sequence": 3}}}
+  ],
+  "rules": [],
+  "projection": {
+    "id": "merge.three-clocks",
+    "rows": [{
+      "positive": [{"alias": "r", "topic": "merge.record", "where": ["const", true]}],
+      "negative": [],
+      "aggregate": [],
+      "distinct": [],
+      "guard": ["const", true],
+      "value": ["map", "event", ["get", "r", "/id"], "key", ["get", "r", "/payload/key"], "source", ["get", "r", "/payload/source"], "sequence", ["get", "r", "/payload/sequence"], "local_time", ["get", "r", "/payload/local_time"], "offset_min", ["get", "r", "/payload/offset_min"], "offset_max", ["get", "r", "/payload/offset_max"], "weight", ["get", "r", "/payload/weight"], "parents", ["get", "r", "/parents"]],
+      "sort": [["get", "r", "/payload/source"], ["get", "r", "/payload/sequence"]]
+    }]
+  },
+  "worked_value": {"records": [{"source": "example", "local_time": 20, "offset_min": 3, "offset_max": 5}], "note": "shape example only; global time lies in [15, 17]"},
+  "story": {
+    "premise": "Three independent clocks logged one message relay. Their offset intervals mostly agree, but one low-confidence record cannot coexist with the relay and source orders.",
+    "submission": "Classify every record, assign an integer global time to each accepted record, and supply the exact active order certificate.",
+    "diagnostics": "The verifier checks interval membership, message order, source order, exact certificate coverage, and whether every rejection is actually forced by the submitted schedule.",
+    "hints": ["A local reading t with offset in [a, b] gives global time in [t-b, t-a].", "Accepted message and same-source edges require a gap of at least one.", "Before rejecting a record, propagate lower and upper bounds from its accepted neighbors."]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.016", "family": "CASCADE", "title": "Witness Gap", "points": 110, "reference_scale": 1400000,
+    "requires": {"all": ["case:CASCADE.015", "case:MERGE.011", "case:MOSAIC.009", "case:PULSE.010"]},
+    "projection": "incident.causal-gap", "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {"format": "afterimage-intervention-policy/0.1", "required": true, "allowed_kinds": ["inject"], "max_operations": 1, "weights": {"inject": 1}, "topics": ["feeder.trip-cause"], "pointers": [], "retime": {"minimum": 0, "maximum": 0}},
+    "author_operation": {"kind": "inject", "topic": "feeder.trip-cause", "at": 10, "payload": {"feeder": "FEEDER-9", "cause": "thermal-overload", "witness": "bounded-gap"}, "parents": []},
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 64, "witness_units": 64},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 12, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"topic": "feeder.cause-domain", "at": 0, "payload": {"feeder": "FEEDER-9", "candidates": ["breaker-fault", "manual-open", "thermal-overload"], "maximum_missing_causes": 1}, "parents": [], "origin": {"kind": "base", "source": "audit-protocol", "sequence": 1}},
+    {"topic": "feeder.upstream-voltage", "at": 9, "payload": {"feeder": "FEEDER-9", "normal": true}, "parents": [], "origin": {"kind": "base", "source": "signed-scada", "sequence": 2}},
+    {"topic": "feeder.thermal-trace", "at": 9, "payload": {"feeder": "FEEDER-9", "above_trip_curve": true, "signature": "osc-9"}, "parents": [], "origin": {"kind": "base", "source": "relay-oscillograph", "sequence": 2}},
+    {"topic": "feeder.relay-open", "at": 10, "payload": {"feeder": "FEEDER-9", "open": true, "manual_token": null}, "parents": [], "origin": {"kind": "base", "source": "relay-status", "sequence": 3}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "witness-gap.01-explanation", "positive": [{"alias": "d", "topic": "feeder.cause-domain", "where": ["const", true]}, {"alias": "v", "topic": "feeder.upstream-voltage", "where": ["eq", ["get", "v", "/payload/feeder"], ["get", "d", "/payload/feeder"]]}, {"alias": "t", "topic": "feeder.thermal-trace", "where": ["eq", ["get", "t", "/payload/feeder"], ["get", "d", "/payload/feeder"]]}, {"alias": "r", "topic": "feeder.relay-open", "where": ["eq", ["get", "r", "/payload/feeder"], ["get", "d", "/payload/feeder"]]}, {"alias": "c", "topic": "feeder.trip-cause", "where": ["and", ["eq", ["get", "c", "/payload/feeder"], ["get", "d", "/payload/feeder"]], ["eq", ["get", "c", "/payload/cause"], ["const", "thermal-overload"]]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["and", ["get", "v", "/payload/normal"], ["and", ["get", "t", "/payload/above_trip_curve"], ["and", ["get", "r", "/payload/open"], ["eq", ["get", "r", "/payload/manual_token"], ["const", null]]]]], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "r", "/at"], "payload": ["map", "safe", ["const", true], "feeder", ["get", "d", "/payload/feeder"], "cause", ["get", "c", "/payload/cause"], "missing_causes", ["const", 1], "maximum_missing_causes", ["get", "d", "/payload/maximum_missing_causes"], "explains_voltage", ["const", true], "explains_thermal_trace", ["const", true], "explains_open_relay", ["const", true]], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.causal-gap", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"candidates": ["breaker-fault", "manual-open", "thermal-overload"], "minimal_missing_cause": "thermal-overload", "note": "Normal upstream voltage excludes a supply loss; the thermal trace supports the trip curve; the absent manual token excludes the manual explanation."},
+  "story": {"premise": "Evidence Weight and the adversarial survey identify a thermal trip, but the causal archive still lacks the trip event itself. The bounded audit protocol permits exactly one latent cause chosen from three public candidates. It must explain normal upstream voltage, the signed thermal trace, and an open relay with no manual token.", "submission": "Inject one explicit latent-cause hypothesis whose independent replay produces the complete explanation contract. No second missing event is permitted.", "diagnostics": "A wrong candidate, malformed witness, extra cause, or unsupported payload leaves the explanation projection absent rather than treating a guess as evidence.", "hints": ["Use every retained observation as an exclusion test.", "Manual opening requires the missing manual token.", "One thermal cause explains all three observations without another invention."]}
+}

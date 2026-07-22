@@ -1,0 +1,104 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "ORIENT.005",
+    "family": "ORIENT",
+    "title": "A Reproducible Claim",
+    "points": 80,
+    "reference_scale": 40,
+    "requires": {"at_least": {"count": 2, "of": ["case:ORIENT.002", "case:ORIENT.003", "case:ORIENT.004"]}},
+    "projection": "desk.envelope-clinic",
+    "validator_template": "orient-envelope-claim/0.1",
+    "export_cases": ["ORIENT.002", "ORIENT.003", "ORIENT.004"],
+    "author_export_case": "ORIENT.004",
+    "grant": "cap:audit.export",
+    "limits": {
+      "max_witness_bytes": 262144,
+      "replay": {
+        "max_base_events": 16,
+        "max_derived_events": 16,
+        "max_bindings_tested": 2048,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 16
+      },
+      "validator": {
+        "max_base_events": 64,
+        "max_derived_events": 32,
+        "max_bindings_tested": 4096,
+        "max_value_bytes": 1048576,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "topic": "audit.envelope-example",
+      "at": 1,
+      "payload": {"layer": 1, "name": "format", "stable_code": "invalid_witness", "fragment": {"format": "afterimage-witness/0.0", "semantics": "cre/0.1"}},
+      "parents": [],
+      "origin": {"kind": "base", "source": "envelope-clinic", "sequence": 1}
+    },
+    {
+      "topic": "audit.envelope-example",
+      "at": 2,
+      "payload": {"layer": 2, "name": "bundle", "stable_code": "bundle_mismatch", "fragment": {"bundle": "sha256:0000000000000000000000000000000000000000000000000000000000000000"}},
+      "parents": [],
+      "origin": {"kind": "base", "source": "envelope-clinic", "sequence": 2}
+    },
+    {
+      "topic": "audit.envelope-example",
+      "at": 3,
+      "payload": {"layer": 3, "name": "parent", "stable_code": "parent_branch_mismatch", "fragment": {"mistake": "resulting branch copied into parent_branch"}},
+      "parents": [],
+      "origin": {"kind": "base", "source": "envelope-clinic", "sequence": 3}
+    },
+    {
+      "topic": "audit.envelope-example",
+      "at": 4,
+      "payload": {"layer": 4, "name": "answer", "stable_code": "claim_mismatch", "fragment": {"mistake": "answer copied without its intervention"}},
+      "parents": [],
+      "origin": {"kind": "base", "source": "envelope-clinic", "sequence": 4}
+    },
+    {
+      "topic": "audit.envelope-example",
+      "at": 5,
+      "payload": {"layer": 5, "name": "claimed", "stable_code": "claimed_mismatch", "fragment": {"claimed": {"trace": "sha256:0000000000000000000000000000000000000000000000000000000000000000"}}},
+      "parents": [],
+      "origin": {"kind": "base", "source": "envelope-clinic", "sequence": 5}
+    }
+  ],
+  "rules": [],
+  "projection": {
+    "id": "desk.envelope-clinic",
+    "rows": [
+      {
+        "positive": [
+          {"alias": "e", "topic": "audit.envelope-example", "where": ["const", true]}
+        ],
+        "negative": [],
+        "aggregate": [],
+        "distinct": [],
+        "guard": ["const", true],
+        "value": ["get", "e", "/payload"],
+        "sort": [["get", "e", "/payload/layer"]]
+      }
+    ]
+  },
+  "worked_value": {
+    "format": "afterimage-witness/0.1",
+    "semantics": "cre/0.1",
+    "bundle": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "case": "EXAMPLE.000",
+    "note": "outer-shape example only; not a valid export"
+  },
+  "story": {
+    "premise": "The Continuity Desk will accept an earlier audit only if another verifier can reproduce it from the bundle, case, parent branch, intervention, answer, and claimed digests alone.",
+    "submission": "Embed one valid canonical witness for an unlocked ORIENT.002, ORIENT.003, or ORIENT.004 result as the export field of this case's answer.",
+    "diagnostics": "Envelope layers fail in a stable order. An embedded failure exposes only its error code and case, never the expected answer or digest.",
+    "hints": [
+      "The parent branch is an input; claimed.branch is the replay result.",
+      "Keep the intervention beside the answer it produced.",
+      "Metadata is optional, but every claimed digest you include must recompute exactly."
+    ]
+  }
+}

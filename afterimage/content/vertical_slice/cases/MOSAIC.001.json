@@ -1,0 +1,60 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MOSAIC.001",
+    "family": "MOSAIC",
+    "title": "Four Corners",
+    "points": 130,
+    "reference_scale": 850000,
+    "requires": {"all": ["case:ORIENT.003"], "at_least": {"count": 1, "of": ["case:MERGE.001", "case:PULSE.001"]}},
+    "projection": "mosaic.four-corners",
+    "validator_template": "mosaic-graph-claim/0.1",
+    "author_answer": {
+      "global": {
+        "vertices": [
+          {"id": "v0", "x": 0, "y": 0}, {"id": "v1", "x": 1, "y": 0}, {"id": "v2", "x": 2, "y": 0},
+          {"id": "v3", "x": 0, "y": 1}, {"id": "v4", "x": 1, "y": 1}, {"id": "v5", "x": 2, "y": 1},
+          {"id": "v6", "x": 0, "y": 2}, {"id": "v7", "x": 1, "y": 2}, {"id": "v8", "x": 2, "y": 2}
+        ],
+        "edges": [
+          {"a": "v0", "b": "v1", "material": "brass", "level": "A"}, {"a": "v0", "b": "v3", "material": "copper", "level": "A"},
+          {"a": "v1", "b": "v2", "material": "copper", "level": "B"}, {"a": "v1", "b": "v4", "material": "steel", "level": "A"},
+          {"a": "v2", "b": "v5", "material": "brass", "level": "B"}, {"a": "v3", "b": "v4", "material": "copper", "level": "B"},
+          {"a": "v3", "b": "v6", "material": "steel", "level": "B"}, {"a": "v4", "b": "v5", "material": "brass", "level": "C"},
+          {"a": "v4", "b": "v7", "material": "copper", "level": "C"}, {"a": "v5", "b": "v8", "material": "steel", "level": "C"},
+          {"a": "v6", "b": "v7", "material": "steel", "level": "A"}, {"a": "v7", "b": "v8", "material": "copper", "level": "A"}
+        ]
+      },
+      "used": [
+        {"fragment": "F-NW", "transform": "r0", "mapping": [{"local": "l00", "global": "v0"}, {"local": "l01", "global": "v3"}, {"local": "l10", "global": "v1"}, {"local": "l11", "global": "v4"}]},
+        {"fragment": "F-NE", "transform": "r90", "mapping": [{"local": "l00", "global": "v2"}, {"local": "l01", "global": "v1"}, {"local": "l10", "global": "v5"}, {"local": "l11", "global": "v4"}]},
+        {"fragment": "F-SW", "transform": "mx", "mapping": [{"local": "l00", "global": "v4"}, {"local": "l01", "global": "v7"}, {"local": "l10", "global": "v3"}, {"local": "l11", "global": "v6"}]},
+        {"fragment": "F-SE", "transform": "r180", "mapping": [{"local": "l00", "global": "v8"}, {"local": "l01", "global": "v5"}, {"local": "l10", "global": "v7"}, {"local": "l11", "global": "v4"}]}
+      ],
+      "unused": [{"fragment": "F-X", "reason": "invariant_conflict"}]
+    },
+    "mosaic_contract": {"width": 3, "height": 3},
+    "metric_bounds": {"graph_size": 64, "certificate_units": 128},
+    "limits": {
+      "max_witness_bytes": 262144,
+      "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 16},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "mosaic.fragment", "at": 1, "payload": {"id": "F-NW", "weight": 5, "vertices": [{"name": "l00", "x": 0, "y": 0}, {"name": "l10", "x": 1, "y": 0}, {"name": "l01", "x": 0, "y": 1}, {"name": "l11", "x": 1, "y": 1}], "edges": [{"a": "l00", "b": "l10", "material": "brass", "level": "A"}, {"a": "l00", "b": "l01", "material": "copper", "level": "A"}, {"a": "l10", "b": "l11", "material": "steel", "level": "A"}, {"a": "l01", "b": "l11", "material": "copper", "level": "B"}]}, "parents": [], "origin": {"kind": "base", "source": "inspection-nw", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 2, "payload": {"id": "F-NE", "weight": 5, "vertices": [{"name": "l00", "x": 0, "y": 0}, {"name": "l10", "x": 1, "y": 0}, {"name": "l01", "x": 0, "y": 1}, {"name": "l11", "x": 1, "y": 1}], "edges": [{"a": "l00", "b": "l10", "material": "brass", "level": "B"}, {"a": "l00", "b": "l01", "material": "copper", "level": "B"}, {"a": "l10", "b": "l11", "material": "brass", "level": "C"}, {"a": "l01", "b": "l11", "material": "steel", "level": "A"}]}, "parents": [], "origin": {"kind": "base", "source": "inspection-ne", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 3, "payload": {"id": "F-SW", "weight": 5, "vertices": [{"name": "l00", "x": 0, "y": 0}, {"name": "l10", "x": 1, "y": 0}, {"name": "l01", "x": 0, "y": 1}, {"name": "l11", "x": 1, "y": 1}], "edges": [{"a": "l00", "b": "l10", "material": "copper", "level": "B"}, {"a": "l00", "b": "l01", "material": "copper", "level": "C"}, {"a": "l10", "b": "l11", "material": "steel", "level": "B"}, {"a": "l01", "b": "l11", "material": "steel", "level": "A"}]}, "parents": [], "origin": {"kind": "base", "source": "inspection-sw", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 4, "payload": {"id": "F-SE", "weight": 5, "vertices": [{"name": "l00", "x": 0, "y": 0}, {"name": "l10", "x": 1, "y": 0}, {"name": "l01", "x": 0, "y": 1}, {"name": "l11", "x": 1, "y": 1}], "edges": [{"a": "l00", "b": "l10", "material": "copper", "level": "A"}, {"a": "l00", "b": "l01", "material": "steel", "level": "C"}, {"a": "l10", "b": "l11", "material": "copper", "level": "C"}, {"a": "l01", "b": "l11", "material": "brass", "level": "C"}]}, "parents": [], "origin": {"kind": "base", "source": "inspection-se", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 5, "payload": {"id": "F-X", "weight": 1, "vertices": [{"name": "l00", "x": 0, "y": 0}, {"name": "l10", "x": 1, "y": 0}, {"name": "l01", "x": 0, "y": 1}, {"name": "l11", "x": 1, "y": 1}], "edges": [{"a": "l00", "b": "l10", "material": "brass", "level": "A"}, {"a": "l00", "b": "l01", "material": "glass", "level": "Z"}, {"a": "l10", "b": "l11", "material": "steel", "level": "A"}, {"a": "l01", "b": "l11", "material": "copper", "level": "B"}]}, "parents": [], "origin": {"kind": "base", "source": "inspection-decoy", "sequence": 1}}
+  ],
+  "rules": [],
+  "projection": {"id": "mosaic.four-corners", "rows": [{"positive": [{"alias": "f", "topic": "mosaic.fragment", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "f", "/payload"], "sort": [["get", "f", "/payload/id"]]}]},
+  "worked_value": {"fragment": {"id": "example", "vertices": 4, "transform": "r90"}, "note": "shape example only"},
+  "story": {
+    "premise": "Four inspection teams mapped overlapping corners of a nine-junction service grid using their own north and local labels. A fifth lightweight fragment is a decoy.",
+    "submission": "Submit the canonical 3-by-3 attributed graph, one D4 transform and complete vertex mapping for every used fragment, and supported unused classifications.",
+    "diagnostics": "The verifier reports the first invalid transform, edge correspondence, uncovered grid edge, noncanonical orientation, or fragment that still embeds.",
+    "hints": ["Ignore local names and north first.", "Match degree and the material/level pair on each edge.", "Only one fragment contains an invariant attribute absent from the global four-cycle structure."]
+  }
+}

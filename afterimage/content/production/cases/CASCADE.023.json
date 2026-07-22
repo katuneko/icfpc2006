@@ -1,0 +1,55 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.023", "family": "CASCADE", "title": "Continuity Hearing", "points": 120,
+    "reference_scale": 1750000,
+    "requires": {"all": ["case:CASCADE.022", "case:MERGE.015", "case:PULSE.014", "case:COVENANT.002"]},
+    "projection": "incident.continuity-hearing", "validator_template": "cascade-multi-contract-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1", "required": true,
+      "allowed_kinds": ["replace"], "max_operations": 1, "weights": {"replace": 1},
+      "topics": ["hearing.policy-evidence"], "pointers": ["/payload/epoch"],
+      "retime": {"minimum": 30, "maximum": 30}
+    },
+    "author_operations": [{"kind": "replace", "target_topic": "hearing.policy-evidence", "pointer": "/payload/epoch", "value": 7}],
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 64, "witness_units": 80},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 8, "max_derived_events": 12, "max_bindings_tested": 512, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"label": "envelope", "body": {"topic": "hearing.envelope", "at": 30, "payload": {"hearing": "CITY-FINAL", "epoch": 7, "bundle": "production-final", "closes_at": 30}, "parents": [], "origin": {"kind": "base", "source": "continuity-clerk", "sequence": 1}}},
+    {"label": "archive", "body": {"topic": "hearing.archive-evidence", "at": 30, "payload": {"hearing": "CITY-FINAL", "epoch": 7, "archive": "partial-order", "verified": true}, "parents": ["@envelope"], "origin": {"kind": "base", "source": "reconstruction-desk", "sequence": 15}}},
+    {"label": "clock", "body": {"topic": "hearing.clock-evidence", "at": 30, "payload": {"hearing": "CITY-FINAL", "epoch": 7, "round": 2, "closed": true}, "parents": ["@envelope"], "origin": {"kind": "base", "source": "city-clock", "sequence": 14}}},
+    {"label": "policy", "body": {"topic": "hearing.policy-evidence", "at": 30, "payload": {"hearing": "CITY-FINAL", "epoch": 6, "policy": "city-covenant", "safe": true}, "parents": ["@envelope"], "origin": {"kind": "base", "source": "covenant-auditor", "sequence": 2}}}
+  ],
+  "rules": [{"stratum": 0, "rule": {
+    "id": "continuity-hearing.01-envelope",
+    "positive": [
+      {"alias": "e", "topic": "hearing.envelope", "where": ["const", true]},
+      {"alias": "a", "topic": "hearing.archive-evidence", "where": ["eq", ["get", "a", "/payload/hearing"], ["get", "e", "/payload/hearing"]]},
+      {"alias": "c", "topic": "hearing.clock-evidence", "where": ["eq", ["get", "c", "/payload/hearing"], ["get", "e", "/payload/hearing"]]},
+      {"alias": "p", "topic": "hearing.policy-evidence", "where": ["eq", ["get", "p", "/payload/hearing"], ["get", "e", "/payload/hearing"]]}
+    ],
+    "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true],
+    "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "e", "/at"], "payload": ["map",
+      "safe", ["and", ["get", "a", "/payload/verified"], ["and", ["get", "c", "/payload/closed"], ["and", ["get", "p", "/payload/safe"], ["and", ["eq", ["get", "a", "/payload/epoch"], ["get", "e", "/payload/epoch"]], ["and", ["eq", ["get", "c", "/payload/epoch"], ["get", "e", "/payload/epoch"]], ["eq", ["get", "p", "/payload/epoch"], ["get", "e", "/payload/epoch"]]]]]]],
+      "hearing", ["get", "e", "/payload/hearing"], "epoch", ["get", "e", "/payload/epoch"],
+      "archive", ["get", "a", "/payload/archive"], "clock_round", ["get", "c", "/payload/round"], "policy", ["get", "p", "/payload/policy"]
+    ], "parents": []}]
+  }}],
+  "projection": {"id": "incident.continuity-hearing", "rows": [{
+    "positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}],
+    "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []
+  }]},
+  "worked_value": {"hearing": "CITY-FINAL", "epoch": 7, "repair": "policy evidence 6→7", "note": "Every item was independently valid, but validity from the previous clock epoch could not be counted inside this envelope."},
+  "story": {
+    "premise": "The final hearing receives a verified partial-order archive, a closed City Clock round, and a City Covenant safety decision. The policy receipt is genuine but belongs to epoch 6; mixing it with epoch 7 would certify a history that never existed.",
+    "submission": "Bind all three evidence families to one hearing, one bundle epoch, and the inclusive closing tick. Correct only the stale epoch field; do not replace the underlying policy or duplicate another family as evidence.",
+    "diagnostics": "The contract joins evidence by hearing identity and requires every epoch to equal the envelope epoch while retaining each family-specific assertion.",
+    "hints": ["Individually valid is weaker than jointly contemporaneous.", "The archive and clock already belong to epoch 7.", "Repair the stale binding, not the evidence content."]
+  }
+}

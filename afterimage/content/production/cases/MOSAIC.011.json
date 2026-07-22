@@ -1,0 +1,623 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MOSAIC.011",
+    "family": "MOSAIC",
+    "title": "Whole City",
+    "points": 150,
+    "reference_scale": 1100000,
+    "requires": {
+      "all": [
+        "case:MOSAIC.010",
+        "case:COVENANT.002"
+      ]
+    },
+    "projection": "mosaic.whole-city",
+    "validator_template": "mosaic-graph-claim/0.1",
+    "mosaic_contract": {
+      "width": 4,
+      "height": 3,
+      "coverage": {
+        "minimum_shared_edges": 4,
+        "shared_edge_multiplicity": 2
+      },
+      "layers": {
+        "values": [
+          "surface",
+          "underground"
+        ],
+        "portals": [
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "minimum_edges_per_layer": 6,
+        "portal_material": "shaft"
+      }
+    },
+    "author_answer": {
+      "global": {
+        "vertices": [
+          {
+            "id": "v0",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "id": "v1",
+            "x": 1,
+            "y": 0
+          },
+          {
+            "id": "v2",
+            "x": 2,
+            "y": 0
+          },
+          {
+            "id": "v3",
+            "x": 3,
+            "y": 0
+          },
+          {
+            "id": "v4",
+            "x": 0,
+            "y": 1
+          },
+          {
+            "id": "v5",
+            "x": 1,
+            "y": 1
+          },
+          {
+            "id": "v6",
+            "x": 2,
+            "y": 1
+          },
+          {
+            "id": "v7",
+            "x": 3,
+            "y": 1
+          },
+          {
+            "id": "v8",
+            "x": 0,
+            "y": 2
+          },
+          {
+            "id": "v9",
+            "x": 1,
+            "y": 2
+          },
+          {
+            "id": "v10",
+            "x": 2,
+            "y": 2
+          },
+          {
+            "id": "v11",
+            "x": 3,
+            "y": 2
+          }
+        ],
+        "edges": [
+          {
+            "a": "v0",
+            "b": "v1",
+            "material": "a-city-gate",
+            "level": "surface"
+          },
+          {
+            "a": "v1",
+            "b": "v2",
+            "material": "surface-rail",
+            "level": "surface"
+          },
+          {
+            "a": "v2",
+            "b": "v3",
+            "material": "surface-rail",
+            "level": "surface"
+          },
+          {
+            "a": "v0",
+            "b": "v4",
+            "material": "shaft",
+            "level": "surface"
+          },
+          {
+            "a": "v1",
+            "b": "v5",
+            "material": "shaft",
+            "level": "surface"
+          },
+          {
+            "a": "v2",
+            "b": "v6",
+            "material": "shaft",
+            "level": "surface"
+          },
+          {
+            "a": "v3",
+            "b": "v7",
+            "material": "shaft",
+            "level": "surface"
+          },
+          {
+            "a": "v4",
+            "b": "v5",
+            "material": "sealed-duct",
+            "level": "underground"
+          },
+          {
+            "a": "v5",
+            "b": "v6",
+            "material": "sealed-duct",
+            "level": "underground"
+          },
+          {
+            "a": "v6",
+            "b": "v7",
+            "material": "sealed-duct",
+            "level": "underground"
+          },
+          {
+            "a": "v4",
+            "b": "v8",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "v5",
+            "b": "v9",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "v6",
+            "b": "v10",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "v7",
+            "b": "v11",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "v8",
+            "b": "v9",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "v9",
+            "b": "v10",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "v10",
+            "b": "v11",
+            "material": "deep-rail",
+            "level": "underground"
+          }
+        ]
+      },
+      "used": [
+        {
+          "fragment": "CITY-WEST",
+          "transform": "r0",
+          "mapping": [
+            {
+              "local": "w0",
+              "global": "v0"
+            },
+            {
+              "local": "w1",
+              "global": "v1"
+            },
+            {
+              "local": "w2",
+              "global": "v4"
+            },
+            {
+              "local": "w3",
+              "global": "v5"
+            },
+            {
+              "local": "w4",
+              "global": "v8"
+            },
+            {
+              "local": "w5",
+              "global": "v9"
+            }
+          ]
+        },
+        {
+          "fragment": "CITY-CENTRE",
+          "transform": "r0",
+          "mapping": [
+            {
+              "local": "c0",
+              "global": "v1"
+            },
+            {
+              "local": "c1",
+              "global": "v2"
+            },
+            {
+              "local": "c2",
+              "global": "v5"
+            },
+            {
+              "local": "c3",
+              "global": "v6"
+            },
+            {
+              "local": "c4",
+              "global": "v9"
+            },
+            {
+              "local": "c5",
+              "global": "v10"
+            }
+          ]
+        },
+        {
+          "fragment": "CITY-EAST",
+          "transform": "r0",
+          "mapping": [
+            {
+              "local": "e0",
+              "global": "v2"
+            },
+            {
+              "local": "e1",
+              "global": "v3"
+            },
+            {
+              "local": "e2",
+              "global": "v6"
+            },
+            {
+              "local": "e3",
+              "global": "v7"
+            },
+            {
+              "local": "e4",
+              "global": "v10"
+            },
+            {
+              "local": "e5",
+              "global": "v11"
+            }
+          ]
+        }
+      ],
+      "unused": []
+    },
+    "metric_bounds": {
+      "graph_size": 64,
+      "certificate_units": 96
+    },
+    "limits": {
+      "max_witness_bytes": 262144,
+      "replay": {
+        "max_base_events": 8,
+        "max_derived_events": 8,
+        "max_bindings_tested": 256,
+        "max_value_bytes": 2097152,
+        "max_projection_records": 8
+      },
+      "validator": {
+        "max_base_events": 128,
+        "max_derived_events": 16,
+        "max_bindings_tested": 1024,
+        "max_value_bytes": 2097152,
+        "max_projection_records": 8
+      }
+    }
+  },
+  "events": [
+    {
+      "topic": "mosaic.fragment",
+      "at": 1,
+      "payload": {
+        "id": "CITY-WEST",
+        "weight": 6,
+        "vertices": [
+          {
+            "name": "w0",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "w1",
+            "x": 1,
+            "y": 0
+          },
+          {
+            "name": "w2",
+            "x": 0,
+            "y": 1
+          },
+          {
+            "name": "w3",
+            "x": 1,
+            "y": 1
+          },
+          {
+            "name": "w4",
+            "x": 0,
+            "y": 2
+          },
+          {
+            "name": "w5",
+            "x": 1,
+            "y": 2
+          }
+        ],
+        "edges": [
+          {
+            "a": "w0",
+            "b": "w1",
+            "material": "a-city-gate",
+            "level": "surface"
+          },
+          {
+            "a": "w0",
+            "b": "w2",
+            "material": "shaft",
+            "level": "surface"
+          },
+          {
+            "a": "w1",
+            "b": "w3",
+            "material": "shaft",
+            "level": "surface"
+          },
+          {
+            "a": "w2",
+            "b": "w3",
+            "material": "sealed-duct",
+            "level": "underground"
+          },
+          {
+            "a": "w2",
+            "b": "w4",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "w3",
+            "b": "w5",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "w4",
+            "b": "w5",
+            "material": "deep-rail",
+            "level": "underground"
+          }
+        ]
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "west-survey",
+        "sequence": 1
+      }
+    },
+    {
+      "topic": "mosaic.fragment",
+      "at": 2,
+      "payload": {
+        "id": "CITY-CENTRE",
+        "weight": 6,
+        "vertices": [
+          {
+            "name": "c0",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "c1",
+            "x": 1,
+            "y": 0
+          },
+          {
+            "name": "c2",
+            "x": 0,
+            "y": 1
+          },
+          {
+            "name": "c3",
+            "x": 1,
+            "y": 1
+          },
+          {
+            "name": "c4",
+            "x": 0,
+            "y": 2
+          },
+          {
+            "name": "c5",
+            "x": 1,
+            "y": 2
+          }
+        ],
+        "edges": [
+          {
+            "a": "c0",
+            "b": "c1",
+            "material": "surface-rail",
+            "level": "surface"
+          },
+          {
+            "a": "c0",
+            "b": "c2",
+            "material": "shaft",
+            "level": "surface"
+          },
+          {
+            "a": "c1",
+            "b": "c3",
+            "material": "shaft",
+            "level": "surface"
+          },
+          {
+            "a": "c2",
+            "b": "c3",
+            "material": "sealed-duct",
+            "level": "underground"
+          },
+          {
+            "a": "c2",
+            "b": "c4",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "c3",
+            "b": "c5",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "c4",
+            "b": "c5",
+            "material": "deep-rail",
+            "level": "underground"
+          }
+        ]
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "centre-survey",
+        "sequence": 1
+      }
+    },
+    {
+      "topic": "mosaic.fragment",
+      "at": 3,
+      "payload": {
+        "id": "CITY-EAST",
+        "weight": 6,
+        "vertices": [
+          {
+            "name": "e0",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "name": "e1",
+            "x": 1,
+            "y": 0
+          },
+          {
+            "name": "e2",
+            "x": 0,
+            "y": 1
+          },
+          {
+            "name": "e3",
+            "x": 1,
+            "y": 1
+          },
+          {
+            "name": "e4",
+            "x": 0,
+            "y": 2
+          },
+          {
+            "name": "e5",
+            "x": 1,
+            "y": 2
+          }
+        ],
+        "edges": [
+          {
+            "a": "e0",
+            "b": "e1",
+            "material": "surface-rail",
+            "level": "surface"
+          },
+          {
+            "a": "e0",
+            "b": "e2",
+            "material": "shaft",
+            "level": "surface"
+          },
+          {
+            "a": "e1",
+            "b": "e3",
+            "material": "shaft",
+            "level": "surface"
+          },
+          {
+            "a": "e2",
+            "b": "e3",
+            "material": "sealed-duct",
+            "level": "underground"
+          },
+          {
+            "a": "e2",
+            "b": "e4",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "e3",
+            "b": "e5",
+            "material": "deep-rail",
+            "level": "underground"
+          },
+          {
+            "a": "e4",
+            "b": "e5",
+            "material": "deep-rail",
+            "level": "underground"
+          }
+        ]
+      },
+      "parents": [],
+      "origin": {
+        "kind": "base",
+        "source": "east-survey",
+        "sequence": 1
+      }
+    }
+  ],
+  "rules": [],
+  "projection": {
+    "id": "mosaic.whole-city",
+    "rows": []
+  },
+  "worked_value": {
+    "vertices": 12,
+    "edges": 17,
+    "shared_edges": 4,
+    "portals": [
+      "v4",
+      "v5",
+      "v6",
+      "v7"
+    ],
+    "note": "Three overlapping strips cover every city edge; the middle row is exactly the four-portal boundary between connected surface and underground layers."
+  },
+  "story": {
+    "premise": "The covenant kept services alive, but the correction hearing needs one city map rather than three departmental strips. West, centre, and east surveys overlap by a full column. Their drawings are locally plausible only if the four shaft mouths form the exact boundary between the connected surface feeder and underground ring.",
+    "submission": "Assemble the canonical 4×3 attributed graph, use all three surveys, prove at least four independently repeated edges, and preserve both connected layers with exactly four shaft-backed portals.",
+    "diagnostics": "The checker rejects square-only canonicalization, uncovered seams, decorative level labels, disconnected layers, false portals, and a strip placed in a reflected orientation.",
+    "hints": [
+      "Place the three two-column strips left to right.",
+      "Count repeated edges at both overlaps.",
+      "The middle row belongs to the underground graph but is incident to the surface shafts."
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.013", "family": "CASCADE", "title": "Silent Gauge", "points": 90, "reference_scale": 900000,
+    "requires": {"all": ["case:CASCADE.012", "case:LENS.002"]},
+    "projection": "incident.silent-gauge", "validator_template": "cascade-safe-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1", "required": true,
+      "allowed_kinds": ["replace"], "max_operations": 1, "weights": {"replace": 1},
+      "topics": ["flood.reserve-setting"], "pointers": ["/payload/reserve"],
+      "retime": {"minimum": 0, "maximum": 0}
+    },
+    "author_operation": {"kind": "replace", "target_topic": "flood.reserve-setting", "pointer": "/payload/reserve", "value": 4},
+    "diagnostic_topics": ["contract.violation"],
+    "metric_bounds": {"causal_footprint": 64, "witness_units": 64},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 12, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [
+    {"topic": "gauge.calibration-envelope", "at": 0, "payload": {"station": "RIVER-4", "hidden_minimum": 3, "hidden_maximum": 4, "certificate": "bench-calibration-44"}, "parents": [], "origin": {"kind": "base", "source": "metrology-office", "sequence": 1}},
+    {"topic": "flood.feeder-limit", "at": 0, "payload": {"station": "RIVER-4", "maximum_reserve": 4, "certificate": "feeder-window-12"}, "parents": [], "origin": {"kind": "base", "source": "grid-dispatch", "sequence": 1}},
+    {"topic": "flood.reserve-setting", "at": 6, "payload": {"station": "RIVER-4", "reserve": 2, "evidence": "retained-controller-setting"}, "parents": [], "origin": {"kind": "base", "source": "flood-controller", "sequence": 3}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "silent-gauge.01-contract", "positive": [
+      {"alias": "g", "topic": "gauge.calibration-envelope", "where": ["const", true]},
+      {"alias": "f", "topic": "flood.feeder-limit", "where": ["eq", ["get", "f", "/payload/station"], ["get", "g", "/payload/station"]]},
+      {"alias": "s", "topic": "flood.reserve-setting", "where": ["eq", ["get", "s", "/payload/station"], ["get", "g", "/payload/station"]]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.summary"], "at": ["get", "s", "/at"], "payload": ["map",
+      "safe", ["and", ["ge", ["get", "s", "/payload/reserve"], ["get", "g", "/payload/hidden_maximum"]], ["le", ["get", "s", "/payload/reserve"], ["get", "f", "/payload/maximum_reserve"]]],
+      "reserve", ["get", "s", "/payload/reserve"], "hidden_minimum", ["get", "g", "/payload/hidden_minimum"], "hidden_maximum", ["get", "g", "/payload/hidden_maximum"], "maximum_reserve", ["get", "f", "/payload/maximum_reserve"], "gauge_observed", ["const", false], "evidence_retained", ["const", true]
+    ], "parents": []}] }},
+    {"stratum": 1, "rule": {"id": "silent-gauge.02-violation", "positive": [{"alias": "s", "topic": "contract.summary", "where": ["eq", ["get", "s", "/payload/safe"], ["const", false]]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "emit": [{"topic": ["const", "contract.violation"], "at": ["get", "s", "/at"], "payload": ["map", "code", ["if", ["lt", ["get", "s", "/payload/reserve"], ["get", "s", "/payload/hidden_maximum"]], ["const", "unsafe_under_hidden_high"], ["const", "feeder_overload"]], "reserve", ["get", "s", "/payload/reserve"]], "parents": []}] }}
+  ],
+  "projection": {"id": "incident.silent-gauge", "rows": [{"positive": [{"alias": "s", "topic": "contract.summary", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "s", "/payload"], "sort": []}]},
+  "worked_value": {"hidden_interval": [3, 4], "feeder_limit": 4, "robust_reserve": 4, "note": "A reserve of three works only if the missing gauge is low. Four is safe for every calibrated value and exactly saturates the feeder envelope."},
+  "story": {"premise": "Hours after the public timetable goes live, river gauge RIVER-4 stops transmitting. Its last bench certificate bounds the unseen demand between three and four reserve units; the shared feeder can supply at most four. Continuity must choose one retained controller setting before the actual level can be observed.", "submission": "Replace only the reserve field with one value safe for every gauge value in the public calibration envelope and within the feeder limit.", "diagnostics": "The verifier separates a setting that is safe only under the optimistic hidden value from one that overloads the feeder.", "hints": ["Do not guess the missing reading.", "Safety must hold at the upper end of the calibration envelope.", "The feeder supplies no slack beyond four."]}
+}

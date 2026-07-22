@@ -1,0 +1,60 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.001",
+    "family": "PULSE",
+    "title": "One Bell",
+    "points": 150,
+    "reference_scale": 700000,
+    "requires": {"all": ["case:ORIENT.002"]},
+    "projection": "pulse.one-bell",
+    "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [{"name": "deadline", "type": "int", "initial": -1}],
+      "handlers": [
+        {
+          "id": "pulse.on-input",
+          "on": "rail.bell-pulse",
+          "actions": [
+            {"op": "set", "cell": "deadline", "value": ["add", ["event", "at"], ["const", 5]]},
+            {"op": "schedule", "key": "stable-bell", "topic": "pulse.timer", "at": ["cell", "deadline"], "payload": ["const", {"platform": "P-7"}]}
+          ]
+        },
+        {
+          "id": "pulse.on-timer",
+          "on": "pulse.timer",
+          "actions": [{"op": "emit", "topic": "rail.stable-bell", "payload": ["event", "payload"]}]
+        }
+      ]
+    },
+    "author_invariant": "stable-bell names one replaceable timer; deadline is always the latest pulse time plus five, so only the final timer of each maximal cluster can fire.",
+    "pulse_contract": {
+      "input_topic": "rail.bell-pulse",
+      "timer_topic": "pulse.timer",
+      "output_topic": "rail.stable-bell",
+      "output_payload": {"platform": "P-7"},
+      "quiet_ticks": 5,
+      "horizon": 12,
+      "max_pulses": 7,
+      "named_fixtures": [[0, 0], [0, 5], [0, 6], [6, 11], [11, 11]],
+      "limits": {"max_program_bytes": 8192, "max_state_cells": 16, "max_steps": 256, "max_queue": 32, "max_scheduled_events": 32}
+    },
+    "metric_bounds": {"worst_latency": 32, "live_state_cells": 16},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [],
+  "rules": [],
+  "projection": {"id": "pulse.one-bell", "rows": []},
+  "worked_value": {"input": [0, 5, 11], "outputs": [10, 16], "note": "A gap of five extends a cluster; a gap of six starts another."},
+  "story": {
+    "premise": "A platform vibration sensor chatters. Produce one stable bell per maximal pulse cluster, exactly five quiet ticks after its final pulse.",
+    "submission": "Submit a canonical PULSE 0.1 program and, optionally, a short invariant note.",
+    "diagnostics": "The verifier exhaustively checks every zero-to-seven-pulse subset of a twelve-tick horizon plus duplicate and boundary fixtures, returning the first counterexample.",
+    "hints": ["Remember the current deadline, not the pulse history.", "Scheduling the same timer key replaces its older pending timer.", "A pulse and a timer at the same tick process the external pulse first."]
+  }
+}

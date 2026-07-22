@@ -1,0 +1,25 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.008", "family": "PULSE", "title": "Warm Failover", "points": 120, "reference_scale": 800000,
+    "requires": {"all": ["case:PULSE.007", "case:CASCADE.013", "case:MOSAIC.007"]},
+    "projection": "pulse.warm-failover", "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [{"name": "primary_up", "type": "bool", "initial": true}, {"name": "secondary_warm", "type": "bool", "initial": false}],
+      "handlers": [
+        {"id": "failover.on-fail", "on": "dispatch.primary-failed", "actions": [{"op": "set", "cell": "primary_up", "value": ["const", false]}]},
+        {"id": "failover.on-recover", "on": "dispatch.primary-recovered", "actions": [{"op": "set", "cell": "primary_up", "value": ["const", true]}]},
+        {"id": "failover.on-request", "on": "dispatch.request", "actions": [{"op": "when", "condition": ["cell", "primary_up"], "actions": [{"op": "emit", "topic": "dispatch.to-primary", "payload": ["event", "payload"]}]}, {"op": "when", "condition": ["and", ["not", ["cell", "primary_up"]], ["cell", "secondary_warm"]], "actions": [{"op": "emit", "topic": "dispatch.to-secondary", "payload": ["event", "payload"]}]}]},
+        {"id": "failover.on-warm", "on": "dispatch.secondary-warmed", "actions": [{"op": "set", "cell": "secondary_warm", "value": ["const", true]}]}
+      ]
+    },
+    "author_invariant": "primary_up selects the normal route; secondary_warm is monotone readiness. A request goes to exactly one live route: primary when available, otherwise the secondary only after its retained warm signal. Recovery immediately restores primary preference.",
+    "pulse_contract": {"task": "warm-failover", "input_topics": {"request": "dispatch.request", "warm": "dispatch.secondary-warmed", "fail": "dispatch.primary-failed", "recover": "dispatch.primary-recovered"}, "timer_topic": "pulse.timer", "output_topics": {"primary": "dispatch.to-primary", "secondary": "dispatch.to-secondary"}, "horizon": 4, "max_commands": 4, "named_fixtures": [[{"at": 0, "source": "request"}], [{"at": 0, "source": "fail"}, {"at": 1, "source": "request"}], [{"at": 0, "source": "warm"}, {"at": 1, "source": "fail"}, {"at": 2, "source": "request"}], [{"at": 0, "source": "warm"}, {"at": 1, "source": "fail"}, {"at": 2, "source": "recover"}, {"at": 3, "source": "request"}]], "limits": {"max_program_bytes": 8192, "max_state_cells": 4, "max_steps": 192, "max_queue": 16, "max_scheduled_events": 8}},
+    "metric_bounds": {"worst_latency": 4, "live_state_cells": 4},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [], "rules": [], "projection": {"id": "pulse.warm-failover", "rows": []},
+  "worked_value": {"input": ["warm", "fail", "request", "recover", "request"], "routes": ["secondary", "primary"], "note": "The first request is routed to the warmed standby while primary is down. Recovery restores primary preference for the next request."},
+  "story": {"premise": "The silent gauge incident reaches the dispatch service itself. Its primary route may fail at any tick; the secondary may accept traffic only after a real warm-complete signal. A recovered primary again becomes preferred, but no request may be duplicated across both routes.", "submission": "Submit a bounded PULSE controller that routes every request to primary when it is up, otherwise to a warmed secondary, and nowhere when both choices are unsafe.", "diagnostics": "The exhaustive oracle separates cold takeover, lost warm state, ignored failure, ignored recovery, duplicated routing, stale secondary preference, and payload substitution.", "hints": ["Track availability and readiness separately.", "Warmth persists; primary availability may toggle.", "Use mutually exclusive request branches."]}
+}

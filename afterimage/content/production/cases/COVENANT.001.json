@@ -1,0 +1,59 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "COVENANT.001", "family": "COVENANT", "title": "Dispatch Covenant", "points": 450, "reference_scale": 1400000,
+    "requires": {"all": ["case:CASCADE.013", "case:MERGE.009", "case:PULSE.008"]},
+    "projection": "covenant.dispatch", "validator_template": "covenant-policy-claim/0.1",
+    "author_policy": {
+      "format": "afterimage-covenant-policy/0.1",
+      "agents": [
+        {"agent": "dispatch", "rules": [
+          {"when": ["and", ["get", "alarm"], ["and", ["eq", ["get", "assigned"], ["const", "none"]], ["get", "primary_up"]]], "action": "dispatch.assign-primary"},
+          {"when": ["and", ["get", "alarm"], ["and", ["eq", ["get", "assigned"], ["const", "none"]], ["not", ["get", "primary_up"]]]], "action": "dispatch.assign-secondary"}
+        ], "default": "dispatch.wait"},
+        {"agent": "response", "rules": [
+          {"when": ["and", ["ne", ["get", "assigned"], ["const", "none"]], ["not", ["get", "sent"]]], "action": "response.send"}
+        ], "default": "response.wait"}
+      ]
+    },
+    "author_response_bound": 5,
+    "covenant_contract": {
+      "format": "afterimage-covenant-contract/0.1",
+      "domains": {"alarm": [false, true], "assigned": ["none", "primary", "secondary"], "primary_up": [false, true], "sent": [false, true]},
+      "initial": [
+        {"alarm": false, "assigned": "none", "primary_up": false, "sent": false},
+        {"alarm": false, "assigned": "none", "primary_up": true, "sent": false}
+      ],
+      "actors": [
+        {"id": "dispatch", "kind": "agent", "observes": ["alarm", "assigned", "primary_up"], "actions": ["dispatch.assign-primary", "dispatch.assign-secondary", "dispatch.wait"]},
+        {"id": "environment", "kind": "environment", "observes": [], "actions": ["env.fail", "env.idle", "env.raise", "env.recover"]},
+        {"id": "response", "kind": "agent", "observes": ["assigned", "sent"], "actions": ["response.send", "response.wait"]}
+      ],
+      "actions": [
+        {"id": "dispatch.assign-primary", "actor": "dispatch", "guard": ["and", ["get", "alarm"], ["and", ["eq", ["get", "assigned"], ["const", "none"]], ["get", "primary_up"]]], "updates": {"assigned": ["const", "primary"]}},
+        {"id": "dispatch.assign-secondary", "actor": "dispatch", "guard": ["and", ["get", "alarm"], ["and", ["eq", ["get", "assigned"], ["const", "none"]], ["not", ["get", "primary_up"]]]], "updates": {"assigned": ["const", "secondary"]}},
+        {"id": "dispatch.wait", "actor": "dispatch", "guard": ["const", true], "updates": {}},
+        {"id": "env.fail", "actor": "environment", "guard": ["get", "primary_up"], "updates": {"primary_up": ["const", false]}},
+        {"id": "env.idle", "actor": "environment", "guard": ["const", true], "updates": {}},
+        {"id": "env.raise", "actor": "environment", "guard": ["not", ["get", "alarm"]], "updates": {"alarm": ["const", true]}},
+        {"id": "env.recover", "actor": "environment", "guard": ["not", ["get", "primary_up"]], "updates": {"primary_up": ["const", true]}},
+        {"id": "response.send", "actor": "response", "guard": ["and", ["ne", ["get", "assigned"], ["const", "none"]], ["not", ["get", "sent"]]], "updates": {"sent": ["const", true]}},
+        {"id": "response.wait", "actor": "response", "guard": ["const", true], "updates": {}}
+      ],
+      "scheduler": {"fairness_window": 2},
+      "safety": [
+        {"id": "no-assignment-before-alarm", "predicate": ["or", ["get", "alarm"], ["eq", ["get", "assigned"], ["const", "none"]]]},
+        {"id": "sent-only-after-assignment", "predicate": ["or", ["not", ["get", "sent"]], ["ne", ["get", "assigned"], ["const", "none"]]]}
+      ],
+      "liveness": [
+        {"id": "alarm-eventually-sent", "trigger": ["get", "alarm"], "goal": ["get", "sent"], "bound": 8}
+      ],
+      "limits": {"max_reachable_states": 5000, "max_transitions": 50000, "max_expression_nodes": 2000}
+    },
+    "metric_bounds": {"worst_response_bound": 8, "reachable_states": 128},
+    "limits": {"max_witness_bytes": 262144, "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [], "rules": [], "projection": {"id": "covenant.dispatch", "rows": []},
+  "worked_value": {"initial_worlds": ["primary-down", "primary-up"], "policy": "assign primary if visible-up, otherwise warmed secondary; response sends after any assignment", "note": "The scheduler may interleave environment, dispatch, and response adversarially but fairly. The same local policy must remain safe and meet the bounded response obligation."},
+  "story": {"premise": "The gauge repair, archive cut, timestamped conduit map, and warm standby now exist as separate facts. Continuity must turn them into a dispatch covenant. The environment may raise the alarm and toggle primary availability; Dispatch sees only alarm, assignment, and availability, while Response sees only assignment and send state. Every fair asynchronous schedule must remain safe and eventually send.", "submission": "Submit one local policy for each agent and the exact worst bounded response proven by exhaustive model checking.", "diagnostics": "The checker returns the shortest counterexample for hidden-state observation, disabled local actions, safety failure, liveness expiry, finite-domain escape, or an incorrect claimed response bound.", "hints": ["Do not write one centralized omniscient controller.", "Dispatch can choose a route from its own visible fields.", "Response needs only to react to a non-empty assignment."]}
+}

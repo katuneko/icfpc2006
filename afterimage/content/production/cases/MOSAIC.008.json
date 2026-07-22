@@ -1,0 +1,39 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MOSAIC.008", "family": "MOSAIC", "title": "Broken Ring", "points": 130, "reference_scale": 750000,
+    "requires": {"all": ["case:MOSAIC.007", "case:MERGE.010"]},
+    "projection": "mosaic.broken-ring", "validator_template": "mosaic-graph-claim/0.1",
+    "author_answer": {
+      "global": {"vertices": [
+        {"id": "v0", "x": 0, "y": 0}, {"id": "v1", "x": 1, "y": 0}, {"id": "v2", "x": 2, "y": 0},
+        {"id": "v3", "x": 0, "y": 1}, {"id": "v4", "x": 1, "y": 1}, {"id": "v5", "x": 2, "y": 1},
+        {"id": "v6", "x": 0, "y": 2}, {"id": "v7", "x": 1, "y": 2}, {"id": "v8", "x": 2, "y": 2}
+      ], "edges": [
+        {"a": "v0", "b": "v1", "material": "rail", "level": "R"}, {"a": "v0", "b": "v3", "material": "rail", "level": "R"},
+        {"a": "v1", "b": "v2", "material": "rail", "level": "R"}, {"a": "v1", "b": "v4", "material": "rail", "level": "R"},
+        {"a": "v2", "b": "v5", "material": "rail", "level": "R"}, {"a": "v3", "b": "v4", "material": "rail", "level": "R"},
+        {"a": "v3", "b": "v6", "material": "rail", "level": "R"}, {"a": "v4", "b": "v5", "material": "rail", "level": "R"},
+        {"a": "v4", "b": "v7", "material": "rail", "level": "R"}, {"a": "v5", "b": "v8", "material": "rail", "level": "R"},
+        {"a": "v6", "b": "v7", "material": "rail", "level": "R"}, {"a": "v7", "b": "v8", "material": "rail", "level": "R"}
+      ]},
+      "used": [
+        {"fragment": "RING-NORTH", "transform": "r0", "mapping": [{"local": "n0", "global": "v0"}, {"local": "n1", "global": "v1"}, {"local": "n2", "global": "v2"}, {"local": "n3", "global": "v3"}, {"local": "n4", "global": "v4"}, {"local": "n5", "global": "v5"}]},
+        {"fragment": "RING-SOUTH", "transform": "r0", "mapping": [{"local": "s0", "global": "v3"}, {"local": "s1", "global": "v4"}, {"local": "s2", "global": "v5"}, {"local": "s3", "global": "v6"}, {"local": "s4", "global": "v7"}, {"local": "s5", "global": "v8"}]}
+      ],
+      "unused": [],
+      "missing": {"edges": [{"a": "v7", "b": "v8"}]}
+    },
+    "mosaic_contract": {"width": 3, "height": 3, "ring_recovery": {"cycle": ["v0", "v1", "v2", "v5", "v8", "v7", "v6", "v3"], "max_missing_edges": 1}},
+    "metric_bounds": {"graph_size": 64, "certificate_units": 96},
+    "limits": {"max_witness_bytes": 262144, "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 16}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 2097152, "max_projection_records": 8}}
+  },
+  "events": [
+    {"topic": "mosaic.fragment", "at": 1, "payload": {"id": "RING-NORTH", "weight": 8, "vertices": [{"name": "n0", "x": 0, "y": 0}, {"name": "n1", "x": 1, "y": 0}, {"name": "n2", "x": 2, "y": 0}, {"name": "n3", "x": 0, "y": 1}, {"name": "n4", "x": 1, "y": 1}, {"name": "n5", "x": 2, "y": 1}], "edges": [{"a": "n0", "b": "n1", "material": "rail", "level": "R"}, {"a": "n1", "b": "n2", "material": "rail", "level": "R"}, {"a": "n3", "b": "n4", "material": "rail", "level": "R"}, {"a": "n4", "b": "n5", "material": "rail", "level": "R"}, {"a": "n0", "b": "n3", "material": "rail", "level": "R"}, {"a": "n1", "b": "n4", "material": "rail", "level": "R"}, {"a": "n2", "b": "n5", "material": "rail", "level": "R"}]}, "parents": [], "origin": {"kind": "base", "source": "north-survey", "sequence": 1}},
+    {"topic": "mosaic.fragment", "at": 2, "payload": {"id": "RING-SOUTH", "weight": 8, "vertices": [{"name": "s0", "x": 0, "y": 0}, {"name": "s1", "x": 1, "y": 0}, {"name": "s2", "x": 2, "y": 0}, {"name": "s3", "x": 0, "y": 1}, {"name": "s4", "x": 1, "y": 1}, {"name": "s5", "x": 2, "y": 1}], "edges": [{"a": "s0", "b": "s1", "material": "rail", "level": "R"}, {"a": "s1", "b": "s2", "material": "rail", "level": "R"}, {"a": "s0", "b": "s3", "material": "rail", "level": "R"}, {"a": "s1", "b": "s4", "material": "rail", "level": "R"}, {"a": "s2", "b": "s5", "material": "rail", "level": "R"}, {"a": "s3", "b": "s4", "material": "rail", "level": "R"}]}, "parents": [], "origin": {"kind": "base", "source": "south-survey", "sequence": 1}}
+  ],
+  "rules": [],
+  "projection": {"id": "mosaic.broken-ring", "rows": [{"positive": [{"alias": "f", "topic": "mosaic.fragment", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["get", "f", "/payload"], "sort": [["get", "f", "/payload/id"]]}]},
+  "worked_value": {"published_ring": ["v0", "v1", "v2", "v5", "v8", "v7", "v6", "v3"], "missing_edge": ["v7", "v8"], "note": "Every vertex is observed and every non-ring edge is covered. The one open path has degree-one endpoints v7 and v8, so the public ring contract licenses exactly their closing edge."},
+  "story": {"premise": "The echo chain identifies SHADOW-7's console at the south side of the relief ring, but its scan omits one rail segment. The city charter publishes the eight-junction perimeter as a simple ring. All vertices and every other segment are independently observed.", "submission": "Assemble the canonical grid, declare the one uncovered edge, and prove that it alone closes the published perimeter path into a ring.", "diagnostics": "The checker rejects invented vertices, omissions outside the ring, multiple gaps, a certificate that disagrees with fragment coverage, and a remainder that is not one path with two endpoints.", "hints": ["Compute coverage before using the ring promise.", "Only two perimeter vertices have degree one.", "Do not infer any interior segment."]}
+}

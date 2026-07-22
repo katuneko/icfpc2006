@@ -1,0 +1,15 @@
+{
+  "format":"afterimage-case-source/0.1",
+  "case": {
+    "id":"PULSE.011","family":"PULSE","title":"Burst Budget","points":130,"reference_scale":1700000,
+    "requires":{"all":["case:PULSE.010","case:CASCADE.017"]},"projection":"pulse.burst-budget","validator_template":"pulse-program-claim/0.1",
+    "author_program":{"format":"afterimage-pulse/0.1","cells":[{"name":"newest","type":"int","initial":-100},{"name":"older","type":"int","initial":-100}],"handlers":[{"id":"budget.request","on":"bypass.request","actions":[{"op":"when","condition":["le",["cell","older"],["sub",["event","at"],["const",3]]],"actions":[{"op":"emit","topic":"bypass.admitted","payload":["event","payload"]},{"op":"set","cell":"older","value":["cell","newest"]},{"op":"set","cell":"newest","value":["event","at"]}]}]}]},
+    "author_invariant":"newest and older are the two most recent admitted ticks. A request is admitted exactly when older lies outside the half-open three-tick window (t-3,t]; accepted same-tick requests occupy separate budget slots and rejected requests never enter the history.",
+    "pulse_contract":{"task":"sliding-window","input_topic":"bypass.request","timer_topic":"pulse.timer","output_topic":"bypass.admitted","capacity":2,"window_ticks":3,"horizon":7,"max_requests":5,"named_fixtures":[[0,0,0],[0,1,3],[0,2,2,3],[1,1,4,4,4]],"limits":{"max_program_bytes":8192,"max_state_cells":4,"max_steps":128,"max_queue":16,"max_scheduled_events":8}},
+    "metric_bounds":{"worst_latency":0,"live_state_cells":4},
+    "limits":{"max_witness_bytes":131072,"replay":{"max_base_events":4,"max_derived_events":4,"max_bindings_tested":64,"max_value_bytes":1048576,"max_projection_records":8},"validator":{"max_base_events":128,"max_derived_events":16,"max_bindings_tested":1024,"max_value_bytes":1048576,"max_projection_records":8}}
+  },
+  "events":[],"rules":[],"projection":{"id":"pulse.burst-budget","rows":[]},
+  "worked_value":{"input":[0,0,0,3],"admitted_sequences_in_event_id_order":[0,2,3],"note":"Two canonical EventId-first tick-0 requests are admitted and the remaining one is rejected. At tick 3 both admissions have left (0,3], so one slot is available again."},
+  "story":{"premise":"The surface bypass is safe but its three-tick thermal envelope permits at most two admitted switching requests. This is not a refillable token bucket: budget returns only when an actually admitted request leaves the moving window. Simultaneous requests consume distinct slots in EventId order.","submission":"Submit a bounded controller for the exact half-open window (t-3,t], capacity two, preserving each admitted request payload and never charging rejected work.","diagnostics":"The exhaustive oracle covers 792 bounded streams and isolates fixed-bucket resets, inclusive-boundary errors, same-tick collapse, and ghost debits from rejected requests.","hints":["Remember admitted times, not arrival times.","At tick t+3, an admission from tick t has expired.","A rejected request must not shift either remembered timestamp."]}
+}

@@ -1,0 +1,43 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PARADOX.001", "family": "PARADOX", "title": "Two Tomorrows", "points": 300,
+    "reference_scale": 3000000,
+    "requires": {"all": ["case:COVENANT.002", "case:LENS.003", "case:CASCADE.024"]},
+    "projection": "incident.chosen-tomorrow", "validator_template": "paradox-paired-history-claim/0.1",
+    "history_case": "CASCADE.024",
+    "author_histories": {
+      "left": {"case": "CASCADE.024", "operation": {"kind": "replace", "target_topic": "future.choice", "pointer": "/payload/route", "value": "surface"}},
+      "right": {"case": "CASCADE.024", "operation": {"kind": "replace", "target_topic": "future.choice", "pointer": "/payload/route", "value": "underground"}}
+    },
+    "paradox_contract": {
+      "format": "afterimage-paradox-contract/0.1", "history_case": "CASCADE.024",
+      "safety_requirements": [{"id": "continuity-safe", "topic": "continuity.safety", "pointer": "/payload/safe", "equals": true, "minimum": 1}],
+      "latent_topics": {"future.choice": 5}, "latent_pointers": {"future.choice": "/payload/route"},
+      "max_public_records": 1
+    },
+    "metric_bounds": {"latent_difference_weight": 10, "proof_steps": 8},
+    "limits": {
+      "max_witness_bytes": 262144,
+      "replay": {"max_base_events": 8, "max_derived_events": 12, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [], "rules": [],
+  "projection": {"id": "incident.chosen-tomorrow", "rows": [{
+    "positive": [{"alias": "s", "topic": "continuity.safety", "where": ["const", true]}],
+    "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true],
+    "value": ["map", "safe", ["get", "s", "/payload/safe"], "notice", ["get", "s", "/payload/notice"], "alternatives", ["get", "s", "/payload/alternatives"]], "sort": []
+  }]},
+  "worked_value": {
+    "left": "surface", "right": "underground",
+    "public_record": {"safe": true, "notice": "continuity-certified", "alternatives": 2},
+    "proof": "two independently policy-checked CASCADE.024 histories, two safety events, one bijective public-record digest, and a semantic /payload/route difference"
+  },
+  "story": {
+    "premise": "The archive is complete, the clock is closed, the Covenant is satisfied, and the hearing chose surface. Yet the retained underground continuation also satisfies every published safety requirement and produces the same public notice. The last problem is not to pick the right tomorrow. It is to prove that the public record cannot tell which safe tomorrow occurred.",
+    "submission": "Submit two complete CASCADE.024 branch histories from the same root: one surface and one underground. Pair every public record by digest, enumerate exact safety evidence on both sides, and certify the complete material latent difference.",
+    "diagnostics": "The authoritative verifier replays both histories, enforces the fixed history origin and intervention policy, compares public records exactly, checks safety independently, and compares the contracted latent route values so provenance-only EventId churn cannot fake a paradox.",
+    "hints": ["A paradox needs two histories, not two claims about one branch.", "The public notice intentionally omits route.", "Difference is measured at /payload/route, not by provenance alone."]
+  }
+}

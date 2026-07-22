@@ -1,0 +1,64 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "MERGE.002",
+    "family": "MERGE",
+    "title": "Duplicate Dispatch",
+    "points": 80,
+    "reference_scale": 20000,
+    "requires": {"all": ["case:MERGE.001"]},
+    "projection": "merge.duplicate-dispatch",
+    "validator_template": "merge-dedup-certificate-claim/0.1",
+    "merge_contract": {"task": "deduplicate", "identity_field": "dedup_key", "equivalence_field": "body_key"},
+    "author_answer": {
+      "accepted": [
+        {"key": "I1", "at": 8},
+        {"key": "D1", "at": 10},
+        {"key": "A1", "at": 12},
+        {"key": "C1", "at": 14},
+        {"key": "C2", "at": 18}
+      ],
+      "rejected": [{"key": "D1R", "reason": "duplicate", "duplicate_of": "D1"}],
+      "certificate": [
+        {"before": "I1", "after": "D1", "minimum_gap": 1},
+        {"before": "D1", "after": "A1", "minimum_gap": 1},
+        {"before": "A1", "after": "C1", "minimum_gap": 1},
+        {"before": "C1", "after": "C2", "minimum_gap": 1}
+      ]
+    },
+    "metric_bounds": {"temporal_displacement": 16, "certificate_units": 16},
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 8, "max_bindings_tested": 256, "max_value_bytes": 1048576, "max_projection_records": 16},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"label": "I1", "body": {"topic": "merge.record", "at": 8, "payload": {"key": "I1", "local_time": 108, "offset_min": 100, "offset_max": 100, "source": "intake", "sequence": 1, "weight": 5, "dedup_key": "intake:fire-17", "body_key": "call:fire:ward-7"}, "parents": [], "origin": {"kind": "base", "source": "intake-log", "sequence": 1}}},
+    {"label": "D1", "body": {"topic": "merge.record", "at": 10, "payload": {"key": "D1", "local_time": 210, "offset_min": 200, "offset_max": 200, "source": "gateway-primary", "sequence": 1, "weight": 5, "dedup_key": "dispatch:fire-17", "body_key": "engine:E4:ward-7"}, "parents": ["@I1"], "origin": {"kind": "base", "source": "dispatch-primary", "sequence": 1}}},
+    {"label": "D1R", "body": {"topic": "merge.record", "at": 10, "payload": {"key": "D1R", "local_time": -40, "offset_min": -50, "offset_max": -50, "source": "gateway-retry", "sequence": 1, "weight": 1, "dedup_key": "dispatch:fire-17", "body_key": "engine:E4:ward-7"}, "parents": ["@I1"], "origin": {"kind": "base", "source": "dispatch-retry", "sequence": 1}}},
+    {"label": "A1", "body": {"topic": "merge.record", "at": 12, "payload": {"key": "A1", "local_time": 312, "offset_min": 300, "offset_max": 300, "source": "radio", "sequence": 1, "weight": 5, "dedup_key": "ack:fire-17", "body_key": "engine:E4:accepted"}, "parents": ["@D1", "@D1R"], "origin": {"kind": "base", "source": "radio-log", "sequence": 1}}},
+    {"label": "C1", "body": {"topic": "merge.record", "at": 14, "payload": {"key": "C1", "local_time": 14, "offset_min": 0, "offset_max": 0, "source": "crew", "sequence": 1, "weight": 5, "dedup_key": "crew:fire-17:depart", "body_key": "engine:E4:departed"}, "parents": ["@A1"], "origin": {"kind": "base", "source": "crew-log", "sequence": 1}}},
+    {"label": "C2", "body": {"topic": "merge.record", "at": 18, "payload": {"key": "C2", "local_time": 18, "offset_min": 0, "offset_max": 0, "source": "crew", "sequence": 2, "weight": 5, "dedup_key": "crew:fire-17:arrive", "body_key": "engine:E4:arrived"}, "parents": ["@C1"], "origin": {"kind": "base", "source": "crew-log", "sequence": 2}}}
+  ],
+  "rules": [],
+  "projection": {
+    "id": "merge.duplicate-dispatch",
+    "rows": [{
+      "positive": [{"alias": "r", "topic": "merge.record", "where": ["const", true]}],
+      "negative": [],
+      "aggregate": [],
+      "distinct": [],
+      "guard": ["const", true],
+      "value": ["map", "event", ["get", "r", "/id"], "key", ["get", "r", "/payload/key"], "source", ["get", "r", "/payload/source"], "sequence", ["get", "r", "/payload/sequence"], "local_time", ["get", "r", "/payload/local_time"], "offset_min", ["get", "r", "/payload/offset_min"], "offset_max", ["get", "r", "/payload/offset_max"], "weight", ["get", "r", "/payload/weight"], "dedup_key", ["get", "r", "/payload/dedup_key"], "body_key", ["get", "r", "/payload/body_key"], "parents", ["get", "r", "/parents"]],
+      "sort": [["get", "r", "/at"], ["get", "r", "/payload/key"]]
+    }]
+  },
+  "worked_value": {"identity": "dispatch:fire-17", "copies": ["D1", "D1R"], "note": "Exactly one equivalent copy survives; the rejected copy names that survivor."},
+  "story": {
+    "premise": "A dispatch gateway retried after losing its response and wrote the same engine assignment twice through independent clocks. Reconstruct one causal archive without sending a fictional second engine.",
+    "submission": "Classify every record, assign accepted global times, link every duplicate rejection to its accepted survivor, and supply the exact active order certificate.",
+    "diagnostics": "The verifier checks clock intervals and order, then groups records by the public dedup identity and body fields. Every repeated identity must have exactly one accepted survivor and every rejected copy must point to it.",
+    "hints": ["A duplicate is feasible in time; that is why `inconsistent` is the wrong reason.", "The dedup key proves one logical operation, while the body key prevents collapsing different payloads.", "Either copy can be the survivor, but rejected weight makes the better-supported record preferable."]
+  }
+}

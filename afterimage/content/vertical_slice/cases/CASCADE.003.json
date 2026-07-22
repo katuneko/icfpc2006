@@ -1,0 +1,56 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "CASCADE.003",
+    "family": "CASCADE",
+    "title": "Tomorrow, Redacted",
+    "points": 140,
+    "reference_scale": 1800000,
+    "requires": {"all": ["case:CASCADE.002", "case:ORIENT.003"], "at_least": {"count": 1, "of": ["case:MERGE.001", "case:PULSE.001", "case:MOSAIC.001", "case:LENS.001"]}},
+    "projection": "incident.tomorrow-redacted",
+    "validator_template": "cascade-proof-claim/0.1",
+    "intervention_policy": {
+      "format": "afterimage-intervention-policy/0.1", "required": false,
+      "allowed_kinds": ["inject"], "max_operations": 1, "weights": {"inject": 15},
+      "topics": ["audit.capability", "route.reroute"], "pointers": [], "retime": {"minimum": 0, "maximum": 0}
+    },
+    "author_relay_topic": "route.relay-authorization",
+    "diagnostic_topics": [],
+    "metric_bounds": {"causal_footprint": 64, "witness_units": 128},
+    "proof_contract": {
+      "relay_topic": "route.relay-authorization", "ready_topic": "evacuation.route-ready",
+      "policy_label": "housing.restricted", "relay_id": "v4-v7",
+      "capability_scope": "CASCADE.003", "reroute_id": "physical-bypass-3"
+    },
+    "limits": {
+      "max_witness_bytes": 131072,
+      "replay": {"max_base_events": 16, "max_derived_events": 32, "max_bindings_tested": 4096, "max_value_bytes": 1048576, "max_projection_records": 8},
+      "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}
+    }
+  },
+  "events": [
+    {"topic": "route.authorization", "at": 12, "payload": {"edge": "hospital-grid", "authorized": true}, "parents": [], "origin": {"kind": "base", "source": "hospital-dispatch", "sequence": 1}},
+    {"topic": "route.relay-authorization", "at": 13, "payload": {"relay_id": "v4-v7", "from": "hospital-grid", "to": "emergency-route", "authorized": true, "provenance": {"public": ["MOSAIC.001", "MERGE.001"], "restricted": {"housing_service": "HS-9", "resident_token": "private-204"}}}, "parents": [], "origin": {"kind": "base", "source": "housing-service", "sequence": 17}},
+    {"topic": "route.authorization", "at": 14, "payload": {"edge": "emergency-route", "authorized": true}, "parents": [], "origin": {"kind": "base", "source": "emergency-router", "sequence": 8}},
+    {"topic": "evacuation.demand", "at": 18, "payload": {"from": "hospital-grid", "to": "emergency-route", "deadline": 20}, "parents": [], "origin": {"kind": "base", "source": "continuity-desk", "sequence": 3}}
+  ],
+  "rules": [
+    {"stratum": 0, "rule": {"id": "evacuation.01-active-route", "positive": [
+      {"alias": "a", "topic": "route.authorization", "where": ["eq", ["get", "a", "/payload/edge"], ["const", "hospital-grid"]]},
+      {"alias": "r", "topic": "route.relay-authorization", "where": ["eq", ["get", "r", "/payload/relay_id"], ["const", "v4-v7"]]},
+      {"alias": "b", "topic": "route.authorization", "where": ["eq", ["get", "b", "/payload/edge"], ["const", "emergency-route"]]},
+      {"alias": "d", "topic": "evacuation.demand", "where": ["const", true]}
+    ], "negative": [], "aggregate": [], "distinct": [], "guard": ["and", ["get", "a", "/payload/authorized"], ["and", ["get", "r", "/payload/authorized"], ["get", "b", "/payload/authorized"]]], "emit": [{"topic": ["const", "evacuation.route-ready"], "at": ["get", "d", "/at"], "payload": ["map", "safe", ["const", true], "route", ["list", ["const", "hospital-grid"], ["const", "v4-v7"], ["const", "emergency-route"]], "arrival", ["const", 19], "deadline", ["get", "d", "/payload/deadline"], "authorizations", ["const", 3], "projection_cause", ["const", "whole_event_suppressed"]], "parents": []}]}}
+  ],
+  "projection": {"id": "incident.tomorrow-redacted", "rows": [
+    {"positive": [{"alias": "a", "topic": "route.authorization", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map", "edge", ["get", "a", "/payload/edge"], "status", ["const", "verified"]], "sort": [["get", "a", "/payload/edge"]]},
+    {"positive": [{"alias": "r", "topic": "route.relay-authorization", "where": ["const", true]}], "negative": [], "aggregate": [], "distinct": [], "guard": ["const", true], "value": ["map", "edge", ["get", "r", "/payload/relay_id"], "status", ["const", "unavailable"], "policy", ["const", "housing.restricted"]], "sort": [["get", "r", "/payload/relay_id"]]}
+  ]},
+  "worked_value": {"public": {"edge": "v4-v7", "status": "unavailable"}, "active": {"topic": "route.relay-authorization", "authorized": true}, "note": "shape example only; restricted provenance is never part of the answer"},
+  "story": {
+    "premise": "The Desk calls a hospital evacuation impossible because its public view has no verified relay. Raw active state already contains an authorized v4-v7 corridor whose private provenance caused whole-event suppression.",
+    "submission": "Submit an optional scoped intervention, the non-disclosing relay EventId/provenance digest, the exact public rows, and the active-route contract.",
+    "diagnostics": "A leaking or wrong relay proof reports only its proof field; an incomplete route reports the missing active authorization without revealing private provenance.",
+    "hints": ["Compare public rows with raw active topics.", "The relay name v4-v7 appeared as the central MOSAIC corridor.", "Hash the provenance; do not reproduce its restricted member."]
+  }
+}

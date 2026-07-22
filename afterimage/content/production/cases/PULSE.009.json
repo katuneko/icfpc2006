@@ -1,0 +1,25 @@
+{
+  "format": "afterimage-case-source/0.1",
+  "case": {
+    "id": "PULSE.009", "family": "PULSE", "title": "Exactly Once", "points": 120, "reference_scale": 900000,
+    "requires": {"all": ["case:PULSE.008", "case:MERGE.010", "case:MOSAIC.008"]},
+    "projection": "pulse.exactly-once", "validator_template": "pulse-program-claim/0.1",
+    "author_program": {
+      "format": "afterimage-pulse/0.1",
+      "cells": [{"name": "primary_up", "type": "bool", "initial": true}, {"name": "seen_A", "type": "bool", "initial": false}, {"name": "seen_B", "type": "bool", "initial": false}],
+      "handlers": [
+        {"id": "exactly.fail", "on": "ring.primary-failed", "actions": [{"op": "set", "cell": "primary_up", "value": ["const", false]}]},
+        {"id": "exactly.recover", "on": "ring.primary-recovered", "actions": [{"op": "set", "cell": "primary_up", "value": ["const", true]}]},
+        {"id": "exactly.request-a", "on": "ring.request-A", "actions": [{"op": "when", "condition": ["not", ["cell", "seen_A"]], "actions": [{"op": "when", "condition": ["cell", "primary_up"], "actions": [{"op": "emit", "topic": "ring.to-primary", "payload": ["event", "payload"]}]}, {"op": "when", "condition": ["not", ["cell", "primary_up"]], "actions": [{"op": "emit", "topic": "ring.to-secondary", "payload": ["event", "payload"]}]}, {"op": "set", "cell": "seen_A", "value": ["const", true]}]}]},
+        {"id": "exactly.request-b", "on": "ring.request-B", "actions": [{"op": "when", "condition": ["not", ["cell", "seen_B"]], "actions": [{"op": "when", "condition": ["cell", "primary_up"], "actions": [{"op": "emit", "topic": "ring.to-primary", "payload": ["event", "payload"]}]}, {"op": "when", "condition": ["not", ["cell", "primary_up"]], "actions": [{"op": "emit", "topic": "ring.to-secondary", "payload": ["event", "payload"]}]}, {"op": "set", "cell": "seen_B", "value": ["const", true]}]}]}
+      ]
+    },
+    "author_invariant": "seen_A and seen_B are durable logical-operation tombstones independent of route availability. The first canonical event for each operation emits on the route live at that instant; every retry is silent even after failure or recovery.",
+    "pulse_contract": {"task": "exactly-once", "input_topics": {"A": "ring.request-A", "B": "ring.request-B", "fail": "ring.primary-failed", "recover": "ring.primary-recovered"}, "timer_topic": "pulse.timer", "output_topics": {"primary": "ring.to-primary", "secondary": "ring.to-secondary"}, "horizon": 4, "max_commands": 4, "named_fixtures": [[{"at": 0, "source": "A"}, {"at": 1, "source": "fail"}, {"at": 2, "source": "A"}], [{"at": 0, "source": "fail"}, {"at": 1, "source": "B"}, {"at": 2, "source": "recover"}, {"at": 3, "source": "B"}], [{"at": 0, "source": "A"}, {"at": 0, "source": "A"}, {"at": 1, "source": "B"}]], "limits": {"max_program_bytes": 12288, "max_state_cells": 6, "max_steps": 256, "max_queue": 16, "max_scheduled_events": 8}},
+    "metric_bounds": {"worst_latency": 4, "live_state_cells": 6},
+    "limits": {"max_witness_bytes": 131072, "replay": {"max_base_events": 8, "max_derived_events": 8, "max_bindings_tested": 128, "max_value_bytes": 1048576, "max_projection_records": 8}, "validator": {"max_base_events": 128, "max_derived_events": 16, "max_bindings_tested": 1024, "max_value_bytes": 1048576, "max_projection_records": 8}}
+  },
+  "events": [], "rules": [], "projection": {"id": "pulse.exactly-once", "rows": []},
+  "worked_value": {"input": ["A", "fail", "A", "B", "recover", "B"], "outputs": ["A to primary", "B to secondary"], "note": "Failover changes where a new operation goes, never whether a completed logical operation may run again."},
+  "story": {"premise": "The repaired ring accepts requests through both dispatch routes. Retries of logical operations A and B may cross a primary failure and recovery, reproducing the echo pattern that reached SHADOW-7. Route-local deduplication would execute the same rescue twice.", "submission": "Submit a bounded controller that emits the first occurrence of A and B on the route live at that instant and suppresses every later occurrence across all failover transitions.", "diagnostics": "The exhaustive oracle distinguishes duplicate execution, route-local memory, forgotten failure, forgotten recovery, cross-operation conflation, and first-payload substitution.", "hints": ["Remember logical operations, not transport routes.", "Availability changes; completion tombstones do not.", "A and B require independent state."]}
+}

@@ -1,0 +1,280 @@
+{
+  "format": "afterimage-ai-proxy-campaign/0.1",
+  "bundle": "sha256:edf8f32b5c0836b5adebe587ad690712b81d0df8082cb2f1ac44bff5d241fd27",
+  "method": {
+    "model_selector_available": false,
+    "native_effort_available": false,
+    "timing_conversion": "cohort-multiplier-v1"
+  },
+  "system": {
+    "participant_isolation_verified": true,
+    "kernel_receipt_agreement": true,
+    "all_cases_reachable": true,
+    "all_cases_precise_diagnostics": true,
+    "acceptance_deterministic": true,
+    "reset_replay_lossless": true,
+    "offline_verified": true,
+    "verifier_cheaper_than_search": true,
+    "semantic_invalidated_cases": 0
+  },
+  "conditions": [
+    {
+      "code": "PX-1001",
+      "track": "terra-style-proxy",
+      "effort": "low",
+      "cohort": "runtime-builder",
+      "engine_language": "python",
+      "timing": {
+        "start": 1784128366,
+        "understood": 1784128400,
+        "first_bounded_run": 1784128483,
+        "session_a_stop": 1784128535,
+        "desk_boot": 1784128637,
+        "first_receipt": 1784128699,
+        "cascade003": 1784128817,
+        "stop": 1784128890
+      },
+      "engine": {
+        "conformance_pass": true,
+        "vectors_passed": 9,
+        "cases_passed": 37,
+        "protocol_success_exercised": true,
+        "ambiguities": [],
+        "unclassified_error": null
+      },
+      "observation": {
+        "reached_cascade003": true,
+        "max_hint_level": 0,
+        "projection_explained": true,
+        "intended_observations_understood": true,
+        "independent_valid_families": ["ORIENT", "CASCADE", "PULSE"],
+        "improved_valid_score": true,
+        "unrelated_families": [],
+        "dominant_case": false,
+        "computed_reveal": true,
+        "route_count": 2,
+        "canonicalization_dominated": false,
+        "pulse_or_lens_required_second_language": false,
+        "cascade_blind_search": false,
+        "validity_score_confused": false,
+        "genre_guessed_reveal": false,
+        "irreversible_progress_loss": false
+      }
+    },
+    {
+      "code": "PX-2001",
+      "track": "luna-style-proxy",
+      "effort": "low",
+      "cohort": "curious-programmer",
+      "engine_language": "javascript",
+      "timing": {
+        "start": 1784128371,
+        "understood": 1784128392,
+        "first_bounded_run": 1784128411,
+        "session_a_stop": 1784128427,
+        "desk_boot": 1784128648,
+        "first_receipt": 1784128692,
+        "cascade003": 1784128833,
+        "stop": 1784128988
+      },
+      "engine": {
+        "conformance_pass": false,
+        "vectors_passed": 9,
+        "cases_passed": 37,
+        "protocol_success_exercised": true,
+        "ambiguities": [],
+        "unclassified_error": null
+      },
+      "observation": {
+        "reached_cascade003": true,
+        "max_hint_level": 0,
+        "projection_explained": true,
+        "intended_observations_understood": true,
+        "independent_valid_families": ["ORIENT", "CASCADE", "MERGE", "MOSAIC"],
+        "improved_valid_score": true,
+        "unrelated_families": [],
+        "dominant_case": false,
+        "computed_reveal": true,
+        "route_count": 2,
+        "canonicalization_dominated": false,
+        "pulse_or_lens_required_second_language": false,
+        "cascade_blind_search": false,
+        "validity_score_confused": false,
+        "genre_guessed_reveal": false,
+        "irreversible_progress_loss": false
+      }
+    },
+    {
+      "code": "PX-3001",
+      "track": "terra-style-proxy",
+      "effort": "medium",
+      "cohort": "algorithmic-contestant",
+      "engine_language": "cpp",
+      "timing": {
+        "start": 1784128380,
+        "understood": 1784128390,
+        "first_bounded_run": 1784128488,
+        "session_a_stop": 1784128516,
+        "desk_boot": 1784128786,
+        "first_receipt": 1784128825,
+        "cascade003": 1784129002,
+        "stop": 1784129142
+      },
+      "engine": {
+        "conformance_pass": false,
+        "vectors_passed": 9,
+        "cases_passed": 37,
+        "protocol_success_exercised": true,
+        "ambiguities": [],
+        "unclassified_error": null
+      },
+      "observation": {
+        "reached_cascade003": true,
+        "max_hint_level": 0,
+        "projection_explained": true,
+        "intended_observations_understood": true,
+        "independent_valid_families": ["ORIENT", "CASCADE", "MERGE", "MOSAIC", "LENS"],
+        "improved_valid_score": true,
+        "unrelated_families": [],
+        "dominant_case": false,
+        "computed_reveal": true,
+        "route_count": 2,
+        "canonicalization_dominated": false,
+        "pulse_or_lens_required_second_language": false,
+        "cascade_blind_search": false,
+        "validity_score_confused": false,
+        "genre_guessed_reveal": false,
+        "irreversible_progress_loss": false
+      }
+    },
+    {
+      "code": "PX-1002",
+      "track": "luna-style-proxy",
+      "effort": "medium",
+      "cohort": "runtime-builder",
+      "engine_language": "javascript",
+      "timing": {
+        "start": 1784128542,
+        "understood": 1784128558,
+        "first_bounded_run": 1784128679,
+        "session_a_stop": 1784128725,
+        "desk_boot": 1784128939,
+        "first_receipt": 1784128990,
+        "cascade003": 1784129126,
+        "stop": 1784129313
+      },
+      "engine": {
+        "conformance_pass": false,
+        "vectors_passed": 9,
+        "cases_passed": 33,
+        "protocol_success_exercised": true,
+        "ambiguities": [],
+        "unclassified_error": null
+      },
+      "observation": {
+        "reached_cascade003": true,
+        "max_hint_level": 0,
+        "projection_explained": true,
+        "intended_observations_understood": true,
+        "independent_valid_families": ["ORIENT", "CASCADE", "PULSE", "MERGE"],
+        "improved_valid_score": true,
+        "unrelated_families": [],
+        "dominant_case": false,
+        "computed_reveal": true,
+        "route_count": 2,
+        "canonicalization_dominated": false,
+        "pulse_or_lens_required_second_language": false,
+        "cascade_blind_search": false,
+        "validity_score_confused": false,
+        "genre_guessed_reveal": false,
+        "irreversible_progress_loss": false
+      }
+    },
+    {
+      "code": "PX-2002",
+      "track": "terra-style-proxy",
+      "effort": "high",
+      "cohort": "curious-programmer",
+      "engine_language": "python",
+      "timing": {
+        "start": 1784129054,
+        "understood": 1784129096,
+        "first_bounded_run": 1784129272,
+        "session_a_stop": 1784129437,
+        "desk_boot": 1784129474,
+        "first_receipt": 1784129522,
+        "cascade003": 1784129765,
+        "stop": 1784130009
+      },
+      "engine": {
+        "conformance_pass": true,
+        "vectors_passed": 9,
+        "cases_passed": 37,
+        "protocol_success_exercised": true,
+        "ambiguities": [],
+        "unclassified_error": null
+      },
+      "observation": {
+        "reached_cascade003": true,
+        "max_hint_level": 0,
+        "projection_explained": true,
+        "intended_observations_understood": true,
+        "independent_valid_families": ["ORIENT", "CASCADE", "MERGE", "PULSE", "MOSAIC", "LENS"],
+        "improved_valid_score": true,
+        "unrelated_families": [],
+        "dominant_case": false,
+        "computed_reveal": true,
+        "route_count": 2,
+        "canonicalization_dominated": false,
+        "pulse_or_lens_required_second_language": false,
+        "cascade_blind_search": false,
+        "validity_score_confused": false,
+        "genre_guessed_reveal": false,
+        "irreversible_progress_loss": false
+      }
+    },
+    {
+      "code": "PX-3002",
+      "track": "luna-style-proxy",
+      "effort": "high",
+      "cohort": "algorithmic-contestant",
+      "engine_language": "javascript",
+      "timing": {
+        "start": 1784129194,
+        "understood": 1784129243,
+        "first_bounded_run": 1784129329,
+        "session_a_stop": 1784129551,
+        "desk_boot": 1784129614,
+        "first_receipt": 1784129643,
+        "cascade003": 1784129841,
+        "stop": 1784129943
+      },
+      "engine": {
+        "conformance_pass": true,
+        "vectors_passed": 9,
+        "cases_passed": 37,
+        "protocol_success_exercised": true,
+        "ambiguities": [],
+        "unclassified_error": null
+      },
+      "observation": {
+        "reached_cascade003": true,
+        "max_hint_level": 0,
+        "projection_explained": true,
+        "intended_observations_understood": true,
+        "independent_valid_families": ["ORIENT", "CASCADE", "MERGE", "MOSAIC"],
+        "improved_valid_score": true,
+        "unrelated_families": [],
+        "dominant_case": false,
+        "computed_reveal": true,
+        "route_count": 2,
+        "canonicalization_dominated": false,
+        "pulse_or_lens_required_second_language": false,
+        "cascade_blind_search": false,
+        "validity_score_confused": false,
+        "genre_guessed_reveal": false,
+        "irreversible_progress_loss": false
+      }
+    }
+  ]
+}
